@@ -1,0 +1,3 @@
+[submodule "ARToolKit5_ARGlasses"]
+	path = ARToolKit5_ARGlasses
+	url = https://github.com/Will-est/ARToolKit5_ARGlasses.git
