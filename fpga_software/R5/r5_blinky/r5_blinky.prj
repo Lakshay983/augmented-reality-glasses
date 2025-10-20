@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="r5_blinky" location="/home/ecelrc/students/gwl459/workspace/augmented-reality-glasses/fpga_software/R5/r5_blinky" platform="/home/ecelrc/students/gwl459/workspace/augmented-reality-glasses/fpga_software/R5/ultra96_base/export/ultra96_base/ultra96_base.xpfm" platformUID="em.avnet.com:av:ultra96v2_oob:1.0(custom)" systemProject="r5_blinky_system" sysConfig="ultra96_base" runtime="C/C++" cpu="standalone_domain" cpuInstance="psu_cortexr5_0" os="standalone" mssSignature="ecbffb3254e520afc735b9254c79a51e">
+  <configuration name="Debug" id="xilinx.gnu.arm.r5.exe.debug.981222372">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.arm.r5.exe.release.1358471601" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>

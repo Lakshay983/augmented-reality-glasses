@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ASCII"?>
+<systemproject:SystemProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdsproject="http://www.xilinx.com/sdsproject" xmlns:systemproject="http://www.xilinx.com/systemproject" name="r5_blinky_system" platform="/home/ecelrc/students/gwl459/workspace/augmented-reality-glasses/fpga_software/R5/ultra96_base/export/ultra96_base/ultra96_base.xpfm" platformUID="em.avnet.com:av:ultra96v2_oob:1.0(custom)" sysConfig="ultra96_base" runtime="C/C++" rootFSLocation="" linuxImage="" sysroot="">
+  <configuration name="Debug" id="com.xilinx.sdx.system.managedbuilder.debugConfiguration.223563532">
+    <configBuildOptions xsi:type="systemproject:SystemOptions">
+      <applications name="r5_blinky" domainName="standalone_domain" domainPrettyName="standalone on psu_cortexr5_0" appBuildConfig="Debug"/>
+      <options xsi:type="sdsproject:Option" gensdcard="true" dmclkid="0"/>
+    </configBuildOptions>
+    <lastBuildOptions xsi:type="systemproject:SystemOptions">
+      <applications name="r5_blinky" domainName="standalone_domain" domainPrettyName="standalone on psu_cortexr5_0" appBuildConfig="Debug"/>
+      <options xsi:type="sdsproject:Option" gensdcard="true" dmclkid="0"/>
+    </lastBuildOptions>
+  </configuration>
+  <configuration name="Release" id="com.xilinx.sdx.system.managedbuilder.releaseConfiguration.1114703446">
+    <configBuildOptions xsi:type="systemproject:SystemOptions">
+      <applications name="r5_blinky" domainName="standalone_domain" domainPrettyName="standalone on psu_cortexr5_0" appBuildConfig="Release"/>
+      <options xsi:type="sdsproject:Option" gensdcard="true" dmclkid="0"/>
+    </configBuildOptions>
+  </configuration>
+</systemproject:SystemProject>
