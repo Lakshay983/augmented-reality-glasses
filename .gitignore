@@ -1,2 +1,5 @@
 # Mac dump file
 .DS_Store
+
+# venv
+*venv/
