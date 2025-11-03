@@ -16,6 +16,8 @@ zynqmp-rpu {
     reg = <0x0 0xFF9A0000 0x0 0x10000>;
     #address-cells = <0x2>;
     #size-cells = <0x2>;
+    status = "okay"
+    
     r5f_0 {
         compatible = "xilinx,r5f";
         #address-cells = <2>;
@@ -23,7 +25,7 @@ zynqmp-rpu {
         ranges;
         sram = <0x40 0x41>;
         memory-region = <&rproc_0_reserved>;
-        power-domain = <&zynqmp_firmware 7>;
+        status = "okay"
     };
 };
 };
