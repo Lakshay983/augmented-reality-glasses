@@ -9,7 +9,7 @@ reserved-memory {
         reg = <0x0 0x3ed00000 0x0 0x2000000>;
     };
 };
-rf5ss@ff9a0000 {
+zynqmp-rpu {
     compatible = "xlnx,zynqmp-r5-remoteproc";
     xlnx,cluster-mode = <1>;
     ranges;
