@@ -429,7 +429,7 @@
       "no_connect_dangling": "warning",
       "pin_not_connected": "error",
       "pin_not_driven": "error",
-      "pin_to_pin": "warning",
+      "pin_to_pin": "error",
       "power_pin_not_driven": "error",
       "same_local_global_label": "warning",
       "similar_label_and_power": "warning",
@@ -607,6 +607,31 @@
     "subpart_first_id": 65,
     "subpart_id_separator": 0
   },
-  "sheets": [],
+  "sheets": [
+    [
+      "5ae0ba6b-d768-4d4d-8ff4-88d4f982d867",
+      "Root"
+    ],
+    [
+      "062958b9-a0fe-4fa9-b6d4-1f77beecd17b",
+      "UsbPowerDist"
+    ],
+    [
+      "25582666-6387-4949-8ebf-0e403b83d20b",
+      "esp32"
+    ],
+    [
+      "41c28944-458b-4b9a-8139-2268b86a2462",
+      "imu"
+    ],
+    [
+      "dfb99732-73c4-427d-a435-74cc7602ce9d",
+      "ultra96"
+    ],
+    [
+      "c68b3bdd-ae34-43ef-9262-8b1b6ebfb183",
+      "levelShifter"
+    ]
+  ],
   "text_variables": {}
 }
