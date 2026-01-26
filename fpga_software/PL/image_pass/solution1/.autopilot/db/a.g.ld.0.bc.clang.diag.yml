@@ -1,0 +1,52 @@
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: image_passthrough.cpp, Line: 21, Column: 19 }
+Function:        _Z17image_passthroughRN3hls6streamINS_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEES6_PVS2_ILi1EES9_
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_21_1
+  - String:          ' '
+  - LoopLoc:         'image_passthrough.cpp:21:19'
+  - String:          ' '
+  - Function:        'image_passthrough(hls::stream<hls::axis<ap_uint<8>, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::axis<ap_uint<8>, 1ul, 1ul, 1ul>, 0>&, ap_uint<1> volatile*, ap_uint<1> volatile*)'
+    DebugLoc:        { File: image_passthrough.cpp, Line: 11, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: image_passthrough.cpp, Line: 27, Column: 15 }
+Function:        _Z17image_passthroughRN3hls6streamINS_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEES6_PVS2_ILi1EES9_
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        if.then.store.11
+  - String:          ' '
+  - ArrayName:       in_breath
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'image_passthrough(hls::stream<hls::axis<ap_uint<8>, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::axis<ap_uint<8>, 1ul, 1ul, 1ul>, 0>&, ap_uint<1> volatile*, ap_uint<1> volatile*)'
+    DebugLoc:        { File: image_passthrough.cpp, Line: 11, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: image_passthrough.cpp, Line: 34, Column: 16 }
+Function:        _Z17image_passthroughRN3hls6streamINS_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEES6_PVS2_ILi1EES9_
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        if.then5.store.11
+  - String:          ' '
+  - ArrayName:       out_breath
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'image_passthrough(hls::stream<hls::axis<ap_uint<8>, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::axis<ap_uint<8>, 1ul, 1ul, 1ul>, 0>&, ap_uint<1> volatile*, ap_uint<1> volatile*)'
+    DebugLoc:        { File: image_passthrough.cpp, Line: 11, Column: 0 }
+  - String:          ' '
+...
