@@ -1,0 +1,65 @@
+/include/ "system-conf.dtsi"
+
+/ {
+reserved-memory {
+#address-cells = <2>;
+#size-cells = <2>;
+ranges;
+rproc_0_reserved: rproc@3ed00000 {
+no-map;
+reg = <0x0 0x3ed00000 0x0 0x2000000>;
+};
+};
+tcm_0a@ffe00000 {
+no-map;
+reg = <0x0 0xffe00000 0x0 0x10000>;
+phandle = <0x40>;
+status = "okay";
+compatible = "mmio-sram";
+power-domain = <&zynqmp_firmware 15>;
+};
+tcm_0b@ffe20000 {
+no-map;
+reg = <0x0 0xffe20000 0x0 0x10000>;
+phandle = <0x41>;
+status = "okay";
+compatible = "mmio-sram";
+power-domain = <&zynqmp_firmware 16>;
+};
+rf5ss@ff9a0000 {
+compatible = "xlnx,zynqmp-r5-remoteproc";
+xlnx,cluster-mode = <1>;
+ranges;
+reg = <0x0 0xFF9A0000 0x0 0x10000>;
+#address-cells = <0x2>;
+#size-cells = <0x2>;
+r5f_0 {
+compatible = "xilinx,r5f";
+#address-cells = <2>;
+#size-cells = <2>;
+ranges;
+sram = <0x40 0x41>;
+memory-region = <&rproc_0_reserved>;
+power-domain = <&zynqmp_firmware 7>;
+};
+};
+amba {
+compatible = "simple-bus";
+u-boot,dm-pre-reloc;
+#address-cells = <0x2>;
+#size-cells = <0x2>;
+ranges;
+/* Shared memory */
+shm0: shm@0 {
+compatible = "shm_uio";
+reg = <0x0 0x3ed80000 0x0 0x1000000>;
+};
+/* Inter-Processor Interrupt */
+ipi_amp: ipi@ff340000 {
+compatible = "ipi_uio";
+reg = <0x0 0xff340000 0x0 0x1000>;
+interrupt-parent = <&gic>;
+interrupts = <0 29 4>;
+};
+};
+};
