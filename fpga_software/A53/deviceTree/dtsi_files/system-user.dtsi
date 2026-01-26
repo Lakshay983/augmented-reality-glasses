@@ -10,18 +10,16 @@ no-map;
 reg = <0x0 0x3ed00000 0x0 0x2000000>;
 };
 };
-tcm_0a@ffe00000 {
+tcm_0a: tcm_0a@ffe00000 {
 no-map;
 reg = <0x0 0xffe00000 0x0 0x10000>;
-phandle = <0x40>;
 status = "okay";
 compatible = "mmio-sram";
 power-domain = <&zynqmp_firmware 15>;
 };
-tcm_0b@ffe20000 {
+tcm_0b: tcm_0b@ffe20000 {
 no-map;
 reg = <0x0 0xffe20000 0x0 0x10000>;
-phandle = <0x41>;
 status = "okay";
 compatible = "mmio-sram";
 power-domain = <&zynqmp_firmware 16>;
@@ -38,7 +36,7 @@ compatible = "xilinx,r5f";
 #address-cells = <2>;
 #size-cells = <2>;
 ranges;
-sram = <0x40 0x41>;
+sram = <&tcm_0a &tcm_0b>;
 memory-region = <&rproc_0_reserved>;
 power-domain = <&zynqmp_firmware 7>;
 };
