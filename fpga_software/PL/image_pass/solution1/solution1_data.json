@@ -1,0 +1,819 @@
+{
+  "Top": "image_passthrough",
+  "RtlTop": "image_passthrough",
+  "RtlPrefix": "",
+  "RtlSubPrefix": "image_passthrough_",
+  "SourceLanguage": "cpp",
+  "HostMachineBits": "64",
+  "FunctionProtocol": "ap_ctrl_hs",
+  "ResetStyle": "control",
+  "Target": {
+    "Family": "zynquplus",
+    "Device": "xczu3eg",
+    "Package": "-sbva484",
+    "Speed": "-1-e",
+    "Triple": "fpga64-xilinx-none"
+  },
+  "Args": {
+    "in_stream": {
+      "index": "0",
+      "direction": "in",
+      "srcType": "stream<hls::axis<ap_uint<8>, 1, 1, 1>, 0>&",
+      "srcSize": "56",
+      "hwRefs": [{
+          "type": "interface",
+          "interface": "in_stream",
+          "name": "",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "out_stream": {
+      "index": "1",
+      "direction": "out",
+      "srcType": "stream<hls::axis<ap_uint<8>, 1, 1, 1>, 0>&",
+      "srcSize": "56",
+      "hwRefs": [{
+          "type": "interface",
+          "interface": "out_stream",
+          "name": "",
+          "usage": "data",
+          "direction": "out"
+        }]
+    },
+    "in_breath": {
+      "index": "2",
+      "direction": "inout",
+      "srcType": "*",
+      "srcSize": "8",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_CTRL",
+          "name": "in_breath_i",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_CTRL",
+          "name": "in_breath_o",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_CTRL",
+          "name": "in_breath_o_ctrl",
+          "usage": "control",
+          "direction": "out"
+        }
+      ]
+    },
+    "out_breath": {
+      "index": "3",
+      "direction": "inout",
+      "srcType": "*",
+      "srcSize": "8",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_CTRL",
+          "name": "out_breath_i",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_CTRL",
+          "name": "out_breath_o",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_CTRL",
+          "name": "out_breath_o_ctrl",
+          "usage": "control",
+          "direction": "out"
+        }
+      ]
+    }
+  },
+  "HlsSolution": {
+    "FlowTarget": "vivado",
+    "ConfigTcl": [
+      "config_export -description {Pass through test iamge IP}",
+      "config_export -display_name=Image_Passthrough",
+      "config_export -library=user",
+      "config_export -output=\/home\/ecelrc\/students\/gwl459\/workspace\/augmented-reality-glasses\/fpga_software\/IPs",
+      "config_export -taxonomy {User IP}",
+      "config_export -vendor=xilinx",
+      "config_export -version=1.0",
+      "config_export -format=ip_catalog",
+      "config_export -rtl=verilog"
+    ],
+    "ProfileOption": "0",
+    "ProfileType": "none",
+    "KernelName": "image_passthrough"
+  },
+  "ClockInfo": {
+    "ClockName": "ap_clk",
+    "ClockPeriod": "10",
+    "Uncertainty": "2.7",
+    "IsCombinational": "0",
+    "II": "undef",
+    "Latency": "undef"
+  },
+  "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"]},
+  "Ipx": {
+    "Vendor": "xilinx",
+    "Library": "user",
+    "Name": "image_passthrough",
+    "Version": "1.0",
+    "DisplayName": "Image_Passthrough",
+    "Revision": "2114452978",
+    "Description": "Pass through test iamge IP",
+    "Taxonomy": "\/User IP",
+    "AutoFamilySupport": "",
+    "ZipFile": "xilinx_user_image_passthrough_1_0.zip"
+  },
+  "Files": {
+    "CSource": ["..\/..\/image_passthrough.cpp"],
+    "Vhdl": [
+      "impl\/vhdl\/image_passthrough_CTRL_s_axi.vhd",
+      "impl\/vhdl\/image_passthrough_regslice_both.vhd",
+      "impl\/vhdl\/image_passthrough.vhd"
+    ],
+    "Verilog": [
+      "impl\/verilog\/image_passthrough_CTRL_s_axi.v",
+      "impl\/verilog\/image_passthrough_hls_deadlock_idx0_monitor.v",
+      "impl\/verilog\/image_passthrough_hls_deadlock_kernel_monitor_top.vh",
+      "impl\/verilog\/image_passthrough_regslice_both.v",
+      "impl\/verilog\/image_passthrough.v"
+    ],
+    "SwDriver": [
+      "impl\/misc\/drivers\/image_passthrough_v1_0\/data\/image_passthrough.mdd",
+      "impl\/misc\/drivers\/image_passthrough_v1_0\/data\/image_passthrough.tcl",
+      "impl\/misc\/drivers\/image_passthrough_v1_0\/src\/Makefile",
+      "impl\/misc\/drivers\/image_passthrough_v1_0\/src\/ximage_passthrough.c",
+      "impl\/misc\/drivers\/image_passthrough_v1_0\/src\/ximage_passthrough.h",
+      "impl\/misc\/drivers\/image_passthrough_v1_0\/src\/ximage_passthrough_hw.h",
+      "impl\/misc\/drivers\/image_passthrough_v1_0\/src\/ximage_passthrough_linux.c",
+      "impl\/misc\/drivers\/image_passthrough_v1_0\/src\/ximage_passthrough_sinit.c"
+    ],
+    "IpMisc": ["impl\/misc\/logo.png"],
+    "CsynthXml": "syn\/report\/csynth.xml",
+    "DebugDir": ".debug",
+    "KernelXml": ".autopilot\/db\/kernel.internal.xml",
+    "Xo": "",
+    "XoHlsDir": "",
+    "ProtoInst": [".debug\/image_passthrough.protoinst"]
+  },
+  "SubcoreInfo": {
+    "HasXpmMemory": false,
+    "HasClockedDsp": false,
+    "Ip": []
+  },
+  "Interfaces": {
+    "s_axi_CTRL": {
+      "type": "axi4lite",
+      "busTypeName": "aximm",
+      "mode": "slave",
+      "dataWidth": "32",
+      "addrWidth": "6",
+      "portPrefix": "s_axi_CTRL_",
+      "paramPrefix": "C_S_AXI_CTRL_",
+      "ports": [
+        "s_axi_CTRL_ARADDR",
+        "s_axi_CTRL_ARREADY",
+        "s_axi_CTRL_ARVALID",
+        "s_axi_CTRL_AWADDR",
+        "s_axi_CTRL_AWREADY",
+        "s_axi_CTRL_AWVALID",
+        "s_axi_CTRL_BREADY",
+        "s_axi_CTRL_BRESP",
+        "s_axi_CTRL_BVALID",
+        "s_axi_CTRL_RDATA",
+        "s_axi_CTRL_RREADY",
+        "s_axi_CTRL_RRESP",
+        "s_axi_CTRL_RVALID",
+        "s_axi_CTRL_WDATA",
+        "s_axi_CTRL_WREADY",
+        "s_axi_CTRL_WSTRB",
+        "s_axi_CTRL_WVALID"
+      ],
+      "registers": [
+        {
+          "offset": "0x00",
+          "name": "CTRL",
+          "access": "RW",
+          "description": "Control signals",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "AP_START",
+              "access": "RW",
+              "description": "Control signal Register for 'ap_start'."
+            },
+            {
+              "offset": "1",
+              "width": "1",
+              "name": "AP_DONE",
+              "access": "R",
+              "description": "Control signal Register for 'ap_done'."
+            },
+            {
+              "offset": "2",
+              "width": "1",
+              "name": "AP_IDLE",
+              "access": "R",
+              "description": "Control signal Register for 'ap_idle'."
+            },
+            {
+              "offset": "3",
+              "width": "1",
+              "name": "AP_READY",
+              "access": "R",
+              "description": "Control signal Register for 'ap_ready'."
+            },
+            {
+              "offset": "4",
+              "width": "3",
+              "name": "RESERVED_1",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            },
+            {
+              "offset": "7",
+              "width": "1",
+              "name": "AUTO_RESTART",
+              "access": "RW",
+              "description": "Control signal Register for 'auto_restart'."
+            },
+            {
+              "offset": "8",
+              "width": "1",
+              "name": "RESERVED_2",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            },
+            {
+              "offset": "9",
+              "width": "1",
+              "name": "INTERRUPT",
+              "access": "R",
+              "description": "Control signal Register for 'interrupt'."
+            },
+            {
+              "offset": "10",
+              "width": "22",
+              "name": "RESERVED_3",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x04",
+          "name": "GIER",
+          "access": "RW",
+          "description": "Global Interrupt Enable Register",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "Enable",
+              "access": "RW",
+              "description": "Master enable for the device interrupt output to the system interrupt controller: 0 = Disabled, 1 = Enabled"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x08",
+          "name": "IP_IER",
+          "access": "RW",
+          "description": "IP Interrupt Enable Register",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "CHAN0_INT_EN",
+              "access": "RW",
+              "description": "Enable Channel 0 (ap_done) Interrupt.  0 = Disabled, 1 = Enabled."
+            },
+            {
+              "offset": "1",
+              "width": "1",
+              "name": "CHAN1_INT_EN",
+              "access": "RW",
+              "description": "Enable Channel 1 (ap_ready) Interrupt.  0 = Disabled, 1 = Enabled."
+            },
+            {
+              "offset": "2",
+              "width": "30",
+              "name": "RESERVED_0",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x0c",
+          "name": "IP_ISR",
+          "access": "RW",
+          "description": "IP Interrupt Status Register",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "CHAN0_INT_ST",
+              "access": "RTOW",
+              "description": "Channel 0 (ap_done) Interrupt Status. 0 = No Channel 0 interrupt, 1 = Channel 0 interrupt."
+            },
+            {
+              "offset": "1",
+              "width": "1",
+              "name": "CHAN1_INT_ST",
+              "access": "RTOW",
+              "description": "Channel 1 (ap_ready) Interrupt Status. 0 = No Channel 1 interrupt, 1 = Channel 1 interrupt."
+            },
+            {
+              "offset": "2",
+              "width": "30",
+              "name": "RESERVED_0",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x10",
+          "name": "in_breath_i",
+          "access": "W",
+          "description": "Data signal of in_breath_i",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "in_breath_i",
+              "access": "W",
+              "description": "Bit 0 to 0 of in_breath_i"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x18",
+          "name": "in_breath_o",
+          "access": "R",
+          "description": "Data signal of in_breath_o",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "in_breath_o",
+              "access": "R",
+              "description": "Bit 0 to 0 of in_breath_o"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x1c",
+          "name": "in_breath_o_ctrl",
+          "access": "R",
+          "description": "Control signal of in_breath_o",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "in_breath_o_ap_vld",
+              "access": "R",
+              "description": "Control signal in_breath_o_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x20",
+          "name": "out_breath_i",
+          "access": "W",
+          "description": "Data signal of out_breath_i",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "out_breath_i",
+              "access": "W",
+              "description": "Bit 0 to 0 of out_breath_i"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x28",
+          "name": "out_breath_o",
+          "access": "R",
+          "description": "Data signal of out_breath_o",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "out_breath_o",
+              "access": "R",
+              "description": "Bit 0 to 0 of out_breath_o"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x2c",
+          "name": "out_breath_o_ctrl",
+          "access": "R",
+          "description": "Control signal of out_breath_o",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "out_breath_o_ap_vld",
+              "access": "R",
+              "description": "Control signal out_breath_o_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        }
+      ],
+      "constraints": [
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "16",
+          "argName": "in_breath"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "32",
+          "argName": "out_breath"
+        }
+      ]
+    },
+    "ap_clk": {
+      "type": "clock",
+      "busTypeName": "clock",
+      "mode": "slave",
+      "busParams": {
+        "ASSOCIATED_BUSIF": "s_axi_CTRL:in_stream:out_stream",
+        "ASSOCIATED_RESET": "ap_rst_n"
+      },
+      "portMap": {"ap_clk": "CLK"},
+      "ports": ["ap_clk"]
+    },
+    "ap_rst_n": {
+      "type": "reset",
+      "busTypeName": "reset",
+      "mode": "slave",
+      "busParams": {"POLARITY": "ACTIVE_LOW"},
+      "portMap": {"ap_rst_n": "RST"},
+      "ports": ["ap_rst_n"]
+    },
+    "interrupt": {
+      "type": "interrupt",
+      "busTypeName": "interrupt",
+      "mode": "master",
+      "dataWidth": "1",
+      "busParams": {"SENSITIVITY": "LEVEL_HIGH"},
+      "portMap": {"interrupt": "INTERRUPT"},
+      "ports": ["interrupt"]
+    },
+    "in_stream": {
+      "type": "axi4stream",
+      "busTypeName": "axis",
+      "mode": "slave",
+      "dataWidth": "8",
+      "portPrefix": "in_stream_",
+      "ports": [
+        "in_stream_TDATA",
+        "in_stream_TDEST",
+        "in_stream_TID",
+        "in_stream_TKEEP",
+        "in_stream_TLAST",
+        "in_stream_TREADY",
+        "in_stream_TSTRB",
+        "in_stream_TUSER",
+        "in_stream_TVALID"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "axis",
+          "register_option": "0",
+          "register_mode": "both",
+          "argName": "in_stream"
+        }]
+    },
+    "out_stream": {
+      "type": "axi4stream",
+      "busTypeName": "axis",
+      "mode": "master",
+      "dataWidth": "8",
+      "portPrefix": "out_stream_",
+      "ports": [
+        "out_stream_TDATA",
+        "out_stream_TDEST",
+        "out_stream_TID",
+        "out_stream_TKEEP",
+        "out_stream_TLAST",
+        "out_stream_TREADY",
+        "out_stream_TSTRB",
+        "out_stream_TUSER",
+        "out_stream_TVALID"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "axis",
+          "register_option": "0",
+          "register_mode": "both",
+          "argName": "out_stream"
+        }]
+    }
+  },
+  "RtlPorts": {
+    "s_axi_CTRL_AWVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_CTRL_AWREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_CTRL_AWADDR": {
+      "dir": "in",
+      "width": "6"
+    },
+    "s_axi_CTRL_WVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_CTRL_WREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_CTRL_WDATA": {
+      "dir": "in",
+      "width": "32"
+    },
+    "s_axi_CTRL_WSTRB": {
+      "dir": "in",
+      "width": "4"
+    },
+    "s_axi_CTRL_ARVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_CTRL_ARREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_CTRL_ARADDR": {
+      "dir": "in",
+      "width": "6"
+    },
+    "s_axi_CTRL_RVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_CTRL_RREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_CTRL_RDATA": {
+      "dir": "out",
+      "width": "32"
+    },
+    "s_axi_CTRL_RRESP": {
+      "dir": "out",
+      "width": "2"
+    },
+    "s_axi_CTRL_BVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_CTRL_BREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_CTRL_BRESP": {
+      "dir": "out",
+      "width": "2"
+    },
+    "ap_clk": {
+      "dir": "in",
+      "width": "1"
+    },
+    "ap_rst_n": {
+      "dir": "in",
+      "width": "1"
+    },
+    "interrupt": {
+      "dir": "out",
+      "width": "1"
+    },
+    "in_stream_TDATA": {
+      "dir": "in",
+      "width": "8"
+    },
+    "in_stream_TVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "in_stream_TREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "in_stream_TDEST": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "in_stream_TKEEP": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "in_stream_TSTRB": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "in_stream_TUSER": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "in_stream_TLAST": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "in_stream_TID": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "out_stream_TDATA": {
+      "dir": "out",
+      "width": "8"
+    },
+    "out_stream_TVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "out_stream_TREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "out_stream_TDEST": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "out_stream_TKEEP": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "out_stream_TSTRB": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "out_stream_TUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "out_stream_TLAST": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "out_stream_TID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    }
+  },
+  "ModuleInfo": {
+    "Hierarchy": {"ModuleName": "image_passthrough"},
+    "Info": {"image_passthrough": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      }},
+    "Metrics": {"image_passthrough": {
+        "Latency": {
+          "LatencyBest": "",
+          "LatencyAvg": "",
+          "LatencyWorst": "",
+          "PipelineII": "",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "2.331"
+        },
+        "Loops": [{
+            "Name": "VITIS_LOOP_21_1",
+            "TripCount": "",
+            "Latency": "",
+            "PipelineII": "1",
+            "PipelineDepth": "2"
+          }],
+        "Area": {
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "432",
+          "UTIL_BRAM": "0",
+          "FF": "70",
+          "AVAIL_FF": "141120",
+          "UTIL_FF": "~0",
+          "LUT": "116",
+          "AVAIL_LUT": "70560",
+          "UTIL_LUT": "~0",
+          "URAM": "0",
+          "AVAIL_URAM": "0",
+          "UTIL_URAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "360",
+          "UTIL_DSP": "0"
+        }
+      }}
+  },
+  "GenerateBdFiles": "0",
+  "GenData": {
+    "DataVersion": "0.2",
+    "Time": "2026-01-26 12:58:29 CST",
+    "ToolName": "vitis_hls",
+    "ToolVersion": "2022.2"
+  }
+}
