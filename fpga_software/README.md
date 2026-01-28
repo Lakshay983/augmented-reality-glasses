@@ -8,7 +8,7 @@ The original DTB and .bit files obtained from the board should have .Original at
 Test bit streams and dtbs should have test appended to the end of them.
 
 ## Working DTBs and Bitstreams
-Bitstreams and dtbs that have been tested and work should have the date and `-[change]` appended to the end.
+Bitstreams and dtbs that have been tested and work should have the date and `-[change]` appended to the end. Usually the DTB and associated .bit file should have the same comment.
 
 # Petalinux compilation commands
 ## Compiling the device tree
