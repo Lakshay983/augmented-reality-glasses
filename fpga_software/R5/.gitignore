@@ -3,4 +3,6 @@
 
 !elf_file_dumps/*.elf
 
+.analytics
+
 RemoteSystemsTempFiles/
