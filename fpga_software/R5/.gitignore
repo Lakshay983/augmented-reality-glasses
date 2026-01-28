@@ -1,4 +1,6 @@
 .metadata
 *.log
 
+!elf_file_dumps/*.elf
+
 RemoteSystemsTempFiles/
