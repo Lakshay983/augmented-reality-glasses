@@ -1,6 +1,7 @@
 .metadata
 *.log
 
+# Ignore elf files in this directory
 !elf_file_dumps/*.elf
 
 .analytics
