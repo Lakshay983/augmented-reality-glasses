@@ -46,13 +46,77 @@ Diagnostics:
         Offset:          532675
         Length:          0
         ReplacementText: 'VITIS_LOOP_1245_1: '
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ram_t2p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      35
+    FilePath:        image_passthrough.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ram_t2p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      36
+    FilePath:        image_passthrough.cpp
+    Replacements:    
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_21_1:  '
-    FileOffset:      21
+    Message:         'Added loop label VITIS_LOOP_43_1:  '
+    FileOffset:      43
     FilePath:        image_passthrough.cpp
     Replacements:    
       - FilePath:        /home/ecelrc/students/gwl459/workspace/augmented-reality-glasses/fpga_software/PL/image_pass/solution1/.autopilot/db/image_passthrough.pp.0.cpp
-        Offset:          887339
+        Offset:          887866
         Length:          0
-        ReplacementText: 'VITIS_LOOP_21_1: '
+        ReplacementText: 'VITIS_LOOP_43_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_49_2:  '
+    FileOffset:      49
+    FilePath:        image_passthrough.cpp
+    Replacements:    
+      - FilePath:        /home/ecelrc/students/gwl459/workspace/augmented-reality-glasses/fpga_software/PL/image_pass/solution1/.autopilot/db/image_passthrough.pp.0.cpp
+        Offset:          888054
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_49_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_50_3:  '
+    FileOffset:      50
+    FilePath:        image_passthrough.cpp
+    Replacements:    
+      - FilePath:        /home/ecelrc/students/gwl459/workspace/augmented-reality-glasses/fpga_software/PL/image_pass/solution1/.autopilot/db/image_passthrough.pp.0.cpp
+        Offset:          888085
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_50_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_68_4:  '
+    FileOffset:      68
+    FilePath:        image_passthrough.cpp
+    Replacements:    
+      - FilePath:        /home/ecelrc/students/gwl459/workspace/augmented-reality-glasses/fpga_software/PL/image_pass/solution1/.autopilot/db/image_passthrough.pp.0.cpp
+        Offset:          888393
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_68_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_69_5:  '
+    FileOffset:      69
+    FilePath:        image_passthrough.cpp
+    Replacements:    
+      - FilePath:        /home/ecelrc/students/gwl459/workspace/augmented-reality-glasses/fpga_software/PL/image_pass/solution1/.autopilot/db/image_passthrough.pp.0.cpp
+        Offset:          888436
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_69_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_76_6:  '
+    FileOffset:      76
+    FilePath:        image_passthrough.cpp
+    Replacements:    
+      - FilePath:        /home/ecelrc/students/gwl459/workspace/augmented-reality-glasses/fpga_software/PL/image_pass/solution1/.autopilot/db/image_passthrough.pp.0.cpp
+        Offset:          888555
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_76_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_77_7:  '
+    FileOffset:      77
+    FilePath:        image_passthrough.cpp
+    Replacements:    
+      - FilePath:        /home/ecelrc/students/gwl459/workspace/augmented-reality-glasses/fpga_software/PL/image_pass/solution1/.autopilot/db/image_passthrough.pp.0.cpp
+        Offset:          888588
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_77_7: '
 ...

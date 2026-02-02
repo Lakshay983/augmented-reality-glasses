@@ -1,4 +1,9 @@
 <xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_DATAFLOW" msg_id="214-111" msg_severity="WARNING" msg_loc="image_passthrough.cpp:32:21" msg_body="Static scalars and arrays declared inside a dataflow region will be treated like local variables"/>
+    <msg msg_groups="PRAGMA_DATAFLOW" msg_id="214-111" msg_severity="WARNING" msg_loc="image_passthrough.cpp:33:21" msg_body="Static scalars and arrays declared inside a dataflow region will be treated like local variables"/>
+    <msg msg_groups="PRAGMA_DATAFLOW" msg_id="214-113" msg_severity="WARNING" msg_loc="image_passthrough.cpp:101:13" msg_body="Either use an argument of the function or declare the variable inside the dataflow loop body"/>
+    <msg msg_groups="PRAGMA_DATAFLOW" msg_id="214-113" msg_severity="WARNING" msg_loc="image_passthrough.cpp:102:2" msg_body="Either use an argument of the function or declare the variable inside the dataflow loop body"/>
+    <msg msg_groups="PRAGMA_DATAFLOW" msg_id="214-114" msg_severity="WARNING" msg_loc="image_passthrough.cpp:30:9" msg_body="Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region"/>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h:678:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="and_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
@@ -110,25 +115,43 @@
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h:379:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="write_nb" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/ecelrc/students/gwl459/workspace/augmented-reality-glasses/fpga_software/PL/image_pass/solution1/csynth.tcl:14:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/ecelrc/students/gwl459/workspace/augmented-reality-glasses/fpga_software/PL/image_pass/solution1/csynth.tcl:15:9" msg_body="HLS pragma dump">
         <args ARG_PragmaContext="directive" ARG_PragmaFunction="image_passthrough" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=image_passthrough" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="image_passthrough.cpp:12:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/ecelrc/students/gwl459/workspace/augmented-reality-glasses/fpga_software/PL/image_pass/solution1/directives.tcl:6:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="image_passthrough" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=image_passthrough" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="image_passthrough.cpp:21:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="image_passthrough" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=in_stream" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="image_passthrough.cpp:13:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="image_passthrough.cpp:22:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="image_passthrough" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=out_stream" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="image_passthrough.cpp:15:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="image_passthrough" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=in_breath bundle=CTRL" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="image_passthrough.cpp:24:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="image_passthrough" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_none port=in_breath_gpio" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="image_passthrough.cpp:16:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="image_passthrough" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=out_breath bundle=CTRL" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="image_passthrough.cpp:25:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="image_passthrough" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_none port=out_breath_gpio" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="image_passthrough.cpp:17:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="image_passthrough.cpp:28:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="image_passthrough" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return bundle=CTRL" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="image_passthrough.cpp:22:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="image_passthrough.cpp:30:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="image_passthrough" ARG_PragmaIsValid="1" ARG_PragmaType="dataflow" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="image_passthrough.cpp:35:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="image_passthrough" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=tile_ping type=ram_t2p impl=bram" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="image_passthrough.cpp:36:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="image_passthrough" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=tile_pong type=ram_t2p impl=bram" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="image_passthrough.cpp:51:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="image_passthrough" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="image_passthrough.cpp:70:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="image_passthrough" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="image_passthrough.cpp:78:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="image_passthrough" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
 </xilinx:hls_fe_msgs>

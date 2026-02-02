@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1770026526163">
+  <ports id="1" name="out_breath_gpio" type="PortType" coreId="1003460544" bitwidth="1" direction="DirInOut">
+    <dataInputObjs>read</dataInputObjs>
+    <dataInputObjs>write</dataInputObjs>
+    <dataOutputObjs>read</dataOutputObjs>
+    <dataOutputObjs>write</dataOutputObjs>
+  </ports>
+  <edges id="9" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="10" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="15" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="16" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="17" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="-9" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@ports.0"/>
+  <edges id="-15" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@ports.0"/>
+  <blocks id="6" name="Block_image_passthrough_for.cond.i.exit_proc" type="BlockType">
+    <node_objs xsi:type="cdfg:CdfgNode" id="2" name="tmp_out_V" lineNumber="100" originalName="tmp_out.V" fileName="image_passthrough.cpp" fileDirectory=".." coreId="3621216858" contextFuncName="image_passthrough" bitwidth="1" opcode="read" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="image_passthrough.cpp" linenumber="100" fileDirectory="/home/ecelrc/students/gwl459/workspace/augmented-reality-glasses/fpga_software/PL" functionName="image_passthrough"/>
+      <dataInputObjs>out_breath_gpio</dataInputObjs>
+      <dataOutputObjs>xor</dataOutputObjs>
+      <dataOutputObjs>out_breath_gpio</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="3" name="tmp_out_V_1" lineNumber="859" originalName="tmp_out.V" fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="tmp_out_V_1_fu_21_p2" coreName="LogicGate" implIndex="auto" control="no" opType="xor" coreId="74" contextFuncName="operator_xor_assign_1_false" bitwidth="1" opcode="xor" m_display="0" m_delay="0.33" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h" linenumber="859" fileDirectory="/home/ecelrc/students/gwl459/workspace/augmented-reality-glasses/fpga_software/PL" functionName="operator^=&amp;lt;1, false&amp;gt;"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="4" name="out_breath_gpio_write_ln102" lineNumber="102" fileName="image_passthrough.cpp" fileDirectory=".." coreId="0" contextFuncName="image_passthrough" opcode="write" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="image_passthrough.cpp" linenumber="102" fileDirectory="/home/ecelrc/students/gwl459/workspace/augmented-reality-glasses/fpga_software/PL" functionName="image_passthrough"/>
+      <dataInputObjs>out_breath_gpio</dataInputObjs>
+      <dataInputObjs>xor</dataInputObjs>
+      <dataOutputObjs>out_breath_gpio</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="5" name="_ln0" coreId="4294967295" opcode="ret" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1"/>
+    <fileValidLineNumbers fileName="image_passthrough.cpp">
+      <validLinenumbers>100</validLinenumbers>
+      <validLinenumbers>102</validLinenumbers>
+    </fileValidLineNumbers>
+    <fileValidLineNumbers fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h">
+      <validLinenumbers>859</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <expressionNodes realName="tmp_out_V_1_fu_21">
+    <nodeIds>3</nodeIds>
+  </expressionNodes>
+  <ioNodes realName="write_ln102_write_fu_14">
+    <nodeIds>4</nodeIds>
+  </ioNodes>
+  <ioNodes realName="tmp_out_V_read_fu_8">
+    <nodeIds>2</nodeIds>
+  </ioNodes>
+  <ioPorts name="out_breath_gpio">
+    <contents name="read">
+      <nodeIds>2</nodeIds>
+    </contents>
+    <contents name="write">
+      <nodeIds>4</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="2" stage="1" latency="1"/>
+      <operations id="3" stage="1" latency="1"/>
+      <operations id="4" stage="1" latency="1"/>
+      <operations id="5" stage="1" latency="1"/>
+    </states>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="Block_image_passthrough_for_cond_i_exit_proc" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>6</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

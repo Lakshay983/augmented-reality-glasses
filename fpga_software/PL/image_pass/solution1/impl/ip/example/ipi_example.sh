@@ -4,4 +4,4 @@
 # Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 # ==============================================================
 
-/usr/local/packages/Xilinx_2022.2/Vivado/2022.2/bin/vivado  -notrace -mode batch -source ipi_example.tcl -tclargs xczu3eg-sbva484-1-e ../xilinx_user_image_passthrough_1_0.zip
+/usr/local/packages/Xilinx_2022.2/Vivado/2022.2/bin/vivado  -notrace -mode batch -source ipi_example.tcl -tclargs xczu3eg-sbva484-1-e ../xilinx_user_image_passthrough_2_0.zip

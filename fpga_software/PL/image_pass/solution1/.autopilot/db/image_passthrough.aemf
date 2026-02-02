@@ -1,168 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1769453373407">
-  <ports id="1" name="in_stream_V_data_V" type="PortType" originalName="in_stream" coreId="108" bitwidth="8">
-    <dataOutputObjs>read</dataOutputObjs>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1770026526599">
+  <ports id="1" name="in_stream_V_data_V" type="PortType" originalName="in_stream" coreId="543517801" bitwidth="24">
+    <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="2" name="in_stream_V_keep_V" type="PortType" originalName="in_stream" coreId="0" bitwidth="1">
-    <dataOutputObjs>read</dataOutputObjs>
+  <ports id="2" name="in_stream_V_keep_V" type="PortType" originalName="in_stream" coreId="0" bitwidth="3">
+    <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="3" name="in_stream_V_strb_V" type="PortType" originalName="in_stream" coreId="1061109604" bitwidth="1">
-    <dataOutputObjs>read</dataOutputObjs>
+  <ports id="3" name="in_stream_V_strb_V" type="PortType" originalName="in_stream" coreId="0" bitwidth="3">
+    <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="4" name="in_stream_V_user_V" type="PortType" originalName="in_stream" coreId="3406273791" bitwidth="1">
-    <dataOutputObjs>read</dataOutputObjs>
+  <ports id="4" name="in_stream_V_user_V" type="PortType" originalName="in_stream" coreId="43" bitwidth="1">
+    <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="5" name="in_stream_V_last_V" type="PortType" originalName="in_stream" coreId="0" bitwidth="1">
-    <dataOutputObjs>read</dataOutputObjs>
+  <ports id="5" name="in_stream_V_last_V" type="PortType" originalName="in_stream" coreId="4294967295" bitwidth="1">
+    <dataOutputObjs>call</dataOutputObjs>
   </ports>
   <ports id="6" name="in_stream_V_id_V" type="PortType" originalName="in_stream" coreId="0" bitwidth="1">
-    <dataOutputObjs>read</dataOutputObjs>
+    <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="7" name="in_stream_V_dest_V" type="PortType" originalName="in_stream" coreId="2026292032" bitwidth="1">
-    <dataOutputObjs>read</dataOutputObjs>
+  <ports id="7" name="in_stream_V_dest_V" type="PortType" originalName="in_stream" coreId="3" bitwidth="1">
+    <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="8" name="out_stream_V_data_V" type="PortType" originalName="out_stream" coreId="2026113280" bitwidth="8" direction="DirOut">
-    <dataInputObjs>write</dataInputObjs>
+  <ports id="8" name="out_stream_V_data_V" type="PortType" originalName="out_stream" coreId="1005620656" bitwidth="24" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="9" name="out_stream_V_keep_V" type="PortType" originalName="out_stream" coreId="2763279824" bitwidth="1" direction="DirOut">
-    <dataInputObjs>write</dataInputObjs>
+  <ports id="9" name="out_stream_V_keep_V" type="PortType" originalName="out_stream" coreId="0" bitwidth="3" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="10" name="out_stream_V_strb_V" type="PortType" originalName="out_stream" coreId="1563440948" bitwidth="1" direction="DirOut">
-    <dataInputObjs>write</dataInputObjs>
+  <ports id="10" name="out_stream_V_strb_V" type="PortType" originalName="out_stream" coreId="0" bitwidth="3" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="11" name="out_stream_V_user_V" type="PortType" originalName="out_stream" coreId="2026266048" bitwidth="1" direction="DirOut">
-    <dataInputObjs>write</dataInputObjs>
+  <ports id="11" name="out_stream_V_user_V" type="PortType" originalName="out_stream" coreId="0" bitwidth="1" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="12" name="out_stream_V_last_V" type="PortType" originalName="out_stream" coreId="1397508187" bitwidth="1" direction="DirOut">
-    <dataInputObjs>write</dataInputObjs>
+  <ports id="12" name="out_stream_V_last_V" type="PortType" originalName="out_stream" coreId="0" bitwidth="1" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="13" name="out_stream_V_id_V" type="PortType" originalName="out_stream" coreId="2026309504" bitwidth="1" direction="DirOut">
-    <dataInputObjs>write</dataInputObjs>
+  <ports id="13" name="out_stream_V_id_V" type="PortType" originalName="out_stream" coreId="0" bitwidth="1" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="14" name="out_stream_V_dest_V" type="PortType" originalName="out_stream" coreId="2026261808" bitwidth="1" direction="DirOut">
-    <dataInputObjs>write</dataInputObjs>
+  <ports id="14" name="out_stream_V_dest_V" type="PortType" originalName="out_stream" coreId="0" bitwidth="1" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="15" name="in_breath" type="PortType" originalName="in_breath" coreId="1953723233" bitwidth="1" direction="DirInOut">
-    <dataInputObjs>read</dataInputObjs>
-    <dataInputObjs>write</dataInputObjs>
-    <dataOutputObjs>read</dataOutputObjs>
-    <dataOutputObjs>write</dataOutputObjs>
+  <ports id="15" name="in_breath_gpio" type="PortType" originalName="in_breath_gpio" coreId="0" bitwidth="1" direction="DirInOut">
+    <dataInputObjs>call</dataInputObjs>
+    <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="16" name="out_breath" type="PortType" originalName="out_breath" coreId="0" bitwidth="1" direction="DirInOut">
-    <dataInputObjs>read</dataInputObjs>
-    <dataInputObjs>write</dataInputObjs>
-    <dataOutputObjs>read</dataOutputObjs>
-    <dataOutputObjs>write</dataOutputObjs>
+  <ports id="16" name="out_breath_gpio" type="PortType" originalName="out_breath_gpio" coreId="0" bitwidth="1" direction="DirInOut">
+    <dataInputObjs>call</dataInputObjs>
+    <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <edges id="70" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.0/@node_objs.0"/>
-  <edges id="73" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
-  <edges id="74" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
-  <edges id="75" source_obj="//@ports.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
-  <edges id="76" source_obj="//@ports.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
-  <edges id="77" source_obj="//@ports.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
-  <edges id="78" source_obj="//@ports.5" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
-  <edges id="79" source_obj="//@ports.6" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
-  <edges id="80" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
-  <edges id="81" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
-  <edges id="82" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
-  <edges id="83" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.4"/>
-  <edges id="84" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.5"/>
-  <edges id="85" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.6"/>
-  <edges id="86" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.7"/>
-  <edges id="87" source_obj="//@regions.0/@basic_blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.8"/>
-  <edges id="88" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.8"/>
-  <edges id="89" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.8"/>
-  <edges id="92" source_obj="//@ports.14" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
-  <edges id="93" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
-  <edges id="98" source_obj="//@ports.14" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
-  <edges id="99" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
-  <edges id="100" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
-  <edges id="103" source_obj="//@regions.0/@basic_blocks.2/@node_objs.0" sink_obj="//@ports.7"/>
-  <edges id="104" source_obj="//@regions.0/@basic_blocks.2/@node_objs.0" sink_obj="//@ports.8"/>
-  <edges id="105" source_obj="//@regions.0/@basic_blocks.2/@node_objs.0" sink_obj="//@ports.9"/>
-  <edges id="106" source_obj="//@regions.0/@basic_blocks.2/@node_objs.0" sink_obj="//@ports.10"/>
-  <edges id="107" source_obj="//@regions.0/@basic_blocks.2/@node_objs.0" sink_obj="//@ports.11"/>
-  <edges id="108" source_obj="//@regions.0/@basic_blocks.2/@node_objs.0" sink_obj="//@ports.12"/>
-  <edges id="109" source_obj="//@regions.0/@basic_blocks.2/@node_objs.0" sink_obj="//@ports.13"/>
-  <edges id="110" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.0"/>
-  <edges id="111" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.0"/>
-  <edges id="112" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.0"/>
-  <edges id="113" source_obj="//@regions.0/@basic_blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.0"/>
-  <edges id="114" source_obj="//@regions.0/@basic_blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.0"/>
-  <edges id="115" source_obj="//@regions.0/@basic_blocks.0/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.0"/>
-  <edges id="116" source_obj="//@regions.0/@basic_blocks.0/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.0"/>
-  <edges id="117" source_obj="//@regions.0/@basic_blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.1"/>
-  <edges id="118" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.1"/>
-  <edges id="119" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.1"/>
-  <edges id="121" source_obj="//@ports.15" sink_obj="//@blocks.1/@node_objs.0"/>
-  <edges id="122" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.1"/>
-  <edges id="125" source_obj="//@ports.15" sink_obj="//@blocks.1/@node_objs.2"/>
-  <edges id="126" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.1/@node_objs.2"/>
-  <edges id="353" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0"/>
-  <edges id="354" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1"/>
-  <edges id="355" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.2"/>
-  <edges id="356" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.2"/>
-  <edges id="357" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@blocks.1"/>
-  <edges id="358" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@regions.0/@basic_blocks.0" is_back_edge="1"/>
-  <edges id="359" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
-  <edges id="360" edge_type="VirtEdge" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.2"/>
-  <edges id="-92" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@ports.14"/>
-  <edges id="-98" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@ports.14"/>
-  <edges id="-121" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@ports.15"/>
-  <edges id="-125" source_obj="//@blocks.1/@node_objs.2" sink_obj="//@ports.15"/>
-  <blocks id="44" name="entry" type="BlockType">
-    <controlOutputObjs>do.body</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="43" name="br_ln21" lineNumber="21" fileName="image_passthrough.cpp" fileDirectory=".." coreId="1667592275" contextFuncName="image_passthrough" opcode="br" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="image_passthrough.cpp" linenumber="21" fileDirectory="/home/ecelrc/students/gwl459/workspace/augmented-reality-glasses/fpga_software/PL" functionName="image_passthrough"/>
-      <controlInputObjs>do.body</controlInputObjs>
-    </node_objs>
-    <fileValidLineNumbers fileName="image_passthrough.cpp">
-      <validLinenumbers>21</validLinenumbers>
-    </fileValidLineNumbers>
-  </blocks>
-  <blocks id="69" name="if.then5" type="BlockType">
-    <controlInputObjs>if.end</controlInputObjs>
-    <controlOutputObjs>br</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="65" name="t_1" lineNumber="33" originalName="t" fileName="image_passthrough.cpp" fileDirectory=".." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="122" contextFuncName="image_passthrough" bitwidth="1" opcode="read" nodeLabel="3.0" m_display="0" m_delay="1.0" m_topoIndex="17" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="image_passthrough.cpp" linenumber="33" fileDirectory="/home/ecelrc/students/gwl459/workspace/augmented-reality-glasses/fpga_software/PL" functionName="image_passthrough"/>
-      <dataInputObjs>out_breath</dataInputObjs>
-      <dataOutputObjs>xor</dataOutputObjs>
-      <dataOutputObjs>out_breath</dataOutputObjs>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="66" name="xor_ln186_1" lineNumber="186" fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="out_breath_o" coreName="LogicGate" implIndex="auto" control="no" opType="xor" coreId="74" contextFuncName="ap_int_base_32_true_s" bitwidth="1" opcode="xor" nodeLabel="3.0" m_display="0" m_delay="0.33" m_topoIndex="18" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h" linenumber="186" fileDirectory="/home/ecelrc/students/gwl459/workspace/augmented-reality-glasses/fpga_software/PL" functionName="ap_int_base&amp;lt;32, true&amp;gt;"/>
-      <dataInputObjs>read</dataInputObjs>
-      <dataOutputObjs>write</dataOutputObjs>
-      <constName>empty</constName>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="67" name="out_breath_write_ln34" lineNumber="34" fileName="image_passthrough.cpp" fileDirectory=".." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="122" contextFuncName="image_passthrough" opcode="write" nodeLabel="3.0" m_display="0" m_delay="1.0" m_topoIndex="19" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="image_passthrough.cpp" linenumber="34" fileDirectory="/home/ecelrc/students/gwl459/workspace/augmented-reality-glasses/fpga_software/PL" functionName="image_passthrough"/>
-      <dataInputObjs>out_breath</dataInputObjs>
-      <dataInputObjs>xor</dataInputObjs>
-      <dataOutputObjs>out_breath</dataOutputObjs>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="68" name="_ln41" lineNumber="41" fileName="image_passthrough.cpp" fileDirectory=".." coreId="2026279808" contextFuncName="image_passthrough" opcode="ret" nodeLabel="3.0" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="image_passthrough.cpp" linenumber="41" fileDirectory="/home/ecelrc/students/gwl459/workspace/augmented-reality-glasses/fpga_software/PL" functionName="image_passthrough"/>
-    </node_objs>
-    <fileValidLineNumbers fileName="image_passthrough.cpp">
-      <validLinenumbers>33</validLinenumbers>
-      <validLinenumbers>34</validLinenumbers>
-      <validLinenumbers>41</validLinenumbers>
-    </fileValidLineNumbers>
-    <fileValidLineNumbers fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h">
-      <validLinenumbers>186</validLinenumbers>
-    </fileValidLineNumbers>
-  </blocks>
-  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" iiViolation="" id="160" pipe_depth="2" RegionName="VITIS_LOOP_21_1">
-    <basic_blocks id="56" name="do.body" type="BlockType">
-      <controlInputObjs>entry</controlInputObjs>
-      <controlInputObjs>if.end</controlInputObjs>
-      <controlOutputObjs>br</controlOutputObjs>
-      <controlOutputObjs>br</controlOutputObjs>
-      <controlOutputObjs>if.then</controlOutputObjs>
-      <controlOutputObjs>if.end</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="47" name="empty" lineNumber="247" fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h" fileDirectory=".." coreName="axis" implIndex="axi4stream" control="no" opType="adapter" coreId="123" contextFuncName="read" bitwidth="14" opcode="read" nodeLabel="1.0" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h" linenumber="247" fileDirectory="/home/ecelrc/students/gwl459/workspace/augmented-reality-glasses/fpga_software/PL" functionName="read"/>
+  <edges id="52" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@ports.7"/>
+  <edges id="53" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@ports.8"/>
+  <edges id="54" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@ports.9"/>
+  <edges id="55" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@ports.10"/>
+  <edges id="56" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@ports.11"/>
+  <edges id="57" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@ports.12"/>
+  <edges id="58" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@ports.13"/>
+  <edges id="59" source_obj="//@ports.14" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="60" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="61" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="62" source_obj="//@ports.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="63" source_obj="//@ports.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="64" source_obj="//@ports.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="65" source_obj="//@ports.5" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="66" source_obj="//@ports.6" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="69" source_obj="//@ports.15" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="70" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="71" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="-59" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@ports.14"/>
+  <edges id="-69" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@ports.15"/>
+  <regions anchor_node="-1" region_type="16" typeName="Dataflow" iiViolation="" id="137" RegionName="image_passthrough">
+    <basic_blocks id="49" name="image_passthrough" type="BlockType">
+      <node_objs xsi:type="cdfg:CdfgNode" id="46" name="_ln0" rtlName="Loop_VITIS_LOOP_43_1_proc1_U0" coreId="0" opcode="call" nodeLabel="1.0" nodeLatency="1" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+        <dataInputObjs>in_breath_gpio</dataInputObjs>
         <dataInputObjs>in_stream_V_data_V</dataInputObjs>
         <dataInputObjs>in_stream_V_keep_V</dataInputObjs>
         <dataInputObjs>in_stream_V_strb_V</dataInputObjs>
@@ -170,115 +81,6 @@
         <dataInputObjs>in_stream_V_last_V</dataInputObjs>
         <dataInputObjs>in_stream_V_id_V</dataInputObjs>
         <dataInputObjs>in_stream_V_dest_V</dataInputObjs>
-        <dataOutputObjs>extractvalue</dataOutputObjs>
-        <dataOutputObjs>extractvalue</dataOutputObjs>
-        <dataOutputObjs>extractvalue</dataOutputObjs>
-        <dataOutputObjs>extractvalue</dataOutputObjs>
-        <dataOutputObjs>extractvalue</dataOutputObjs>
-        <dataOutputObjs>extractvalue</dataOutputObjs>
-        <dataOutputObjs>extractvalue</dataOutputObjs>
-      </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="48" name="tmp_data_V" lineNumber="247" originalName="tmp.data.V" fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h" fileDirectory=".." coreId="4294967292" contextFuncName="read" bitwidth="8" opcode="extractvalue" nodeLabel="1.0" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h" linenumber="247" fileDirectory="/home/ecelrc/students/gwl459/workspace/augmented-reality-glasses/fpga_software/PL" functionName="read"/>
-        <dataInputObjs>read</dataInputObjs>
-        <dataOutputObjs>write</dataOutputObjs>
-      </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="49" name="tmp_keep_V" lineNumber="247" originalName="tmp.keep.V" fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h" fileDirectory=".." coreId="4294967292" contextFuncName="read" bitwidth="1" opcode="extractvalue" nodeLabel="1.0" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h" linenumber="247" fileDirectory="/home/ecelrc/students/gwl459/workspace/augmented-reality-glasses/fpga_software/PL" functionName="read"/>
-        <dataInputObjs>read</dataInputObjs>
-        <dataOutputObjs>write</dataOutputObjs>
-      </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="50" name="tmp_strb_V" lineNumber="247" originalName="tmp.strb.V" fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h" fileDirectory=".." coreId="0" contextFuncName="read" bitwidth="1" opcode="extractvalue" nodeLabel="1.0" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h" linenumber="247" fileDirectory="/home/ecelrc/students/gwl459/workspace/augmented-reality-glasses/fpga_software/PL" functionName="read"/>
-        <dataInputObjs>read</dataInputObjs>
-        <dataOutputObjs>write</dataOutputObjs>
-      </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="51" name="tmp_user_V" lineNumber="247" originalName="tmp.user.V" fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h" fileDirectory=".." coreId="2887973392" contextFuncName="read" bitwidth="1" opcode="extractvalue" nodeLabel="1.0" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h" linenumber="247" fileDirectory="/home/ecelrc/students/gwl459/workspace/augmented-reality-glasses/fpga_software/PL" functionName="read"/>
-        <dataInputObjs>read</dataInputObjs>
-        <dataOutputObjs>br</dataOutputObjs>
-        <dataOutputObjs>write</dataOutputObjs>
-      </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="52" name="tmp_last_V" lineNumber="247" originalName="tmp.last.V" fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h" fileDirectory=".." coreId="3503742700" contextFuncName="read" bitwidth="1" opcode="extractvalue" nodeLabel="1.0" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h" linenumber="247" fileDirectory="/home/ecelrc/students/gwl459/workspace/augmented-reality-glasses/fpga_software/PL" functionName="read"/>
-        <dataInputObjs>read</dataInputObjs>
-        <dataOutputObjs>write</dataOutputObjs>
-        <dataOutputObjs>br</dataOutputObjs>
-      </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="53" name="tmp_id_V" lineNumber="247" originalName="tmp.id.V" fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h" fileDirectory=".." coreId="2026113280" contextFuncName="read" bitwidth="1" opcode="extractvalue" nodeLabel="1.0" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h" linenumber="247" fileDirectory="/home/ecelrc/students/gwl459/workspace/augmented-reality-glasses/fpga_software/PL" functionName="read"/>
-        <dataInputObjs>read</dataInputObjs>
-        <dataOutputObjs>write</dataOutputObjs>
-      </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="54" name="tmp_dest_V" lineNumber="247" originalName="tmp.dest.V" fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h" fileDirectory=".." coreId="0" contextFuncName="read" bitwidth="1" opcode="extractvalue" nodeLabel="1.0" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h" linenumber="247" fileDirectory="/home/ecelrc/students/gwl459/workspace/augmented-reality-glasses/fpga_software/PL" functionName="read"/>
-        <dataInputObjs>read</dataInputObjs>
-        <dataOutputObjs>write</dataOutputObjs>
-      </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="55" name="br_ln25" lineNumber="25" fileName="image_passthrough.cpp" fileDirectory=".." coreId="176" contextFuncName="image_passthrough" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="image_passthrough.cpp" linenumber="25" fileDirectory="/home/ecelrc/students/gwl459/workspace/augmented-reality-glasses/fpga_software/PL" functionName="image_passthrough"/>
-        <dataInputObjs>extractvalue</dataInputObjs>
-        <controlInputObjs>if.end</controlInputObjs>
-        <controlInputObjs>if.then</controlInputObjs>
-      </node_objs>
-      <fileValidLineNumbers fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h">
-        <validLinenumbers>247</validLinenumbers>
-      </fileValidLineNumbers>
-      <fileValidLineNumbers fileName="image_passthrough.cpp">
-        <validLinenumbers>25</validLinenumbers>
-      </fileValidLineNumbers>
-    </basic_blocks>
-    <basic_blocks id="61" name="if.then" type="BlockType">
-      <controlInputObjs>do.body</controlInputObjs>
-      <controlOutputObjs>br</controlOutputObjs>
-      <controlOutputObjs>if.end</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="57" name="t" lineNumber="26" originalName="t" fileName="image_passthrough.cpp" fileDirectory=".." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="122" contextFuncName="image_passthrough" bitwidth="1" opcode="read" nodeLabel="2.0" m_display="0" m_delay="1.0" m_topoIndex="13" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="image_passthrough.cpp" linenumber="26" fileDirectory="/home/ecelrc/students/gwl459/workspace/augmented-reality-glasses/fpga_software/PL" functionName="image_passthrough"/>
-        <dataInputObjs>in_breath</dataInputObjs>
-        <dataOutputObjs>xor</dataOutputObjs>
-        <dataOutputObjs>in_breath</dataOutputObjs>
-      </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="58" name="xor_ln186" lineNumber="186" fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="xor_ln186_fu_188_p2" coreName="LogicGate" implIndex="auto" control="no" opType="xor" coreId="74" contextFuncName="ap_int_base_32_true_s" bitwidth="1" opcode="xor" nodeLabel="2.0" m_display="0" m_delay="0.33" m_topoIndex="14" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h" linenumber="186" fileDirectory="/home/ecelrc/students/gwl459/workspace/augmented-reality-glasses/fpga_software/PL" functionName="ap_int_base&amp;lt;32, true&amp;gt;"/>
-        <dataInputObjs>read</dataInputObjs>
-        <dataOutputObjs>write</dataOutputObjs>
-        <constName>empty</constName>
-      </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="59" name="in_breath_write_ln27" lineNumber="27" fileName="image_passthrough.cpp" fileDirectory=".." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="122" contextFuncName="image_passthrough" opcode="write" nodeLabel="2.0" m_display="0" m_delay="1.0" m_topoIndex="15" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="image_passthrough.cpp" linenumber="27" fileDirectory="/home/ecelrc/students/gwl459/workspace/augmented-reality-glasses/fpga_software/PL" functionName="image_passthrough"/>
-        <dataInputObjs>in_breath</dataInputObjs>
-        <dataInputObjs>xor</dataInputObjs>
-        <dataOutputObjs>in_breath</dataOutputObjs>
-      </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="60" name="br_ln28" lineNumber="28" fileName="image_passthrough.cpp" fileDirectory=".." coreId="1717924464" contextFuncName="image_passthrough" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="image_passthrough.cpp" linenumber="28" fileDirectory="/home/ecelrc/students/gwl459/workspace/augmented-reality-glasses/fpga_software/PL" functionName="image_passthrough"/>
-        <controlInputObjs>if.end</controlInputObjs>
-      </node_objs>
-      <fileValidLineNumbers fileName="image_passthrough.cpp">
-        <validLinenumbers>26</validLinenumbers>
-        <validLinenumbers>27</validLinenumbers>
-        <validLinenumbers>28</validLinenumbers>
-      </fileValidLineNumbers>
-      <fileValidLineNumbers fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h">
-        <validLinenumbers>186</validLinenumbers>
-      </fileValidLineNumbers>
-    </basic_blocks>
-    <basic_blocks id="64" name="if.end" type="BlockType">
-      <controlInputObjs>do.body</controlInputObjs>
-      <controlInputObjs>if.then</controlInputObjs>
-      <controlOutputObjs>br</controlOutputObjs>
-      <controlOutputObjs>br</controlOutputObjs>
-      <controlOutputObjs>if.then5</controlOutputObjs>
-      <controlOutputObjs>do.body</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="62" name="out_stream_V_data_V_write_ln258" lineNumber="258" fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h" fileDirectory=".." coreName="axis" implIndex="axi4stream" control="no" opType="adapter" coreId="123" contextFuncName="write" opcode="write" nodeLabel="1.0" nodeLatency="1" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h" linenumber="258" fileDirectory="/home/ecelrc/students/gwl459/workspace/augmented-reality-glasses/fpga_software/PL" functionName="write"/>
-        <dataInputObjs>extractvalue</dataInputObjs>
-        <dataInputObjs>extractvalue</dataInputObjs>
-        <dataInputObjs>extractvalue</dataInputObjs>
-        <dataInputObjs>extractvalue</dataInputObjs>
-        <dataInputObjs>extractvalue</dataInputObjs>
-        <dataInputObjs>extractvalue</dataInputObjs>
-        <dataInputObjs>extractvalue</dataInputObjs>
         <dataOutputObjs>out_stream_V_data_V</dataOutputObjs>
         <dataOutputObjs>out_stream_V_keep_V</dataOutputObjs>
         <dataOutputObjs>out_stream_V_strb_V</dataOutputObjs>
@@ -286,18 +88,19 @@
         <dataOutputObjs>out_stream_V_last_V</dataOutputObjs>
         <dataOutputObjs>out_stream_V_id_V</dataOutputObjs>
         <dataOutputObjs>out_stream_V_dest_V</dataOutputObjs>
+        <dataOutputObjs>in_breath_gpio</dataOutputObjs>
+        <constName>Loop_VITIS_LOOP_43_1_proc1</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="63" name="br_ln32" lineNumber="32" fileName="image_passthrough.cpp" fileDirectory=".." coreId="0" contextFuncName="image_passthrough" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="image_passthrough.cpp" linenumber="32" fileDirectory="/home/ecelrc/students/gwl459/workspace/augmented-reality-glasses/fpga_software/PL" functionName="image_passthrough"/>
-        <dataInputObjs>extractvalue</dataInputObjs>
-        <controlInputObjs>do.body</controlInputObjs>
-        <controlInputObjs>if.then5</controlInputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="47" name="_ln0" rtlName="Block_image_passthrough_for_cond_i_exit_proc_U0" coreId="0" opcode="call" nodeLabel="3.0" m_display="0" m_delay="0.33" m_topoIndex="2" m_clusterGroupNumber="-1">
+        <dataInputObjs>out_breath_gpio</dataInputObjs>
+        <dataOutputObjs>out_breath_gpio</dataOutputObjs>
+        <constName>Block_image_passthrough_for_cond_i_exit_proc</constName>
       </node_objs>
-      <fileValidLineNumbers fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h">
-        <validLinenumbers>258</validLinenumbers>
-      </fileValidLineNumbers>
+      <node_objs xsi:type="cdfg:CdfgNode" id="48" name="_ln105" lineNumber="105" fileName="image_passthrough.cpp" fileDirectory=".." coreId="0" contextFuncName="image_passthrough" opcode="ret" nodeLabel="3.0" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="image_passthrough.cpp" linenumber="105" fileDirectory="/home/ecelrc/students/gwl459/workspace/augmented-reality-glasses/fpga_software/PL" functionName="image_passthrough"/>
+      </node_objs>
       <fileValidLineNumbers fileName="image_passthrough.cpp">
-        <validLinenumbers>32</validLinenumbers>
+        <validLinenumbers>105</validLinenumbers>
       </fileValidLineNumbers>
     </basic_blocks>
   </regions>
@@ -305,162 +108,107 @@
   <ScheduleInfo time="1"/>
   <ScheduleInfo time="2"/>
   <ScheduleInfo time="3"/>
-  <regnodes realName="tmp_strb_V_reg_212">
-    <nodeIds>50</nodeIds>
-  </regnodes>
-  <regnodes realName="tmp_id_V_reg_227">
-    <nodeIds>53</nodeIds>
-  </regnodes>
-  <regnodes realName="tmp_last_V_reg_222">
-    <nodeIds>52</nodeIds>
-  </regnodes>
-  <regnodes realName="tmp_keep_V_reg_207">
-    <nodeIds>49</nodeIds>
-  </regnodes>
-  <regnodes realName="tmp_dest_V_reg_232">
-    <nodeIds>54</nodeIds>
-  </regnodes>
-  <regnodes realName="tmp_data_V_reg_202">
-    <nodeIds>48</nodeIds>
-  </regnodes>
-  <regnodes realName="tmp_user_V_reg_217">
-    <nodeIds>51</nodeIds>
-  </regnodes>
-  <expressionNodes realName="tmp_keep_V_fu_158">
-    <nodeIds>49</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="xor_ln186_1_fu_195">
-    <nodeIds>66</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="tmp_dest_V_fu_183">
-    <nodeIds>54</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="tmp_last_V_fu_173">
-    <nodeIds>52</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="tmp_strb_V_fu_163">
-    <nodeIds>50</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="xor_ln186_fu_188">
-    <nodeIds>58</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="tmp_id_V_fu_178">
-    <nodeIds>53</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="tmp_user_V_fu_168">
-    <nodeIds>51</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="tmp_data_V_fu_153">
-    <nodeIds>48</nodeIds>
-  </expressionNodes>
-  <ioNodes realName="grp_write_fu_102">
-    <nodeIds>62</nodeIds>
-  </ioNodes>
-  <ioNodes realName="t_1_read_fu_140">
-    <nodeIds>65</nodeIds>
-  </ioNodes>
-  <ioNodes realName="write_ln27_write_fu_133">
-    <nodeIds>59</nodeIds>
-  </ioNodes>
-  <ioNodes realName="empty_read_fu_84">
+  <moduleNodes realName="grp_Loop_VITIS_LOOP_43_1_proc1_fu_82">
+    <nodeIds>46</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="call_ln0_Block_image_passthrough_for_cond_i_exit_proc_fu_120">
     <nodeIds>47</nodeIds>
-  </ioNodes>
-  <ioNodes realName="write_ln34_write_fu_146">
-    <nodeIds>67</nodeIds>
-  </ioNodes>
-  <ioNodes realName="t_read_fu_127">
-    <nodeIds>57</nodeIds>
-  </ioNodes>
-  <ioPorts name="in_breath">
-    <contents name="read">
-      <nodeIds>57</nodeIds>
-    </contents>
-    <contents name="write">
-      <nodeIds>59</nodeIds>
+  </moduleNodes>
+  <memoryPorts dataString="tile_ping_V" portID="100">
+    <nodeIds>46</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="tile_pong_V" portID="100">
+    <nodeIds>46</nodeIds>
+  </memoryPorts>
+  <ioPorts name="in_breath_gpio">
+    <contents name="call">
+      <nodeIds>46</nodeIds>
     </contents>
   </ioPorts>
   <ioPorts name="in_stream_V_data_V">
-    <contents name="read">
-      <nodeIds>47</nodeIds>
+    <contents name="call">
+      <nodeIds>46</nodeIds>
     </contents>
   </ioPorts>
   <ioPorts name="in_stream_V_dest_V">
-    <contents name="read">
-      <nodeIds>47</nodeIds>
+    <contents name="call">
+      <nodeIds>46</nodeIds>
     </contents>
   </ioPorts>
   <ioPorts name="in_stream_V_id_V">
-    <contents name="read">
-      <nodeIds>47</nodeIds>
+    <contents name="call">
+      <nodeIds>46</nodeIds>
     </contents>
   </ioPorts>
   <ioPorts name="in_stream_V_keep_V">
-    <contents name="read">
-      <nodeIds>47</nodeIds>
+    <contents name="call">
+      <nodeIds>46</nodeIds>
     </contents>
   </ioPorts>
   <ioPorts name="in_stream_V_last_V">
-    <contents name="read">
-      <nodeIds>47</nodeIds>
+    <contents name="call">
+      <nodeIds>46</nodeIds>
     </contents>
   </ioPorts>
   <ioPorts name="in_stream_V_strb_V">
-    <contents name="read">
-      <nodeIds>47</nodeIds>
+    <contents name="call">
+      <nodeIds>46</nodeIds>
     </contents>
   </ioPorts>
   <ioPorts name="in_stream_V_user_V">
-    <contents name="read">
+    <contents name="call">
+      <nodeIds>46</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="out_breath_gpio">
+    <contents name="call">
       <nodeIds>47</nodeIds>
     </contents>
   </ioPorts>
-  <ioPorts name="out_breath">
-    <contents name="read">
-      <nodeIds>65</nodeIds>
-    </contents>
-    <contents name="write">
-      <nodeIds>67</nodeIds>
-    </contents>
-  </ioPorts>
   <ioPorts name="out_stream_V_data_V">
-    <contents name="write">
-      <nodeIds>62</nodeIds>
+    <contents name="call">
+      <nodeIds>46</nodeIds>
     </contents>
   </ioPorts>
   <ioPorts name="out_stream_V_dest_V">
-    <contents name="write">
-      <nodeIds>62</nodeIds>
+    <contents name="call">
+      <nodeIds>46</nodeIds>
     </contents>
   </ioPorts>
   <ioPorts name="out_stream_V_id_V">
-    <contents name="write">
-      <nodeIds>62</nodeIds>
+    <contents name="call">
+      <nodeIds>46</nodeIds>
     </contents>
   </ioPorts>
   <ioPorts name="out_stream_V_keep_V">
-    <contents name="write">
-      <nodeIds>62</nodeIds>
+    <contents name="call">
+      <nodeIds>46</nodeIds>
     </contents>
   </ioPorts>
   <ioPorts name="out_stream_V_last_V">
-    <contents name="write">
-      <nodeIds>62</nodeIds>
+    <contents name="call">
+      <nodeIds>46</nodeIds>
     </contents>
   </ioPorts>
   <ioPorts name="out_stream_V_strb_V">
-    <contents name="write">
-      <nodeIds>62</nodeIds>
+    <contents name="call">
+      <nodeIds>46</nodeIds>
     </contents>
   </ioPorts>
   <ioPorts name="out_stream_V_user_V">
-    <contents name="write">
-      <nodeIds>62</nodeIds>
+    <contents name="call">
+      <nodeIds>46</nodeIds>
     </contents>
   </ioPorts>
   <fsm>
-    <states id="1">
-      <operations id="17" stage="1" latency="1"/>
-      <operations id="18" stage="1" latency="1"/>
+    <states id="1"/>
+    <states id="2">
+      <operations id="46" stage="2" latency="2"/>
+    </states>
+    <states id="3">
+      <operations id="46" stage="1" latency="2"/>
+    </states>
+    <states id="4">
       <operations id="19" stage="1" latency="1"/>
       <operations id="20" stage="1" latency="1"/>
       <operations id="21" stage="1" latency="1"/>
@@ -486,34 +234,10 @@
       <operations id="41" stage="1" latency="1"/>
       <operations id="42" stage="1" latency="1"/>
       <operations id="43" stage="1" latency="1"/>
-    </states>
-    <states id="2">
+      <operations id="44" stage="1" latency="1"/>
       <operations id="45" stage="1" latency="1"/>
-      <operations id="46" stage="1" latency="1"/>
       <operations id="47" stage="1" latency="1"/>
       <operations id="48" stage="1" latency="1"/>
-      <operations id="49" stage="1" latency="1"/>
-      <operations id="50" stage="1" latency="1"/>
-      <operations id="51" stage="1" latency="1"/>
-      <operations id="52" stage="1" latency="1"/>
-      <operations id="53" stage="1" latency="1"/>
-      <operations id="54" stage="1" latency="1"/>
-      <operations id="55" stage="1" latency="1"/>
-      <operations id="62" stage="2" latency="2"/>
-      <operations id="63" stage="1" latency="1"/>
-    </states>
-    <states id="3">
-      <operations id="57" stage="1" latency="1"/>
-      <operations id="58" stage="1" latency="1"/>
-      <operations id="59" stage="1" latency="1"/>
-      <operations id="60" stage="1" latency="1"/>
-      <operations id="62" stage="1" latency="2"/>
-    </states>
-    <states id="4">
-      <operations id="65" stage="1" latency="1"/>
-      <operations id="66" stage="1" latency="1"/>
-      <operations id="67" stage="1" latency="1"/>
-      <operations id="68" stage="1" latency="1"/>
     </states>
     <transitions inState="1" outState="2">
       <condition id="-1"/>
@@ -524,30 +248,80 @@
     <transitions inState="3" outState="4">
       <condition id="-1"/>
     </transitions>
-    <transitions inState="3" outState="2">
-      <condition id="-1"/>
-    </transitions>
   </fsm>
   <CFGRegionsRoot>
-    <cfgRegions mId="1" mTag="image_passthrough" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="-1" mMaxLatency="-1">
-      <subRegions>2</subRegions>
-      <subRegions>3</subRegions>
-      <subRegions>4</subRegions>
-      <mDfPipe/>
-    </cfgRegions>
-    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
-      <basicBlocks>44</basicBlocks>
-      <mDfPipe/>
-    </cfgRegions>
-    <cfgRegions mId="3" mTag="VITIS_LOOP_21_1" mII="1" mDepth="2" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="-1" mMaxLatency="-1" mType="1">
-      <basicBlocks>56</basicBlocks>
-      <basicBlocks>61</basicBlocks>
-      <basicBlocks>64</basicBlocks>
-      <mDfPipe/>
-    </cfgRegions>
-    <cfgRegions mId="4" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
-      <basicBlocks>69</basicBlocks>
-      <mDfPipe/>
+    <cfgRegions mId="1" mTag="image_passthrough" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="921782" mMaxLatency="921782" mIsDfPipe="true">
+      <basicBlocks>49</basicBlocks>
+      <mDfPipe allPipePinInst="//@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.0/@pins.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.1/@pins.0/@inst">
+        <processe_list name="Loop_VITIS_LOOP_43_1_proc1_U0" ssdmobj_id="46">
+          <pins>
+            <port name="out_stream_V_data_V" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="_52" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Loop_VITIS_LOOP_43_1_proc1_U0" ssdmobj_id="46" object_id="_64"/>
+          </pins>
+          <pins>
+            <port name="out_stream_V_keep_V" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="_53" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Loop_VITIS_LOOP_43_1_proc1_U0" ssdmobj_id="46" object_id="_64"/>
+          </pins>
+          <pins>
+            <port name="out_stream_V_strb_V" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="_54" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Loop_VITIS_LOOP_43_1_proc1_U0" ssdmobj_id="46" object_id="_64"/>
+          </pins>
+          <pins>
+            <port name="out_stream_V_user_V" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="_55" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Loop_VITIS_LOOP_43_1_proc1_U0" ssdmobj_id="46" object_id="_64"/>
+          </pins>
+          <pins>
+            <port name="out_stream_V_last_V" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="_56" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Loop_VITIS_LOOP_43_1_proc1_U0" ssdmobj_id="46" object_id="_64"/>
+          </pins>
+          <pins>
+            <port name="out_stream_V_id_V" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="_57" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Loop_VITIS_LOOP_43_1_proc1_U0" ssdmobj_id="46" object_id="_64"/>
+          </pins>
+          <pins>
+            <port name="out_stream_V_dest_V" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="_58" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Loop_VITIS_LOOP_43_1_proc1_U0" ssdmobj_id="46" object_id="_64"/>
+          </pins>
+          <pins>
+            <port name="in_breath_gpio" dir="DirInOut" type="SIOType" need_hs="true" top_port_object_id="" top_port_object_id_reference="_59" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Loop_VITIS_LOOP_43_1_proc1_U0" ssdmobj_id="46" object_id="_64"/>
+          </pins>
+          <pins>
+            <port name="in_stream_V_data_V" type="SIOType" top_port_object_id="" top_port_object_id_reference="_45" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Loop_VITIS_LOOP_43_1_proc1_U0" ssdmobj_id="46" object_id="_64"/>
+          </pins>
+          <pins>
+            <port name="in_stream_V_keep_V" type="SIOType" top_port_object_id="" top_port_object_id_reference="_46" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Loop_VITIS_LOOP_43_1_proc1_U0" ssdmobj_id="46" object_id="_64"/>
+          </pins>
+          <pins>
+            <port name="in_stream_V_strb_V" type="SIOType" top_port_object_id="" top_port_object_id_reference="_47" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Loop_VITIS_LOOP_43_1_proc1_U0" ssdmobj_id="46" object_id="_64"/>
+          </pins>
+          <pins>
+            <port name="in_stream_V_user_V" type="SIOType" top_port_object_id="" top_port_object_id_reference="_48" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Loop_VITIS_LOOP_43_1_proc1_U0" ssdmobj_id="46" object_id="_64"/>
+          </pins>
+          <pins>
+            <port name="in_stream_V_last_V" type="SIOType" top_port_object_id="" top_port_object_id_reference="_49" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Loop_VITIS_LOOP_43_1_proc1_U0" ssdmobj_id="46" object_id="_64"/>
+          </pins>
+          <pins>
+            <port name="in_stream_V_id_V" type="SIOType" top_port_object_id="" top_port_object_id_reference="_50" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Loop_VITIS_LOOP_43_1_proc1_U0" ssdmobj_id="46" object_id="_64"/>
+          </pins>
+          <pins>
+            <port name="in_stream_V_dest_V" type="SIOType" top_port_object_id="" top_port_object_id_reference="_51" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Loop_VITIS_LOOP_43_1_proc1_U0" ssdmobj_id="46" object_id="_64"/>
+          </pins>
+        </processe_list>
+        <processe_list name="Block_image_passthrough_for_cond_i_exit_proc_U0" ssdmobj_id="47">
+          <pins>
+            <port name="out_breath_gpio" dir="DirInOut" type="SIOType" need_hs="true" top_port_object_id="" top_port_object_id_reference="_60" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Block_image_passthrough_for_cond_i_exit_proc_U0" ssdmobj_id="47" object_id="_96"/>
+          </pins>
+        </processe_list>
+      </mDfPipe>
     </cfgRegions>
   </CFGRegionsRoot>
 </cdfg:DBCdfg>

@@ -74,7 +74,7 @@ all: $(TARGET)
 
 $(ObjDir)/image_passthrough_tb.o: ../../../../image_passthrough_tb.cpp $(ObjDir)/.dir
 	$(Echo) "   Compiling ../../../../image_passthrough_tb.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/image_passthrough_tb.d
 

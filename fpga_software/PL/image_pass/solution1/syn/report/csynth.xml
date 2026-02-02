@@ -12,39 +12,29 @@
         <FlowTarget>vivado</FlowTarget>
     </UserAssignments>
     <PerformanceEstimates>
-        <PipelineType>no</PipelineType>
+        <PipelineType>dataflow</PipelineType>
         <SummaryOfTimingAnalysis>
             <unit>ns</unit>
-            <EstimatedClockPeriod>2.331</EstimatedClockPeriod>
+            <EstimatedClockPeriod>3.559</EstimatedClockPeriod>
         </SummaryOfTimingAnalysis>
         <SummaryOfOverallLatency>
             <unit>clock cycles</unit>
-            <Best-caseLatency>undef</Best-caseLatency>
-            <Average-caseLatency>undef</Average-caseLatency>
-            <Worst-caseLatency>undef</Worst-caseLatency>
-            <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
-            <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
-            <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
-            <Interval-min>undef</Interval-min>
-            <Interval-max>undef</Interval-max>
+            <Best-caseLatency>921782</Best-caseLatency>
+            <Average-caseLatency>921782</Average-caseLatency>
+            <Worst-caseLatency>921782</Worst-caseLatency>
+            <Best-caseRealTimeLatency>9.218 ms</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>9.218 ms</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>9.218 ms</Worst-caseRealTimeLatency>
+            <DataflowPipelineThroughput>921783</DataflowPipelineThroughput>
+            <Interval-min>921783</Interval-min>
+            <Interval-max>921783</Interval-max>
         </SummaryOfOverallLatency>
-        <SummaryOfLoopLatency>
-            <VITIS_LOOP_21_1>
-                <Slack>7.30</Slack>
-                <TripCount>undef</TripCount>
-                <Latency>undef</Latency>
-                <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
-                <PipelineII>1</PipelineII>
-                <PipelineDepth>2</PipelineDepth>
-                <InstanceList/>
-            </VITIS_LOOP_21_1>
-        </SummaryOfLoopLatency>
     </PerformanceEstimates>
     <AreaEstimates>
         <Resources>
-            <BRAM_18K>0</BRAM_18K>
-            <FF>70</FF>
-            <LUT>114</LUT>
+            <BRAM_18K>60</BRAM_18K>
+            <FF>201</FF>
+            <LUT>1098</LUT>
             <URAM>0</URAM>
             <DSP>0</DSP>
         </Resources>
@@ -60,188 +50,188 @@
         <RtlPorts>
             <name>s_axi_CTRL_AWVALID</name>
             <Object>CTRL</Object>
-            <Type>pointer</Type>
+            <Type>return void</Type>
             <IOProtocol>s_axi</IOProtocol>
             <Dir>in</Dir>
             <Bits>1</Bits>
             <Attribute>unknown</Attribute>
-            <CType>int</CType>
+            <CType>unknown</CType>
             <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
             <name>s_axi_CTRL_AWREADY</name>
             <Object>CTRL</Object>
-            <Type>pointer</Type>
+            <Type>return void</Type>
             <IOProtocol>s_axi</IOProtocol>
             <Dir>out</Dir>
             <Bits>1</Bits>
             <Attribute>unknown</Attribute>
-            <CType>int</CType>
+            <CType>unknown</CType>
             <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
             <name>s_axi_CTRL_AWADDR</name>
             <Object>CTRL</Object>
-            <Type>pointer</Type>
+            <Type>return void</Type>
             <IOProtocol>s_axi</IOProtocol>
             <Dir>in</Dir>
-            <Bits>6</Bits>
+            <Bits>4</Bits>
             <Attribute>unknown</Attribute>
-            <CType>int</CType>
+            <CType>unknown</CType>
             <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
             <name>s_axi_CTRL_WVALID</name>
             <Object>CTRL</Object>
-            <Type>pointer</Type>
+            <Type>return void</Type>
             <IOProtocol>s_axi</IOProtocol>
             <Dir>in</Dir>
             <Bits>1</Bits>
             <Attribute>unknown</Attribute>
-            <CType>int</CType>
+            <CType>unknown</CType>
             <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
             <name>s_axi_CTRL_WREADY</name>
             <Object>CTRL</Object>
-            <Type>pointer</Type>
+            <Type>return void</Type>
             <IOProtocol>s_axi</IOProtocol>
             <Dir>out</Dir>
             <Bits>1</Bits>
             <Attribute>unknown</Attribute>
-            <CType>int</CType>
+            <CType>unknown</CType>
             <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
             <name>s_axi_CTRL_WDATA</name>
             <Object>CTRL</Object>
-            <Type>pointer</Type>
+            <Type>return void</Type>
             <IOProtocol>s_axi</IOProtocol>
             <Dir>in</Dir>
             <Bits>32</Bits>
             <Attribute>unknown</Attribute>
-            <CType>int</CType>
+            <CType>unknown</CType>
             <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
             <name>s_axi_CTRL_WSTRB</name>
             <Object>CTRL</Object>
-            <Type>pointer</Type>
+            <Type>return void</Type>
             <IOProtocol>s_axi</IOProtocol>
             <Dir>in</Dir>
             <Bits>4</Bits>
             <Attribute>unknown</Attribute>
-            <CType>int</CType>
+            <CType>unknown</CType>
             <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
             <name>s_axi_CTRL_ARVALID</name>
             <Object>CTRL</Object>
-            <Type>pointer</Type>
+            <Type>return void</Type>
             <IOProtocol>s_axi</IOProtocol>
             <Dir>in</Dir>
             <Bits>1</Bits>
             <Attribute>unknown</Attribute>
-            <CType>int</CType>
+            <CType>unknown</CType>
             <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
             <name>s_axi_CTRL_ARREADY</name>
             <Object>CTRL</Object>
-            <Type>pointer</Type>
+            <Type>return void</Type>
             <IOProtocol>s_axi</IOProtocol>
             <Dir>out</Dir>
             <Bits>1</Bits>
             <Attribute>unknown</Attribute>
-            <CType>int</CType>
+            <CType>unknown</CType>
             <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
             <name>s_axi_CTRL_ARADDR</name>
             <Object>CTRL</Object>
-            <Type>pointer</Type>
+            <Type>return void</Type>
             <IOProtocol>s_axi</IOProtocol>
             <Dir>in</Dir>
-            <Bits>6</Bits>
+            <Bits>4</Bits>
             <Attribute>unknown</Attribute>
-            <CType>int</CType>
+            <CType>unknown</CType>
             <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
             <name>s_axi_CTRL_RVALID</name>
             <Object>CTRL</Object>
-            <Type>pointer</Type>
+            <Type>return void</Type>
             <IOProtocol>s_axi</IOProtocol>
             <Dir>out</Dir>
             <Bits>1</Bits>
             <Attribute>unknown</Attribute>
-            <CType>int</CType>
+            <CType>unknown</CType>
             <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
             <name>s_axi_CTRL_RREADY</name>
             <Object>CTRL</Object>
-            <Type>pointer</Type>
+            <Type>return void</Type>
             <IOProtocol>s_axi</IOProtocol>
             <Dir>in</Dir>
             <Bits>1</Bits>
             <Attribute>unknown</Attribute>
-            <CType>int</CType>
+            <CType>unknown</CType>
             <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
             <name>s_axi_CTRL_RDATA</name>
             <Object>CTRL</Object>
-            <Type>pointer</Type>
+            <Type>return void</Type>
             <IOProtocol>s_axi</IOProtocol>
             <Dir>out</Dir>
             <Bits>32</Bits>
             <Attribute>unknown</Attribute>
-            <CType>int</CType>
+            <CType>unknown</CType>
             <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
             <name>s_axi_CTRL_RRESP</name>
             <Object>CTRL</Object>
-            <Type>pointer</Type>
+            <Type>return void</Type>
             <IOProtocol>s_axi</IOProtocol>
             <Dir>out</Dir>
             <Bits>2</Bits>
             <Attribute>unknown</Attribute>
-            <CType>int</CType>
+            <CType>unknown</CType>
             <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
             <name>s_axi_CTRL_BVALID</name>
             <Object>CTRL</Object>
-            <Type>pointer</Type>
+            <Type>return void</Type>
             <IOProtocol>s_axi</IOProtocol>
             <Dir>out</Dir>
             <Bits>1</Bits>
             <Attribute>unknown</Attribute>
-            <CType>int</CType>
+            <CType>unknown</CType>
             <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
             <name>s_axi_CTRL_BREADY</name>
             <Object>CTRL</Object>
-            <Type>pointer</Type>
+            <Type>return void</Type>
             <IOProtocol>s_axi</IOProtocol>
             <Dir>in</Dir>
             <Bits>1</Bits>
             <Attribute>unknown</Attribute>
-            <CType>int</CType>
+            <CType>unknown</CType>
             <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
             <name>s_axi_CTRL_BRESP</name>
             <Object>CTRL</Object>
-            <Type>pointer</Type>
+            <Type>return void</Type>
             <IOProtocol>s_axi</IOProtocol>
             <Dir>out</Dir>
             <Bits>2</Bits>
             <Attribute>unknown</Attribute>
-            <CType>int</CType>
+            <CType>unknown</CType>
             <HasCtrl>1</HasCtrl>
         </RtlPorts>
         <RtlPorts>
@@ -285,43 +275,7 @@
             <IOProtocol>axis</IOProtocol>
             <IOConfig>register, both mode</IOConfig>
             <Dir>in</Dir>
-            <Bits>8</Bits>
-            <Attribute>data</Attribute>
-            <CType>int</CType>
-        </RtlPorts>
-        <RtlPorts>
-            <name>in_stream_TVALID</name>
-            <Object>in_stream_V_dest_V</Object>
-            <Type>pointer</Type>
-            <Scope/>
-            <IOProtocol>axis</IOProtocol>
-            <IOConfig>register, both mode</IOConfig>
-            <Dir>in</Dir>
-            <Bits>1</Bits>
-            <Attribute>control</Attribute>
-            <CType>int</CType>
-        </RtlPorts>
-        <RtlPorts>
-            <name>in_stream_TREADY</name>
-            <Object>in_stream_V_dest_V</Object>
-            <Type>pointer</Type>
-            <Scope/>
-            <IOProtocol>axis</IOProtocol>
-            <IOConfig>register, both mode</IOConfig>
-            <Dir>out</Dir>
-            <Bits>1</Bits>
-            <Attribute>control</Attribute>
-            <CType>int</CType>
-        </RtlPorts>
-        <RtlPorts>
-            <name>in_stream_TDEST</name>
-            <Object>in_stream_V_dest_V</Object>
-            <Type>pointer</Type>
-            <Scope/>
-            <IOProtocol>axis</IOProtocol>
-            <IOConfig>register, both mode</IOConfig>
-            <Dir>in</Dir>
-            <Bits>1</Bits>
+            <Bits>24</Bits>
             <Attribute>data</Attribute>
             <CType>int</CType>
         </RtlPorts>
@@ -333,7 +287,7 @@
             <IOProtocol>axis</IOProtocol>
             <IOConfig>register, both mode</IOConfig>
             <Dir>in</Dir>
-            <Bits>1</Bits>
+            <Bits>3</Bits>
             <Attribute>data</Attribute>
             <CType>int</CType>
         </RtlPorts>
@@ -345,7 +299,7 @@
             <IOProtocol>axis</IOProtocol>
             <IOConfig>register, both mode</IOConfig>
             <Dir>in</Dir>
-            <Bits>1</Bits>
+            <Bits>3</Bits>
             <Attribute>data</Attribute>
             <CType>int</CType>
         </RtlPorts>
@@ -386,32 +340,20 @@
             <CType>int</CType>
         </RtlPorts>
         <RtlPorts>
-            <name>out_stream_TDATA</name>
-            <Object>out_stream_V_data_V</Object>
+            <name>in_stream_TDEST</name>
+            <Object>in_stream_V_dest_V</Object>
             <Type>pointer</Type>
             <Scope/>
             <IOProtocol>axis</IOProtocol>
             <IOConfig>register, both mode</IOConfig>
-            <Dir>out</Dir>
-            <Bits>8</Bits>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
             <Attribute>data</Attribute>
             <CType>int</CType>
         </RtlPorts>
         <RtlPorts>
-            <name>out_stream_TVALID</name>
-            <Object>out_stream_V_dest_V</Object>
-            <Type>pointer</Type>
-            <Scope/>
-            <IOProtocol>axis</IOProtocol>
-            <IOConfig>register, both mode</IOConfig>
-            <Dir>out</Dir>
-            <Bits>1</Bits>
-            <Attribute>control</Attribute>
-            <CType>int</CType>
-        </RtlPorts>
-        <RtlPorts>
-            <name>out_stream_TREADY</name>
-            <Object>out_stream_V_dest_V</Object>
+            <name>in_stream_TVALID</name>
+            <Object>in_stream_V_dest_V</Object>
             <Type>pointer</Type>
             <Scope/>
             <IOProtocol>axis</IOProtocol>
@@ -422,14 +364,26 @@
             <CType>int</CType>
         </RtlPorts>
         <RtlPorts>
-            <name>out_stream_TDEST</name>
-            <Object>out_stream_V_dest_V</Object>
+            <name>in_stream_TREADY</name>
+            <Object>in_stream_V_dest_V</Object>
             <Type>pointer</Type>
             <Scope/>
             <IOProtocol>axis</IOProtocol>
             <IOConfig>register, both mode</IOConfig>
             <Dir>out</Dir>
             <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>out_stream_TDATA</name>
+            <Object>out_stream_V_data_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>24</Bits>
             <Attribute>data</Attribute>
             <CType>int</CType>
         </RtlPorts>
@@ -441,7 +395,7 @@
             <IOProtocol>axis</IOProtocol>
             <IOConfig>register, both mode</IOConfig>
             <Dir>out</Dir>
-            <Bits>1</Bits>
+            <Bits>3</Bits>
             <Attribute>data</Attribute>
             <CType>int</CType>
         </RtlPorts>
@@ -453,7 +407,7 @@
             <IOProtocol>axis</IOProtocol>
             <IOConfig>register, both mode</IOConfig>
             <Dir>out</Dir>
-            <Bits>1</Bits>
+            <Bits>3</Bits>
             <Attribute>data</Attribute>
             <CType>int</CType>
         </RtlPorts>
@@ -493,59 +447,449 @@
             <Attribute>data</Attribute>
             <CType>int</CType>
         </RtlPorts>
+        <RtlPorts>
+            <name>out_stream_TDEST</name>
+            <Object>out_stream_V_dest_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>out_stream_TVALID</name>
+            <Object>out_stream_V_dest_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>out_stream_TREADY</name>
+            <Object>out_stream_V_dest_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_breath_gpio_i</name>
+            <Object>in_breath_gpio</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_breath_gpio_o</name>
+            <Object>in_breath_gpio</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>out_breath_gpio_i</name>
+            <Object>out_breath_gpio</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>out_breath_gpio_o</name>
+            <Object>out_breath_gpio</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
     </InterfaceSummary>
     <RTLDesignHierarchy>
-        <TopModule MAX_DEPTH="1">
+        <TopModule MAX_DEPTH="4">
             <ModuleName>image_passthrough</ModuleName>
+            <InstancesList>
+                <Instance>
+                    <InstName>Loop_VITIS_LOOP_43_1_proc1_U0</InstName>
+                    <ModuleName>Loop_VITIS_LOOP_43_1_proc1</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>82</ID>
+                    <InstancesList>
+                        <Instance>
+                            <InstName>grp_Loop_VITIS_LOOP_43_1_proc1_Pipeline_VITIS_LOOP_49_2_VITIS_LOOP_50_3_fu_136</InstName>
+                            <ModuleName>Loop_VITIS_LOOP_43_1_proc1_Pipeline_VITIS_LOOP_49_2_VITIS_LOOP_50_3</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>136</ID>
+                            <BindInstances>add_ln49_1_fu_223_p2 add_ln49_fu_238_p2 add_ln50_fu_353_p2</BindInstances>
+                        </Instance>
+                        <Instance>
+                            <InstName>grp_Loop_VITIS_LOOP_43_1_proc1_Pipeline_VITIS_LOOP_68_4_VITIS_LOOP_69_5_fu_165</InstName>
+                            <ModuleName>Loop_VITIS_LOOP_43_1_proc1_Pipeline_VITIS_LOOP_68_4_VITIS_LOOP_69_5</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>165</ID>
+                            <BindInstances>add_ln68_1_fu_138_p2 add_ln68_fu_150_p2 add_ln69_fu_220_p2</BindInstances>
+                        </Instance>
+                        <Instance>
+                            <InstName>grp_Loop_VITIS_LOOP_43_1_proc1_Pipeline_VITIS_LOOP_76_6_VITIS_LOOP_77_7_fu_175</InstName>
+                            <ModuleName>Loop_VITIS_LOOP_43_1_proc1_Pipeline_VITIS_LOOP_76_6_VITIS_LOOP_77_7</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>175</ID>
+                            <BindInstances>add_ln76_1_fu_224_p2 add_ln76_fu_236_p2 add_ln77_fu_364_p2</BindInstances>
+                        </Instance>
+                    </InstancesList>
+                    <BindInstances>tile_y_3_fu_221_p2 tile_pong_V_U tile_ping_V_U</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>Block_image_passthrough_for_cond_i_exit_proc_U0</InstName>
+                    <ModuleName>Block_image_passthrough_for_cond_i_exit_proc</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>120</ID>
+                </Instance>
+            </InstancesList>
         </TopModule>
     </RTLDesignHierarchy>
     <ModuleInformation>
         <Module>
-            <Name>image_passthrough</Name>
+            <Name>Loop_VITIS_LOOP_43_1_proc1_Pipeline_VITIS_LOOP_49_2_VITIS_LOOP_50_3</Name>
             <Loops>
-                <VITIS_LOOP_21_1/>
+                <VITIS_LOOP_49_2_VITIS_LOOP_50_3/>
             </Loops>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
                     <TargetClockPeriod>10.00</TargetClockPeriod>
                     <ClockUncertainty>2.70</ClockUncertainty>
-                    <EstimatedClockPeriod>2.331</EstimatedClockPeriod>
+                    <EstimatedClockPeriod>3.559</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>undef</Best-caseLatency>
-                    <Average-caseLatency>undef</Average-caseLatency>
-                    <Worst-caseLatency>undef</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>undef</PipelineInitiationInterval>
+                    <Best-caseLatency>20482</Best-caseLatency>
+                    <Average-caseLatency>20482</Average-caseLatency>
+                    <Worst-caseLatency>20482</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.205 ms</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.205 ms</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.205 ms</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>20482</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
-                    <VITIS_LOOP_21_1>
-                        <Name>VITIS_LOOP_21_1</Name>
+                    <VITIS_LOOP_49_2_VITIS_LOOP_50_3>
+                        <Name>VITIS_LOOP_49_2_VITIS_LOOP_50_3</Name>
                         <Slack>7.30</Slack>
-                        <TripCount>undef</TripCount>
-                        <Latency>undef</Latency>
-                        <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
+                        <TripCount>20480</TripCount>
+                        <Latency>20480</Latency>
+                        <AbsoluteTimeLatency>0.205 ms</AbsoluteTimeLatency>
                         <PipelineII>1</PipelineII>
-                        <PipelineDepth>2</PipelineDepth>
+                        <PipelineDepth>1</PipelineDepth>
                         <PipelineType>yes</PipelineType>
                         <InstanceList/>
-                    </VITIS_LOOP_21_1>
+                    </VITIS_LOOP_49_2_VITIS_LOOP_50_3>
                 </SummaryOfLoopLatency>
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
+                    <FF>34</FF>
+                    <AVAIL_FF>141120</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>238</LUT>
+                    <AVAIL_LUT>70560</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
                     <AVAIL_BRAM>432</AVAIL_BRAM>
                     <UTIL_BRAM>0</UTIL_BRAM>
-                    <FF>70</FF>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>360</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_49_2_VITIS_LOOP_50_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln49_1_fu_223_p2" SOURCE="image_passthrough.cpp:49" URAM="0" VARIABLE="add_ln49_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_49_2_VITIS_LOOP_50_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln49_fu_238_p2" SOURCE="image_passthrough.cpp:49" URAM="0" VARIABLE="add_ln49"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_49_2_VITIS_LOOP_50_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln50_fu_353_p2" SOURCE="image_passthrough.cpp:50" URAM="0" VARIABLE="add_ln50"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>Loop_VITIS_LOOP_43_1_proc1_Pipeline_VITIS_LOOP_68_4_VITIS_LOOP_69_5</Name>
+            <Loops>
+                <VITIS_LOOP_68_4_VITIS_LOOP_69_5/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>3.559</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>20482</Best-caseLatency>
+                    <Average-caseLatency>20482</Average-caseLatency>
+                    <Worst-caseLatency>20482</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.205 ms</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.205 ms</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.205 ms</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>20482</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_68_4_VITIS_LOOP_69_5>
+                        <Name>VITIS_LOOP_68_4_VITIS_LOOP_69_5</Name>
+                        <Slack>7.30</Slack>
+                        <TripCount>20480</TripCount>
+                        <Latency>20480</Latency>
+                        <AbsoluteTimeLatency>0.205 ms</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>2</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_68_4_VITIS_LOOP_69_5>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>64</FF>
                     <AVAIL_FF>141120</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>116</LUT>
+                    <LUT>196</LUT>
                     <AVAIL_LUT>70560</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>432</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>360</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_68_4_VITIS_LOOP_69_5" OPTYPE="add" PRAGMA="" RTLNAME="add_ln68_1_fu_138_p2" SOURCE="image_passthrough.cpp:68" URAM="0" VARIABLE="add_ln68_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_68_4_VITIS_LOOP_69_5" OPTYPE="add" PRAGMA="" RTLNAME="add_ln68_fu_150_p2" SOURCE="image_passthrough.cpp:68" URAM="0" VARIABLE="add_ln68"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_68_4_VITIS_LOOP_69_5" OPTYPE="add" PRAGMA="" RTLNAME="add_ln69_fu_220_p2" SOURCE="image_passthrough.cpp:69" URAM="0" VARIABLE="add_ln69"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>Loop_VITIS_LOOP_43_1_proc1_Pipeline_VITIS_LOOP_76_6_VITIS_LOOP_77_7</Name>
+            <Loops>
+                <VITIS_LOOP_76_6_VITIS_LOOP_77_7/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>3.559</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>20482</Best-caseLatency>
+                    <Average-caseLatency>20482</Average-caseLatency>
+                    <Worst-caseLatency>20482</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.205 ms</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.205 ms</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.205 ms</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>20482</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_76_6_VITIS_LOOP_77_7>
+                        <Name>VITIS_LOOP_76_6_VITIS_LOOP_77_7</Name>
+                        <Slack>7.30</Slack>
+                        <TripCount>20480</TripCount>
+                        <Latency>20480</Latency>
+                        <AbsoluteTimeLatency>0.205 ms</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>2</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_76_6_VITIS_LOOP_77_7>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>37</FF>
+                    <AVAIL_FF>141120</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>280</LUT>
+                    <AVAIL_LUT>70560</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>432</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>360</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_76_6_VITIS_LOOP_77_7" OPTYPE="add" PRAGMA="" RTLNAME="add_ln76_1_fu_224_p2" SOURCE="image_passthrough.cpp:76" URAM="0" VARIABLE="add_ln76_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_76_6_VITIS_LOOP_77_7" OPTYPE="add" PRAGMA="" RTLNAME="add_ln76_fu_236_p2" SOURCE="image_passthrough.cpp:76" URAM="0" VARIABLE="add_ln76"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_76_6_VITIS_LOOP_77_7" OPTYPE="add" PRAGMA="" RTLNAME="add_ln77_fu_364_p2" SOURCE="image_passthrough.cpp:77" URAM="0" VARIABLE="add_ln77"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>Loop_VITIS_LOOP_43_1_proc1</Name>
+            <Loops>
+                <VITIS_LOOP_43_1/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>3.559</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>921782</Best-caseLatency>
+                    <Average-caseLatency>921782</Average-caseLatency>
+                    <Worst-caseLatency>921782</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>9.218 ms</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>9.218 ms</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>9.218 ms</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>921782</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_43_1>
+                        <Name>VITIS_LOOP_43_1</Name>
+                        <Slack>7.30</Slack>
+                        <TripCount>15</TripCount>
+                        <Latency>921780</Latency>
+                        <AbsoluteTimeLatency>9.218 ms</AbsoluteTimeLatency>
+                        <IterationLatency>61452</IterationLatency>
+                        <PipelineDepth>61452</PipelineDepth>
+                        <PipelineType>no</PipelineType>
+                        <InstanceList>
+                            <Instance>grp_Loop_VITIS_LOOP_43_1_proc1_Pipeline_VITIS_LOOP_49_2_VITIS_LOOP_50_3_fu_136</Instance>
+                            <Instance>grp_Loop_VITIS_LOOP_43_1_proc1_Pipeline_VITIS_LOOP_68_4_VITIS_LOOP_69_5_fu_165</Instance>
+                            <Instance>grp_Loop_VITIS_LOOP_43_1_proc1_Pipeline_VITIS_LOOP_76_6_VITIS_LOOP_77_7_fu_175</Instance>
+                        </InstanceList>
+                    </VITIS_LOOP_43_1>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>60</BRAM_18K>
+                    <AVAIL_BRAM>432</AVAIL_BRAM>
+                    <UTIL_BRAM>13</UTIL_BRAM>
+                    <FF>160</FF>
+                    <AVAIL_FF>141120</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>1004</LUT>
+                    <AVAIL_LUT>70560</AVAIL_LUT>
+                    <UTIL_LUT>1</UTIL_LUT>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>360</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_43_1" OPTYPE="add" PRAGMA="" RTLNAME="tile_y_3_fu_221_p2" SOURCE="image_passthrough.cpp:43" URAM="0" VARIABLE="tile_y_3"/>
+                <BindNode BINDTYPE="storage" BRAM="30" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="pragma" RTLNAME="tile_pong_V_U" SOURCE=":0" URAM="0" VARIABLE="tile_pong_V"/>
+                <BindNode BINDTYPE="storage" BRAM="30" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="pragma" RTLNAME="tile_ping_V_U" SOURCE=":0" URAM="0" VARIABLE="tile_ping_V"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>Block_image_passthrough_for_cond_i_exit_proc</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>0.331</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>0</Best-caseLatency>
+                    <Average-caseLatency>0</Average-caseLatency>
+                    <Worst-caseLatency>0</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0 ns</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>0</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>3</FF>
+                    <AVAIL_FF>141120</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>22</LUT>
+                    <AVAIL_LUT>70560</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>432</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>360</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+        </Module>
+        <Module>
+            <Name>image_passthrough</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>3.559</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>921782</Best-caseLatency>
+                    <Average-caseLatency>921782</Average-caseLatency>
+                    <Worst-caseLatency>921782</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>9.218 ms</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>9.218 ms</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>9.218 ms</Worst-caseRealTimeLatency>
+                    <DataflowPipelineThroughput>921783</DataflowPipelineThroughput>
+                    <PipelineInitiationInterval>921783</PipelineInitiationInterval>
+                    <PipelineType>dataflow</PipelineType>
+                </SummaryOfOverallLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>60</BRAM_18K>
+                    <AVAIL_BRAM>432</AVAIL_BRAM>
+                    <UTIL_BRAM>13</UTIL_BRAM>
+                    <FF>201</FF>
+                    <AVAIL_FF>141120</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>1098</LUT>
+                    <AVAIL_LUT>70560</AVAIL_LUT>
+                    <UTIL_LUT>1</UTIL_LUT>
                     <URAM>0</URAM>
                     <AVAIL_URAM>0</AVAIL_URAM>
                     <UTIL_URAM>0</UTIL_URAM>
@@ -557,35 +901,35 @@
         </Module>
     </ModuleInformation>
     <FIFOInformation/>
-    <UserConfigCommands/>
+    <UserConfigCommands>
+        <config_export description="Pass through test iamge IP" display_name="Image_Passthrough" library="user" output="/home/ecelrc/students/gwl459/workspace/augmented-reality-glasses/fpga_software/IPs" taxonomy="User IP" vendor="xilinx" version="1.0"/>
+    </UserConfigCommands>
     <Args>
-        <Arg ArgName="in_stream" index="0" direction="in" srcType="stream&lt;hls::axis&lt;ap_uint&lt;8&gt;, 1, 1, 1&gt;, 0&gt;&amp;" srcSize="56">
+        <Arg ArgName="in_stream" index="0" direction="in" srcType="stream&lt;hls::axis&lt;ap_uint&lt;24&gt;, 1, 1, 1&gt;, 0&gt;&amp;" srcSize="96">
             <hwRefs>
                 <hwRef type="interface" interface="in_stream" name="" usage="data" direction="in"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="out_stream" index="1" direction="out" srcType="stream&lt;hls::axis&lt;ap_uint&lt;8&gt;, 1, 1, 1&gt;, 0&gt;&amp;" srcSize="56">
+        <Arg ArgName="out_stream" index="1" direction="out" srcType="stream&lt;hls::axis&lt;ap_uint&lt;24&gt;, 1, 1, 1&gt;, 0&gt;&amp;" srcSize="96">
             <hwRefs>
                 <hwRef type="interface" interface="out_stream" name="" usage="data" direction="out"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="in_breath" index="2" direction="inout" srcType="*" srcSize="8">
+        <Arg ArgName="in_breath_gpio" index="2" direction="inout" srcType="*" srcSize="8">
             <hwRefs>
-                <hwRef type="register" interface="s_axi_CTRL" name="in_breath_i" usage="data" direction="in"/>
-                <hwRef type="register" interface="s_axi_CTRL" name="in_breath_o" usage="data" direction="out"/>
-                <hwRef type="register" interface="s_axi_CTRL" name="in_breath_o_ctrl" usage="control" direction="out"/>
+                <hwRef type="port" interface="in_breath_gpio_i" name="in_breath_gpio_i" usage="data" direction="in"/>
+                <hwRef type="port" interface="in_breath_gpio_o" name="in_breath_gpio_o" usage="data" direction="out"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="out_breath" index="3" direction="inout" srcType="*" srcSize="8">
+        <Arg ArgName="out_breath_gpio" index="3" direction="inout" srcType="*" srcSize="8">
             <hwRefs>
-                <hwRef type="register" interface="s_axi_CTRL" name="out_breath_i" usage="data" direction="in"/>
-                <hwRef type="register" interface="s_axi_CTRL" name="out_breath_o" usage="data" direction="out"/>
-                <hwRef type="register" interface="s_axi_CTRL" name="out_breath_o_ctrl" usage="control" direction="out"/>
+                <hwRef type="port" interface="out_breath_gpio_i" name="out_breath_gpio_i" usage="data" direction="in"/>
+                <hwRef type="port" interface="out_breath_gpio_o" name="out_breath_gpio_o" usage="data" direction="out"/>
             </hwRefs>
         </Arg>
     </Args>
     <Interfaces>
-        <Interface InterfaceName="s_axi_CTRL" type="axi4lite" busTypeName="aximm" mode="slave" dataWidth="32" addrWidth="6" portPrefix="s_axi_CTRL_" paramPrefix="C_S_AXI_CTRL_">
+        <Interface InterfaceName="s_axi_CTRL" type="axi4lite" busTypeName="aximm" mode="slave" dataWidth="32" addrWidth="4" portPrefix="s_axi_CTRL_" paramPrefix="C_S_AXI_CTRL_">
             <ports>
                 <port>s_axi_CTRL_ARADDR</port>
                 <port>s_axi_CTRL_ARREADY</port>
@@ -639,47 +983,7 @@
                         <field offset="2" width="30" name="RESERVED_0" access="R" description="Reserved.  0s on read."/>
                     </fields>
                 </register>
-                <register offset="0x10" name="in_breath_i" access="W" description="Data signal of in_breath_i" range="32">
-                    <fields>
-                        <field offset="0" width="1" name="in_breath_i" access="W" description="Bit 0 to 0 of in_breath_i"/>
-                        <field offset="1" width="31" name="RESERVED" access="R" description="Reserved.  0s on read."/>
-                    </fields>
-                </register>
-                <register offset="0x18" name="in_breath_o" access="R" description="Data signal of in_breath_o" range="32">
-                    <fields>
-                        <field offset="0" width="1" name="in_breath_o" access="R" description="Bit 0 to 0 of in_breath_o"/>
-                        <field offset="1" width="31" name="RESERVED" access="R" description="Reserved.  0s on read."/>
-                    </fields>
-                </register>
-                <register offset="0x1c" name="in_breath_o_ctrl" access="R" description="Control signal of in_breath_o" range="32">
-                    <fields>
-                        <field offset="0" width="1" name="in_breath_o_ap_vld" access="R" description="Control signal in_breath_o_ap_vld"/>
-                        <field offset="1" width="31" name="RESERVED" access="R" description="Reserved.  0s on read."/>
-                    </fields>
-                </register>
-                <register offset="0x20" name="out_breath_i" access="W" description="Data signal of out_breath_i" range="32">
-                    <fields>
-                        <field offset="0" width="1" name="out_breath_i" access="W" description="Bit 0 to 0 of out_breath_i"/>
-                        <field offset="1" width="31" name="RESERVED" access="R" description="Reserved.  0s on read."/>
-                    </fields>
-                </register>
-                <register offset="0x28" name="out_breath_o" access="R" description="Data signal of out_breath_o" range="32">
-                    <fields>
-                        <field offset="0" width="1" name="out_breath_o" access="R" description="Bit 0 to 0 of out_breath_o"/>
-                        <field offset="1" width="31" name="RESERVED" access="R" description="Reserved.  0s on read."/>
-                    </fields>
-                </register>
-                <register offset="0x2c" name="out_breath_o_ctrl" access="R" description="Control signal of out_breath_o" range="32">
-                    <fields>
-                        <field offset="0" width="1" name="out_breath_o_ap_vld" access="R" description="Control signal out_breath_o_ap_vld"/>
-                        <field offset="1" width="31" name="RESERVED" access="R" description="Reserved.  0s on read."/>
-                    </fields>
-                </register>
             </registers>
-            <constraints>
-                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="16" argName="in_breath"/>
-                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="32" argName="out_breath"/>
-            </constraints>
         </Interface>
         <Interface InterfaceName="ap_clk" type="clock" busTypeName="clock" mode="slave">
             <busParams>
@@ -715,7 +1019,7 @@
                 <port>interrupt</port>
             </ports>
         </Interface>
-        <Interface InterfaceName="in_stream" type="axi4stream" busTypeName="axis" mode="slave" dataWidth="8" portPrefix="in_stream_">
+        <Interface InterfaceName="in_stream" type="axi4stream" busTypeName="axis" mode="slave" dataWidth="24" portPrefix="in_stream_">
             <ports>
                 <port>in_stream_TDATA</port>
                 <port>in_stream_TDEST</port>
@@ -731,7 +1035,7 @@
                 <constraint constraint_type="pragma interface" mode="axis" register_option="0" register_mode="both" argName="in_stream"/>
             </constraints>
         </Interface>
-        <Interface InterfaceName="out_stream" type="axi4stream" busTypeName="axis" mode="master" dataWidth="8" portPrefix="out_stream_">
+        <Interface InterfaceName="out_stream" type="axi4stream" busTypeName="axis" mode="master" dataWidth="24" portPrefix="out_stream_">
             <ports>
                 <port>out_stream_TDATA</port>
                 <port>out_stream_TDEST</port>
@@ -747,13 +1051,57 @@
                 <constraint constraint_type="pragma interface" mode="axis" register_option="0" register_mode="both" argName="out_stream"/>
             </constraints>
         </Interface>
+        <Interface InterfaceName="in_breath_gpio_i" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="1">
+            <portMaps>
+                <portMap portMapName="in_breath_gpio_i">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>in_breath_gpio_i</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="in_breath_gpio"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="in_breath_gpio_o" type="data" busTypeName="data" protocol="ap_none" mode="master" dataWidth="1">
+            <portMaps>
+                <portMap portMapName="in_breath_gpio_o">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>in_breath_gpio_o</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="in_breath_gpio"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="out_breath_gpio_i" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="1">
+            <portMaps>
+                <portMap portMapName="out_breath_gpio_i">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>out_breath_gpio_i</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="out_breath_gpio"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="out_breath_gpio_o" type="data" busTypeName="data" protocol="ap_none" mode="master" dataWidth="1">
+            <portMaps>
+                <portMap portMapName="out_breath_gpio_o">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>out_breath_gpio_o</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="out_breath_gpio"/>
+            </constraints>
+        </Interface>
     </Interfaces>
     <ReportHWInterface>
         <section name="HW Interfaces" level="0">
             <item name="S_AXILITE Interfaces">
                 <table isCollapsed="0">
-                    <keys size="5">Interface, Data Width, Address Width, Offset, Register</keys>
-                    <column name="s_axi_CTRL">32, 6, 16, 0, , , , , </column>
+                    <keys size="3">Interface, Data Width, Address Width</keys>
+                    <column name="s_axi_CTRL">32, 4, , , , , , , </column>
                 </table>
             </item>
             <item name="S_AXILITE Registers">
@@ -763,19 +1111,22 @@
                     <column name="s_axi_CTRL">GIER, 0x04, 32, RW, Global Interrupt Enable Register, 0=Enable</column>
                     <column name="s_axi_CTRL">IP_IER, 0x08, 32, RW, IP Interrupt Enable Register, 0=CHAN0_INT_EN 1=CHAN1_INT_EN</column>
                     <column name="s_axi_CTRL">IP_ISR, 0x0c, 32, RW, IP Interrupt Status Register, 0=CHAN0_INT_ST 1=CHAN1_INT_ST</column>
-                    <column name="s_axi_CTRL">in_breath_i, 0x10, 32, W, Data signal of in_breath_i, </column>
-                    <column name="s_axi_CTRL">in_breath_o, 0x18, 32, R, Data signal of in_breath_o, </column>
-                    <column name="s_axi_CTRL">in_breath_o_ctrl, 0x1c, 32, R, Control signal of in_breath_o, 0=in_breath_o_ap_vld</column>
-                    <column name="s_axi_CTRL">out_breath_i, 0x20, 32, W, Data signal of out_breath_i, </column>
-                    <column name="s_axi_CTRL">out_breath_o, 0x28, 32, R, Data signal of out_breath_o, </column>
-                    <column name="s_axi_CTRL">out_breath_o_ctrl, 0x2c, 32, R, Control signal of out_breath_o, 0=out_breath_o_ap_vld</column>
                 </table>
             </item>
             <item name="AXIS">
                 <table isCollapsed="0">
                     <keys size="11">Interface, Register Mode, TDATA, TDEST, TID, TKEEP, TLAST, TREADY, TSTRB, TUSER, TVALID</keys>
-                    <column name="in_stream">both, 8, 1, 1, 1, 1, 1, 1, 1, 1, </column>
-                    <column name="out_stream">both, 8, 1, 1, 1, 1, 1, 1, 1, 1, </column>
+                    <column name="in_stream">both, 24, 1, 1, 3, 1, 1, 3, 1, 1, </column>
+                    <column name="out_stream">both, 24, 1, 1, 3, 1, 1, 3, 1, 1, </column>
+                </table>
+            </item>
+            <item name="Other Ports">
+                <table isCollapsed="0">
+                    <keys size="3">Interface, Mode, Bitwidth</keys>
+                    <column name="in_breath_gpio_i">ap_none, 1, , </column>
+                    <column name="in_breath_gpio_o">ap_none, 1, , </column>
+                    <column name="out_breath_gpio_i">ap_none, 1, , </column>
+                    <column name="out_breath_gpio_o">ap_none, 1, , </column>
                 </table>
             </item>
             <item name="TOP LEVEL CONTROL">
@@ -794,23 +1145,21 @@
             <item name="Top Function Arguments">
                 <table isCollapsed="1">
                     <keys size="3">Argument, Direction, Datatype</keys>
-                    <column name="in_stream">in, stream&lt;hls::axis&lt;ap_uint&lt;8&gt; 1 1 1&gt; 0&gt;&amp;</column>
-                    <column name="out_stream">out, stream&lt;hls::axis&lt;ap_uint&lt;8&gt; 1 1 1&gt; 0&gt;&amp;</column>
-                    <column name="in_breath">inout, pointer</column>
-                    <column name="out_breath">inout, pointer</column>
+                    <column name="in_stream">in, stream&lt;hls::axis&lt;ap_uint&lt;24&gt; 1 1 1&gt; 0&gt;&amp;</column>
+                    <column name="out_stream">out, stream&lt;hls::axis&lt;ap_uint&lt;24&gt; 1 1 1&gt; 0&gt;&amp;</column>
+                    <column name="in_breath_gpio">inout, pointer</column>
+                    <column name="out_breath_gpio">inout, pointer</column>
                 </table>
             </item>
             <item name="SW-to-HW Mapping">
                 <table isCollapsed="1">
-                    <keys size="4">Argument, HW Interface, HW Type, HW Info</keys>
+                    <keys size="3">Argument, HW Interface, HW Type</keys>
                     <column name="in_stream">in_stream, interface, , </column>
                     <column name="out_stream">out_stream, interface, , </column>
-                    <column name="in_breath">s_axi_CTRL, register, name=in_breath_i offset=0x10 range=32, </column>
-                    <column name="in_breath">s_axi_CTRL, register, name=in_breath_o offset=0x18 range=32, </column>
-                    <column name="in_breath">s_axi_CTRL, register, name=in_breath_o_ctrl offset=0x1c range=32, </column>
-                    <column name="out_breath">s_axi_CTRL, register, name=out_breath_i offset=0x20 range=32, </column>
-                    <column name="out_breath">s_axi_CTRL, register, name=out_breath_o offset=0x28 range=32, </column>
-                    <column name="out_breath">s_axi_CTRL, register, name=out_breath_o_ctrl offset=0x2c range=32, </column>
+                    <column name="in_breath_gpio">in_breath_gpio_i, port, , </column>
+                    <column name="in_breath_gpio">in_breath_gpio_o, port, , </column>
+                    <column name="out_breath_gpio">out_breath_gpio_i, port, , </column>
+                    <column name="out_breath_gpio">out_breath_gpio_o, port, , </column>
                 </table>
             </item>
         </section>
@@ -819,12 +1168,19 @@
         <section name="M_AXI Burst Information" level="0" HEADER_NOTE="Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings."/>
     </ReportBurst>
     <PragmaReport>
-        <Pragma type="interface" location="image_passthrough.cpp:12" status="valid" parentFunction="image_passthrough" variable="in_stream" isDirective="0" options="axis port=in_stream"/>
-        <Pragma type="interface" location="image_passthrough.cpp:13" status="valid" parentFunction="image_passthrough" variable="out_stream" isDirective="0" options="axis port=out_stream"/>
-        <Pragma type="interface" location="image_passthrough.cpp:15" status="valid" parentFunction="image_passthrough" variable="in_breath" isDirective="0" options="s_axilite port=in_breath bundle=CTRL"/>
-        <Pragma type="interface" location="image_passthrough.cpp:16" status="valid" parentFunction="image_passthrough" variable="out_breath" isDirective="0" options="s_axilite port=out_breath bundle=CTRL"/>
-        <Pragma type="interface" location="image_passthrough.cpp:17" status="valid" parentFunction="image_passthrough" variable="return" isDirective="0" options="s_axilite port=return bundle=CTRL"/>
-        <Pragma type="pipeline" location="image_passthrough.cpp:22" status="valid" parentFunction="image_passthrough" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="interface" location="image_passthrough.cpp:21" status="valid" parentFunction="image_passthrough" variable="in_stream" isDirective="0" options="axis port=in_stream"/>
+        <Pragma type="interface" location="image_passthrough.cpp:22" status="valid" parentFunction="image_passthrough" variable="out_stream" isDirective="0" options="axis port=out_stream"/>
+        <Pragma type="interface" location="image_passthrough.cpp:24" status="valid" parentFunction="image_passthrough" variable="in_breath_gpio" isDirective="0" options="ap_none port=in_breath_gpio"/>
+        <Pragma type="interface" location="image_passthrough.cpp:25" status="valid" parentFunction="image_passthrough" variable="out_breath_gpio" isDirective="0" options="ap_none port=out_breath_gpio"/>
+        <Pragma type="interface" location="image_passthrough.cpp:28" status="valid" parentFunction="image_passthrough" variable="return" isDirective="0" options="s_axilite port=return bundle=CTRL"/>
+        <Pragma type="dataflow" location="image_passthrough.cpp:30" status="warning" parentFunction="image_passthrough" variable="" isDirective="0" options="">
+            <Msg msg_id="214-114" msg_severity="WARNING" msg_body="Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region"/>
+        </Pragma>
+        <Pragma type="bind_storage" location="image_passthrough.cpp:35" status="valid" parentFunction="image_passthrough" variable="tile_ping" isDirective="0" options="variable=tile_ping type=ram_t2p impl=bram"/>
+        <Pragma type="bind_storage" location="image_passthrough.cpp:36" status="valid" parentFunction="image_passthrough" variable="tile_pong" isDirective="0" options="variable=tile_pong type=ram_t2p impl=bram"/>
+        <Pragma type="pipeline" location="image_passthrough.cpp:51" status="valid" parentFunction="image_passthrough" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="pipeline" location="image_passthrough.cpp:70" status="valid" parentFunction="image_passthrough" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="pipeline" location="image_passthrough.cpp:78" status="valid" parentFunction="image_passthrough" variable="" isDirective="0" options="II=1"/>
     </PragmaReport>
 </profile>
 

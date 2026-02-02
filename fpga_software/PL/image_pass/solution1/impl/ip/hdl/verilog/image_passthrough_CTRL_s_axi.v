@@ -6,7 +6,7 @@
 `timescale 1ns/1ps
 module image_passthrough_CTRL_s_axi
 #(parameter
-    C_S_AXI_ADDR_WIDTH = 6,
+    C_S_AXI_ADDR_WIDTH = 4,
     C_S_AXI_DATA_WIDTH = 32
 )(
     input  wire                          ACLK,
@@ -30,81 +30,47 @@ module image_passthrough_CTRL_s_axi
     output wire                          RVALID,
     input  wire                          RREADY,
     output wire                          interrupt,
-    output wire [0:0]                    in_breath_i,
-    input  wire [0:0]                    in_breath_o,
-    input  wire                          in_breath_o_ap_vld,
-    output wire [0:0]                    out_breath_i,
-    input  wire [0:0]                    out_breath_o,
-    input  wire                          out_breath_o_ap_vld,
     output wire                          ap_start,
     input  wire                          ap_done,
     input  wire                          ap_ready,
     input  wire                          ap_idle
 );
 //------------------------Address Info-------------------
-// 0x00 : Control signals
-//        bit 0  - ap_start (Read/Write/COH)
-//        bit 1  - ap_done (Read/COR)
-//        bit 2  - ap_idle (Read)
-//        bit 3  - ap_ready (Read/COR)
-//        bit 7  - auto_restart (Read/Write)
-//        bit 9  - interrupt (Read)
-//        others - reserved
-// 0x04 : Global Interrupt Enable Register
-//        bit 0  - Global Interrupt Enable (Read/Write)
-//        others - reserved
-// 0x08 : IP Interrupt Enable Register (Read/Write)
-//        bit 0 - enable ap_done interrupt (Read/Write)
-//        bit 1 - enable ap_ready interrupt (Read/Write)
-//        others - reserved
-// 0x0c : IP Interrupt Status Register (Read/TOW)
-//        bit 0 - ap_done (Read/TOW)
-//        bit 1 - ap_ready (Read/TOW)
-//        others - reserved
-// 0x10 : Data signal of in_breath_i
-//        bit 0  - in_breath_i[0] (Read/Write)
-//        others - reserved
-// 0x14 : reserved
-// 0x18 : Data signal of in_breath_o
-//        bit 0  - in_breath_o[0] (Read)
-//        others - reserved
-// 0x1c : Control signal of in_breath_o
-//        bit 0  - in_breath_o_ap_vld (Read/COR)
-//        others - reserved
-// 0x20 : Data signal of out_breath_i
-//        bit 0  - out_breath_i[0] (Read/Write)
-//        others - reserved
-// 0x24 : reserved
-// 0x28 : Data signal of out_breath_o
-//        bit 0  - out_breath_o[0] (Read)
-//        others - reserved
-// 0x2c : Control signal of out_breath_o
-//        bit 0  - out_breath_o_ap_vld (Read/COR)
-//        others - reserved
+// 0x0 : Control signals
+//       bit 0  - ap_start (Read/Write/COH)
+//       bit 1  - ap_done (Read/COR)
+//       bit 2  - ap_idle (Read)
+//       bit 3  - ap_ready (Read/COR)
+//       bit 7  - auto_restart (Read/Write)
+//       bit 9  - interrupt (Read)
+//       others - reserved
+// 0x4 : Global Interrupt Enable Register
+//       bit 0  - Global Interrupt Enable (Read/Write)
+//       others - reserved
+// 0x8 : IP Interrupt Enable Register (Read/Write)
+//       bit 0 - enable ap_done interrupt (Read/Write)
+//       bit 1 - enable ap_ready interrupt (Read/Write)
+//       others - reserved
+// 0xc : IP Interrupt Status Register (Read/TOW)
+//       bit 0 - ap_done (Read/TOW)
+//       bit 1 - ap_ready (Read/TOW)
+//       others - reserved
 // (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 //------------------------Parameter----------------------
 localparam
-    ADDR_AP_CTRL             = 6'h00,
-    ADDR_GIE                 = 6'h04,
-    ADDR_IER                 = 6'h08,
-    ADDR_ISR                 = 6'h0c,
-    ADDR_IN_BREATH_I_DATA_0  = 6'h10,
-    ADDR_IN_BREATH_I_CTRL    = 6'h14,
-    ADDR_IN_BREATH_O_DATA_0  = 6'h18,
-    ADDR_IN_BREATH_O_CTRL    = 6'h1c,
-    ADDR_OUT_BREATH_I_DATA_0 = 6'h20,
-    ADDR_OUT_BREATH_I_CTRL   = 6'h24,
-    ADDR_OUT_BREATH_O_DATA_0 = 6'h28,
-    ADDR_OUT_BREATH_O_CTRL   = 6'h2c,
-    WRIDLE                   = 2'd0,
-    WRDATA                   = 2'd1,
-    WRRESP                   = 2'd2,
-    WRRESET                  = 2'd3,
-    RDIDLE                   = 2'd0,
-    RDDATA                   = 2'd1,
-    RDRESET                  = 2'd2,
-    ADDR_BITS                = 6;
+    ADDR_AP_CTRL = 4'h0,
+    ADDR_GIE     = 4'h4,
+    ADDR_IER     = 4'h8,
+    ADDR_ISR     = 4'hc,
+    WRIDLE       = 2'd0,
+    WRDATA       = 2'd1,
+    WRRESP       = 2'd2,
+    WRRESET      = 2'd3,
+    RDIDLE       = 2'd0,
+    RDDATA       = 2'd1,
+    RDRESET      = 2'd2,
+    ADDR_BITS                = 4;
 
 //------------------------Local signal-------------------
     reg  [1:0]                    wstate = WRRESET;
@@ -133,12 +99,6 @@ localparam
     reg                           int_gie = 1'b0;
     reg  [1:0]                    int_ier = 2'b0;
     reg  [1:0]                    int_isr = 2'b0;
-    reg  [0:0]                    int_in_breath_i = 'b0;
-    reg                           int_in_breath_o_ap_vld;
-    reg  [0:0]                    int_in_breath_o = 'b0;
-    reg  [0:0]                    int_out_breath_i = 'b0;
-    reg                           int_out_breath_o_ap_vld;
-    reg  [0:0]                    int_out_breath_o = 'b0;
 
 //------------------------Instantiation------------------
 
@@ -248,24 +208,6 @@ always @(posedge ACLK) begin
                 ADDR_ISR: begin
                     rdata <= int_isr;
                 end
-                ADDR_IN_BREATH_I_DATA_0: begin
-                    rdata <= int_in_breath_i[0:0];
-                end
-                ADDR_IN_BREATH_O_DATA_0: begin
-                    rdata <= int_in_breath_o[0:0];
-                end
-                ADDR_IN_BREATH_O_CTRL: begin
-                    rdata[0] <= int_in_breath_o_ap_vld;
-                end
-                ADDR_OUT_BREATH_I_DATA_0: begin
-                    rdata <= int_out_breath_i[0:0];
-                end
-                ADDR_OUT_BREATH_O_DATA_0: begin
-                    rdata <= int_out_breath_o[0:0];
-                end
-                ADDR_OUT_BREATH_O_CTRL: begin
-                    rdata[0] <= int_out_breath_o_ap_vld;
-                end
             endcase
         end
     end
@@ -278,8 +220,6 @@ assign ap_start          = int_ap_start;
 assign task_ap_done      = (ap_done && !auto_restart_status) || auto_restart_done;
 assign task_ap_ready     = ap_ready && !int_auto_restart;
 assign auto_restart_done = auto_restart_status && (ap_idle && !int_ap_idle);
-assign in_breath_i       = int_in_breath_i;
-assign out_breath_i      = int_out_breath_i;
 // int_interrupt
 always @(posedge ACLK) begin
     if (ARESET)
@@ -409,70 +349,6 @@ always @(posedge ACLK) begin
             int_isr[1] <= 1'b1;
         else if (w_hs && waddr == ADDR_ISR && WSTRB[0])
             int_isr[1] <= int_isr[1] ^ WDATA[1]; // toggle on write
-    end
-end
-
-// int_in_breath_i[0:0]
-always @(posedge ACLK) begin
-    if (ARESET)
-        int_in_breath_i[0:0] <= 0;
-    else if (ACLK_EN) begin
-        if (w_hs && waddr == ADDR_IN_BREATH_I_DATA_0)
-            int_in_breath_i[0:0] <= (WDATA[31:0] & wmask) | (int_in_breath_i[0:0] & ~wmask);
-    end
-end
-
-// int_in_breath_o
-always @(posedge ACLK) begin
-    if (ARESET)
-        int_in_breath_o <= 0;
-    else if (ACLK_EN) begin
-        if (in_breath_o_ap_vld)
-            int_in_breath_o <= in_breath_o;
-    end
-end
-
-// int_in_breath_o_ap_vld
-always @(posedge ACLK) begin
-    if (ARESET)
-        int_in_breath_o_ap_vld <= 1'b0;
-    else if (ACLK_EN) begin
-        if (in_breath_o_ap_vld)
-            int_in_breath_o_ap_vld <= 1'b1;
-        else if (ar_hs && raddr == ADDR_IN_BREATH_O_CTRL)
-            int_in_breath_o_ap_vld <= 1'b0; // clear on read
-    end
-end
-
-// int_out_breath_i[0:0]
-always @(posedge ACLK) begin
-    if (ARESET)
-        int_out_breath_i[0:0] <= 0;
-    else if (ACLK_EN) begin
-        if (w_hs && waddr == ADDR_OUT_BREATH_I_DATA_0)
-            int_out_breath_i[0:0] <= (WDATA[31:0] & wmask) | (int_out_breath_i[0:0] & ~wmask);
-    end
-end
-
-// int_out_breath_o
-always @(posedge ACLK) begin
-    if (ARESET)
-        int_out_breath_o <= 0;
-    else if (ACLK_EN) begin
-        if (out_breath_o_ap_vld)
-            int_out_breath_o <= out_breath_o;
-    end
-end
-
-// int_out_breath_o_ap_vld
-always @(posedge ACLK) begin
-    if (ARESET)
-        int_out_breath_o_ap_vld <= 1'b0;
-    else if (ACLK_EN) begin
-        if (out_breath_o_ap_vld)
-            int_out_breath_o_ap_vld <= 1'b1;
-        else if (ar_hs && raddr == ADDR_OUT_BREATH_O_CTRL)
-            int_out_breath_o_ap_vld <= 1'b0; // clear on read
     end
 end
 

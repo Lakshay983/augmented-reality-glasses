@@ -9,7 +9,7 @@ use IEEE.NUMERIC_STD.all;
 
 entity image_passthrough_CTRL_s_axi is
 generic (
-    C_S_AXI_ADDR_WIDTH    : INTEGER := 6;
+    C_S_AXI_ADDR_WIDTH    : INTEGER := 4;
     C_S_AXI_DATA_WIDTH    : INTEGER := 32);
 port (
     ACLK                  :in   STD_LOGIC;
@@ -33,12 +33,6 @@ port (
     RVALID                :out  STD_LOGIC;
     RREADY                :in   STD_LOGIC;
     interrupt             :out  STD_LOGIC;
-    in_breath_i           :out  STD_LOGIC_VECTOR(0 downto 0);
-    in_breath_o           :in   STD_LOGIC_VECTOR(0 downto 0);
-    in_breath_o_ap_vld    :in   STD_LOGIC;
-    out_breath_i          :out  STD_LOGIC_VECTOR(0 downto 0);
-    out_breath_o          :in   STD_LOGIC_VECTOR(0 downto 0);
-    out_breath_o_ap_vld   :in   STD_LOGIC;
     ap_start              :out  STD_LOGIC;
     ap_done               :in   STD_LOGIC;
     ap_ready              :in   STD_LOGIC;
@@ -47,45 +41,25 @@ port (
 end entity image_passthrough_CTRL_s_axi;
 
 -- ------------------------Address Info-------------------
--- 0x00 : Control signals
---        bit 0  - ap_start (Read/Write/COH)
---        bit 1  - ap_done (Read/COR)
---        bit 2  - ap_idle (Read)
---        bit 3  - ap_ready (Read/COR)
---        bit 7  - auto_restart (Read/Write)
---        bit 9  - interrupt (Read)
---        others - reserved
--- 0x04 : Global Interrupt Enable Register
---        bit 0  - Global Interrupt Enable (Read/Write)
---        others - reserved
--- 0x08 : IP Interrupt Enable Register (Read/Write)
---        bit 0 - enable ap_done interrupt (Read/Write)
---        bit 1 - enable ap_ready interrupt (Read/Write)
---        others - reserved
--- 0x0c : IP Interrupt Status Register (Read/TOW)
---        bit 0 - ap_done (Read/TOW)
---        bit 1 - ap_ready (Read/TOW)
---        others - reserved
--- 0x10 : Data signal of in_breath_i
---        bit 0  - in_breath_i[0] (Read/Write)
---        others - reserved
--- 0x14 : reserved
--- 0x18 : Data signal of in_breath_o
---        bit 0  - in_breath_o[0] (Read)
---        others - reserved
--- 0x1c : Control signal of in_breath_o
---        bit 0  - in_breath_o_ap_vld (Read/COR)
---        others - reserved
--- 0x20 : Data signal of out_breath_i
---        bit 0  - out_breath_i[0] (Read/Write)
---        others - reserved
--- 0x24 : reserved
--- 0x28 : Data signal of out_breath_o
---        bit 0  - out_breath_o[0] (Read)
---        others - reserved
--- 0x2c : Control signal of out_breath_o
---        bit 0  - out_breath_o_ap_vld (Read/COR)
---        others - reserved
+-- 0x0 : Control signals
+--       bit 0  - ap_start (Read/Write/COH)
+--       bit 1  - ap_done (Read/COR)
+--       bit 2  - ap_idle (Read)
+--       bit 3  - ap_ready (Read/COR)
+--       bit 7  - auto_restart (Read/Write)
+--       bit 9  - interrupt (Read)
+--       others - reserved
+-- 0x4 : Global Interrupt Enable Register
+--       bit 0  - Global Interrupt Enable (Read/Write)
+--       others - reserved
+-- 0x8 : IP Interrupt Enable Register (Read/Write)
+--       bit 0 - enable ap_done interrupt (Read/Write)
+--       bit 1 - enable ap_ready interrupt (Read/Write)
+--       others - reserved
+-- 0xc : IP Interrupt Status Register (Read/TOW)
+--       bit 0 - ap_done (Read/TOW)
+--       bit 1 - ap_ready (Read/TOW)
+--       others - reserved
 -- (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 architecture behave of image_passthrough_CTRL_s_axi is
@@ -93,19 +67,11 @@ architecture behave of image_passthrough_CTRL_s_axi is
     signal wstate  : states := wrreset;
     signal rstate  : states := rdreset;
     signal wnext, rnext: states;
-    constant ADDR_AP_CTRL             : INTEGER := 16#00#;
-    constant ADDR_GIE                 : INTEGER := 16#04#;
-    constant ADDR_IER                 : INTEGER := 16#08#;
-    constant ADDR_ISR                 : INTEGER := 16#0c#;
-    constant ADDR_IN_BREATH_I_DATA_0  : INTEGER := 16#10#;
-    constant ADDR_IN_BREATH_I_CTRL    : INTEGER := 16#14#;
-    constant ADDR_IN_BREATH_O_DATA_0  : INTEGER := 16#18#;
-    constant ADDR_IN_BREATH_O_CTRL    : INTEGER := 16#1c#;
-    constant ADDR_OUT_BREATH_I_DATA_0 : INTEGER := 16#20#;
-    constant ADDR_OUT_BREATH_I_CTRL   : INTEGER := 16#24#;
-    constant ADDR_OUT_BREATH_O_DATA_0 : INTEGER := 16#28#;
-    constant ADDR_OUT_BREATH_O_CTRL   : INTEGER := 16#2c#;
-    constant ADDR_BITS         : INTEGER := 6;
+    constant ADDR_AP_CTRL : INTEGER := 16#0#;
+    constant ADDR_GIE     : INTEGER := 16#4#;
+    constant ADDR_IER     : INTEGER := 16#8#;
+    constant ADDR_ISR     : INTEGER := 16#c#;
+    constant ADDR_BITS         : INTEGER := 4;
 
     signal waddr               : UNSIGNED(ADDR_BITS-1 downto 0);
     signal wmask               : UNSIGNED(C_S_AXI_DATA_WIDTH-1 downto 0);
@@ -133,12 +99,6 @@ architecture behave of image_passthrough_CTRL_s_axi is
     signal int_gie             : STD_LOGIC := '0';
     signal int_ier             : UNSIGNED(1 downto 0) := (others => '0');
     signal int_isr             : UNSIGNED(1 downto 0) := (others => '0');
-    signal int_in_breath_i     : UNSIGNED(0 downto 0) := (others => '0');
-    signal int_in_breath_o_ap_vld : STD_LOGIC;
-    signal int_in_breath_o     : UNSIGNED(0 downto 0) := (others => '0');
-    signal int_out_breath_i    : UNSIGNED(0 downto 0) := (others => '0');
-    signal int_out_breath_o_ap_vld : STD_LOGIC;
-    signal int_out_breath_o    : UNSIGNED(0 downto 0) := (others => '0');
 
 
 begin
@@ -267,18 +227,6 @@ begin
                         rdata_data(1 downto 0) <= int_ier;
                     when ADDR_ISR =>
                         rdata_data(1 downto 0) <= int_isr;
-                    when ADDR_IN_BREATH_I_DATA_0 =>
-                        rdata_data <= RESIZE(int_in_breath_i(0 downto 0), 32);
-                    when ADDR_IN_BREATH_O_DATA_0 =>
-                        rdata_data <= RESIZE(int_in_breath_o(0 downto 0), 32);
-                    when ADDR_IN_BREATH_O_CTRL =>
-                        rdata_data(0) <= int_in_breath_o_ap_vld;
-                    when ADDR_OUT_BREATH_I_DATA_0 =>
-                        rdata_data <= RESIZE(int_out_breath_i(0 downto 0), 32);
-                    when ADDR_OUT_BREATH_O_DATA_0 =>
-                        rdata_data <= RESIZE(int_out_breath_o(0 downto 0), 32);
-                    when ADDR_OUT_BREATH_O_CTRL =>
-                        rdata_data(0) <= int_out_breath_o_ap_vld;
                     when others =>
                         NULL;
                     end case;
@@ -293,8 +241,6 @@ begin
     task_ap_done         <= (ap_done and not auto_restart_status) or auto_restart_done;
     task_ap_ready        <= ap_ready and not int_auto_restart;
     auto_restart_done    <= auto_restart_status and (ap_idle and not int_ap_idle);
-    in_breath_i          <= STD_LOGIC_VECTOR(int_in_breath_i);
-    out_breath_i         <= STD_LOGIC_VECTOR(int_out_breath_i);
 
     process (ACLK)
     begin
@@ -461,84 +407,6 @@ begin
                     int_isr(1) <= '1';
                 elsif (w_hs = '1' and waddr = ADDR_ISR and WSTRB(0) = '1') then
                     int_isr(1) <= int_isr(1) xor WDATA(1); -- toggle on write
-                end if;
-            end if;
-        end if;
-    end process;
-
-    process (ACLK)
-    begin
-        if (ACLK'event and ACLK = '1') then
-            if (ACLK_EN = '1') then
-                if (w_hs = '1' and waddr = ADDR_IN_BREATH_I_DATA_0) then
-                    int_in_breath_i(0 downto 0) <= (UNSIGNED(WDATA(0 downto 0)) and wmask(0 downto 0)) or ((not wmask(0 downto 0)) and int_in_breath_i(0 downto 0));
-                end if;
-            end if;
-        end if;
-    end process;
-
-    process (ACLK)
-    begin
-        if (ACLK'event and ACLK = '1') then
-            if (ARESET = '1') then
-                int_in_breath_o <= (others => '0');
-            elsif (ACLK_EN = '1') then
-                if (in_breath_o_ap_vld = '1') then
-                    int_in_breath_o <= UNSIGNED(in_breath_o);
-                end if;
-            end if;
-        end if;
-    end process;
-
-    process (ACLK)
-    begin
-        if (ACLK'event and ACLK = '1') then
-            if (ARESET = '1') then
-                int_in_breath_o_ap_vld <= '0';
-            elsif (ACLK_EN = '1') then
-                if (in_breath_o_ap_vld = '1') then
-                    int_in_breath_o_ap_vld <= '1';
-                elsif (ar_hs = '1' and raddr = ADDR_IN_BREATH_O_CTRL) then
-                    int_in_breath_o_ap_vld <= '0'; -- clear on read
-                end if;
-            end if;
-        end if;
-    end process;
-
-    process (ACLK)
-    begin
-        if (ACLK'event and ACLK = '1') then
-            if (ACLK_EN = '1') then
-                if (w_hs = '1' and waddr = ADDR_OUT_BREATH_I_DATA_0) then
-                    int_out_breath_i(0 downto 0) <= (UNSIGNED(WDATA(0 downto 0)) and wmask(0 downto 0)) or ((not wmask(0 downto 0)) and int_out_breath_i(0 downto 0));
-                end if;
-            end if;
-        end if;
-    end process;
-
-    process (ACLK)
-    begin
-        if (ACLK'event and ACLK = '1') then
-            if (ARESET = '1') then
-                int_out_breath_o <= (others => '0');
-            elsif (ACLK_EN = '1') then
-                if (out_breath_o_ap_vld = '1') then
-                    int_out_breath_o <= UNSIGNED(out_breath_o);
-                end if;
-            end if;
-        end if;
-    end process;
-
-    process (ACLK)
-    begin
-        if (ACLK'event and ACLK = '1') then
-            if (ARESET = '1') then
-                int_out_breath_o_ap_vld <= '0';
-            elsif (ACLK_EN = '1') then
-                if (out_breath_o_ap_vld = '1') then
-                    int_out_breath_o_ap_vld <= '1';
-                elsif (ar_hs = '1' and raddr = ADDR_OUT_BREATH_O_CTRL) then
-                    int_out_breath_o_ap_vld <= '0'; -- clear on read
                 end if;
             end if;
         end if;

@@ -7,29 +7,9 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="image_passthrough_image_passthrough,hls_ip_2022_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xczu3eg-sbva484-1-e,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=2.331000,HLS_SYN_LAT=-1,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=70,HLS_SYN_LUT=114,HLS_VERSION=2022_2}" *)
+(* CORE_GENERATION_INFO="image_passthrough_image_passthrough,hls_ip_2022_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xczu3eg-sbva484-1-e,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=3.558625,HLS_SYN_LAT=921782,HLS_SYN_TPT=921783,HLS_SYN_MEM=60,HLS_SYN_DSP=0,HLS_SYN_FF=201,HLS_SYN_LUT=1098,HLS_VERSION=2022_2}" *)
 
 module image_passthrough (
-        ap_clk,
-        ap_rst_n,
-        in_stream_TDATA,
-        in_stream_TVALID,
-        in_stream_TREADY,
-        in_stream_TKEEP,
-        in_stream_TSTRB,
-        in_stream_TUSER,
-        in_stream_TLAST,
-        in_stream_TID,
-        in_stream_TDEST,
-        out_stream_TDATA,
-        out_stream_TVALID,
-        out_stream_TREADY,
-        out_stream_TKEEP,
-        out_stream_TSTRB,
-        out_stream_TUSER,
-        out_stream_TLAST,
-        out_stream_TID,
-        out_stream_TDEST,
         s_axi_CTRL_AWVALID,
         s_axi_CTRL_AWREADY,
         s_axi_CTRL_AWADDR,
@@ -47,39 +27,40 @@ module image_passthrough (
         s_axi_CTRL_BVALID,
         s_axi_CTRL_BREADY,
         s_axi_CTRL_BRESP,
-        interrupt
+        ap_clk,
+        ap_rst_n,
+        interrupt,
+        in_stream_TDATA,
+        in_stream_TKEEP,
+        in_stream_TSTRB,
+        in_stream_TUSER,
+        in_stream_TLAST,
+        in_stream_TID,
+        in_stream_TDEST,
+        out_stream_TDATA,
+        out_stream_TKEEP,
+        out_stream_TSTRB,
+        out_stream_TUSER,
+        out_stream_TLAST,
+        out_stream_TID,
+        out_stream_TDEST,
+        in_breath_gpio_i,
+        in_breath_gpio_o,
+        out_breath_gpio_i,
+        out_breath_gpio_o,
+        out_stream_TVALID,
+        out_stream_TREADY,
+        in_stream_TVALID,
+        in_stream_TREADY
 );
 
-parameter    ap_ST_fsm_state1 = 3'd1;
-parameter    ap_ST_fsm_pp0_stage0 = 3'd2;
-parameter    ap_ST_fsm_state4 = 3'd4;
 parameter    C_S_AXI_CTRL_DATA_WIDTH = 32;
-parameter    C_S_AXI_CTRL_ADDR_WIDTH = 6;
+parameter    C_S_AXI_CTRL_ADDR_WIDTH = 4;
 parameter    C_S_AXI_DATA_WIDTH = 32;
 
 parameter C_S_AXI_CTRL_WSTRB_WIDTH = (32 / 8);
 parameter C_S_AXI_WSTRB_WIDTH = (32 / 8);
 
-input   ap_clk;
-input   ap_rst_n;
-input  [7:0] in_stream_TDATA;
-input   in_stream_TVALID;
-output   in_stream_TREADY;
-input  [0:0] in_stream_TKEEP;
-input  [0:0] in_stream_TSTRB;
-input  [0:0] in_stream_TUSER;
-input  [0:0] in_stream_TLAST;
-input  [0:0] in_stream_TID;
-input  [0:0] in_stream_TDEST;
-output  [7:0] out_stream_TDATA;
-output   out_stream_TVALID;
-input   out_stream_TREADY;
-output  [0:0] out_stream_TKEEP;
-output  [0:0] out_stream_TSTRB;
-output  [0:0] out_stream_TUSER;
-output  [0:0] out_stream_TLAST;
-output  [0:0] out_stream_TID;
-output  [0:0] out_stream_TDEST;
 input   s_axi_CTRL_AWVALID;
 output   s_axi_CTRL_AWREADY;
 input  [C_S_AXI_CTRL_ADDR_WIDTH - 1:0] s_axi_CTRL_AWADDR;
@@ -97,100 +78,72 @@ output  [1:0] s_axi_CTRL_RRESP;
 output   s_axi_CTRL_BVALID;
 input   s_axi_CTRL_BREADY;
 output  [1:0] s_axi_CTRL_BRESP;
+input   ap_clk;
+input   ap_rst_n;
 output   interrupt;
+input  [23:0] in_stream_TDATA;
+input  [2:0] in_stream_TKEEP;
+input  [2:0] in_stream_TSTRB;
+input  [0:0] in_stream_TUSER;
+input  [0:0] in_stream_TLAST;
+input  [0:0] in_stream_TID;
+input  [0:0] in_stream_TDEST;
+output  [23:0] out_stream_TDATA;
+output  [2:0] out_stream_TKEEP;
+output  [2:0] out_stream_TSTRB;
+output  [0:0] out_stream_TUSER;
+output  [0:0] out_stream_TLAST;
+output  [0:0] out_stream_TID;
+output  [0:0] out_stream_TDEST;
+input  [0:0] in_breath_gpio_i;
+output  [0:0] in_breath_gpio_o;
+input  [0:0] out_breath_gpio_i;
+output  [0:0] out_breath_gpio_o;
+output   out_stream_TVALID;
+input   out_stream_TREADY;
+input   in_stream_TVALID;
+output   in_stream_TREADY;
 
  reg    ap_rst_n_inv;
 wire    ap_start;
-reg    ap_done;
-reg    ap_idle;
-(* fsm_encoding = "none" *) reg   [2:0] ap_CS_fsm;
-wire    ap_CS_fsm_state1;
-reg    ap_ready;
-wire   [0:0] in_breath_i;
-reg   [0:0] in_breath_o;
-reg    in_breath_o_ap_vld;
-wire   [0:0] out_breath_i;
-wire   [0:0] out_breath_o;
-reg    out_breath_o_ap_vld;
-reg    in_stream_TDATA_blk_n;
-wire    ap_CS_fsm_pp0_stage0;
-reg    ap_enable_reg_pp0_iter0;
-wire    ap_block_pp0_stage0;
-reg    out_stream_TDATA_blk_n;
-reg    ap_enable_reg_pp0_iter1;
-reg    ap_block_state2_pp0_stage0_iter0;
-reg    ap_block_state3_pp0_stage0_iter1;
-reg    ap_block_pp0_stage0_11001;
-reg   [0:0] tmp_user_V_reg_217;
-wire   [0:0] tmp_last_V_fu_173_p1;
-reg    ap_block_pp0_stage0_subdone;
-reg    ap_condition_pp0_flush_enable;
-reg    ap_block_pp0_stage0_01001;
-wire   [0:0] xor_ln186_fu_188_p2;
-wire    ap_CS_fsm_state4;
-wire    regslice_both_out_stream_V_data_V_U_apdone_blk;
-reg   [2:0] ap_NS_fsm;
-reg    ap_ST_fsm_state1_blk;
-reg    ap_ST_fsm_state4_blk;
-reg    ap_idle_pp0;
-wire    ap_enable_pp0;
-wire    regslice_both_in_stream_V_data_V_U_apdone_blk;
-wire   [7:0] in_stream_TDATA_int_regslice;
-wire    in_stream_TVALID_int_regslice;
-reg    in_stream_TREADY_int_regslice;
-wire    regslice_both_in_stream_V_data_V_U_ack_in;
-wire    regslice_both_in_stream_V_keep_V_U_apdone_blk;
-wire   [0:0] in_stream_TKEEP_int_regslice;
-wire    regslice_both_in_stream_V_keep_V_U_vld_out;
-wire    regslice_both_in_stream_V_keep_V_U_ack_in;
-wire    regslice_both_in_stream_V_strb_V_U_apdone_blk;
-wire   [0:0] in_stream_TSTRB_int_regslice;
-wire    regslice_both_in_stream_V_strb_V_U_vld_out;
-wire    regslice_both_in_stream_V_strb_V_U_ack_in;
-wire    regslice_both_in_stream_V_user_V_U_apdone_blk;
-wire   [0:0] in_stream_TUSER_int_regslice;
-wire    regslice_both_in_stream_V_user_V_U_vld_out;
-wire    regslice_both_in_stream_V_user_V_U_ack_in;
-wire    regslice_both_in_stream_V_last_V_U_apdone_blk;
-wire   [0:0] in_stream_TLAST_int_regslice;
-wire    regslice_both_in_stream_V_last_V_U_vld_out;
-wire    regslice_both_in_stream_V_last_V_U_ack_in;
-wire    regslice_both_in_stream_V_id_V_U_apdone_blk;
-wire   [0:0] in_stream_TID_int_regslice;
-wire    regslice_both_in_stream_V_id_V_U_vld_out;
-wire    regslice_both_in_stream_V_id_V_U_ack_in;
-wire    regslice_both_in_stream_V_dest_V_U_apdone_blk;
-wire   [0:0] in_stream_TDEST_int_regslice;
-wire    regslice_both_in_stream_V_dest_V_U_vld_out;
-wire    regslice_both_in_stream_V_dest_V_U_ack_in;
-reg    out_stream_TVALID_int_regslice;
-wire    out_stream_TREADY_int_regslice;
-wire    regslice_both_out_stream_V_data_V_U_vld_out;
-wire    regslice_both_out_stream_V_keep_V_U_apdone_blk;
-wire    regslice_both_out_stream_V_keep_V_U_ack_in_dummy;
-wire    regslice_both_out_stream_V_keep_V_U_vld_out;
-wire    regslice_both_out_stream_V_strb_V_U_apdone_blk;
-wire    regslice_both_out_stream_V_strb_V_U_ack_in_dummy;
-wire    regslice_both_out_stream_V_strb_V_U_vld_out;
-wire    regslice_both_out_stream_V_user_V_U_apdone_blk;
-wire    regslice_both_out_stream_V_user_V_U_ack_in_dummy;
-wire    regslice_both_out_stream_V_user_V_U_vld_out;
-wire    regslice_both_out_stream_V_last_V_U_apdone_blk;
-wire    regslice_both_out_stream_V_last_V_U_ack_in_dummy;
-wire    regslice_both_out_stream_V_last_V_U_vld_out;
-wire    regslice_both_out_stream_V_id_V_U_apdone_blk;
-wire    regslice_both_out_stream_V_id_V_U_ack_in_dummy;
-wire    regslice_both_out_stream_V_id_V_U_vld_out;
-wire    regslice_both_out_stream_V_dest_V_U_apdone_blk;
-wire    regslice_both_out_stream_V_dest_V_U_ack_in_dummy;
-wire    regslice_both_out_stream_V_dest_V_U_vld_out;
+wire    ap_ready;
+wire    ap_done;
+wire    ap_idle;
+wire    Loop_VITIS_LOOP_43_1_proc1_U0_ap_start;
+wire    Loop_VITIS_LOOP_43_1_proc1_U0_ap_done;
+wire    Loop_VITIS_LOOP_43_1_proc1_U0_ap_continue;
+wire    Loop_VITIS_LOOP_43_1_proc1_U0_ap_idle;
+wire    Loop_VITIS_LOOP_43_1_proc1_U0_ap_ready;
+wire   [23:0] Loop_VITIS_LOOP_43_1_proc1_U0_out_stream_TDATA;
+wire    Loop_VITIS_LOOP_43_1_proc1_U0_out_stream_TVALID;
+wire   [2:0] Loop_VITIS_LOOP_43_1_proc1_U0_out_stream_TKEEP;
+wire   [2:0] Loop_VITIS_LOOP_43_1_proc1_U0_out_stream_TSTRB;
+wire   [0:0] Loop_VITIS_LOOP_43_1_proc1_U0_out_stream_TUSER;
+wire   [0:0] Loop_VITIS_LOOP_43_1_proc1_U0_out_stream_TLAST;
+wire   [0:0] Loop_VITIS_LOOP_43_1_proc1_U0_out_stream_TID;
+wire   [0:0] Loop_VITIS_LOOP_43_1_proc1_U0_out_stream_TDEST;
+wire   [0:0] Loop_VITIS_LOOP_43_1_proc1_U0_in_breath_gpio_o;
+wire    Loop_VITIS_LOOP_43_1_proc1_U0_in_breath_gpio_o_ap_vld;
+wire    Loop_VITIS_LOOP_43_1_proc1_U0_in_stream_TREADY;
+wire    Block_image_passthrough_for_cond_i_exit_proc_U0_ap_start;
+wire    Block_image_passthrough_for_cond_i_exit_proc_U0_ap_done;
+wire    Block_image_passthrough_for_cond_i_exit_proc_U0_ap_continue;
+wire    Block_image_passthrough_for_cond_i_exit_proc_U0_ap_idle;
+wire    Block_image_passthrough_for_cond_i_exit_proc_U0_ap_ready;
+wire   [0:0] Block_image_passthrough_for_cond_i_exit_proc_U0_out_breath_gpio_o;
+wire    Block_image_passthrough_for_cond_i_exit_proc_U0_out_breath_gpio_o_ap_vld;
+wire    ap_sync_done;
+wire    ap_sync_ready;
+reg    ap_sync_reg_Loop_VITIS_LOOP_43_1_proc1_U0_ap_ready;
+wire    ap_sync_Loop_VITIS_LOOP_43_1_proc1_U0_ap_ready;
+reg    ap_sync_reg_Block_image_passthrough_for_cond_i_exit_proc_U0_ap_ready;
+wire    ap_sync_Block_image_passthrough_for_cond_i_exit_proc_U0_ap_ready;
 wire    ap_ce_reg;
 
 // power-on initialization
 initial begin
-#0 ap_CS_fsm = 3'd1;
-#0 ap_enable_reg_pp0_iter0 = 1'b0;
-#0 ap_enable_reg_pp0_iter1 = 1'b0;
+#0 ap_sync_reg_Loop_VITIS_LOOP_43_1_proc1_U0_ap_ready = 1'b0;
+#0 ap_sync_reg_Block_image_passthrough_for_cond_i_exit_proc_U0_ap_ready = 1'b0;
 end
 
 image_passthrough_CTRL_s_axi #(
@@ -217,12 +170,6 @@ CTRL_s_axi_U(
     .ACLK(ap_clk),
     .ARESET(ap_rst_n_inv),
     .ACLK_EN(1'b1),
-    .in_breath_o(in_breath_o),
-    .in_breath_o_ap_vld(in_breath_o_ap_vld),
-    .in_breath_i(in_breath_i),
-    .out_breath_o(out_breath_o),
-    .out_breath_o_ap_vld(out_breath_o_ap_vld),
-    .out_breath_i(out_breath_i),
     .ap_start(ap_start),
     .interrupt(interrupt),
     .ap_ready(ap_ready),
@@ -230,425 +177,120 @@ CTRL_s_axi_U(
     .ap_idle(ap_idle)
 );
 
-image_passthrough_regslice_both #(
-    .DataWidth( 8 ))
-regslice_both_in_stream_V_data_V_U(
+image_passthrough_Loop_VITIS_LOOP_43_1_proc1 Loop_VITIS_LOOP_43_1_proc1_U0(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .data_in(in_stream_TDATA),
-    .vld_in(in_stream_TVALID),
-    .ack_in(regslice_both_in_stream_V_data_V_U_ack_in),
-    .data_out(in_stream_TDATA_int_regslice),
-    .vld_out(in_stream_TVALID_int_regslice),
-    .ack_out(in_stream_TREADY_int_regslice),
-    .apdone_blk(regslice_both_in_stream_V_data_V_U_apdone_blk)
+    .ap_start(Loop_VITIS_LOOP_43_1_proc1_U0_ap_start),
+    .ap_done(Loop_VITIS_LOOP_43_1_proc1_U0_ap_done),
+    .ap_continue(Loop_VITIS_LOOP_43_1_proc1_U0_ap_continue),
+    .ap_idle(Loop_VITIS_LOOP_43_1_proc1_U0_ap_idle),
+    .ap_ready(Loop_VITIS_LOOP_43_1_proc1_U0_ap_ready),
+    .out_stream_TDATA(Loop_VITIS_LOOP_43_1_proc1_U0_out_stream_TDATA),
+    .out_stream_TVALID(Loop_VITIS_LOOP_43_1_proc1_U0_out_stream_TVALID),
+    .out_stream_TREADY(out_stream_TREADY),
+    .out_stream_TKEEP(Loop_VITIS_LOOP_43_1_proc1_U0_out_stream_TKEEP),
+    .out_stream_TSTRB(Loop_VITIS_LOOP_43_1_proc1_U0_out_stream_TSTRB),
+    .out_stream_TUSER(Loop_VITIS_LOOP_43_1_proc1_U0_out_stream_TUSER),
+    .out_stream_TLAST(Loop_VITIS_LOOP_43_1_proc1_U0_out_stream_TLAST),
+    .out_stream_TID(Loop_VITIS_LOOP_43_1_proc1_U0_out_stream_TID),
+    .out_stream_TDEST(Loop_VITIS_LOOP_43_1_proc1_U0_out_stream_TDEST),
+    .in_breath_gpio_i(in_breath_gpio_i),
+    .in_breath_gpio_o(Loop_VITIS_LOOP_43_1_proc1_U0_in_breath_gpio_o),
+    .in_breath_gpio_o_ap_vld(Loop_VITIS_LOOP_43_1_proc1_U0_in_breath_gpio_o_ap_vld),
+    .in_stream_TDATA(in_stream_TDATA),
+    .in_stream_TVALID(in_stream_TVALID),
+    .in_stream_TREADY(Loop_VITIS_LOOP_43_1_proc1_U0_in_stream_TREADY),
+    .in_stream_TKEEP(in_stream_TKEEP),
+    .in_stream_TSTRB(in_stream_TSTRB),
+    .in_stream_TUSER(in_stream_TUSER),
+    .in_stream_TLAST(in_stream_TLAST),
+    .in_stream_TID(in_stream_TID),
+    .in_stream_TDEST(in_stream_TDEST)
 );
 
-image_passthrough_regslice_both #(
-    .DataWidth( 1 ))
-regslice_both_in_stream_V_keep_V_U(
+image_passthrough_Block_image_passthrough_for_cond_i_exit_proc Block_image_passthrough_for_cond_i_exit_proc_U0(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .data_in(in_stream_TKEEP),
-    .vld_in(in_stream_TVALID),
-    .ack_in(regslice_both_in_stream_V_keep_V_U_ack_in),
-    .data_out(in_stream_TKEEP_int_regslice),
-    .vld_out(regslice_both_in_stream_V_keep_V_U_vld_out),
-    .ack_out(in_stream_TREADY_int_regslice),
-    .apdone_blk(regslice_both_in_stream_V_keep_V_U_apdone_blk)
-);
-
-image_passthrough_regslice_both #(
-    .DataWidth( 1 ))
-regslice_both_in_stream_V_strb_V_U(
-    .ap_clk(ap_clk),
-    .ap_rst(ap_rst_n_inv),
-    .data_in(in_stream_TSTRB),
-    .vld_in(in_stream_TVALID),
-    .ack_in(regslice_both_in_stream_V_strb_V_U_ack_in),
-    .data_out(in_stream_TSTRB_int_regslice),
-    .vld_out(regslice_both_in_stream_V_strb_V_U_vld_out),
-    .ack_out(in_stream_TREADY_int_regslice),
-    .apdone_blk(regslice_both_in_stream_V_strb_V_U_apdone_blk)
-);
-
-image_passthrough_regslice_both #(
-    .DataWidth( 1 ))
-regslice_both_in_stream_V_user_V_U(
-    .ap_clk(ap_clk),
-    .ap_rst(ap_rst_n_inv),
-    .data_in(in_stream_TUSER),
-    .vld_in(in_stream_TVALID),
-    .ack_in(regslice_both_in_stream_V_user_V_U_ack_in),
-    .data_out(in_stream_TUSER_int_regslice),
-    .vld_out(regslice_both_in_stream_V_user_V_U_vld_out),
-    .ack_out(in_stream_TREADY_int_regslice),
-    .apdone_blk(regslice_both_in_stream_V_user_V_U_apdone_blk)
-);
-
-image_passthrough_regslice_both #(
-    .DataWidth( 1 ))
-regslice_both_in_stream_V_last_V_U(
-    .ap_clk(ap_clk),
-    .ap_rst(ap_rst_n_inv),
-    .data_in(in_stream_TLAST),
-    .vld_in(in_stream_TVALID),
-    .ack_in(regslice_both_in_stream_V_last_V_U_ack_in),
-    .data_out(in_stream_TLAST_int_regslice),
-    .vld_out(regslice_both_in_stream_V_last_V_U_vld_out),
-    .ack_out(in_stream_TREADY_int_regslice),
-    .apdone_blk(regslice_both_in_stream_V_last_V_U_apdone_blk)
-);
-
-image_passthrough_regslice_both #(
-    .DataWidth( 1 ))
-regslice_both_in_stream_V_id_V_U(
-    .ap_clk(ap_clk),
-    .ap_rst(ap_rst_n_inv),
-    .data_in(in_stream_TID),
-    .vld_in(in_stream_TVALID),
-    .ack_in(regslice_both_in_stream_V_id_V_U_ack_in),
-    .data_out(in_stream_TID_int_regslice),
-    .vld_out(regslice_both_in_stream_V_id_V_U_vld_out),
-    .ack_out(in_stream_TREADY_int_regslice),
-    .apdone_blk(regslice_both_in_stream_V_id_V_U_apdone_blk)
-);
-
-image_passthrough_regslice_both #(
-    .DataWidth( 1 ))
-regslice_both_in_stream_V_dest_V_U(
-    .ap_clk(ap_clk),
-    .ap_rst(ap_rst_n_inv),
-    .data_in(in_stream_TDEST),
-    .vld_in(in_stream_TVALID),
-    .ack_in(regslice_both_in_stream_V_dest_V_U_ack_in),
-    .data_out(in_stream_TDEST_int_regslice),
-    .vld_out(regslice_both_in_stream_V_dest_V_U_vld_out),
-    .ack_out(in_stream_TREADY_int_regslice),
-    .apdone_blk(regslice_both_in_stream_V_dest_V_U_apdone_blk)
-);
-
-image_passthrough_regslice_both #(
-    .DataWidth( 8 ))
-regslice_both_out_stream_V_data_V_U(
-    .ap_clk(ap_clk),
-    .ap_rst(ap_rst_n_inv),
-    .data_in(in_stream_TDATA_int_regslice),
-    .vld_in(out_stream_TVALID_int_regslice),
-    .ack_in(out_stream_TREADY_int_regslice),
-    .data_out(out_stream_TDATA),
-    .vld_out(regslice_both_out_stream_V_data_V_U_vld_out),
-    .ack_out(out_stream_TREADY),
-    .apdone_blk(regslice_both_out_stream_V_data_V_U_apdone_blk)
-);
-
-image_passthrough_regslice_both #(
-    .DataWidth( 1 ))
-regslice_both_out_stream_V_keep_V_U(
-    .ap_clk(ap_clk),
-    .ap_rst(ap_rst_n_inv),
-    .data_in(in_stream_TKEEP_int_regslice),
-    .vld_in(out_stream_TVALID_int_regslice),
-    .ack_in(regslice_both_out_stream_V_keep_V_U_ack_in_dummy),
-    .data_out(out_stream_TKEEP),
-    .vld_out(regslice_both_out_stream_V_keep_V_U_vld_out),
-    .ack_out(out_stream_TREADY),
-    .apdone_blk(regslice_both_out_stream_V_keep_V_U_apdone_blk)
-);
-
-image_passthrough_regslice_both #(
-    .DataWidth( 1 ))
-regslice_both_out_stream_V_strb_V_U(
-    .ap_clk(ap_clk),
-    .ap_rst(ap_rst_n_inv),
-    .data_in(in_stream_TSTRB_int_regslice),
-    .vld_in(out_stream_TVALID_int_regslice),
-    .ack_in(regslice_both_out_stream_V_strb_V_U_ack_in_dummy),
-    .data_out(out_stream_TSTRB),
-    .vld_out(regslice_both_out_stream_V_strb_V_U_vld_out),
-    .ack_out(out_stream_TREADY),
-    .apdone_blk(regslice_both_out_stream_V_strb_V_U_apdone_blk)
-);
-
-image_passthrough_regslice_both #(
-    .DataWidth( 1 ))
-regslice_both_out_stream_V_user_V_U(
-    .ap_clk(ap_clk),
-    .ap_rst(ap_rst_n_inv),
-    .data_in(in_stream_TUSER_int_regslice),
-    .vld_in(out_stream_TVALID_int_regslice),
-    .ack_in(regslice_both_out_stream_V_user_V_U_ack_in_dummy),
-    .data_out(out_stream_TUSER),
-    .vld_out(regslice_both_out_stream_V_user_V_U_vld_out),
-    .ack_out(out_stream_TREADY),
-    .apdone_blk(regslice_both_out_stream_V_user_V_U_apdone_blk)
-);
-
-image_passthrough_regslice_both #(
-    .DataWidth( 1 ))
-regslice_both_out_stream_V_last_V_U(
-    .ap_clk(ap_clk),
-    .ap_rst(ap_rst_n_inv),
-    .data_in(in_stream_TLAST_int_regslice),
-    .vld_in(out_stream_TVALID_int_regslice),
-    .ack_in(regslice_both_out_stream_V_last_V_U_ack_in_dummy),
-    .data_out(out_stream_TLAST),
-    .vld_out(regslice_both_out_stream_V_last_V_U_vld_out),
-    .ack_out(out_stream_TREADY),
-    .apdone_blk(regslice_both_out_stream_V_last_V_U_apdone_blk)
-);
-
-image_passthrough_regslice_both #(
-    .DataWidth( 1 ))
-regslice_both_out_stream_V_id_V_U(
-    .ap_clk(ap_clk),
-    .ap_rst(ap_rst_n_inv),
-    .data_in(in_stream_TID_int_regslice),
-    .vld_in(out_stream_TVALID_int_regslice),
-    .ack_in(regslice_both_out_stream_V_id_V_U_ack_in_dummy),
-    .data_out(out_stream_TID),
-    .vld_out(regslice_both_out_stream_V_id_V_U_vld_out),
-    .ack_out(out_stream_TREADY),
-    .apdone_blk(regslice_both_out_stream_V_id_V_U_apdone_blk)
-);
-
-image_passthrough_regslice_both #(
-    .DataWidth( 1 ))
-regslice_both_out_stream_V_dest_V_U(
-    .ap_clk(ap_clk),
-    .ap_rst(ap_rst_n_inv),
-    .data_in(in_stream_TDEST_int_regslice),
-    .vld_in(out_stream_TVALID_int_regslice),
-    .ack_in(regslice_both_out_stream_V_dest_V_U_ack_in_dummy),
-    .data_out(out_stream_TDEST),
-    .vld_out(regslice_both_out_stream_V_dest_V_U_vld_out),
-    .ack_out(out_stream_TREADY),
-    .apdone_blk(regslice_both_out_stream_V_dest_V_U_apdone_blk)
+    .ap_start(Block_image_passthrough_for_cond_i_exit_proc_U0_ap_start),
+    .ap_done(Block_image_passthrough_for_cond_i_exit_proc_U0_ap_done),
+    .ap_continue(Block_image_passthrough_for_cond_i_exit_proc_U0_ap_continue),
+    .ap_idle(Block_image_passthrough_for_cond_i_exit_proc_U0_ap_idle),
+    .ap_ready(Block_image_passthrough_for_cond_i_exit_proc_U0_ap_ready),
+    .out_breath_gpio_i(out_breath_gpio_i),
+    .out_breath_gpio_o(Block_image_passthrough_for_cond_i_exit_proc_U0_out_breath_gpio_o),
+    .out_breath_gpio_o_ap_vld(Block_image_passthrough_for_cond_i_exit_proc_U0_out_breath_gpio_o_ap_vld)
 );
 
 always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
-        ap_CS_fsm <= ap_ST_fsm_state1;
+        ap_sync_reg_Block_image_passthrough_for_cond_i_exit_proc_U0_ap_ready <= 1'b0;
     end else begin
-        ap_CS_fsm <= ap_NS_fsm;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (ap_rst_n_inv == 1'b1) begin
-        ap_enable_reg_pp0_iter0 <= 1'b0;
-    end else begin
-        if ((1'b1 == ap_condition_pp0_flush_enable)) begin
-            ap_enable_reg_pp0_iter0 <= 1'b0;
-        end else if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1))) begin
-            ap_enable_reg_pp0_iter0 <= 1'b1;
+        if (((ap_sync_ready & ap_start) == 1'b1)) begin
+            ap_sync_reg_Block_image_passthrough_for_cond_i_exit_proc_U0_ap_ready <= 1'b0;
+        end else begin
+            ap_sync_reg_Block_image_passthrough_for_cond_i_exit_proc_U0_ap_ready <= ap_sync_Block_image_passthrough_for_cond_i_exit_proc_U0_ap_ready;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
-        ap_enable_reg_pp0_iter1 <= 1'b0;
+        ap_sync_reg_Loop_VITIS_LOOP_43_1_proc1_U0_ap_ready <= 1'b0;
     end else begin
-        if ((1'b0 == ap_block_pp0_stage0_subdone)) begin
-            ap_enable_reg_pp0_iter1 <= ap_enable_reg_pp0_iter0;
-        end else if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1))) begin
-            ap_enable_reg_pp0_iter1 <= 1'b0;
+        if (((ap_sync_ready & ap_start) == 1'b1)) begin
+            ap_sync_reg_Loop_VITIS_LOOP_43_1_proc1_U0_ap_ready <= 1'b0;
+        end else begin
+            ap_sync_reg_Loop_VITIS_LOOP_43_1_proc1_U0_ap_ready <= ap_sync_Loop_VITIS_LOOP_43_1_proc1_U0_ap_ready;
         end
     end
 end
 
-always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        tmp_user_V_reg_217 <= in_stream_TUSER_int_regslice;
-    end
-end
+assign Block_image_passthrough_for_cond_i_exit_proc_U0_ap_continue = ap_sync_done;
 
-always @ (*) begin
-    if ((ap_start == 1'b0)) begin
-        ap_ST_fsm_state1_blk = 1'b1;
-    end else begin
-        ap_ST_fsm_state1_blk = 1'b0;
-    end
-end
+assign Block_image_passthrough_for_cond_i_exit_proc_U0_ap_start = ((ap_sync_reg_Block_image_passthrough_for_cond_i_exit_proc_U0_ap_ready ^ 1'b1) & ap_start);
 
-always @ (*) begin
-    if ((regslice_both_out_stream_V_data_V_U_apdone_blk == 1'b1)) begin
-        ap_ST_fsm_state4_blk = 1'b1;
-    end else begin
-        ap_ST_fsm_state4_blk = 1'b0;
-    end
-end
+assign Loop_VITIS_LOOP_43_1_proc1_U0_ap_continue = ap_sync_done;
 
-always @ (*) begin
-    if (((tmp_last_V_fu_173_p1 == 1'd1) & (1'b0 == ap_block_pp0_stage0_subdone) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        ap_condition_pp0_flush_enable = 1'b1;
-    end else begin
-        ap_condition_pp0_flush_enable = 1'b0;
-    end
-end
+assign Loop_VITIS_LOOP_43_1_proc1_U0_ap_start = ((ap_sync_reg_Loop_VITIS_LOOP_43_1_proc1_U0_ap_ready ^ 1'b1) & ap_start);
 
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state4) & (regslice_both_out_stream_V_data_V_U_apdone_blk == 1'b0))) begin
-        ap_done = 1'b1;
-    end else begin
-        ap_done = 1'b0;
-    end
-end
+assign ap_done = ap_sync_done;
 
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b0))) begin
-        ap_idle = 1'b1;
-    end else begin
-        ap_idle = 1'b0;
-    end
-end
+assign ap_idle = (Loop_VITIS_LOOP_43_1_proc1_U0_ap_idle & Block_image_passthrough_for_cond_i_exit_proc_U0_ap_idle);
 
-always @ (*) begin
-    if (((ap_enable_reg_pp0_iter1 == 1'b0) & (ap_enable_reg_pp0_iter0 == 1'b0))) begin
-        ap_idle_pp0 = 1'b1;
-    end else begin
-        ap_idle_pp0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state4) & (regslice_both_out_stream_V_data_V_U_apdone_blk == 1'b0))) begin
-        ap_ready = 1'b1;
-    end else begin
-        ap_ready = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if (((tmp_user_V_reg_217 == 1'd1) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b0 == ap_block_pp0_stage0_01001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        in_breath_o = xor_ln186_fu_188_p2;
-    end else begin
-        in_breath_o = in_breath_i;
-    end
-end
-
-always @ (*) begin
-    if (((tmp_user_V_reg_217 == 1'd1) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        in_breath_o_ap_vld = 1'b1;
-    end else begin
-        in_breath_o_ap_vld = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        in_stream_TDATA_blk_n = in_stream_TVALID_int_regslice;
-    end else begin
-        in_stream_TDATA_blk_n = 1'b1;
-    end
-end
-
-always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        in_stream_TREADY_int_regslice = 1'b1;
-    end else begin
-        in_stream_TREADY_int_regslice = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state4) & (regslice_both_out_stream_V_data_V_U_apdone_blk == 1'b0))) begin
-        out_breath_o_ap_vld = 1'b1;
-    end else begin
-        out_breath_o_ap_vld = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b0 == ap_block_pp0_stage0) & (1'b1 == ap_CS_fsm_pp0_stage0)) | ((1'b0 == ap_block_pp0_stage0) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0)))) begin
-        out_stream_TDATA_blk_n = out_stream_TREADY_int_regslice;
-    end else begin
-        out_stream_TDATA_blk_n = 1'b1;
-    end
-end
-
-always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        out_stream_TVALID_int_regslice = 1'b1;
-    end else begin
-        out_stream_TVALID_int_regslice = 1'b0;
-    end
-end
-
-always @ (*) begin
-    case (ap_CS_fsm)
-        ap_ST_fsm_state1 : begin
-            if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1))) begin
-                ap_NS_fsm = ap_ST_fsm_pp0_stage0;
-            end else begin
-                ap_NS_fsm = ap_ST_fsm_state1;
-            end
-        end
-        ap_ST_fsm_pp0_stage0 : begin
-            if (~((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b0 == ap_block_pp0_stage0_subdone) & (ap_enable_reg_pp0_iter0 == 1'b0) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-                ap_NS_fsm = ap_ST_fsm_pp0_stage0;
-            end else if (((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b0 == ap_block_pp0_stage0_subdone) & (ap_enable_reg_pp0_iter0 == 1'b0) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-                ap_NS_fsm = ap_ST_fsm_state4;
-            end else begin
-                ap_NS_fsm = ap_ST_fsm_pp0_stage0;
-            end
-        end
-        ap_ST_fsm_state4 : begin
-            if (((1'b1 == ap_CS_fsm_state4) & (regslice_both_out_stream_V_data_V_U_apdone_blk == 1'b0))) begin
-                ap_NS_fsm = ap_ST_fsm_state1;
-            end else begin
-                ap_NS_fsm = ap_ST_fsm_state4;
-            end
-        end
-        default : begin
-            ap_NS_fsm = 'bx;
-        end
-    endcase
-end
-
-assign ap_CS_fsm_pp0_stage0 = ap_CS_fsm[32'd1];
-
-assign ap_CS_fsm_state1 = ap_CS_fsm[32'd0];
-
-assign ap_CS_fsm_state4 = ap_CS_fsm[32'd2];
-
-assign ap_block_pp0_stage0 = ~(1'b1 == 1'b1);
-
-always @ (*) begin
-    ap_block_pp0_stage0_01001 = (((ap_enable_reg_pp0_iter1 == 1'b1) & (out_stream_TREADY_int_regslice == 1'b0)) | ((ap_enable_reg_pp0_iter0 == 1'b1) & ((out_stream_TREADY_int_regslice == 1'b0) | (in_stream_TVALID_int_regslice == 1'b0))));
-end
-
-always @ (*) begin
-    ap_block_pp0_stage0_11001 = (((ap_enable_reg_pp0_iter1 == 1'b1) & (out_stream_TREADY_int_regslice == 1'b0)) | ((ap_enable_reg_pp0_iter0 == 1'b1) & ((out_stream_TREADY_int_regslice == 1'b0) | (in_stream_TVALID_int_regslice == 1'b0))));
-end
-
-always @ (*) begin
-    ap_block_pp0_stage0_subdone = (((ap_enable_reg_pp0_iter1 == 1'b1) & (out_stream_TREADY_int_regslice == 1'b0)) | ((ap_enable_reg_pp0_iter0 == 1'b1) & ((out_stream_TREADY_int_regslice == 1'b0) | (in_stream_TVALID_int_regslice == 1'b0))));
-end
-
-always @ (*) begin
-    ap_block_state2_pp0_stage0_iter0 = ((out_stream_TREADY_int_regslice == 1'b0) | (in_stream_TVALID_int_regslice == 1'b0));
-end
-
-always @ (*) begin
-    ap_block_state3_pp0_stage0_iter1 = (out_stream_TREADY_int_regslice == 1'b0);
-end
-
-assign ap_enable_pp0 = (ap_idle_pp0 ^ 1'b1);
+assign ap_ready = ap_sync_ready;
 
 always @ (*) begin
     ap_rst_n_inv = ~ap_rst_n;
 end
 
-assign in_stream_TREADY = regslice_both_in_stream_V_data_V_U_ack_in;
+assign ap_sync_Block_image_passthrough_for_cond_i_exit_proc_U0_ap_ready = (ap_sync_reg_Block_image_passthrough_for_cond_i_exit_proc_U0_ap_ready | Block_image_passthrough_for_cond_i_exit_proc_U0_ap_ready);
 
-assign out_breath_o = (out_breath_i ^ 1'd1);
+assign ap_sync_Loop_VITIS_LOOP_43_1_proc1_U0_ap_ready = (ap_sync_reg_Loop_VITIS_LOOP_43_1_proc1_U0_ap_ready | Loop_VITIS_LOOP_43_1_proc1_U0_ap_ready);
 
-assign out_stream_TVALID = regslice_both_out_stream_V_data_V_U_vld_out;
+assign ap_sync_done = (Loop_VITIS_LOOP_43_1_proc1_U0_ap_done & Block_image_passthrough_for_cond_i_exit_proc_U0_ap_done);
 
-assign tmp_last_V_fu_173_p1 = in_stream_TLAST_int_regslice;
+assign ap_sync_ready = (ap_sync_Loop_VITIS_LOOP_43_1_proc1_U0_ap_ready & ap_sync_Block_image_passthrough_for_cond_i_exit_proc_U0_ap_ready);
 
-assign xor_ln186_fu_188_p2 = (in_breath_i ^ 1'd1);
+assign in_breath_gpio_o = Loop_VITIS_LOOP_43_1_proc1_U0_in_breath_gpio_o;
+
+assign in_stream_TREADY = Loop_VITIS_LOOP_43_1_proc1_U0_in_stream_TREADY;
+
+assign out_breath_gpio_o = Block_image_passthrough_for_cond_i_exit_proc_U0_out_breath_gpio_o;
+
+assign out_stream_TDATA = Loop_VITIS_LOOP_43_1_proc1_U0_out_stream_TDATA;
+
+assign out_stream_TDEST = Loop_VITIS_LOOP_43_1_proc1_U0_out_stream_TDEST;
+
+assign out_stream_TID = Loop_VITIS_LOOP_43_1_proc1_U0_out_stream_TID;
+
+assign out_stream_TKEEP = Loop_VITIS_LOOP_43_1_proc1_U0_out_stream_TKEEP;
+
+assign out_stream_TLAST = Loop_VITIS_LOOP_43_1_proc1_U0_out_stream_TLAST;
+
+assign out_stream_TSTRB = Loop_VITIS_LOOP_43_1_proc1_U0_out_stream_TSTRB;
+
+assign out_stream_TUSER = Loop_VITIS_LOOP_43_1_proc1_U0_out_stream_TUSER;
+
+assign out_stream_TVALID = Loop_VITIS_LOOP_43_1_proc1_U0_out_stream_TVALID;
 
 endmodule //image_passthrough

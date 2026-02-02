@@ -7,12 +7,11 @@
     </downStreamTool>
     <synthesis askAgain="false"/>
     <config>
-        <config_export description="Pass through test iamge IP" display_name="Image_Passthrough" library="user" output="/home/ecelrc/students/gwl459/workspace/augmented-reality-glasses/fpga_software/IPs" taxonomy="User IP" vendor="xilinx" version="1.0" format="ip_catalog" rtl="verilog"/>
+        <config_export description="Pass through test iamge IP" display_name="Image_Passthrough_V2" format="ip_catalog" library="user" output="/home/ecelrc/students/gwl459/workspace/augmented-reality-glasses/fpga_software/IPs/Image_passthrough_2" rtl="verilog" taxonomy="User IP" vendor="xilinx" version="2.0"/>
     </config>
     <UIConfigurations>
         <UIAutosynConf hideTrivialOp="true" isBasedOnBoard="false" isSolutionDirty="false" isStopAskAgain="false" showDetailDesignViewer="false">
             <Platform>xilinx/zynquplus/zynquplus</Platform>
-            <Platform>xilinx/zynquplus/zynquplus_fpv7</Platform>
             <customLibs/>
         </UIAutosynConf>
         <UIIPPackagerConf AskAgain="true" DescriptionButton="false" LibraryButton="false" RTLLanguage="verilog" UseNetList="none" VendorButton="false" VersionButton="false" evaluateRTL="false" setup="false">
@@ -41,8 +40,8 @@
             </RTLs>
         </UIAutoSimConf>
     </UIConfigurations>
-    <ExportDesign askAgain="true" evaluate="false" flow="false" flowChoice="syn" formatName="ip_catalog" output="/home/ecelrc/students/gwl459/workspace/augmented-reality-glasses/fpga_software/IPs" rtl="verilog" rtlButton="true" rtlCombo="verilog">
-        <Format formatName="ip_catalog" description="Pass through test iamge IP" vendor="xilinx" library="user" ipname="image_passthrough" version="1.0" display_name="Image_Passthrough" taxonomy="User IP"/>
+    <ExportDesign askAgain="true" evaluate="false" flow="false" flowChoice="syn" formatName="ip_catalog" output="/home/ecelrc/students/gwl459/workspace/augmented-reality-glasses/fpga_software/IPs/Image_passthrough_2" rtl="verilog" rtlButton="true" rtlCombo="verilog">
+        <Format description="Pass through test iamge IP" display_name="Image_Passthrough_V2" formatName="ip_catalog" library="user" taxonomy="User IP" vendor="xilinx" ipname="image_passthrough" version="2.0"/>
         <Format formatName="sysgen"/>
         <Format formatName="sysgen_ise"/>
         <Format formatName="syn_dcp"/>
@@ -70,7 +69,7 @@
         <library value="xilinx/zynquplus/zynquplus" name="DefaultPlatform"/>
     </libraryList>
     <clockList>
-        <clock default="false" name="default" period="10"/>
+        <clock name="default" default="false" period="10"/>
     </clockList>
 </solution>
 

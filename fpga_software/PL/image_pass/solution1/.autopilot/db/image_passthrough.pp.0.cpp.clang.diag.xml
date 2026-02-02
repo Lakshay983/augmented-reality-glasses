@@ -601,7 +601,23 @@
       <key>filename</key>
       <string>/home/ecelrc/students/gwl459/workspace/augmented-reality-glasses/fpga_software/PL/image_pass/solution1/csynth.tcl</string>
       <key>line</key>
-      <integer>14</integer>
+      <integer>15</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=image_passthrough_XLX_SEP_ PragmaOptions=name=image_passthrough_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>/home/ecelrc/students/gwl459/workspace/augmented-reality-glasses/fpga_software/PL/image_pass/solution1/directives.tcl</string>
+      <key>line</key>
+      <integer>6</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -617,7 +633,7 @@
       <key>filename</key>
       <string>image_passthrough.cpp</string>
       <key>line</key>
-      <integer>12</integer>
+      <integer>21</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -633,7 +649,7 @@
       <key>filename</key>
       <string>image_passthrough.cpp</string>
       <key>line</key>
-      <integer>13</integer>
+      <integer>22</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -649,11 +665,11 @@
       <key>filename</key>
       <string>image_passthrough.cpp</string>
       <key>line</key>
-      <integer>15</integer>
+      <integer>24</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=image_passthrough_XLX_SEP_ PragmaOptions=s_axilite port=in_breath bundle=CTRL_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=image_passthrough_XLX_SEP_ PragmaOptions=ap_none port=in_breath_gpio_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -665,11 +681,11 @@
       <key>filename</key>
       <string>image_passthrough.cpp</string>
       <key>line</key>
-      <integer>16</integer>
+      <integer>25</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=image_passthrough_XLX_SEP_ PragmaOptions=s_axilite port=out_breath bundle=CTRL_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=image_passthrough_XLX_SEP_ PragmaOptions=ap_none port=out_breath_gpio_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -681,7 +697,7 @@
       <key>filename</key>
       <string>image_passthrough.cpp</string>
       <key>line</key>
-      <integer>17</integer>
+      <integer>28</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -697,7 +713,87 @@
       <key>filename</key>
       <string>image_passthrough.cpp</string>
       <key>line</key>
-      <integer>22</integer>
+      <integer>30</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=dataflow_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=image_passthrough_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>image_passthrough.cpp</string>
+      <key>line</key>
+      <integer>35</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=bind_storage_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=image_passthrough_XLX_SEP_ PragmaOptions=variable=tile_ping type=ram_t2p impl=bram_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>image_passthrough.cpp</string>
+      <key>line</key>
+      <integer>36</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=bind_storage_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=image_passthrough_XLX_SEP_ PragmaOptions=variable=tile_pong type=ram_t2p impl=bram_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>image_passthrough.cpp</string>
+      <key>line</key>
+      <integer>51</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=image_passthrough_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>image_passthrough.cpp</string>
+      <key>line</key>
+      <integer>70</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=image_passthrough_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>image_passthrough.cpp</string>
+      <key>line</key>
+      <integer>78</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>

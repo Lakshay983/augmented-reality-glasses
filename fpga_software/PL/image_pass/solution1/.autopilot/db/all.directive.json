@@ -1,12 +1,13 @@
 {"sourceFile": [{
       "name": "",
-      "directive": [{
+      "directive": [
+        {
           "functionName": "image_passthrough",
           "label": "",
           "functionLabel": "",
           "id": "1",
-          "sourceFile": "\/home\/ecelrc\/students\/gwl459\/workspace\/augmented-reality-glasses\/fpga_software\/PL\/image_pass\/solution1\/csynth.tcl",
-          "sourceLine": "14",
+          "sourceFile": "\/home\/ecelrc\/students\/gwl459\/workspace\/augmented-reality-glasses\/fpga_software\/PL\/image_pass\/solution1\/directives.tcl",
+          "sourceLine": "6",
           "pragma": {
             "name": "TOP",
             "option": [{
@@ -14,5 +15,21 @@
                 "value": "image_passthrough"
               }]
           }
-        }]
+        },
+        {
+          "functionName": "image_passthrough",
+          "label": "",
+          "functionLabel": "",
+          "id": "2",
+          "sourceFile": "\/home\/ecelrc\/students\/gwl459\/workspace\/augmented-reality-glasses\/fpga_software\/PL\/image_pass\/solution1\/csynth.tcl",
+          "sourceLine": "15",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "image_passthrough"
+              }]
+          }
+        }
+      ]
     }]}

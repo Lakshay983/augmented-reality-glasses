@@ -1,8 +1,21 @@
 set SynModuleInfo {
+  {SRCNAME Loop_VITIS_LOOP_43_1_proc1_Pipeline_VITIS_LOOP_49_2_VITIS_LOOP_50_3 MODELNAME Loop_VITIS_LOOP_43_1_proc1_Pipeline_VITIS_LOOP_49_2_VITIS_LOOP_50_3 RTLNAME image_passthrough_Loop_VITIS_LOOP_43_1_proc1_Pipeline_VITIS_LOOP_49_2_VITIS_LOOP_50_3
+    SUBMODULES {
+      {MODELNAME image_passthrough_flow_control_loop_pipe_sequential_init RTLNAME image_passthrough_flow_control_loop_pipe_sequential_init BINDTYPE interface TYPE internal_upc_flow_control INSTNAME image_passthrough_flow_control_loop_pipe_sequential_init_U}
+    }
+  }
+  {SRCNAME Loop_VITIS_LOOP_43_1_proc1_Pipeline_VITIS_LOOP_68_4_VITIS_LOOP_69_5 MODELNAME Loop_VITIS_LOOP_43_1_proc1_Pipeline_VITIS_LOOP_68_4_VITIS_LOOP_69_5 RTLNAME image_passthrough_Loop_VITIS_LOOP_43_1_proc1_Pipeline_VITIS_LOOP_68_4_VITIS_LOOP_69_5}
+  {SRCNAME Loop_VITIS_LOOP_43_1_proc1_Pipeline_VITIS_LOOP_76_6_VITIS_LOOP_77_7 MODELNAME Loop_VITIS_LOOP_43_1_proc1_Pipeline_VITIS_LOOP_76_6_VITIS_LOOP_77_7 RTLNAME image_passthrough_Loop_VITIS_LOOP_43_1_proc1_Pipeline_VITIS_LOOP_76_6_VITIS_LOOP_77_7}
+  {SRCNAME Loop_VITIS_LOOP_43_1_proc1 MODELNAME Loop_VITIS_LOOP_43_1_proc1 RTLNAME image_passthrough_Loop_VITIS_LOOP_43_1_proc1
+    SUBMODULES {
+      {MODELNAME image_passthrough_Loop_VITIS_LOOP_43_1_proc1_tile_pong_V_RAM_T2P_BRAM_1R1W RTLNAME image_passthrough_Loop_VITIS_LOOP_43_1_proc1_tile_pong_V_RAM_T2P_BRAM_1R1W BINDTYPE storage TYPE ram_t2p IMPL bram LATENCY 2 ALLOW_PRAGMA 1}
+      {MODELNAME image_passthrough_regslice_both RTLNAME image_passthrough_regslice_both BINDTYPE interface TYPE interface_regslice INSTNAME image_passthrough_regslice_both_U}
+    }
+  }
+  {SRCNAME Block_image_passthrough_for.cond.i.exit_proc MODELNAME Block_image_passthrough_for_cond_i_exit_proc RTLNAME image_passthrough_Block_image_passthrough_for_cond_i_exit_proc}
   {SRCNAME image_passthrough MODELNAME image_passthrough RTLNAME image_passthrough IS_TOP 1
     SUBMODULES {
       {MODELNAME image_passthrough_CTRL_s_axi RTLNAME image_passthrough_CTRL_s_axi BINDTYPE interface TYPE interface_s_axilite}
-      {MODELNAME image_passthrough_regslice_both RTLNAME image_passthrough_regslice_both BINDTYPE interface TYPE interface_regslice INSTNAME image_passthrough_regslice_both_U}
     }
   }
 }

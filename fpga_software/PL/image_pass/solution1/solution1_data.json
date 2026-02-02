@@ -18,8 +18,8 @@
     "in_stream": {
       "index": "0",
       "direction": "in",
-      "srcType": "stream<hls::axis<ap_uint<8>, 1, 1, 1>, 0>&",
-      "srcSize": "56",
+      "srcType": "stream<hls::axis<ap_uint<24>, 1, 1, 1>, 0>&",
+      "srcSize": "96",
       "hwRefs": [{
           "type": "interface",
           "interface": "in_stream",
@@ -31,8 +31,8 @@
     "out_stream": {
       "index": "1",
       "direction": "out",
-      "srcType": "stream<hls::axis<ap_uint<8>, 1, 1, 1>, 0>&",
-      "srcSize": "56",
+      "srcType": "stream<hls::axis<ap_uint<24>, 1, 1, 1>, 0>&",
+      "srcSize": "96",
       "hwRefs": [{
           "type": "interface",
           "interface": "out_stream",
@@ -41,60 +41,46 @@
           "direction": "out"
         }]
     },
-    "in_breath": {
+    "in_breath_gpio": {
       "index": "2",
       "direction": "inout",
       "srcType": "*",
       "srcSize": "8",
       "hwRefs": [
         {
-          "type": "register",
-          "interface": "s_axi_CTRL",
-          "name": "in_breath_i",
+          "type": "port",
+          "interface": "in_breath_gpio_i",
+          "name": "in_breath_gpio_i",
           "usage": "data",
           "direction": "in"
         },
         {
-          "type": "register",
-          "interface": "s_axi_CTRL",
-          "name": "in_breath_o",
+          "type": "port",
+          "interface": "in_breath_gpio_o",
+          "name": "in_breath_gpio_o",
           "usage": "data",
-          "direction": "out"
-        },
-        {
-          "type": "register",
-          "interface": "s_axi_CTRL",
-          "name": "in_breath_o_ctrl",
-          "usage": "control",
           "direction": "out"
         }
       ]
     },
-    "out_breath": {
+    "out_breath_gpio": {
       "index": "3",
       "direction": "inout",
       "srcType": "*",
       "srcSize": "8",
       "hwRefs": [
         {
-          "type": "register",
-          "interface": "s_axi_CTRL",
-          "name": "out_breath_i",
+          "type": "port",
+          "interface": "out_breath_gpio_i",
+          "name": "out_breath_gpio_i",
           "usage": "data",
           "direction": "in"
         },
         {
-          "type": "register",
-          "interface": "s_axi_CTRL",
-          "name": "out_breath_o",
+          "type": "port",
+          "interface": "out_breath_gpio_o",
+          "name": "out_breath_gpio_o",
           "usage": "data",
-          "direction": "out"
-        },
-        {
-          "type": "register",
-          "interface": "s_axi_CTRL",
-          "name": "out_breath_o_ctrl",
-          "usage": "control",
           "direction": "out"
         }
       ]
@@ -104,15 +90,16 @@
     "FlowTarget": "vivado",
     "ConfigTcl": [
       "config_export -description {Pass through test iamge IP}",
-      "config_export -display_name=Image_Passthrough",
+      "config_export -display_name=Image_Passthrough_V2",
+      "config_export -format=ip_catalog",
       "config_export -library=user",
-      "config_export -output=\/home\/ecelrc\/students\/gwl459\/workspace\/augmented-reality-glasses\/fpga_software\/IPs",
+      "config_export -output=\/home\/ecelrc\/students\/gwl459\/workspace\/augmented-reality-glasses\/fpga_software\/IPs\/Image_passthrough_2",
+      "config_export -rtl=verilog",
       "config_export -taxonomy {User IP}",
       "config_export -vendor=xilinx",
-      "config_export -version=1.0",
-      "config_export -format=ip_catalog",
-      "config_export -rtl=verilog"
+      "config_export -version=2.0"
     ],
+    "DirectiveTcl": ["set_directive_top image_passthrough -name image_passthrough"],
     "ProfileOption": "0",
     "ProfileType": "none",
     "KernelName": "image_passthrough"
@@ -122,45 +109,64 @@
     "ClockPeriod": "10",
     "Uncertainty": "2.7",
     "IsCombinational": "0",
-    "II": "undef",
-    "Latency": "undef"
+    "II": "921783",
+    "Latency": "921782"
   },
   "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"]},
   "Ipx": {
     "Vendor": "xilinx",
     "Library": "user",
     "Name": "image_passthrough",
-    "Version": "1.0",
-    "DisplayName": "Image_Passthrough",
-    "Revision": "2114452978",
+    "Version": "2.0",
+    "DisplayName": "Image_Passthrough_V2",
+    "Revision": "2114462527",
     "Description": "Pass through test iamge IP",
     "Taxonomy": "\/User IP",
     "AutoFamilySupport": "",
-    "ZipFile": "xilinx_user_image_passthrough_1_0.zip"
+    "ZipFile": "xilinx_user_image_passthrough_2_0.zip"
   },
   "Files": {
     "CSource": ["..\/..\/image_passthrough.cpp"],
     "Vhdl": [
+      "impl\/vhdl\/image_passthrough_Block_image_passthrough_for_cond_i_exit_proc.vhd",
       "impl\/vhdl\/image_passthrough_CTRL_s_axi.vhd",
+      "impl\/vhdl\/image_passthrough_flow_control_loop_pipe_sequential_init.vhd",
+      "impl\/vhdl\/image_passthrough_Loop_VITIS_LOOP_43_1_proc1.vhd",
+      "impl\/vhdl\/image_passthrough_Loop_VITIS_LOOP_43_1_proc1_Pipeline_VITIS_LOOP_49_2_VITIS_LOOP_50_3.vhd",
+      "impl\/vhdl\/image_passthrough_Loop_VITIS_LOOP_43_1_proc1_Pipeline_VITIS_LOOP_68_4_VITIS_LOOP_69_5.vhd",
+      "impl\/vhdl\/image_passthrough_Loop_VITIS_LOOP_43_1_proc1_Pipeline_VITIS_LOOP_76_6_VITIS_LOOP_77_7.vhd",
+      "impl\/vhdl\/image_passthrough_Loop_VITIS_LOOP_43_1_proc1_tile_pong_V_RAM_T2P_BRAM_1R1W.vhd",
       "impl\/vhdl\/image_passthrough_regslice_both.vhd",
       "impl\/vhdl\/image_passthrough.vhd"
     ],
     "Verilog": [
+      "impl\/verilog\/image_passthrough_Block_image_passthrough_for_cond_i_exit_proc.v",
       "impl\/verilog\/image_passthrough_CTRL_s_axi.v",
+      "impl\/verilog\/image_passthrough_flow_control_loop_pipe_sequential_init.v",
+      "impl\/verilog\/image_passthrough_hls_deadlock_detection_unit.v",
+      "impl\/verilog\/image_passthrough_hls_deadlock_detector.vh",
       "impl\/verilog\/image_passthrough_hls_deadlock_idx0_monitor.v",
+      "impl\/verilog\/image_passthrough_hls_deadlock_idx1_monitor.v",
       "impl\/verilog\/image_passthrough_hls_deadlock_kernel_monitor_top.vh",
+      "impl\/verilog\/image_passthrough_hls_deadlock_report_unit.vh",
+      "impl\/verilog\/image_passthrough_Loop_VITIS_LOOP_43_1_proc1.v",
+      "impl\/verilog\/image_passthrough_Loop_VITIS_LOOP_43_1_proc1_Pipeline_VITIS_LOOP_49_2_VITIS_LOOP_50_3.v",
+      "impl\/verilog\/image_passthrough_Loop_VITIS_LOOP_43_1_proc1_Pipeline_VITIS_LOOP_68_4_VITIS_LOOP_69_5.v",
+      "impl\/verilog\/image_passthrough_Loop_VITIS_LOOP_43_1_proc1_Pipeline_VITIS_LOOP_76_6_VITIS_LOOP_77_7.v",
+      "impl\/verilog\/image_passthrough_Loop_VITIS_LOOP_43_1_proc1_tile_pong_V_RAM_T2P_BRAM_1R1W.dat",
+      "impl\/verilog\/image_passthrough_Loop_VITIS_LOOP_43_1_proc1_tile_pong_V_RAM_T2P_BRAM_1R1W.v",
       "impl\/verilog\/image_passthrough_regslice_both.v",
       "impl\/verilog\/image_passthrough.v"
     ],
     "SwDriver": [
-      "impl\/misc\/drivers\/image_passthrough_v1_0\/data\/image_passthrough.mdd",
-      "impl\/misc\/drivers\/image_passthrough_v1_0\/data\/image_passthrough.tcl",
-      "impl\/misc\/drivers\/image_passthrough_v1_0\/src\/Makefile",
-      "impl\/misc\/drivers\/image_passthrough_v1_0\/src\/ximage_passthrough.c",
-      "impl\/misc\/drivers\/image_passthrough_v1_0\/src\/ximage_passthrough.h",
-      "impl\/misc\/drivers\/image_passthrough_v1_0\/src\/ximage_passthrough_hw.h",
-      "impl\/misc\/drivers\/image_passthrough_v1_0\/src\/ximage_passthrough_linux.c",
-      "impl\/misc\/drivers\/image_passthrough_v1_0\/src\/ximage_passthrough_sinit.c"
+      "impl\/misc\/drivers\/image_passthrough_v2_0\/data\/image_passthrough.mdd",
+      "impl\/misc\/drivers\/image_passthrough_v2_0\/data\/image_passthrough.tcl",
+      "impl\/misc\/drivers\/image_passthrough_v2_0\/src\/Makefile",
+      "impl\/misc\/drivers\/image_passthrough_v2_0\/src\/ximage_passthrough.c",
+      "impl\/misc\/drivers\/image_passthrough_v2_0\/src\/ximage_passthrough.h",
+      "impl\/misc\/drivers\/image_passthrough_v2_0\/src\/ximage_passthrough_hw.h",
+      "impl\/misc\/drivers\/image_passthrough_v2_0\/src\/ximage_passthrough_linux.c",
+      "impl\/misc\/drivers\/image_passthrough_v2_0\/src\/ximage_passthrough_sinit.c"
     ],
     "IpMisc": ["impl\/misc\/logo.png"],
     "CsynthXml": "syn\/report\/csynth.xml",
@@ -181,7 +187,7 @@
       "busTypeName": "aximm",
       "mode": "slave",
       "dataWidth": "32",
-      "addrWidth": "6",
+      "addrWidth": "4",
       "portPrefix": "s_axi_CTRL_",
       "paramPrefix": "C_S_AXI_CTRL_",
       "ports": [
@@ -358,160 +364,6 @@
               "description": "Reserved.  0s on read."
             }
           ]
-        },
-        {
-          "offset": "0x10",
-          "name": "in_breath_i",
-          "access": "W",
-          "description": "Data signal of in_breath_i",
-          "range": "32",
-          "fields": [
-            {
-              "offset": "0",
-              "width": "1",
-              "name": "in_breath_i",
-              "access": "W",
-              "description": "Bit 0 to 0 of in_breath_i"
-            },
-            {
-              "offset": "1",
-              "width": "31",
-              "name": "RESERVED",
-              "access": "R",
-              "description": "Reserved.  0s on read."
-            }
-          ]
-        },
-        {
-          "offset": "0x18",
-          "name": "in_breath_o",
-          "access": "R",
-          "description": "Data signal of in_breath_o",
-          "range": "32",
-          "fields": [
-            {
-              "offset": "0",
-              "width": "1",
-              "name": "in_breath_o",
-              "access": "R",
-              "description": "Bit 0 to 0 of in_breath_o"
-            },
-            {
-              "offset": "1",
-              "width": "31",
-              "name": "RESERVED",
-              "access": "R",
-              "description": "Reserved.  0s on read."
-            }
-          ]
-        },
-        {
-          "offset": "0x1c",
-          "name": "in_breath_o_ctrl",
-          "access": "R",
-          "description": "Control signal of in_breath_o",
-          "range": "32",
-          "fields": [
-            {
-              "offset": "0",
-              "width": "1",
-              "name": "in_breath_o_ap_vld",
-              "access": "R",
-              "description": "Control signal in_breath_o_ap_vld"
-            },
-            {
-              "offset": "1",
-              "width": "31",
-              "name": "RESERVED",
-              "access": "R",
-              "description": "Reserved.  0s on read."
-            }
-          ]
-        },
-        {
-          "offset": "0x20",
-          "name": "out_breath_i",
-          "access": "W",
-          "description": "Data signal of out_breath_i",
-          "range": "32",
-          "fields": [
-            {
-              "offset": "0",
-              "width": "1",
-              "name": "out_breath_i",
-              "access": "W",
-              "description": "Bit 0 to 0 of out_breath_i"
-            },
-            {
-              "offset": "1",
-              "width": "31",
-              "name": "RESERVED",
-              "access": "R",
-              "description": "Reserved.  0s on read."
-            }
-          ]
-        },
-        {
-          "offset": "0x28",
-          "name": "out_breath_o",
-          "access": "R",
-          "description": "Data signal of out_breath_o",
-          "range": "32",
-          "fields": [
-            {
-              "offset": "0",
-              "width": "1",
-              "name": "out_breath_o",
-              "access": "R",
-              "description": "Bit 0 to 0 of out_breath_o"
-            },
-            {
-              "offset": "1",
-              "width": "31",
-              "name": "RESERVED",
-              "access": "R",
-              "description": "Reserved.  0s on read."
-            }
-          ]
-        },
-        {
-          "offset": "0x2c",
-          "name": "out_breath_o_ctrl",
-          "access": "R",
-          "description": "Control signal of out_breath_o",
-          "range": "32",
-          "fields": [
-            {
-              "offset": "0",
-              "width": "1",
-              "name": "out_breath_o_ap_vld",
-              "access": "R",
-              "description": "Control signal out_breath_o_ap_vld"
-            },
-            {
-              "offset": "1",
-              "width": "31",
-              "name": "RESERVED",
-              "access": "R",
-              "description": "Reserved.  0s on read."
-            }
-          ]
-        }
-      ],
-      "constraints": [
-        {
-          "constraint_type": "pragma interface",
-          "mode": "s_axilite",
-          "register_option": "0",
-          "offset": "16",
-          "argName": "in_breath"
-        },
-        {
-          "constraint_type": "pragma interface",
-          "mode": "s_axilite",
-          "register_option": "0",
-          "offset": "32",
-          "argName": "out_breath"
         }
       ]
     },
@@ -547,7 +399,7 @@
       "type": "axi4stream",
       "busTypeName": "axis",
       "mode": "slave",
-      "dataWidth": "8",
+      "dataWidth": "24",
       "portPrefix": "in_stream_",
       "ports": [
         "in_stream_TDATA",
@@ -572,7 +424,7 @@
       "type": "axi4stream",
       "busTypeName": "axis",
       "mode": "master",
-      "dataWidth": "8",
+      "dataWidth": "24",
       "portPrefix": "out_stream_",
       "ports": [
         "out_stream_TDATA",
@@ -592,6 +444,66 @@
           "register_mode": "both",
           "argName": "out_stream"
         }]
+    },
+    "in_breath_gpio_i": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_none",
+      "mode": "slave",
+      "dataWidth": "1",
+      "portMap": {"in_breath_gpio_i": "DATA"},
+      "ports": ["in_breath_gpio_i"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_none",
+          "register_option": "0",
+          "argName": "in_breath_gpio"
+        }]
+    },
+    "in_breath_gpio_o": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_none",
+      "mode": "master",
+      "dataWidth": "1",
+      "portMap": {"in_breath_gpio_o": "DATA"},
+      "ports": ["in_breath_gpio_o"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_none",
+          "register_option": "0",
+          "argName": "in_breath_gpio"
+        }]
+    },
+    "out_breath_gpio_i": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_none",
+      "mode": "slave",
+      "dataWidth": "1",
+      "portMap": {"out_breath_gpio_i": "DATA"},
+      "ports": ["out_breath_gpio_i"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_none",
+          "register_option": "0",
+          "argName": "out_breath_gpio"
+        }]
+    },
+    "out_breath_gpio_o": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_none",
+      "mode": "master",
+      "dataWidth": "1",
+      "portMap": {"out_breath_gpio_o": "DATA"},
+      "ports": ["out_breath_gpio_o"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_none",
+          "register_option": "0",
+          "argName": "out_breath_gpio"
+        }]
     }
   },
   "RtlPorts": {
@@ -605,7 +517,7 @@
     },
     "s_axi_CTRL_AWADDR": {
       "dir": "in",
-      "width": "6"
+      "width": "4"
     },
     "s_axi_CTRL_WVALID": {
       "dir": "in",
@@ -633,7 +545,7 @@
     },
     "s_axi_CTRL_ARADDR": {
       "dir": "in",
-      "width": "6"
+      "width": "4"
     },
     "s_axi_CTRL_RVALID": {
       "dir": "out",
@@ -677,30 +589,15 @@
     },
     "in_stream_TDATA": {
       "dir": "in",
-      "width": "8"
-    },
-    "in_stream_TVALID": {
-      "dir": "in",
-      "width": "1"
-    },
-    "in_stream_TREADY": {
-      "dir": "out",
-      "width": "1"
-    },
-    "in_stream_TDEST": {
-      "dir": "in",
-      "width": "1",
-      "isVector": "true"
+      "width": "24"
     },
     "in_stream_TKEEP": {
       "dir": "in",
-      "width": "1",
-      "isVector": "true"
+      "width": "3"
     },
     "in_stream_TSTRB": {
       "dir": "in",
-      "width": "1",
-      "isVector": "true"
+      "width": "3"
     },
     "in_stream_TUSER": {
       "dir": "in",
@@ -717,32 +614,30 @@
       "width": "1",
       "isVector": "true"
     },
-    "out_stream_TDATA": {
-      "dir": "out",
-      "width": "8"
+    "in_stream_TDEST": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
     },
-    "out_stream_TVALID": {
-      "dir": "out",
-      "width": "1"
-    },
-    "out_stream_TREADY": {
+    "in_stream_TVALID": {
       "dir": "in",
       "width": "1"
     },
-    "out_stream_TDEST": {
+    "in_stream_TREADY": {
       "dir": "out",
-      "width": "1",
-      "isVector": "true"
+      "width": "1"
+    },
+    "out_stream_TDATA": {
+      "dir": "out",
+      "width": "24"
     },
     "out_stream_TKEEP": {
       "dir": "out",
-      "width": "1",
-      "isVector": "true"
+      "width": "3"
     },
     "out_stream_TSTRB": {
       "dir": "out",
-      "width": "1",
-      "isVector": "true"
+      "width": "3"
     },
     "out_stream_TUSER": {
       "dir": "out",
@@ -758,48 +653,326 @@
       "dir": "out",
       "width": "1",
       "isVector": "true"
+    },
+    "out_stream_TDEST": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "out_stream_TVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "out_stream_TREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "in_breath_gpio_i": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "in_breath_gpio_o": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "out_breath_gpio_i": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "out_breath_gpio_o": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
     }
   },
   "ModuleInfo": {
-    "Hierarchy": {"ModuleName": "image_passthrough"},
-    "Info": {"image_passthrough": {
+    "Hierarchy": {
+      "ModuleName": "image_passthrough",
+      "Instances": [
+        {
+          "ModuleName": "Loop_VITIS_LOOP_43_1_proc1",
+          "InstanceName": "Loop_VITIS_LOOP_43_1_proc1_U0",
+          "Instances": [
+            {
+              "ModuleName": "Loop_VITIS_LOOP_43_1_proc1_Pipeline_VITIS_LOOP_49_2_VITIS_LOOP_50_3",
+              "InstanceName": "grp_Loop_VITIS_LOOP_43_1_proc1_Pipeline_VITIS_LOOP_49_2_VITIS_LOOP_50_3_fu_136"
+            },
+            {
+              "ModuleName": "Loop_VITIS_LOOP_43_1_proc1_Pipeline_VITIS_LOOP_68_4_VITIS_LOOP_69_5",
+              "InstanceName": "grp_Loop_VITIS_LOOP_43_1_proc1_Pipeline_VITIS_LOOP_68_4_VITIS_LOOP_69_5_fu_165"
+            },
+            {
+              "ModuleName": "Loop_VITIS_LOOP_43_1_proc1_Pipeline_VITIS_LOOP_76_6_VITIS_LOOP_77_7",
+              "InstanceName": "grp_Loop_VITIS_LOOP_43_1_proc1_Pipeline_VITIS_LOOP_76_6_VITIS_LOOP_77_7_fu_175"
+            }
+          ]
+        },
+        {
+          "ModuleName": "Block_image_passthrough_for_cond_i_exit_proc",
+          "InstanceName": "Block_image_passthrough_for_cond_i_exit_proc_U0"
+        }
+      ]
+    },
+    "Info": {
+      "Loop_VITIS_LOOP_43_1_proc1_Pipeline_VITIS_LOOP_49_2_VITIS_LOOP_50_3": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "Loop_VITIS_LOOP_43_1_proc1_Pipeline_VITIS_LOOP_68_4_VITIS_LOOP_69_5": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "Loop_VITIS_LOOP_43_1_proc1_Pipeline_VITIS_LOOP_76_6_VITIS_LOOP_77_7": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "Loop_VITIS_LOOP_43_1_proc1": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "0",
         "isPipelined": "0",
         "isCombinational": "0",
         "isOneStateSeq": "0"
-      }},
-    "Metrics": {"image_passthrough": {
+      },
+      "Block_image_passthrough_for_cond_i_exit_proc": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "1"
+      },
+      "image_passthrough": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      }
+    },
+    "Metrics": {
+      "Loop_VITIS_LOOP_43_1_proc1_Pipeline_VITIS_LOOP_49_2_VITIS_LOOP_50_3": {
         "Latency": {
-          "LatencyBest": "",
-          "LatencyAvg": "",
-          "LatencyWorst": "",
-          "PipelineII": "",
+          "LatencyBest": "20482",
+          "LatencyAvg": "20482",
+          "LatencyWorst": "20482",
+          "PipelineII": "20482",
           "PipelineDepth": "",
           "PipelineType": "no"
         },
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "2.70",
-          "Estimate": "2.331"
+          "Estimate": "3.559"
         },
         "Loops": [{
-            "Name": "VITIS_LOOP_21_1",
-            "TripCount": "",
-            "Latency": "",
+            "Name": "VITIS_LOOP_49_2_VITIS_LOOP_50_3",
+            "TripCount": "20480",
+            "Latency": "20480",
+            "PipelineII": "1",
+            "PipelineDepth": "1"
+          }],
+        "Area": {
+          "FF": "34",
+          "AVAIL_FF": "141120",
+          "UTIL_FF": "~0",
+          "LUT": "238",
+          "AVAIL_LUT": "70560",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "432",
+          "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "360",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "0",
+          "UTIL_URAM": "0"
+        }
+      },
+      "Loop_VITIS_LOOP_43_1_proc1_Pipeline_VITIS_LOOP_68_4_VITIS_LOOP_69_5": {
+        "Latency": {
+          "LatencyBest": "20482",
+          "LatencyAvg": "20482",
+          "LatencyWorst": "20482",
+          "PipelineII": "20482",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "3.559"
+        },
+        "Loops": [{
+            "Name": "VITIS_LOOP_68_4_VITIS_LOOP_69_5",
+            "TripCount": "20480",
+            "Latency": "20480",
             "PipelineII": "1",
             "PipelineDepth": "2"
           }],
         "Area": {
+          "FF": "64",
+          "AVAIL_FF": "141120",
+          "UTIL_FF": "~0",
+          "LUT": "196",
+          "AVAIL_LUT": "70560",
+          "UTIL_LUT": "~0",
           "BRAM_18K": "0",
           "AVAIL_BRAM": "432",
           "UTIL_BRAM": "0",
-          "FF": "70",
+          "DSP": "0",
+          "AVAIL_DSP": "360",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "0",
+          "UTIL_URAM": "0"
+        }
+      },
+      "Loop_VITIS_LOOP_43_1_proc1_Pipeline_VITIS_LOOP_76_6_VITIS_LOOP_77_7": {
+        "Latency": {
+          "LatencyBest": "20482",
+          "LatencyAvg": "20482",
+          "LatencyWorst": "20482",
+          "PipelineII": "20482",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "3.559"
+        },
+        "Loops": [{
+            "Name": "VITIS_LOOP_76_6_VITIS_LOOP_77_7",
+            "TripCount": "20480",
+            "Latency": "20480",
+            "PipelineII": "1",
+            "PipelineDepth": "2"
+          }],
+        "Area": {
+          "FF": "37",
           "AVAIL_FF": "141120",
           "UTIL_FF": "~0",
-          "LUT": "116",
+          "LUT": "280",
           "AVAIL_LUT": "70560",
           "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "432",
+          "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "360",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "0",
+          "UTIL_URAM": "0"
+        }
+      },
+      "Loop_VITIS_LOOP_43_1_proc1": {
+        "Latency": {
+          "LatencyBest": "921782",
+          "LatencyAvg": "921782",
+          "LatencyWorst": "921782",
+          "PipelineII": "921782",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "3.559"
+        },
+        "Loops": [{
+            "Name": "VITIS_LOOP_43_1",
+            "TripCount": "15",
+            "Latency": "921780",
+            "PipelineII": "",
+            "PipelineDepth": "61452"
+          }],
+        "Area": {
+          "BRAM_18K": "60",
+          "AVAIL_BRAM": "432",
+          "UTIL_BRAM": "13",
+          "FF": "160",
+          "AVAIL_FF": "141120",
+          "UTIL_FF": "~0",
+          "LUT": "1004",
+          "AVAIL_LUT": "70560",
+          "UTIL_LUT": "1",
+          "DSP": "0",
+          "AVAIL_DSP": "360",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "0",
+          "UTIL_URAM": "0"
+        }
+      },
+      "Block_image_passthrough_for_cond_i_exit_proc": {
+        "Latency": {
+          "LatencyBest": "0",
+          "LatencyAvg": "0",
+          "LatencyWorst": "0",
+          "PipelineII": "0",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "0.331"
+        },
+        "Area": {
+          "FF": "3",
+          "AVAIL_FF": "141120",
+          "UTIL_FF": "~0",
+          "LUT": "22",
+          "AVAIL_LUT": "70560",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "432",
+          "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "360",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "0",
+          "UTIL_URAM": "0"
+        }
+      },
+      "image_passthrough": {
+        "Latency": {
+          "LatencyBest": "921782",
+          "LatencyAvg": "921782",
+          "LatencyWorst": "921782",
+          "PipelineII": "921783",
+          "PipelineDepth": "",
+          "PipelineType": "dataflow"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "3.559"
+        },
+        "Area": {
+          "BRAM_18K": "60",
+          "AVAIL_BRAM": "432",
+          "UTIL_BRAM": "13",
+          "FF": "201",
+          "AVAIL_FF": "141120",
+          "UTIL_FF": "~0",
+          "LUT": "1098",
+          "AVAIL_LUT": "70560",
+          "UTIL_LUT": "1",
           "URAM": "0",
           "AVAIL_URAM": "0",
           "UTIL_URAM": "0",
@@ -807,12 +980,13 @@
           "AVAIL_DSP": "360",
           "UTIL_DSP": "0"
         }
-      }}
+      }
+    }
   },
   "GenerateBdFiles": "0",
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2026-01-26 12:58:29 CST",
+    "Time": "2026-02-02 04:07:57 CST",
     "ToolName": "vitis_hls",
     "ToolVersion": "2022.2"
   }

@@ -11,29 +11,9 @@ use IEEE.numeric_std.all;
 
 entity image_passthrough is
 generic (
-    C_S_AXI_CTRL_ADDR_WIDTH : INTEGER := 6;
+    C_S_AXI_CTRL_ADDR_WIDTH : INTEGER := 4;
     C_S_AXI_CTRL_DATA_WIDTH : INTEGER := 32 );
 port (
-    ap_clk : IN STD_LOGIC;
-    ap_rst_n : IN STD_LOGIC;
-    in_stream_TDATA : IN STD_LOGIC_VECTOR (7 downto 0);
-    in_stream_TVALID : IN STD_LOGIC;
-    in_stream_TREADY : OUT STD_LOGIC;
-    in_stream_TKEEP : IN STD_LOGIC_VECTOR (0 downto 0);
-    in_stream_TSTRB : IN STD_LOGIC_VECTOR (0 downto 0);
-    in_stream_TUSER : IN STD_LOGIC_VECTOR (0 downto 0);
-    in_stream_TLAST : IN STD_LOGIC_VECTOR (0 downto 0);
-    in_stream_TID : IN STD_LOGIC_VECTOR (0 downto 0);
-    in_stream_TDEST : IN STD_LOGIC_VECTOR (0 downto 0);
-    out_stream_TDATA : OUT STD_LOGIC_VECTOR (7 downto 0);
-    out_stream_TVALID : OUT STD_LOGIC;
-    out_stream_TREADY : IN STD_LOGIC;
-    out_stream_TKEEP : OUT STD_LOGIC_VECTOR (0 downto 0);
-    out_stream_TSTRB : OUT STD_LOGIC_VECTOR (0 downto 0);
-    out_stream_TUSER : OUT STD_LOGIC_VECTOR (0 downto 0);
-    out_stream_TLAST : OUT STD_LOGIC_VECTOR (0 downto 0);
-    out_stream_TID : OUT STD_LOGIC_VECTOR (0 downto 0);
-    out_stream_TDEST : OUT STD_LOGIC_VECTOR (0 downto 0);
     s_axi_CTRL_AWVALID : IN STD_LOGIC;
     s_axi_CTRL_AWREADY : OUT STD_LOGIC;
     s_axi_CTRL_AWADDR : IN STD_LOGIC_VECTOR (C_S_AXI_CTRL_ADDR_WIDTH-1 downto 0);
@@ -51,118 +31,126 @@ port (
     s_axi_CTRL_BVALID : OUT STD_LOGIC;
     s_axi_CTRL_BREADY : IN STD_LOGIC;
     s_axi_CTRL_BRESP : OUT STD_LOGIC_VECTOR (1 downto 0);
-    interrupt : OUT STD_LOGIC );
+    ap_clk : IN STD_LOGIC;
+    ap_rst_n : IN STD_LOGIC;
+    interrupt : OUT STD_LOGIC;
+    in_stream_TDATA : IN STD_LOGIC_VECTOR (23 downto 0);
+    in_stream_TKEEP : IN STD_LOGIC_VECTOR (2 downto 0);
+    in_stream_TSTRB : IN STD_LOGIC_VECTOR (2 downto 0);
+    in_stream_TUSER : IN STD_LOGIC_VECTOR (0 downto 0);
+    in_stream_TLAST : IN STD_LOGIC_VECTOR (0 downto 0);
+    in_stream_TID : IN STD_LOGIC_VECTOR (0 downto 0);
+    in_stream_TDEST : IN STD_LOGIC_VECTOR (0 downto 0);
+    out_stream_TDATA : OUT STD_LOGIC_VECTOR (23 downto 0);
+    out_stream_TKEEP : OUT STD_LOGIC_VECTOR (2 downto 0);
+    out_stream_TSTRB : OUT STD_LOGIC_VECTOR (2 downto 0);
+    out_stream_TUSER : OUT STD_LOGIC_VECTOR (0 downto 0);
+    out_stream_TLAST : OUT STD_LOGIC_VECTOR (0 downto 0);
+    out_stream_TID : OUT STD_LOGIC_VECTOR (0 downto 0);
+    out_stream_TDEST : OUT STD_LOGIC_VECTOR (0 downto 0);
+    in_breath_gpio_i : IN STD_LOGIC_VECTOR (0 downto 0);
+    in_breath_gpio_o : OUT STD_LOGIC_VECTOR (0 downto 0);
+    out_breath_gpio_i : IN STD_LOGIC_VECTOR (0 downto 0);
+    out_breath_gpio_o : OUT STD_LOGIC_VECTOR (0 downto 0);
+    out_stream_TVALID : OUT STD_LOGIC;
+    out_stream_TREADY : IN STD_LOGIC;
+    in_stream_TVALID : IN STD_LOGIC;
+    in_stream_TREADY : OUT STD_LOGIC );
 end;
 
 
 architecture behav of image_passthrough is 
     attribute CORE_GENERATION_INFO : STRING;
     attribute CORE_GENERATION_INFO of behav : architecture is
-    "image_passthrough_image_passthrough,hls_ip_2022_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xczu3eg-sbva484-1-e,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=2.331000,HLS_SYN_LAT=-1,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=70,HLS_SYN_LUT=114,HLS_VERSION=2022_2}";
+    "image_passthrough_image_passthrough,hls_ip_2022_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xczu3eg-sbva484-1-e,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=3.558625,HLS_SYN_LAT=921782,HLS_SYN_TPT=921783,HLS_SYN_MEM=60,HLS_SYN_DSP=0,HLS_SYN_FF=201,HLS_SYN_LUT=1098,HLS_VERSION=2022_2}";
+    constant C_S_AXI_DATA_WIDTH : INTEGER range 63 downto 0 := 20;
     constant ap_const_logic_1 : STD_LOGIC := '1';
     constant ap_const_logic_0 : STD_LOGIC := '0';
-    constant ap_ST_fsm_state1 : STD_LOGIC_VECTOR (2 downto 0) := "001";
-    constant ap_ST_fsm_pp0_stage0 : STD_LOGIC_VECTOR (2 downto 0) := "010";
-    constant ap_ST_fsm_state4 : STD_LOGIC_VECTOR (2 downto 0) := "100";
-    constant ap_const_lv32_0 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000000";
     constant ap_const_boolean_1 : BOOLEAN := true;
-    constant ap_const_lv32_1 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000001";
-    constant ap_const_boolean_0 : BOOLEAN := false;
-    constant ap_const_lv1_1 : STD_LOGIC_VECTOR (0 downto 0) := "1";
-    constant C_S_AXI_DATA_WIDTH : INTEGER range 63 downto 0 := 20;
-    constant ap_const_lv32_2 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000010";
 
     signal ap_rst_n_inv : STD_LOGIC;
     signal ap_start : STD_LOGIC;
+    signal ap_ready : STD_LOGIC;
     signal ap_done : STD_LOGIC;
     signal ap_idle : STD_LOGIC;
-    signal ap_CS_fsm : STD_LOGIC_VECTOR (2 downto 0) := "001";
-    attribute fsm_encoding : string;
-    attribute fsm_encoding of ap_CS_fsm : signal is "none";
-    signal ap_CS_fsm_state1 : STD_LOGIC;
-    attribute fsm_encoding of ap_CS_fsm_state1 : signal is "none";
-    signal ap_ready : STD_LOGIC;
-    signal in_breath_i : STD_LOGIC_VECTOR (0 downto 0);
-    signal in_breath_o : STD_LOGIC_VECTOR (0 downto 0);
-    signal in_breath_o_ap_vld : STD_LOGIC;
-    signal out_breath_i : STD_LOGIC_VECTOR (0 downto 0);
-    signal out_breath_o : STD_LOGIC_VECTOR (0 downto 0);
-    signal out_breath_o_ap_vld : STD_LOGIC;
-    signal in_stream_TDATA_blk_n : STD_LOGIC;
-    signal ap_CS_fsm_pp0_stage0 : STD_LOGIC;
-    attribute fsm_encoding of ap_CS_fsm_pp0_stage0 : signal is "none";
-    signal ap_enable_reg_pp0_iter0 : STD_LOGIC := '0';
-    signal ap_block_pp0_stage0 : BOOLEAN;
-    signal out_stream_TDATA_blk_n : STD_LOGIC;
-    signal ap_enable_reg_pp0_iter1 : STD_LOGIC := '0';
-    signal ap_block_state2_pp0_stage0_iter0 : BOOLEAN;
-    signal ap_block_state3_pp0_stage0_iter1 : BOOLEAN;
-    signal ap_block_pp0_stage0_11001 : BOOLEAN;
-    signal tmp_user_V_reg_217 : STD_LOGIC_VECTOR (0 downto 0);
-    signal tmp_last_V_fu_173_p1 : STD_LOGIC_VECTOR (0 downto 0);
-    signal ap_block_pp0_stage0_subdone : BOOLEAN;
-    signal ap_condition_pp0_flush_enable : STD_LOGIC;
-    signal ap_block_pp0_stage0_01001 : BOOLEAN;
-    signal xor_ln186_fu_188_p2 : STD_LOGIC_VECTOR (0 downto 0);
-    signal ap_CS_fsm_state4 : STD_LOGIC;
-    attribute fsm_encoding of ap_CS_fsm_state4 : signal is "none";
-    signal regslice_both_out_stream_V_data_V_U_apdone_blk : STD_LOGIC;
-    signal ap_NS_fsm : STD_LOGIC_VECTOR (2 downto 0);
-    signal ap_ST_fsm_state1_blk : STD_LOGIC;
-    signal ap_ST_fsm_state4_blk : STD_LOGIC;
-    signal ap_idle_pp0 : STD_LOGIC;
-    signal ap_enable_pp0 : STD_LOGIC;
-    signal regslice_both_in_stream_V_data_V_U_apdone_blk : STD_LOGIC;
-    signal in_stream_TDATA_int_regslice : STD_LOGIC_VECTOR (7 downto 0);
-    signal in_stream_TVALID_int_regslice : STD_LOGIC;
-    signal in_stream_TREADY_int_regslice : STD_LOGIC;
-    signal regslice_both_in_stream_V_data_V_U_ack_in : STD_LOGIC;
-    signal regslice_both_in_stream_V_keep_V_U_apdone_blk : STD_LOGIC;
-    signal in_stream_TKEEP_int_regslice : STD_LOGIC_VECTOR (0 downto 0);
-    signal regslice_both_in_stream_V_keep_V_U_vld_out : STD_LOGIC;
-    signal regslice_both_in_stream_V_keep_V_U_ack_in : STD_LOGIC;
-    signal regslice_both_in_stream_V_strb_V_U_apdone_blk : STD_LOGIC;
-    signal in_stream_TSTRB_int_regslice : STD_LOGIC_VECTOR (0 downto 0);
-    signal regslice_both_in_stream_V_strb_V_U_vld_out : STD_LOGIC;
-    signal regslice_both_in_stream_V_strb_V_U_ack_in : STD_LOGIC;
-    signal regslice_both_in_stream_V_user_V_U_apdone_blk : STD_LOGIC;
-    signal in_stream_TUSER_int_regslice : STD_LOGIC_VECTOR (0 downto 0);
-    signal regslice_both_in_stream_V_user_V_U_vld_out : STD_LOGIC;
-    signal regslice_both_in_stream_V_user_V_U_ack_in : STD_LOGIC;
-    signal regslice_both_in_stream_V_last_V_U_apdone_blk : STD_LOGIC;
-    signal in_stream_TLAST_int_regslice : STD_LOGIC_VECTOR (0 downto 0);
-    signal regslice_both_in_stream_V_last_V_U_vld_out : STD_LOGIC;
-    signal regslice_both_in_stream_V_last_V_U_ack_in : STD_LOGIC;
-    signal regslice_both_in_stream_V_id_V_U_apdone_blk : STD_LOGIC;
-    signal in_stream_TID_int_regslice : STD_LOGIC_VECTOR (0 downto 0);
-    signal regslice_both_in_stream_V_id_V_U_vld_out : STD_LOGIC;
-    signal regslice_both_in_stream_V_id_V_U_ack_in : STD_LOGIC;
-    signal regslice_both_in_stream_V_dest_V_U_apdone_blk : STD_LOGIC;
-    signal in_stream_TDEST_int_regslice : STD_LOGIC_VECTOR (0 downto 0);
-    signal regslice_both_in_stream_V_dest_V_U_vld_out : STD_LOGIC;
-    signal regslice_both_in_stream_V_dest_V_U_ack_in : STD_LOGIC;
-    signal out_stream_TVALID_int_regslice : STD_LOGIC;
-    signal out_stream_TREADY_int_regslice : STD_LOGIC;
-    signal regslice_both_out_stream_V_data_V_U_vld_out : STD_LOGIC;
-    signal regslice_both_out_stream_V_keep_V_U_apdone_blk : STD_LOGIC;
-    signal regslice_both_out_stream_V_keep_V_U_ack_in_dummy : STD_LOGIC;
-    signal regslice_both_out_stream_V_keep_V_U_vld_out : STD_LOGIC;
-    signal regslice_both_out_stream_V_strb_V_U_apdone_blk : STD_LOGIC;
-    signal regslice_both_out_stream_V_strb_V_U_ack_in_dummy : STD_LOGIC;
-    signal regslice_both_out_stream_V_strb_V_U_vld_out : STD_LOGIC;
-    signal regslice_both_out_stream_V_user_V_U_apdone_blk : STD_LOGIC;
-    signal regslice_both_out_stream_V_user_V_U_ack_in_dummy : STD_LOGIC;
-    signal regslice_both_out_stream_V_user_V_U_vld_out : STD_LOGIC;
-    signal regslice_both_out_stream_V_last_V_U_apdone_blk : STD_LOGIC;
-    signal regslice_both_out_stream_V_last_V_U_ack_in_dummy : STD_LOGIC;
-    signal regslice_both_out_stream_V_last_V_U_vld_out : STD_LOGIC;
-    signal regslice_both_out_stream_V_id_V_U_apdone_blk : STD_LOGIC;
-    signal regslice_both_out_stream_V_id_V_U_ack_in_dummy : STD_LOGIC;
-    signal regslice_both_out_stream_V_id_V_U_vld_out : STD_LOGIC;
-    signal regslice_both_out_stream_V_dest_V_U_apdone_blk : STD_LOGIC;
-    signal regslice_both_out_stream_V_dest_V_U_ack_in_dummy : STD_LOGIC;
-    signal regslice_both_out_stream_V_dest_V_U_vld_out : STD_LOGIC;
+    signal Loop_VITIS_LOOP_43_1_proc1_U0_ap_start : STD_LOGIC;
+    signal Loop_VITIS_LOOP_43_1_proc1_U0_ap_done : STD_LOGIC;
+    signal Loop_VITIS_LOOP_43_1_proc1_U0_ap_continue : STD_LOGIC;
+    signal Loop_VITIS_LOOP_43_1_proc1_U0_ap_idle : STD_LOGIC;
+    signal Loop_VITIS_LOOP_43_1_proc1_U0_ap_ready : STD_LOGIC;
+    signal Loop_VITIS_LOOP_43_1_proc1_U0_out_stream_TDATA : STD_LOGIC_VECTOR (23 downto 0);
+    signal Loop_VITIS_LOOP_43_1_proc1_U0_out_stream_TVALID : STD_LOGIC;
+    signal Loop_VITIS_LOOP_43_1_proc1_U0_out_stream_TKEEP : STD_LOGIC_VECTOR (2 downto 0);
+    signal Loop_VITIS_LOOP_43_1_proc1_U0_out_stream_TSTRB : STD_LOGIC_VECTOR (2 downto 0);
+    signal Loop_VITIS_LOOP_43_1_proc1_U0_out_stream_TUSER : STD_LOGIC_VECTOR (0 downto 0);
+    signal Loop_VITIS_LOOP_43_1_proc1_U0_out_stream_TLAST : STD_LOGIC_VECTOR (0 downto 0);
+    signal Loop_VITIS_LOOP_43_1_proc1_U0_out_stream_TID : STD_LOGIC_VECTOR (0 downto 0);
+    signal Loop_VITIS_LOOP_43_1_proc1_U0_out_stream_TDEST : STD_LOGIC_VECTOR (0 downto 0);
+    signal Loop_VITIS_LOOP_43_1_proc1_U0_in_breath_gpio_o : STD_LOGIC_VECTOR (0 downto 0);
+    signal Loop_VITIS_LOOP_43_1_proc1_U0_in_breath_gpio_o_ap_vld : STD_LOGIC;
+    signal Loop_VITIS_LOOP_43_1_proc1_U0_in_stream_TREADY : STD_LOGIC;
+    signal Block_image_passthrough_for_cond_i_exit_proc_U0_ap_start : STD_LOGIC;
+    signal Block_image_passthrough_for_cond_i_exit_proc_U0_ap_done : STD_LOGIC;
+    signal Block_image_passthrough_for_cond_i_exit_proc_U0_ap_continue : STD_LOGIC;
+    signal Block_image_passthrough_for_cond_i_exit_proc_U0_ap_idle : STD_LOGIC;
+    signal Block_image_passthrough_for_cond_i_exit_proc_U0_ap_ready : STD_LOGIC;
+    signal Block_image_passthrough_for_cond_i_exit_proc_U0_out_breath_gpio_o : STD_LOGIC_VECTOR (0 downto 0);
+    signal Block_image_passthrough_for_cond_i_exit_proc_U0_out_breath_gpio_o_ap_vld : STD_LOGIC;
+    signal ap_sync_done : STD_LOGIC;
+    signal ap_sync_ready : STD_LOGIC;
+    signal ap_sync_reg_Loop_VITIS_LOOP_43_1_proc1_U0_ap_ready : STD_LOGIC := '0';
+    signal ap_sync_Loop_VITIS_LOOP_43_1_proc1_U0_ap_ready : STD_LOGIC;
+    signal ap_sync_reg_Block_image_passthrough_for_cond_i_exit_proc_U0_ap_ready : STD_LOGIC := '0';
+    signal ap_sync_Block_image_passthrough_for_cond_i_exit_proc_U0_ap_ready : STD_LOGIC;
     signal ap_ce_reg : STD_LOGIC;
+
+    component image_passthrough_Loop_VITIS_LOOP_43_1_proc1 IS
+    port (
+        ap_clk : IN STD_LOGIC;
+        ap_rst : IN STD_LOGIC;
+        ap_start : IN STD_LOGIC;
+        ap_done : OUT STD_LOGIC;
+        ap_continue : IN STD_LOGIC;
+        ap_idle : OUT STD_LOGIC;
+        ap_ready : OUT STD_LOGIC;
+        out_stream_TDATA : OUT STD_LOGIC_VECTOR (23 downto 0);
+        out_stream_TVALID : OUT STD_LOGIC;
+        out_stream_TREADY : IN STD_LOGIC;
+        out_stream_TKEEP : OUT STD_LOGIC_VECTOR (2 downto 0);
+        out_stream_TSTRB : OUT STD_LOGIC_VECTOR (2 downto 0);
+        out_stream_TUSER : OUT STD_LOGIC_VECTOR (0 downto 0);
+        out_stream_TLAST : OUT STD_LOGIC_VECTOR (0 downto 0);
+        out_stream_TID : OUT STD_LOGIC_VECTOR (0 downto 0);
+        out_stream_TDEST : OUT STD_LOGIC_VECTOR (0 downto 0);
+        in_breath_gpio_i : IN STD_LOGIC_VECTOR (0 downto 0);
+        in_breath_gpio_o : OUT STD_LOGIC_VECTOR (0 downto 0);
+        in_breath_gpio_o_ap_vld : OUT STD_LOGIC;
+        in_stream_TDATA : IN STD_LOGIC_VECTOR (23 downto 0);
+        in_stream_TVALID : IN STD_LOGIC;
+        in_stream_TREADY : OUT STD_LOGIC;
+        in_stream_TKEEP : IN STD_LOGIC_VECTOR (2 downto 0);
+        in_stream_TSTRB : IN STD_LOGIC_VECTOR (2 downto 0);
+        in_stream_TUSER : IN STD_LOGIC_VECTOR (0 downto 0);
+        in_stream_TLAST : IN STD_LOGIC_VECTOR (0 downto 0);
+        in_stream_TID : IN STD_LOGIC_VECTOR (0 downto 0);
+        in_stream_TDEST : IN STD_LOGIC_VECTOR (0 downto 0) );
+    end component;
+
+
+    component image_passthrough_Block_image_passthrough_for_cond_i_exit_proc IS
+    port (
+        ap_clk : IN STD_LOGIC;
+        ap_rst : IN STD_LOGIC;
+        ap_start : IN STD_LOGIC;
+        ap_done : OUT STD_LOGIC;
+        ap_continue : IN STD_LOGIC;
+        ap_idle : OUT STD_LOGIC;
+        ap_ready : OUT STD_LOGIC;
+        out_breath_gpio_i : IN STD_LOGIC_VECTOR (0 downto 0);
+        out_breath_gpio_o : OUT STD_LOGIC_VECTOR (0 downto 0);
+        out_breath_gpio_o_ap_vld : OUT STD_LOGIC );
+    end component;
+
 
     component image_passthrough_CTRL_s_axi IS
     generic (
@@ -189,33 +177,11 @@ architecture behav of image_passthrough is
         ACLK : IN STD_LOGIC;
         ARESET : IN STD_LOGIC;
         ACLK_EN : IN STD_LOGIC;
-        in_breath_o : IN STD_LOGIC_VECTOR (0 downto 0);
-        in_breath_o_ap_vld : IN STD_LOGIC;
-        in_breath_i : OUT STD_LOGIC_VECTOR (0 downto 0);
-        out_breath_o : IN STD_LOGIC_VECTOR (0 downto 0);
-        out_breath_o_ap_vld : IN STD_LOGIC;
-        out_breath_i : OUT STD_LOGIC_VECTOR (0 downto 0);
         ap_start : OUT STD_LOGIC;
         interrupt : OUT STD_LOGIC;
         ap_ready : IN STD_LOGIC;
         ap_done : IN STD_LOGIC;
         ap_idle : IN STD_LOGIC );
-    end component;
-
-
-    component image_passthrough_regslice_both IS
-    generic (
-        DataWidth : INTEGER );
-    port (
-        ap_clk : IN STD_LOGIC;
-        ap_rst : IN STD_LOGIC;
-        data_in : IN STD_LOGIC_VECTOR (DataWidth-1 downto 0);
-        vld_in : IN STD_LOGIC;
-        ack_in : OUT STD_LOGIC;
-        data_out : OUT STD_LOGIC_VECTOR (DataWidth-1 downto 0);
-        vld_out : OUT STD_LOGIC;
-        ack_out : IN STD_LOGIC;
-        apdone_blk : OUT STD_LOGIC );
     end component;
 
 
@@ -246,481 +212,117 @@ begin
         ACLK => ap_clk,
         ARESET => ap_rst_n_inv,
         ACLK_EN => ap_const_logic_1,
-        in_breath_o => in_breath_o,
-        in_breath_o_ap_vld => in_breath_o_ap_vld,
-        in_breath_i => in_breath_i,
-        out_breath_o => out_breath_o,
-        out_breath_o_ap_vld => out_breath_o_ap_vld,
-        out_breath_i => out_breath_i,
         ap_start => ap_start,
         interrupt => interrupt,
         ap_ready => ap_ready,
         ap_done => ap_done,
         ap_idle => ap_idle);
 
-    regslice_both_in_stream_V_data_V_U : component image_passthrough_regslice_both
-    generic map (
-        DataWidth => 8)
+    Loop_VITIS_LOOP_43_1_proc1_U0 : component image_passthrough_Loop_VITIS_LOOP_43_1_proc1
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst_n_inv,
-        data_in => in_stream_TDATA,
-        vld_in => in_stream_TVALID,
-        ack_in => regslice_both_in_stream_V_data_V_U_ack_in,
-        data_out => in_stream_TDATA_int_regslice,
-        vld_out => in_stream_TVALID_int_regslice,
-        ack_out => in_stream_TREADY_int_regslice,
-        apdone_blk => regslice_both_in_stream_V_data_V_U_apdone_blk);
+        ap_start => Loop_VITIS_LOOP_43_1_proc1_U0_ap_start,
+        ap_done => Loop_VITIS_LOOP_43_1_proc1_U0_ap_done,
+        ap_continue => Loop_VITIS_LOOP_43_1_proc1_U0_ap_continue,
+        ap_idle => Loop_VITIS_LOOP_43_1_proc1_U0_ap_idle,
+        ap_ready => Loop_VITIS_LOOP_43_1_proc1_U0_ap_ready,
+        out_stream_TDATA => Loop_VITIS_LOOP_43_1_proc1_U0_out_stream_TDATA,
+        out_stream_TVALID => Loop_VITIS_LOOP_43_1_proc1_U0_out_stream_TVALID,
+        out_stream_TREADY => out_stream_TREADY,
+        out_stream_TKEEP => Loop_VITIS_LOOP_43_1_proc1_U0_out_stream_TKEEP,
+        out_stream_TSTRB => Loop_VITIS_LOOP_43_1_proc1_U0_out_stream_TSTRB,
+        out_stream_TUSER => Loop_VITIS_LOOP_43_1_proc1_U0_out_stream_TUSER,
+        out_stream_TLAST => Loop_VITIS_LOOP_43_1_proc1_U0_out_stream_TLAST,
+        out_stream_TID => Loop_VITIS_LOOP_43_1_proc1_U0_out_stream_TID,
+        out_stream_TDEST => Loop_VITIS_LOOP_43_1_proc1_U0_out_stream_TDEST,
+        in_breath_gpio_i => in_breath_gpio_i,
+        in_breath_gpio_o => Loop_VITIS_LOOP_43_1_proc1_U0_in_breath_gpio_o,
+        in_breath_gpio_o_ap_vld => Loop_VITIS_LOOP_43_1_proc1_U0_in_breath_gpio_o_ap_vld,
+        in_stream_TDATA => in_stream_TDATA,
+        in_stream_TVALID => in_stream_TVALID,
+        in_stream_TREADY => Loop_VITIS_LOOP_43_1_proc1_U0_in_stream_TREADY,
+        in_stream_TKEEP => in_stream_TKEEP,
+        in_stream_TSTRB => in_stream_TSTRB,
+        in_stream_TUSER => in_stream_TUSER,
+        in_stream_TLAST => in_stream_TLAST,
+        in_stream_TID => in_stream_TID,
+        in_stream_TDEST => in_stream_TDEST);
 
-    regslice_both_in_stream_V_keep_V_U : component image_passthrough_regslice_both
-    generic map (
-        DataWidth => 1)
+    Block_image_passthrough_for_cond_i_exit_proc_U0 : component image_passthrough_Block_image_passthrough_for_cond_i_exit_proc
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst_n_inv,
-        data_in => in_stream_TKEEP,
-        vld_in => in_stream_TVALID,
-        ack_in => regslice_both_in_stream_V_keep_V_U_ack_in,
-        data_out => in_stream_TKEEP_int_regslice,
-        vld_out => regslice_both_in_stream_V_keep_V_U_vld_out,
-        ack_out => in_stream_TREADY_int_regslice,
-        apdone_blk => regslice_both_in_stream_V_keep_V_U_apdone_blk);
-
-    regslice_both_in_stream_V_strb_V_U : component image_passthrough_regslice_both
-    generic map (
-        DataWidth => 1)
-    port map (
-        ap_clk => ap_clk,
-        ap_rst => ap_rst_n_inv,
-        data_in => in_stream_TSTRB,
-        vld_in => in_stream_TVALID,
-        ack_in => regslice_both_in_stream_V_strb_V_U_ack_in,
-        data_out => in_stream_TSTRB_int_regslice,
-        vld_out => regslice_both_in_stream_V_strb_V_U_vld_out,
-        ack_out => in_stream_TREADY_int_regslice,
-        apdone_blk => regslice_both_in_stream_V_strb_V_U_apdone_blk);
-
-    regslice_both_in_stream_V_user_V_U : component image_passthrough_regslice_both
-    generic map (
-        DataWidth => 1)
-    port map (
-        ap_clk => ap_clk,
-        ap_rst => ap_rst_n_inv,
-        data_in => in_stream_TUSER,
-        vld_in => in_stream_TVALID,
-        ack_in => regslice_both_in_stream_V_user_V_U_ack_in,
-        data_out => in_stream_TUSER_int_regslice,
-        vld_out => regslice_both_in_stream_V_user_V_U_vld_out,
-        ack_out => in_stream_TREADY_int_regslice,
-        apdone_blk => regslice_both_in_stream_V_user_V_U_apdone_blk);
-
-    regslice_both_in_stream_V_last_V_U : component image_passthrough_regslice_both
-    generic map (
-        DataWidth => 1)
-    port map (
-        ap_clk => ap_clk,
-        ap_rst => ap_rst_n_inv,
-        data_in => in_stream_TLAST,
-        vld_in => in_stream_TVALID,
-        ack_in => regslice_both_in_stream_V_last_V_U_ack_in,
-        data_out => in_stream_TLAST_int_regslice,
-        vld_out => regslice_both_in_stream_V_last_V_U_vld_out,
-        ack_out => in_stream_TREADY_int_regslice,
-        apdone_blk => regslice_both_in_stream_V_last_V_U_apdone_blk);
-
-    regslice_both_in_stream_V_id_V_U : component image_passthrough_regslice_both
-    generic map (
-        DataWidth => 1)
-    port map (
-        ap_clk => ap_clk,
-        ap_rst => ap_rst_n_inv,
-        data_in => in_stream_TID,
-        vld_in => in_stream_TVALID,
-        ack_in => regslice_both_in_stream_V_id_V_U_ack_in,
-        data_out => in_stream_TID_int_regslice,
-        vld_out => regslice_both_in_stream_V_id_V_U_vld_out,
-        ack_out => in_stream_TREADY_int_regslice,
-        apdone_blk => regslice_both_in_stream_V_id_V_U_apdone_blk);
-
-    regslice_both_in_stream_V_dest_V_U : component image_passthrough_regslice_both
-    generic map (
-        DataWidth => 1)
-    port map (
-        ap_clk => ap_clk,
-        ap_rst => ap_rst_n_inv,
-        data_in => in_stream_TDEST,
-        vld_in => in_stream_TVALID,
-        ack_in => regslice_both_in_stream_V_dest_V_U_ack_in,
-        data_out => in_stream_TDEST_int_regslice,
-        vld_out => regslice_both_in_stream_V_dest_V_U_vld_out,
-        ack_out => in_stream_TREADY_int_regslice,
-        apdone_blk => regslice_both_in_stream_V_dest_V_U_apdone_blk);
-
-    regslice_both_out_stream_V_data_V_U : component image_passthrough_regslice_both
-    generic map (
-        DataWidth => 8)
-    port map (
-        ap_clk => ap_clk,
-        ap_rst => ap_rst_n_inv,
-        data_in => in_stream_TDATA_int_regslice,
-        vld_in => out_stream_TVALID_int_regslice,
-        ack_in => out_stream_TREADY_int_regslice,
-        data_out => out_stream_TDATA,
-        vld_out => regslice_both_out_stream_V_data_V_U_vld_out,
-        ack_out => out_stream_TREADY,
-        apdone_blk => regslice_both_out_stream_V_data_V_U_apdone_blk);
-
-    regslice_both_out_stream_V_keep_V_U : component image_passthrough_regslice_both
-    generic map (
-        DataWidth => 1)
-    port map (
-        ap_clk => ap_clk,
-        ap_rst => ap_rst_n_inv,
-        data_in => in_stream_TKEEP_int_regslice,
-        vld_in => out_stream_TVALID_int_regslice,
-        ack_in => regslice_both_out_stream_V_keep_V_U_ack_in_dummy,
-        data_out => out_stream_TKEEP,
-        vld_out => regslice_both_out_stream_V_keep_V_U_vld_out,
-        ack_out => out_stream_TREADY,
-        apdone_blk => regslice_both_out_stream_V_keep_V_U_apdone_blk);
-
-    regslice_both_out_stream_V_strb_V_U : component image_passthrough_regslice_both
-    generic map (
-        DataWidth => 1)
-    port map (
-        ap_clk => ap_clk,
-        ap_rst => ap_rst_n_inv,
-        data_in => in_stream_TSTRB_int_regslice,
-        vld_in => out_stream_TVALID_int_regslice,
-        ack_in => regslice_both_out_stream_V_strb_V_U_ack_in_dummy,
-        data_out => out_stream_TSTRB,
-        vld_out => regslice_both_out_stream_V_strb_V_U_vld_out,
-        ack_out => out_stream_TREADY,
-        apdone_blk => regslice_both_out_stream_V_strb_V_U_apdone_blk);
-
-    regslice_both_out_stream_V_user_V_U : component image_passthrough_regslice_both
-    generic map (
-        DataWidth => 1)
-    port map (
-        ap_clk => ap_clk,
-        ap_rst => ap_rst_n_inv,
-        data_in => in_stream_TUSER_int_regslice,
-        vld_in => out_stream_TVALID_int_regslice,
-        ack_in => regslice_both_out_stream_V_user_V_U_ack_in_dummy,
-        data_out => out_stream_TUSER,
-        vld_out => regslice_both_out_stream_V_user_V_U_vld_out,
-        ack_out => out_stream_TREADY,
-        apdone_blk => regslice_both_out_stream_V_user_V_U_apdone_blk);
-
-    regslice_both_out_stream_V_last_V_U : component image_passthrough_regslice_both
-    generic map (
-        DataWidth => 1)
-    port map (
-        ap_clk => ap_clk,
-        ap_rst => ap_rst_n_inv,
-        data_in => in_stream_TLAST_int_regslice,
-        vld_in => out_stream_TVALID_int_regslice,
-        ack_in => regslice_both_out_stream_V_last_V_U_ack_in_dummy,
-        data_out => out_stream_TLAST,
-        vld_out => regslice_both_out_stream_V_last_V_U_vld_out,
-        ack_out => out_stream_TREADY,
-        apdone_blk => regslice_both_out_stream_V_last_V_U_apdone_blk);
-
-    regslice_both_out_stream_V_id_V_U : component image_passthrough_regslice_both
-    generic map (
-        DataWidth => 1)
-    port map (
-        ap_clk => ap_clk,
-        ap_rst => ap_rst_n_inv,
-        data_in => in_stream_TID_int_regslice,
-        vld_in => out_stream_TVALID_int_regslice,
-        ack_in => regslice_both_out_stream_V_id_V_U_ack_in_dummy,
-        data_out => out_stream_TID,
-        vld_out => regslice_both_out_stream_V_id_V_U_vld_out,
-        ack_out => out_stream_TREADY,
-        apdone_blk => regslice_both_out_stream_V_id_V_U_apdone_blk);
-
-    regslice_both_out_stream_V_dest_V_U : component image_passthrough_regslice_both
-    generic map (
-        DataWidth => 1)
-    port map (
-        ap_clk => ap_clk,
-        ap_rst => ap_rst_n_inv,
-        data_in => in_stream_TDEST_int_regslice,
-        vld_in => out_stream_TVALID_int_regslice,
-        ack_in => regslice_both_out_stream_V_dest_V_U_ack_in_dummy,
-        data_out => out_stream_TDEST,
-        vld_out => regslice_both_out_stream_V_dest_V_U_vld_out,
-        ack_out => out_stream_TREADY,
-        apdone_blk => regslice_both_out_stream_V_dest_V_U_apdone_blk);
+        ap_start => Block_image_passthrough_for_cond_i_exit_proc_U0_ap_start,
+        ap_done => Block_image_passthrough_for_cond_i_exit_proc_U0_ap_done,
+        ap_continue => Block_image_passthrough_for_cond_i_exit_proc_U0_ap_continue,
+        ap_idle => Block_image_passthrough_for_cond_i_exit_proc_U0_ap_idle,
+        ap_ready => Block_image_passthrough_for_cond_i_exit_proc_U0_ap_ready,
+        out_breath_gpio_i => out_breath_gpio_i,
+        out_breath_gpio_o => Block_image_passthrough_for_cond_i_exit_proc_U0_out_breath_gpio_o,
+        out_breath_gpio_o_ap_vld => Block_image_passthrough_for_cond_i_exit_proc_U0_out_breath_gpio_o_ap_vld);
 
 
 
 
 
-    ap_CS_fsm_assign_proc : process(ap_clk)
+    ap_sync_reg_Block_image_passthrough_for_cond_i_exit_proc_U0_ap_ready_assign_proc : process(ap_clk)
     begin
         if (ap_clk'event and ap_clk =  '1') then
             if (ap_rst_n_inv = '1') then
-                ap_CS_fsm <= ap_ST_fsm_state1;
+                ap_sync_reg_Block_image_passthrough_for_cond_i_exit_proc_U0_ap_ready <= ap_const_logic_0;
             else
-                ap_CS_fsm <= ap_NS_fsm;
-            end if;
-        end if;
-    end process;
-
-
-    ap_enable_reg_pp0_iter0_assign_proc : process(ap_clk)
-    begin
-        if (ap_clk'event and ap_clk =  '1') then
-            if (ap_rst_n_inv = '1') then
-                ap_enable_reg_pp0_iter0 <= ap_const_logic_0;
-            else
-                if ((ap_const_logic_1 = ap_condition_pp0_flush_enable)) then 
-                    ap_enable_reg_pp0_iter0 <= ap_const_logic_0;
-                elsif (((ap_const_logic_1 = ap_CS_fsm_state1) and (ap_start = ap_const_logic_1))) then 
-                    ap_enable_reg_pp0_iter0 <= ap_const_logic_1;
+                if (((ap_sync_ready and ap_start) = ap_const_logic_1)) then 
+                    ap_sync_reg_Block_image_passthrough_for_cond_i_exit_proc_U0_ap_ready <= ap_const_logic_0;
+                else 
+                    ap_sync_reg_Block_image_passthrough_for_cond_i_exit_proc_U0_ap_ready <= ap_sync_Block_image_passthrough_for_cond_i_exit_proc_U0_ap_ready;
                 end if; 
             end if;
         end if;
     end process;
 
 
-    ap_enable_reg_pp0_iter1_assign_proc : process(ap_clk)
+    ap_sync_reg_Loop_VITIS_LOOP_43_1_proc1_U0_ap_ready_assign_proc : process(ap_clk)
     begin
         if (ap_clk'event and ap_clk =  '1') then
             if (ap_rst_n_inv = '1') then
-                ap_enable_reg_pp0_iter1 <= ap_const_logic_0;
+                ap_sync_reg_Loop_VITIS_LOOP_43_1_proc1_U0_ap_ready <= ap_const_logic_0;
             else
-                if ((ap_const_boolean_0 = ap_block_pp0_stage0_subdone)) then 
-                    ap_enable_reg_pp0_iter1 <= ap_enable_reg_pp0_iter0;
-                elsif (((ap_const_logic_1 = ap_CS_fsm_state1) and (ap_start = ap_const_logic_1))) then 
-                    ap_enable_reg_pp0_iter1 <= ap_const_logic_0;
+                if (((ap_sync_ready and ap_start) = ap_const_logic_1)) then 
+                    ap_sync_reg_Loop_VITIS_LOOP_43_1_proc1_U0_ap_ready <= ap_const_logic_0;
+                else 
+                    ap_sync_reg_Loop_VITIS_LOOP_43_1_proc1_U0_ap_ready <= ap_sync_Loop_VITIS_LOOP_43_1_proc1_U0_ap_ready;
                 end if; 
             end if;
         end if;
     end process;
 
-    process (ap_clk)
-    begin
-        if (ap_clk'event and ap_clk = '1') then
-            if (((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then
-                tmp_user_V_reg_217 <= in_stream_TUSER_int_regslice;
-            end if;
-        end if;
-    end process;
-
-    ap_NS_fsm_assign_proc : process (ap_start, ap_CS_fsm, ap_CS_fsm_state1, ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter0, ap_enable_reg_pp0_iter1, ap_block_pp0_stage0_subdone, ap_CS_fsm_state4, regslice_both_out_stream_V_data_V_U_apdone_blk)
-    begin
-        case ap_CS_fsm is
-            when ap_ST_fsm_state1 => 
-                if (((ap_const_logic_1 = ap_CS_fsm_state1) and (ap_start = ap_const_logic_1))) then
-                    ap_NS_fsm <= ap_ST_fsm_pp0_stage0;
-                else
-                    ap_NS_fsm <= ap_ST_fsm_state1;
-                end if;
-            when ap_ST_fsm_pp0_stage0 => 
-                if (not(((ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (ap_const_boolean_0 = ap_block_pp0_stage0_subdone) and (ap_enable_reg_pp0_iter0 = ap_const_logic_0) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0)))) then
-                    ap_NS_fsm <= ap_ST_fsm_pp0_stage0;
-                elsif (((ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (ap_const_boolean_0 = ap_block_pp0_stage0_subdone) and (ap_enable_reg_pp0_iter0 = ap_const_logic_0) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then
-                    ap_NS_fsm <= ap_ST_fsm_state4;
-                else
-                    ap_NS_fsm <= ap_ST_fsm_pp0_stage0;
-                end if;
-            when ap_ST_fsm_state4 => 
-                if (((ap_const_logic_1 = ap_CS_fsm_state4) and (regslice_both_out_stream_V_data_V_U_apdone_blk = ap_const_logic_0))) then
-                    ap_NS_fsm <= ap_ST_fsm_state1;
-                else
-                    ap_NS_fsm <= ap_ST_fsm_state4;
-                end if;
-            when others =>  
-                ap_NS_fsm <= "XXX";
-        end case;
-    end process;
-    ap_CS_fsm_pp0_stage0 <= ap_CS_fsm(1);
-    ap_CS_fsm_state1 <= ap_CS_fsm(0);
-    ap_CS_fsm_state4 <= ap_CS_fsm(2);
-
-    ap_ST_fsm_state1_blk_assign_proc : process(ap_start)
-    begin
-        if ((ap_start = ap_const_logic_0)) then 
-            ap_ST_fsm_state1_blk <= ap_const_logic_1;
-        else 
-            ap_ST_fsm_state1_blk <= ap_const_logic_0;
-        end if; 
-    end process;
-
-
-    ap_ST_fsm_state4_blk_assign_proc : process(regslice_both_out_stream_V_data_V_U_apdone_blk)
-    begin
-        if ((regslice_both_out_stream_V_data_V_U_apdone_blk = ap_const_logic_1)) then 
-            ap_ST_fsm_state4_blk <= ap_const_logic_1;
-        else 
-            ap_ST_fsm_state4_blk <= ap_const_logic_0;
-        end if; 
-    end process;
-
-        ap_block_pp0_stage0 <= not((ap_const_boolean_1 = ap_const_boolean_1));
-
-    ap_block_pp0_stage0_01001_assign_proc : process(ap_enable_reg_pp0_iter0, ap_enable_reg_pp0_iter1, in_stream_TVALID_int_regslice, out_stream_TREADY_int_regslice)
-    begin
-                ap_block_pp0_stage0_01001 <= (((ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (out_stream_TREADY_int_regslice = ap_const_logic_0)) or ((ap_enable_reg_pp0_iter0 = ap_const_logic_1) and ((out_stream_TREADY_int_regslice = ap_const_logic_0) or (in_stream_TVALID_int_regslice = ap_const_logic_0))));
-    end process;
-
-
-    ap_block_pp0_stage0_11001_assign_proc : process(ap_enable_reg_pp0_iter0, ap_enable_reg_pp0_iter1, in_stream_TVALID_int_regslice, out_stream_TREADY_int_regslice)
-    begin
-                ap_block_pp0_stage0_11001 <= (((ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (out_stream_TREADY_int_regslice = ap_const_logic_0)) or ((ap_enable_reg_pp0_iter0 = ap_const_logic_1) and ((out_stream_TREADY_int_regslice = ap_const_logic_0) or (in_stream_TVALID_int_regslice = ap_const_logic_0))));
-    end process;
-
-
-    ap_block_pp0_stage0_subdone_assign_proc : process(ap_enable_reg_pp0_iter0, ap_enable_reg_pp0_iter1, in_stream_TVALID_int_regslice, out_stream_TREADY_int_regslice)
-    begin
-                ap_block_pp0_stage0_subdone <= (((ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (out_stream_TREADY_int_regslice = ap_const_logic_0)) or ((ap_enable_reg_pp0_iter0 = ap_const_logic_1) and ((out_stream_TREADY_int_regslice = ap_const_logic_0) or (in_stream_TVALID_int_regslice = ap_const_logic_0))));
-    end process;
-
-
-    ap_block_state2_pp0_stage0_iter0_assign_proc : process(in_stream_TVALID_int_regslice, out_stream_TREADY_int_regslice)
-    begin
-                ap_block_state2_pp0_stage0_iter0 <= ((out_stream_TREADY_int_regslice = ap_const_logic_0) or (in_stream_TVALID_int_regslice = ap_const_logic_0));
-    end process;
-
-
-    ap_block_state3_pp0_stage0_iter1_assign_proc : process(out_stream_TREADY_int_regslice)
-    begin
-                ap_block_state3_pp0_stage0_iter1 <= (out_stream_TREADY_int_regslice = ap_const_logic_0);
-    end process;
-
-
-    ap_condition_pp0_flush_enable_assign_proc : process(ap_CS_fsm_pp0_stage0, tmp_last_V_fu_173_p1, ap_block_pp0_stage0_subdone)
-    begin
-        if (((tmp_last_V_fu_173_p1 = ap_const_lv1_1) and (ap_const_boolean_0 = ap_block_pp0_stage0_subdone) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
-            ap_condition_pp0_flush_enable <= ap_const_logic_1;
-        else 
-            ap_condition_pp0_flush_enable <= ap_const_logic_0;
-        end if; 
-    end process;
-
-
-    ap_done_assign_proc : process(ap_CS_fsm_state4, regslice_both_out_stream_V_data_V_U_apdone_blk)
-    begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state4) and (regslice_both_out_stream_V_data_V_U_apdone_blk = ap_const_logic_0))) then 
-            ap_done <= ap_const_logic_1;
-        else 
-            ap_done <= ap_const_logic_0;
-        end if; 
-    end process;
-
-    ap_enable_pp0 <= (ap_idle_pp0 xor ap_const_logic_1);
-
-    ap_idle_assign_proc : process(ap_start, ap_CS_fsm_state1)
-    begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state1) and (ap_start = ap_const_logic_0))) then 
-            ap_idle <= ap_const_logic_1;
-        else 
-            ap_idle <= ap_const_logic_0;
-        end if; 
-    end process;
-
-
-    ap_idle_pp0_assign_proc : process(ap_enable_reg_pp0_iter0, ap_enable_reg_pp0_iter1)
-    begin
-        if (((ap_enable_reg_pp0_iter1 = ap_const_logic_0) and (ap_enable_reg_pp0_iter0 = ap_const_logic_0))) then 
-            ap_idle_pp0 <= ap_const_logic_1;
-        else 
-            ap_idle_pp0 <= ap_const_logic_0;
-        end if; 
-    end process;
-
-
-    ap_ready_assign_proc : process(ap_CS_fsm_state4, regslice_both_out_stream_V_data_V_U_apdone_blk)
-    begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state4) and (regslice_both_out_stream_V_data_V_U_apdone_blk = ap_const_logic_0))) then 
-            ap_ready <= ap_const_logic_1;
-        else 
-            ap_ready <= ap_const_logic_0;
-        end if; 
-    end process;
-
+    Block_image_passthrough_for_cond_i_exit_proc_U0_ap_continue <= ap_sync_done;
+    Block_image_passthrough_for_cond_i_exit_proc_U0_ap_start <= ((ap_sync_reg_Block_image_passthrough_for_cond_i_exit_proc_U0_ap_ready xor ap_const_logic_1) and ap_start);
+    Loop_VITIS_LOOP_43_1_proc1_U0_ap_continue <= ap_sync_done;
+    Loop_VITIS_LOOP_43_1_proc1_U0_ap_start <= ((ap_sync_reg_Loop_VITIS_LOOP_43_1_proc1_U0_ap_ready xor ap_const_logic_1) and ap_start);
+    ap_done <= ap_sync_done;
+    ap_idle <= (Loop_VITIS_LOOP_43_1_proc1_U0_ap_idle and Block_image_passthrough_for_cond_i_exit_proc_U0_ap_idle);
+    ap_ready <= ap_sync_ready;
 
     ap_rst_n_inv_assign_proc : process(ap_rst_n)
     begin
                 ap_rst_n_inv <= not(ap_rst_n);
     end process;
 
-
-    in_breath_o_assign_proc : process(in_breath_i, ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter1, tmp_user_V_reg_217, ap_block_pp0_stage0_01001, xor_ln186_fu_188_p2)
-    begin
-        if (((tmp_user_V_reg_217 = ap_const_lv1_1) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (ap_const_boolean_0 = ap_block_pp0_stage0_01001) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
-            in_breath_o <= xor_ln186_fu_188_p2;
-        else 
-            in_breath_o <= in_breath_i;
-        end if; 
-    end process;
-
-
-    in_breath_o_ap_vld_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter1, ap_block_pp0_stage0_11001, tmp_user_V_reg_217)
-    begin
-        if (((tmp_user_V_reg_217 = ap_const_lv1_1) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
-            in_breath_o_ap_vld <= ap_const_logic_1;
-        else 
-            in_breath_o_ap_vld <= ap_const_logic_0;
-        end if; 
-    end process;
-
-
-    in_stream_TDATA_blk_n_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter0, ap_block_pp0_stage0, in_stream_TVALID_int_regslice)
-    begin
-        if (((ap_const_boolean_0 = ap_block_pp0_stage0) and (ap_enable_reg_pp0_iter0 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
-            in_stream_TDATA_blk_n <= in_stream_TVALID_int_regslice;
-        else 
-            in_stream_TDATA_blk_n <= ap_const_logic_1;
-        end if; 
-    end process;
-
-    in_stream_TREADY <= regslice_both_in_stream_V_data_V_U_ack_in;
-
-    in_stream_TREADY_int_regslice_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter0, ap_block_pp0_stage0_11001)
-    begin
-        if (((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter0 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
-            in_stream_TREADY_int_regslice <= ap_const_logic_1;
-        else 
-            in_stream_TREADY_int_regslice <= ap_const_logic_0;
-        end if; 
-    end process;
-
-    out_breath_o <= (out_breath_i xor ap_const_lv1_1);
-
-    out_breath_o_ap_vld_assign_proc : process(ap_CS_fsm_state4, regslice_both_out_stream_V_data_V_U_apdone_blk)
-    begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state4) and (regslice_both_out_stream_V_data_V_U_apdone_blk = ap_const_logic_0))) then 
-            out_breath_o_ap_vld <= ap_const_logic_1;
-        else 
-            out_breath_o_ap_vld <= ap_const_logic_0;
-        end if; 
-    end process;
-
-
-    out_stream_TDATA_blk_n_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter0, ap_block_pp0_stage0, ap_enable_reg_pp0_iter1, out_stream_TREADY_int_regslice)
-    begin
-        if ((((ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (ap_const_boolean_0 = ap_block_pp0_stage0) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0)) or ((ap_const_boolean_0 = ap_block_pp0_stage0) and (ap_enable_reg_pp0_iter0 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0)))) then 
-            out_stream_TDATA_blk_n <= out_stream_TREADY_int_regslice;
-        else 
-            out_stream_TDATA_blk_n <= ap_const_logic_1;
-        end if; 
-    end process;
-
-    out_stream_TVALID <= regslice_both_out_stream_V_data_V_U_vld_out;
-
-    out_stream_TVALID_int_regslice_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter0, ap_block_pp0_stage0_11001)
-    begin
-        if (((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter0 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
-            out_stream_TVALID_int_regslice <= ap_const_logic_1;
-        else 
-            out_stream_TVALID_int_regslice <= ap_const_logic_0;
-        end if; 
-    end process;
-
-    tmp_last_V_fu_173_p1 <= in_stream_TLAST_int_regslice;
-    xor_ln186_fu_188_p2 <= (in_breath_i xor ap_const_lv1_1);
+    ap_sync_Block_image_passthrough_for_cond_i_exit_proc_U0_ap_ready <= (ap_sync_reg_Block_image_passthrough_for_cond_i_exit_proc_U0_ap_ready or Block_image_passthrough_for_cond_i_exit_proc_U0_ap_ready);
+    ap_sync_Loop_VITIS_LOOP_43_1_proc1_U0_ap_ready <= (ap_sync_reg_Loop_VITIS_LOOP_43_1_proc1_U0_ap_ready or Loop_VITIS_LOOP_43_1_proc1_U0_ap_ready);
+    ap_sync_done <= (Loop_VITIS_LOOP_43_1_proc1_U0_ap_done and Block_image_passthrough_for_cond_i_exit_proc_U0_ap_done);
+    ap_sync_ready <= (ap_sync_Loop_VITIS_LOOP_43_1_proc1_U0_ap_ready and ap_sync_Block_image_passthrough_for_cond_i_exit_proc_U0_ap_ready);
+    in_breath_gpio_o <= Loop_VITIS_LOOP_43_1_proc1_U0_in_breath_gpio_o;
+    in_stream_TREADY <= Loop_VITIS_LOOP_43_1_proc1_U0_in_stream_TREADY;
+    out_breath_gpio_o <= Block_image_passthrough_for_cond_i_exit_proc_U0_out_breath_gpio_o;
+    out_stream_TDATA <= Loop_VITIS_LOOP_43_1_proc1_U0_out_stream_TDATA;
+    out_stream_TDEST <= Loop_VITIS_LOOP_43_1_proc1_U0_out_stream_TDEST;
+    out_stream_TID <= Loop_VITIS_LOOP_43_1_proc1_U0_out_stream_TID;
+    out_stream_TKEEP <= Loop_VITIS_LOOP_43_1_proc1_U0_out_stream_TKEEP;
+    out_stream_TLAST <= Loop_VITIS_LOOP_43_1_proc1_U0_out_stream_TLAST;
+    out_stream_TSTRB <= Loop_VITIS_LOOP_43_1_proc1_U0_out_stream_TSTRB;
+    out_stream_TUSER <= Loop_VITIS_LOOP_43_1_proc1_U0_out_stream_TUSER;
+    out_stream_TVALID <= Loop_VITIS_LOOP_43_1_proc1_U0_out_stream_TVALID;
 end behav;

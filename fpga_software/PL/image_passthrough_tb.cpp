@@ -2,92 +2,122 @@
 #include <ap_axi_sdata.h>
 #include <ap_int.h>
 #include <iostream>
+#include <cstdlib>
+
+#define IMG_W 640
+#define IMG_H 480
+#define TITLE_H 32
+
+
+typedef ap_axiu<24,1,1,1> axis_rgb_t;
+
+
+
 
 void image_passthrough(
-	hls::stream<ap_axiu<8,1,1,1>>& in_stream,
-	hls::stream<ap_axiu<8,1,1,1>>& out_stream,
-	volatile ap_uint<1>* in_breath,
-	volatile ap_uint<1>* out_breath
+	hls::stream<axis_rgb_t>& in_stream,
+	hls::stream<axis_rgb_t>& out_stream,
+	volatile ap_uint<1>* in_breath_gpio,
+	volatile ap_uint<1>* out_breath_gpio
 
 );
 
 int main() {
-	hls::stream<ap_axiu<8,1,1,1>> in_stream;
-	hls::stream<ap_axiu<8,1,1,1>> out_stream;
+	hls::stream<axis_rgb_t> in_stream;
+	hls::stream<axis_rgb_t> out_stream;
 
-	ap_uint<1> in_breath = 0;
-	ap_uint<1> out_breath = 0;
+	ap_uint<1> in_breath_gpio = 0;
+	ap_uint<1> out_breath_gpio = 0;
 
-	const int WIDTH = 8;
-	const int HEIGHT = 4;
-	const int NUM_PIXELS = WIDTH * HEIGHT;
+	std::cout << "Generating input frame..." << std::endl;
 
-	for (int i = 0; i < NUM_PIXELS; i++){
-		ap_axiu<8,1,1,1> pix;
+	int pixel_count = 0;
+	    for (int y = 0; y < IMG_H; y++) {
+	        for (int x = 0; x < IMG_W; x++) {
+	            axis_rgb_t pix;
+	            pix.data = (pixel_count & 0xFFFFFF);
+	            pix.keep = -1;
+	            pix.last = (x == IMG_W - 1);
+	            pix.user = (pixel_count == 0);
 
-		pix.data = i;
-		pix.keep = -1;
-		pix.strb = -1;
+	            in_stream.write(pix);
+	            pixel_count++;
+	        }
+	    }
 
-		pix.user = (i == 0) ? 1:0;
-		pix.last = (i == NUM_PIXELS -1) ? 1 : 0;
+	    std::cout << "Running DUT..." << std::endl;
 
-		pix.id = 0;
-		pix.dest = 0;
-
-		in_stream.write(pix);
-
-
-	}
-
-	image_passthrough(in_stream, out_stream, &in_breath, &out_breath);
+	    image_passthrough(
+			in_stream,
+			out_stream,
+			&in_breath_gpio,
+			&out_breath_gpio
+	    );
 
 
-	int error_count = 0;
+	    std::cout << "Checking output stream..." << std::endl;
 
-	for(int i = 0; i < NUM_PIXELS; i++){
-		if(out_stream.empty()){
-			std::cout << "ERROR: Output stream is empty early\n";
+		bool sof_seen = false;
+		int errors = 0;
+		pixel_count = 0;
+
+		for (int y = 0; y < IMG_H; y++) {
+			for (int x = 0; x < IMG_W; x++) {
+				if (out_stream.empty()) {
+					std::cerr << "ERROR: Output stream underflow\n";
+					return 1;
+				}
+
+				axis_rgb_t pix = out_stream.read();
+
+				ap_uint<24> expected = (pixel_count & 0xFFFFFF);
+
+				if (pix.data != expected) {
+					std::cerr << "ERROR: Pixel mismatch at "
+							  << "(" << y << "," << x << ") "
+							  << "expected=" << expected
+							  << " got=" << pix.data << "\n";
+					errors++;
+				}
+
+				if (pix.user) {
+					if (pixel_count != 0) {
+						std::cerr << "ERROR: Unexpected SOF at pixel "
+								  << pixel_count << "\n";
+						errors++;
+					}
+					sof_seen = true;
+				}
+
+				if (pix.last && x != IMG_W - 1) {
+					std::cerr << "ERROR: TLAST early at x=" << x << "\n";
+					errors++;
+				}
+
+				pixel_count++;
+			}
+		}
+
+		if (!out_stream.empty()) {
+			std::cerr << "ERROR: Output stream overflow\n";
+			errors++;
+		}
+
+		std::cout << "GPIO results:\n";
+		std::cout << "  in_breath_gpio  = " << in_breath_gpio << "\n";
+		std::cout << "  out_breath_gpio = " << out_breath_gpio << "\n";
+
+		if (!sof_seen) {
+			std::cerr << "ERROR: No SOF detected in output\n";
+			errors++;
+		}
+
+		if (errors == 0) {
+			std::cout << "TEST PASSED\n";
+			return 0;
+		} else {
+			std::cerr << "TEST FAILED with " << errors << " errors\n";
 			return 1;
-
 		}
-
-		ap_axiu<8,1,1,1> pix = out_stream.read();
-
-		if(pix.data != i){
-			std::cout << "DATA MISMATCH at " << i << " got " << pix.data << "\n";
-			error_count++;
-		}
-
-
-
-		if(i == 0 && pix.user != 1){
-			std::cout << "ERROR: SOF missing\n";
-			error_count ++;
-		}
-
-		if(i == NUM_PIXELS-1 && pix.last != 1){
-			std::cout << "ERROR: EOF missing\n";
-			error_count ++;
-		}
-
-
-	}
-
-
-	std::cout << "in_breath = " << in_breath << "\n";
-	std::cout << "out_breath = " << out_breath << "\n";
-
-	if(error_count == 0){
-		std::cout << "TEST PASSED \n";
-
-	} else{
-		std::cout << "TEST FAILED errors = " << error_count << "\n";
-	}
-
-	return error_count;
-
-
-
 
 }

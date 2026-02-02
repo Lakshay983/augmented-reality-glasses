@@ -53,9 +53,9 @@ proc sort_file_names {files {top_name {}}} {
 set Vendor      "xilinx"
 set Library     "user"
 set IPName      "image_passthrough"
-set Version     "1.0"
-set DisplayName "Image_Passthrough"
-set Revision    "2114452978"
+set Version     "2.0"
+set DisplayName "Image_Passthrough_V2"
+set Revision    "2114462527"
 set Description "Pass through test iamge IP"
 set Device      "zynquplus"
 set AutoFamily  ""
@@ -72,7 +72,10 @@ set kernel_xml [file join [pwd] ../kernel/kernel.xml]
 set solution_dir "/home/ecelrc/students/gwl459/workspace/augmented-reality-glasses/fpga_software/PL/image_pass/solution1"
 set debug_dir "/home/ecelrc/students/gwl459/workspace/augmented-reality-glasses/fpga_software/PL/image_pass/solution1/.debug"
 set xo_hls_files_dir ""
-set hdl_module_list {image_passthrough_CTRL_s_axi
+set hdl_module_list {image_passthrough_flow_control_loop_pipe_sequential_init
+image_passthrough_flow_control_loop_pipe_sequential_init
+image_passthrough_flow_control_loop_pipe_sequential_init
+image_passthrough_Loop_VITIS_LOOP_43_1_proc1_tile_pong_V_RAM_T2P_BRAM_1R1W
 image_passthrough_regslice_both
 image_passthrough_regslice_both
 image_passthrough_regslice_both
@@ -87,6 +90,12 @@ image_passthrough_regslice_both
 image_passthrough_regslice_both
 image_passthrough_regslice_both
 image_passthrough_regslice_both
+image_passthrough_CTRL_s_axi
+Loop_VITIS_LOOP_43_1_proc1_Pipeline_VITIS_LOOP_49_2_VITIS_LOOP_50_3
+Loop_VITIS_LOOP_43_1_proc1_Pipeline_VITIS_LOOP_68_4_VITIS_LOOP_69_5
+Loop_VITIS_LOOP_43_1_proc1_Pipeline_VITIS_LOOP_76_6_VITIS_LOOP_77_7
+Loop_VITIS_LOOP_43_1_proc1
+Block_image_passthrough_for_cond_i_exit_proc
 image_passthrough
 }
 set kernel_xo ""
@@ -108,9 +117,9 @@ set Interfaces {
         mode "slave"
         port_prefix "s_axi_CTRL"
         param_prefix "C_S_AXI_CTRL"
-        addr_bits "6"
-        port_width "AWADDR 6 WDATA 32 WSTRB 4 ARADDR 6 RDATA 32"
-        registers {{0x00 CTRL RW 0x0 {Control signals} {{ 0 1 AP_START RW 0 "Control signal Register for 'ap_start'." } { 1 1 AP_DONE R 0 "Control signal Register for 'ap_done'." } { 2 1 AP_IDLE R 0 "Control signal Register for 'ap_idle'." } { 3 1 AP_READY R 0 "Control signal Register for 'ap_ready'." } { 4 3 RESERVED_1 R 0 "Reserved.  0s on read." } { 7 1 AUTO_RESTART RW 0 "Control signal Register for 'auto_restart'." } { 8 1 RESERVED_2 R 0 "Reserved.  0s on read." } { 9 1 INTERRUPT R 0 "Control signal Register for 'interrupt'." } { 10 22 RESERVED_3 R 0 "Reserved.  0s on read." }}} {0x04 GIER RW 0x0 {Global Interrupt Enable Register} {{ 0 1 Enable RW 0 "Master enable for the device interrupt output to the system interrupt controller: 0 = Disabled, 1 = Enabled" } { 1 31 RESERVED R 0 "Reserved.  0s on read." }}} {0x08 IP_IER RW 0x0 {IP Interrupt Enable Register} {{0 1 CHAN0_INT_EN RW 0 {Enable Channel 0 (ap_done) Interrupt.  0 = Disabled, 1 = Enabled.}} {1 1 CHAN1_INT_EN RW 0 {Enable Channel 1 (ap_ready) Interrupt.  0 = Disabled, 1 = Enabled.}} {2 30 RESERVED_0 R 0 {Reserved.  0s on read.}}}} {0x0c IP_ISR RW 0x0 {IP Interrupt Status Register} {{0 1 CHAN0_INT_ST RTOW 0 {Channel 0 (ap_done) Interrupt Status. 0 = No Channel 0 interrupt, 1 = Channel 0 interrupt.}} {1 1 CHAN1_INT_ST RTOW 0 {Channel 1 (ap_ready) Interrupt Status. 0 = No Channel 1 interrupt, 1 = Channel 1 interrupt.}} {2 30 RESERVED_0 R 0 {Reserved.  0s on read.}}}} {0x10 in_breath_i W 0x0 "Data signal of in_breath_i" {{0 1 in_breath_i W 0 "Bit 0 to 0 of in_breath_i"} {1 31 RESERVED R 0 "Reserved.  0s on read."}}} {0x18 in_breath_o R 0x0 "Data signal of in_breath_o" {{0 1 in_breath_o R 0 "Bit 0 to 0 of in_breath_o"} {1 31 RESERVED R 0 "Reserved.  0s on read."}}} {0x1c in_breath_o_ctrl R 0x0 "Control signal of in_breath_o" {{0 1 in_breath_o_ap_vld R 0 "Control signal in_breath_o_ap_vld"} {1 31 RESERVED R 0 "Reserved.  0s on read."}}} {0x20 out_breath_i W 0x0 "Data signal of out_breath_i" {{0 1 out_breath_i W 0 "Bit 0 to 0 of out_breath_i"} {1 31 RESERVED R 0 "Reserved.  0s on read."}}} {0x28 out_breath_o R 0x0 "Data signal of out_breath_o" {{0 1 out_breath_o R 0 "Bit 0 to 0 of out_breath_o"} {1 31 RESERVED R 0 "Reserved.  0s on read."}}} {0x2c out_breath_o_ctrl R 0x0 "Control signal of out_breath_o" {{0 1 out_breath_o_ap_vld R 0 "Control signal out_breath_o_ap_vld"} {1 31 RESERVED R 0 "Reserved.  0s on read."}}}}
+        addr_bits "4"
+        port_width "AWADDR 4 WDATA 32 WSTRB 4 ARADDR 4 RDATA 32"
+        registers {{0x00 CTRL RW 0x0 {Control signals} {{ 0 1 AP_START RW 0 "Control signal Register for 'ap_start'." } { 1 1 AP_DONE R 0 "Control signal Register for 'ap_done'." } { 2 1 AP_IDLE R 0 "Control signal Register for 'ap_idle'." } { 3 1 AP_READY R 0 "Control signal Register for 'ap_ready'." } { 4 3 RESERVED_1 R 0 "Reserved.  0s on read." } { 7 1 AUTO_RESTART RW 0 "Control signal Register for 'auto_restart'." } { 8 1 RESERVED_2 R 0 "Reserved.  0s on read." } { 9 1 INTERRUPT R 0 "Control signal Register for 'interrupt'." } { 10 22 RESERVED_3 R 0 "Reserved.  0s on read." }}} {0x04 GIER RW 0x0 {Global Interrupt Enable Register} {{ 0 1 Enable RW 0 "Master enable for the device interrupt output to the system interrupt controller: 0 = Disabled, 1 = Enabled" } { 1 31 RESERVED R 0 "Reserved.  0s on read." }}} {0x08 IP_IER RW 0x0 {IP Interrupt Enable Register} {{0 1 CHAN0_INT_EN RW 0 {Enable Channel 0 (ap_done) Interrupt.  0 = Disabled, 1 = Enabled.}} {1 1 CHAN1_INT_EN RW 0 {Enable Channel 1 (ap_ready) Interrupt.  0 = Disabled, 1 = Enabled.}} {2 30 RESERVED_0 R 0 {Reserved.  0s on read.}}}} {0x0c IP_ISR RW 0x0 {IP Interrupt Status Register} {{0 1 CHAN0_INT_ST RTOW 0 {Channel 0 (ap_done) Interrupt Status. 0 = No Channel 0 interrupt, 1 = Channel 0 interrupt.}} {1 1 CHAN1_INT_ST RTOW 0 {Channel 1 (ap_ready) Interrupt Status. 0 = No Channel 1 interrupt, 1 = Channel 1 interrupt.}} {2 30 RESERVED_0 R 0 {Reserved.  0s on read.}}}}}
         memories ""
         ctype {
             AWVALID {
@@ -175,8 +184,8 @@ set Interfaces {
             }
             AWADDR {
                 Type "integer unsigned"
-                Width "6"
-                Bits "6"
+                Width "4"
+                Bits "4"
             }
             WDATA {
                 Type "null"
@@ -190,8 +199,8 @@ set Interfaces {
             }
             ARADDR {
                 Type "integer unsigned"
-                Width "6"
-                Bits "6"
+                Width "4"
+                Bits "4"
             }
             RDATA {
                 Type "null"
@@ -240,44 +249,29 @@ set Interfaces {
         port_prefix "in_stream"
         has_tready "1"
         ports {
-            TDATA 8
-            TDEST 1
-            TKEEP 1
-            TSTRB 1
+            TDATA 24
+            TKEEP 3
+            TSTRB 3
             TUSER 1
             TLAST 1
             TID 1
+            TDEST 1
         }
         ctype {
             TDATA {
                 Type "null"
-                Width "8"
-                Bits "8"
-            }
-            TVALID {
-                Type "bool"
-                Width "1"
-                Bits "1"
-            }
-            TREADY {
-                Type "bool"
-                Width "1"
-                Bits "1"
-            }
-            TDEST {
-                Type "null"
-                Width "1"
-                Bits "1"
+                Width "24"
+                Bits "24"
             }
             TKEEP {
                 Type "null"
-                Width "1"
-                Bits "1"
+                Width "3"
+                Bits "3"
             }
             TSTRB {
                 Type "null"
-                Width "1"
-                Bits "1"
+                Width "3"
+                Bits "3"
             }
             TUSER {
                 Type "null"
@@ -291,6 +285,21 @@ set Interfaces {
             }
             TID {
                 Type "null"
+                Width "1"
+                Bits "1"
+            }
+            TDEST {
+                Type "null"
+                Width "1"
+                Bits "1"
+            }
+            TVALID {
+                Type "bool"
+                Width "1"
+                Bits "1"
+            }
+            TREADY {
+                Type "bool"
                 Width "1"
                 Bits "1"
             }
@@ -302,44 +311,29 @@ set Interfaces {
         port_prefix "out_stream"
         has_tready "1"
         ports {
-            TDATA 8
-            TDEST 1
-            TKEEP 1
-            TSTRB 1
+            TDATA 24
+            TKEEP 3
+            TSTRB 3
             TUSER 1
             TLAST 1
             TID 1
+            TDEST 1
         }
         ctype {
             TDATA {
                 Type "null"
-                Width "8"
-                Bits "8"
-            }
-            TVALID {
-                Type "bool"
-                Width "1"
-                Bits "1"
-            }
-            TREADY {
-                Type "bool"
-                Width "1"
-                Bits "1"
-            }
-            TDEST {
-                Type "null"
-                Width "1"
-                Bits "1"
+                Width "24"
+                Bits "24"
             }
             TKEEP {
                 Type "null"
-                Width "1"
-                Bits "1"
+                Width "3"
+                Bits "3"
             }
             TSTRB {
                 Type "null"
-                Width "1"
-                Bits "1"
+                Width "3"
+                Bits "3"
             }
             TUSER {
                 Type "null"
@@ -352,6 +346,69 @@ set Interfaces {
                 Bits "1"
             }
             TID {
+                Type "null"
+                Width "1"
+                Bits "1"
+            }
+            TDEST {
+                Type "null"
+                Width "1"
+                Bits "1"
+            }
+            TVALID {
+                Type "bool"
+                Width "1"
+                Bits "1"
+            }
+            TREADY {
+                Type "bool"
+                Width "1"
+                Bits "1"
+            }
+        }
+    }
+    in_breath_gpio_i {
+        type "data"
+        dir "in"
+        width "1"
+        ctype {
+            DATA {
+                Type "null"
+                Width "1"
+                Bits "1"
+            }
+        }
+    }
+    in_breath_gpio_o {
+        type "data"
+        dir "out"
+        width "1"
+        ctype {
+            DATA {
+                Type "null"
+                Width "1"
+                Bits "1"
+            }
+        }
+    }
+    out_breath_gpio_i {
+        type "data"
+        dir "in"
+        width "1"
+        ctype {
+            DATA {
+                Type "null"
+                Width "1"
+                Bits "1"
+            }
+        }
+    }
+    out_breath_gpio_o {
+        type "data"
+        dir "out"
+        width "1"
+        ctype {
+            DATA {
                 Type "null"
                 Width "1"
                 Bits "1"
@@ -1826,7 +1883,7 @@ if {![regexp -nocase {2014\.3.*} $vivado_ver match]} {
 ipx::create_xgui_files -logo_file misc/logo.png $core
 
 ## System Info
-set user_parameters_list {clk_period 10 machine 64 combinational 0 latency undef II x}
+set user_parameters_list {clk_period 10 machine 64 combinational 0 latency 921782 II x}
 foreach {user_para value} $user_parameters_list {
     incr user_parameter_order
     set user_para_value [ipx::add_user_parameter $user_para $core]

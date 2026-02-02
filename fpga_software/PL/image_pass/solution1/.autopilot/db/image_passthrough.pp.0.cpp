@@ -6278,44 +6278,112 @@ private:
 # 1 "/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_int.h" 1
 # 4 "image_passthrough.cpp" 2
 
+
+
+
+
+
+
+typedef ap_axiu<24,1,1,1> axis_rgb_t;
+
+
 __attribute__((sdx_kernel("image_passthrough", 0))) void image_passthrough(
- hls::stream<ap_axiu<8,1,1,1>>& in_stream,
- hls::stream<ap_axiu<8,1,1,1>>& out_stream,
- volatile ap_uint<1>* in_breath,
- volatile ap_uint<1>* out_breath
+ hls::stream<axis_rgb_t>& in_stream,
+ hls::stream<axis_rgb_t>& out_stream,
+ volatile ap_uint<1>* in_breath_gpio,
+ volatile ap_uint<1>* out_breath_gpio
 
 ){
-#line 14 "/home/ecelrc/students/gwl459/workspace/augmented-reality-glasses/fpga_software/PL/image_pass/solution1/csynth.tcl"
+#line 15 "/home/ecelrc/students/gwl459/workspace/augmented-reality-glasses/fpga_software/PL/image_pass/solution1/csynth.tcl"
 #pragma HLSDIRECTIVE TOP name=image_passthrough
-# 11 "image_passthrough.cpp"
+# 20 "image_passthrough.cpp"
+
+#line 6 "/home/ecelrc/students/gwl459/workspace/augmented-reality-glasses/fpga_software/PL/image_pass/solution1/directives.tcl"
+#pragma HLSDIRECTIVE TOP name=image_passthrough
+# 20 "image_passthrough.cpp"
 
 #pragma HLS INTERFACE axis port=in_stream
 #pragma HLS INTERFACE axis port=out_stream
 
-#pragma HLS INTERFACE s_axilite port=in_breath bundle=CTRL
-#pragma HLS INTERFACE s_axilite port=out_breath bundle=CTRL
+#pragma HLS INTERFACE ap_none port=in_breath_gpio
+#pragma HLS INTERFACE ap_none port=out_breath_gpio
+
+
 #pragma HLS INTERFACE s_axilite port=return bundle=CTRL
 
- ap_axiu<8,1,1,1> pix;
+#pragma HLS DATAFLOW
 
- VITIS_LOOP_21_1: do {
+ static ap_uint<24> tile_ping[32][640];
+ static ap_uint<24> tile_pong[32][640];
+
+#pragma HLS BIND_STORAGE variable=tile_ping type=ram_t2p impl=bram
+#pragma HLS BIND_STORAGE variable=tile_pong type=ram_t2p impl=bram
+
+ bool use_ping = true;
+ bool sof_seen = false;
+ bool first_out_pixel = true;
+
+
+ VITIS_LOOP_43_1: for (int tile_y = 0; tile_y < 480; tile_y += 32){
+
+  ap_uint<24> (*in_tile)[640] = use_ping ? tile_ping : tile_pong;
+  ap_uint<24> (*out_tile)[640] = use_ping ? tile_pong : tile_ping;
+
+
+  VITIS_LOOP_49_2: for (int r=0; r < 32; r++){
+   VITIS_LOOP_50_3: for (int c = 0; c < 640; c++){
 #pragma HLS PIPELINE II=1
- pix = in_stream.read();
 
-  if(pix.user){
-   ap_uint<1> t = *in_breath;
-   *in_breath = t ^ 1;
+ axis_rgb_t pix = in_stream.read();
+
+    if(pix.user && !sof_seen){
+     ap_uint<1> tmp_in = *in_breath_gpio;
+     tmp_in ^= ap_uint<1>(1);
+     *in_breath_gpio = tmp_in;
+     sof_seen = true;
+    }
+
+    in_tile[r][c] = pix.data;
+
+
+   }
+
+  }
+        VITIS_LOOP_68_4: for (int r = 0; r < 32; r++) {
+            VITIS_LOOP_69_5: for (int c = 0; c < 640; c++) {
+#pragma HLS PIPELINE II=1
+ out_tile[r][c] = in_tile[r][c];
+            }
+        }
+
+
+  VITIS_LOOP_76_6: for (int r = 0; r < 32; r++){
+   VITIS_LOOP_77_7: for (int c = 0; c < 640; c++){
+#pragma HLS PIPELINE II=1
+
+ axis_rgb_t out_pix;
+    out_pix.data = out_tile[r][c];
+    out_pix.keep = -1;
+
+    out_pix.user =
+     (first_out_pixel && r == 0 && c == 0);
+    out_pix.last = (c == 640 - 1);
+
+    first_out_pixel = false;
+    out_stream.write(out_pix);
+
+
+   }
   }
 
-  out_stream.write(pix);
+  use_ping ^= 1;
 
-  if(pix.last){
-   ap_uint<1> t = *out_breath;
-   *out_breath = t ^ 1;
-  }
 
- } while(!pix.last);
+ }
 
+ ap_uint<1> tmp_out = *out_breath_gpio;
+ tmp_out ^= ap_uint<1>(1);
+ *out_breath_gpio = tmp_out;
 
 
 }

@@ -1,11 +1,11 @@
-<project xmlns="com.autoesl.autopilot.project" top="image_passthrough" name="image_pass">
+<project xmlns="com.autoesl.autopilot.project" name="image_pass" top="image_passthrough">
     <includePaths/>
     <libraryPaths/>
     <Simulation>
-        <SimFlow name="csim" csimMode="0" lastCsimMode="0"/>
+        <SimFlow askAgain="false" name="csim" csimMode="0" lastCsimMode="0"/>
     </Simulation>
     <files xmlns="">
-        <file name="../../image_passthrough_tb.cpp" sc="0" tb="1" cflags=" -Wno-unknown-pragmas" csimflags=" -Wno-unknown-pragmas" blackbox="false"/>
+        <file name="../../image_passthrough_tb.cpp" sc="0" tb="1" cflags=" -Wno-unknown-pragmas -Wno-unknown-pragmas" csimflags=" -Wno-unknown-pragmas" blackbox="false"/>
         <file name="image_passthrough.cpp" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
     </files>
     <solutions xmlns="">

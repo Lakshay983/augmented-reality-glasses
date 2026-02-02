@@ -74,10 +74,10 @@ using namespace std;
 #define WRAPC_STREAM_EGRESS_STATUS_out_stream_V_id_V "../tv/stream_size/stream_egress_status_out_stream_V_id_V.dat"
 #define WRAPC_STREAM_SIZE_OUT_out_stream_V_dest_V "../tv/stream_size/stream_size_out_out_stream_V_dest_V.dat"
 #define WRAPC_STREAM_EGRESS_STATUS_out_stream_V_dest_V "../tv/stream_size/stream_egress_status_out_stream_V_dest_V.dat"
-#define AUTOTB_TVIN_in_breath "../tv/cdatafile/c.image_passthrough.autotvin_in_breath.dat"
-#define AUTOTB_TVOUT_in_breath "../tv/cdatafile/c.image_passthrough.autotvout_in_breath.dat"
-#define AUTOTB_TVIN_out_breath "../tv/cdatafile/c.image_passthrough.autotvin_out_breath.dat"
-#define AUTOTB_TVOUT_out_breath "../tv/cdatafile/c.image_passthrough.autotvout_out_breath.dat"
+#define AUTOTB_TVIN_in_breath_gpio "../tv/cdatafile/c.image_passthrough.autotvin_in_breath_gpio.dat"
+#define AUTOTB_TVOUT_in_breath_gpio "../tv/cdatafile/c.image_passthrough.autotvout_in_breath_gpio.dat"
+#define AUTOTB_TVIN_out_breath_gpio "../tv/cdatafile/c.image_passthrough.autotvin_out_breath_gpio.dat"
+#define AUTOTB_TVOUT_out_breath_gpio "../tv/cdatafile/c.image_passthrough.autotvout_out_breath_gpio.dat"
 
 
 // tvout file define:
@@ -95,8 +95,8 @@ using namespace std;
 #define AUTOTB_TVOUT_PC_out_stream_V_last_V "../tv/rtldatafile/rtl.image_passthrough.autotvout_out_stream_V_last_V.dat"
 #define AUTOTB_TVOUT_PC_out_stream_V_id_V "../tv/rtldatafile/rtl.image_passthrough.autotvout_out_stream_V_id_V.dat"
 #define AUTOTB_TVOUT_PC_out_stream_V_dest_V "../tv/rtldatafile/rtl.image_passthrough.autotvout_out_stream_V_dest_V.dat"
-#define AUTOTB_TVOUT_PC_in_breath "../tv/rtldatafile/rtl.image_passthrough.autotvout_in_breath.dat"
-#define AUTOTB_TVOUT_PC_out_breath "../tv/rtldatafile/rtl.image_passthrough.autotvout_out_breath.dat"
+#define AUTOTB_TVOUT_PC_in_breath_gpio "../tv/rtldatafile/rtl.image_passthrough.autotvout_in_breath_gpio.dat"
+#define AUTOTB_TVOUT_PC_out_breath_gpio "../tv/rtldatafile/rtl.image_passthrough.autotvout_out_breath_gpio.dat"
 
 
 namespace hls::sim
@@ -1024,10 +1024,10 @@ extern "C"
 void image_passthrough_hw_stub_wrapper(void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*);
 
 extern "C"
-void apatb_image_passthrough_hw(void* __xlx_apatb_param_in_stream_V_data_V, void* __xlx_apatb_param_in_stream_V_keep_V, void* __xlx_apatb_param_in_stream_V_strb_V, void* __xlx_apatb_param_in_stream_V_user_V, void* __xlx_apatb_param_in_stream_V_last_V, void* __xlx_apatb_param_in_stream_V_id_V, void* __xlx_apatb_param_in_stream_V_dest_V, void* __xlx_apatb_param_out_stream_V_data_V, void* __xlx_apatb_param_out_stream_V_keep_V, void* __xlx_apatb_param_out_stream_V_strb_V, void* __xlx_apatb_param_out_stream_V_user_V, void* __xlx_apatb_param_out_stream_V_last_V, void* __xlx_apatb_param_out_stream_V_id_V, void* __xlx_apatb_param_out_stream_V_dest_V, void* __xlx_apatb_param_in_breath, void* __xlx_apatb_param_out_breath)
+void apatb_image_passthrough_hw(void* __xlx_apatb_param_in_stream_V_data_V, void* __xlx_apatb_param_in_stream_V_keep_V, void* __xlx_apatb_param_in_stream_V_strb_V, void* __xlx_apatb_param_in_stream_V_user_V, void* __xlx_apatb_param_in_stream_V_last_V, void* __xlx_apatb_param_in_stream_V_id_V, void* __xlx_apatb_param_in_stream_V_dest_V, void* __xlx_apatb_param_out_stream_V_data_V, void* __xlx_apatb_param_out_stream_V_keep_V, void* __xlx_apatb_param_out_stream_V_strb_V, void* __xlx_apatb_param_out_stream_V_user_V, void* __xlx_apatb_param_out_stream_V_last_V, void* __xlx_apatb_param_out_stream_V_id_V, void* __xlx_apatb_param_out_stream_V_dest_V, void* __xlx_apatb_param_in_breath_gpio, void* __xlx_apatb_param_out_breath_gpio)
 {
-  static hls::sim::Stream<hls::sim::Byte<1>> port0 {
-    .width = 8,
+  static hls::sim::Stream<hls::sim::Byte<4>> port0 {
+    .width = 24,
     .name = "in_stream_V_data_V",
 #ifdef POST_CHECK
     .reader = new hls::sim::Reader(WRAPC_STREAM_SIZE_IN_in_stream_V_data_V),
@@ -1037,11 +1037,11 @@ void apatb_image_passthrough_hw(void* __xlx_apatb_param_in_stream_V_data_V, void
     .gwriter = new hls::sim::Writer(WRAPC_STREAM_INGRESS_STATUS_in_stream_V_data_V),
 #endif
   };
-  port0.param = (hls::stream<hls::sim::Byte<1>>*)__xlx_apatb_param_in_stream_V_data_V;
+  port0.param = (hls::stream<hls::sim::Byte<4>>*)__xlx_apatb_param_in_stream_V_data_V;
   port0.hasWrite = false;
 
   static hls::sim::Stream<hls::sim::Byte<1>> port1 {
-    .width = 1,
+    .width = 3,
     .name = "in_stream_V_keep_V",
 #ifdef POST_CHECK
     .reader = new hls::sim::Reader(WRAPC_STREAM_SIZE_IN_in_stream_V_keep_V),
@@ -1055,7 +1055,7 @@ void apatb_image_passthrough_hw(void* __xlx_apatb_param_in_stream_V_data_V, void
   port1.hasWrite = false;
 
   static hls::sim::Stream<hls::sim::Byte<1>> port2 {
-    .width = 1,
+    .width = 3,
     .name = "in_stream_V_strb_V",
 #ifdef POST_CHECK
     .reader = new hls::sim::Reader(WRAPC_STREAM_SIZE_IN_in_stream_V_strb_V),
@@ -1124,8 +1124,8 @@ void apatb_image_passthrough_hw(void* __xlx_apatb_param_in_stream_V_data_V, void
   port6.param = (hls::stream<hls::sim::Byte<1>>*)__xlx_apatb_param_in_stream_V_dest_V;
   port6.hasWrite = false;
 
-  static hls::sim::Stream<hls::sim::Byte<1>> port7 {
-    .width = 8,
+  static hls::sim::Stream<hls::sim::Byte<4>> port7 {
+    .width = 24,
     .name = "out_stream_V_data_V",
 #ifdef POST_CHECK
     .reader = new hls::sim::Reader(AUTOTB_TVOUT_PC_out_stream_V_data_V),
@@ -1135,11 +1135,11 @@ void apatb_image_passthrough_hw(void* __xlx_apatb_param_in_stream_V_data_V, void
     .gwriter = new hls::sim::Writer(WRAPC_STREAM_EGRESS_STATUS_out_stream_V_data_V),
 #endif
   };
-  port7.param = (hls::stream<hls::sim::Byte<1>>*)__xlx_apatb_param_out_stream_V_data_V;
+  port7.param = (hls::stream<hls::sim::Byte<4>>*)__xlx_apatb_param_out_stream_V_data_V;
   port7.hasWrite = true;
 
   static hls::sim::Stream<hls::sim::Byte<1>> port8 {
-    .width = 1,
+    .width = 3,
     .name = "out_stream_V_keep_V",
 #ifdef POST_CHECK
     .reader = new hls::sim::Reader(AUTOTB_TVOUT_PC_out_stream_V_keep_V),
@@ -1153,7 +1153,7 @@ void apatb_image_passthrough_hw(void* __xlx_apatb_param_in_stream_V_data_V, void
   port8.hasWrite = true;
 
   static hls::sim::Stream<hls::sim::Byte<1>> port9 {
-    .width = 1,
+    .width = 3,
     .name = "out_stream_V_strb_V",
 #ifdef POST_CHECK
     .reader = new hls::sim::Reader(AUTOTB_TVOUT_PC_out_stream_V_strb_V),
@@ -1223,28 +1223,28 @@ void apatb_image_passthrough_hw(void* __xlx_apatb_param_in_stream_V_data_V, void
   port13.hasWrite = true;
 
   static hls::sim::Register port14 {
-    .name = "in_breath",
+    .name = "in_breath_gpio",
     .width = 1,
 #ifdef POST_CHECK
-    .reader = new hls::sim::Reader(AUTOTB_TVOUT_PC_in_breath),
+    .reader = new hls::sim::Reader(AUTOTB_TVOUT_PC_in_breath_gpio),
 #else
-    .owriter = new hls::sim::Writer(AUTOTB_TVOUT_in_breath),
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_in_breath),
+    .owriter = new hls::sim::Writer(AUTOTB_TVOUT_in_breath_gpio),
+    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_in_breath_gpio),
 #endif
   };
-  port14.param = __xlx_apatb_param_in_breath;
+  port14.param = __xlx_apatb_param_in_breath_gpio;
 
   static hls::sim::Register port15 {
-    .name = "out_breath",
+    .name = "out_breath_gpio",
     .width = 1,
 #ifdef POST_CHECK
-    .reader = new hls::sim::Reader(AUTOTB_TVOUT_PC_out_breath),
+    .reader = new hls::sim::Reader(AUTOTB_TVOUT_PC_out_breath_gpio),
 #else
-    .owriter = new hls::sim::Writer(AUTOTB_TVOUT_out_breath),
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_out_breath),
+    .owriter = new hls::sim::Writer(AUTOTB_TVOUT_out_breath_gpio),
+    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_out_breath_gpio),
 #endif
   };
-  port15.param = __xlx_apatb_param_out_breath;
+  port15.param = __xlx_apatb_param_out_breath_gpio;
 
   refine_signal_handler();
   try {
@@ -1295,7 +1295,7 @@ void apatb_image_passthrough_hw(void* __xlx_apatb_param_in_stream_V_data_V, void
     port12.markSize();
     port13.markSize();
     CodeState = CALL_C_DUT;
-    image_passthrough_hw_stub_wrapper(__xlx_apatb_param_in_stream_V_data_V, __xlx_apatb_param_in_stream_V_keep_V, __xlx_apatb_param_in_stream_V_strb_V, __xlx_apatb_param_in_stream_V_user_V, __xlx_apatb_param_in_stream_V_last_V, __xlx_apatb_param_in_stream_V_id_V, __xlx_apatb_param_in_stream_V_dest_V, __xlx_apatb_param_out_stream_V_data_V, __xlx_apatb_param_out_stream_V_keep_V, __xlx_apatb_param_out_stream_V_strb_V, __xlx_apatb_param_out_stream_V_user_V, __xlx_apatb_param_out_stream_V_last_V, __xlx_apatb_param_out_stream_V_id_V, __xlx_apatb_param_out_stream_V_dest_V, __xlx_apatb_param_in_breath, __xlx_apatb_param_out_breath);
+    image_passthrough_hw_stub_wrapper(__xlx_apatb_param_in_stream_V_data_V, __xlx_apatb_param_in_stream_V_keep_V, __xlx_apatb_param_in_stream_V_strb_V, __xlx_apatb_param_in_stream_V_user_V, __xlx_apatb_param_in_stream_V_last_V, __xlx_apatb_param_in_stream_V_id_V, __xlx_apatb_param_in_stream_V_dest_V, __xlx_apatb_param_out_stream_V_data_V, __xlx_apatb_param_out_stream_V_keep_V, __xlx_apatb_param_out_stream_V_strb_V, __xlx_apatb_param_out_stream_V_user_V, __xlx_apatb_param_out_stream_V_last_V, __xlx_apatb_param_out_stream_V_id_V, __xlx_apatb_param_out_stream_V_dest_V, __xlx_apatb_param_in_breath_gpio, __xlx_apatb_param_out_breath_gpio);
     port7.buffer();
     port8.buffer();
     port9.buffer();

@@ -2,6 +2,16 @@
 <AdditionalInfo>
   <CTypeInfo>
       <RtlPort>
+        <name>in_breath_gpio_i</name>
+        <type>Signed</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>in_breath_gpio_o</name>
+        <type>Signed</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
         <name>in_stream_TDATA</name>
         <type>Unsigned</type>
         <fractionWidth>0</fractionWidth>
@@ -44,6 +54,16 @@
       <RtlPort>
         <name>in_stream_TVALID</name>
         <type>Unsigned</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>out_breath_gpio_i</name>
+        <type>Signed</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>out_breath_gpio_o</name>
+        <type>Signed</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
@@ -98,7 +118,7 @@
   <Machine>64</Machine>
   <modelParameters>
     <combinational>0</combinational>
-    <latency>undef</latency>
-    <II>undef</II>
+    <latency>921782</latency>
+    <II>921783</II>
   </modelParameters>
 </AdditionalInfo>
