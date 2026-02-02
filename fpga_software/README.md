@@ -17,6 +17,11 @@ source /usr/local/packages/petalinux_2022.2/settings.sh
 ```
 ## Compiling the device tree
 Enter the petalinux project directory.  
+When you want to add a new xsa file:
+```sh
+petalinux-config --get-hw-description=[directory to xsa file]
+```
+Then compile the new DTB:
 ```sh
 petalinux-build -c device-tree
 ```
