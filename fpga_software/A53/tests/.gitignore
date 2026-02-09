@@ -1,0 +1,6 @@
+# python
+.venv
+
+# object files
+*.out
+*.o
