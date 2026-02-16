@@ -7,7 +7,7 @@
 
 
 #define MMAP_SIZE 65535 // get 32 bytes 
-#define DMA_TRANSFER_SIZE 32
+#define DMA_TRANSFER_SIZE 1
 #define AXI_LITE_ADDR 0xA0000000
 
 #define MM2S_CONTROL_REGISTER       0x00
@@ -43,6 +43,9 @@
 #define ENABLE_DELAY_IRQ            0x00002000
 #define ENABLE_ERR_IRQ              0x00004000
 #define ENABLE_ALL_IRQ              0x00007000
+
+#define DESTINATION_ADDR			0x0f000000
+#define SOURCE_ADDR					0x0e000000
 
 unsigned int write_dma(unsigned int *virtual_addr, int offset, unsigned int value)
 {
@@ -197,7 +200,6 @@ int dma_s2mm_sync(unsigned int *virtual_addr)
 	{
         dma_s2mm_status(virtual_addr);
         dma_mm2s_status(virtual_addr);
-
         s2mm_status = read_dma(virtual_addr, S2MM_STATUS_REGISTER);
     }
 
@@ -232,10 +234,10 @@ int main()
     unsigned int *dma_virtual_addr = mmap(NULL, MMAP_SIZE, PROT_READ | PROT_WRITE, MAP_SHARED, ddr_memory, AXI_LITE_ADDR);
 
 	printf("Memory map the MM2S source address register block.\n");
-    unsigned int *virtual_src_addr  = mmap(NULL, MMAP_SIZE, PROT_READ | PROT_WRITE, MAP_SHARED, ddr_memory, 0x0e000000);
+    unsigned int *virtual_src_addr  = mmap(NULL, MMAP_SIZE, PROT_READ | PROT_WRITE, MAP_SHARED, ddr_memory, SOURCE_ADDR);
 
 	printf("Memory map the S2MM destination address register block.\n");
-    unsigned int *virtual_dst_addr = mmap(NULL, MMAP_SIZE, PROT_READ | PROT_WRITE, MAP_SHARED, ddr_memory, 0x0f000000);
+    unsigned int *virtual_dst_addr = mmap(NULL, MMAP_SIZE, PROT_READ | PROT_WRITE, MAP_SHARED, ddr_memory, DESTINATION_ADDR);
 
 	printf("Writing random data to source register block...\n");
 	virtual_src_addr[0]= 0xEFBEADDE;
@@ -275,11 +277,11 @@ int main()
     dma_mm2s_status(dma_virtual_addr);
 
     printf("Writing source address of the data from MM2S in DDR...\n");
-    write_dma(dma_virtual_addr, MM2S_SRC_ADDRESS_REGISTER, 0x0e000000);
+    write_dma(dma_virtual_addr, MM2S_SRC_ADDRESS_REGISTER, SOURCE_ADDR);
     dma_mm2s_status(dma_virtual_addr);
 
     printf("Writing the destination address for the data from S2MM in DDR...\n");
-    write_dma(dma_virtual_addr, S2MM_DST_ADDRESS_REGISTER, 0x0f000000);
+    write_dma(dma_virtual_addr, S2MM_DST_ADDRESS_REGISTER, DESTINATION_ADDR);
     dma_s2mm_status(dma_virtual_addr);
 
 	printf("Run the MM2S channel.\n");
