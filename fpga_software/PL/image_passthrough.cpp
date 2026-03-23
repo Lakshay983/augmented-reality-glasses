@@ -1,105 +1,74 @@
-#include <hls_stream.h>
-#include <ap_axi_sdata.h> 
-#include <ap_int.h>
+#include "ap_axi_sdata.h"
+#include "hls_stream.h"
+#include "common/xf_common.hpp"
+#include "common/xf_infra.hpp"
+#include "imgproc/xf_gaussian_filter.hpp"
 
+#define MAX_HEIGHT 460
+#define MAX_WIDTH 640
+#define NPPC XF_NPPC4
 
-#define IMG_W 640
-#define IMG_H 480
-#define TILE_H 32
-#define NPC XF_NPPC1
+// --- OUR CUSTOM RTL HARDWARE BLOCK ---
+// This safely reads the 128-bit AXI stream (RGBA), ignores the Alpha channel,
+// computes the grayscale value, and writes directly to the Vitis Mat.
+void custom_axi_to_gray(
+    hls::stream<ap_axiu<128, 0, 0, 0>>& stream_in,
+    xf::cv::Mat<XF_8UC1, MAX_HEIGHT, MAX_WIDTH, NPPC>& img_gray,
+    int rows,
+    int cols)
+{
+    // Tell HLS to isolate this block so it runs simultaneously in the pipeline
+    #pragma HLS INLINE off
 
-typedef ap_axiu<24,1,1,1> axis_rgb_t;
+    int total_beats = (rows * cols) / 4; // 4 pixels per clock cycle
 
+    for (int i = 0; i < total_beats; i++) {
+        #pragma HLS PIPELINE II=1
+    	ap_axiu<128, 0, 0, 0> in_word = stream_in.read();
+		ap_uint<32> gray_word = 0; // CRITICAL: Initialize to 0!
+
+		for (int p = 0; p < 4; p++) {
+			#pragma HLS UNROLL
+
+			// Pure bit-shifting extraction (Immune to .range() compiler bugs)
+			ap_uint<8> r = (in_word.data >> (p*32 + 0)) & 0xFF;
+			ap_uint<8> g = (in_word.data >> (p*32 + 8)) & 0xFF;
+			ap_uint<8> b = (in_word.data >> (p*32 + 16)) & 0xFF;
+
+			ap_uint<16> y = (r * 77 + g * 150 + b * 29) >> 8;
+
+			// Pure bitwise OR packing
+			gray_word |= ((ap_uint<32>)y << (p * 8));
+		}
+
+		// Write the packed 4-pixel word into the Vitis Mat
+		img_gray.write(i, gray_word);
+
+    }
+}
 
 void image_passthrough(
-	hls::stream<axis_rgb_t>& in_stream,
-	hls::stream<axis_rgb_t>& out_stream,
-	volatile ap_uint<1>* in_breath_gpio,
-	volatile ap_uint<1>* out_breath_gpio
+    hls::stream<ap_axiu<128, 0, 0, 0>>& stream_in,
+    hls::stream<ap_axiu<32, 0, 0, 0>>& stream_out)
+{
+    #pragma HLS INTERFACE axis port=stream_in
+    #pragma HLS INTERFACE axis port=stream_out
+    #pragma HLS INTERFACE s_axilite port=rows
+    #pragma HLS INTERFACE s_axilite port=cols
+    #pragma HLS INTERFACE s_axilite port=return
 
-){
-	#pragma HLS INTERFACE axis port=in_stream
-	#pragma HLS INTERFACE axis port=out_stream
-	
-	#pragma HLS INTERFACE ap_none port=in_breath_gpio
-	#pragma HLS INTERFACE ap_none port=out_breath_gpio
+    #pragma HLS DATAFLOW
 
+    // Notice we no longer need the XF_8UC4 img_in Mat!
+    xf::cv::Mat<XF_8UC1, MAX_HEIGHT, MAX_WIDTH, NPPC> img_gray(MAX_HEIGHT, MAX_WIDTH);
+    xf::cv::Mat<XF_8UC1, MAX_HEIGHT, MAX_WIDTH, NPPC> img_blur(MAX_HEIGHT, MAX_WIDTH);
 
-	#pragma HLS INTERFACE s_axilite port=return bundle=CTRL
-	
-	#pragma HLS DATAFLOW
+    // 1. Eat the raw AXI stream, dump the Alpha, and convert to Grayscale
+    custom_axi_to_gray(stream_in, img_gray, MAX_HEIGHT, MAX_WIDTH);
 
-	static ap_uint<24> tile_ping[TILE_H][IMG_W];
-	static ap_uint<24> tile_pong[TILE_H][IMG_W];
+    // 2. Apply Gaussian Blur
+    xf::cv::GaussianBlur<3, XF_BORDER_REPLICATE, XF_8UC1, MAX_HEIGHT, MAX_WIDTH, NPPC>(img_gray, img_blur, 1.0f);
 
-	#pragma HLS BIND_STORAGE variable=tile_ping type=ram_t2p impl=bram
-	#pragma HLS BIND_STORAGE variable=tile_pong type=ram_t2p impl=bram
-
-	bool use_ping = true;
-	bool sof_seen = false;
-	bool first_out_pixel = true;
-
-
-	for (int tile_y = 0; tile_y < IMG_H; tile_y += TILE_H){
-		
-		ap_uint<24> (*in_tile)[IMG_W] = use_ping ? tile_ping : tile_pong;
-		ap_uint<24> (*out_tile)[IMG_W] = use_ping ? tile_pong : tile_ping;
-
-
-		for (int r=0; r < TILE_H; r++){
-			for (int c = 0; c < IMG_W; c++){
-			#pragma HLS PIPELINE II=1
-
-				axis_rgb_t pix = in_stream.read();
-
-				if(pix.user && !sof_seen){
-					ap_uint<1> tmp_in = *in_breath_gpio;  // read volatile
-					tmp_in ^= ap_uint<1>(1);                          // toggle
-					*in_breath_gpio = tmp_in;              // write back
-					sof_seen = true;
-				}
-
-				in_tile[r][c] = pix.data;
-
-
-			}
-
-		}
-        for (int r = 0; r < TILE_H; r++) {
-            for (int c = 0; c < IMG_W; c++) {
-				#pragma HLS PIPELINE II=1
-                out_tile[r][c] = in_tile[r][c];
-            }
-        }
-
-
-		for (int r = 0; r < TILE_H; r++){
-			for (int c = 0; c < IMG_W; c++){
-				#pragma HLS PIPELINE II=1
-
-				axis_rgb_t out_pix;
-				out_pix.data = out_tile[r][c];
-				out_pix.keep = -1;
-
-				out_pix.user =
-					(first_out_pixel && r == 0 && c == 0);
-				out_pix.last = (c == IMG_W - 1);
-
-				first_out_pixel = false;
-				out_stream.write(out_pix);
-
-
-			}
-		}
-
-		use_ping ^= 1;
-
-
-	}
-
-	ap_uint<1> tmp_out = *out_breath_gpio;
-	tmp_out ^= ap_uint<1>(1);
-	*out_breath_gpio = tmp_out;
-
-
+    // 3. Output to AXI Stream
+    xf::cv::xfMat2axiStrm<32, XF_8UC1, MAX_HEIGHT, MAX_WIDTH, NPPC>(img_blur, stream_out);
 }
