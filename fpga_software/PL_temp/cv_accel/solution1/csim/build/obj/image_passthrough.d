@@ -30,12 +30,7 @@ obj/image_passthrough.o: ../../../../../PL/image_passthrough.cpp \
  /misc/scratch/sp02-senior-design/augmented-reality-glasses/fpga_software/PL/Vitis_Libraries/vision/L1/include/common/xf_infra.hpp \
  /misc/scratch/sp02-senior-design/augmented-reality-glasses/fpga_software/PL/Vitis_Libraries/vision/L1/include/common/xf_axi_io.hpp \
  /usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/include/utils/x_hls_utils.h \
- /misc/scratch/sp02-senior-design/augmented-reality-glasses/fpga_software/PL/Vitis_Libraries/vision/L1/include/imgproc/xf_cvt_color.hpp \
- /misc/scratch/sp02-senior-design/augmented-reality-glasses/fpga_software/PL/Vitis_Libraries/vision/L1/include/imgproc/xf_cvt_color_1.hpp \
- /misc/scratch/sp02-senior-design/augmented-reality-glasses/fpga_software/PL/Vitis_Libraries/vision/L1/include/imgproc/xf_cvt_color_utils.hpp \
- /misc/scratch/sp02-senior-design/augmented-reality-glasses/fpga_software/PL/Vitis_Libraries/vision/L1/include/common/xf_types.hpp \
- /misc/scratch/sp02-senior-design/augmented-reality-glasses/fpga_software/PL/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp \
- /misc/scratch/sp02-senior-design/augmented-reality-glasses/fpga_software/PL/Vitis_Libraries/vision/L1/include/common/xf_params.hpp \
+ /misc/scratch/sp02-senior-design/augmented-reality-glasses/fpga_software/PL/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp \
  /misc/scratch/sp02-senior-design/augmented-reality-glasses/fpga_software/PL/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp \
  /misc/scratch/sp02-senior-design/augmented-reality-glasses/fpga_software/PL/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp \
- /misc/scratch/sp02-senior-design/augmented-reality-glasses/fpga_software/PL/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp
+ /misc/scratch/sp02-senior-design/augmented-reality-glasses/fpga_software/PL/Vitis_Libraries/vision/L1/include/common/xf_params.hpp

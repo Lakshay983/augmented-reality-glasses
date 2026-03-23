@@ -57,7 +57,7 @@ IFLAG += -D__SIM_FIR__
 IFLAG += -D__SIM_DDS__
 
 IFLAG += -D__DSP48E2__
-IFLAG += -I/misc/scratch/sp02-senior-design/augmented-reality-glasses/fpga_software/PL/Vitis_Libraries/vision/L1/include -std=c++14 -Wno-unknown-pragmas 
+IFLAG += -Wno-unknown-pragmas -I/misc/scratch/sp02-senior-design/augmented-reality-glasses/fpga_software/PL/Vitis_Libraries/vision/L1/include -std=c++14 
 IFLAG += -g
 DFLAG += -D__xilinx_ip_top= -DAESL_TB
 CCFLAG += -Werror=return-type

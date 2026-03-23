@@ -4,6 +4,7 @@
     <originFiles name="image_passthrough.cpp" path="/misc/scratch/sp02-senior-design/augmented-reality-glasses/fpga_software/PL/image_passthrough.cpp"/>
   </source>
   <testbench>
+    <originFiles name="input_bits.txt" path="/misc/scratch/sp02-senior-design/augmented-reality-glasses/fpga_software/PL_temp/input_bits.txt"/>
     <originFiles name="image_passthrough_tb.cpp" path="/misc/scratch/sp02-senior-design/augmented-reality-glasses/fpga_software/PL/image_passthrough_tb.cpp"/>
   </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>

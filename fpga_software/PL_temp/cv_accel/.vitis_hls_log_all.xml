@@ -3,6 +3,13 @@
   <errorLogs>
     <logs>
       <csimLog>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="cv_accel" solutionName="solution1" date="2026-03-22T18:39:35.995-0500"/>
+        <logs message="Error: Could not open input_bits.txt&#xA;@E Simulation failed: Function 'main' returns nonzero value '255'." projectName="cv_accel" solutionName="solution1" date="2026-03-22T18:39:35.989-0500"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="cv_accel" solutionName="solution1" date="2026-03-22T18:28:05.943-0500"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="cv_accel" solutionName="solution1" date="2026-03-22T18:24:15.476-0500"/>
+        <logs message="Error: Could not open input_rgba.bin. Make sure it is in the csim/build folder!&#xA;@E Simulation failed: Function 'main' returns nonzero value '255'." projectName="cv_accel" solutionName="solution1" date="2026-03-22T18:24:15.471-0500"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="cv_accel" solutionName="solution1" date="2026-03-22T18:19:05.408-0500"/>
+        <logs message="Error: Could not open input_rgba.bin. Make sure it is in the csim/build folder!&#xA;@E Simulation failed: Function 'main' returns nonzero value '255'." projectName="cv_accel" solutionName="solution1" date="2026-03-22T18:19:05.401-0500"/>
         <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="cv_accel" solutionName="solution1" date="2026-03-22T18:10:14.675-0500"/>
         <logs message="Error: Could not open input_rgba.bin. Make sure it is in the csim/build folder!&#xA;@E Simulation failed: Function 'main' returns nonzero value '255'." projectName="cv_accel" solutionName="solution1" date="2026-03-22T18:10:14.668-0500"/>
         <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="cv_accel" solutionName="solution1" date="2026-03-22T17:58:51.999-0500"/>

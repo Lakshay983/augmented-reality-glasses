@@ -169,6 +169,8 @@
                         					
                     </folderInfo>
                     					
+                    <fileInfo id="cdt.managedbuild.config.gnu.exe.debug.42518229.1907242474" name="input_bits.txt" rcbsApplicability="disable" resourcePath="testbench/input_bits.txt" toolsToInvoke=""/>
+                    					
                     <fileInfo id="cdt.managedbuild.config.gnu.exe.debug.42518229.239799664" name="image_passthrough_tb.cpp" rcbsApplicability="disable" resourcePath="testbench/image_passthrough_tb.cpp" toolsToInvoke="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1300349846.552958419">
                         						
                         <tool id="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1300349846.552958419" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1300349846">
@@ -193,7 +195,7 @@
                                 							
                             </option>
                             							
-                            <option id="gnu.cpp.compiler.option.other.other.126244223" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-std=c++14 -c -fmessage-length=0" valueType="string"/>
+                            <option id="gnu.cpp.compiler.option.other.other.126244223" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-std=c++14 -Wno-unknown-pragmas -c -fmessage-length=0" valueType="string"/>
                             							
                             <inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.967774482" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
                             						
@@ -235,7 +237,7 @@
                     					
                     <sourceEntries>
                         						
-                        <entry excluding=".apc|.settings|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+                        <entry excluding=".apc|.settings|solution1|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
                         					
                     </sourceEntries>
                     				
@@ -393,6 +395,8 @@
                         					
                     </folderInfo>
                     					
+                    <fileInfo id="cdt.managedbuild.config.gnu.exe.release.2071286949.907247510" name="input_bits.txt" rcbsApplicability="disable" resourcePath="testbench/input_bits.txt" toolsToInvoke=""/>
+                    					
                     <fileInfo id="cdt.managedbuild.config.gnu.exe.release.2071286949.1054132008" name="image_passthrough_tb.cpp" rcbsApplicability="disable" resourcePath="testbench/image_passthrough_tb.cpp" toolsToInvoke="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.194860074.1939839460">
                         						
                         <tool id="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.194860074.1939839460" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.194860074">
@@ -417,7 +421,7 @@
                                 							
                             </option>
                             							
-                            <option id="gnu.cpp.compiler.option.other.other.173172126" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-std=c++14 -c -fmessage-length=0" valueType="string"/>
+                            <option id="gnu.cpp.compiler.option.other.other.173172126" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-std=c++14 -Wno-unknown-pragmas -c -fmessage-length=0" valueType="string"/>
                             							
                             <inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1295589438" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
                             						
@@ -459,7 +463,7 @@
                     					
                     <sourceEntries>
                         						
-                        <entry excluding=".apc|.settings|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+                        <entry excluding=".apc|.settings|solution1|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
                         					
                     </sourceEntries>
                     				
