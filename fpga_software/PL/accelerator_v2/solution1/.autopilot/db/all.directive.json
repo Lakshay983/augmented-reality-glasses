@@ -1,0 +1,18 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [{
+          "functionName": "accelerator_v2",
+          "label": "",
+          "functionLabel": "",
+          "id": "1",
+          "sourceFile": "\/misc\/scratch\/gwl459\/augmented-reality-glasses\/fpga_software\/PL\/accelerator_v2\/solution1\/csynth.tcl",
+          "sourceLine": "15",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "accelerator_v2"
+              }]
+          }
+        }]
+    }]}

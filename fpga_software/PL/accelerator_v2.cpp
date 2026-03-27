@@ -8,18 +8,21 @@
 
 #define IMG_W            640
 #define IMG_H            480
-#define FIFO_DEPTH       (5 * IMG_W)
+#define PAD              2
+#define PAD_W            (IMG_W + 2*PAD)  // 644
+#define PAD_H            (IMG_H + 2*PAD)  // 484
+#define FIFO_DEPTH       (5 * PAD_W)
 #define FULL_BURSTS_OUT  42
 #define PARTIAL_PIX_OUT  10
 #define TOTAL_BURSTS_OUT 43
 #define INPUT_BURSTS_ROW 128
-#define KERNEL_SIZE 5
+#define KERNEL_SIZE      5
 
 typedef ap_axiu<128, 1, 1, 1> AxiBurst;
 
 void stream_to_mat(
     hls::stream<ap_uint<24>>& in,
-    xf::cv::Mat<XF_8UC3, IMG_H, IMG_W, XF_NPPC1, FIFO_DEPTH>& out,
+    xf::cv::Mat<XF_8UC3, PAD_H, PAD_W, XF_NPPC1, FIFO_DEPTH>& out,
     int rows, int cols)
 {
 
@@ -34,7 +37,7 @@ void stream_to_mat(
 }
 
 void mat_to_stream(
-    xf::cv::Mat<XF_8UC1, IMG_H, IMG_W, XF_NPPC1, FIFO_DEPTH>& in,
+    xf::cv::Mat<XF_8UC1, PAD_H, PAD_W, XF_NPPC1, FIFO_DEPTH>& in,
     hls::stream<ap_uint<8>>& out,
     int rows, int cols)
 {
@@ -48,6 +51,152 @@ void mat_to_stream(
         }
     }
 }
+
+
+void pad(
+    hls::stream<ap_uint<24>>& in,
+    hls::stream<ap_uint<24>>& out)
+{
+#pragma HLS INLINE off
+
+    ap_uint<24> row_buf[4][IMG_W];
+#pragma HLS ARRAY_PARTITION variable=row_buf complete dim=1
+
+    // Buffer top 3 rows (need row2 for REFLECT_101 top pad)
+    for (int r = 0; r < 3; r++) {
+        for (int c = 0; c < IMG_W; c++) {
+#pragma HLS PIPELINE II=1
+            row_buf[r][c] = in.read();
+        }
+    }
+
+    // REFLECT_101 top pad: emit row2, then row1
+    // (row0 is the border row — skipped per reflect-101)
+    for (int r = 2; r >= 1; r--) {
+        out.write(row_buf[r][2]);
+        out.write(row_buf[r][1]);
+        for (int c = 0; c < IMG_W; c++) {
+#pragma HLS PIPELINE II=1
+            out.write(row_buf[r][c]);
+        }
+        out.write(row_buf[r][IMG_W-2]);
+        out.write(row_buf[r][IMG_W-3]);
+    }
+
+    // Main body: rows 0..IMG_H-1
+    for (int r = 0; r < IMG_H; r++) {
+        int slot;
+        if (r < 3) {
+            slot = r;
+        } else {
+            slot = r % 2 + 2;
+            for (int c = 0; c < IMG_W; c++) {
+#pragma HLS PIPELINE II=1
+                row_buf[slot][c] = in.read();
+            }
+        }
+
+        out.write(row_buf[slot][2]);
+        out.write(row_buf[slot][1]);
+        for (int c = 0; c < IMG_W; c++) {
+#pragma HLS PIPELINE II=1
+            out.write(row_buf[slot][c]);
+        }
+        out.write(row_buf[slot][IMG_W-2]);
+        out.write(row_buf[slot][IMG_W-3]);
+    }
+
+    // REFLECT_101 bottom pad: emit row H-2, then row H-3
+    // (row H-1 is the border row — skipped per reflect-101)
+    for (int r = IMG_H-2; r >= IMG_H-3; r--) {
+        int slot = (r < 3) ? r : (r % 2 + 2);
+        out.write(row_buf[slot][2]);
+        out.write(row_buf[slot][1]);
+        for (int c = 0; c < IMG_W; c++) {
+#pragma HLS PIPELINE II=1
+            out.write(row_buf[slot][c]);
+        }
+        out.write(row_buf[slot][IMG_W-2]);
+        out.write(row_buf[slot][IMG_W-3]);
+    }
+}
+
+
+//void pad(
+//    hls::stream<ap_uint<24>>& in,
+//    hls::stream<ap_uint<24>>& out)
+//{
+//#pragma HLS INLINE off
+//
+//    ap_uint<24> row_buf[4][IMG_W];
+//#pragma HLS ARRAY_PARTITION variable=row_buf complete dim=1
+//
+//    // Buffer top two rows
+//    for (int r = 0; r < 2; r++) {
+//        for (int c = 0; c < IMG_W; c++) {
+//#pragma HLS PIPELINE II=1
+//            row_buf[r][c] = in.read();
+//        }
+//    }
+//
+//    // Emit reflected top rows: Row1, Row0
+//    for (int r = 1; r >= 0; r--) {
+//
+//        out.write(row_buf[r][1]);
+//        out.write(row_buf[r][0]);
+//
+//        for (int c = 0; c < IMG_W; c++) {
+//#pragma HLS PIPELINE II=1
+//            out.write(row_buf[r][c]);
+//        }
+//
+//        out.write(row_buf[r][IMG_W-2]);
+//        out.write(row_buf[r][IMG_W-1]);
+//    }
+//
+//    // Main body rows (including original top rows)
+//    for (int r = 0; r < IMG_H; r++) {
+//
+//        int slot;
+//        if (r < 2) {
+//            slot = r;              // use buffered rows
+//        } else {
+//            slot = r % 2 + 2;      // rotating buffer for remaining rows
+//            for (int c = 0; c < IMG_W; c++) {
+//#pragma HLS PIPELINE II=1
+//                row_buf[slot][c] = in.read();
+//            }
+//        }
+//
+//        out.write(row_buf[slot][1]);
+//        out.write(row_buf[slot][0]);
+//
+//        for (int c = 0; c < IMG_W; c++) {
+//#pragma HLS PIPELINE II=1
+//            out.write(row_buf[slot][c]);
+//        }
+//
+//        out.write(row_buf[slot][IMG_W-2]);
+//        out.write(row_buf[slot][IMG_W-1]);
+//    }
+//
+//    // Emit reflected bottom rows: Row(H-1), Row(H-2)
+//    for (int r = IMG_H-1; r >= IMG_H-2; r--) {
+//
+//        int slot = (r < 2) ? r : (r % 2 + 2);
+//
+//        out.write(row_buf[slot][1]);
+//        out.write(row_buf[slot][0]);
+//
+//        for (int c = 0; c < IMG_W; c++) {
+//#pragma HLS PIPELINE II=1
+//            out.write(row_buf[slot][c]);
+//        }
+//
+//        out.write(row_buf[slot][IMG_W-2]);
+//        out.write(row_buf[slot][IMG_W-1]);
+//    }
+//}
 
 
 void unpack(
@@ -88,26 +237,26 @@ void process_pixels(
 {
 #pragma HLS DATAFLOW
 
-    xf::cv::Mat<XF_8UC3, IMG_H, IMG_W, XF_NPPC1, FIFO_DEPTH> bgr_mat(rows, cols);
-    xf::cv::Mat<XF_8UC1, IMG_H, IMG_W, XF_NPPC1, FIFO_DEPTH> gray_mat(rows, cols);
-    xf::cv::Mat<XF_8UC1, IMG_H, IMG_W, XF_NPPC1, FIFO_DEPTH> blurred_mat(rows, cols);
+    xf::cv::Mat<XF_8UC3, PAD_H, PAD_W, XF_NPPC1, FIFO_DEPTH> bgr_mat(rows, cols);
+    xf::cv::Mat<XF_8UC1, PAD_H, PAD_W, XF_NPPC1, FIFO_DEPTH> gray_mat(rows, cols);
+    xf::cv::Mat<XF_8UC1, PAD_H, PAD_W, XF_NPPC1, FIFO_DEPTH> blurred_mat(rows, cols);
 
-    // Ensure the Mats know their exact size for this execution
-    bgr_mat.rows = rows; bgr_mat.cols = cols;
-    gray_mat.rows = rows; gray_mat.cols = cols;
-    blurred_mat.rows = rows; blurred_mat.cols = cols;
 
     stream_to_mat(bgr_stream, bgr_mat, rows, cols);
 
     // Convert BGR to Gray
-    xf::cv::bgr2gray<XF_8UC3, XF_8UC1, IMG_H, IMG_W, XF_NPPC1>(bgr_mat, gray_mat);
+    xf::cv::bgr2gray<XF_8UC3, XF_8UC1, PAD_H, PAD_W, XF_NPPC1>(bgr_mat, gray_mat);
 
     // Gaussian Filter - Ensure sigma is provided if not using 0.0f
-    xf::cv::GaussianBlur<KERNEL_SIZE, XF_BORDER_REFLECT_101, XF_8UC1, IMG_H, IMG_W, XF_NPPC1>(
-        gray_mat, blurred_mat, 1.0f); // Try 1.0f instead of 0.0f to see if it stabilizes
+    xf::cv::GaussianBlur<KERNEL_SIZE, XF_BORDER_CONSTANT, XF_8UC1, PAD_H, PAD_W, XF_NPPC1>(
+        gray_mat, blurred_mat, 0.0f); // Try 1.0f instead of 0.0f to see if it stabilizes
 
     mat_to_stream(blurred_mat, gray_stream_out, rows, cols);
 }
+
+
+
+
 
 
 void repack(
@@ -118,44 +267,51 @@ void repack(
 {
 #pragma HLS INLINE off
 
-    for (int r = 0; r < rows; r++) {
-        for (int ob = 0; ob < TOTAL_BURSTS_OUT; ob++) {
-#pragma HLS PIPELINE II=15
-
-            AxiBurst out_burst;
-            out_burst.data = 0;
-            out_burst.keep = -1;
-            out_burst.strb = -1;
-
-            int n_pix = (ob < FULL_BURSTS_OUT) ? 15 : PARTIAL_PIX_OUT;
-
-            for (int p = 0; p < 15; p++) {
-#pragma HLS UNROLL
-                if (p < n_pix) {
-                    ap_uint<8> gray = gray_stream.read();
-                    int bit_hi = 127 - p * 8;
-                    out_burst.data(bit_hi, bit_hi - 7) = gray;
-                }
-            }
-
-            out_burst.data(7, 0) = (ap_uint<8>)ob;
-            out_burst.last       = (ob == TOTAL_BURSTS_OUT - 1) && (r == rows - 1);
-            out_burst.user       = (ob == 0) && (r == 0);
-
-            burst_out.write(out_burst);
+    for (int r = 0; r < PAD_H; r++) {
+        // Read full padded row from gray_stream
+        ap_uint<8> row_pixels[PAD_W];
+        for (int c = 0; c < PAD_W; c++) {
+#pragma HLS PIPELINE II=1
+            row_pixels[c] = gray_stream.read();
         }
 
-        // Drain input headers for this row (not forwarded to output)
-        for (int ib = 0; ib < INPUT_BURSTS_ROW; ib++) {
+        // Only pack and output interior rows
+        if (r >= PAD && r < PAD_H - PAD) {
+            for (int ob = 0; ob < TOTAL_BURSTS_OUT; ob++) {
+#pragma HLS PIPELINE II=15
+                AxiBurst out_burst;
+                out_burst.data = 0;
+                out_burst.keep = -1;
+                out_burst.strb = -1;
+
+                int n_pix = (ob < FULL_BURSTS_OUT) ? 15 : PARTIAL_PIX_OUT;
+
+                for (int p = 0; p < 15; p++) {
+#pragma HLS UNROLL
+                    if (p < n_pix) {
+                        // offset by PAD to skip left border
+                        ap_uint<8> gray = row_pixels[PAD + ob * 15 + p];
+                        int bit_hi = 127 - p * 8;
+                        out_burst.data(bit_hi, bit_hi - 7) = gray;
+                    }
+                }
+
+                out_burst.data(7, 0) = (ap_uint<8>)ob;
+                int out_row = r - PAD;
+                out_burst.last = (ob == TOTAL_BURSTS_OUT-1) && (out_row == IMG_H-1);
+                out_burst.user = (ob == 0) && (out_row == 0);
+
+                burst_out.write(out_burst);
+            }
+
+            // Drain header for this row
+            for (int ib = 0; ib < INPUT_BURSTS_ROW; ib++) {
 #pragma HLS PIPELINE II=1
-            hdr_stream.read();
+                hdr_stream.read();
+            }
         }
     }
 }
-
-
-
-
 
 
 
@@ -173,11 +329,13 @@ void accelerator_v2(
 #pragma HLS DATAFLOW
 
     hls::stream<ap_uint<24>> bgr_stream("bgr_stream");
+    hls::stream<ap_uint<24>> padded_stream("padded_stream");
     hls::stream<ap_uint<8>>  gray_stream("gray_stream");
     hls::stream<ap_uint<8>>  hdr_stream("hdr_stream");
-#pragma HLS STREAM variable=bgr_stream  depth=1920
-#pragma HLS STREAM variable=gray_stream depth=640
-#pragma HLS STREAM variable=hdr_stream  depth=128
+#pragma HLS STREAM variable=bgr_stream  depth=307200
+#pragma HLS STREAM variable=padded_stream depth=307200
+#pragma HLS STREAM variable=gray_stream depth=307200
+#pragma HLS STREAM variable=hdr_stream  depth=61440
 
     volatile bool frame_start = false;
 
@@ -185,7 +343,9 @@ void accelerator_v2(
 
     *in_breath = frame_start ? 1 : 0;
 
-    process_pixels(bgr_stream, gray_stream, IMG_H, IMG_W);
+    pad(bgr_stream, padded_stream);
+
+    process_pixels(padded_stream, gray_stream, PAD_H, PAD_W);
 
     repack(gray_stream, hdr_stream, out_stream, IMG_H);
 

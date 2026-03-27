@@ -1,0 +1,23 @@
+<dict>
+  <key>main-file</key>
+  <string>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL/accelerator_v2/solution1/.autopilot/db/accelerator_v2.pp.0.cpp</string>
+  <key>diagnostics</key>
+  <array>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp</string>
+      <key>line</key>
+      <integer>759</integer>
+      <key>column</key>
+      <integer>47</integer>
+      <key>message</key>
+      <string>&apos;factor&apos; in &apos;#pragma HLS array_reshape&apos; is ignored</string>
+      <key>ID</key>
+      <integer>5529</integer>
+      <key>WarningOption</key>
+      <string>extra-tokens</string>
+    </dict>
+  </array>
+</dict>
