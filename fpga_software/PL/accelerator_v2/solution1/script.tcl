@@ -6,8 +6,8 @@
 open_project accelerator_v2
 set_top accelerator_v2
 add_files accelerator_v2.cpp -cflags "-Wno-unknown-pragmas -I/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include"
-add_files -tb accelerator_v2_tb.cpp -cflags "-I/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include -Wno-unknown-pragmas -Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
-add_files -tb tb_data -cflags "-Wno-unknown-pragmas -Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
+add_files -tb accelerator_v2_tb.cpp -cflags "-I/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
+add_files -tb tb_data -cflags "-Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
 open_solution "solution1" -flow_target vivado
 set_part {xcvu11p-flga2577-1-e}
 create_clock -period 10 -name default

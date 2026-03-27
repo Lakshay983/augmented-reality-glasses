@@ -7,6 +7,10 @@
       <mgLog/>
       <packageLog/>
       <csimLog>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="accelerator_v2" solutionName="solution1" date="2026-03-27T00:56:21.399-0500"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="accelerator_v2" solutionName="solution1" date="2026-03-27T00:53:56.273-0500"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="accelerator_v2" solutionName="solution1" date="2026-03-27T00:50:44.265-0500"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="accelerator_v2" solutionName="solution1" date="2026-03-26T18:05:05.768-0500"/>
         <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="accelerator_v2" solutionName="solution1" date="2026-03-25T16:16:23.816-0500"/>
         <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="accelerator_v2" solutionName="solution1" date="2026-03-25T16:09:46.210-0500"/>
         <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="accelerator_v2" solutionName="solution1" date="2026-03-25T14:30:29.805-0500"/>
