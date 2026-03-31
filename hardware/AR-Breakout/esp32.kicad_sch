@@ -1615,16 +1615,6 @@
 		)
 		(uuid "ecbc89db-1e49-4066-ba53-7681d0587288")
 	)
-	(wire
-		(pts
-			(xy 223.52 76.2) (xy 231.14 76.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ef584aaa-fbd7-4f57-83bc-2bff6b54c2f4")
-	)
 	(image
 		(at 76.2 45.72)
 		(scale 0.275747)
@@ -4587,16 +4577,6 @@
 		)
 		(uuid "76f9a93a-2d25-4c00-b88f-e6dad6503186")
 	)
-	(label "esp_3V3"
-		(at 231.14 76.2 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "78decfaa-1cd3-41d9-a82e-cb89960760d9")
-	)
 	(label "esp_connected"
 		(at 176.53 92.71 180)
 		(effects
@@ -4671,6 +4651,17 @@
 			(justify left)
 		)
 		(uuid "d2065425-c440-47e4-8557-2b2f42f6409a")
+	)
+	(hierarchical_label "esp_3v3"
+		(shape input)
+		(at 223.52 76.2 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "ecf7c21e-19e4-4374-bf5a-2153acc07b7e")
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")

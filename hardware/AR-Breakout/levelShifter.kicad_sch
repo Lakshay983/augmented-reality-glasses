@@ -842,6 +842,12 @@
 		(uuid "02474af9-9f09-4feb-81b6-b490ea87afb0")
 	)
 	(junction
+		(at 113.03 99.06)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9e636fb8-0863-4253-9b0a-da5defda1a4a")
+	)
+	(junction
 		(at 175.26 91.44)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -896,6 +902,16 @@
 			(type default)
 		)
 		(uuid "2dc895a3-8f10-452a-bdff-39fdbf42ecca")
+	)
+	(wire
+		(pts
+			(xy 102.87 106.68) (xy 102.87 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "313d4955-a140-4f9c-a342-5e996d6fb055")
 	)
 	(wire
 		(pts
@@ -1106,6 +1122,16 @@
 			(type default)
 		)
 		(uuid "e8718054-d8ee-484b-88e5-192326f2a503")
+	)
+	(wire
+		(pts
+			(xy 102.87 99.06) (xy 113.03 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f2978b71-cc4a-4590-ac90-fbe87d955379")
 	)
 	(wire
 		(pts
@@ -1505,6 +1531,85 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 102.87 102.87 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp yes)
+		(fields_autoplaced yes)
+		(uuid "2968f079-db9d-4b3e-b7a5-6b12cf11b5fa")
+		(property "Reference" "R11"
+			(at 105.41 101.5999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "1k"
+			(at 105.41 104.1399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 104.648 102.87 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/ProductDetail/Vishay/CRCW08051K00FKEC?qs=sGAEpiMZZMtlubZbdhIBIFs1Oj6PMX3TPTY7i7uLkXQ%3D"
+			(at 102.87 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 102.87 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "P/N" "CRCW08051K00FKEC"
+			(at 102.87 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "60b693e5-6b58-4ace-940c-4e399fc0d50c")
+		)
+		(pin "1"
+			(uuid "07cb6431-b528-4562-ba94-fb93c3b07d1b")
+		)
+		(instances
+			(project "AR-Breakout"
+				(path "/5ae0ba6b-d768-4d4d-8ff4-88d4f982d867/dfb99732-73c4-427d-a435-74cc7602ce9d/c68b3bdd-ae34-43ef-9262-8b1b6ebfb183"
+					(reference "R11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 175.26 102.87 0)
 		(unit 1)
@@ -1781,6 +1886,72 @@
 			(project ""
 				(path "/5ae0ba6b-d768-4d4d-8ff4-88d4f982d867/dfb99732-73c4-427d-a435-74cc7602ce9d/c68b3bdd-ae34-43ef-9262-8b1b6ebfb183"
 					(reference "U2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 102.87 107.95 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b9228a40-12fa-48b7-a660-797733445a1d")
+		(property "Reference" "#PWR09"
+			(at 102.87 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 102.87 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 102.87 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 102.87 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 102.87 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c0703fdf-46d6-4342-a06a-a78d33726d70")
+		)
+		(instances
+			(project "AR-Breakout"
+				(path "/5ae0ba6b-d768-4d4d-8ff4-88d4f982d867/dfb99732-73c4-427d-a435-74cc7602ce9d/c68b3bdd-ae34-43ef-9262-8b1b6ebfb183"
+					(reference "#PWR09")
 					(unit 1)
 				)
 			)

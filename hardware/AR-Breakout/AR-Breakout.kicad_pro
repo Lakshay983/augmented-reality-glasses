@@ -48,7 +48,7 @@
         "silk_text_thickness": 0.1,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.5
+          "min_clearance": 0.0
         }
       },
       "diff_pair_dimensions": [],
@@ -101,6 +101,7 @@
         "solder_mask_bridge": "error",
         "starved_thermal": "error",
         "text_height": "warning",
+        "text_on_edge_cuts": "error",
         "text_thickness": "warning",
         "through_hole_pad_without_hole": "error",
         "too_many_vias": "error",
@@ -132,7 +133,7 @@
         "min_track_width": 0.0,
         "min_via_annular_width": 0.1,
         "min_via_diameter": 0.5,
-        "solder_mask_to_copper_clearance": 0.0,
+        "solder_mask_to_copper_clearance": 0.005,
         "use_height_for_length_calcs": true
       },
       "teardrop_options": [
@@ -225,7 +226,12 @@
     "equivalence_files": []
   },
   "erc": {
-    "erc_exclusions": [],
+    "erc_exclusions": [
+      [
+        "pin_to_pin|1651000|762000|5b29ee44-fcbf-4c1b-b2b6-0c0c0139c490|b3265e74-2da4-4285-8a57-1c7643df51f3|/5ae0ba6b-d768-4d4d-8ff4-88d4f982d867/9c403436-a1b9-494e-a1c8-54cfa1e27e97|/5ae0ba6b-d768-4d4d-8ff4-88d4f982d867/9c403436-a1b9-494e-a1c8-54cfa1e27e97|/5ae0ba6b-d768-4d4d-8ff4-88d4f982d867/9c403436-a1b9-494e-a1c8-54cfa1e27e97",
+        ""
+      ]
+    ],
     "meta": {
       "version": 0
     },
@@ -427,10 +433,10 @@
       "net_not_bus_member": "warning",
       "no_connect_connected": "warning",
       "no_connect_dangling": "warning",
-      "pin_not_connected": "error",
+      "pin_not_connected": "ignore",
       "pin_not_driven": "error",
       "pin_to_pin": "error",
-      "power_pin_not_driven": "error",
+      "power_pin_not_driven": "ignore",
       "same_local_global_label": "warning",
       "similar_label_and_power": "warning",
       "similar_labels": "warning",
@@ -618,20 +624,24 @@
       "UsbPowerDist"
     ],
     [
-      "25582666-6387-4949-8ebf-0e403b83d20b",
-      "esp32"
-    ],
-    [
-      "41c28944-458b-4b9a-8139-2268b86a2462",
-      "imu"
+      "df18dd6d-2bdc-464e-8020-ed900c21c383",
+      "1.8v_Led1"
     ],
     [
       "dfb99732-73c4-427d-a435-74cc7602ce9d",
       "ultra96"
     ],
     [
+      "01b80956-2e4d-4537-b317-748465aace56",
+      "1.8v_Led"
+    ],
+    [
       "c68b3bdd-ae34-43ef-9262-8b1b6ebfb183",
       "levelShifter"
+    ],
+    [
+      "9c403436-a1b9-494e-a1c8-54cfa1e27e97",
+      "5-3.3V_LDO"
     ]
   ],
   "text_variables": {}
