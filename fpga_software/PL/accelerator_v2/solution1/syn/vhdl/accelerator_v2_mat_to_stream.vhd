@@ -19,8 +19,8 @@ port (
     ap_idle : OUT STD_LOGIC;
     ap_ready : OUT STD_LOGIC;
     blurred_mat_data45_dout : IN STD_LOGIC_VECTOR (7 downto 0);
-    blurred_mat_data45_num_data_valid : IN STD_LOGIC_VECTOR (12 downto 0);
-    blurred_mat_data45_fifo_cap : IN STD_LOGIC_VECTOR (12 downto 0);
+    blurred_mat_data45_num_data_valid : IN STD_LOGIC_VECTOR (19 downto 0);
+    blurred_mat_data45_fifo_cap : IN STD_LOGIC_VECTOR (19 downto 0);
     blurred_mat_data45_empty_n : IN STD_LOGIC;
     blurred_mat_data45_read : OUT STD_LOGIC;
     gray_stream3_din : OUT STD_LOGIC_VECTOR (7 downto 0);

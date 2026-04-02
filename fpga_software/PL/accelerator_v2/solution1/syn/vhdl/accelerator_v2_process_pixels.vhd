@@ -43,26 +43,26 @@ attribute shreg_extract : string;
     signal stream_to_mat_U0_bgr_mat_data43_write : STD_LOGIC;
     signal stream_to_mat_U0_start_out : STD_LOGIC;
     signal stream_to_mat_U0_start_write : STD_LOGIC;
-    signal bgr2gray_9_0_484_644_1_3220_3220_U0_ap_start : STD_LOGIC;
-    signal bgr2gray_9_0_484_644_1_3220_3220_U0_ap_done : STD_LOGIC;
-    signal bgr2gray_9_0_484_644_1_3220_3220_U0_ap_continue : STD_LOGIC;
-    signal bgr2gray_9_0_484_644_1_3220_3220_U0_ap_idle : STD_LOGIC;
-    signal bgr2gray_9_0_484_644_1_3220_3220_U0_ap_ready : STD_LOGIC;
-    signal bgr2gray_9_0_484_644_1_3220_3220_U0_start_out : STD_LOGIC;
-    signal bgr2gray_9_0_484_644_1_3220_3220_U0_start_write : STD_LOGIC;
-    signal bgr2gray_9_0_484_644_1_3220_3220_U0_bgr_mat_data43_read : STD_LOGIC;
-    signal bgr2gray_9_0_484_644_1_3220_3220_U0_gray_mat_data44_din : STD_LOGIC_VECTOR (7 downto 0);
-    signal bgr2gray_9_0_484_644_1_3220_3220_U0_gray_mat_data44_write : STD_LOGIC;
-    signal GaussianBlur_5_0_0_484_644_1_3220_3220_U0_ap_start : STD_LOGIC;
-    signal GaussianBlur_5_0_0_484_644_1_3220_3220_U0_ap_done : STD_LOGIC;
-    signal GaussianBlur_5_0_0_484_644_1_3220_3220_U0_ap_continue : STD_LOGIC;
-    signal GaussianBlur_5_0_0_484_644_1_3220_3220_U0_ap_idle : STD_LOGIC;
-    signal GaussianBlur_5_0_0_484_644_1_3220_3220_U0_ap_ready : STD_LOGIC;
-    signal GaussianBlur_5_0_0_484_644_1_3220_3220_U0_start_out : STD_LOGIC;
-    signal GaussianBlur_5_0_0_484_644_1_3220_3220_U0_start_write : STD_LOGIC;
-    signal GaussianBlur_5_0_0_484_644_1_3220_3220_U0_gray_mat_data44_read : STD_LOGIC;
-    signal GaussianBlur_5_0_0_484_644_1_3220_3220_U0_blurred_mat_data45_din : STD_LOGIC_VECTOR (7 downto 0);
-    signal GaussianBlur_5_0_0_484_644_1_3220_3220_U0_blurred_mat_data45_write : STD_LOGIC;
+    signal bgr2gray_9_0_484_644_1_311696_311696_U0_ap_start : STD_LOGIC;
+    signal bgr2gray_9_0_484_644_1_311696_311696_U0_ap_done : STD_LOGIC;
+    signal bgr2gray_9_0_484_644_1_311696_311696_U0_ap_continue : STD_LOGIC;
+    signal bgr2gray_9_0_484_644_1_311696_311696_U0_ap_idle : STD_LOGIC;
+    signal bgr2gray_9_0_484_644_1_311696_311696_U0_ap_ready : STD_LOGIC;
+    signal bgr2gray_9_0_484_644_1_311696_311696_U0_start_out : STD_LOGIC;
+    signal bgr2gray_9_0_484_644_1_311696_311696_U0_start_write : STD_LOGIC;
+    signal bgr2gray_9_0_484_644_1_311696_311696_U0_bgr_mat_data43_read : STD_LOGIC;
+    signal bgr2gray_9_0_484_644_1_311696_311696_U0_gray_mat_data44_din : STD_LOGIC_VECTOR (7 downto 0);
+    signal bgr2gray_9_0_484_644_1_311696_311696_U0_gray_mat_data44_write : STD_LOGIC;
+    signal GaussianBlur_5_1_0_484_644_1_311696_311696_U0_ap_start : STD_LOGIC;
+    signal GaussianBlur_5_1_0_484_644_1_311696_311696_U0_ap_done : STD_LOGIC;
+    signal GaussianBlur_5_1_0_484_644_1_311696_311696_U0_ap_continue : STD_LOGIC;
+    signal GaussianBlur_5_1_0_484_644_1_311696_311696_U0_ap_idle : STD_LOGIC;
+    signal GaussianBlur_5_1_0_484_644_1_311696_311696_U0_ap_ready : STD_LOGIC;
+    signal GaussianBlur_5_1_0_484_644_1_311696_311696_U0_start_out : STD_LOGIC;
+    signal GaussianBlur_5_1_0_484_644_1_311696_311696_U0_start_write : STD_LOGIC;
+    signal GaussianBlur_5_1_0_484_644_1_311696_311696_U0_gray_mat_data44_read : STD_LOGIC;
+    signal GaussianBlur_5_1_0_484_644_1_311696_311696_U0_blurred_mat_data45_din : STD_LOGIC_VECTOR (7 downto 0);
+    signal GaussianBlur_5_1_0_484_644_1_311696_311696_U0_blurred_mat_data45_write : STD_LOGIC;
     signal mat_to_stream_U0_ap_start : STD_LOGIC;
     signal mat_to_stream_U0_ap_done : STD_LOGIC;
     signal mat_to_stream_U0_ap_continue : STD_LOGIC;
@@ -73,27 +73,27 @@ attribute shreg_extract : string;
     signal mat_to_stream_U0_gray_stream3_write : STD_LOGIC;
     signal bgr_mat_data_full_n : STD_LOGIC;
     signal bgr_mat_data_dout : STD_LOGIC_VECTOR (23 downto 0);
-    signal bgr_mat_data_num_data_valid : STD_LOGIC_VECTOR (12 downto 0);
-    signal bgr_mat_data_fifo_cap : STD_LOGIC_VECTOR (12 downto 0);
+    signal bgr_mat_data_num_data_valid : STD_LOGIC_VECTOR (19 downto 0);
+    signal bgr_mat_data_fifo_cap : STD_LOGIC_VECTOR (19 downto 0);
     signal bgr_mat_data_empty_n : STD_LOGIC;
     signal gray_mat_data_full_n : STD_LOGIC;
     signal gray_mat_data_dout : STD_LOGIC_VECTOR (7 downto 0);
-    signal gray_mat_data_num_data_valid : STD_LOGIC_VECTOR (12 downto 0);
-    signal gray_mat_data_fifo_cap : STD_LOGIC_VECTOR (12 downto 0);
+    signal gray_mat_data_num_data_valid : STD_LOGIC_VECTOR (19 downto 0);
+    signal gray_mat_data_fifo_cap : STD_LOGIC_VECTOR (19 downto 0);
     signal gray_mat_data_empty_n : STD_LOGIC;
     signal blurred_mat_data_full_n : STD_LOGIC;
     signal blurred_mat_data_dout : STD_LOGIC_VECTOR (7 downto 0);
-    signal blurred_mat_data_num_data_valid : STD_LOGIC_VECTOR (12 downto 0);
-    signal blurred_mat_data_fifo_cap : STD_LOGIC_VECTOR (12 downto 0);
+    signal blurred_mat_data_num_data_valid : STD_LOGIC_VECTOR (19 downto 0);
+    signal blurred_mat_data_fifo_cap : STD_LOGIC_VECTOR (19 downto 0);
     signal blurred_mat_data_empty_n : STD_LOGIC;
-    signal start_for_bgr2gray_9_0_484_644_1_3220_3220_U0_din : STD_LOGIC_VECTOR (0 downto 0);
-    signal start_for_bgr2gray_9_0_484_644_1_3220_3220_U0_full_n : STD_LOGIC;
-    signal start_for_bgr2gray_9_0_484_644_1_3220_3220_U0_dout : STD_LOGIC_VECTOR (0 downto 0);
-    signal start_for_bgr2gray_9_0_484_644_1_3220_3220_U0_empty_n : STD_LOGIC;
-    signal start_for_GaussianBlur_5_0_0_484_644_1_3220_3220_U0_din : STD_LOGIC_VECTOR (0 downto 0);
-    signal start_for_GaussianBlur_5_0_0_484_644_1_3220_3220_U0_full_n : STD_LOGIC;
-    signal start_for_GaussianBlur_5_0_0_484_644_1_3220_3220_U0_dout : STD_LOGIC_VECTOR (0 downto 0);
-    signal start_for_GaussianBlur_5_0_0_484_644_1_3220_3220_U0_empty_n : STD_LOGIC;
+    signal start_for_bgr2gray_9_0_484_644_1_311696_311696_U0_din : STD_LOGIC_VECTOR (0 downto 0);
+    signal start_for_bgr2gray_9_0_484_644_1_311696_311696_U0_full_n : STD_LOGIC;
+    signal start_for_bgr2gray_9_0_484_644_1_311696_311696_U0_dout : STD_LOGIC_VECTOR (0 downto 0);
+    signal start_for_bgr2gray_9_0_484_644_1_311696_311696_U0_empty_n : STD_LOGIC;
+    signal start_for_GaussianBlur_5_1_0_484_644_1_311696_311696_U0_din : STD_LOGIC_VECTOR (0 downto 0);
+    signal start_for_GaussianBlur_5_1_0_484_644_1_311696_311696_U0_full_n : STD_LOGIC;
+    signal start_for_GaussianBlur_5_1_0_484_644_1_311696_311696_U0_dout : STD_LOGIC_VECTOR (0 downto 0);
+    signal start_for_GaussianBlur_5_1_0_484_644_1_311696_311696_U0_empty_n : STD_LOGIC;
     signal start_for_mat_to_stream_U0_din : STD_LOGIC_VECTOR (0 downto 0);
     signal start_for_mat_to_stream_U0_full_n : STD_LOGIC;
     signal start_for_mat_to_stream_U0_dout : STD_LOGIC_VECTOR (0 downto 0);
@@ -115,8 +115,8 @@ attribute shreg_extract : string;
         padded_stream2_empty_n : IN STD_LOGIC;
         padded_stream2_read : OUT STD_LOGIC;
         bgr_mat_data43_din : OUT STD_LOGIC_VECTOR (23 downto 0);
-        bgr_mat_data43_num_data_valid : IN STD_LOGIC_VECTOR (12 downto 0);
-        bgr_mat_data43_fifo_cap : IN STD_LOGIC_VECTOR (12 downto 0);
+        bgr_mat_data43_num_data_valid : IN STD_LOGIC_VECTOR (19 downto 0);
+        bgr_mat_data43_fifo_cap : IN STD_LOGIC_VECTOR (19 downto 0);
         bgr_mat_data43_full_n : IN STD_LOGIC;
         bgr_mat_data43_write : OUT STD_LOGIC;
         start_out : OUT STD_LOGIC;
@@ -124,7 +124,7 @@ attribute shreg_extract : string;
     end component;
 
 
-    component accelerator_v2_bgr2gray_9_0_484_644_1_3220_3220_s IS
+    component accelerator_v2_bgr2gray_9_0_484_644_1_311696_311696_s IS
     port (
         ap_clk : IN STD_LOGIC;
         ap_rst : IN STD_LOGIC;
@@ -137,19 +137,19 @@ attribute shreg_extract : string;
         start_out : OUT STD_LOGIC;
         start_write : OUT STD_LOGIC;
         bgr_mat_data43_dout : IN STD_LOGIC_VECTOR (23 downto 0);
-        bgr_mat_data43_num_data_valid : IN STD_LOGIC_VECTOR (12 downto 0);
-        bgr_mat_data43_fifo_cap : IN STD_LOGIC_VECTOR (12 downto 0);
+        bgr_mat_data43_num_data_valid : IN STD_LOGIC_VECTOR (19 downto 0);
+        bgr_mat_data43_fifo_cap : IN STD_LOGIC_VECTOR (19 downto 0);
         bgr_mat_data43_empty_n : IN STD_LOGIC;
         bgr_mat_data43_read : OUT STD_LOGIC;
         gray_mat_data44_din : OUT STD_LOGIC_VECTOR (7 downto 0);
-        gray_mat_data44_num_data_valid : IN STD_LOGIC_VECTOR (12 downto 0);
-        gray_mat_data44_fifo_cap : IN STD_LOGIC_VECTOR (12 downto 0);
+        gray_mat_data44_num_data_valid : IN STD_LOGIC_VECTOR (19 downto 0);
+        gray_mat_data44_fifo_cap : IN STD_LOGIC_VECTOR (19 downto 0);
         gray_mat_data44_full_n : IN STD_LOGIC;
         gray_mat_data44_write : OUT STD_LOGIC );
     end component;
 
 
-    component accelerator_v2_GaussianBlur_5_0_0_484_644_1_3220_3220_s IS
+    component accelerator_v2_GaussianBlur_5_1_0_484_644_1_311696_311696_s IS
     port (
         ap_clk : IN STD_LOGIC;
         ap_rst : IN STD_LOGIC;
@@ -162,13 +162,13 @@ attribute shreg_extract : string;
         start_out : OUT STD_LOGIC;
         start_write : OUT STD_LOGIC;
         gray_mat_data44_dout : IN STD_LOGIC_VECTOR (7 downto 0);
-        gray_mat_data44_num_data_valid : IN STD_LOGIC_VECTOR (12 downto 0);
-        gray_mat_data44_fifo_cap : IN STD_LOGIC_VECTOR (12 downto 0);
+        gray_mat_data44_num_data_valid : IN STD_LOGIC_VECTOR (19 downto 0);
+        gray_mat_data44_fifo_cap : IN STD_LOGIC_VECTOR (19 downto 0);
         gray_mat_data44_empty_n : IN STD_LOGIC;
         gray_mat_data44_read : OUT STD_LOGIC;
         blurred_mat_data45_din : OUT STD_LOGIC_VECTOR (7 downto 0);
-        blurred_mat_data45_num_data_valid : IN STD_LOGIC_VECTOR (12 downto 0);
-        blurred_mat_data45_fifo_cap : IN STD_LOGIC_VECTOR (12 downto 0);
+        blurred_mat_data45_num_data_valid : IN STD_LOGIC_VECTOR (19 downto 0);
+        blurred_mat_data45_fifo_cap : IN STD_LOGIC_VECTOR (19 downto 0);
         blurred_mat_data45_full_n : IN STD_LOGIC;
         blurred_mat_data45_write : OUT STD_LOGIC );
     end component;
@@ -184,8 +184,8 @@ attribute shreg_extract : string;
         ap_idle : OUT STD_LOGIC;
         ap_ready : OUT STD_LOGIC;
         blurred_mat_data45_dout : IN STD_LOGIC_VECTOR (7 downto 0);
-        blurred_mat_data45_num_data_valid : IN STD_LOGIC_VECTOR (12 downto 0);
-        blurred_mat_data45_fifo_cap : IN STD_LOGIC_VECTOR (12 downto 0);
+        blurred_mat_data45_num_data_valid : IN STD_LOGIC_VECTOR (19 downto 0);
+        blurred_mat_data45_fifo_cap : IN STD_LOGIC_VECTOR (19 downto 0);
         blurred_mat_data45_empty_n : IN STD_LOGIC;
         blurred_mat_data45_read : OUT STD_LOGIC;
         gray_stream3_din : OUT STD_LOGIC_VECTOR (7 downto 0);
@@ -196,7 +196,7 @@ attribute shreg_extract : string;
     end component;
 
 
-    component accelerator_v2_fifo_w24_d3220_A IS
+    component accelerator_v2_fifo_w24_d311696_A IS
     port (
         clk : IN STD_LOGIC;
         reset : IN STD_LOGIC;
@@ -206,14 +206,14 @@ attribute shreg_extract : string;
         if_full_n : OUT STD_LOGIC;
         if_write : IN STD_LOGIC;
         if_dout : OUT STD_LOGIC_VECTOR (23 downto 0);
-        if_num_data_valid : OUT STD_LOGIC_VECTOR (12 downto 0);
-        if_fifo_cap : OUT STD_LOGIC_VECTOR (12 downto 0);
+        if_num_data_valid : OUT STD_LOGIC_VECTOR (19 downto 0);
+        if_fifo_cap : OUT STD_LOGIC_VECTOR (19 downto 0);
         if_empty_n : OUT STD_LOGIC;
         if_read : IN STD_LOGIC );
     end component;
 
 
-    component accelerator_v2_fifo_w8_d3220_A IS
+    component accelerator_v2_fifo_w8_d311696_A IS
     port (
         clk : IN STD_LOGIC;
         reset : IN STD_LOGIC;
@@ -223,14 +223,14 @@ attribute shreg_extract : string;
         if_full_n : OUT STD_LOGIC;
         if_write : IN STD_LOGIC;
         if_dout : OUT STD_LOGIC_VECTOR (7 downto 0);
-        if_num_data_valid : OUT STD_LOGIC_VECTOR (12 downto 0);
-        if_fifo_cap : OUT STD_LOGIC_VECTOR (12 downto 0);
+        if_num_data_valid : OUT STD_LOGIC_VECTOR (19 downto 0);
+        if_fifo_cap : OUT STD_LOGIC_VECTOR (19 downto 0);
         if_empty_n : OUT STD_LOGIC;
         if_read : IN STD_LOGIC );
     end component;
 
 
-    component accelerator_v2_start_for_bgr2gray_9_0_484_644_1_3220_3220_U0 IS
+    component accelerator_v2_start_for_bgr2gray_9_0_484_644_1_311696_311696_U0 IS
     port (
         clk : IN STD_LOGIC;
         reset : IN STD_LOGIC;
@@ -245,7 +245,7 @@ attribute shreg_extract : string;
     end component;
 
 
-    component accelerator_v2_start_for_GaussianBlur_5_0_0_484_644_1_3220_3220_U0 IS
+    component accelerator_v2_start_for_GaussianBlur_5_1_0_484_644_1_311696_311696_U0 IS
     port (
         clk : IN STD_LOGIC;
         reset : IN STD_LOGIC;
@@ -282,7 +282,7 @@ begin
         ap_clk => ap_clk,
         ap_rst => ap_rst,
         ap_start => stream_to_mat_U0_ap_start,
-        start_full_n => start_for_bgr2gray_9_0_484_644_1_3220_3220_U0_full_n,
+        start_full_n => start_for_bgr2gray_9_0_484_644_1_311696_311696_U0_full_n,
         ap_done => stream_to_mat_U0_ap_done,
         ap_continue => stream_to_mat_U0_ap_continue,
         ap_idle => stream_to_mat_U0_ap_idle,
@@ -300,51 +300,51 @@ begin
         start_out => stream_to_mat_U0_start_out,
         start_write => stream_to_mat_U0_start_write);
 
-    bgr2gray_9_0_484_644_1_3220_3220_U0 : component accelerator_v2_bgr2gray_9_0_484_644_1_3220_3220_s
+    bgr2gray_9_0_484_644_1_311696_311696_U0 : component accelerator_v2_bgr2gray_9_0_484_644_1_311696_311696_s
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst,
-        ap_start => bgr2gray_9_0_484_644_1_3220_3220_U0_ap_start,
-        start_full_n => start_for_GaussianBlur_5_0_0_484_644_1_3220_3220_U0_full_n,
-        ap_done => bgr2gray_9_0_484_644_1_3220_3220_U0_ap_done,
-        ap_continue => bgr2gray_9_0_484_644_1_3220_3220_U0_ap_continue,
-        ap_idle => bgr2gray_9_0_484_644_1_3220_3220_U0_ap_idle,
-        ap_ready => bgr2gray_9_0_484_644_1_3220_3220_U0_ap_ready,
-        start_out => bgr2gray_9_0_484_644_1_3220_3220_U0_start_out,
-        start_write => bgr2gray_9_0_484_644_1_3220_3220_U0_start_write,
+        ap_start => bgr2gray_9_0_484_644_1_311696_311696_U0_ap_start,
+        start_full_n => start_for_GaussianBlur_5_1_0_484_644_1_311696_311696_U0_full_n,
+        ap_done => bgr2gray_9_0_484_644_1_311696_311696_U0_ap_done,
+        ap_continue => bgr2gray_9_0_484_644_1_311696_311696_U0_ap_continue,
+        ap_idle => bgr2gray_9_0_484_644_1_311696_311696_U0_ap_idle,
+        ap_ready => bgr2gray_9_0_484_644_1_311696_311696_U0_ap_ready,
+        start_out => bgr2gray_9_0_484_644_1_311696_311696_U0_start_out,
+        start_write => bgr2gray_9_0_484_644_1_311696_311696_U0_start_write,
         bgr_mat_data43_dout => bgr_mat_data_dout,
         bgr_mat_data43_num_data_valid => bgr_mat_data_num_data_valid,
         bgr_mat_data43_fifo_cap => bgr_mat_data_fifo_cap,
         bgr_mat_data43_empty_n => bgr_mat_data_empty_n,
-        bgr_mat_data43_read => bgr2gray_9_0_484_644_1_3220_3220_U0_bgr_mat_data43_read,
-        gray_mat_data44_din => bgr2gray_9_0_484_644_1_3220_3220_U0_gray_mat_data44_din,
+        bgr_mat_data43_read => bgr2gray_9_0_484_644_1_311696_311696_U0_bgr_mat_data43_read,
+        gray_mat_data44_din => bgr2gray_9_0_484_644_1_311696_311696_U0_gray_mat_data44_din,
         gray_mat_data44_num_data_valid => gray_mat_data_num_data_valid,
         gray_mat_data44_fifo_cap => gray_mat_data_fifo_cap,
         gray_mat_data44_full_n => gray_mat_data_full_n,
-        gray_mat_data44_write => bgr2gray_9_0_484_644_1_3220_3220_U0_gray_mat_data44_write);
+        gray_mat_data44_write => bgr2gray_9_0_484_644_1_311696_311696_U0_gray_mat_data44_write);
 
-    GaussianBlur_5_0_0_484_644_1_3220_3220_U0 : component accelerator_v2_GaussianBlur_5_0_0_484_644_1_3220_3220_s
+    GaussianBlur_5_1_0_484_644_1_311696_311696_U0 : component accelerator_v2_GaussianBlur_5_1_0_484_644_1_311696_311696_s
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst,
-        ap_start => GaussianBlur_5_0_0_484_644_1_3220_3220_U0_ap_start,
+        ap_start => GaussianBlur_5_1_0_484_644_1_311696_311696_U0_ap_start,
         start_full_n => start_for_mat_to_stream_U0_full_n,
-        ap_done => GaussianBlur_5_0_0_484_644_1_3220_3220_U0_ap_done,
-        ap_continue => GaussianBlur_5_0_0_484_644_1_3220_3220_U0_ap_continue,
-        ap_idle => GaussianBlur_5_0_0_484_644_1_3220_3220_U0_ap_idle,
-        ap_ready => GaussianBlur_5_0_0_484_644_1_3220_3220_U0_ap_ready,
-        start_out => GaussianBlur_5_0_0_484_644_1_3220_3220_U0_start_out,
-        start_write => GaussianBlur_5_0_0_484_644_1_3220_3220_U0_start_write,
+        ap_done => GaussianBlur_5_1_0_484_644_1_311696_311696_U0_ap_done,
+        ap_continue => GaussianBlur_5_1_0_484_644_1_311696_311696_U0_ap_continue,
+        ap_idle => GaussianBlur_5_1_0_484_644_1_311696_311696_U0_ap_idle,
+        ap_ready => GaussianBlur_5_1_0_484_644_1_311696_311696_U0_ap_ready,
+        start_out => GaussianBlur_5_1_0_484_644_1_311696_311696_U0_start_out,
+        start_write => GaussianBlur_5_1_0_484_644_1_311696_311696_U0_start_write,
         gray_mat_data44_dout => gray_mat_data_dout,
         gray_mat_data44_num_data_valid => gray_mat_data_num_data_valid,
         gray_mat_data44_fifo_cap => gray_mat_data_fifo_cap,
         gray_mat_data44_empty_n => gray_mat_data_empty_n,
-        gray_mat_data44_read => GaussianBlur_5_0_0_484_644_1_3220_3220_U0_gray_mat_data44_read,
-        blurred_mat_data45_din => GaussianBlur_5_0_0_484_644_1_3220_3220_U0_blurred_mat_data45_din,
+        gray_mat_data44_read => GaussianBlur_5_1_0_484_644_1_311696_311696_U0_gray_mat_data44_read,
+        blurred_mat_data45_din => GaussianBlur_5_1_0_484_644_1_311696_311696_U0_blurred_mat_data45_din,
         blurred_mat_data45_num_data_valid => blurred_mat_data_num_data_valid,
         blurred_mat_data45_fifo_cap => blurred_mat_data_fifo_cap,
         blurred_mat_data45_full_n => blurred_mat_data_full_n,
-        blurred_mat_data45_write => GaussianBlur_5_0_0_484_644_1_3220_3220_U0_blurred_mat_data45_write);
+        blurred_mat_data45_write => GaussianBlur_5_1_0_484_644_1_311696_311696_U0_blurred_mat_data45_write);
 
     mat_to_stream_U0 : component accelerator_v2_mat_to_stream
     port map (
@@ -366,7 +366,7 @@ begin
         gray_stream3_full_n => gray_stream3_full_n,
         gray_stream3_write => mat_to_stream_U0_gray_stream3_write);
 
-    bgr_mat_data_U : component accelerator_v2_fifo_w24_d3220_A
+    bgr_mat_data_U : component accelerator_v2_fifo_w24_d311696_A
     port map (
         clk => ap_clk,
         reset => ap_rst,
@@ -379,63 +379,63 @@ begin
         if_num_data_valid => bgr_mat_data_num_data_valid,
         if_fifo_cap => bgr_mat_data_fifo_cap,
         if_empty_n => bgr_mat_data_empty_n,
-        if_read => bgr2gray_9_0_484_644_1_3220_3220_U0_bgr_mat_data43_read);
+        if_read => bgr2gray_9_0_484_644_1_311696_311696_U0_bgr_mat_data43_read);
 
-    gray_mat_data_U : component accelerator_v2_fifo_w8_d3220_A
+    gray_mat_data_U : component accelerator_v2_fifo_w8_d311696_A
     port map (
         clk => ap_clk,
         reset => ap_rst,
         if_read_ce => ap_const_logic_1,
         if_write_ce => ap_const_logic_1,
-        if_din => bgr2gray_9_0_484_644_1_3220_3220_U0_gray_mat_data44_din,
+        if_din => bgr2gray_9_0_484_644_1_311696_311696_U0_gray_mat_data44_din,
         if_full_n => gray_mat_data_full_n,
-        if_write => bgr2gray_9_0_484_644_1_3220_3220_U0_gray_mat_data44_write,
+        if_write => bgr2gray_9_0_484_644_1_311696_311696_U0_gray_mat_data44_write,
         if_dout => gray_mat_data_dout,
         if_num_data_valid => gray_mat_data_num_data_valid,
         if_fifo_cap => gray_mat_data_fifo_cap,
         if_empty_n => gray_mat_data_empty_n,
-        if_read => GaussianBlur_5_0_0_484_644_1_3220_3220_U0_gray_mat_data44_read);
+        if_read => GaussianBlur_5_1_0_484_644_1_311696_311696_U0_gray_mat_data44_read);
 
-    blurred_mat_data_U : component accelerator_v2_fifo_w8_d3220_A
+    blurred_mat_data_U : component accelerator_v2_fifo_w8_d311696_A
     port map (
         clk => ap_clk,
         reset => ap_rst,
         if_read_ce => ap_const_logic_1,
         if_write_ce => ap_const_logic_1,
-        if_din => GaussianBlur_5_0_0_484_644_1_3220_3220_U0_blurred_mat_data45_din,
+        if_din => GaussianBlur_5_1_0_484_644_1_311696_311696_U0_blurred_mat_data45_din,
         if_full_n => blurred_mat_data_full_n,
-        if_write => GaussianBlur_5_0_0_484_644_1_3220_3220_U0_blurred_mat_data45_write,
+        if_write => GaussianBlur_5_1_0_484_644_1_311696_311696_U0_blurred_mat_data45_write,
         if_dout => blurred_mat_data_dout,
         if_num_data_valid => blurred_mat_data_num_data_valid,
         if_fifo_cap => blurred_mat_data_fifo_cap,
         if_empty_n => blurred_mat_data_empty_n,
         if_read => mat_to_stream_U0_blurred_mat_data45_read);
 
-    start_for_bgr2gray_9_0_484_644_1_3220_3220_U0_U : component accelerator_v2_start_for_bgr2gray_9_0_484_644_1_3220_3220_U0
+    start_for_bgr2gray_9_0_484_644_1_311696_311696_U0_U : component accelerator_v2_start_for_bgr2gray_9_0_484_644_1_311696_311696_U0
     port map (
         clk => ap_clk,
         reset => ap_rst,
         if_read_ce => ap_const_logic_1,
         if_write_ce => ap_const_logic_1,
-        if_din => start_for_bgr2gray_9_0_484_644_1_3220_3220_U0_din,
-        if_full_n => start_for_bgr2gray_9_0_484_644_1_3220_3220_U0_full_n,
+        if_din => start_for_bgr2gray_9_0_484_644_1_311696_311696_U0_din,
+        if_full_n => start_for_bgr2gray_9_0_484_644_1_311696_311696_U0_full_n,
         if_write => stream_to_mat_U0_start_write,
-        if_dout => start_for_bgr2gray_9_0_484_644_1_3220_3220_U0_dout,
-        if_empty_n => start_for_bgr2gray_9_0_484_644_1_3220_3220_U0_empty_n,
-        if_read => bgr2gray_9_0_484_644_1_3220_3220_U0_ap_ready);
+        if_dout => start_for_bgr2gray_9_0_484_644_1_311696_311696_U0_dout,
+        if_empty_n => start_for_bgr2gray_9_0_484_644_1_311696_311696_U0_empty_n,
+        if_read => bgr2gray_9_0_484_644_1_311696_311696_U0_ap_ready);
 
-    start_for_GaussianBlur_5_0_0_484_644_1_3220_3220_U0_U : component accelerator_v2_start_for_GaussianBlur_5_0_0_484_644_1_3220_3220_U0
+    start_for_GaussianBlur_5_1_0_484_644_1_311696_311696_U0_U : component accelerator_v2_start_for_GaussianBlur_5_1_0_484_644_1_311696_311696_U0
     port map (
         clk => ap_clk,
         reset => ap_rst,
         if_read_ce => ap_const_logic_1,
         if_write_ce => ap_const_logic_1,
-        if_din => start_for_GaussianBlur_5_0_0_484_644_1_3220_3220_U0_din,
-        if_full_n => start_for_GaussianBlur_5_0_0_484_644_1_3220_3220_U0_full_n,
-        if_write => bgr2gray_9_0_484_644_1_3220_3220_U0_start_write,
-        if_dout => start_for_GaussianBlur_5_0_0_484_644_1_3220_3220_U0_dout,
-        if_empty_n => start_for_GaussianBlur_5_0_0_484_644_1_3220_3220_U0_empty_n,
-        if_read => GaussianBlur_5_0_0_484_644_1_3220_3220_U0_ap_ready);
+        if_din => start_for_GaussianBlur_5_1_0_484_644_1_311696_311696_U0_din,
+        if_full_n => start_for_GaussianBlur_5_1_0_484_644_1_311696_311696_U0_full_n,
+        if_write => bgr2gray_9_0_484_644_1_311696_311696_U0_start_write,
+        if_dout => start_for_GaussianBlur_5_1_0_484_644_1_311696_311696_U0_dout,
+        if_empty_n => start_for_GaussianBlur_5_1_0_484_644_1_311696_311696_U0_empty_n,
+        if_read => GaussianBlur_5_1_0_484_644_1_311696_311696_U0_ap_ready);
 
     start_for_mat_to_stream_U0_U : component accelerator_v2_start_for_mat_to_stream_U0
     port map (
@@ -445,7 +445,7 @@ begin
         if_write_ce => ap_const_logic_1,
         if_din => start_for_mat_to_stream_U0_din,
         if_full_n => start_for_mat_to_stream_U0_full_n,
-        if_write => GaussianBlur_5_0_0_484_644_1_3220_3220_U0_start_write,
+        if_write => GaussianBlur_5_1_0_484_644_1_311696_311696_U0_start_write,
         if_dout => start_for_mat_to_stream_U0_dout,
         if_empty_n => start_for_mat_to_stream_U0_empty_n,
         if_read => mat_to_stream_U0_ap_ready);
@@ -453,20 +453,20 @@ begin
 
 
 
-    GaussianBlur_5_0_0_484_644_1_3220_3220_U0_ap_continue <= ap_const_logic_1;
-    GaussianBlur_5_0_0_484_644_1_3220_3220_U0_ap_start <= start_for_GaussianBlur_5_0_0_484_644_1_3220_3220_U0_empty_n;
+    GaussianBlur_5_1_0_484_644_1_311696_311696_U0_ap_continue <= ap_const_logic_1;
+    GaussianBlur_5_1_0_484_644_1_311696_311696_U0_ap_start <= start_for_GaussianBlur_5_1_0_484_644_1_311696_311696_U0_empty_n;
     ap_done <= mat_to_stream_U0_ap_done;
-    ap_idle <= (stream_to_mat_U0_ap_idle and mat_to_stream_U0_ap_idle and bgr2gray_9_0_484_644_1_3220_3220_U0_ap_idle and GaussianBlur_5_0_0_484_644_1_3220_3220_U0_ap_idle);
+    ap_idle <= (stream_to_mat_U0_ap_idle and mat_to_stream_U0_ap_idle and bgr2gray_9_0_484_644_1_311696_311696_U0_ap_idle and GaussianBlur_5_1_0_484_644_1_311696_311696_U0_ap_idle);
     ap_ready <= stream_to_mat_U0_ap_ready;
-    bgr2gray_9_0_484_644_1_3220_3220_U0_ap_continue <= ap_const_logic_1;
-    bgr2gray_9_0_484_644_1_3220_3220_U0_ap_start <= start_for_bgr2gray_9_0_484_644_1_3220_3220_U0_empty_n;
+    bgr2gray_9_0_484_644_1_311696_311696_U0_ap_continue <= ap_const_logic_1;
+    bgr2gray_9_0_484_644_1_311696_311696_U0_ap_start <= start_for_bgr2gray_9_0_484_644_1_311696_311696_U0_empty_n;
     gray_stream3_din <= mat_to_stream_U0_gray_stream3_din;
     gray_stream3_write <= mat_to_stream_U0_gray_stream3_write;
     mat_to_stream_U0_ap_continue <= ap_continue;
     mat_to_stream_U0_ap_start <= start_for_mat_to_stream_U0_empty_n;
     padded_stream2_read <= stream_to_mat_U0_padded_stream2_read;
-    start_for_GaussianBlur_5_0_0_484_644_1_3220_3220_U0_din <= (0=>ap_const_logic_1, others=>'-');
-    start_for_bgr2gray_9_0_484_644_1_3220_3220_U0_din <= (0=>ap_const_logic_1, others=>'-');
+    start_for_GaussianBlur_5_1_0_484_644_1_311696_311696_U0_din <= (0=>ap_const_logic_1, others=>'-');
+    start_for_bgr2gray_9_0_484_644_1_311696_311696_U0_din <= (0=>ap_const_logic_1, others=>'-');
     start_for_mat_to_stream_U0_din <= (0=>ap_const_logic_1, others=>'-');
     stream_to_mat_U0_ap_continue <= ap_const_logic_1;
     stream_to_mat_U0_ap_start <= ap_start;

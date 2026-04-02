@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'mat_to_stream'" level="0">
-<item name = "Date">Fri Mar 27 07:16:46 2026
+<item name = "Date">Thu Apr  2 06:49:33 2026
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">accelerator_v2</item>
@@ -121,8 +121,8 @@
 <column name="ap_idle">out, 1, ap_ctrl_hs, mat_to_stream, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, mat_to_stream, return value</column>
 <column name="blurred_mat_data45_dout">in, 8, ap_fifo, blurred_mat_data45, pointer</column>
-<column name="blurred_mat_data45_num_data_valid">in, 13, ap_fifo, blurred_mat_data45, pointer</column>
-<column name="blurred_mat_data45_fifo_cap">in, 13, ap_fifo, blurred_mat_data45, pointer</column>
+<column name="blurred_mat_data45_num_data_valid">in, 20, ap_fifo, blurred_mat_data45, pointer</column>
+<column name="blurred_mat_data45_fifo_cap">in, 20, ap_fifo, blurred_mat_data45, pointer</column>
 <column name="blurred_mat_data45_empty_n">in, 1, ap_fifo, blurred_mat_data45, pointer</column>
 <column name="blurred_mat_data45_read">out, 1, ap_fifo, blurred_mat_data45, pointer</column>
 <column name="gray_stream3_din">out, 8, ap_fifo, gray_stream3, pointer</column>

@@ -33,8 +33,8 @@ set portList {
 	{ ap_idle sc_out sc_logic 1 done -1 } 
 	{ ap_ready sc_out sc_logic 1 ready -1 } 
 	{ gray_mat_data44_dout sc_in sc_lv 8 signal 3 } 
-	{ gray_mat_data44_num_data_valid sc_in sc_lv 13 signal 3 } 
-	{ gray_mat_data44_fifo_cap sc_in sc_lv 13 signal 3 } 
+	{ gray_mat_data44_num_data_valid sc_in sc_lv 20 signal 3 } 
+	{ gray_mat_data44_fifo_cap sc_in sc_lv 20 signal 3 } 
 	{ gray_mat_data44_empty_n sc_in sc_logic 1 signal 3 } 
 	{ gray_mat_data44_read sc_out sc_logic 1 signal 3 } 
 	{ buf_V_2_address1 sc_out sc_lv 10 signal 0 } 
@@ -58,8 +58,8 @@ set NewPortList {[
  	{ "name": "ap_idle", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "done", "bundle":{"name": "ap_idle", "role": "default" }} , 
  	{ "name": "ap_ready", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "ready", "bundle":{"name": "ap_ready", "role": "default" }} , 
  	{ "name": "gray_mat_data44_dout", "direction": "in", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "gray_mat_data44", "role": "dout" }} , 
- 	{ "name": "gray_mat_data44_num_data_valid", "direction": "in", "datatype": "sc_lv", "bitwidth":13, "type": "signal", "bundle":{"name": "gray_mat_data44", "role": "num_data_valid" }} , 
- 	{ "name": "gray_mat_data44_fifo_cap", "direction": "in", "datatype": "sc_lv", "bitwidth":13, "type": "signal", "bundle":{"name": "gray_mat_data44", "role": "fifo_cap" }} , 
+ 	{ "name": "gray_mat_data44_num_data_valid", "direction": "in", "datatype": "sc_lv", "bitwidth":20, "type": "signal", "bundle":{"name": "gray_mat_data44", "role": "num_data_valid" }} , 
+ 	{ "name": "gray_mat_data44_fifo_cap", "direction": "in", "datatype": "sc_lv", "bitwidth":20, "type": "signal", "bundle":{"name": "gray_mat_data44", "role": "fifo_cap" }} , 
  	{ "name": "gray_mat_data44_empty_n", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "gray_mat_data44", "role": "empty_n" }} , 
  	{ "name": "gray_mat_data44_read", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "gray_mat_data44", "role": "read" }} , 
  	{ "name": "buf_V_2_address1", "direction": "out", "datatype": "sc_lv", "bitwidth":10, "type": "signal", "bundle":{"name": "buf_V_2", "role": "address1" }} , 
@@ -125,5 +125,5 @@ set Spec2ImplPortList {
 	buf_V_2 { ap_memory {  { buf_V_2_address1 MemPortADDR2 1 10 }  { buf_V_2_ce1 MemPortCE2 1 1 }  { buf_V_2_we1 MemPortWE2 1 1 }  { buf_V_2_d1 MemPortDIN2 1 8 } } }
 	buf_V_1 { ap_memory {  { buf_V_1_address1 MemPortADDR2 1 10 }  { buf_V_1_ce1 MemPortCE2 1 1 }  { buf_V_1_we1 MemPortWE2 1 1 }  { buf_V_1_d1 MemPortDIN2 1 8 } } }
 	buf_V { ap_memory {  { buf_V_address1 MemPortADDR2 1 10 }  { buf_V_ce1 MemPortCE2 1 1 }  { buf_V_we1 MemPortWE2 1 1 }  { buf_V_d1 MemPortDIN2 1 8 } } }
-	gray_mat_data44 { ap_fifo {  { gray_mat_data44_dout fifo_port_we 0 8 }  { gray_mat_data44_num_data_valid fifo_status_num_data_valid 0 13 }  { gray_mat_data44_fifo_cap fifo_update 0 13 }  { gray_mat_data44_empty_n fifo_status 0 1 }  { gray_mat_data44_read fifo_data 1 1 } } }
+	gray_mat_data44 { ap_fifo {  { gray_mat_data44_dout fifo_port_we 0 8 }  { gray_mat_data44_num_data_valid fifo_status_num_data_valid 0 20 }  { gray_mat_data44_fifo_cap fifo_update 0 20 }  { gray_mat_data44_empty_n fifo_status 0 1 }  { gray_mat_data44_read fifo_data 1 1 } } }
 }

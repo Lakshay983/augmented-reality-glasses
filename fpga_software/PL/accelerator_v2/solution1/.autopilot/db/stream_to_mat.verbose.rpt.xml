@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'stream_to_mat'" level="0">
-<item name = "Date">Fri Mar 27 07:16:43 2026
+<item name = "Date">Thu Apr  2 06:49:30 2026
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">accelerator_v2</item>
@@ -132,8 +132,8 @@
 <column name="padded_stream2_empty_n">in, 1, ap_fifo, padded_stream2, pointer</column>
 <column name="padded_stream2_read">out, 1, ap_fifo, padded_stream2, pointer</column>
 <column name="bgr_mat_data43_din">out, 24, ap_fifo, bgr_mat_data43, pointer</column>
-<column name="bgr_mat_data43_num_data_valid">in, 13, ap_fifo, bgr_mat_data43, pointer</column>
-<column name="bgr_mat_data43_fifo_cap">in, 13, ap_fifo, bgr_mat_data43, pointer</column>
+<column name="bgr_mat_data43_num_data_valid">in, 20, ap_fifo, bgr_mat_data43, pointer</column>
+<column name="bgr_mat_data43_fifo_cap">in, 20, ap_fifo, bgr_mat_data43, pointer</column>
 <column name="bgr_mat_data43_full_n">in, 1, ap_fifo, bgr_mat_data43, pointer</column>
 <column name="bgr_mat_data43_write">out, 1, ap_fifo, bgr_mat_data43, pointer</column>
 </table>

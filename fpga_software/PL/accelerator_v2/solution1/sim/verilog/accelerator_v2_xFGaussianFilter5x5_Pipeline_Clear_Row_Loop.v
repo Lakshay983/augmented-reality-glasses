@@ -42,8 +42,8 @@ output   ap_done;
 output   ap_idle;
 output   ap_ready;
 input  [7:0] gray_mat_data44_dout;
-input  [12:0] gray_mat_data44_num_data_valid;
-input  [12:0] gray_mat_data44_fifo_cap;
+input  [19:0] gray_mat_data44_num_data_valid;
+input  [19:0] gray_mat_data44_fifo_cap;
 input   gray_mat_data44_empty_n;
 output   gray_mat_data44_read;
 output  [9:0] buf_V_2_address1;
@@ -76,7 +76,7 @@ reg    ap_idle_pp0;
 wire    ap_block_state1_pp0_stage0_iter0;
 reg    ap_block_state2_pp0_stage0_iter1;
 reg    ap_block_pp0_stage0_subdone;
-wire   [0:0] icmp_ln760_fu_122_p2;
+wire   [0:0] icmp_ln761_fu_122_p2;
 reg    ap_condition_exit_pp0_iter0_stage0;
 wire    ap_loop_exit_ready;
 reg    ap_ready_int;
@@ -153,7 +153,7 @@ end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        if (((icmp_ln760_fu_122_p2 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
+        if (((icmp_ln761_fu_122_p2 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
             col_V_fu_50 <= col_V_6_fu_128_p2;
         end else if ((ap_loop_init == 1'b1)) begin
             col_V_fu_50 <= 10'd0;
@@ -162,13 +162,13 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((icmp_ln760_fu_122_p2 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if (((icmp_ln761_fu_122_p2 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         zext_ln541_reg_155[9 : 0] <= zext_ln541_fu_134_p1[9 : 0];
     end
 end
 
 always @ (*) begin
-    if (((icmp_ln760_fu_122_p2 == 1'd1) & (1'b0 == ap_block_pp0_stage0_subdone) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if (((icmp_ln761_fu_122_p2 == 1'd1) & (1'b0 == ap_block_pp0_stage0_subdone) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         ap_condition_exit_pp0_iter0_stage0 = 1'b1;
     end else begin
         ap_condition_exit_pp0_iter0_stage0 = 1'b0;
@@ -224,7 +224,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln760_fu_122_p2 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if (((icmp_ln761_fu_122_p2 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         buf_V_1_we1 = 1'b1;
     end else begin
         buf_V_1_we1 = 1'b0;
@@ -256,7 +256,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln760_fu_122_p2 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if (((icmp_ln761_fu_122_p2 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         buf_V_we1 = 1'b1;
     end else begin
         buf_V_we1 = 1'b0;
@@ -328,7 +328,7 @@ assign buf_V_d1 = 8'd0;
 
 assign col_V_6_fu_128_p2 = (ap_sig_allocacmp_col_V_5 + 10'd1);
 
-assign icmp_ln760_fu_122_p2 = ((ap_sig_allocacmp_col_V_5 == 10'd644) ? 1'b1 : 1'b0);
+assign icmp_ln761_fu_122_p2 = ((ap_sig_allocacmp_col_V_5 == 10'd644) ? 1'b1 : 1'b0);
 
 assign zext_ln541_fu_134_p1 = ap_sig_allocacmp_col_V_5;
 

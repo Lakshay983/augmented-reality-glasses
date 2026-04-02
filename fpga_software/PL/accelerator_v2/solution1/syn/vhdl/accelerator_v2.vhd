@@ -43,7 +43,7 @@ end;
 architecture behav of accelerator_v2 is 
     attribute CORE_GENERATION_INFO : STRING;
     attribute CORE_GENERATION_INFO of behav : architecture is
-    "accelerator_v2_accelerator_v2,hls_ip_2022_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xcvu11p-flga2577-1-e,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=7.297000,HLS_SYN_LAT=471566,HLS_SYN_TPT=471564,HLS_SYN_MEM=1036,HLS_SYN_DSP=0,HLS_SYN_FF=7274,HLS_SYN_LUT=10224,HLS_VERSION=2022_2}";
+    "accelerator_v2_accelerator_v2,hls_ip_2022_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xcvu11p-flga2577-1-e,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=7.297000,HLS_SYN_LAT=471569,HLS_SYN_TPT=471564,HLS_SYN_MEM=1793,HLS_SYN_DSP=0,HLS_SYN_FF=7168,HLS_SYN_LUT=10532,HLS_VERSION=2022_2}";
     constant ap_const_logic_1 : STD_LOGIC := '1';
     constant ap_const_logic_0 : STD_LOGIC := '0';
     constant ap_const_boolean_1 : BOOLEAN := true;
@@ -379,7 +379,24 @@ architecture behav of accelerator_v2 is
     end component;
 
 
-    component accelerator_v2_fifo_w8_d307200_A IS
+    component accelerator_v2_fifo_w24_d311296_A IS
+    port (
+        clk : IN STD_LOGIC;
+        reset : IN STD_LOGIC;
+        if_read_ce : IN STD_LOGIC;
+        if_write_ce : IN STD_LOGIC;
+        if_din : IN STD_LOGIC_VECTOR (23 downto 0);
+        if_full_n : OUT STD_LOGIC;
+        if_write : IN STD_LOGIC;
+        if_dout : OUT STD_LOGIC_VECTOR (23 downto 0);
+        if_num_data_valid : OUT STD_LOGIC_VECTOR (19 downto 0);
+        if_fifo_cap : OUT STD_LOGIC_VECTOR (19 downto 0);
+        if_empty_n : OUT STD_LOGIC;
+        if_read : IN STD_LOGIC );
+    end component;
+
+
+    component accelerator_v2_fifo_w8_d311296_A IS
     port (
         clk : IN STD_LOGIC;
         reset : IN STD_LOGIC;
@@ -658,7 +675,7 @@ begin
         if_empty_n => frame_start_c17_channel_empty_n,
         if_read => Block_entry14_proc_U0_ap_ready);
 
-    padded_stream_U : component accelerator_v2_fifo_w24_d307200_A
+    padded_stream_U : component accelerator_v2_fifo_w24_d311296_A
     port map (
         clk => ap_clk,
         reset => ap_rst_n_inv,
@@ -673,7 +690,7 @@ begin
         if_empty_n => padded_stream_empty_n,
         if_read => process_pixels_U0_padded_stream2_read);
 
-    gray_stream_U : component accelerator_v2_fifo_w8_d307200_A
+    gray_stream_U : component accelerator_v2_fifo_w8_d311296_A
     port map (
         clk => ap_clk,
         reset => ap_rst_n_inv,

@@ -67,7 +67,7 @@ module `AUTOTB_TOP;
 
 parameter AUTOTB_TRANSACTION_NUM = 1;
 parameter PROGRESS_TIMEOUT = 10000000;
-parameter LATENCY_ESTIMATION = 625646;
+parameter LATENCY_ESTIMATION = 625649;
 parameter LENGTH_in_breath = 1;
 parameter LENGTH_in_stream_V_data_V = 61440;
 parameter LENGTH_in_stream_V_dest_V = 61440;
@@ -1168,6 +1168,876 @@ endtask
 ////////////////////////////////////////////
 
 `ifndef POST_SYN
+
+// Dependence Check (WAW) "ap_enable_operation_95"(W:SV1-1) -> "ap_enable_operation_106"(W:SV1-1) @ `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424
+
+// Dependence Check (RAW) "ap_enable_operation_95"(W:SV1-1) -> "ap_enable_operation_122"(R:SV2-3) @ `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424
+
+// Dependence Check (WAW) "ap_enable_operation_97"(W:SV1-1) -> "ap_enable_operation_108"(W:SV1-1) @ `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424
+
+// Dependence Check (RAW) "ap_enable_operation_97"(W:SV1-1) -> "ap_enable_operation_121"(R:SV2-3) @ `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424
+
+// Dependence Check (WAW) "ap_enable_operation_99"(W:SV1-1) -> "ap_enable_operation_110"(W:SV1-1) @ `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424
+
+// Dependence Check (RAW) "ap_enable_operation_99"(W:SV1-1) -> "ap_enable_operation_120"(R:SV2-3) @ `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424
+
+// Dependence Check (WAW) "ap_enable_operation_101"(W:SV1-1) -> "ap_enable_operation_112"(W:SV1-1) @ `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424
+
+// Dependence Check (RAW) "ap_enable_operation_101"(W:SV1-1) -> "ap_enable_operation_119"(R:SV2-3) @ `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424
+
+// Dependence Check (WAW) "ap_enable_operation_103"(W:SV1-1) -> "ap_enable_operation_114"(W:SV1-1) @ `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424
+
+// Dependence Check (RAW) "ap_enable_operation_103"(W:SV1-1) -> "ap_enable_operation_123"(R:SV2-3) @ `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424
+
+// Dependence Check (WAW) "ap_enable_operation_106"(W:SV1-1) -> "ap_enable_operation_95"(W:SV1-1) @ `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424
+
+// Dependence Check (RAW) "ap_enable_operation_106"(W:SV1-1) -> "ap_enable_operation_122"(R:SV2-3) @ `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424
+
+// Dependence Check (WAW) "ap_enable_operation_108"(W:SV1-1) -> "ap_enable_operation_97"(W:SV1-1) @ `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424
+
+// Dependence Check (RAW) "ap_enable_operation_108"(W:SV1-1) -> "ap_enable_operation_121"(R:SV2-3) @ `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424
+
+// Dependence Check (WAW) "ap_enable_operation_110"(W:SV1-1) -> "ap_enable_operation_99"(W:SV1-1) @ `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424
+
+// Dependence Check (RAW) "ap_enable_operation_110"(W:SV1-1) -> "ap_enable_operation_120"(R:SV2-3) @ `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424
+
+// Dependence Check (WAW) "ap_enable_operation_112"(W:SV1-1) -> "ap_enable_operation_101"(W:SV1-1) @ `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424
+
+// Dependence Check (RAW) "ap_enable_operation_112"(W:SV1-1) -> "ap_enable_operation_119"(R:SV2-3) @ `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424
+
+// Dependence Check (WAW) "ap_enable_operation_114"(W:SV1-1) -> "ap_enable_operation_103"(W:SV1-1) @ `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424
+
+// Dependence Check (RAW) "ap_enable_operation_114"(W:SV1-1) -> "ap_enable_operation_123"(R:SV2-3) @ `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424
+
+// Dependence Check (WAR) "ap_enable_operation_144"(R:SV2-3) -> "ap_enable_operation_101"(W:SV1-1) @ `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424
+reg [10:0] DEP_address_20_to [1 - 1:0];
+time DEP_time_20_to [1 - 1:0];
+reg [10:0] DEP_address_20_from [2 - 1:0];
+time DEP_time_20_from [2 - 1:0];
+reg DEP_error_20 = 0;
+integer DEP_i_20;
+
+initial begin
+    DEP_address_20_to[0] = 0;
+    DEP_time_20_to[0] = 0;
+    DEP_address_20_from[0] = 0;
+    DEP_time_20_from[0] = 0;
+    DEP_address_20_from[1] = 0;
+    DEP_time_20_from[1] = 0;
+end
+
+always @ (negedge AESL_clock) begin
+    if (~`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_block_pp0) begin 
+        // record "to" access
+        if (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state2_pp0_iter1_stage0
+            &&  `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_reg_pp0_iter1) begin 
+            if (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_operation_101) begin
+                DEP_address_20_to[0] = {1'b1, `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.buf_V_address1};
+                DEP_time_20_to[0] = $time;
+            end else begin
+                DEP_address_20_to[0] = {1'b0, 10'b0};
+                DEP_time_20_to[0] = $time;
+            end
+        end // of record to access
+        else if( (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state2_pp0_iter1_stage0||
+            `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state2_pp0_iter1_stage0||
+            `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state3_pp0_iter2_stage0||
+            `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state4_pp0_iter3_stage0)
+            &&  ~`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_reg_pp0_iter1) begin
+            DEP_address_20_to[0] = {1'b0, 10'b0};
+            DEP_time_20_to[0] = $time;
+        end
+        // record "from" access
+        if (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state3_pp0_iter2_stage0
+            &&  `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_reg_pp0_iter2) begin
+            if (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_operation_119) begin
+                if (DEP_address_20_from[1][10]) begin
+                    $display("// ERROR : \"DEP_address_20_from[1]\" is overwritten @ \"%0t\"", $time);
+                    $display("// autotb LINE:%d", `__LINE__);
+                    $display("////////////////////////////////////////////////////////////////////////////////////");
+                end
+                DEP_address_20_from[1] = DEP_address_20_from[0];
+                DEP_time_20_from[1] = DEP_time_20_from[0];
+                DEP_address_20_from[0] = {1'b0, 10'b0};
+                DEP_time_20_from[0] = 0;
+                if (DEP_address_20_from[0][10]) begin
+                    $display("// ERROR : \"DEP_address_20_from[0]\" is overwritten @ \"%0t\"", $time);
+                    $display("// autotb LINE:%d", `__LINE__);
+                    $display("////////////////////////////////////////////////////////////////////////////////////");
+                end
+                DEP_address_20_from[0] = {1'b1, `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.buf_V_address0};
+                DEP_time_20_from[0] = $time;
+            end
+        end // of record from access
+        // check access
+        if (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state3_pp0_iter2_stage0
+            &&  `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_reg_pp0_iter2) begin
+            if (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_operation_119) begin
+                DEP_i_20 = 0;
+                if (DEP_address_20_to[0][10]) begin
+                    DEP_error_20 = (DEP_address_20_to[0][9:0] == DEP_address_20_from[DEP_i_20][9:0]);
+                    if (DEP_error_20) begin
+                        $display("//Critical WARNING: Due to pragma (/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp:624:22), dependence access (loop distance = 1) is detected in \"`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424\"");
+                        $display("//                : From memory access \"buf_V_address0\" = 0x%0h @ \"%0t\"", DEP_address_20_from[DEP_i_20][9:0], DEP_time_20_from[DEP_i_20]);
+                        $display("//                : To memory access \"buf_V_address1\" = DEP_address_20_to[0][9:0] = 0x%0h @ \"%0t\"", DEP_address_20_to[0][9:0], DEP_time_20_to[0]);
+                        $display("//If cosim fails, the WARNING should be checked. autotb LINE:%d", `__LINE__);
+                        $display("////////////////////////////////////////////////////////////////////////////////////");
+// (WAR) "ap_enable_operation_144"(R:SV2-3) -> "ap_enable_operation_101"(W:SV1-1) @ `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424
+                    end
+                end
+                DEP_address_20_from[DEP_i_20] = {1'b0, 10'b0};
+                DEP_time_20_from[DEP_i_20] = 0;
+            end
+        end // of check access
+    end 
+end
+
+// Dependence Check (WAR) "ap_enable_operation_144"(R:SV2-3) -> "ap_enable_operation_112"(W:SV1-1) @ `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424
+reg [10:0] DEP_address_21_to [1 - 1:0];
+time DEP_time_21_to [1 - 1:0];
+reg [10:0] DEP_address_21_from [2 - 1:0];
+time DEP_time_21_from [2 - 1:0];
+reg DEP_error_21 = 0;
+integer DEP_i_21;
+
+initial begin
+    DEP_address_21_to[0] = 0;
+    DEP_time_21_to[0] = 0;
+    DEP_address_21_from[0] = 0;
+    DEP_time_21_from[0] = 0;
+    DEP_address_21_from[1] = 0;
+    DEP_time_21_from[1] = 0;
+end
+
+always @ (negedge AESL_clock) begin
+    if (~`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_block_pp0) begin 
+        // record "to" access
+        if (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state2_pp0_iter1_stage0
+            &&  `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_reg_pp0_iter1) begin 
+            if (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_operation_112) begin
+                DEP_address_21_to[0] = {1'b1, `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.buf_V_address1};
+                DEP_time_21_to[0] = $time;
+            end else begin
+                DEP_address_21_to[0] = {1'b0, 10'b0};
+                DEP_time_21_to[0] = $time;
+            end
+        end // of record to access
+        else if( (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state2_pp0_iter1_stage0||
+            `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state2_pp0_iter1_stage0||
+            `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state3_pp0_iter2_stage0||
+            `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state4_pp0_iter3_stage0)
+            &&  ~`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_reg_pp0_iter1) begin
+            DEP_address_21_to[0] = {1'b0, 10'b0};
+            DEP_time_21_to[0] = $time;
+        end
+        // record "from" access
+        if (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state3_pp0_iter2_stage0
+            &&  `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_reg_pp0_iter2) begin
+            if (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_operation_119) begin
+                if (DEP_address_21_from[1][10]) begin
+                    $display("// ERROR : \"DEP_address_21_from[1]\" is overwritten @ \"%0t\"", $time);
+                    $display("// autotb LINE:%d", `__LINE__);
+                    $display("////////////////////////////////////////////////////////////////////////////////////");
+                end
+                DEP_address_21_from[1] = DEP_address_21_from[0];
+                DEP_time_21_from[1] = DEP_time_21_from[0];
+                DEP_address_21_from[0] = {1'b0, 10'b0};
+                DEP_time_21_from[0] = 0;
+                if (DEP_address_21_from[0][10]) begin
+                    $display("// ERROR : \"DEP_address_21_from[0]\" is overwritten @ \"%0t\"", $time);
+                    $display("// autotb LINE:%d", `__LINE__);
+                    $display("////////////////////////////////////////////////////////////////////////////////////");
+                end
+                DEP_address_21_from[0] = {1'b1, `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.buf_V_address0};
+                DEP_time_21_from[0] = $time;
+            end
+        end // of record from access
+        // check access
+        if (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state3_pp0_iter2_stage0
+            &&  `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_reg_pp0_iter2) begin
+            if (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_operation_119) begin
+                DEP_i_21 = 0;
+                if (DEP_address_21_to[0][10]) begin
+                    DEP_error_21 = (DEP_address_21_to[0][9:0] == DEP_address_21_from[DEP_i_21][9:0]);
+                    if (DEP_error_21) begin
+                        $display("//Critical WARNING: Due to pragma (/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp:624:22), dependence access (loop distance = 1) is detected in \"`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424\"");
+                        $display("//                : From memory access \"buf_V_address0\" = 0x%0h @ \"%0t\"", DEP_address_21_from[DEP_i_21][9:0], DEP_time_21_from[DEP_i_21]);
+                        $display("//                : To memory access \"buf_V_address1\" = DEP_address_21_to[0][9:0] = 0x%0h @ \"%0t\"", DEP_address_21_to[0][9:0], DEP_time_21_to[0]);
+                        $display("//If cosim fails, the WARNING should be checked. autotb LINE:%d", `__LINE__);
+                        $display("////////////////////////////////////////////////////////////////////////////////////");
+// (WAR) "ap_enable_operation_144"(R:SV2-3) -> "ap_enable_operation_112"(W:SV1-1) @ `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424
+                    end
+                end
+                DEP_address_21_from[DEP_i_21] = {1'b0, 10'b0};
+                DEP_time_21_from[DEP_i_21] = 0;
+            end
+        end // of check access
+    end 
+end
+
+// Dependence Check (WAR) "ap_enable_operation_145"(R:SV2-3) -> "ap_enable_operation_99"(W:SV1-1) @ `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424
+reg [10:0] DEP_address_22_to [1 - 1:0];
+time DEP_time_22_to [1 - 1:0];
+reg [10:0] DEP_address_22_from [2 - 1:0];
+time DEP_time_22_from [2 - 1:0];
+reg DEP_error_22 = 0;
+integer DEP_i_22;
+
+initial begin
+    DEP_address_22_to[0] = 0;
+    DEP_time_22_to[0] = 0;
+    DEP_address_22_from[0] = 0;
+    DEP_time_22_from[0] = 0;
+    DEP_address_22_from[1] = 0;
+    DEP_time_22_from[1] = 0;
+end
+
+always @ (negedge AESL_clock) begin
+    if (~`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_block_pp0) begin 
+        // record "to" access
+        if (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state2_pp0_iter1_stage0
+            &&  `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_reg_pp0_iter1) begin 
+            if (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_operation_99) begin
+                DEP_address_22_to[0] = {1'b1, `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.buf_V_1_address1};
+                DEP_time_22_to[0] = $time;
+            end else begin
+                DEP_address_22_to[0] = {1'b0, 10'b0};
+                DEP_time_22_to[0] = $time;
+            end
+        end // of record to access
+        else if( (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state2_pp0_iter1_stage0||
+            `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state2_pp0_iter1_stage0||
+            `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state3_pp0_iter2_stage0||
+            `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state4_pp0_iter3_stage0)
+            &&  ~`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_reg_pp0_iter1) begin
+            DEP_address_22_to[0] = {1'b0, 10'b0};
+            DEP_time_22_to[0] = $time;
+        end
+        // record "from" access
+        if (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state3_pp0_iter2_stage0
+            &&  `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_reg_pp0_iter2) begin
+            if (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_operation_120) begin
+                if (DEP_address_22_from[1][10]) begin
+                    $display("// ERROR : \"DEP_address_22_from[1]\" is overwritten @ \"%0t\"", $time);
+                    $display("// autotb LINE:%d", `__LINE__);
+                    $display("////////////////////////////////////////////////////////////////////////////////////");
+                end
+                DEP_address_22_from[1] = DEP_address_22_from[0];
+                DEP_time_22_from[1] = DEP_time_22_from[0];
+                DEP_address_22_from[0] = {1'b0, 10'b0};
+                DEP_time_22_from[0] = 0;
+                if (DEP_address_22_from[0][10]) begin
+                    $display("// ERROR : \"DEP_address_22_from[0]\" is overwritten @ \"%0t\"", $time);
+                    $display("// autotb LINE:%d", `__LINE__);
+                    $display("////////////////////////////////////////////////////////////////////////////////////");
+                end
+                DEP_address_22_from[0] = {1'b1, `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.buf_V_1_address0};
+                DEP_time_22_from[0] = $time;
+            end
+        end // of record from access
+        // check access
+        if (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state3_pp0_iter2_stage0
+            &&  `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_reg_pp0_iter2) begin
+            if (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_operation_120) begin
+                DEP_i_22 = 0;
+                if (DEP_address_22_to[0][10]) begin
+                    DEP_error_22 = (DEP_address_22_to[0][9:0] == DEP_address_22_from[DEP_i_22][9:0]);
+                    if (DEP_error_22) begin
+                        $display("//Critical WARNING: Due to pragma (/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp:624:22), dependence access (loop distance = 1) is detected in \"`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424\"");
+                        $display("//                : From memory access \"buf_V_1_address0\" = 0x%0h @ \"%0t\"", DEP_address_22_from[DEP_i_22][9:0], DEP_time_22_from[DEP_i_22]);
+                        $display("//                : To memory access \"buf_V_1_address1\" = DEP_address_22_to[0][9:0] = 0x%0h @ \"%0t\"", DEP_address_22_to[0][9:0], DEP_time_22_to[0]);
+                        $display("//If cosim fails, the WARNING should be checked. autotb LINE:%d", `__LINE__);
+                        $display("////////////////////////////////////////////////////////////////////////////////////");
+// (WAR) "ap_enable_operation_145"(R:SV2-3) -> "ap_enable_operation_99"(W:SV1-1) @ `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424
+                    end
+                end
+                DEP_address_22_from[DEP_i_22] = {1'b0, 10'b0};
+                DEP_time_22_from[DEP_i_22] = 0;
+            end
+        end // of check access
+    end 
+end
+
+// Dependence Check (WAR) "ap_enable_operation_145"(R:SV2-3) -> "ap_enable_operation_110"(W:SV1-1) @ `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424
+reg [10:0] DEP_address_23_to [1 - 1:0];
+time DEP_time_23_to [1 - 1:0];
+reg [10:0] DEP_address_23_from [2 - 1:0];
+time DEP_time_23_from [2 - 1:0];
+reg DEP_error_23 = 0;
+integer DEP_i_23;
+
+initial begin
+    DEP_address_23_to[0] = 0;
+    DEP_time_23_to[0] = 0;
+    DEP_address_23_from[0] = 0;
+    DEP_time_23_from[0] = 0;
+    DEP_address_23_from[1] = 0;
+    DEP_time_23_from[1] = 0;
+end
+
+always @ (negedge AESL_clock) begin
+    if (~`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_block_pp0) begin 
+        // record "to" access
+        if (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state2_pp0_iter1_stage0
+            &&  `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_reg_pp0_iter1) begin 
+            if (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_operation_110) begin
+                DEP_address_23_to[0] = {1'b1, `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.buf_V_1_address1};
+                DEP_time_23_to[0] = $time;
+            end else begin
+                DEP_address_23_to[0] = {1'b0, 10'b0};
+                DEP_time_23_to[0] = $time;
+            end
+        end // of record to access
+        else if( (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state2_pp0_iter1_stage0||
+            `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state2_pp0_iter1_stage0||
+            `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state3_pp0_iter2_stage0||
+            `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state4_pp0_iter3_stage0)
+            &&  ~`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_reg_pp0_iter1) begin
+            DEP_address_23_to[0] = {1'b0, 10'b0};
+            DEP_time_23_to[0] = $time;
+        end
+        // record "from" access
+        if (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state3_pp0_iter2_stage0
+            &&  `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_reg_pp0_iter2) begin
+            if (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_operation_120) begin
+                if (DEP_address_23_from[1][10]) begin
+                    $display("// ERROR : \"DEP_address_23_from[1]\" is overwritten @ \"%0t\"", $time);
+                    $display("// autotb LINE:%d", `__LINE__);
+                    $display("////////////////////////////////////////////////////////////////////////////////////");
+                end
+                DEP_address_23_from[1] = DEP_address_23_from[0];
+                DEP_time_23_from[1] = DEP_time_23_from[0];
+                DEP_address_23_from[0] = {1'b0, 10'b0};
+                DEP_time_23_from[0] = 0;
+                if (DEP_address_23_from[0][10]) begin
+                    $display("// ERROR : \"DEP_address_23_from[0]\" is overwritten @ \"%0t\"", $time);
+                    $display("// autotb LINE:%d", `__LINE__);
+                    $display("////////////////////////////////////////////////////////////////////////////////////");
+                end
+                DEP_address_23_from[0] = {1'b1, `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.buf_V_1_address0};
+                DEP_time_23_from[0] = $time;
+            end
+        end // of record from access
+        // check access
+        if (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state3_pp0_iter2_stage0
+            &&  `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_reg_pp0_iter2) begin
+            if (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_operation_120) begin
+                DEP_i_23 = 0;
+                if (DEP_address_23_to[0][10]) begin
+                    DEP_error_23 = (DEP_address_23_to[0][9:0] == DEP_address_23_from[DEP_i_23][9:0]);
+                    if (DEP_error_23) begin
+                        $display("//Critical WARNING: Due to pragma (/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp:624:22), dependence access (loop distance = 1) is detected in \"`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424\"");
+                        $display("//                : From memory access \"buf_V_1_address0\" = 0x%0h @ \"%0t\"", DEP_address_23_from[DEP_i_23][9:0], DEP_time_23_from[DEP_i_23]);
+                        $display("//                : To memory access \"buf_V_1_address1\" = DEP_address_23_to[0][9:0] = 0x%0h @ \"%0t\"", DEP_address_23_to[0][9:0], DEP_time_23_to[0]);
+                        $display("//If cosim fails, the WARNING should be checked. autotb LINE:%d", `__LINE__);
+                        $display("////////////////////////////////////////////////////////////////////////////////////");
+// (WAR) "ap_enable_operation_145"(R:SV2-3) -> "ap_enable_operation_110"(W:SV1-1) @ `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424
+                    end
+                end
+                DEP_address_23_from[DEP_i_23] = {1'b0, 10'b0};
+                DEP_time_23_from[DEP_i_23] = 0;
+            end
+        end // of check access
+    end 
+end
+
+// Dependence Check (WAR) "ap_enable_operation_146"(R:SV2-3) -> "ap_enable_operation_97"(W:SV1-1) @ `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424
+reg [10:0] DEP_address_24_to [1 - 1:0];
+time DEP_time_24_to [1 - 1:0];
+reg [10:0] DEP_address_24_from [2 - 1:0];
+time DEP_time_24_from [2 - 1:0];
+reg DEP_error_24 = 0;
+integer DEP_i_24;
+
+initial begin
+    DEP_address_24_to[0] = 0;
+    DEP_time_24_to[0] = 0;
+    DEP_address_24_from[0] = 0;
+    DEP_time_24_from[0] = 0;
+    DEP_address_24_from[1] = 0;
+    DEP_time_24_from[1] = 0;
+end
+
+always @ (negedge AESL_clock) begin
+    if (~`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_block_pp0) begin 
+        // record "to" access
+        if (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state2_pp0_iter1_stage0
+            &&  `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_reg_pp0_iter1) begin 
+            if (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_operation_97) begin
+                DEP_address_24_to[0] = {1'b1, `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.buf_V_2_address1};
+                DEP_time_24_to[0] = $time;
+            end else begin
+                DEP_address_24_to[0] = {1'b0, 10'b0};
+                DEP_time_24_to[0] = $time;
+            end
+        end // of record to access
+        else if( (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state2_pp0_iter1_stage0||
+            `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state2_pp0_iter1_stage0||
+            `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state3_pp0_iter2_stage0||
+            `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state4_pp0_iter3_stage0)
+            &&  ~`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_reg_pp0_iter1) begin
+            DEP_address_24_to[0] = {1'b0, 10'b0};
+            DEP_time_24_to[0] = $time;
+        end
+        // record "from" access
+        if (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state3_pp0_iter2_stage0
+            &&  `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_reg_pp0_iter2) begin
+            if (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_operation_121) begin
+                if (DEP_address_24_from[1][10]) begin
+                    $display("// ERROR : \"DEP_address_24_from[1]\" is overwritten @ \"%0t\"", $time);
+                    $display("// autotb LINE:%d", `__LINE__);
+                    $display("////////////////////////////////////////////////////////////////////////////////////");
+                end
+                DEP_address_24_from[1] = DEP_address_24_from[0];
+                DEP_time_24_from[1] = DEP_time_24_from[0];
+                DEP_address_24_from[0] = {1'b0, 10'b0};
+                DEP_time_24_from[0] = 0;
+                if (DEP_address_24_from[0][10]) begin
+                    $display("// ERROR : \"DEP_address_24_from[0]\" is overwritten @ \"%0t\"", $time);
+                    $display("// autotb LINE:%d", `__LINE__);
+                    $display("////////////////////////////////////////////////////////////////////////////////////");
+                end
+                DEP_address_24_from[0] = {1'b1, `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.buf_V_2_address0};
+                DEP_time_24_from[0] = $time;
+            end
+        end // of record from access
+        // check access
+        if (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state3_pp0_iter2_stage0
+            &&  `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_reg_pp0_iter2) begin
+            if (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_operation_121) begin
+                DEP_i_24 = 0;
+                if (DEP_address_24_to[0][10]) begin
+                    DEP_error_24 = (DEP_address_24_to[0][9:0] == DEP_address_24_from[DEP_i_24][9:0]);
+                    if (DEP_error_24) begin
+                        $display("//Critical WARNING: Due to pragma (/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp:624:22), dependence access (loop distance = 1) is detected in \"`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424\"");
+                        $display("//                : From memory access \"buf_V_2_address0\" = 0x%0h @ \"%0t\"", DEP_address_24_from[DEP_i_24][9:0], DEP_time_24_from[DEP_i_24]);
+                        $display("//                : To memory access \"buf_V_2_address1\" = DEP_address_24_to[0][9:0] = 0x%0h @ \"%0t\"", DEP_address_24_to[0][9:0], DEP_time_24_to[0]);
+                        $display("//If cosim fails, the WARNING should be checked. autotb LINE:%d", `__LINE__);
+                        $display("////////////////////////////////////////////////////////////////////////////////////");
+// (WAR) "ap_enable_operation_146"(R:SV2-3) -> "ap_enable_operation_97"(W:SV1-1) @ `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424
+                    end
+                end
+                DEP_address_24_from[DEP_i_24] = {1'b0, 10'b0};
+                DEP_time_24_from[DEP_i_24] = 0;
+            end
+        end // of check access
+    end 
+end
+
+// Dependence Check (WAR) "ap_enable_operation_146"(R:SV2-3) -> "ap_enable_operation_108"(W:SV1-1) @ `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424
+reg [10:0] DEP_address_25_to [1 - 1:0];
+time DEP_time_25_to [1 - 1:0];
+reg [10:0] DEP_address_25_from [2 - 1:0];
+time DEP_time_25_from [2 - 1:0];
+reg DEP_error_25 = 0;
+integer DEP_i_25;
+
+initial begin
+    DEP_address_25_to[0] = 0;
+    DEP_time_25_to[0] = 0;
+    DEP_address_25_from[0] = 0;
+    DEP_time_25_from[0] = 0;
+    DEP_address_25_from[1] = 0;
+    DEP_time_25_from[1] = 0;
+end
+
+always @ (negedge AESL_clock) begin
+    if (~`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_block_pp0) begin 
+        // record "to" access
+        if (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state2_pp0_iter1_stage0
+            &&  `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_reg_pp0_iter1) begin 
+            if (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_operation_108) begin
+                DEP_address_25_to[0] = {1'b1, `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.buf_V_2_address1};
+                DEP_time_25_to[0] = $time;
+            end else begin
+                DEP_address_25_to[0] = {1'b0, 10'b0};
+                DEP_time_25_to[0] = $time;
+            end
+        end // of record to access
+        else if( (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state2_pp0_iter1_stage0||
+            `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state2_pp0_iter1_stage0||
+            `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state3_pp0_iter2_stage0||
+            `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state4_pp0_iter3_stage0)
+            &&  ~`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_reg_pp0_iter1) begin
+            DEP_address_25_to[0] = {1'b0, 10'b0};
+            DEP_time_25_to[0] = $time;
+        end
+        // record "from" access
+        if (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state3_pp0_iter2_stage0
+            &&  `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_reg_pp0_iter2) begin
+            if (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_operation_121) begin
+                if (DEP_address_25_from[1][10]) begin
+                    $display("// ERROR : \"DEP_address_25_from[1]\" is overwritten @ \"%0t\"", $time);
+                    $display("// autotb LINE:%d", `__LINE__);
+                    $display("////////////////////////////////////////////////////////////////////////////////////");
+                end
+                DEP_address_25_from[1] = DEP_address_25_from[0];
+                DEP_time_25_from[1] = DEP_time_25_from[0];
+                DEP_address_25_from[0] = {1'b0, 10'b0};
+                DEP_time_25_from[0] = 0;
+                if (DEP_address_25_from[0][10]) begin
+                    $display("// ERROR : \"DEP_address_25_from[0]\" is overwritten @ \"%0t\"", $time);
+                    $display("// autotb LINE:%d", `__LINE__);
+                    $display("////////////////////////////////////////////////////////////////////////////////////");
+                end
+                DEP_address_25_from[0] = {1'b1, `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.buf_V_2_address0};
+                DEP_time_25_from[0] = $time;
+            end
+        end // of record from access
+        // check access
+        if (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state3_pp0_iter2_stage0
+            &&  `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_reg_pp0_iter2) begin
+            if (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_operation_121) begin
+                DEP_i_25 = 0;
+                if (DEP_address_25_to[0][10]) begin
+                    DEP_error_25 = (DEP_address_25_to[0][9:0] == DEP_address_25_from[DEP_i_25][9:0]);
+                    if (DEP_error_25) begin
+                        $display("//Critical WARNING: Due to pragma (/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp:624:22), dependence access (loop distance = 1) is detected in \"`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424\"");
+                        $display("//                : From memory access \"buf_V_2_address0\" = 0x%0h @ \"%0t\"", DEP_address_25_from[DEP_i_25][9:0], DEP_time_25_from[DEP_i_25]);
+                        $display("//                : To memory access \"buf_V_2_address1\" = DEP_address_25_to[0][9:0] = 0x%0h @ \"%0t\"", DEP_address_25_to[0][9:0], DEP_time_25_to[0]);
+                        $display("//If cosim fails, the WARNING should be checked. autotb LINE:%d", `__LINE__);
+                        $display("////////////////////////////////////////////////////////////////////////////////////");
+// (WAR) "ap_enable_operation_146"(R:SV2-3) -> "ap_enable_operation_108"(W:SV1-1) @ `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424
+                    end
+                end
+                DEP_address_25_from[DEP_i_25] = {1'b0, 10'b0};
+                DEP_time_25_from[DEP_i_25] = 0;
+            end
+        end // of check access
+    end 
+end
+
+// Dependence Check (WAR) "ap_enable_operation_147"(R:SV2-3) -> "ap_enable_operation_95"(W:SV1-1) @ `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424
+reg [10:0] DEP_address_26_to [1 - 1:0];
+time DEP_time_26_to [1 - 1:0];
+reg [10:0] DEP_address_26_from [2 - 1:0];
+time DEP_time_26_from [2 - 1:0];
+reg DEP_error_26 = 0;
+integer DEP_i_26;
+
+initial begin
+    DEP_address_26_to[0] = 0;
+    DEP_time_26_to[0] = 0;
+    DEP_address_26_from[0] = 0;
+    DEP_time_26_from[0] = 0;
+    DEP_address_26_from[1] = 0;
+    DEP_time_26_from[1] = 0;
+end
+
+always @ (negedge AESL_clock) begin
+    if (~`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_block_pp0) begin 
+        // record "to" access
+        if (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state2_pp0_iter1_stage0
+            &&  `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_reg_pp0_iter1) begin 
+            if (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_operation_95) begin
+                DEP_address_26_to[0] = {1'b1, `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.buf_V_3_address1};
+                DEP_time_26_to[0] = $time;
+            end else begin
+                DEP_address_26_to[0] = {1'b0, 10'b0};
+                DEP_time_26_to[0] = $time;
+            end
+        end // of record to access
+        else if( (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state2_pp0_iter1_stage0||
+            `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state2_pp0_iter1_stage0||
+            `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state3_pp0_iter2_stage0||
+            `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state4_pp0_iter3_stage0)
+            &&  ~`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_reg_pp0_iter1) begin
+            DEP_address_26_to[0] = {1'b0, 10'b0};
+            DEP_time_26_to[0] = $time;
+        end
+        // record "from" access
+        if (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state3_pp0_iter2_stage0
+            &&  `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_reg_pp0_iter2) begin
+            if (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_operation_122) begin
+                if (DEP_address_26_from[1][10]) begin
+                    $display("// ERROR : \"DEP_address_26_from[1]\" is overwritten @ \"%0t\"", $time);
+                    $display("// autotb LINE:%d", `__LINE__);
+                    $display("////////////////////////////////////////////////////////////////////////////////////");
+                end
+                DEP_address_26_from[1] = DEP_address_26_from[0];
+                DEP_time_26_from[1] = DEP_time_26_from[0];
+                DEP_address_26_from[0] = {1'b0, 10'b0};
+                DEP_time_26_from[0] = 0;
+                if (DEP_address_26_from[0][10]) begin
+                    $display("// ERROR : \"DEP_address_26_from[0]\" is overwritten @ \"%0t\"", $time);
+                    $display("// autotb LINE:%d", `__LINE__);
+                    $display("////////////////////////////////////////////////////////////////////////////////////");
+                end
+                DEP_address_26_from[0] = {1'b1, `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.buf_V_3_address0};
+                DEP_time_26_from[0] = $time;
+            end
+        end // of record from access
+        // check access
+        if (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state3_pp0_iter2_stage0
+            &&  `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_reg_pp0_iter2) begin
+            if (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_operation_122) begin
+                DEP_i_26 = 0;
+                if (DEP_address_26_to[0][10]) begin
+                    DEP_error_26 = (DEP_address_26_to[0][9:0] == DEP_address_26_from[DEP_i_26][9:0]);
+                    if (DEP_error_26) begin
+                        $display("//Critical WARNING: Due to pragma (/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp:624:22), dependence access (loop distance = 1) is detected in \"`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424\"");
+                        $display("//                : From memory access \"buf_V_3_address0\" = 0x%0h @ \"%0t\"", DEP_address_26_from[DEP_i_26][9:0], DEP_time_26_from[DEP_i_26]);
+                        $display("//                : To memory access \"buf_V_3_address1\" = DEP_address_26_to[0][9:0] = 0x%0h @ \"%0t\"", DEP_address_26_to[0][9:0], DEP_time_26_to[0]);
+                        $display("//If cosim fails, the WARNING should be checked. autotb LINE:%d", `__LINE__);
+                        $display("////////////////////////////////////////////////////////////////////////////////////");
+// (WAR) "ap_enable_operation_147"(R:SV2-3) -> "ap_enable_operation_95"(W:SV1-1) @ `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424
+                    end
+                end
+                DEP_address_26_from[DEP_i_26] = {1'b0, 10'b0};
+                DEP_time_26_from[DEP_i_26] = 0;
+            end
+        end // of check access
+    end 
+end
+
+// Dependence Check (WAR) "ap_enable_operation_147"(R:SV2-3) -> "ap_enable_operation_106"(W:SV1-1) @ `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424
+reg [10:0] DEP_address_27_to [1 - 1:0];
+time DEP_time_27_to [1 - 1:0];
+reg [10:0] DEP_address_27_from [2 - 1:0];
+time DEP_time_27_from [2 - 1:0];
+reg DEP_error_27 = 0;
+integer DEP_i_27;
+
+initial begin
+    DEP_address_27_to[0] = 0;
+    DEP_time_27_to[0] = 0;
+    DEP_address_27_from[0] = 0;
+    DEP_time_27_from[0] = 0;
+    DEP_address_27_from[1] = 0;
+    DEP_time_27_from[1] = 0;
+end
+
+always @ (negedge AESL_clock) begin
+    if (~`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_block_pp0) begin 
+        // record "to" access
+        if (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state2_pp0_iter1_stage0
+            &&  `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_reg_pp0_iter1) begin 
+            if (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_operation_106) begin
+                DEP_address_27_to[0] = {1'b1, `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.buf_V_3_address1};
+                DEP_time_27_to[0] = $time;
+            end else begin
+                DEP_address_27_to[0] = {1'b0, 10'b0};
+                DEP_time_27_to[0] = $time;
+            end
+        end // of record to access
+        else if( (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state2_pp0_iter1_stage0||
+            `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state2_pp0_iter1_stage0||
+            `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state3_pp0_iter2_stage0||
+            `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state4_pp0_iter3_stage0)
+            &&  ~`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_reg_pp0_iter1) begin
+            DEP_address_27_to[0] = {1'b0, 10'b0};
+            DEP_time_27_to[0] = $time;
+        end
+        // record "from" access
+        if (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state3_pp0_iter2_stage0
+            &&  `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_reg_pp0_iter2) begin
+            if (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_operation_122) begin
+                if (DEP_address_27_from[1][10]) begin
+                    $display("// ERROR : \"DEP_address_27_from[1]\" is overwritten @ \"%0t\"", $time);
+                    $display("// autotb LINE:%d", `__LINE__);
+                    $display("////////////////////////////////////////////////////////////////////////////////////");
+                end
+                DEP_address_27_from[1] = DEP_address_27_from[0];
+                DEP_time_27_from[1] = DEP_time_27_from[0];
+                DEP_address_27_from[0] = {1'b0, 10'b0};
+                DEP_time_27_from[0] = 0;
+                if (DEP_address_27_from[0][10]) begin
+                    $display("// ERROR : \"DEP_address_27_from[0]\" is overwritten @ \"%0t\"", $time);
+                    $display("// autotb LINE:%d", `__LINE__);
+                    $display("////////////////////////////////////////////////////////////////////////////////////");
+                end
+                DEP_address_27_from[0] = {1'b1, `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.buf_V_3_address0};
+                DEP_time_27_from[0] = $time;
+            end
+        end // of record from access
+        // check access
+        if (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state3_pp0_iter2_stage0
+            &&  `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_reg_pp0_iter2) begin
+            if (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_operation_122) begin
+                DEP_i_27 = 0;
+                if (DEP_address_27_to[0][10]) begin
+                    DEP_error_27 = (DEP_address_27_to[0][9:0] == DEP_address_27_from[DEP_i_27][9:0]);
+                    if (DEP_error_27) begin
+                        $display("//Critical WARNING: Due to pragma (/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp:624:22), dependence access (loop distance = 1) is detected in \"`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424\"");
+                        $display("//                : From memory access \"buf_V_3_address0\" = 0x%0h @ \"%0t\"", DEP_address_27_from[DEP_i_27][9:0], DEP_time_27_from[DEP_i_27]);
+                        $display("//                : To memory access \"buf_V_3_address1\" = DEP_address_27_to[0][9:0] = 0x%0h @ \"%0t\"", DEP_address_27_to[0][9:0], DEP_time_27_to[0]);
+                        $display("//If cosim fails, the WARNING should be checked. autotb LINE:%d", `__LINE__);
+                        $display("////////////////////////////////////////////////////////////////////////////////////");
+// (WAR) "ap_enable_operation_147"(R:SV2-3) -> "ap_enable_operation_106"(W:SV1-1) @ `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424
+                    end
+                end
+                DEP_address_27_from[DEP_i_27] = {1'b0, 10'b0};
+                DEP_time_27_from[DEP_i_27] = 0;
+            end
+        end // of check access
+    end 
+end
+
+// Dependence Check (WAR) "ap_enable_operation_148"(R:SV2-3) -> "ap_enable_operation_103"(W:SV1-1) @ `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424
+reg [10:0] DEP_address_28_to [1 - 1:0];
+time DEP_time_28_to [1 - 1:0];
+reg [10:0] DEP_address_28_from [2 - 1:0];
+time DEP_time_28_from [2 - 1:0];
+reg DEP_error_28 = 0;
+integer DEP_i_28;
+
+initial begin
+    DEP_address_28_to[0] = 0;
+    DEP_time_28_to[0] = 0;
+    DEP_address_28_from[0] = 0;
+    DEP_time_28_from[0] = 0;
+    DEP_address_28_from[1] = 0;
+    DEP_time_28_from[1] = 0;
+end
+
+always @ (negedge AESL_clock) begin
+    if (~`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_block_pp0) begin 
+        // record "to" access
+        if (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state2_pp0_iter1_stage0
+            &&  `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_reg_pp0_iter1) begin 
+            if (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_operation_103) begin
+                DEP_address_28_to[0] = {1'b1, `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.buf_V_4_address1};
+                DEP_time_28_to[0] = $time;
+            end else begin
+                DEP_address_28_to[0] = {1'b0, 10'b0};
+                DEP_time_28_to[0] = $time;
+            end
+        end // of record to access
+        else if( (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state2_pp0_iter1_stage0||
+            `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state2_pp0_iter1_stage0||
+            `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state3_pp0_iter2_stage0||
+            `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state4_pp0_iter3_stage0)
+            &&  ~`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_reg_pp0_iter1) begin
+            DEP_address_28_to[0] = {1'b0, 10'b0};
+            DEP_time_28_to[0] = $time;
+        end
+        // record "from" access
+        if (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state3_pp0_iter2_stage0
+            &&  `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_reg_pp0_iter2) begin
+            if (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_operation_123) begin
+                if (DEP_address_28_from[1][10]) begin
+                    $display("// ERROR : \"DEP_address_28_from[1]\" is overwritten @ \"%0t\"", $time);
+                    $display("// autotb LINE:%d", `__LINE__);
+                    $display("////////////////////////////////////////////////////////////////////////////////////");
+                end
+                DEP_address_28_from[1] = DEP_address_28_from[0];
+                DEP_time_28_from[1] = DEP_time_28_from[0];
+                DEP_address_28_from[0] = {1'b0, 10'b0};
+                DEP_time_28_from[0] = 0;
+                if (DEP_address_28_from[0][10]) begin
+                    $display("// ERROR : \"DEP_address_28_from[0]\" is overwritten @ \"%0t\"", $time);
+                    $display("// autotb LINE:%d", `__LINE__);
+                    $display("////////////////////////////////////////////////////////////////////////////////////");
+                end
+                DEP_address_28_from[0] = {1'b1, `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.buf_V_4_address0};
+                DEP_time_28_from[0] = $time;
+            end
+        end // of record from access
+        // check access
+        if (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state3_pp0_iter2_stage0
+            &&  `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_reg_pp0_iter2) begin
+            if (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_operation_123) begin
+                DEP_i_28 = 0;
+                if (DEP_address_28_to[0][10]) begin
+                    DEP_error_28 = (DEP_address_28_to[0][9:0] == DEP_address_28_from[DEP_i_28][9:0]);
+                    if (DEP_error_28) begin
+                        $display("//Critical WARNING: Due to pragma (/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp:624:22), dependence access (loop distance = 1) is detected in \"`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424\"");
+                        $display("//                : From memory access \"buf_V_4_address0\" = 0x%0h @ \"%0t\"", DEP_address_28_from[DEP_i_28][9:0], DEP_time_28_from[DEP_i_28]);
+                        $display("//                : To memory access \"buf_V_4_address1\" = DEP_address_28_to[0][9:0] = 0x%0h @ \"%0t\"", DEP_address_28_to[0][9:0], DEP_time_28_to[0]);
+                        $display("//If cosim fails, the WARNING should be checked. autotb LINE:%d", `__LINE__);
+                        $display("////////////////////////////////////////////////////////////////////////////////////");
+// (WAR) "ap_enable_operation_148"(R:SV2-3) -> "ap_enable_operation_103"(W:SV1-1) @ `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424
+                    end
+                end
+                DEP_address_28_from[DEP_i_28] = {1'b0, 10'b0};
+                DEP_time_28_from[DEP_i_28] = 0;
+            end
+        end // of check access
+    end 
+end
+
+// Dependence Check (WAR) "ap_enable_operation_148"(R:SV2-3) -> "ap_enable_operation_114"(W:SV1-1) @ `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424
+reg [10:0] DEP_address_29_to [1 - 1:0];
+time DEP_time_29_to [1 - 1:0];
+reg [10:0] DEP_address_29_from [2 - 1:0];
+time DEP_time_29_from [2 - 1:0];
+reg DEP_error_29 = 0;
+integer DEP_i_29;
+
+initial begin
+    DEP_address_29_to[0] = 0;
+    DEP_time_29_to[0] = 0;
+    DEP_address_29_from[0] = 0;
+    DEP_time_29_from[0] = 0;
+    DEP_address_29_from[1] = 0;
+    DEP_time_29_from[1] = 0;
+end
+
+always @ (negedge AESL_clock) begin
+    if (~`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_block_pp0) begin 
+        // record "to" access
+        if (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state2_pp0_iter1_stage0
+            &&  `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_reg_pp0_iter1) begin 
+            if (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_operation_114) begin
+                DEP_address_29_to[0] = {1'b1, `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.buf_V_4_address1};
+                DEP_time_29_to[0] = $time;
+            end else begin
+                DEP_address_29_to[0] = {1'b0, 10'b0};
+                DEP_time_29_to[0] = $time;
+            end
+        end // of record to access
+        else if( (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state2_pp0_iter1_stage0||
+            `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state2_pp0_iter1_stage0||
+            `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state3_pp0_iter2_stage0||
+            `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state4_pp0_iter3_stage0)
+            &&  ~`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_reg_pp0_iter1) begin
+            DEP_address_29_to[0] = {1'b0, 10'b0};
+            DEP_time_29_to[0] = $time;
+        end
+        // record "from" access
+        if (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state3_pp0_iter2_stage0
+            &&  `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_reg_pp0_iter2) begin
+            if (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_operation_123) begin
+                if (DEP_address_29_from[1][10]) begin
+                    $display("// ERROR : \"DEP_address_29_from[1]\" is overwritten @ \"%0t\"", $time);
+                    $display("// autotb LINE:%d", `__LINE__);
+                    $display("////////////////////////////////////////////////////////////////////////////////////");
+                end
+                DEP_address_29_from[1] = DEP_address_29_from[0];
+                DEP_time_29_from[1] = DEP_time_29_from[0];
+                DEP_address_29_from[0] = {1'b0, 10'b0};
+                DEP_time_29_from[0] = 0;
+                if (DEP_address_29_from[0][10]) begin
+                    $display("// ERROR : \"DEP_address_29_from[0]\" is overwritten @ \"%0t\"", $time);
+                    $display("// autotb LINE:%d", `__LINE__);
+                    $display("////////////////////////////////////////////////////////////////////////////////////");
+                end
+                DEP_address_29_from[0] = {1'b1, `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.buf_V_4_address0};
+                DEP_time_29_from[0] = $time;
+            end
+        end // of record from access
+        // check access
+        if (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_state3_pp0_iter2_stage0
+            &&  `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_reg_pp0_iter2) begin
+            if (`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.ap_enable_operation_123) begin
+                DEP_i_29 = 0;
+                if (DEP_address_29_to[0][10]) begin
+                    DEP_error_29 = (DEP_address_29_to[0][9:0] == DEP_address_29_from[DEP_i_29][9:0]);
+                    if (DEP_error_29) begin
+                        $display("//Critical WARNING: Due to pragma (/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp:624:22), dependence access (loop distance = 1) is detected in \"`AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424\"");
+                        $display("//                : From memory access \"buf_V_4_address0\" = 0x%0h @ \"%0t\"", DEP_address_29_from[DEP_i_29][9:0], DEP_time_29_from[DEP_i_29]);
+                        $display("//                : To memory access \"buf_V_4_address1\" = DEP_address_29_to[0][9:0] = 0x%0h @ \"%0t\"", DEP_address_29_to[0][9:0], DEP_time_29_to[0]);
+                        $display("//If cosim fails, the WARNING should be checked. autotb LINE:%d", `__LINE__);
+                        $display("////////////////////////////////////////////////////////////////////////////////////");
+// (WAR) "ap_enable_operation_148"(R:SV2-3) -> "ap_enable_operation_114"(W:SV1-1) @ `AUTOTB_DUT_INST.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424
+                    end
+                end
+                DEP_address_29_from[DEP_i_29] = {1'b0, 10'b0};
+                DEP_time_29_from[DEP_i_29] = 0;
+            end
+        end // of check access
+    end 
+end
 
 `endif
 

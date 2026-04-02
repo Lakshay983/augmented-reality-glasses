@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'xFGaussianFilter5x5_Pipeline_Col_Loop'" level="0">
-<item name = "Date">Fri Mar 27 07:16:45 2026
+<item name = "Date">Thu Apr  2 06:49:32 2026
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">accelerator_v2</item>
@@ -49,7 +49,7 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="DSP">-, -, -, -, -</column>
-<column name="Expression">-, -, 0, 55, -</column>
+<column name="Expression">-, -, 0, 103, -</column>
 <column name="FIFO">-, -, -, -, -</column>
 <column name="Instance">-, -, 0, 130, -</column>
 <column name="Memory">-, -, -, -, -</column>
@@ -65,11 +65,11 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="mux_53_8_1_1_U167">mux_53_8_1_1, 0, 0, 0, 26, 0</column>
-<column name="mux_53_8_1_1_U168">mux_53_8_1_1, 0, 0, 0, 26, 0</column>
-<column name="mux_53_8_1_1_U169">mux_53_8_1_1, 0, 0, 0, 26, 0</column>
-<column name="mux_53_8_1_1_U170">mux_53_8_1_1, 0, 0, 0, 26, 0</column>
-<column name="mux_53_8_1_1_U171">mux_53_8_1_1, 0, 0, 0, 26, 0</column>
+<column name="mux_53_8_1_1_U153">mux_53_8_1_1, 0, 0, 0, 26, 0</column>
+<column name="mux_53_8_1_1_U154">mux_53_8_1_1, 0, 0, 0, 26, 0</column>
+<column name="mux_53_8_1_1_U155">mux_53_8_1_1, 0, 0, 0, 26, 0</column>
+<column name="mux_53_8_1_1_U156">mux_53_8_1_1, 0, 0, 0, 26, 0</column>
+<column name="mux_53_8_1_1_U157">mux_53_8_1_1, 0, 0, 0, 26, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -87,15 +87,39 @@
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
 <column name="col_V_4_fu_683_p2">+, 0, 0, 17, 10, 1</column>
+<column name="ap_block_pp0">and, 0, 0, 2, 1, 1</column>
 <column name="ap_block_state13_pp0_stage0_iter12">and, 0, 0, 2, 1, 1</column>
 <column name="ap_block_state2_pp0_stage0_iter1">and, 0, 0, 2, 1, 1</column>
-<column name="ap_condition_1132">and, 0, 0, 2, 1, 1</column>
-<column name="ap_condition_1138">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_1360">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_1366">and, 0, 0, 2, 1, 1</column>
 <column name="ap_condition_806">and, 0, 0, 2, 1, 1</column>
+<column name="ap_enable_state2_pp0_iter1_stage0">and, 0, 0, 2, 1, 1</column>
+<column name="ap_enable_state3_pp0_iter2_stage0">and, 0, 0, 2, 1, 1</column>
+<column name="ap_enable_state4_pp0_iter3_stage0">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op101_store_state2">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op103_store_state2">and, 0, 0, 2, 1, 1</column>
 <column name="ap_predicate_op105_read_state2">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op106_store_state2">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op108_store_state2">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op110_store_state2">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op112_store_state2">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op114_store_state2">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op95_store_state2">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op97_store_state2">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op99_store_state2">and, 0, 0, 2, 1, 1</column>
 <column name="icmp_ln624_fu_677_p2">icmp, 0, 0, 11, 10, 10</column>
 <column name="icmp_ln668_fu_711_p2">icmp, 0, 0, 11, 9, 1</column>
 <column name="ap_block_pp0_stage0_01001">or, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op119_load_state3">or, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op120_load_state3">or, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op121_load_state3">or, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op122_load_state3">or, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op123_load_state3">or, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op144_load_state4">or, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op145_load_state4">or, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op146_load_state4">or, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op147_load_state4">or, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op148_load_state4">or, 0, 0, 2, 1, 1</column>
 <column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
 </table>
 </item>
@@ -268,13 +292,13 @@
 <column name="grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_dout0">in, 8, ap_ctrl_hs, xFGaussianFilter5x5_Pipeline_Col_Loop, return value</column>
 <column name="grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_ce">out, 1, ap_ctrl_hs, xFGaussianFilter5x5_Pipeline_Col_Loop, return value</column>
 <column name="gray_mat_data44_dout">in, 8, ap_fifo, gray_mat_data44, pointer</column>
-<column name="gray_mat_data44_num_data_valid">in, 13, ap_fifo, gray_mat_data44, pointer</column>
-<column name="gray_mat_data44_fifo_cap">in, 13, ap_fifo, gray_mat_data44, pointer</column>
+<column name="gray_mat_data44_num_data_valid">in, 20, ap_fifo, gray_mat_data44, pointer</column>
+<column name="gray_mat_data44_fifo_cap">in, 20, ap_fifo, gray_mat_data44, pointer</column>
 <column name="gray_mat_data44_empty_n">in, 1, ap_fifo, gray_mat_data44, pointer</column>
 <column name="gray_mat_data44_read">out, 1, ap_fifo, gray_mat_data44, pointer</column>
 <column name="blurred_mat_data45_din">out, 8, ap_fifo, blurred_mat_data45, pointer</column>
-<column name="blurred_mat_data45_num_data_valid">in, 13, ap_fifo, blurred_mat_data45, pointer</column>
-<column name="blurred_mat_data45_fifo_cap">in, 13, ap_fifo, blurred_mat_data45, pointer</column>
+<column name="blurred_mat_data45_num_data_valid">in, 20, ap_fifo, blurred_mat_data45, pointer</column>
+<column name="blurred_mat_data45_fifo_cap">in, 20, ap_fifo, blurred_mat_data45, pointer</column>
 <column name="blurred_mat_data45_full_n">in, 1, ap_fifo, blurred_mat_data45, pointer</column>
 <column name="blurred_mat_data45_write">out, 1, ap_fifo, blurred_mat_data45, pointer</column>
 <column name="tp1_V_cast">in, 3, ap_none, tp1_V_cast, scalar</column>

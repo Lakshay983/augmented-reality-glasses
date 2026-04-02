@@ -421,7 +421,7 @@ attribute shreg_extract : string;
 
 
 begin
-    mul_8ns_8ns_16_1_0_U119 : component accelerator_v2_mul_8ns_8ns_16_1_0
+    mul_8ns_8ns_16_1_0_U105 : component accelerator_v2_mul_8ns_8ns_16_1_0
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -433,7 +433,7 @@ begin
         din1 => mul_ln186_8_fu_461_p1,
         dout => mul_ln186_8_fu_461_p2);
 
-    am_addmul_8ns_8ns_8ns_17_4_0_U120 : component accelerator_v2_am_addmul_8ns_8ns_8ns_17_4_0
+    am_addmul_8ns_8ns_8ns_17_4_0_U106 : component accelerator_v2_am_addmul_8ns_8ns_8ns_17_4_0
     generic map (
         ID => 1,
         NUM_STAGE => 4,
@@ -450,7 +450,7 @@ begin
         ce => grp_fu_532_ce,
         dout => grp_fu_532_p3);
 
-    am_addmul_9ns_9ns_8ns_18_4_0_U121 : component accelerator_v2_am_addmul_9ns_9ns_8ns_18_4_0
+    am_addmul_9ns_9ns_8ns_18_4_0_U107 : component accelerator_v2_am_addmul_9ns_9ns_8ns_18_4_0
     generic map (
         ID => 1,
         NUM_STAGE => 4,
@@ -467,7 +467,7 @@ begin
         ce => grp_fu_541_ce,
         dout => grp_fu_541_p3);
 
-    am_addmul_9ns_9ns_8ns_18_4_0_U122 : component accelerator_v2_am_addmul_9ns_9ns_8ns_18_4_0
+    am_addmul_9ns_9ns_8ns_18_4_0_U108 : component accelerator_v2_am_addmul_9ns_9ns_8ns_18_4_0
     generic map (
         ID => 1,
         NUM_STAGE => 4,
@@ -484,7 +484,7 @@ begin
         ce => grp_fu_550_ce,
         dout => grp_fu_550_p3);
 
-    ama_addmuladd_8ns_8ns_8ns_17ns_18_4_0_U123 : component accelerator_v2_ama_addmuladd_8ns_8ns_8ns_17ns_18_4_0
+    ama_addmuladd_8ns_8ns_8ns_17ns_18_4_0_U109 : component accelerator_v2_ama_addmuladd_8ns_8ns_8ns_17ns_18_4_0
     generic map (
         ID => 1,
         NUM_STAGE => 4,
@@ -503,7 +503,7 @@ begin
         ce => grp_fu_559_ce,
         dout => grp_fu_559_p4);
 
-    ama_addmuladd_9ns_9ns_8ns_18ns_19_4_0_U124 : component accelerator_v2_ama_addmuladd_9ns_9ns_8ns_18ns_19_4_0
+    ama_addmuladd_9ns_9ns_8ns_18ns_19_4_0_U110 : component accelerator_v2_ama_addmuladd_9ns_9ns_8ns_18ns_19_4_0
     generic map (
         ID => 1,
         NUM_STAGE => 4,
@@ -522,7 +522,7 @@ begin
         ce => grp_fu_569_ce,
         dout => grp_fu_569_p4);
 
-    am_addmul_8ns_8ns_8ns_17_4_0_U125 : component accelerator_v2_am_addmul_8ns_8ns_8ns_17_4_0
+    am_addmul_8ns_8ns_8ns_17_4_0_U111 : component accelerator_v2_am_addmul_8ns_8ns_8ns_17_4_0
     generic map (
         ID => 1,
         NUM_STAGE => 4,
@@ -539,7 +539,7 @@ begin
         ce => grp_fu_579_ce,
         dout => grp_fu_579_p3);
 
-    ama_addmuladd_9ns_9ns_8ns_18ns_19_4_0_U126 : component accelerator_v2_ama_addmuladd_9ns_9ns_8ns_18ns_19_4_0
+    ama_addmuladd_9ns_9ns_8ns_18ns_19_4_0_U112 : component accelerator_v2_ama_addmuladd_9ns_9ns_8ns_18ns_19_4_0
     generic map (
         ID => 1,
         NUM_STAGE => 4,
@@ -558,7 +558,7 @@ begin
         ce => grp_fu_587_ce,
         dout => grp_fu_587_p4);
 
-    am_addmul_8ns_8ns_8ns_17_4_0_U127 : component accelerator_v2_am_addmul_8ns_8ns_8ns_17_4_0
+    am_addmul_8ns_8ns_8ns_17_4_0_U113 : component accelerator_v2_am_addmul_8ns_8ns_8ns_17_4_0
     generic map (
         ID => 1,
         NUM_STAGE => 4,
@@ -575,7 +575,7 @@ begin
         ce => grp_fu_598_ce,
         dout => grp_fu_598_p3);
 
-    am_addmul_19ns_17ns_8ns_28_4_0_U128 : component accelerator_v2_am_addmul_19ns_17ns_8ns_28_4_0
+    am_addmul_19ns_17ns_8ns_28_4_0_U114 : component accelerator_v2_am_addmul_19ns_17ns_8ns_28_4_0
     generic map (
         ID => 1,
         NUM_STAGE => 4,
@@ -592,7 +592,7 @@ begin
         ce => grp_fu_607_ce,
         dout => grp_fu_607_p3);
 
-    ama_addmuladd_19ns_17ns_8ns_16ns_28_4_0_U129 : component accelerator_v2_ama_addmuladd_19ns_17ns_8ns_16ns_28_4_0
+    ama_addmuladd_19ns_17ns_8ns_16ns_28_4_0_U115 : component accelerator_v2_ama_addmuladd_19ns_17ns_8ns_16ns_28_4_0
     generic map (
         ID => 1,
         NUM_STAGE => 4,
@@ -611,7 +611,7 @@ begin
         ce => grp_fu_615_ce,
         dout => grp_fu_615_p4);
 
-    ama_addmuladd_18ns_16ns_8ns_28ns_28_4_0_U130 : component accelerator_v2_ama_addmuladd_18ns_16ns_8ns_28ns_28_4_0
+    ama_addmuladd_18ns_16ns_8ns_28ns_28_4_0_U116 : component accelerator_v2_ama_addmuladd_18ns_16ns_8ns_28ns_28_4_0
     generic map (
         ID => 1,
         NUM_STAGE => 4,

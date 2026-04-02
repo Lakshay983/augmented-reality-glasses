@@ -15641,11 +15641,11 @@
       <key>filename</key>
       <string>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp</string>
       <key>line</key>
-      <integer>762</integer>
+      <integer>755</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_tripcount_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=xFGaussianFilter5x5_XLX_SEP_ PragmaOptions=min=TC max=TC_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=dependence_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=xFGaussianFilter5x5_XLX_SEP_ PragmaOptions=variable=buf inter false_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -15661,7 +15661,7 @@
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=xFGaussianFilter5x5_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_tripcount_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=xFGaussianFilter5x5_XLX_SEP_ PragmaOptions=min=TC max=TC_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -15673,11 +15673,11 @@
       <key>filename</key>
       <string>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp</string>
       <key>line</key>
-      <integer>775</integer>
+      <integer>764</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_tripcount_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=xFGaussianFilter5x5_XLX_SEP_ PragmaOptions=min=TC max=TC_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=xFGaussianFilter5x5_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -15693,6 +15693,22 @@
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_tripcount_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=xFGaussianFilter5x5_XLX_SEP_ PragmaOptions=min=TC max=TC_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp</string>
+      <key>line</key>
+      <integer>777</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
       <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=xFGaussianFilter5x5_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
@@ -15705,7 +15721,7 @@
       <key>filename</key>
       <string>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp</string>
       <key>line</key>
-      <integer>786</integer>
+      <integer>787</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -15721,7 +15737,7 @@
       <key>filename</key>
       <string>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp</string>
       <key>line</key>
-      <integer>856</integer>
+      <integer>857</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -15737,7 +15753,7 @@
       <key>filename</key>
       <string>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp</string>
       <key>line</key>
-      <integer>871</integer>
+      <integer>872</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -15753,7 +15769,7 @@
       <key>filename</key>
       <string>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp</string>
       <key>line</key>
-      <integer>905</integer>
+      <integer>906</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -15769,7 +15785,7 @@
       <key>filename</key>
       <string>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp</string>
       <key>line</key>
-      <integer>909</integer>
+      <integer>910</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -15785,7 +15801,7 @@
       <key>filename</key>
       <string>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp</string>
       <key>line</key>
-      <integer>910</integer>
+      <integer>911</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -15801,7 +15817,7 @@
       <key>filename</key>
       <string>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp</string>
       <key>line</key>
-      <integer>957</integer>
+      <integer>958</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -15817,7 +15833,7 @@
       <key>filename</key>
       <string>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp</string>
       <key>line</key>
-      <integer>966</integer>
+      <integer>967</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -15833,7 +15849,7 @@
       <key>filename</key>
       <string>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp</string>
       <key>line</key>
-      <integer>967</integer>
+      <integer>968</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -15849,7 +15865,7 @@
       <key>filename</key>
       <string>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp</string>
       <key>line</key>
-      <integer>1062</integer>
+      <integer>1063</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -15865,7 +15881,7 @@
       <key>filename</key>
       <string>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp</string>
       <key>line</key>
-      <integer>1071</integer>
+      <integer>1072</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -15881,7 +15897,7 @@
       <key>filename</key>
       <string>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp</string>
       <key>line</key>
-      <integer>1072</integer>
+      <integer>1073</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -15897,7 +15913,7 @@
       <key>filename</key>
       <string>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp</string>
       <key>line</key>
-      <integer>1073</integer>
+      <integer>1074</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -15913,7 +15929,7 @@
       <key>filename</key>
       <string>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp</string>
       <key>line</key>
-      <integer>1074</integer>
+      <integer>1075</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -15929,7 +15945,7 @@
       <key>filename</key>
       <string>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp</string>
       <key>line</key>
-      <integer>1075</integer>
+      <integer>1076</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -15945,7 +15961,7 @@
       <key>filename</key>
       <string>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp</string>
       <key>line</key>
-      <integer>1076</integer>
+      <integer>1077</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -15961,7 +15977,7 @@
       <key>filename</key>
       <string>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp</string>
       <key>line</key>
-      <integer>1077</integer>
+      <integer>1078</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -15977,7 +15993,7 @@
       <key>filename</key>
       <string>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp</string>
       <key>line</key>
-      <integer>1085</integer>
+      <integer>1086</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -15993,7 +16009,7 @@
       <key>filename</key>
       <string>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp</string>
       <key>line</key>
-      <integer>1086</integer>
+      <integer>1087</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -16009,27 +16025,11 @@
       <key>filename</key>
       <string>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp</string>
       <key>line</key>
-      <integer>1093</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_tripcount_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=xFGaussianFilter7x7_XLX_SEP_ PragmaOptions=min=TC max=TC_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp</string>
-      <key>line</key>
       <integer>1094</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=xFGaussianFilter7x7_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_tripcount_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=xFGaussianFilter7x7_XLX_SEP_ PragmaOptions=min=TC max=TC_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -16041,11 +16041,11 @@
       <key>filename</key>
       <string>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp</string>
       <key>line</key>
-      <integer>1106</integer>
+      <integer>1095</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_tripcount_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=xFGaussianFilter7x7_XLX_SEP_ PragmaOptions=min=TC max=TC_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=xFGaussianFilter7x7_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -16061,7 +16061,7 @@
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=xFGaussianFilter7x7_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_tripcount_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=xFGaussianFilter7x7_XLX_SEP_ PragmaOptions=min=TC max=TC_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -16073,11 +16073,11 @@
       <key>filename</key>
       <string>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp</string>
       <key>line</key>
-      <integer>1117</integer>
+      <integer>1108</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_tripcount_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=xFGaussianFilter7x7_XLX_SEP_ PragmaOptions=min=TC max=TC_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=xFGaussianFilter7x7_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -16093,6 +16093,22 @@
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_tripcount_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=xFGaussianFilter7x7_XLX_SEP_ PragmaOptions=min=TC max=TC_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp</string>
+      <key>line</key>
+      <integer>1119</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
       <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=xFGaussianFilter7x7_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
@@ -16105,7 +16121,7 @@
       <key>filename</key>
       <string>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp</string>
       <key>line</key>
-      <integer>1128</integer>
+      <integer>1129</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -16121,27 +16137,11 @@
       <key>filename</key>
       <string>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp</string>
       <key>line</key>
-      <integer>1191</integer>
+      <integer>1192</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
       <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=xFGaussianFilter7x7_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp</string>
-      <key>line</key>
-      <integer>1210</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_tripcount_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=xFGaussianFilter7x7_XLX_SEP_ PragmaOptions=min=8 max=8_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -16157,7 +16157,7 @@
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=xFGaussianFilter7x7_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_tripcount_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=xFGaussianFilter7x7_XLX_SEP_ PragmaOptions=min=8 max=8_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -16169,11 +16169,11 @@
       <key>filename</key>
       <string>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp</string>
       <key>line</key>
-      <integer>1224</integer>
+      <integer>1212</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_tripcount_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=xFGaussianFilter7x7_XLX_SEP_ PragmaOptions=min=3 max=3_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=xFGaussianFilter7x7_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -16189,7 +16189,7 @@
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=xFGaussianFilter7x7_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_tripcount_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=xFGaussianFilter7x7_XLX_SEP_ PragmaOptions=min=3 max=3_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -16201,11 +16201,11 @@
       <key>filename</key>
       <string>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp</string>
       <key>line</key>
-      <integer>1250</integer>
+      <integer>1226</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_tripcount_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=xFGaussianFilter7x7_XLX_SEP_ PragmaOptions=min=3 max=3_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=xFGaussianFilter7x7_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -16221,7 +16221,7 @@
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=xFGaussianFilter7x7_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_tripcount_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=xFGaussianFilter7x7_XLX_SEP_ PragmaOptions=min=3 max=3_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -16237,6 +16237,22 @@
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=xFGaussianFilter7x7_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp</string>
+      <key>line</key>
+      <integer>1253</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
       <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=allocation_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=xFGaussianFilter7x7_XLX_SEP_ PragmaOptions=function instances=xfapplygaussian7x7&lt;PLANES, DEPTH&gt; limit=1_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
@@ -16249,7 +16265,7 @@
       <key>filename</key>
       <string>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp</string>
       <key>line</key>
-      <integer>1299</integer>
+      <integer>1300</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -16265,7 +16281,7 @@
       <key>filename</key>
       <string>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp</string>
       <key>line</key>
-      <integer>1307</integer>
+      <integer>1308</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -16281,7 +16297,7 @@
       <key>filename</key>
       <string>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp</string>
       <key>line</key>
-      <integer>1316</integer>
+      <integer>1317</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -16297,7 +16313,7 @@
       <key>filename</key>
       <string>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp</string>
       <key>line</key>
-      <integer>1325</integer>
+      <integer>1326</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -16409,7 +16425,23 @@
       <key>filename</key>
       <string>accelerator_v2.cpp</string>
       <key>line</key>
-      <integer>68</integer>
+      <integer>64</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=bind_storage_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=pad_XLX_SEP_ PragmaOptions=variable=row_buf type=RAM_2P impl=BRAM_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>accelerator_v2.cpp</string>
+      <key>line</key>
+      <integer>69</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -16425,7 +16457,7 @@
       <key>filename</key>
       <string>accelerator_v2.cpp</string>
       <key>line</key>
-      <integer>79</integer>
+      <integer>80</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -16441,7 +16473,7 @@
       <key>filename</key>
       <string>accelerator_v2.cpp</string>
       <key>line</key>
-      <integer>94</integer>
+      <integer>95</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -16457,7 +16489,7 @@
       <key>filename</key>
       <string>accelerator_v2.cpp</string>
       <key>line</key>
-      <integer>102</integer>
+      <integer>103</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -16473,7 +16505,7 @@
       <key>filename</key>
       <string>accelerator_v2.cpp</string>
       <key>line</key>
-      <integer>116</integer>
+      <integer>117</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -16489,7 +16521,7 @@
       <key>filename</key>
       <string>accelerator_v2.cpp</string>
       <key>line</key>
-      <integer>208</integer>
+      <integer>134</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -16505,11 +16537,11 @@
       <key>filename</key>
       <string>accelerator_v2.cpp</string>
       <key>line</key>
-      <integer>213</integer>
+      <integer>139</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=unpack_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=unpack_XLX_SEP_ PragmaOptions=II=6_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -16521,7 +16553,7 @@
       <key>filename</key>
       <string>accelerator_v2.cpp</string>
       <key>line</key>
-      <integer>238</integer>
+      <integer>165</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -16537,7 +16569,39 @@
       <key>filename</key>
       <string>accelerator_v2.cpp</string>
       <key>line</key>
-      <integer>268</integer>
+      <integer>180</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=dependence_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=process_pixels_XLX_SEP_ PragmaOptions=variable=gray_mat inter false_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>accelerator_v2.cpp</string>
+      <key>line</key>
+      <integer>184</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=dependence_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=process_pixels_XLX_SEP_ PragmaOptions=variable=blurred_mat inter false_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>accelerator_v2.cpp</string>
+      <key>line</key>
+      <integer>199</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -16553,7 +16617,7 @@
       <key>filename</key>
       <string>accelerator_v2.cpp</string>
       <key>line</key>
-      <integer>274</integer>
+      <integer>206</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -16569,11 +16633,11 @@
       <key>filename</key>
       <string>accelerator_v2.cpp</string>
       <key>line</key>
-      <integer>281</integer>
+      <integer>212</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=repack_XLX_SEP_ PragmaOptions=II=15_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=repack_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -16585,7 +16649,7 @@
       <key>filename</key>
       <string>accelerator_v2.cpp</string>
       <key>line</key>
-      <integer>290</integer>
+      <integer>221</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -16601,7 +16665,7 @@
       <key>filename</key>
       <string>accelerator_v2.cpp</string>
       <key>line</key>
-      <integer>309</integer>
+      <integer>239</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -16617,7 +16681,7 @@
       <key>filename</key>
       <string>accelerator_v2.cpp</string>
       <key>line</key>
-      <integer>266</integer>
+      <integer>197</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -16633,7 +16697,23 @@
       <key>filename</key>
       <string>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL/accelerator_v2/solution1/csynth.tcl</string>
       <key>line</key>
-      <integer>15</integer>
+      <integer>16</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=accelerator_v2_XLX_SEP_ PragmaOptions=name=accelerator_v2_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL/accelerator_v2/solution1/directives.tcl</string>
+      <key>line</key>
+      <integer>6</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -16649,7 +16729,7 @@
       <key>filename</key>
       <string>accelerator_v2.cpp</string>
       <key>line</key>
-      <integer>325</integer>
+      <integer>256</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -16665,7 +16745,7 @@
       <key>filename</key>
       <string>accelerator_v2.cpp</string>
       <key>line</key>
-      <integer>326</integer>
+      <integer>257</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -16681,7 +16761,7 @@
       <key>filename</key>
       <string>accelerator_v2.cpp</string>
       <key>line</key>
-      <integer>327</integer>
+      <integer>258</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -16697,7 +16777,7 @@
       <key>filename</key>
       <string>accelerator_v2.cpp</string>
       <key>line</key>
-      <integer>328</integer>
+      <integer>259</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -16713,7 +16793,7 @@
       <key>filename</key>
       <string>accelerator_v2.cpp</string>
       <key>line</key>
-      <integer>329</integer>
+      <integer>260</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -16729,7 +16809,7 @@
       <key>filename</key>
       <string>accelerator_v2.cpp</string>
       <key>line</key>
-      <integer>335</integer>
+      <integer>266</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -16745,11 +16825,11 @@
       <key>filename</key>
       <string>accelerator_v2.cpp</string>
       <key>line</key>
-      <integer>336</integer>
+      <integer>267</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=accelerator_v2_XLX_SEP_ PragmaOptions=variable=padded_stream depth=307200_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=accelerator_v2_XLX_SEP_ PragmaOptions=variable=padded_stream depth=311296_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -16761,11 +16841,11 @@
       <key>filename</key>
       <string>accelerator_v2.cpp</string>
       <key>line</key>
-      <integer>337</integer>
+      <integer>268</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=accelerator_v2_XLX_SEP_ PragmaOptions=variable=gray_stream depth=307200_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=accelerator_v2_XLX_SEP_ PragmaOptions=variable=gray_stream depth=311296_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -16777,7 +16857,7 @@
       <key>filename</key>
       <string>accelerator_v2.cpp</string>
       <key>line</key>
-      <integer>338</integer>
+      <integer>269</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>

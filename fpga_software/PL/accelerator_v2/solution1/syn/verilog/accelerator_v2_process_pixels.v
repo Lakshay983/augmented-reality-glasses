@@ -48,26 +48,26 @@ wire   [23:0] stream_to_mat_U0_bgr_mat_data43_din;
 wire    stream_to_mat_U0_bgr_mat_data43_write;
 wire    stream_to_mat_U0_start_out;
 wire    stream_to_mat_U0_start_write;
-wire    bgr2gray_9_0_484_644_1_3220_3220_U0_ap_start;
-wire    bgr2gray_9_0_484_644_1_3220_3220_U0_ap_done;
-wire    bgr2gray_9_0_484_644_1_3220_3220_U0_ap_continue;
-wire    bgr2gray_9_0_484_644_1_3220_3220_U0_ap_idle;
-wire    bgr2gray_9_0_484_644_1_3220_3220_U0_ap_ready;
-wire    bgr2gray_9_0_484_644_1_3220_3220_U0_start_out;
-wire    bgr2gray_9_0_484_644_1_3220_3220_U0_start_write;
-wire    bgr2gray_9_0_484_644_1_3220_3220_U0_bgr_mat_data43_read;
-wire   [7:0] bgr2gray_9_0_484_644_1_3220_3220_U0_gray_mat_data44_din;
-wire    bgr2gray_9_0_484_644_1_3220_3220_U0_gray_mat_data44_write;
-wire    GaussianBlur_5_0_0_484_644_1_3220_3220_U0_ap_start;
-wire    GaussianBlur_5_0_0_484_644_1_3220_3220_U0_ap_done;
-wire    GaussianBlur_5_0_0_484_644_1_3220_3220_U0_ap_continue;
-wire    GaussianBlur_5_0_0_484_644_1_3220_3220_U0_ap_idle;
-wire    GaussianBlur_5_0_0_484_644_1_3220_3220_U0_ap_ready;
-wire    GaussianBlur_5_0_0_484_644_1_3220_3220_U0_start_out;
-wire    GaussianBlur_5_0_0_484_644_1_3220_3220_U0_start_write;
-wire    GaussianBlur_5_0_0_484_644_1_3220_3220_U0_gray_mat_data44_read;
-wire   [7:0] GaussianBlur_5_0_0_484_644_1_3220_3220_U0_blurred_mat_data45_din;
-wire    GaussianBlur_5_0_0_484_644_1_3220_3220_U0_blurred_mat_data45_write;
+wire    bgr2gray_9_0_484_644_1_311696_311696_U0_ap_start;
+wire    bgr2gray_9_0_484_644_1_311696_311696_U0_ap_done;
+wire    bgr2gray_9_0_484_644_1_311696_311696_U0_ap_continue;
+wire    bgr2gray_9_0_484_644_1_311696_311696_U0_ap_idle;
+wire    bgr2gray_9_0_484_644_1_311696_311696_U0_ap_ready;
+wire    bgr2gray_9_0_484_644_1_311696_311696_U0_start_out;
+wire    bgr2gray_9_0_484_644_1_311696_311696_U0_start_write;
+wire    bgr2gray_9_0_484_644_1_311696_311696_U0_bgr_mat_data43_read;
+wire   [7:0] bgr2gray_9_0_484_644_1_311696_311696_U0_gray_mat_data44_din;
+wire    bgr2gray_9_0_484_644_1_311696_311696_U0_gray_mat_data44_write;
+wire    GaussianBlur_5_1_0_484_644_1_311696_311696_U0_ap_start;
+wire    GaussianBlur_5_1_0_484_644_1_311696_311696_U0_ap_done;
+wire    GaussianBlur_5_1_0_484_644_1_311696_311696_U0_ap_continue;
+wire    GaussianBlur_5_1_0_484_644_1_311696_311696_U0_ap_idle;
+wire    GaussianBlur_5_1_0_484_644_1_311696_311696_U0_ap_ready;
+wire    GaussianBlur_5_1_0_484_644_1_311696_311696_U0_start_out;
+wire    GaussianBlur_5_1_0_484_644_1_311696_311696_U0_start_write;
+wire    GaussianBlur_5_1_0_484_644_1_311696_311696_U0_gray_mat_data44_read;
+wire   [7:0] GaussianBlur_5_1_0_484_644_1_311696_311696_U0_blurred_mat_data45_din;
+wire    GaussianBlur_5_1_0_484_644_1_311696_311696_U0_blurred_mat_data45_write;
 wire    mat_to_stream_U0_ap_start;
 wire    mat_to_stream_U0_ap_done;
 wire    mat_to_stream_U0_ap_continue;
@@ -78,27 +78,27 @@ wire   [7:0] mat_to_stream_U0_gray_stream3_din;
 wire    mat_to_stream_U0_gray_stream3_write;
 wire    bgr_mat_data_full_n;
 wire   [23:0] bgr_mat_data_dout;
-wire   [12:0] bgr_mat_data_num_data_valid;
-wire   [12:0] bgr_mat_data_fifo_cap;
+wire   [19:0] bgr_mat_data_num_data_valid;
+wire   [19:0] bgr_mat_data_fifo_cap;
 wire    bgr_mat_data_empty_n;
 wire    gray_mat_data_full_n;
 wire   [7:0] gray_mat_data_dout;
-wire   [12:0] gray_mat_data_num_data_valid;
-wire   [12:0] gray_mat_data_fifo_cap;
+wire   [19:0] gray_mat_data_num_data_valid;
+wire   [19:0] gray_mat_data_fifo_cap;
 wire    gray_mat_data_empty_n;
 wire    blurred_mat_data_full_n;
 wire   [7:0] blurred_mat_data_dout;
-wire   [12:0] blurred_mat_data_num_data_valid;
-wire   [12:0] blurred_mat_data_fifo_cap;
+wire   [19:0] blurred_mat_data_num_data_valid;
+wire   [19:0] blurred_mat_data_fifo_cap;
 wire    blurred_mat_data_empty_n;
-wire   [0:0] start_for_bgr2gray_9_0_484_644_1_3220_3220_U0_din;
-wire    start_for_bgr2gray_9_0_484_644_1_3220_3220_U0_full_n;
-wire   [0:0] start_for_bgr2gray_9_0_484_644_1_3220_3220_U0_dout;
-wire    start_for_bgr2gray_9_0_484_644_1_3220_3220_U0_empty_n;
-wire   [0:0] start_for_GaussianBlur_5_0_0_484_644_1_3220_3220_U0_din;
-wire    start_for_GaussianBlur_5_0_0_484_644_1_3220_3220_U0_full_n;
-wire   [0:0] start_for_GaussianBlur_5_0_0_484_644_1_3220_3220_U0_dout;
-wire    start_for_GaussianBlur_5_0_0_484_644_1_3220_3220_U0_empty_n;
+wire   [0:0] start_for_bgr2gray_9_0_484_644_1_311696_311696_U0_din;
+wire    start_for_bgr2gray_9_0_484_644_1_311696_311696_U0_full_n;
+wire   [0:0] start_for_bgr2gray_9_0_484_644_1_311696_311696_U0_dout;
+wire    start_for_bgr2gray_9_0_484_644_1_311696_311696_U0_empty_n;
+wire   [0:0] start_for_GaussianBlur_5_1_0_484_644_1_311696_311696_U0_din;
+wire    start_for_GaussianBlur_5_1_0_484_644_1_311696_311696_U0_full_n;
+wire   [0:0] start_for_GaussianBlur_5_1_0_484_644_1_311696_311696_U0_dout;
+wire    start_for_GaussianBlur_5_1_0_484_644_1_311696_311696_U0_empty_n;
 wire   [0:0] start_for_mat_to_stream_U0_din;
 wire    start_for_mat_to_stream_U0_full_n;
 wire   [0:0] start_for_mat_to_stream_U0_dout;
@@ -108,7 +108,7 @@ accelerator_v2_stream_to_mat stream_to_mat_U0(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst),
     .ap_start(stream_to_mat_U0_ap_start),
-    .start_full_n(start_for_bgr2gray_9_0_484_644_1_3220_3220_U0_full_n),
+    .start_full_n(start_for_bgr2gray_9_0_484_644_1_311696_311696_U0_full_n),
     .ap_done(stream_to_mat_U0_ap_done),
     .ap_continue(stream_to_mat_U0_ap_continue),
     .ap_idle(stream_to_mat_U0_ap_idle),
@@ -127,50 +127,50 @@ accelerator_v2_stream_to_mat stream_to_mat_U0(
     .start_write(stream_to_mat_U0_start_write)
 );
 
-accelerator_v2_bgr2gray_9_0_484_644_1_3220_3220_s bgr2gray_9_0_484_644_1_3220_3220_U0(
+accelerator_v2_bgr2gray_9_0_484_644_1_311696_311696_s bgr2gray_9_0_484_644_1_311696_311696_U0(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst),
-    .ap_start(bgr2gray_9_0_484_644_1_3220_3220_U0_ap_start),
-    .start_full_n(start_for_GaussianBlur_5_0_0_484_644_1_3220_3220_U0_full_n),
-    .ap_done(bgr2gray_9_0_484_644_1_3220_3220_U0_ap_done),
-    .ap_continue(bgr2gray_9_0_484_644_1_3220_3220_U0_ap_continue),
-    .ap_idle(bgr2gray_9_0_484_644_1_3220_3220_U0_ap_idle),
-    .ap_ready(bgr2gray_9_0_484_644_1_3220_3220_U0_ap_ready),
-    .start_out(bgr2gray_9_0_484_644_1_3220_3220_U0_start_out),
-    .start_write(bgr2gray_9_0_484_644_1_3220_3220_U0_start_write),
+    .ap_start(bgr2gray_9_0_484_644_1_311696_311696_U0_ap_start),
+    .start_full_n(start_for_GaussianBlur_5_1_0_484_644_1_311696_311696_U0_full_n),
+    .ap_done(bgr2gray_9_0_484_644_1_311696_311696_U0_ap_done),
+    .ap_continue(bgr2gray_9_0_484_644_1_311696_311696_U0_ap_continue),
+    .ap_idle(bgr2gray_9_0_484_644_1_311696_311696_U0_ap_idle),
+    .ap_ready(bgr2gray_9_0_484_644_1_311696_311696_U0_ap_ready),
+    .start_out(bgr2gray_9_0_484_644_1_311696_311696_U0_start_out),
+    .start_write(bgr2gray_9_0_484_644_1_311696_311696_U0_start_write),
     .bgr_mat_data43_dout(bgr_mat_data_dout),
     .bgr_mat_data43_num_data_valid(bgr_mat_data_num_data_valid),
     .bgr_mat_data43_fifo_cap(bgr_mat_data_fifo_cap),
     .bgr_mat_data43_empty_n(bgr_mat_data_empty_n),
-    .bgr_mat_data43_read(bgr2gray_9_0_484_644_1_3220_3220_U0_bgr_mat_data43_read),
-    .gray_mat_data44_din(bgr2gray_9_0_484_644_1_3220_3220_U0_gray_mat_data44_din),
+    .bgr_mat_data43_read(bgr2gray_9_0_484_644_1_311696_311696_U0_bgr_mat_data43_read),
+    .gray_mat_data44_din(bgr2gray_9_0_484_644_1_311696_311696_U0_gray_mat_data44_din),
     .gray_mat_data44_num_data_valid(gray_mat_data_num_data_valid),
     .gray_mat_data44_fifo_cap(gray_mat_data_fifo_cap),
     .gray_mat_data44_full_n(gray_mat_data_full_n),
-    .gray_mat_data44_write(bgr2gray_9_0_484_644_1_3220_3220_U0_gray_mat_data44_write)
+    .gray_mat_data44_write(bgr2gray_9_0_484_644_1_311696_311696_U0_gray_mat_data44_write)
 );
 
-accelerator_v2_GaussianBlur_5_0_0_484_644_1_3220_3220_s GaussianBlur_5_0_0_484_644_1_3220_3220_U0(
+accelerator_v2_GaussianBlur_5_1_0_484_644_1_311696_311696_s GaussianBlur_5_1_0_484_644_1_311696_311696_U0(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst),
-    .ap_start(GaussianBlur_5_0_0_484_644_1_3220_3220_U0_ap_start),
+    .ap_start(GaussianBlur_5_1_0_484_644_1_311696_311696_U0_ap_start),
     .start_full_n(start_for_mat_to_stream_U0_full_n),
-    .ap_done(GaussianBlur_5_0_0_484_644_1_3220_3220_U0_ap_done),
-    .ap_continue(GaussianBlur_5_0_0_484_644_1_3220_3220_U0_ap_continue),
-    .ap_idle(GaussianBlur_5_0_0_484_644_1_3220_3220_U0_ap_idle),
-    .ap_ready(GaussianBlur_5_0_0_484_644_1_3220_3220_U0_ap_ready),
-    .start_out(GaussianBlur_5_0_0_484_644_1_3220_3220_U0_start_out),
-    .start_write(GaussianBlur_5_0_0_484_644_1_3220_3220_U0_start_write),
+    .ap_done(GaussianBlur_5_1_0_484_644_1_311696_311696_U0_ap_done),
+    .ap_continue(GaussianBlur_5_1_0_484_644_1_311696_311696_U0_ap_continue),
+    .ap_idle(GaussianBlur_5_1_0_484_644_1_311696_311696_U0_ap_idle),
+    .ap_ready(GaussianBlur_5_1_0_484_644_1_311696_311696_U0_ap_ready),
+    .start_out(GaussianBlur_5_1_0_484_644_1_311696_311696_U0_start_out),
+    .start_write(GaussianBlur_5_1_0_484_644_1_311696_311696_U0_start_write),
     .gray_mat_data44_dout(gray_mat_data_dout),
     .gray_mat_data44_num_data_valid(gray_mat_data_num_data_valid),
     .gray_mat_data44_fifo_cap(gray_mat_data_fifo_cap),
     .gray_mat_data44_empty_n(gray_mat_data_empty_n),
-    .gray_mat_data44_read(GaussianBlur_5_0_0_484_644_1_3220_3220_U0_gray_mat_data44_read),
-    .blurred_mat_data45_din(GaussianBlur_5_0_0_484_644_1_3220_3220_U0_blurred_mat_data45_din),
+    .gray_mat_data44_read(GaussianBlur_5_1_0_484_644_1_311696_311696_U0_gray_mat_data44_read),
+    .blurred_mat_data45_din(GaussianBlur_5_1_0_484_644_1_311696_311696_U0_blurred_mat_data45_din),
     .blurred_mat_data45_num_data_valid(blurred_mat_data_num_data_valid),
     .blurred_mat_data45_fifo_cap(blurred_mat_data_fifo_cap),
     .blurred_mat_data45_full_n(blurred_mat_data_full_n),
-    .blurred_mat_data45_write(GaussianBlur_5_0_0_484_644_1_3220_3220_U0_blurred_mat_data45_write)
+    .blurred_mat_data45_write(GaussianBlur_5_1_0_484_644_1_311696_311696_U0_blurred_mat_data45_write)
 );
 
 accelerator_v2_mat_to_stream mat_to_stream_U0(
@@ -193,7 +193,7 @@ accelerator_v2_mat_to_stream mat_to_stream_U0(
     .gray_stream3_write(mat_to_stream_U0_gray_stream3_write)
 );
 
-accelerator_v2_fifo_w24_d3220_A bgr_mat_data_U(
+accelerator_v2_fifo_w24_d311696_A bgr_mat_data_U(
     .clk(ap_clk),
     .reset(ap_rst),
     .if_read_ce(1'b1),
@@ -205,32 +205,32 @@ accelerator_v2_fifo_w24_d3220_A bgr_mat_data_U(
     .if_num_data_valid(bgr_mat_data_num_data_valid),
     .if_fifo_cap(bgr_mat_data_fifo_cap),
     .if_empty_n(bgr_mat_data_empty_n),
-    .if_read(bgr2gray_9_0_484_644_1_3220_3220_U0_bgr_mat_data43_read)
+    .if_read(bgr2gray_9_0_484_644_1_311696_311696_U0_bgr_mat_data43_read)
 );
 
-accelerator_v2_fifo_w8_d3220_A gray_mat_data_U(
+accelerator_v2_fifo_w8_d311696_A gray_mat_data_U(
     .clk(ap_clk),
     .reset(ap_rst),
     .if_read_ce(1'b1),
     .if_write_ce(1'b1),
-    .if_din(bgr2gray_9_0_484_644_1_3220_3220_U0_gray_mat_data44_din),
+    .if_din(bgr2gray_9_0_484_644_1_311696_311696_U0_gray_mat_data44_din),
     .if_full_n(gray_mat_data_full_n),
-    .if_write(bgr2gray_9_0_484_644_1_3220_3220_U0_gray_mat_data44_write),
+    .if_write(bgr2gray_9_0_484_644_1_311696_311696_U0_gray_mat_data44_write),
     .if_dout(gray_mat_data_dout),
     .if_num_data_valid(gray_mat_data_num_data_valid),
     .if_fifo_cap(gray_mat_data_fifo_cap),
     .if_empty_n(gray_mat_data_empty_n),
-    .if_read(GaussianBlur_5_0_0_484_644_1_3220_3220_U0_gray_mat_data44_read)
+    .if_read(GaussianBlur_5_1_0_484_644_1_311696_311696_U0_gray_mat_data44_read)
 );
 
-accelerator_v2_fifo_w8_d3220_A blurred_mat_data_U(
+accelerator_v2_fifo_w8_d311696_A blurred_mat_data_U(
     .clk(ap_clk),
     .reset(ap_rst),
     .if_read_ce(1'b1),
     .if_write_ce(1'b1),
-    .if_din(GaussianBlur_5_0_0_484_644_1_3220_3220_U0_blurred_mat_data45_din),
+    .if_din(GaussianBlur_5_1_0_484_644_1_311696_311696_U0_blurred_mat_data45_din),
     .if_full_n(blurred_mat_data_full_n),
-    .if_write(GaussianBlur_5_0_0_484_644_1_3220_3220_U0_blurred_mat_data45_write),
+    .if_write(GaussianBlur_5_1_0_484_644_1_311696_311696_U0_blurred_mat_data45_write),
     .if_dout(blurred_mat_data_dout),
     .if_num_data_valid(blurred_mat_data_num_data_valid),
     .if_fifo_cap(blurred_mat_data_fifo_cap),
@@ -238,30 +238,30 @@ accelerator_v2_fifo_w8_d3220_A blurred_mat_data_U(
     .if_read(mat_to_stream_U0_blurred_mat_data45_read)
 );
 
-accelerator_v2_start_for_bgr2gray_9_0_484_644_1_3220_3220_U0 start_for_bgr2gray_9_0_484_644_1_3220_3220_U0_U(
+accelerator_v2_start_for_bgr2gray_9_0_484_644_1_311696_311696_U0 start_for_bgr2gray_9_0_484_644_1_311696_311696_U0_U(
     .clk(ap_clk),
     .reset(ap_rst),
     .if_read_ce(1'b1),
     .if_write_ce(1'b1),
-    .if_din(start_for_bgr2gray_9_0_484_644_1_3220_3220_U0_din),
-    .if_full_n(start_for_bgr2gray_9_0_484_644_1_3220_3220_U0_full_n),
+    .if_din(start_for_bgr2gray_9_0_484_644_1_311696_311696_U0_din),
+    .if_full_n(start_for_bgr2gray_9_0_484_644_1_311696_311696_U0_full_n),
     .if_write(stream_to_mat_U0_start_write),
-    .if_dout(start_for_bgr2gray_9_0_484_644_1_3220_3220_U0_dout),
-    .if_empty_n(start_for_bgr2gray_9_0_484_644_1_3220_3220_U0_empty_n),
-    .if_read(bgr2gray_9_0_484_644_1_3220_3220_U0_ap_ready)
+    .if_dout(start_for_bgr2gray_9_0_484_644_1_311696_311696_U0_dout),
+    .if_empty_n(start_for_bgr2gray_9_0_484_644_1_311696_311696_U0_empty_n),
+    .if_read(bgr2gray_9_0_484_644_1_311696_311696_U0_ap_ready)
 );
 
-accelerator_v2_start_for_GaussianBlur_5_0_0_484_644_1_3220_3220_U0 start_for_GaussianBlur_5_0_0_484_644_1_3220_3220_U0_U(
+accelerator_v2_start_for_GaussianBlur_5_1_0_484_644_1_311696_311696_U0 start_for_GaussianBlur_5_1_0_484_644_1_311696_311696_U0_U(
     .clk(ap_clk),
     .reset(ap_rst),
     .if_read_ce(1'b1),
     .if_write_ce(1'b1),
-    .if_din(start_for_GaussianBlur_5_0_0_484_644_1_3220_3220_U0_din),
-    .if_full_n(start_for_GaussianBlur_5_0_0_484_644_1_3220_3220_U0_full_n),
-    .if_write(bgr2gray_9_0_484_644_1_3220_3220_U0_start_write),
-    .if_dout(start_for_GaussianBlur_5_0_0_484_644_1_3220_3220_U0_dout),
-    .if_empty_n(start_for_GaussianBlur_5_0_0_484_644_1_3220_3220_U0_empty_n),
-    .if_read(GaussianBlur_5_0_0_484_644_1_3220_3220_U0_ap_ready)
+    .if_din(start_for_GaussianBlur_5_1_0_484_644_1_311696_311696_U0_din),
+    .if_full_n(start_for_GaussianBlur_5_1_0_484_644_1_311696_311696_U0_full_n),
+    .if_write(bgr2gray_9_0_484_644_1_311696_311696_U0_start_write),
+    .if_dout(start_for_GaussianBlur_5_1_0_484_644_1_311696_311696_U0_dout),
+    .if_empty_n(start_for_GaussianBlur_5_1_0_484_644_1_311696_311696_U0_empty_n),
+    .if_read(GaussianBlur_5_1_0_484_644_1_311696_311696_U0_ap_ready)
 );
 
 accelerator_v2_start_for_mat_to_stream_U0 start_for_mat_to_stream_U0_U(
@@ -271,25 +271,25 @@ accelerator_v2_start_for_mat_to_stream_U0 start_for_mat_to_stream_U0_U(
     .if_write_ce(1'b1),
     .if_din(start_for_mat_to_stream_U0_din),
     .if_full_n(start_for_mat_to_stream_U0_full_n),
-    .if_write(GaussianBlur_5_0_0_484_644_1_3220_3220_U0_start_write),
+    .if_write(GaussianBlur_5_1_0_484_644_1_311696_311696_U0_start_write),
     .if_dout(start_for_mat_to_stream_U0_dout),
     .if_empty_n(start_for_mat_to_stream_U0_empty_n),
     .if_read(mat_to_stream_U0_ap_ready)
 );
 
-assign GaussianBlur_5_0_0_484_644_1_3220_3220_U0_ap_continue = 1'b1;
+assign GaussianBlur_5_1_0_484_644_1_311696_311696_U0_ap_continue = 1'b1;
 
-assign GaussianBlur_5_0_0_484_644_1_3220_3220_U0_ap_start = start_for_GaussianBlur_5_0_0_484_644_1_3220_3220_U0_empty_n;
+assign GaussianBlur_5_1_0_484_644_1_311696_311696_U0_ap_start = start_for_GaussianBlur_5_1_0_484_644_1_311696_311696_U0_empty_n;
 
 assign ap_done = mat_to_stream_U0_ap_done;
 
-assign ap_idle = (stream_to_mat_U0_ap_idle & mat_to_stream_U0_ap_idle & bgr2gray_9_0_484_644_1_3220_3220_U0_ap_idle & GaussianBlur_5_0_0_484_644_1_3220_3220_U0_ap_idle);
+assign ap_idle = (stream_to_mat_U0_ap_idle & mat_to_stream_U0_ap_idle & bgr2gray_9_0_484_644_1_311696_311696_U0_ap_idle & GaussianBlur_5_1_0_484_644_1_311696_311696_U0_ap_idle);
 
 assign ap_ready = stream_to_mat_U0_ap_ready;
 
-assign bgr2gray_9_0_484_644_1_3220_3220_U0_ap_continue = 1'b1;
+assign bgr2gray_9_0_484_644_1_311696_311696_U0_ap_continue = 1'b1;
 
-assign bgr2gray_9_0_484_644_1_3220_3220_U0_ap_start = start_for_bgr2gray_9_0_484_644_1_3220_3220_U0_empty_n;
+assign bgr2gray_9_0_484_644_1_311696_311696_U0_ap_start = start_for_bgr2gray_9_0_484_644_1_311696_311696_U0_empty_n;
 
 assign gray_stream3_din = mat_to_stream_U0_gray_stream3_din;
 
@@ -301,9 +301,9 @@ assign mat_to_stream_U0_ap_start = start_for_mat_to_stream_U0_empty_n;
 
 assign padded_stream2_read = stream_to_mat_U0_padded_stream2_read;
 
-assign start_for_GaussianBlur_5_0_0_484_644_1_3220_3220_U0_din = 1'b1;
+assign start_for_GaussianBlur_5_1_0_484_644_1_311696_311696_U0_din = 1'b1;
 
-assign start_for_bgr2gray_9_0_484_644_1_3220_3220_U0_din = 1'b1;
+assign start_for_bgr2gray_9_0_484_644_1_311696_311696_U0_din = 1'b1;
 
 assign start_for_mat_to_stream_U0_din = 1'b1;
 

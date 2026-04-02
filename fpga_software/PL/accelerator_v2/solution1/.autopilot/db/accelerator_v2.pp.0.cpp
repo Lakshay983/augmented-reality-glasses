@@ -31824,6 +31824,7 @@ void xFGaussianFilter5x5(xf::cv::Mat<SRC_T, ROWS, COLS, NPC, XFCVDEPTH_IN_1>& _s
 
 #pragma HLS bind_storage variable=buf type=RAM_S2P impl=BRAM
 #pragma HLS ARRAY_PARTITION variable=buf complete dim=1
+#pragma HLS DEPENDENCE variable=buf inter false
 
 
  row_ind = 2;
@@ -31905,7 +31906,7 @@ Row_Loop:
                                               tp2, mid, bottom1, bottom2, row, weights, read_index, write_index);
 
         if ((NPC == XF_NPPC8) || (NPC == XF_NPPC16)) {
-            VITIS_LOOP_836_1: for (ap_uint<6> i = 4; i < (xfNPixelsPerCycle<NPC>::nppc + 4); i++) {
+            VITIS_LOOP_837_1: for (ap_uint<6> i = 4; i < (xfNPixelsPerCycle<NPC>::nppc + 4); i++) {
                 src_buf1[i] = 0;
                 src_buf2[i] = 0;
                 src_buf3[i] = 0;
@@ -31938,7 +31939,7 @@ Row_Loop:
             inter_valx((max_loop - 1), (max_loop - step)) = OutputValues[0];
 
             _out_mat.write(write_index++, inter_valx);
-            VITIS_LOOP_869_2: for (ap_uint<4> i = 0; i < 4; i++) {
+            VITIS_LOOP_870_2: for (ap_uint<4> i = 0; i < 4; i++) {
 
 #pragma HLS unroll
 
@@ -31976,7 +31977,7 @@ void xFGaussian7x7(typename PixelType<DEPTH>::name * OutputValues,
 
 #pragma HLS INLINE
 
- VITIS_LOOP_907_1: for (ap_uint<9> j = 0; j < xfNPixelsPerCycle<NPC>::nppc; j++) {
+ VITIS_LOOP_908_1: for (ap_uint<9> j = 0; j < xfNPixelsPerCycle<NPC>::nppc; j++) {
 
 #pragma HLS LOOP_TRIPCOUNT min=8 max=8
 #pragma HLS UNROLL
@@ -32258,7 +32259,7 @@ Row_Loop:
             bottom3 = 6;
         }
 
-        VITIS_LOOP_1189_1: for (i = 0; i < 6; i++) {
+        VITIS_LOOP_1190_1: for (i = 0; i < 6; i++) {
 
 #pragma HLS unroll
 
@@ -32277,7 +32278,7 @@ Row_Loop:
             read_index, write_index);
 
         if ((NPC == XF_NPPC8) || (NPC == XF_NPPC16)) {
-            VITIS_LOOP_1208_2: for (i = 0; i < 8; i++) {
+            VITIS_LOOP_1209_2: for (i = 0; i < 8; i++) {
 
 #pragma HLS LOOP_TRIPCOUNT min=8 max=8
 #pragma HLS unroll
@@ -32291,7 +32292,7 @@ Row_Loop:
                 src_buf7[buf_size + i - (xfNPixelsPerCycle<NPC>::nppc)] = 0;
             }
 
-            VITIS_LOOP_1222_3: for (i = 0; i < 3; i++) {
+            VITIS_LOOP_1223_3: for (i = 0; i < 3; i++) {
 
 #pragma HLS LOOP_TRIPCOUNT min=3 max=3
 #pragma HLS unroll
@@ -32317,7 +32318,7 @@ Row_Loop:
             src_buf6[6] = 0;
             src_buf7[6] = 0;
 
-            VITIS_LOOP_1248_4: for (i = 0; i < 3; i++) {
+            VITIS_LOOP_1249_4: for (i = 0; i < 3; i++) {
 
 #pragma HLS LOOP_TRIPCOUNT min=3 max=3
 #pragma HLS unroll
@@ -32347,7 +32348,7 @@ Row_Loop:
     }
 
 }
-# 1287 "/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp"
+# 1288 "/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp"
 template <int FILTER_SIZE,
           int BORDER_TYPE,
           int SRC_T,
@@ -32402,7 +32403,7 @@ typedef ap_axiu<128, 1, 1, 1> AxiBurst;
 
 void stream_to_mat(
     hls::stream<ap_uint<24>>& in,
-    xf::cv::Mat<XF_8UC3, (480 + 2*2), (640 + 2*2), XF_NPPC1, (5 * (640 + 2*2))>& out,
+    xf::cv::Mat<XF_8UC3, (480 + 2*2), (640 + 2*2), XF_NPPC1, ((480 + 2*2) * (640 + 2*2))>& out,
     int rows, int cols)
 {
 
@@ -32417,7 +32418,7 @@ void stream_to_mat(
 }
 
 void mat_to_stream(
-    xf::cv::Mat<XF_8UC1, (480 + 2*2), (640 + 2*2), XF_NPPC1, (5 * (640 + 2*2))>& in,
+    xf::cv::Mat<XF_8UC1, (480 + 2*2), (640 + 2*2), XF_NPPC1, ((480 + 2*2) * (640 + 2*2))>& in,
     hls::stream<ap_uint<8>>& out,
     int rows, int cols)
 {
@@ -32441,10 +32442,11 @@ void pad(
 
  ap_uint<24> row_buf[4][640];
 #pragma HLS ARRAY_PARTITION variable=row_buf complete dim=1
+#pragma HLS BIND_STORAGE variable=row_buf type=RAM_2P impl=BRAM
 
 
- VITIS_LOOP_66_1: for (int r = 0; r < 3; r++) {
-        VITIS_LOOP_67_2: for (int c = 0; c < 640; c++) {
+ VITIS_LOOP_67_1: for (int r = 0; r < 3; r++) {
+        VITIS_LOOP_68_2: for (int c = 0; c < 640; c++) {
 #pragma HLS PIPELINE II=1
  row_buf[r][c] = in.read();
         }
@@ -32452,10 +32454,10 @@ void pad(
 
 
 
-    VITIS_LOOP_75_3: for (int r = 2; r >= 1; r--) {
+    VITIS_LOOP_76_3: for (int r = 2; r >= 1; r--) {
         out.write(row_buf[r][2]);
         out.write(row_buf[r][1]);
-        VITIS_LOOP_78_4: for (int c = 0; c < 640; c++) {
+        VITIS_LOOP_79_4: for (int c = 0; c < 640; c++) {
 #pragma HLS PIPELINE II=1
  out.write(row_buf[r][c]);
         }
@@ -32464,13 +32466,13 @@ void pad(
     }
 
 
-    VITIS_LOOP_87_5: for (int r = 0; r < 480; r++) {
+    VITIS_LOOP_88_5: for (int r = 0; r < 480; r++) {
         int slot;
         if (r < 3) {
             slot = r;
         } else {
             slot = r % 2 + 2;
-            VITIS_LOOP_93_6: for (int c = 0; c < 640; c++) {
+            VITIS_LOOP_94_6: for (int c = 0; c < 640; c++) {
 #pragma HLS PIPELINE II=1
  row_buf[slot][c] = in.read();
             }
@@ -32478,7 +32480,7 @@ void pad(
 
         out.write(row_buf[slot][2]);
         out.write(row_buf[slot][1]);
-        VITIS_LOOP_101_7: for (int c = 0; c < 640; c++) {
+        VITIS_LOOP_102_7: for (int c = 0; c < 640; c++) {
 #pragma HLS PIPELINE II=1
  out.write(row_buf[slot][c]);
         }
@@ -32488,11 +32490,11 @@ void pad(
 
 
 
-    VITIS_LOOP_111_8: for (int r = 480 -2; r >= 480 -3; r--) {
+    VITIS_LOOP_112_8: for (int r = 480 -2; r >= 480 -3; r--) {
         int slot = (r < 3) ? r : (r % 2 + 2);
         out.write(row_buf[slot][2]);
         out.write(row_buf[slot][1]);
-        VITIS_LOOP_115_9: for (int c = 0; c < 640; c++) {
+        VITIS_LOOP_116_9: for (int c = 0; c < 640; c++) {
 #pragma HLS PIPELINE II=1
  out.write(row_buf[slot][c]);
         }
@@ -32500,7 +32502,10 @@ void pad(
         out.write(row_buf[slot][640 -3]);
     }
 }
-# 202 "accelerator_v2.cpp"
+
+
+
+
 void unpack(
     hls::stream<AxiBurst>& burst_in,
     hls::stream<ap_uint<24>>& bgr_stream,
@@ -32508,11 +32513,11 @@ void unpack(
     volatile bool& frame_start_out)
 {
 #pragma HLS INLINE off
- static bool frame_started = false;
+ bool frame_started = false;
 
-    VITIS_LOOP_211_1: for (int row = 0; row < 480; row++) {
-        VITIS_LOOP_212_2: for (int b = 0; b < 128; b++) {
-#pragma HLS PIPELINE II=1
+    VITIS_LOOP_137_1: for (int row = 0; row < 480; row++) {
+        VITIS_LOOP_138_2: for (int b = 0; b < 128; b++) {
+#pragma HLS PIPELINE II=6
  AxiBurst burst = burst_in.read();
 
             if (burst.user && !frame_started) {
@@ -32537,11 +32542,14 @@ void process_pixels(
     hls::stream<ap_uint<8>>& gray_stream_out,
     int rows, int cols)
 {
+
 #pragma HLS DATAFLOW
 
- xf::cv::Mat<XF_8UC3, (480 + 2*2), (640 + 2*2), XF_NPPC1, (5 * (640 + 2*2))> bgr_mat(rows, cols);
-    xf::cv::Mat<XF_8UC1, (480 + 2*2), (640 + 2*2), XF_NPPC1, (5 * (640 + 2*2))> gray_mat(rows, cols);
-    xf::cv::Mat<XF_8UC1, (480 + 2*2), (640 + 2*2), XF_NPPC1, (5 * (640 + 2*2))> blurred_mat(rows, cols);
+
+
+ xf::cv::Mat<XF_8UC3, (480 + 2*2), (640 + 2*2), XF_NPPC1, ((480 + 2*2) * (640 + 2*2))> bgr_mat(rows, cols);
+    xf::cv::Mat<XF_8UC1, (480 + 2*2), (640 + 2*2), XF_NPPC1, ((480 + 2*2) * (640 + 2*2))> gray_mat(rows, cols);
+    xf::cv::Mat<XF_8UC1, (480 + 2*2), (640 + 2*2), XF_NPPC1, ((480 + 2*2) * (640 + 2*2))> blurred_mat(rows, cols);
 
 
     stream_to_mat(bgr_stream, bgr_mat, rows, cols);
@@ -32550,14 +32558,16 @@ void process_pixels(
     xf::cv::bgr2gray<XF_8UC3, XF_8UC1, (480 + 2*2), (640 + 2*2), XF_NPPC1>(bgr_mat, gray_mat);
 
 
-    xf::cv::GaussianBlur<5, XF_BORDER_CONSTANT, XF_8UC1, (480 + 2*2), (640 + 2*2), XF_NPPC1>(
+#pragma HLS DEPENDENCE variable=gray_mat inter false
+
+ xf::cv::GaussianBlur<5, XF_BORDER_REPLICATE, XF_8UC1, (480 + 2*2), (640 + 2*2), XF_NPPC1>(
         gray_mat, blurred_mat, 0.0f);
+#pragma HLS DEPENDENCE variable=blurred_mat inter false
 
-    mat_to_stream(blurred_mat, gray_stream_out, rows, cols);
+
+
+ mat_to_stream(blurred_mat, gray_stream_out, rows, cols);
 }
-
-
-
 
 
 
@@ -32569,18 +32579,18 @@ void repack(
 {
 #pragma HLS INLINE off
 
- VITIS_LOOP_270_1: for (int r = 0; r < (480 + 2*2); r++) {
+ int hdr_rows_drained = 0;
 
+    VITIS_LOOP_203_1: for (int r = 0; r < (480 + 2*2); r++) {
         ap_uint<8> row_pixels[(640 + 2*2)];
-        VITIS_LOOP_273_2: for (int c = 0; c < (640 + 2*2); c++) {
+        VITIS_LOOP_205_2: for (int c = 0; c < (640 + 2*2); c++) {
 #pragma HLS PIPELINE II=1
  row_pixels[c] = gray_stream.read();
         }
 
-
         if (r >= 2 && r < (480 + 2*2) - 2) {
-            VITIS_LOOP_280_3: for (int ob = 0; ob < 43; ob++) {
-#pragma HLS PIPELINE II=15
+            VITIS_LOOP_211_3: for (int ob = 0; ob < 43; ob++) {
+#pragma HLS PIPELINE II=1
  AxiBurst out_burst;
                 out_burst.data = 0;
                 out_burst.keep = -1;
@@ -32588,10 +32598,9 @@ void repack(
 
                 int n_pix = (ob < 42) ? 15 : 10;
 
-                VITIS_LOOP_289_4: for (int p = 0; p < 15; p++) {
+                VITIS_LOOP_220_4: for (int p = 0; p < 15; p++) {
 #pragma HLS UNROLL
  if (p < n_pix) {
-
                         ap_uint<8> gray = row_pixels[2 + ob * 15 + p];
                         int bit_hi = 127 - p * 8;
                         out_burst.data(bit_hi, bit_hi - 7) = gray;
@@ -32602,19 +32611,20 @@ void repack(
                 int out_row = r - 2;
                 out_burst.last = (ob == 43 -1) && (out_row == 480 -1);
                 out_burst.user = (ob == 0) && (out_row == 0);
-
                 burst_out.write(out_burst);
             }
 
 
-            VITIS_LOOP_308_5: for (int ib = 0; ib < 128; ib++) {
+            if (hdr_rows_drained < 480) {
+                VITIS_LOOP_238_5: for (int ib = 0; ib < 128; ib++) {
 #pragma HLS PIPELINE II=1
  hdr_stream.read();
+                }
+                hdr_rows_drained++;
             }
         }
     }
 }
-
 
 
 
@@ -32624,9 +32634,13 @@ __attribute__((sdx_kernel("accelerator_v2", 0))) void accelerator_v2(
  volatile ap_uint<1>* in_breath,
  volatile ap_uint<1>* out_breath
 ){
-#line 15 "/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL/accelerator_v2/solution1/csynth.tcl"
+#line 16 "/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL/accelerator_v2/solution1/csynth.tcl"
 #pragma HLSDIRECTIVE TOP name=accelerator_v2
-# 324 "accelerator_v2.cpp"
+# 255 "accelerator_v2.cpp"
+
+#line 6 "/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL/accelerator_v2/solution1/directives.tcl"
+#pragma HLSDIRECTIVE TOP name=accelerator_v2
+# 255 "accelerator_v2.cpp"
 
 #pragma HLS INTERFACE axis port=in_stream
 #pragma HLS INTERFACE axis port=out_stream
@@ -32639,8 +32653,8 @@ __attribute__((sdx_kernel("accelerator_v2", 0))) void accelerator_v2(
     hls::stream<ap_uint<8>> gray_stream("gray_stream");
     hls::stream<ap_uint<8>> hdr_stream("hdr_stream");
 #pragma HLS STREAM variable=bgr_stream depth=307200
-#pragma HLS STREAM variable=padded_stream depth=307200
-#pragma HLS STREAM variable=gray_stream depth=307200
+#pragma HLS STREAM variable=padded_stream depth=311296
+#pragma HLS STREAM variable=gray_stream depth=311296
 #pragma HLS STREAM variable=hdr_stream depth=61440
 
  volatile bool frame_start = false;

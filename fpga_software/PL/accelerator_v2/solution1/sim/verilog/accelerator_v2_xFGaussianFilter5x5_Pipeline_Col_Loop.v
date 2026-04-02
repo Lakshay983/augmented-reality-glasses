@@ -150,13 +150,13 @@ output   ap_done;
 output   ap_idle;
 output   ap_ready;
 input  [7:0] gray_mat_data44_dout;
-input  [12:0] gray_mat_data44_num_data_valid;
-input  [12:0] gray_mat_data44_fifo_cap;
+input  [19:0] gray_mat_data44_num_data_valid;
+input  [19:0] gray_mat_data44_fifo_cap;
 input   gray_mat_data44_empty_n;
 output   gray_mat_data44_read;
 output  [7:0] blurred_mat_data45_din;
-input  [12:0] blurred_mat_data45_num_data_valid;
-input  [12:0] blurred_mat_data45_fifo_cap;
+input  [19:0] blurred_mat_data45_num_data_valid;
+input  [19:0] blurred_mat_data45_fifo_cap;
 input   blurred_mat_data45_full_n;
 output   blurred_mat_data45_write;
 input  [2:0] tp1_V_cast;
@@ -337,7 +337,6 @@ reg    ap_enable_reg_pp0_iter12;
 reg    ap_idle_pp0;
 wire    ap_block_state1_pp0_stage0_iter0;
 reg   [0:0] icmp_ln624_reg_1203;
-wire   [0:0] cmp_i_i380_i_read_reg_1149;
 reg    ap_predicate_op105_read_state2;
 reg    ap_block_state2_pp0_stage0_iter1;
 wire    ap_block_state3_pp0_stage0_iter2;
@@ -362,8 +361,6 @@ reg    gray_mat_data44_blk_n;
 wire    ap_block_pp0_stage0;
 reg    blurred_mat_data45_blk_n;
 reg    ap_block_pp0_stage0_11001;
-wire   [2:0] row_ind_V_cast_read_reg_1153;
-wire   [2:0] bottom2_V_cast_read_reg_1172;
 reg   [9:0] col_V_3_reg_1197;
 reg   [0:0] icmp_ln624_reg_1203_pp0_iter1_reg;
 reg   [0:0] icmp_ln624_reg_1203_pp0_iter2_reg;
@@ -573,11 +570,55 @@ reg    ap_loop_exit_ready_pp0_iter9_reg;
 reg    ap_loop_exit_ready_pp0_iter10_reg;
 reg    ap_loop_exit_ready_pp0_iter11_reg;
 reg   [0:0] ap_NS_fsm;
+reg    ap_block_pp0;
+reg    ap_predicate_op95_store_state2;
+reg    ap_enable_operation_95;
+reg    ap_enable_state2_pp0_iter1_stage0;
+reg    ap_predicate_op106_store_state2;
+reg    ap_enable_operation_106;
+reg    ap_predicate_op122_load_state3;
+reg    ap_enable_operation_122;
+reg    ap_enable_state3_pp0_iter2_stage0;
+reg    ap_predicate_op147_load_state4;
+reg    ap_enable_operation_147;
+reg    ap_enable_state4_pp0_iter3_stage0;
+reg    ap_predicate_op97_store_state2;
+reg    ap_enable_operation_97;
+reg    ap_predicate_op108_store_state2;
+reg    ap_enable_operation_108;
+reg    ap_predicate_op121_load_state3;
+reg    ap_enable_operation_121;
+reg    ap_predicate_op146_load_state4;
+reg    ap_enable_operation_146;
+reg    ap_predicate_op99_store_state2;
+reg    ap_enable_operation_99;
+reg    ap_predicate_op110_store_state2;
+reg    ap_enable_operation_110;
+reg    ap_predicate_op120_load_state3;
+reg    ap_enable_operation_120;
+reg    ap_predicate_op145_load_state4;
+reg    ap_enable_operation_145;
+reg    ap_predicate_op101_store_state2;
+reg    ap_enable_operation_101;
+reg    ap_predicate_op112_store_state2;
+reg    ap_enable_operation_112;
+reg    ap_predicate_op119_load_state3;
+reg    ap_enable_operation_119;
+reg    ap_predicate_op144_load_state4;
+reg    ap_enable_operation_144;
+reg    ap_predicate_op103_store_state2;
+reg    ap_enable_operation_103;
+reg    ap_predicate_op114_store_state2;
+reg    ap_enable_operation_114;
+reg    ap_predicate_op123_load_state3;
+reg    ap_enable_operation_123;
+reg    ap_predicate_op148_load_state4;
+reg    ap_enable_operation_148;
 wire    ap_enable_pp0;
 wire    ap_start_int;
 reg    ap_condition_806;
-reg    ap_condition_1132;
-reg    ap_condition_1138;
+reg    ap_condition_1360;
+reg    ap_condition_1366;
 wire    ap_ce_reg;
 
 // power-on initialization
@@ -608,7 +649,7 @@ accelerator_v2_mux_53_8_1_1 #(
     .din4_WIDTH( 8 ),
     .din5_WIDTH( 3 ),
     .dout_WIDTH( 8 ))
-mux_53_8_1_1_U167(
+mux_53_8_1_1_U153(
     .din0(buf_V_q0),
     .din1(buf_V_1_q0),
     .din2(buf_V_2_q0),
@@ -628,7 +669,7 @@ accelerator_v2_mux_53_8_1_1 #(
     .din4_WIDTH( 8 ),
     .din5_WIDTH( 3 ),
     .dout_WIDTH( 8 ))
-mux_53_8_1_1_U168(
+mux_53_8_1_1_U154(
     .din0(buf_V_q0),
     .din1(buf_V_1_q0),
     .din2(buf_V_2_q0),
@@ -648,7 +689,7 @@ accelerator_v2_mux_53_8_1_1 #(
     .din4_WIDTH( 8 ),
     .din5_WIDTH( 3 ),
     .dout_WIDTH( 8 ))
-mux_53_8_1_1_U169(
+mux_53_8_1_1_U155(
     .din0(buf_V_q0),
     .din1(buf_V_1_q0),
     .din2(buf_V_2_q0),
@@ -668,7 +709,7 @@ accelerator_v2_mux_53_8_1_1 #(
     .din4_WIDTH( 8 ),
     .din5_WIDTH( 3 ),
     .dout_WIDTH( 8 ))
-mux_53_8_1_1_U170(
+mux_53_8_1_1_U156(
     .din0(buf_V_q0),
     .din1(buf_V_1_q0),
     .din2(buf_V_2_q0),
@@ -688,7 +729,7 @@ accelerator_v2_mux_53_8_1_1 #(
     .din4_WIDTH( 8 ),
     .din5_WIDTH( 3 ),
     .dout_WIDTH( 8 ))
-mux_53_8_1_1_U171(
+mux_53_8_1_1_U157(
     .din0(buf_V_q0),
     .din1(buf_V_1_q0),
     .din2(buf_V_2_q0),
@@ -1325,7 +1366,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((((cmp_i_i380_i_read_reg_1149 == 1'd0) & (icmp_ln624_reg_1203 == 1'd0) & (bottom2_V_cast_read_reg_1172 == 3'd1) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)) | ((cmp_i_i380_i == 1'd1) & (icmp_ln624_reg_1203 == 1'd0) & (row_ind_V_cast_read_reg_1153 == 3'd1) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)))) begin
+    if ((((cmp_i_i380_i == 1'd0) & (icmp_ln624_reg_1203 == 1'd0) & (bottom2_V_cast == 3'd1) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)) | ((cmp_i_i380_i == 1'd1) & (icmp_ln624_reg_1203 == 1'd0) & (row_ind_V_cast == 3'd1) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)))) begin
         buf_V_1_ce1 = 1'b1;
     end else begin
         buf_V_1_ce1 = 1'b0;
@@ -1334,9 +1375,9 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_condition_806)) begin
-        if (((cmp_i_i380_i == 1'd1) & (row_ind_V_cast_read_reg_1153 == 3'd1))) begin
+        if (((cmp_i_i380_i == 1'd1) & (row_ind_V_cast == 3'd1))) begin
             buf_V_1_d1 = gray_mat_data44_dout;
-        end else if (((cmp_i_i380_i_read_reg_1149 == 1'd0) & (bottom2_V_cast_read_reg_1172 == 3'd1))) begin
+        end else if (((cmp_i_i380_i == 1'd0) & (bottom2_V_cast == 3'd1))) begin
             buf_V_1_d1 = 8'd0;
         end else begin
             buf_V_1_d1 = 'bx;
@@ -1347,7 +1388,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((((cmp_i_i380_i_read_reg_1149 == 1'd0) & (icmp_ln624_reg_1203 == 1'd0) & (bottom2_V_cast_read_reg_1172 == 3'd1) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)) | ((cmp_i_i380_i == 1'd1) & (icmp_ln624_reg_1203 == 1'd0) & (row_ind_V_cast_read_reg_1153 == 3'd1) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)))) begin
+    if ((((cmp_i_i380_i == 1'd0) & (icmp_ln624_reg_1203 == 1'd0) & (bottom2_V_cast == 3'd1) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)) | ((cmp_i_i380_i == 1'd1) & (icmp_ln624_reg_1203 == 1'd0) & (row_ind_V_cast == 3'd1) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)))) begin
         buf_V_1_we1 = 1'b1;
     end else begin
         buf_V_1_we1 = 1'b0;
@@ -1363,7 +1404,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((((cmp_i_i380_i_read_reg_1149 == 1'd0) & (icmp_ln624_reg_1203 == 1'd0) & (bottom2_V_cast_read_reg_1172 == 3'd2) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)) | ((cmp_i_i380_i == 1'd1) & (icmp_ln624_reg_1203 == 1'd0) & (row_ind_V_cast_read_reg_1153 == 3'd2) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)))) begin
+    if ((((cmp_i_i380_i == 1'd0) & (icmp_ln624_reg_1203 == 1'd0) & (bottom2_V_cast == 3'd2) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)) | ((cmp_i_i380_i == 1'd1) & (icmp_ln624_reg_1203 == 1'd0) & (row_ind_V_cast == 3'd2) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)))) begin
         buf_V_2_ce1 = 1'b1;
     end else begin
         buf_V_2_ce1 = 1'b0;
@@ -1372,9 +1413,9 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_condition_806)) begin
-        if (((cmp_i_i380_i == 1'd1) & (row_ind_V_cast_read_reg_1153 == 3'd2))) begin
+        if (((cmp_i_i380_i == 1'd1) & (row_ind_V_cast == 3'd2))) begin
             buf_V_2_d1 = gray_mat_data44_dout;
-        end else if (((cmp_i_i380_i_read_reg_1149 == 1'd0) & (bottom2_V_cast_read_reg_1172 == 3'd2))) begin
+        end else if (((cmp_i_i380_i == 1'd0) & (bottom2_V_cast == 3'd2))) begin
             buf_V_2_d1 = 8'd0;
         end else begin
             buf_V_2_d1 = 'bx;
@@ -1385,7 +1426,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((((cmp_i_i380_i_read_reg_1149 == 1'd0) & (icmp_ln624_reg_1203 == 1'd0) & (bottom2_V_cast_read_reg_1172 == 3'd2) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)) | ((cmp_i_i380_i == 1'd1) & (icmp_ln624_reg_1203 == 1'd0) & (row_ind_V_cast_read_reg_1153 == 3'd2) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)))) begin
+    if ((((cmp_i_i380_i == 1'd0) & (icmp_ln624_reg_1203 == 1'd0) & (bottom2_V_cast == 3'd2) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)) | ((cmp_i_i380_i == 1'd1) & (icmp_ln624_reg_1203 == 1'd0) & (row_ind_V_cast == 3'd2) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)))) begin
         buf_V_2_we1 = 1'b1;
     end else begin
         buf_V_2_we1 = 1'b0;
@@ -1401,7 +1442,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((((cmp_i_i380_i_read_reg_1149 == 1'd0) & (icmp_ln624_reg_1203 == 1'd0) & (bottom2_V_cast_read_reg_1172 == 3'd3) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)) | ((cmp_i_i380_i == 1'd1) & (icmp_ln624_reg_1203 == 1'd0) & (row_ind_V_cast_read_reg_1153 == 3'd3) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)))) begin
+    if ((((cmp_i_i380_i == 1'd0) & (icmp_ln624_reg_1203 == 1'd0) & (bottom2_V_cast == 3'd3) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)) | ((cmp_i_i380_i == 1'd1) & (icmp_ln624_reg_1203 == 1'd0) & (row_ind_V_cast == 3'd3) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)))) begin
         buf_V_3_ce1 = 1'b1;
     end else begin
         buf_V_3_ce1 = 1'b0;
@@ -1410,9 +1451,9 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_condition_806)) begin
-        if (((cmp_i_i380_i == 1'd1) & (row_ind_V_cast_read_reg_1153 == 3'd3))) begin
+        if (((cmp_i_i380_i == 1'd1) & (row_ind_V_cast == 3'd3))) begin
             buf_V_3_d1 = gray_mat_data44_dout;
-        end else if (((cmp_i_i380_i_read_reg_1149 == 1'd0) & (bottom2_V_cast_read_reg_1172 == 3'd3))) begin
+        end else if (((cmp_i_i380_i == 1'd0) & (bottom2_V_cast == 3'd3))) begin
             buf_V_3_d1 = 8'd0;
         end else begin
             buf_V_3_d1 = 'bx;
@@ -1423,7 +1464,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((((cmp_i_i380_i_read_reg_1149 == 1'd0) & (icmp_ln624_reg_1203 == 1'd0) & (bottom2_V_cast_read_reg_1172 == 3'd3) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)) | ((cmp_i_i380_i == 1'd1) & (icmp_ln624_reg_1203 == 1'd0) & (row_ind_V_cast_read_reg_1153 == 3'd3) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)))) begin
+    if ((((cmp_i_i380_i == 1'd0) & (icmp_ln624_reg_1203 == 1'd0) & (bottom2_V_cast == 3'd3) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)) | ((cmp_i_i380_i == 1'd1) & (icmp_ln624_reg_1203 == 1'd0) & (row_ind_V_cast == 3'd3) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)))) begin
         buf_V_3_we1 = 1'b1;
     end else begin
         buf_V_3_we1 = 1'b0;
@@ -1439,7 +1480,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((~(row_ind_V_cast_read_reg_1153 == 3'd0) & ~(row_ind_V_cast_read_reg_1153 == 3'd1) & ~(row_ind_V_cast_read_reg_1153 == 3'd2) & ~(row_ind_V_cast_read_reg_1153 == 3'd3) & (cmp_i_i380_i == 1'd1) & (icmp_ln624_reg_1203 == 1'd0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)) | (~(bottom2_V_cast_read_reg_1172 == 3'd0) & ~(bottom2_V_cast_read_reg_1172 == 3'd1) & ~(bottom2_V_cast_read_reg_1172 == 3'd2) & ~(bottom2_V_cast_read_reg_1172 == 3'd3) & (cmp_i_i380_i_read_reg_1149 == 1'd0) & (icmp_ln624_reg_1203 == 1'd0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)))) begin
+    if (((~(row_ind_V_cast == 3'd0) & ~(row_ind_V_cast == 3'd1) & ~(row_ind_V_cast == 3'd2) & ~(row_ind_V_cast == 3'd3) & (cmp_i_i380_i == 1'd1) & (icmp_ln624_reg_1203 == 1'd0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)) | (~(bottom2_V_cast == 3'd0) & ~(bottom2_V_cast == 3'd1) & ~(bottom2_V_cast == 3'd2) & ~(bottom2_V_cast == 3'd3) & (cmp_i_i380_i == 1'd0) & (icmp_ln624_reg_1203 == 1'd0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)))) begin
         buf_V_4_ce1 = 1'b1;
     end else begin
         buf_V_4_ce1 = 1'b0;
@@ -1448,9 +1489,9 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_condition_806)) begin
-        if ((1'b1 == ap_condition_1138)) begin
+        if ((1'b1 == ap_condition_1366)) begin
             buf_V_4_d1 = gray_mat_data44_dout;
-        end else if ((1'b1 == ap_condition_1132)) begin
+        end else if ((1'b1 == ap_condition_1360)) begin
             buf_V_4_d1 = 8'd0;
         end else begin
             buf_V_4_d1 = 'bx;
@@ -1461,7 +1502,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((~(row_ind_V_cast_read_reg_1153 == 3'd0) & ~(row_ind_V_cast_read_reg_1153 == 3'd1) & ~(row_ind_V_cast_read_reg_1153 == 3'd2) & ~(row_ind_V_cast_read_reg_1153 == 3'd3) & (cmp_i_i380_i == 1'd1) & (icmp_ln624_reg_1203 == 1'd0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)) | (~(bottom2_V_cast_read_reg_1172 == 3'd0) & ~(bottom2_V_cast_read_reg_1172 == 3'd1) & ~(bottom2_V_cast_read_reg_1172 == 3'd2) & ~(bottom2_V_cast_read_reg_1172 == 3'd3) & (cmp_i_i380_i_read_reg_1149 == 1'd0) & (icmp_ln624_reg_1203 == 1'd0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)))) begin
+    if (((~(row_ind_V_cast == 3'd0) & ~(row_ind_V_cast == 3'd1) & ~(row_ind_V_cast == 3'd2) & ~(row_ind_V_cast == 3'd3) & (cmp_i_i380_i == 1'd1) & (icmp_ln624_reg_1203 == 1'd0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)) | (~(bottom2_V_cast == 3'd0) & ~(bottom2_V_cast == 3'd1) & ~(bottom2_V_cast == 3'd2) & ~(bottom2_V_cast == 3'd3) & (cmp_i_i380_i == 1'd0) & (icmp_ln624_reg_1203 == 1'd0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)))) begin
         buf_V_4_we1 = 1'b1;
     end else begin
         buf_V_4_we1 = 1'b0;
@@ -1477,7 +1518,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((((cmp_i_i380_i_read_reg_1149 == 1'd0) & (icmp_ln624_reg_1203 == 1'd0) & (bottom2_V_cast_read_reg_1172 == 3'd0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)) | ((cmp_i_i380_i == 1'd1) & (icmp_ln624_reg_1203 == 1'd0) & (row_ind_V_cast_read_reg_1153 == 3'd0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)))) begin
+    if ((((cmp_i_i380_i == 1'd0) & (icmp_ln624_reg_1203 == 1'd0) & (bottom2_V_cast == 3'd0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)) | ((cmp_i_i380_i == 1'd1) & (icmp_ln624_reg_1203 == 1'd0) & (row_ind_V_cast == 3'd0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)))) begin
         buf_V_ce1 = 1'b1;
     end else begin
         buf_V_ce1 = 1'b0;
@@ -1486,9 +1527,9 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_condition_806)) begin
-        if (((cmp_i_i380_i == 1'd1) & (row_ind_V_cast_read_reg_1153 == 3'd0))) begin
+        if (((cmp_i_i380_i == 1'd1) & (row_ind_V_cast == 3'd0))) begin
             buf_V_d1 = gray_mat_data44_dout;
-        end else if (((cmp_i_i380_i_read_reg_1149 == 1'd0) & (bottom2_V_cast_read_reg_1172 == 3'd0))) begin
+        end else if (((cmp_i_i380_i == 1'd0) & (bottom2_V_cast == 3'd0))) begin
             buf_V_d1 = 8'd0;
         end else begin
             buf_V_d1 = 'bx;
@@ -1499,7 +1540,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((((cmp_i_i380_i_read_reg_1149 == 1'd0) & (icmp_ln624_reg_1203 == 1'd0) & (bottom2_V_cast_read_reg_1172 == 3'd0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)) | ((cmp_i_i380_i == 1'd1) & (icmp_ln624_reg_1203 == 1'd0) & (row_ind_V_cast_read_reg_1153 == 3'd0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)))) begin
+    if ((((cmp_i_i380_i == 1'd0) & (icmp_ln624_reg_1203 == 1'd0) & (bottom2_V_cast == 3'd0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)) | ((cmp_i_i380_i == 1'd1) & (icmp_ln624_reg_1203 == 1'd0) & (row_ind_V_cast == 3'd0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001)))) begin
         buf_V_we1 = 1'b1;
     end else begin
         buf_V_we1 = 1'b0;
@@ -1703,6 +1744,10 @@ end
 
 assign ap_CS_fsm_pp0_stage0 = ap_CS_fsm[32'd0];
 
+always @ (*) begin
+    ap_block_pp0 = ((ap_ST_fsm_pp0_stage0 == ap_CS_fsm) & (1'b1 == ap_block_pp0_stage0_subdone));
+end
+
 assign ap_block_pp0_stage0 = ~(1'b1 == 1'b1);
 
 always @ (*) begin
@@ -1782,30 +1827,200 @@ assign ap_block_state9_pp0_stage0_iter8 = ~(1'b1 == 1'b1);
 assign ap_block_state9_pp0_stage0_iter8_ignore_call15 = ~(1'b1 == 1'b1);
 
 always @ (*) begin
-    ap_condition_1132 = (~(bottom2_V_cast_read_reg_1172 == 3'd0) & ~(bottom2_V_cast_read_reg_1172 == 3'd1) & ~(bottom2_V_cast_read_reg_1172 == 3'd2) & ~(bottom2_V_cast_read_reg_1172 == 3'd3) & (cmp_i_i380_i_read_reg_1149 == 1'd0));
+    ap_condition_1360 = (~(bottom2_V_cast == 3'd0) & ~(bottom2_V_cast == 3'd1) & ~(bottom2_V_cast == 3'd2) & ~(bottom2_V_cast == 3'd3) & (cmp_i_i380_i == 1'd0));
 end
 
 always @ (*) begin
-    ap_condition_1138 = (~(row_ind_V_cast_read_reg_1153 == 3'd0) & ~(row_ind_V_cast_read_reg_1153 == 3'd1) & ~(row_ind_V_cast_read_reg_1153 == 3'd2) & ~(row_ind_V_cast_read_reg_1153 == 3'd3) & (cmp_i_i380_i == 1'd1));
+    ap_condition_1366 = (~(row_ind_V_cast == 3'd0) & ~(row_ind_V_cast == 3'd1) & ~(row_ind_V_cast == 3'd2) & ~(row_ind_V_cast == 3'd3) & (cmp_i_i380_i == 1'd1));
 end
 
 always @ (*) begin
     ap_condition_806 = ((icmp_ln624_reg_1203 == 1'd0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0));
 end
 
+always @ (*) begin
+    ap_enable_operation_101 = (ap_predicate_op101_store_state2 == 1'b1);
+end
+
+always @ (*) begin
+    ap_enable_operation_103 = (ap_predicate_op103_store_state2 == 1'b1);
+end
+
+always @ (*) begin
+    ap_enable_operation_106 = (ap_predicate_op106_store_state2 == 1'b1);
+end
+
+always @ (*) begin
+    ap_enable_operation_108 = (ap_predicate_op108_store_state2 == 1'b1);
+end
+
+always @ (*) begin
+    ap_enable_operation_110 = (ap_predicate_op110_store_state2 == 1'b1);
+end
+
+always @ (*) begin
+    ap_enable_operation_112 = (ap_predicate_op112_store_state2 == 1'b1);
+end
+
+always @ (*) begin
+    ap_enable_operation_114 = (ap_predicate_op114_store_state2 == 1'b1);
+end
+
+always @ (*) begin
+    ap_enable_operation_119 = (ap_predicate_op119_load_state3 == 1'b1);
+end
+
+always @ (*) begin
+    ap_enable_operation_120 = (ap_predicate_op120_load_state3 == 1'b1);
+end
+
+always @ (*) begin
+    ap_enable_operation_121 = (ap_predicate_op121_load_state3 == 1'b1);
+end
+
+always @ (*) begin
+    ap_enable_operation_122 = (ap_predicate_op122_load_state3 == 1'b1);
+end
+
+always @ (*) begin
+    ap_enable_operation_123 = (ap_predicate_op123_load_state3 == 1'b1);
+end
+
+always @ (*) begin
+    ap_enable_operation_144 = (ap_predicate_op144_load_state4 == 1'b1);
+end
+
+always @ (*) begin
+    ap_enable_operation_145 = (ap_predicate_op145_load_state4 == 1'b1);
+end
+
+always @ (*) begin
+    ap_enable_operation_146 = (ap_predicate_op146_load_state4 == 1'b1);
+end
+
+always @ (*) begin
+    ap_enable_operation_147 = (ap_predicate_op147_load_state4 == 1'b1);
+end
+
+always @ (*) begin
+    ap_enable_operation_148 = (ap_predicate_op148_load_state4 == 1'b1);
+end
+
+always @ (*) begin
+    ap_enable_operation_95 = (ap_predicate_op95_store_state2 == 1'b1);
+end
+
+always @ (*) begin
+    ap_enable_operation_97 = (ap_predicate_op97_store_state2 == 1'b1);
+end
+
+always @ (*) begin
+    ap_enable_operation_99 = (ap_predicate_op99_store_state2 == 1'b1);
+end
+
 assign ap_enable_pp0 = (ap_idle_pp0 ^ 1'b1);
 
 assign ap_enable_reg_pp0_iter0 = ap_start_int;
 
+always @ (*) begin
+    ap_enable_state2_pp0_iter1_stage0 = ((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0));
+end
+
+always @ (*) begin
+    ap_enable_state3_pp0_iter2_stage0 = ((ap_enable_reg_pp0_iter2 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0));
+end
+
+always @ (*) begin
+    ap_enable_state4_pp0_iter3_stage0 = ((ap_enable_reg_pp0_iter3 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0));
+end
+
 assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
+
+always @ (*) begin
+    ap_predicate_op101_store_state2 = ((cmp_i_i380_i == 1'd0) & (icmp_ln624_reg_1203 == 1'd0) & (bottom2_V_cast == 3'd0));
+end
+
+always @ (*) begin
+    ap_predicate_op103_store_state2 = (~(bottom2_V_cast == 3'd0) & ~(bottom2_V_cast == 3'd1) & ~(bottom2_V_cast == 3'd2) & ~(bottom2_V_cast == 3'd3) & (cmp_i_i380_i == 1'd0) & (icmp_ln624_reg_1203 == 1'd0));
+end
 
 always @ (*) begin
     ap_predicate_op105_read_state2 = ((cmp_i_i380_i == 1'd1) & (icmp_ln624_reg_1203 == 1'd0));
 end
 
-assign blurred_mat_data45_din = grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_dout0;
+always @ (*) begin
+    ap_predicate_op106_store_state2 = ((cmp_i_i380_i == 1'd1) & (icmp_ln624_reg_1203 == 1'd0) & (row_ind_V_cast == 3'd3));
+end
 
-assign bottom2_V_cast_read_reg_1172 = bottom2_V_cast;
+always @ (*) begin
+    ap_predicate_op108_store_state2 = ((cmp_i_i380_i == 1'd1) & (icmp_ln624_reg_1203 == 1'd0) & (row_ind_V_cast == 3'd2));
+end
+
+always @ (*) begin
+    ap_predicate_op110_store_state2 = ((cmp_i_i380_i == 1'd1) & (icmp_ln624_reg_1203 == 1'd0) & (row_ind_V_cast == 3'd1));
+end
+
+always @ (*) begin
+    ap_predicate_op112_store_state2 = ((cmp_i_i380_i == 1'd1) & (icmp_ln624_reg_1203 == 1'd0) & (row_ind_V_cast == 3'd0));
+end
+
+always @ (*) begin
+    ap_predicate_op114_store_state2 = (~(row_ind_V_cast == 3'd0) & ~(row_ind_V_cast == 3'd1) & ~(row_ind_V_cast == 3'd2) & ~(row_ind_V_cast == 3'd3) & (cmp_i_i380_i == 1'd1) & (icmp_ln624_reg_1203 == 1'd0));
+end
+
+always @ (*) begin
+    ap_predicate_op119_load_state3 = ((((((icmp_ln624_reg_1203_pp0_iter1_reg == 1'd0) & (mid_V_cast == 3'd0)) | ((icmp_ln624_reg_1203_pp0_iter1_reg == 1'd0) & (bottom1_V_cast == 3'd0))) | ((icmp_ln624_reg_1203_pp0_iter1_reg == 1'd0) & (tp2_V_cast == 3'd0))) | ((icmp_ln624_reg_1203_pp0_iter1_reg == 1'd0) & (tp1_V_cast == 3'd0))) | ((icmp_ln624_reg_1203_pp0_iter1_reg == 1'd0) & (bottom2_V_cast == 3'd0)));
+end
+
+always @ (*) begin
+    ap_predicate_op120_load_state3 = (((((~(mid_V_cast == 3'd0) & (icmp_ln624_reg_1203_pp0_iter1_reg == 1'd0) & (mid_V_cast == 3'd1)) | (~(bottom1_V_cast == 3'd0) & (icmp_ln624_reg_1203_pp0_iter1_reg == 1'd0) & (bottom1_V_cast == 3'd1))) | (~(tp2_V_cast == 3'd0) & (icmp_ln624_reg_1203_pp0_iter1_reg == 1'd0) & (tp2_V_cast == 3'd1))) | (~(tp1_V_cast == 3'd0) & (icmp_ln624_reg_1203_pp0_iter1_reg == 1'd0) & (tp1_V_cast == 3'd1))) | ((icmp_ln624_reg_1203_pp0_iter1_reg == 1'd0) & (bottom2_V_cast == 3'd1)));
+end
+
+always @ (*) begin
+    ap_predicate_op121_load_state3 = (((((~(mid_V_cast == 3'd1) & ~(mid_V_cast == 3'd0) & (icmp_ln624_reg_1203_pp0_iter1_reg == 1'd0) & (mid_V_cast == 3'd2)) | (~(bottom1_V_cast == 3'd1) & ~(bottom1_V_cast == 3'd0) & (icmp_ln624_reg_1203_pp0_iter1_reg == 1'd0) & (bottom1_V_cast == 3'd2))) | (~(tp2_V_cast == 3'd1) & ~(tp2_V_cast == 3'd0) & (icmp_ln624_reg_1203_pp0_iter1_reg == 1'd0) & (tp2_V_cast == 3'd2))) | (~(tp1_V_cast == 3'd1) & ~(tp1_V_cast == 3'd0) & (icmp_ln624_reg_1203_pp0_iter1_reg == 1'd0) & (tp1_V_cast == 3'd2))) | ((icmp_ln624_reg_1203_pp0_iter1_reg == 1'd0) & (bottom2_V_cast == 3'd2)));
+end
+
+always @ (*) begin
+    ap_predicate_op122_load_state3 = (((((~(mid_V_cast == 3'd2) & ~(mid_V_cast == 3'd1) & ~(mid_V_cast == 3'd0) & (icmp_ln624_reg_1203_pp0_iter1_reg == 1'd0) & (mid_V_cast == 3'd3)) | (~(bottom1_V_cast == 3'd2) & ~(bottom1_V_cast == 3'd1) & ~(bottom1_V_cast == 3'd0) & (icmp_ln624_reg_1203_pp0_iter1_reg == 1'd0) & (bottom1_V_cast == 3'd3))) | (~(tp2_V_cast == 3'd2) & ~(tp2_V_cast == 3'd1) & ~(tp2_V_cast == 3'd0) & (icmp_ln624_reg_1203_pp0_iter1_reg == 1'd0) & (tp2_V_cast == 3'd3))) | (~(tp1_V_cast == 3'd2) & ~(tp1_V_cast == 3'd1) & ~(tp1_V_cast == 3'd0) & (icmp_ln624_reg_1203_pp0_iter1_reg == 1'd0) & (tp1_V_cast == 3'd3))) | ((icmp_ln624_reg_1203_pp0_iter1_reg == 1'd0) & (bottom2_V_cast == 3'd3)));
+end
+
+always @ (*) begin
+    ap_predicate_op123_load_state3 = (((((~(mid_V_cast == 3'd3) & ~(mid_V_cast == 3'd2) & ~(mid_V_cast == 3'd1) & ~(mid_V_cast == 3'd0) & (icmp_ln624_reg_1203_pp0_iter1_reg == 1'd0) & (mid_V_cast == 3'd4)) | (~(bottom1_V_cast == 3'd3) & ~(bottom1_V_cast == 3'd2) & ~(bottom1_V_cast == 3'd1) & ~(bottom1_V_cast == 3'd0) & (icmp_ln624_reg_1203_pp0_iter1_reg == 1'd0) & (bottom1_V_cast == 3'd4))) | (~(tp2_V_cast == 3'd3) & ~(tp2_V_cast == 3'd2) & ~(tp2_V_cast == 3'd1) & ~(tp2_V_cast == 3'd0) & (icmp_ln624_reg_1203_pp0_iter1_reg == 1'd0) & (tp2_V_cast == 3'd4))) | (~(tp1_V_cast == 3'd3) & ~(tp1_V_cast == 3'd2) & ~(tp1_V_cast == 3'd1) & ~(tp1_V_cast == 3'd0) & (icmp_ln624_reg_1203_pp0_iter1_reg == 1'd0) & (tp1_V_cast == 3'd4))) | ((icmp_ln624_reg_1203_pp0_iter1_reg == 1'd0) & (bottom2_V_cast == 3'd4)));
+end
+
+always @ (*) begin
+    ap_predicate_op144_load_state4 = ((((((icmp_ln624_reg_1203_pp0_iter2_reg == 1'd0) & (mid_V_cast == 3'd0)) | ((icmp_ln624_reg_1203_pp0_iter2_reg == 1'd0) & (bottom1_V_cast == 3'd0))) | ((icmp_ln624_reg_1203_pp0_iter2_reg == 1'd0) & (tp2_V_cast == 3'd0))) | ((icmp_ln624_reg_1203_pp0_iter2_reg == 1'd0) & (tp1_V_cast == 3'd0))) | ((icmp_ln624_reg_1203_pp0_iter2_reg == 1'd0) & (bottom2_V_cast == 3'd0)));
+end
+
+always @ (*) begin
+    ap_predicate_op145_load_state4 = (((((~(mid_V_cast == 3'd0) & (icmp_ln624_reg_1203_pp0_iter2_reg == 1'd0) & (mid_V_cast == 3'd1)) | (~(bottom1_V_cast == 3'd0) & (icmp_ln624_reg_1203_pp0_iter2_reg == 1'd0) & (bottom1_V_cast == 3'd1))) | (~(tp2_V_cast == 3'd0) & (icmp_ln624_reg_1203_pp0_iter2_reg == 1'd0) & (tp2_V_cast == 3'd1))) | (~(tp1_V_cast == 3'd0) & (icmp_ln624_reg_1203_pp0_iter2_reg == 1'd0) & (tp1_V_cast == 3'd1))) | ((icmp_ln624_reg_1203_pp0_iter2_reg == 1'd0) & (bottom2_V_cast == 3'd1)));
+end
+
+always @ (*) begin
+    ap_predicate_op146_load_state4 = (((((~(mid_V_cast == 3'd1) & ~(mid_V_cast == 3'd0) & (icmp_ln624_reg_1203_pp0_iter2_reg == 1'd0) & (mid_V_cast == 3'd2)) | (~(bottom1_V_cast == 3'd1) & ~(bottom1_V_cast == 3'd0) & (icmp_ln624_reg_1203_pp0_iter2_reg == 1'd0) & (bottom1_V_cast == 3'd2))) | (~(tp2_V_cast == 3'd1) & ~(tp2_V_cast == 3'd0) & (icmp_ln624_reg_1203_pp0_iter2_reg == 1'd0) & (tp2_V_cast == 3'd2))) | (~(tp1_V_cast == 3'd1) & ~(tp1_V_cast == 3'd0) & (icmp_ln624_reg_1203_pp0_iter2_reg == 1'd0) & (tp1_V_cast == 3'd2))) | ((icmp_ln624_reg_1203_pp0_iter2_reg == 1'd0) & (bottom2_V_cast == 3'd2)));
+end
+
+always @ (*) begin
+    ap_predicate_op147_load_state4 = (((((~(mid_V_cast == 3'd2) & ~(mid_V_cast == 3'd1) & ~(mid_V_cast == 3'd0) & (icmp_ln624_reg_1203_pp0_iter2_reg == 1'd0) & (mid_V_cast == 3'd3)) | (~(bottom1_V_cast == 3'd2) & ~(bottom1_V_cast == 3'd1) & ~(bottom1_V_cast == 3'd0) & (icmp_ln624_reg_1203_pp0_iter2_reg == 1'd0) & (bottom1_V_cast == 3'd3))) | (~(tp2_V_cast == 3'd2) & ~(tp2_V_cast == 3'd1) & ~(tp2_V_cast == 3'd0) & (icmp_ln624_reg_1203_pp0_iter2_reg == 1'd0) & (tp2_V_cast == 3'd3))) | (~(tp1_V_cast == 3'd2) & ~(tp1_V_cast == 3'd1) & ~(tp1_V_cast == 3'd0) & (icmp_ln624_reg_1203_pp0_iter2_reg == 1'd0) & (tp1_V_cast == 3'd3))) | ((icmp_ln624_reg_1203_pp0_iter2_reg == 1'd0) & (bottom2_V_cast == 3'd3)));
+end
+
+always @ (*) begin
+    ap_predicate_op148_load_state4 = (((((~(mid_V_cast == 3'd3) & ~(mid_V_cast == 3'd2) & ~(mid_V_cast == 3'd1) & ~(mid_V_cast == 3'd0) & (icmp_ln624_reg_1203_pp0_iter2_reg == 1'd0) & (mid_V_cast == 3'd4)) | (~(bottom1_V_cast == 3'd3) & ~(bottom1_V_cast == 3'd2) & ~(bottom1_V_cast == 3'd1) & ~(bottom1_V_cast == 3'd0) & (icmp_ln624_reg_1203_pp0_iter2_reg == 1'd0) & (bottom1_V_cast == 3'd4))) | (~(tp2_V_cast == 3'd3) & ~(tp2_V_cast == 3'd2) & ~(tp2_V_cast == 3'd1) & ~(tp2_V_cast == 3'd0) & (icmp_ln624_reg_1203_pp0_iter2_reg == 1'd0) & (tp2_V_cast == 3'd4))) | (~(tp1_V_cast == 3'd3) & ~(tp1_V_cast == 3'd2) & ~(tp1_V_cast == 3'd1) & ~(tp1_V_cast == 3'd0) & (icmp_ln624_reg_1203_pp0_iter2_reg == 1'd0) & (tp1_V_cast == 3'd4))) | ((icmp_ln624_reg_1203_pp0_iter2_reg == 1'd0) & (bottom2_V_cast == 3'd4)));
+end
+
+always @ (*) begin
+    ap_predicate_op95_store_state2 = ((cmp_i_i380_i == 1'd0) & (icmp_ln624_reg_1203 == 1'd0) & (bottom2_V_cast == 3'd3));
+end
+
+always @ (*) begin
+    ap_predicate_op97_store_state2 = ((cmp_i_i380_i == 1'd0) & (icmp_ln624_reg_1203 == 1'd0) & (bottom2_V_cast == 3'd2));
+end
+
+always @ (*) begin
+    ap_predicate_op99_store_state2 = ((cmp_i_i380_i == 1'd0) & (icmp_ln624_reg_1203 == 1'd0) & (bottom2_V_cast == 3'd1));
+end
+
+assign blurred_mat_data45_din = grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_dout0;
 
 assign buf_V_1_address0 = buf_V_1_addr_reg_1212;
 
@@ -1826,8 +2041,6 @@ assign buf_V_4_address1 = zext_ln541_fu_694_p1;
 assign buf_V_address0 = buf_V_addr_reg_1207;
 
 assign buf_V_address1 = zext_ln541_fu_694_p1;
-
-assign cmp_i_i380_i_read_reg_1149 = cmp_i_i380_i;
 
 assign col_V_4_fu_683_p2 = (ap_sig_allocacmp_col_V_3 + 10'd1);
 
@@ -1892,8 +2105,6 @@ assign grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_din9 = src_buf2_V_2_fu_188;
 assign icmp_ln624_fu_677_p2 = ((ap_sig_allocacmp_col_V_3 == 10'd644) ? 1'b1 : 1'b0);
 
 assign icmp_ln668_fu_711_p2 = ((tmp_fu_702_p4 == 9'd0) ? 1'b1 : 1'b0);
-
-assign row_ind_V_cast_read_reg_1153 = row_ind_V_cast;
 
 assign src_buf1_V_0_out = src_buf1_V_4_fu_148;
 

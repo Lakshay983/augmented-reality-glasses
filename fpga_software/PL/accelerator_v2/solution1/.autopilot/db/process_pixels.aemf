@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1774613806924">
-  <ports id="1" name="padded_stream2" type="PortType" coreId="1450226064" bitwidth="24" iftype="IfTypeRom">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1775130573873">
+  <ports id="1" name="padded_stream2" type="PortType" coreId="1317022048" bitwidth="24" iftype="IfTypeRom">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="2" name="gray_stream3" type="PortType" coreId="1451241984" bitwidth="8" direction="DirOut" iftype="IfTypeRom">
+  <ports id="2" name="gray_stream3" type="PortType" coreId="1316731248" bitwidth="8" direction="DirOut" iftype="IfTypeRom">
     <dataInputObjs>call</dataInputObjs>
   </ports>
   <edges id="27" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
@@ -18,64 +18,62 @@
   <edges id="181" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.5"/>
   <edges id="182" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.4"/>
   <edges id="183" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.4"/>
-  <edges id="184" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.5"/>
-  <edges id="185" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.6"/>
-  <regions anchor_node="-1" region_type="16" typeName="Dataflow" iiViolation="" id="107" RegionName="process_pixels">
+  <regions anchor_node="-1" region_type="16" typeName="Dataflow" iiViolation="" id="105" RegionName="process_pixels">
     <basic_blocks id="20" name="process_pixels" type="BlockType">
-      <node_objs xsi:type="cdfg:CdfgNode" id="6" name="bgr_mat_data" lineNumber="240" originalName="bgr_mat.data" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="bgr_mat_data_U" coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="process_pixels" bitwidth="24" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="240" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="process_pixels"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="6" name="bgr_mat_data" lineNumber="169" originalName="bgr_mat.data" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="bgr_mat_data_U" coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="process_pixels" bitwidth="24" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="169" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="process_pixels"/>
         <dataOutputObjs>call</dataOutputObjs>
         <dataOutputObjs>call</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="9" name="gray_mat_data" lineNumber="241" originalName="gray_mat.data" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="gray_mat_data_U" coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="process_pixels" bitwidth="8" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="241" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="process_pixels"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="9" name="gray_mat_data" lineNumber="170" originalName="gray_mat.data" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="gray_mat_data_U" coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="process_pixels" bitwidth="8" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="170" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="process_pixels"/>
         <dataOutputObjs>call</dataOutputObjs>
         <dataOutputObjs>call</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="12" name="blurred_mat_data" lineNumber="242" originalName="blurred_mat.data" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="blurred_mat_data_U" coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="process_pixels" bitwidth="8" opcode="alloca" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="242" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="process_pixels"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="12" name="blurred_mat_data" lineNumber="171" originalName="blurred_mat.data" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="blurred_mat_data_U" coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="process_pixels" bitwidth="8" opcode="alloca" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="171" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="process_pixels"/>
         <dataOutputObjs>call</dataOutputObjs>
         <dataOutputObjs>call</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="15" name="_ln245" lineNumber="245" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="stream_to_mat_U0" coreId="1450627888" contextFuncName="process_pixels" opcode="call" nodeLatency="1" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="245" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="process_pixels"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="15" name="_ln174" lineNumber="174" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="stream_to_mat_U0" coreId="1315502128" contextFuncName="process_pixels" opcode="call" nodeLatency="1" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="174" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="process_pixels"/>
         <dataInputObjs>padded_stream2</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
         <constName>stream_to_mat</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="16" name="_ln248" lineNumber="248" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="bgr2gray_9_0_484_644_1_3220_3220_U0" coreId="1450627888" contextFuncName="process_pixels" opcode="call" nodeLabel="2.0" nodeLatency="1" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="248" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="process_pixels"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="16" name="_ln177" lineNumber="177" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="bgr2gray_9_0_484_644_1_311696_311696_U0" coreId="1315502128" contextFuncName="process_pixels" opcode="call" nodeLabel="2.0" nodeLatency="1" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="177" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="process_pixels"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
-        <constName>bgr2gray_9_0_484_644_1_3220_3220_s</constName>
+        <constName>bgr2gray_9_0_484_644_1_311696_311696_s</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="17" name="_ln251" lineNumber="251" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="GaussianBlur_5_0_0_484_644_1_3220_3220_U0" coreId="1450627888" contextFuncName="process_pixels" opcode="call" nodeLabel="4.0" nodeLatency="1" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="251" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="process_pixels"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="17" name="_ln182" lineNumber="182" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="GaussianBlur_5_1_0_484_644_1_311696_311696_U0" coreId="1316558504" contextFuncName="process_pixels" opcode="call" nodeLabel="4.0" nodeLatency="1" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="182" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="process_pixels"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
-        <constName>GaussianBlur_5_0_0_484_644_1_3220_3220_s</constName>
+        <constName>GaussianBlur_5_1_0_484_644_1_311696_311696_s</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="18" name="_ln254" lineNumber="254" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="mat_to_stream_U0" coreId="1450627888" contextFuncName="process_pixels" opcode="call" nodeLabel="6.0" nodeLatency="1" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="254" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="process_pixels"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="18" name="_ln188" lineNumber="188" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="mat_to_stream_U0" coreId="1310008592" contextFuncName="process_pixels" opcode="call" nodeLabel="6.0" nodeLatency="1" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="188" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="process_pixels"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataOutputObjs>gray_stream3</dataOutputObjs>
         <constName>mat_to_stream</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="19" name="_ln255" lineNumber="255" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="1450627888" contextFuncName="process_pixels" opcode="ret" nodeLabel="7.0" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="255" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="process_pixels"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="19" name="_ln189" lineNumber="189" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="1397508187" contextFuncName="process_pixels" opcode="ret" nodeLabel="7.0" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="189" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="process_pixels"/>
       </node_objs>
       <fileValidLineNumbers fileName="accelerator_v2.cpp">
-        <validLinenumbers>240</validLinenumbers>
-        <validLinenumbers>241</validLinenumbers>
-        <validLinenumbers>242</validLinenumbers>
-        <validLinenumbers>245</validLinenumbers>
-        <validLinenumbers>248</validLinenumbers>
-        <validLinenumbers>251</validLinenumbers>
-        <validLinenumbers>254</validLinenumbers>
-        <validLinenumbers>255</validLinenumbers>
+        <validLinenumbers>169</validLinenumbers>
+        <validLinenumbers>170</validLinenumbers>
+        <validLinenumbers>171</validLinenumbers>
+        <validLinenumbers>174</validLinenumbers>
+        <validLinenumbers>177</validLinenumbers>
+        <validLinenumbers>182</validLinenumbers>
+        <validLinenumbers>188</validLinenumbers>
+        <validLinenumbers>189</validLinenumbers>
       </fileValidLineNumbers>
     </basic_blocks>
   </regions>
@@ -105,10 +103,10 @@
   <expressionNodes realName="bgr_mat_data_fu_40">
     <nodeIds>6</nodeIds>
   </expressionNodes>
-  <moduleNodes realName="grp_bgr2gray_9_0_484_644_1_3220_3220_s_fu_59">
+  <moduleNodes realName="grp_bgr2gray_9_0_484_644_1_311696_311696_s_fu_59">
     <nodeIds>16</nodeIds>
   </moduleNodes>
-  <moduleNodes realName="grp_GaussianBlur_5_0_0_484_644_1_3220_3220_s_fu_65">
+  <moduleNodes realName="grp_GaussianBlur_5_1_0_484_644_1_311696_311696_s_fu_65">
     <nodeIds>17</nodeIds>
   </moduleNodes>
   <moduleNodes realName="grp_stream_to_mat_fu_52">
@@ -193,46 +191,46 @@
       <mDfPipe allPipePinInst="//@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.0/@pins.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.3/@pins.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@channel_list.0/@sink.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@channel_list.1/@sink.0/@inst">
         <processe_list name="stream_to_mat_U0" ssdmobj_id="15">
           <pins>
-            <port name="padded_stream2" top_port_object_id="" top_port_object_id_reference="_40" chan_object_id="" chan_object_id_reference=""/>
-            <inst name="stream_to_mat_U0" ssdmobj_id="15" object_id="_45"/>
+            <port name="padded_stream2" top_port_object_id="" top_port_object_id_reference="_38" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="stream_to_mat_U0" ssdmobj_id="15" object_id="_43"/>
           </pins>
         </processe_list>
-        <processe_list name="bgr2gray_9_0_484_644_1_3220_3220_U0" ssdmobj_id="16"/>
-        <processe_list name="GaussianBlur_5_0_0_484_644_1_3220_3220_U0" ssdmobj_id="17"/>
+        <processe_list name="bgr2gray_9_0_484_644_1_311696_311696_U0" ssdmobj_id="16"/>
+        <processe_list name="GaussianBlur_5_1_0_484_644_1_311696_311696_U0" ssdmobj_id="17"/>
         <processe_list name="mat_to_stream_U0" ssdmobj_id="18">
           <pins>
-            <port name="gray_stream3" dir="DirOut" top_port_object_id="" top_port_object_id_reference="_41" chan_object_id="" chan_object_id_reference=""/>
-            <inst name="mat_to_stream_U0" ssdmobj_id="18" object_id="_51"/>
+            <port name="gray_stream3" dir="DirOut" top_port_object_id="" top_port_object_id_reference="_39" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="mat_to_stream_U0" ssdmobj_id="18" object_id="_49"/>
           </pins>
         </processe_list>
-        <channel_list depth="3220" bitwidth="24" suggested_type="0" suggested_depth="3220" name="bgr_mat_data" ssdmobj_id="6">
+        <channel_list depth="311696" bitwidth="24" suggested_type="0" suggested_depth="311696" name="bgr_mat_data" ssdmobj_id="6">
           <source>
             <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
-            <inst name="stream_to_mat_U0" ssdmobj_id="15" object_id="_45"/>
+            <inst name="stream_to_mat_U0" ssdmobj_id="15" object_id="_43"/>
           </source>
           <sink>
             <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
-            <inst name="bgr2gray_9_0_484_644_1_3220_3220_U0" ssdmobj_id="16" object_id="_57"/>
+            <inst name="bgr2gray_9_0_484_644_1_311696_311696_U0" ssdmobj_id="16" object_id="_55"/>
           </sink>
         </channel_list>
-        <channel_list depth="3220" bitwidth="8" suggested_type="0" suggested_depth="3220" name="gray_mat_data" ssdmobj_id="9">
+        <channel_list depth="311696" bitwidth="8" suggested_type="0" suggested_depth="311696" name="gray_mat_data" ssdmobj_id="9">
           <source>
             <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
-            <inst name="bgr2gray_9_0_484_644_1_3220_3220_U0" ssdmobj_id="16" object_id="_57"/>
+            <inst name="bgr2gray_9_0_484_644_1_311696_311696_U0" ssdmobj_id="16" object_id="_55"/>
           </source>
           <sink>
             <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
-            <inst name="GaussianBlur_5_0_0_484_644_1_3220_3220_U0" ssdmobj_id="17" object_id="_63"/>
+            <inst name="GaussianBlur_5_1_0_484_644_1_311696_311696_U0" ssdmobj_id="17" object_id="_61"/>
           </sink>
         </channel_list>
-        <channel_list depth="3220" bitwidth="8" suggested_type="0" suggested_depth="3220" name="blurred_mat_data" ssdmobj_id="12">
+        <channel_list depth="311696" bitwidth="8" suggested_type="0" suggested_depth="311696" name="blurred_mat_data" ssdmobj_id="12">
           <source>
             <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
-            <inst name="GaussianBlur_5_0_0_484_644_1_3220_3220_U0" ssdmobj_id="17" object_id="_63"/>
+            <inst name="GaussianBlur_5_1_0_484_644_1_311696_311696_U0" ssdmobj_id="17" object_id="_61"/>
           </source>
           <sink>
             <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
-            <inst name="mat_to_stream_U0" ssdmobj_id="18" object_id="_51"/>
+            <inst name="mat_to_stream_U0" ssdmobj_id="18" object_id="_49"/>
           </sink>
         </channel_list>
       </mDfPipe>

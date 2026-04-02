@@ -110,13 +110,13 @@ set NewPortList {[
  	{ "name": "frame_start_c17", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "frame_start_c17", "role": "default" }}  ]}
 
 set RtlHierarchyInfo {[
-	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "3", "4", "5", "6", "7", "8", "9"],
+	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "3", "4", "5", "6", "7"],
 		"CDFG" : "unpack",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "1", "ap_idle" : "1", "real_start" : "1",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "307205", "EstimateLatencyMax" : "307205",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "368642", "EstimateLatencyMax" : "368642",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -126,54 +126,6 @@ set RtlHierarchyInfo {[
 		"IsBlackBox" : "0",
 		"Port" : [
 			{"Name" : "in_stream_V_data_V", "Type" : "Axis", "Direction" : "I", "BaseName" : "in_stream",
-				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_unpack_Pipeline_VITIS_LOOP_211_1_VITIS_LOOP_212_2_fu_88", "Port" : "in_stream_V_data_V", "Inst_start_state" : "2", "Inst_end_state" : "3"}]},
-			{"Name" : "in_stream_V_keep_V", "Type" : "Axis", "Direction" : "I", "BaseName" : "in_stream",
-				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_unpack_Pipeline_VITIS_LOOP_211_1_VITIS_LOOP_212_2_fu_88", "Port" : "in_stream_V_keep_V", "Inst_start_state" : "2", "Inst_end_state" : "3"}]},
-			{"Name" : "in_stream_V_strb_V", "Type" : "Axis", "Direction" : "I", "BaseName" : "in_stream",
-				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_unpack_Pipeline_VITIS_LOOP_211_1_VITIS_LOOP_212_2_fu_88", "Port" : "in_stream_V_strb_V", "Inst_start_state" : "2", "Inst_end_state" : "3"}]},
-			{"Name" : "in_stream_V_user_V", "Type" : "Axis", "Direction" : "I", "BaseName" : "in_stream",
-				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_unpack_Pipeline_VITIS_LOOP_211_1_VITIS_LOOP_212_2_fu_88", "Port" : "in_stream_V_user_V", "Inst_start_state" : "2", "Inst_end_state" : "3"}]},
-			{"Name" : "in_stream_V_last_V", "Type" : "Axis", "Direction" : "I", "BaseName" : "in_stream",
-				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_unpack_Pipeline_VITIS_LOOP_211_1_VITIS_LOOP_212_2_fu_88", "Port" : "in_stream_V_last_V", "Inst_start_state" : "2", "Inst_end_state" : "3"}]},
-			{"Name" : "in_stream_V_id_V", "Type" : "Axis", "Direction" : "I", "BaseName" : "in_stream",
-				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_unpack_Pipeline_VITIS_LOOP_211_1_VITIS_LOOP_212_2_fu_88", "Port" : "in_stream_V_id_V", "Inst_start_state" : "2", "Inst_end_state" : "3"}]},
-			{"Name" : "in_stream_V_dest_V", "Type" : "Axis", "Direction" : "I", "BaseName" : "in_stream",
-				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_unpack_Pipeline_VITIS_LOOP_211_1_VITIS_LOOP_212_2_fu_88", "Port" : "in_stream_V_dest_V", "Inst_start_state" : "2", "Inst_end_state" : "3"}]},
-			{"Name" : "bgr_stream1", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "307200", "DependentChanType" : "0",
-				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_unpack_Pipeline_VITIS_LOOP_211_1_VITIS_LOOP_212_2_fu_88", "Port" : "bgr_stream1", "Inst_start_state" : "2", "Inst_end_state" : "3"}]},
-			{"Name" : "hdr_stream4", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "61440", "DependentChanType" : "0",
-				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_unpack_Pipeline_VITIS_LOOP_211_1_VITIS_LOOP_212_2_fu_88", "Port" : "hdr_stream4", "Inst_start_state" : "2", "Inst_end_state" : "3"}]},
-			{"Name" : "frame_start_out_in", "Type" : "None", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "2", "DependentChanType" : "1"},
-			{"Name" : "frame_start_c", "Type" : "None", "Direction" : "O", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "2", "DependentChanType" : "1"},
-			{"Name" : "frame_start_c17", "Type" : "None", "Direction" : "O", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "2", "DependentChanType" : "1"},
-			{"Name" : "frame_started", "Type" : "OVld", "Direction" : "IO"}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_unpack_Pipeline_VITIS_LOOP_211_1_VITIS_LOOP_212_2_fu_88", "Parent" : "0", "Child" : ["2"],
-		"CDFG" : "unpack_Pipeline_VITIS_LOOP_211_1_VITIS_LOOP_212_2",
-		"Protocol" : "ap_ctrl_hs",
-		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
-		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
-		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "307202", "EstimateLatencyMax" : "307202",
-		"Combinational" : "0",
-		"Datapath" : "0",
-		"ClockEnable" : "0",
-		"HasSubDataflow" : "0",
-		"InDataflowNetwork" : "0",
-		"HasNonBlockingOperation" : "0",
-		"IsBlackBox" : "0",
-		"Port" : [
-			{"Name" : "frame_start_out_in_load", "Type" : "None", "Direction" : "I"},
-			{"Name" : "frame_started_load", "Type" : "None", "Direction" : "I"},
-			{"Name" : "in_stream_V_data_V", "Type" : "Axis", "Direction" : "I", "BaseName" : "in_stream",
 				"BlockSignal" : [
 					{"Name" : "in_stream_TDATA_blk_n", "Type" : "RtlSignal"}]},
 			{"Name" : "in_stream_V_keep_V", "Type" : "Axis", "Direction" : "I", "BaseName" : "in_stream"},
@@ -182,64 +134,47 @@ set RtlHierarchyInfo {[
 			{"Name" : "in_stream_V_last_V", "Type" : "Axis", "Direction" : "I", "BaseName" : "in_stream"},
 			{"Name" : "in_stream_V_id_V", "Type" : "Axis", "Direction" : "I", "BaseName" : "in_stream"},
 			{"Name" : "in_stream_V_dest_V", "Type" : "Axis", "Direction" : "I", "BaseName" : "in_stream"},
-			{"Name" : "hdr_stream4", "Type" : "Fifo", "Direction" : "O",
-				"BlockSignal" : [
-					{"Name" : "hdr_stream4_blk_n", "Type" : "RtlSignal"}]},
-			{"Name" : "bgr_stream1", "Type" : "Fifo", "Direction" : "O",
+			{"Name" : "bgr_stream1", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "307200", "DependentChanType" : "0",
 				"BlockSignal" : [
 					{"Name" : "bgr_stream1_blk_n", "Type" : "RtlSignal"}]},
-			{"Name" : "p_02_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "frame_started_flag_1_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "frame_started_new_1_out", "Type" : "Vld", "Direction" : "O"}],
+			{"Name" : "hdr_stream4", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "61440", "DependentChanType" : "0",
+				"BlockSignal" : [
+					{"Name" : "hdr_stream4_blk_n", "Type" : "RtlSignal"}]},
+			{"Name" : "frame_start_out_in", "Type" : "None", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "2", "DependentChanType" : "1"},
+			{"Name" : "frame_start_c", "Type" : "None", "Direction" : "O", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "2", "DependentChanType" : "1"},
+			{"Name" : "frame_start_c17", "Type" : "None", "Direction" : "O", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "2", "DependentChanType" : "1"}],
 		"Loop" : [
-			{"Name" : "VITIS_LOOP_211_1_VITIS_LOOP_212_2", "PipelineType" : "UPC",
-				"LoopDec" : {"FSMBitwidth" : "5", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter1", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter0", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "2", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_unpack_Pipeline_VITIS_LOOP_211_1_VITIS_LOOP_212_2_fu_88.flow_control_loop_pipe_sequential_init_U", "Parent" : "1"},
-	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_in_stream_V_data_V_U", "Parent" : "0"},
-	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_in_stream_V_keep_V_U", "Parent" : "0"},
-	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_in_stream_V_strb_V_U", "Parent" : "0"},
-	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_in_stream_V_user_V_U", "Parent" : "0"},
-	{"ID" : "7", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_in_stream_V_last_V_U", "Parent" : "0"},
-	{"ID" : "8", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_in_stream_V_id_V_U", "Parent" : "0"},
-	{"ID" : "9", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_in_stream_V_dest_V_U", "Parent" : "0"}]}
+			{"Name" : "VITIS_LOOP_137_1_VITIS_LOOP_138_2", "PipelineType" : "no",
+				"LoopDec" : {"FSMBitwidth" : "8", "FirstState" : "ap_ST_fsm_state2", "LastState" : ["ap_ST_fsm_state7"], "QuitState" : ["ap_ST_fsm_state2"], "PreState" : ["ap_ST_fsm_state1"], "PostState" : ["ap_ST_fsm_state8"], "OneDepthLoop" : "0", "OneStateBlock": ""}}]},
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_in_stream_V_data_V_U", "Parent" : "0"},
+	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_in_stream_V_keep_V_U", "Parent" : "0"},
+	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_in_stream_V_strb_V_U", "Parent" : "0"},
+	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_in_stream_V_user_V_U", "Parent" : "0"},
+	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_in_stream_V_last_V_U", "Parent" : "0"},
+	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_in_stream_V_id_V_U", "Parent" : "0"},
+	{"ID" : "7", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_in_stream_V_dest_V_U", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {
 	unpack {
-		in_stream_V_data_V {Type I LastRead 1 FirstWrite -1}
-		in_stream_V_keep_V {Type I LastRead 1 FirstWrite -1}
-		in_stream_V_strb_V {Type I LastRead 1 FirstWrite -1}
-		in_stream_V_user_V {Type I LastRead 1 FirstWrite -1}
-		in_stream_V_last_V {Type I LastRead 1 FirstWrite -1}
-		in_stream_V_id_V {Type I LastRead 1 FirstWrite -1}
-		in_stream_V_dest_V {Type I LastRead 1 FirstWrite -1}
-		bgr_stream1 {Type O LastRead -1 FirstWrite 1}
-		hdr_stream4 {Type O LastRead -1 FirstWrite 1}
+		in_stream_V_data_V {Type I LastRead 2 FirstWrite -1}
+		in_stream_V_keep_V {Type I LastRead 2 FirstWrite -1}
+		in_stream_V_strb_V {Type I LastRead 2 FirstWrite -1}
+		in_stream_V_user_V {Type I LastRead 2 FirstWrite -1}
+		in_stream_V_last_V {Type I LastRead 2 FirstWrite -1}
+		in_stream_V_id_V {Type I LastRead 2 FirstWrite -1}
+		in_stream_V_dest_V {Type I LastRead 2 FirstWrite -1}
+		bgr_stream1 {Type O LastRead -1 FirstWrite 2}
+		hdr_stream4 {Type O LastRead -1 FirstWrite 2}
 		frame_start_out_in {Type I LastRead 0 FirstWrite -1}
-		frame_start_c {Type O LastRead -1 FirstWrite 3}
-		frame_start_c17 {Type O LastRead -1 FirstWrite 3}
-		frame_started {Type IO LastRead -1 FirstWrite -1}}
-	unpack_Pipeline_VITIS_LOOP_211_1_VITIS_LOOP_212_2 {
-		frame_start_out_in_load {Type I LastRead 0 FirstWrite -1}
-		frame_started_load {Type I LastRead 0 FirstWrite -1}
-		in_stream_V_data_V {Type I LastRead 1 FirstWrite -1}
-		in_stream_V_keep_V {Type I LastRead 1 FirstWrite -1}
-		in_stream_V_strb_V {Type I LastRead 1 FirstWrite -1}
-		in_stream_V_user_V {Type I LastRead 1 FirstWrite -1}
-		in_stream_V_last_V {Type I LastRead 1 FirstWrite -1}
-		in_stream_V_id_V {Type I LastRead 1 FirstWrite -1}
-		in_stream_V_dest_V {Type I LastRead 1 FirstWrite -1}
-		hdr_stream4 {Type O LastRead -1 FirstWrite 1}
-		bgr_stream1 {Type O LastRead -1 FirstWrite 1}
-		p_02_out {Type O LastRead -1 FirstWrite 0}
-		frame_started_flag_1_out {Type O LastRead -1 FirstWrite 0}
-		frame_started_new_1_out {Type O LastRead -1 FirstWrite 0}}}
+		frame_start_c {Type O LastRead -1 FirstWrite 2}
+		frame_start_c17 {Type O LastRead -1 FirstWrite 2}}}
 
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "307205", "Max" : "307205"}
-	, {"Name" : "Interval", "Min" : "307205", "Max" : "307205"}
+	{"Name" : "Latency", "Min" : "368642", "Max" : "368642"}
+	, {"Name" : "Interval", "Min" : "368642", "Max" : "368642"}
 ]}
 
 set PipelineEnableSignalInfo {[

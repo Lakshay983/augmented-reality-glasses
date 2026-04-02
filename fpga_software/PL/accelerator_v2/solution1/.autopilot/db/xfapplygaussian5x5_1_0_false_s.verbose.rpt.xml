@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'xfapplygaussian5x5_1_0_false_s'" level="0">
-<item name = "Date">Fri Mar 27 07:16:44 2026
+<item name = "Date">Thu Apr  2 06:49:31 2026
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">accelerator_v2</item>
@@ -63,22 +63,22 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="mul_8ns_8ns_16_1_0_U119">mul_8ns_8ns_16_1_0, 0, 0, 0, 40, 0</column>
+<column name="mul_8ns_8ns_16_1_0_U105">mul_8ns_8ns_16_1_0, 0, 0, 0, 40, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
 <keys size="3">Instance, Module, Expression</keys>
-<column name="am_addmul_19ns_17ns_8ns_28_4_0_U128">am_addmul_19ns_17ns_8ns_28_4_0, (i0 + i1) * i2</column>
-<column name="am_addmul_8ns_8ns_8ns_17_4_0_U120">am_addmul_8ns_8ns_8ns_17_4_0, (i0 + i1) * i2</column>
-<column name="am_addmul_8ns_8ns_8ns_17_4_0_U125">am_addmul_8ns_8ns_8ns_17_4_0, (i0 + i1) * i2</column>
-<column name="am_addmul_8ns_8ns_8ns_17_4_0_U127">am_addmul_8ns_8ns_8ns_17_4_0, (i0 + i1) * i2</column>
-<column name="am_addmul_9ns_9ns_8ns_18_4_0_U121">am_addmul_9ns_9ns_8ns_18_4_0, (i0 + i1) * i2</column>
-<column name="am_addmul_9ns_9ns_8ns_18_4_0_U122">am_addmul_9ns_9ns_8ns_18_4_0, (i0 + i1) * i2</column>
-<column name="ama_addmuladd_18ns_16ns_8ns_28ns_28_4_0_U130">ama_addmuladd_18ns_16ns_8ns_28ns_28_4_0, i0 + (i1 + i2) * i3</column>
-<column name="ama_addmuladd_19ns_17ns_8ns_16ns_28_4_0_U129">ama_addmuladd_19ns_17ns_8ns_16ns_28_4_0, (i0 + i1) * i2 + i3</column>
-<column name="ama_addmuladd_8ns_8ns_8ns_17ns_18_4_0_U123">ama_addmuladd_8ns_8ns_8ns_17ns_18_4_0, i0 + (i1 + i2) * i3</column>
-<column name="ama_addmuladd_9ns_9ns_8ns_18ns_19_4_0_U124">ama_addmuladd_9ns_9ns_8ns_18ns_19_4_0, i0 + (i1 + i2) * i3</column>
-<column name="ama_addmuladd_9ns_9ns_8ns_18ns_19_4_0_U126">ama_addmuladd_9ns_9ns_8ns_18ns_19_4_0, i0 + (i1 + i2) * i3</column>
+<column name="am_addmul_19ns_17ns_8ns_28_4_0_U114">am_addmul_19ns_17ns_8ns_28_4_0, (i0 + i1) * i2</column>
+<column name="am_addmul_8ns_8ns_8ns_17_4_0_U106">am_addmul_8ns_8ns_8ns_17_4_0, (i0 + i1) * i2</column>
+<column name="am_addmul_8ns_8ns_8ns_17_4_0_U111">am_addmul_8ns_8ns_8ns_17_4_0, (i0 + i1) * i2</column>
+<column name="am_addmul_8ns_8ns_8ns_17_4_0_U113">am_addmul_8ns_8ns_8ns_17_4_0, (i0 + i1) * i2</column>
+<column name="am_addmul_9ns_9ns_8ns_18_4_0_U107">am_addmul_9ns_9ns_8ns_18_4_0, (i0 + i1) * i2</column>
+<column name="am_addmul_9ns_9ns_8ns_18_4_0_U108">am_addmul_9ns_9ns_8ns_18_4_0, (i0 + i1) * i2</column>
+<column name="ama_addmuladd_18ns_16ns_8ns_28ns_28_4_0_U116">ama_addmuladd_18ns_16ns_8ns_28ns_28_4_0, i0 + (i1 + i2) * i3</column>
+<column name="ama_addmuladd_19ns_17ns_8ns_16ns_28_4_0_U115">ama_addmuladd_19ns_17ns_8ns_16ns_28_4_0, (i0 + i1) * i2 + i3</column>
+<column name="ama_addmuladd_8ns_8ns_8ns_17ns_18_4_0_U109">ama_addmuladd_8ns_8ns_8ns_17ns_18_4_0, i0 + (i1 + i2) * i3</column>
+<column name="ama_addmuladd_9ns_9ns_8ns_18ns_19_4_0_U110">ama_addmuladd_9ns_9ns_8ns_18ns_19_4_0, i0 + (i1 + i2) * i3</column>
+<column name="ama_addmuladd_9ns_9ns_8ns_18ns_19_4_0_U112">ama_addmuladd_9ns_9ns_8ns_18ns_19_4_0, i0 + (i1 + i2) * i3</column>
 </table>
 </item>
 <item name = "Memory"><table name="" hasTotal="1">

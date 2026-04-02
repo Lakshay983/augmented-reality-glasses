@@ -10,7 +10,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 80 \
+    id 66 \
     name padded_stream2 \
     type fifo \
     dir I \
@@ -25,7 +25,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 81 \
+    id 67 \
     name bgr_mat_data43 \
     type fifo \
     dir O \
@@ -33,7 +33,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_bgr_mat_data43 \
     op interface \
-    ports { bgr_mat_data43_din { O 24 vector } bgr_mat_data43_num_data_valid { I 13 vector } bgr_mat_data43_fifo_cap { I 13 vector } bgr_mat_data43_full_n { I 1 bit } bgr_mat_data43_write { O 1 bit } } \
+    ports { bgr_mat_data43_din { O 24 vector } bgr_mat_data43_num_data_valid { I 20 vector } bgr_mat_data43_fifo_cap { I 20 vector } bgr_mat_data43_full_n { I 1 bit } bgr_mat_data43_write { O 1 bit } } \
 } "
 }
 

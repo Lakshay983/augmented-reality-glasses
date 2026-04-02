@@ -25,8 +25,8 @@ port (
     padded_stream2_empty_n : IN STD_LOGIC;
     padded_stream2_read : OUT STD_LOGIC;
     bgr_mat_data43_din : OUT STD_LOGIC_VECTOR (23 downto 0);
-    bgr_mat_data43_num_data_valid : IN STD_LOGIC_VECTOR (12 downto 0);
-    bgr_mat_data43_fifo_cap : IN STD_LOGIC_VECTOR (12 downto 0);
+    bgr_mat_data43_num_data_valid : IN STD_LOGIC_VECTOR (19 downto 0);
+    bgr_mat_data43_fifo_cap : IN STD_LOGIC_VECTOR (19 downto 0);
     bgr_mat_data43_full_n : IN STD_LOGIC;
     bgr_mat_data43_write : OUT STD_LOGIC;
     start_out : OUT STD_LOGIC;

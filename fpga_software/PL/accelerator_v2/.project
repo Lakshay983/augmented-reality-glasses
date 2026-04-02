@@ -37,9 +37,9 @@
 			<location>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL/accelerator_v2/.apc/.tb</location>
 		</link>
 		<link>
-			<name>.reference/xf_params.hpp</name>
+			<name>.reference/xf_gaussian_filter.hpp</name>
 			<type>1</type>
-			<location>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/common/xf_params.hpp</location>
+			<location>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp</location>
 		</link>
 		<link>
 			<name>solution1/constraints</name>

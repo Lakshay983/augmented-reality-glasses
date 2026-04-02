@@ -34,7 +34,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1450226064</coreId>
+              <coreId>1317022048</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>24</bitwidth>
@@ -70,7 +70,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1451241984</coreId>
+              <coreId>1316731248</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>8</bitwidth>
@@ -95,7 +95,7 @@
               <name>bgr_mat_data</name>
               <fileName>accelerator_v2.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>240</lineNumber>
+              <lineNumber>169</lineNumber>
               <contextFuncName>process_pixels</contextFuncName>
               <contextNormFuncName>process_pixels</contextNormFuncName>
               <inlineStackInfo>
@@ -111,7 +111,7 @@
                         <first>accelerator_v2.cpp</first>
                         <second>process_pixels</second>
                       </first>
-                      <second>240</second>
+                      <second>169</second>
                     </item>
                   </second>
                 </item>
@@ -123,9 +123,9 @@
               <implIndex>memory</implIndex>
               <coreName>FIFO</coreName>
               <isStorage>1</isStorage>
-              <storageDepth>3220</storageDepth>
+              <storageDepth>311696</storageDepth>
               <coreId>78</coreId>
-              <rtlModuleName>accelerator_v2_fifo_w24_d3220_A</rtlModuleName>
+              <rtlModuleName>accelerator_v2_fifo_w24_d311696_A</rtlModuleName>
             </Obj>
             <bitwidth>24</bitwidth>
           </Value>
@@ -151,7 +151,7 @@
               <name>gray_mat_data</name>
               <fileName>accelerator_v2.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>241</lineNumber>
+              <lineNumber>170</lineNumber>
               <contextFuncName>process_pixels</contextFuncName>
               <contextNormFuncName>process_pixels</contextNormFuncName>
               <inlineStackInfo>
@@ -167,7 +167,7 @@
                         <first>accelerator_v2.cpp</first>
                         <second>process_pixels</second>
                       </first>
-                      <second>241</second>
+                      <second>170</second>
                     </item>
                   </second>
                 </item>
@@ -179,9 +179,9 @@
               <implIndex>memory</implIndex>
               <coreName>FIFO</coreName>
               <isStorage>1</isStorage>
-              <storageDepth>3220</storageDepth>
+              <storageDepth>311696</storageDepth>
               <coreId>78</coreId>
-              <rtlModuleName>accelerator_v2_fifo_w8_d3220_A</rtlModuleName>
+              <rtlModuleName>accelerator_v2_fifo_w8_d311696_A</rtlModuleName>
             </Obj>
             <bitwidth>8</bitwidth>
           </Value>
@@ -207,7 +207,7 @@
               <name>blurred_mat_data</name>
               <fileName>accelerator_v2.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>242</lineNumber>
+              <lineNumber>171</lineNumber>
               <contextFuncName>process_pixels</contextFuncName>
               <contextNormFuncName>process_pixels</contextNormFuncName>
               <inlineStackInfo>
@@ -223,7 +223,7 @@
                         <first>accelerator_v2.cpp</first>
                         <second>process_pixels</second>
                       </first>
-                      <second>242</second>
+                      <second>171</second>
                     </item>
                   </second>
                 </item>
@@ -235,9 +235,9 @@
               <implIndex>memory</implIndex>
               <coreName>FIFO</coreName>
               <isStorage>1</isStorage>
-              <storageDepth>3220</storageDepth>
+              <storageDepth>311696</storageDepth>
               <coreId>78</coreId>
-              <rtlModuleName>accelerator_v2_fifo_w8_d3220_A</rtlModuleName>
+              <rtlModuleName>accelerator_v2_fifo_w8_d311696_A</rtlModuleName>
             </Obj>
             <bitwidth>8</bitwidth>
           </Value>
@@ -260,10 +260,10 @@
             <Obj>
               <type>0</type>
               <id>15</id>
-              <name>_ln245</name>
+              <name>_ln174</name>
               <fileName>accelerator_v2.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>245</lineNumber>
+              <lineNumber>174</lineNumber>
               <contextFuncName>process_pixels</contextFuncName>
               <contextNormFuncName>process_pixels</contextNormFuncName>
               <inlineStackInfo>
@@ -279,7 +279,7 @@
                         <first>accelerator_v2.cpp</first>
                         <second>process_pixels</second>
                       </first>
-                      <second>245</second>
+                      <second>174</second>
                     </item>
                   </second>
                 </item>
@@ -292,7 +292,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1450627888</coreId>
+              <coreId>1315502128</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -318,10 +318,10 @@
             <Obj>
               <type>0</type>
               <id>16</id>
-              <name>_ln248</name>
+              <name>_ln177</name>
               <fileName>accelerator_v2.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>248</lineNumber>
+              <lineNumber>177</lineNumber>
               <contextFuncName>process_pixels</contextFuncName>
               <contextNormFuncName>process_pixels</contextNormFuncName>
               <inlineStackInfo>
@@ -337,20 +337,20 @@
                         <first>accelerator_v2.cpp</first>
                         <second>process_pixels</second>
                       </first>
-                      <second>248</second>
+                      <second>177</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>bgr2gray_9_0_484_644_1_3220_3220_U0</rtlName>
+              <rtlName>bgr2gray_9_0_484_644_1_311696_311696_U0</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1450627888</coreId>
+              <coreId>1315502128</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -378,10 +378,10 @@
             <Obj>
               <type>0</type>
               <id>17</id>
-              <name>_ln251</name>
+              <name>_ln182</name>
               <fileName>accelerator_v2.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>251</lineNumber>
+              <lineNumber>182</lineNumber>
               <contextFuncName>process_pixels</contextFuncName>
               <contextNormFuncName>process_pixels</contextNormFuncName>
               <inlineStackInfo>
@@ -397,32 +397,31 @@
                         <first>accelerator_v2.cpp</first>
                         <second>process_pixels</second>
                       </first>
-                      <second>251</second>
+                      <second>182</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>GaussianBlur_5_0_0_484_644_1_3220_3220_U0</rtlName>
+              <rtlName>GaussianBlur_5_1_0_484_644_1_311696_311696_U0</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1450627888</coreId>
+              <coreId>1316558504</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
           </Value>
           <oprand_edges>
-            <count>5</count>
+            <count>4</count>
             <item_version>0</item_version>
             <item>34</item>
             <item>35</item>
             <item>36</item>
             <item>181</item>
-            <item>184</item>
           </oprand_edges>
           <opcode>call</opcode>
           <m_Display>0</m_Display>
@@ -438,10 +437,10 @@
             <Obj>
               <type>0</type>
               <id>18</id>
-              <name>_ln254</name>
+              <name>_ln188</name>
               <fileName>accelerator_v2.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>254</lineNumber>
+              <lineNumber>188</lineNumber>
               <contextFuncName>process_pixels</contextFuncName>
               <contextNormFuncName>process_pixels</contextNormFuncName>
               <inlineStackInfo>
@@ -457,7 +456,7 @@
                         <first>accelerator_v2.cpp</first>
                         <second>process_pixels</second>
                       </first>
-                      <second>254</second>
+                      <second>188</second>
                     </item>
                   </second>
                 </item>
@@ -470,19 +469,18 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1450627888</coreId>
+              <coreId>1310008592</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
           </Value>
           <oprand_edges>
-            <count>5</count>
+            <count>4</count>
             <item_version>0</item_version>
             <item>38</item>
             <item>39</item>
             <item>40</item>
             <item>180</item>
-            <item>185</item>
           </oprand_edges>
           <opcode>call</opcode>
           <m_Display>0</m_Display>
@@ -498,10 +496,10 @@
             <Obj>
               <type>0</type>
               <id>19</id>
-              <name>_ln255</name>
+              <name>_ln189</name>
               <fileName>accelerator_v2.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>255</lineNumber>
+              <lineNumber>189</lineNumber>
               <contextFuncName>process_pixels</contextFuncName>
               <contextNormFuncName>process_pixels</contextNormFuncName>
               <inlineStackInfo>
@@ -517,7 +515,7 @@
                         <first>accelerator_v2.cpp</first>
                         <second>process_pixels</second>
                       </first>
-                      <second>255</second>
+                      <second>189</second>
                     </item>
                   </second>
                 </item>
@@ -530,7 +528,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1450627888</coreId>
+              <coreId>1397508187</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -575,7 +573,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1450627888</coreId>
+              <coreId>2965448796</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -606,7 +604,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1450627888</coreId>
+              <coreId>1316871680</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -619,7 +617,7 @@
             <Obj>
               <type>2</type>
               <id>29</id>
-              <name>bgr2gray_9_0_484_644_1_3220_3220_s</name>
+              <name>bgr2gray_9_0_484_644_1_311696_311696_s</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -637,20 +635,20 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1450627888</coreId>
+              <coreId>2965888672</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
           </Value>
           <const_type>6</const_type>
-          <content>&lt;constant:bgr2gray&lt;9, 0, 484, 644, 1, 3220, 3220&gt;&gt;</content>
+          <content>&lt;constant:bgr2gray&lt;9, 0, 484, 644, 1, 311696, 311696&gt;&gt;</content>
         </item>
         <item class_id_reference="16" object_id="_14">
           <Value>
             <Obj>
               <type>2</type>
               <id>33</id>
-              <name>GaussianBlur_5_0_0_484_644_1_3220_3220_s</name>
+              <name>GaussianBlur_5_1_0_484_644_1_311696_311696_s</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -668,13 +666,13 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1450627888</coreId>
+              <coreId>1316031728</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
           </Value>
           <const_type>6</const_type>
-          <content>&lt;constant:GaussianBlur&lt;5, 0, 0, 484, 644, 1, 3220, 3220&gt;&gt;</content>
+          <content>&lt;constant:GaussianBlur&lt;5, 1, 0, 484, 644, 1, 311696, 311696&gt;&gt;</content>
         </item>
         <item class_id_reference="16" object_id="_15">
           <Value>
@@ -699,7 +697,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1450627888</coreId>
+              <coreId>1316343360</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -733,7 +731,7 @@
             <coreName/>
             <isStorage>0</isStorage>
             <storageDepth>0</storageDepth>
-            <coreId>1448275136</coreId>
+            <coreId>1315762848</coreId>
             <rtlModuleName/>
           </Obj>
           <node_objs>
@@ -751,7 +749,7 @@
         </item>
       </blocks>
       <edges class_id="19" tracking_level="0" version="0">
-        <count>21</count>
+        <count>19</count>
         <item_version>0</item_version>
         <item class_id="20" tracking_level="1" version="0" object_id="_17">
           <id>22</id>
@@ -886,26 +884,12 @@
           <sink_obj>16</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
-        <item class_id_reference="20" object_id="_36">
-          <id>184</id>
-          <edge_type>4</edge_type>
-          <source_obj>16</source_obj>
-          <sink_obj>17</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
-        <item class_id_reference="20" object_id="_37">
-          <id>185</id>
-          <edge_type>4</edge_type>
-          <source_obj>17</source_obj>
-          <sink_obj>18</sink_obj>
-          <is_back_edge>0</is_back_edge>
-        </item>
       </edges>
     </cdfg>
     <cdfg_regions class_id="21" tracking_level="0" version="0">
       <count>1</count>
       <item_version>0</item_version>
-      <item class_id="22" tracking_level="1" version="0" object_id="_38">
+      <item class_id="22" tracking_level="1" version="0" object_id="_36">
         <mId>1</mId>
         <mTag>process_pixels</mTag>
         <mNormTag>process_pixels</mNormTag>
@@ -926,11 +910,11 @@
         <mMinLatency>325690</mMinLatency>
         <mMaxLatency>325690</mMaxLatency>
         <mIsDfPipe>1</mIsDfPipe>
-        <mDfPipe class_id="23" tracking_level="1" version="0" object_id="_39">
+        <mDfPipe class_id="23" tracking_level="1" version="0" object_id="_37">
           <port_list class_id="24" tracking_level="0" version="0">
             <count>2</count>
             <item_version>0</item_version>
-            <item class_id="25" tracking_level="1" version="0" object_id="_40">
+            <item class_id="25" tracking_level="1" version="0" object_id="_38">
               <name>padded_stream2</name>
               <dir>0</dir>
               <type>0</type>
@@ -938,7 +922,7 @@
               <top_port class_id="-1"/>
               <chan class_id="-1"/>
             </item>
-            <item class_id_reference="25" object_id="_41">
+            <item class_id_reference="25" object_id="_39">
               <name>gray_stream3</name>
               <dir>1</dir>
               <type>0</type>
@@ -950,23 +934,23 @@
           <process_list class_id="27" tracking_level="0" version="0">
             <count>4</count>
             <item_version>0</item_version>
-            <item class_id="28" tracking_level="1" version="0" object_id="_42">
+            <item class_id="28" tracking_level="1" version="0" object_id="_40">
               <type>0</type>
               <name>stream_to_mat_U0</name>
               <ssdmobj_id>15</ssdmobj_id>
               <pins class_id="29" tracking_level="0" version="0">
                 <count>1</count>
                 <item_version>0</item_version>
-                <item class_id="30" tracking_level="1" version="0" object_id="_43">
-                  <port class_id_reference="25" object_id="_44">
+                <item class_id="30" tracking_level="1" version="0" object_id="_41">
+                  <port class_id_reference="25" object_id="_42">
                     <name>padded_stream2</name>
                     <dir>0</dir>
                     <type>0</type>
                     <need_hs>0</need_hs>
-                    <top_port class_id_reference="25" object_id_reference="_40"/>
+                    <top_port class_id_reference="25" object_id_reference="_38"/>
                     <chan class_id="-1"/>
                   </port>
-                  <inst class_id="31" tracking_level="1" version="0" object_id="_45">
+                  <inst class_id="31" tracking_level="1" version="0" object_id="_43">
                     <type>0</type>
                     <name>stream_to_mat_U0</name>
                     <ssdmobj_id>15</ssdmobj_id>
@@ -977,9 +961,9 @@
               <in_sink_join>0</in_sink_join>
               <flag_in_gui>0</flag_in_gui>
             </item>
-            <item class_id_reference="28" object_id="_46">
+            <item class_id_reference="28" object_id="_44">
               <type>0</type>
-              <name>bgr2gray_9_0_484_644_1_3220_3220_U0</name>
+              <name>bgr2gray_9_0_484_644_1_311696_311696_U0</name>
               <ssdmobj_id>16</ssdmobj_id>
               <pins>
                 <count>0</count>
@@ -989,9 +973,9 @@
               <in_sink_join>0</in_sink_join>
               <flag_in_gui>0</flag_in_gui>
             </item>
-            <item class_id_reference="28" object_id="_47">
+            <item class_id_reference="28" object_id="_45">
               <type>0</type>
-              <name>GaussianBlur_5_0_0_484_644_1_3220_3220_U0</name>
+              <name>GaussianBlur_5_1_0_484_644_1_311696_311696_U0</name>
               <ssdmobj_id>17</ssdmobj_id>
               <pins>
                 <count>0</count>
@@ -1001,23 +985,23 @@
               <in_sink_join>0</in_sink_join>
               <flag_in_gui>0</flag_in_gui>
             </item>
-            <item class_id_reference="28" object_id="_48">
+            <item class_id_reference="28" object_id="_46">
               <type>0</type>
               <name>mat_to_stream_U0</name>
               <ssdmobj_id>18</ssdmobj_id>
               <pins>
                 <count>1</count>
                 <item_version>0</item_version>
-                <item class_id_reference="30" object_id="_49">
-                  <port class_id_reference="25" object_id="_50">
+                <item class_id_reference="30" object_id="_47">
+                  <port class_id_reference="25" object_id="_48">
                     <name>gray_stream3</name>
                     <dir>1</dir>
                     <type>0</type>
                     <need_hs>0</need_hs>
-                    <top_port class_id_reference="25" object_id_reference="_41"/>
+                    <top_port class_id_reference="25" object_id_reference="_39"/>
                     <chan class_id="-1"/>
                   </port>
-                  <inst class_id_reference="31" object_id="_51">
+                  <inst class_id_reference="31" object_id="_49">
                     <type>0</type>
                     <name>mat_to_stream_U0</name>
                     <ssdmobj_id>18</ssdmobj_id>
@@ -1032,20 +1016,20 @@
           <channel_list class_id="32" tracking_level="0" version="0">
             <count>3</count>
             <item_version>0</item_version>
-            <item class_id="26" tracking_level="1" version="0" object_id="_52">
+            <item class_id="26" tracking_level="1" version="0" object_id="_50">
               <type>1</type>
               <name>bgr_mat_data</name>
               <ssdmobj_id>6</ssdmobj_id>
               <ctype>0</ctype>
-              <depth>3220</depth>
+              <depth>311696</depth>
               <bitwidth>24</bitwidth>
               <suggested_type>0</suggested_type>
-              <suggested_depth>3220</suggested_depth>
+              <suggested_depth>311696</suggested_depth>
               <source_list>
                 <count>1</count>
                 <item_version>0</item_version>
-                <item class_id_reference="30" object_id="_53">
-                  <port class_id_reference="25" object_id="_54">
+                <item class_id_reference="30" object_id="_51">
+                  <port class_id_reference="25" object_id="_52">
                     <name>in</name>
                     <dir>0</dir>
                     <type>3</type>
@@ -1053,14 +1037,14 @@
                     <top_port class_id="-1"/>
                     <chan class_id="-1"/>
                   </port>
-                  <inst class_id_reference="31" object_id_reference="_45"/>
+                  <inst class_id_reference="31" object_id_reference="_43"/>
                 </item>
               </source_list>
               <sink_list>
                 <count>1</count>
                 <item_version>0</item_version>
-                <item class_id_reference="30" object_id="_55">
-                  <port class_id_reference="25" object_id="_56">
+                <item class_id_reference="30" object_id="_53">
+                  <port class_id_reference="25" object_id="_54">
                     <name>out</name>
                     <dir>1</dir>
                     <type>3</type>
@@ -1068,28 +1052,28 @@
                     <top_port class_id="-1"/>
                     <chan class_id="-1"/>
                   </port>
-                  <inst class_id_reference="31" object_id="_57">
+                  <inst class_id_reference="31" object_id="_55">
                     <type>0</type>
-                    <name>bgr2gray_9_0_484_644_1_3220_3220_U0</name>
+                    <name>bgr2gray_9_0_484_644_1_311696_311696_U0</name>
                     <ssdmobj_id>16</ssdmobj_id>
                   </inst>
                 </item>
               </sink_list>
             </item>
-            <item class_id_reference="26" object_id="_58">
+            <item class_id_reference="26" object_id="_56">
               <type>1</type>
               <name>gray_mat_data</name>
               <ssdmobj_id>9</ssdmobj_id>
               <ctype>0</ctype>
-              <depth>3220</depth>
+              <depth>311696</depth>
               <bitwidth>8</bitwidth>
               <suggested_type>0</suggested_type>
-              <suggested_depth>3220</suggested_depth>
+              <suggested_depth>311696</suggested_depth>
               <source_list>
                 <count>1</count>
                 <item_version>0</item_version>
-                <item class_id_reference="30" object_id="_59">
-                  <port class_id_reference="25" object_id="_60">
+                <item class_id_reference="30" object_id="_57">
+                  <port class_id_reference="25" object_id="_58">
                     <name>in</name>
                     <dir>0</dir>
                     <type>3</type>
@@ -1097,14 +1081,14 @@
                     <top_port class_id="-1"/>
                     <chan class_id="-1"/>
                   </port>
-                  <inst class_id_reference="31" object_id_reference="_57"/>
+                  <inst class_id_reference="31" object_id_reference="_55"/>
                 </item>
               </source_list>
               <sink_list>
                 <count>1</count>
                 <item_version>0</item_version>
-                <item class_id_reference="30" object_id="_61">
-                  <port class_id_reference="25" object_id="_62">
+                <item class_id_reference="30" object_id="_59">
+                  <port class_id_reference="25" object_id="_60">
                     <name>out</name>
                     <dir>1</dir>
                     <type>3</type>
@@ -1112,28 +1096,28 @@
                     <top_port class_id="-1"/>
                     <chan class_id="-1"/>
                   </port>
-                  <inst class_id_reference="31" object_id="_63">
+                  <inst class_id_reference="31" object_id="_61">
                     <type>0</type>
-                    <name>GaussianBlur_5_0_0_484_644_1_3220_3220_U0</name>
+                    <name>GaussianBlur_5_1_0_484_644_1_311696_311696_U0</name>
                     <ssdmobj_id>17</ssdmobj_id>
                   </inst>
                 </item>
               </sink_list>
             </item>
-            <item class_id_reference="26" object_id="_64">
+            <item class_id_reference="26" object_id="_62">
               <type>1</type>
               <name>blurred_mat_data</name>
               <ssdmobj_id>12</ssdmobj_id>
               <ctype>0</ctype>
-              <depth>3220</depth>
+              <depth>311696</depth>
               <bitwidth>8</bitwidth>
               <suggested_type>0</suggested_type>
-              <suggested_depth>3220</suggested_depth>
+              <suggested_depth>311696</suggested_depth>
               <source_list>
                 <count>1</count>
                 <item_version>0</item_version>
-                <item class_id_reference="30" object_id="_65">
-                  <port class_id_reference="25" object_id="_66">
+                <item class_id_reference="30" object_id="_63">
+                  <port class_id_reference="25" object_id="_64">
                     <name>in</name>
                     <dir>0</dir>
                     <type>3</type>
@@ -1141,14 +1125,14 @@
                     <top_port class_id="-1"/>
                     <chan class_id="-1"/>
                   </port>
-                  <inst class_id_reference="31" object_id_reference="_63"/>
+                  <inst class_id_reference="31" object_id_reference="_61"/>
                 </item>
               </source_list>
               <sink_list>
                 <count>1</count>
                 <item_version>0</item_version>
-                <item class_id_reference="30" object_id="_67">
-                  <port class_id_reference="25" object_id="_68">
+                <item class_id_reference="30" object_id="_65">
+                  <port class_id_reference="25" object_id="_66">
                     <name>out</name>
                     <dir>1</dir>
                     <type>3</type>
@@ -1156,7 +1140,7 @@
                     <top_port class_id="-1"/>
                     <chan class_id="-1"/>
                   </port>
-                  <inst class_id_reference="31" object_id_reference="_51"/>
+                  <inst class_id_reference="31" object_id_reference="_49"/>
                 </item>
               </sink_list>
             </item>
@@ -1168,165 +1152,165 @@
         </mDfPipe>
       </item>
     </cdfg_regions>
-    <fsm class_id="34" tracking_level="1" version="0" object_id="_69">
+    <fsm class_id="34" tracking_level="1" version="0" object_id="_67">
       <states class_id="35" tracking_level="0" version="0">
         <count>8</count>
         <item_version>0</item_version>
-        <item class_id="36" tracking_level="1" version="0" object_id="_70">
+        <item class_id="36" tracking_level="1" version="0" object_id="_68">
           <id>1</id>
           <operations class_id="37" tracking_level="0" version="0">
             <count>4</count>
             <item_version>0</item_version>
-            <item class_id="38" tracking_level="1" version="0" object_id="_71">
+            <item class_id="38" tracking_level="1" version="0" object_id="_69">
               <id>6</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="38" object_id="_72">
+            <item class_id_reference="38" object_id="_70">
               <id>9</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="38" object_id="_73">
+            <item class_id_reference="38" object_id="_71">
               <id>12</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="38" object_id="_74">
+            <item class_id_reference="38" object_id="_72">
               <id>15</id>
               <stage>2</stage>
+              <latency>2</latency>
+            </item>
+          </operations>
+        </item>
+        <item class_id_reference="36" object_id="_73">
+          <id>2</id>
+          <operations>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item class_id_reference="38" object_id="_74">
+              <id>15</id>
+              <stage>1</stage>
               <latency>2</latency>
             </item>
           </operations>
         </item>
         <item class_id_reference="36" object_id="_75">
-          <id>2</id>
+          <id>3</id>
           <operations>
             <count>1</count>
             <item_version>0</item_version>
             <item class_id_reference="38" object_id="_76">
-              <id>15</id>
-              <stage>1</stage>
+              <id>16</id>
+              <stage>2</stage>
               <latency>2</latency>
             </item>
           </operations>
         </item>
         <item class_id_reference="36" object_id="_77">
-          <id>3</id>
+          <id>4</id>
           <operations>
             <count>1</count>
             <item_version>0</item_version>
             <item class_id_reference="38" object_id="_78">
               <id>16</id>
-              <stage>2</stage>
+              <stage>1</stage>
               <latency>2</latency>
             </item>
           </operations>
         </item>
         <item class_id_reference="36" object_id="_79">
-          <id>4</id>
+          <id>5</id>
           <operations>
             <count>1</count>
             <item_version>0</item_version>
             <item class_id_reference="38" object_id="_80">
-              <id>16</id>
-              <stage>1</stage>
+              <id>17</id>
+              <stage>2</stage>
               <latency>2</latency>
             </item>
           </operations>
         </item>
         <item class_id_reference="36" object_id="_81">
-          <id>5</id>
+          <id>6</id>
           <operations>
             <count>1</count>
             <item_version>0</item_version>
             <item class_id_reference="38" object_id="_82">
               <id>17</id>
-              <stage>2</stage>
+              <stage>1</stage>
               <latency>2</latency>
             </item>
           </operations>
         </item>
         <item class_id_reference="36" object_id="_83">
-          <id>6</id>
-          <operations>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item class_id_reference="38" object_id="_84">
-              <id>17</id>
-              <stage>1</stage>
-              <latency>2</latency>
-            </item>
-          </operations>
-        </item>
-        <item class_id_reference="36" object_id="_85">
           <id>7</id>
           <operations>
             <count>1</count>
             <item_version>0</item_version>
-            <item class_id_reference="38" object_id="_86">
+            <item class_id_reference="38" object_id="_84">
               <id>18</id>
               <stage>2</stage>
               <latency>2</latency>
             </item>
           </operations>
         </item>
-        <item class_id_reference="36" object_id="_87">
+        <item class_id_reference="36" object_id="_85">
           <id>8</id>
           <operations>
             <count>11</count>
             <item_version>0</item_version>
-            <item class_id_reference="38" object_id="_88">
+            <item class_id_reference="38" object_id="_86">
               <id>3</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="38" object_id="_89">
+            <item class_id_reference="38" object_id="_87">
               <id>4</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="38" object_id="_90">
+            <item class_id_reference="38" object_id="_88">
               <id>5</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="38" object_id="_91">
+            <item class_id_reference="38" object_id="_89">
               <id>7</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="38" object_id="_92">
+            <item class_id_reference="38" object_id="_90">
               <id>8</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="38" object_id="_93">
+            <item class_id_reference="38" object_id="_91">
               <id>10</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="38" object_id="_94">
+            <item class_id_reference="38" object_id="_92">
               <id>11</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="38" object_id="_95">
+            <item class_id_reference="38" object_id="_93">
               <id>13</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="38" object_id="_96">
+            <item class_id_reference="38" object_id="_94">
               <id>14</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="38" object_id="_97">
+            <item class_id_reference="38" object_id="_95">
               <id>18</id>
               <stage>1</stage>
               <latency>2</latency>
             </item>
-            <item class_id_reference="38" object_id="_98">
+            <item class_id_reference="38" object_id="_96">
               <id>19</id>
               <stage>1</stage>
               <latency>1</latency>
@@ -1337,7 +1321,7 @@
       <transitions class_id="39" tracking_level="0" version="0">
         <count>7</count>
         <item_version>0</item_version>
-        <item class_id="40" tracking_level="1" version="0" object_id="_99">
+        <item class_id="40" tracking_level="1" version="0" object_id="_97">
           <inState>1</inState>
           <outState>2</outState>
           <condition class_id="41" tracking_level="0" version="0">
@@ -1352,7 +1336,7 @@
             </sop>
           </condition>
         </item>
-        <item class_id_reference="40" object_id="_100">
+        <item class_id_reference="40" object_id="_98">
           <inState>2</inState>
           <outState>3</outState>
           <condition>
@@ -1367,7 +1351,7 @@
             </sop>
           </condition>
         </item>
-        <item class_id_reference="40" object_id="_101">
+        <item class_id_reference="40" object_id="_99">
           <inState>3</inState>
           <outState>4</outState>
           <condition>
@@ -1382,7 +1366,7 @@
             </sop>
           </condition>
         </item>
-        <item class_id_reference="40" object_id="_102">
+        <item class_id_reference="40" object_id="_100">
           <inState>4</inState>
           <outState>5</outState>
           <condition>
@@ -1397,7 +1381,7 @@
             </sop>
           </condition>
         </item>
-        <item class_id_reference="40" object_id="_103">
+        <item class_id_reference="40" object_id="_101">
           <inState>5</inState>
           <outState>6</outState>
           <condition>
@@ -1412,7 +1396,7 @@
             </sop>
           </condition>
         </item>
-        <item class_id_reference="40" object_id="_104">
+        <item class_id_reference="40" object_id="_102">
           <inState>6</inState>
           <outState>7</outState>
           <condition>
@@ -1427,7 +1411,7 @@
             </sop>
           </condition>
         </item>
-        <item class_id_reference="40" object_id="_105">
+        <item class_id_reference="40" object_id="_103">
           <inState>7</inState>
           <outState>8</outState>
           <condition>
@@ -1444,12 +1428,12 @@
         </item>
       </transitions>
     </fsm>
-    <res class_id="44" tracking_level="1" version="0" object_id="_106">
+    <res class_id="44" tracking_level="1" version="0" object_id="_104">
       <dp_component_resource class_id="45" tracking_level="0" version="0">
         <count>7</count>
         <item_version>0</item_version>
         <item class_id="46" tracking_level="0" version="0">
-          <first>GaussianBlur_5_0_0_484_644_1_3220_3220_U0 (GaussianBlur_5_0_0_484_644_1_3220_3220_s)</first>
+          <first>GaussianBlur_5_1_0_484_644_1_311696_311696_U0 (GaussianBlur_5_1_0_484_644_1_311696_311696_s)</first>
           <second class_id="47" tracking_level="0" version="0">
             <count>5</count>
             <item_version>0</item_version>
@@ -1467,7 +1451,7 @@
             </item>
             <item>
               <first>LUT</first>
-              <second>6305</second>
+              <second>6353</second>
             </item>
             <item>
               <first>URAM</first>
@@ -1476,7 +1460,7 @@
           </second>
         </item>
         <item>
-          <first>bgr2gray_9_0_484_644_1_3220_3220_U0 (bgr2gray_9_0_484_644_1_3220_3220_s)</first>
+          <first>bgr2gray_9_0_484_644_1_311696_311696_U0 (bgr2gray_9_0_484_644_1_311696_311696_s)</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -1510,14 +1494,14 @@
           </second>
         </item>
         <item>
-          <first>start_for_GaussianBlur_5_0_0_484_644_1_3220_3220_U0_U (start_for_GaussianBlur_5_0_0_484_644_1_3220_3220_U0)</first>
+          <first>start_for_GaussianBlur_5_1_0_484_644_1_311696_311696_U0_U (start_for_GaussianBlur_5_1_0_484_644_1_311696_311696_U0)</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
           </second>
         </item>
         <item>
-          <first>start_for_bgr2gray_9_0_484_644_1_3220_3220_U0_U (start_for_bgr2gray_9_0_484_644_1_3220_3220_U0)</first>
+          <first>start_for_bgr2gray_9_0_484_644_1_311696_311696_U0_U (start_for_bgr2gray_9_0_484_644_1_311696_311696_U0)</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
@@ -1583,7 +1567,7 @@
             <item_version>0</item_version>
             <item>
               <first>(0Depth)</first>
-              <second>3220</second>
+              <second>311696</second>
             </item>
             <item>
               <first>(1Bits)</first>
@@ -1591,11 +1575,11 @@
             </item>
             <item>
               <first>(2Size:D*B)</first>
-              <second>77280</second>
+              <second>7480704</second>
             </item>
             <item>
               <first>BRAM</first>
-              <second>6</second>
+              <second>424</second>
             </item>
             <item>
               <first>FF</first>
@@ -1614,7 +1598,7 @@
             <item_version>0</item_version>
             <item>
               <first>(0Depth)</first>
-              <second>3220</second>
+              <second>311696</second>
             </item>
             <item>
               <first>(1Bits)</first>
@@ -1622,11 +1606,11 @@
             </item>
             <item>
               <first>(2Size:D*B)</first>
-              <second>25760</second>
+              <second>2493568</second>
             </item>
             <item>
               <first>BRAM</first>
-              <second>2</second>
+              <second>156</second>
             </item>
             <item>
               <first>FF</first>
@@ -1645,7 +1629,7 @@
             <item_version>0</item_version>
             <item>
               <first>(0Depth)</first>
-              <second>3220</second>
+              <second>311696</second>
             </item>
             <item>
               <first>(1Bits)</first>
@@ -1653,11 +1637,11 @@
             </item>
             <item>
               <first>(2Size:D*B)</first>
-              <second>25760</second>
+              <second>2493568</second>
             </item>
             <item>
               <first>BRAM</first>
-              <second>2</second>
+              <second>156</second>
             </item>
             <item>
               <first>FF</first>
@@ -1686,14 +1670,14 @@
         <count>7</count>
         <item_version>0</item_version>
         <item>
-          <first>GaussianBlur_5_0_0_484_644_1_3220_3220_U0</first>
+          <first>GaussianBlur_5_1_0_484_644_1_311696_311696_U0</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
           </second>
         </item>
         <item>
-          <first>bgr2gray_9_0_484_644_1_3220_3220_U0</first>
+          <first>bgr2gray_9_0_484_644_1_311696_311696_U0</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
@@ -1707,14 +1691,14 @@
           </second>
         </item>
         <item>
-          <first>start_for_GaussianBlur_5_0_0_484_644_1_3220_3220_U0_U</first>
+          <first>start_for_GaussianBlur_5_1_0_484_644_1_311696_311696_U0_U</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
           </second>
         </item>
         <item>
-          <first>start_for_bgr2gray_9_0_484_644_1_3220_3220_U0_U</first>
+          <first>start_for_bgr2gray_9_0_484_644_1_311696_311696_U0_U</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
@@ -1739,7 +1723,7 @@
         <count>4</count>
         <item_version>0</item_version>
         <item class_id="50" tracking_level="0" version="0">
-          <first>GaussianBlur_5_0_0_484_644_1_3220_3220_U0 (GaussianBlur_5_0_0_484_644_1_3220_3220_s)</first>
+          <first>GaussianBlur_5_1_0_484_644_1_311696_311696_U0 (GaussianBlur_5_1_0_484_644_1_311696_311696_s)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -1747,7 +1731,7 @@
           </second>
         </item>
         <item>
-          <first>bgr2gray_9_0_484_644_1_3220_3220_U0 (bgr2gray_9_0_484_644_1_3220_3220_s)</first>
+          <first>bgr2gray_9_0_484_644_1_311696_311696_U0 (bgr2gray_9_0_484_644_1_311696_311696_s)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -1882,7 +1866,7 @@
     <regions class_id="57" tracking_level="0" version="0">
       <count>1</count>
       <item_version>0</item_version>
-      <item class_id="58" tracking_level="1" version="0" object_id="_107">
+      <item class_id="58" tracking_level="1" version="0" object_id="_105">
         <region_name>process_pixels</region_name>
         <basic_blocks>
           <count>1</count>
@@ -2016,7 +2000,7 @@
       <count>4</count>
       <item_version>0</item_version>
       <item>
-        <first>grp_GaussianBlur_5_0_0_484_644_1_3220_3220_s_fu_65</first>
+        <first>grp_GaussianBlur_5_1_0_484_644_1_311696_311696_s_fu_65</first>
         <second>
           <count>2</count>
           <item_version>0</item_version>
@@ -2025,7 +2009,7 @@
         </second>
       </item>
       <item>
-        <first>grp_bgr2gray_9_0_484_644_1_3220_3220_s_fu_59</first>
+        <first>grp_bgr2gray_9_0_484_644_1_311696_311696_s_fu_59</first>
         <second>
           <count>2</count>
           <item_version>0</item_version>

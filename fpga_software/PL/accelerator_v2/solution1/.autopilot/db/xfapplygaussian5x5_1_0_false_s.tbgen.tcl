@@ -186,18 +186,18 @@ set RtlHierarchyInfo {[
 			{"Name" : "weights_read", "Type" : "None", "Direction" : "I"},
 			{"Name" : "weights_read_3", "Type" : "None", "Direction" : "I"},
 			{"Name" : "weights_read_4", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_8ns_8ns_16_1_0_U119", "Parent" : "0"},
-	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.am_addmul_8ns_8ns_8ns_17_4_0_U120", "Parent" : "0"},
-	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.am_addmul_9ns_9ns_8ns_18_4_0_U121", "Parent" : "0"},
-	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.am_addmul_9ns_9ns_8ns_18_4_0_U122", "Parent" : "0"},
-	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.ama_addmuladd_8ns_8ns_8ns_17ns_18_4_0_U123", "Parent" : "0"},
-	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.ama_addmuladd_9ns_9ns_8ns_18ns_19_4_0_U124", "Parent" : "0"},
-	{"ID" : "7", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.am_addmul_8ns_8ns_8ns_17_4_0_U125", "Parent" : "0"},
-	{"ID" : "8", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.ama_addmuladd_9ns_9ns_8ns_18ns_19_4_0_U126", "Parent" : "0"},
-	{"ID" : "9", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.am_addmul_8ns_8ns_8ns_17_4_0_U127", "Parent" : "0"},
-	{"ID" : "10", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.am_addmul_19ns_17ns_8ns_28_4_0_U128", "Parent" : "0"},
-	{"ID" : "11", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.ama_addmuladd_19ns_17ns_8ns_16ns_28_4_0_U129", "Parent" : "0"},
-	{"ID" : "12", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.ama_addmuladd_18ns_16ns_8ns_28ns_28_4_0_U130", "Parent" : "0"}]}
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_8ns_8ns_16_1_0_U105", "Parent" : "0"},
+	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.am_addmul_8ns_8ns_8ns_17_4_0_U106", "Parent" : "0"},
+	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.am_addmul_9ns_9ns_8ns_18_4_0_U107", "Parent" : "0"},
+	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.am_addmul_9ns_9ns_8ns_18_4_0_U108", "Parent" : "0"},
+	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.ama_addmuladd_8ns_8ns_8ns_17ns_18_4_0_U109", "Parent" : "0"},
+	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.ama_addmuladd_9ns_9ns_8ns_18ns_19_4_0_U110", "Parent" : "0"},
+	{"ID" : "7", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.am_addmul_8ns_8ns_8ns_17_4_0_U111", "Parent" : "0"},
+	{"ID" : "8", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.ama_addmuladd_9ns_9ns_8ns_18ns_19_4_0_U112", "Parent" : "0"},
+	{"ID" : "9", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.am_addmul_8ns_8ns_8ns_17_4_0_U113", "Parent" : "0"},
+	{"ID" : "10", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.am_addmul_19ns_17ns_8ns_28_4_0_U114", "Parent" : "0"},
+	{"ID" : "11", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.ama_addmuladd_19ns_17ns_8ns_16ns_28_4_0_U115", "Parent" : "0"},
+	{"ID" : "12", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.ama_addmuladd_18ns_16ns_8ns_28ns_28_4_0_U116", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {

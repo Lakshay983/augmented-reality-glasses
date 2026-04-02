@@ -7,7 +7,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="accelerator_v2_accelerator_v2,hls_ip_2022_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xcvu11p-flga2577-1-e,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=7.297000,HLS_SYN_LAT=471566,HLS_SYN_TPT=471564,HLS_SYN_MEM=1036,HLS_SYN_DSP=0,HLS_SYN_FF=7274,HLS_SYN_LUT=10224,HLS_VERSION=2022_2}" *)
+(* CORE_GENERATION_INFO="accelerator_v2_accelerator_v2,hls_ip_2022_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xcvu11p-flga2577-1-e,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=7.297000,HLS_SYN_LAT=471569,HLS_SYN_TPT=471564,HLS_SYN_MEM=1793,HLS_SYN_DSP=0,HLS_SYN_FF=7168,HLS_SYN_LUT=10532,HLS_VERSION=2022_2}" *)
 
 module accelerator_v2 (
         in_stream_TDATA,
@@ -413,7 +413,7 @@ accelerator_v2_fifo_w1_d2_S frame_start_c17_channel_U(
     .if_read(Block_entry14_proc_U0_ap_ready)
 );
 
-accelerator_v2_fifo_w24_d307200_A padded_stream_U(
+accelerator_v2_fifo_w24_d311296_A padded_stream_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
     .if_read_ce(1'b1),
@@ -428,7 +428,7 @@ accelerator_v2_fifo_w24_d307200_A padded_stream_U(
     .if_read(process_pixels_U0_padded_stream2_read)
 );
 
-accelerator_v2_fifo_w8_d307200_A gray_stream_U(
+accelerator_v2_fifo_w8_d311296_A gray_stream_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
     .if_read_ce(1'b1),
