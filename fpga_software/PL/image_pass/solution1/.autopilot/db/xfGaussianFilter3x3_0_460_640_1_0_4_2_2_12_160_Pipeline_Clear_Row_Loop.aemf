@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1774216901460">
+  <ports id="1" name="img_width" type="PortType" coreId="543517801" bitwidth="16">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="2" name="buf_V_1" type="PortType" coreName="RAM_S2P_BRAM" coreId="538997504" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="160">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <ports id="3" name="buf_V" type="PortType" coreName="RAM_S2P_BRAM" coreId="928264080" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="160">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <ports id="4" name="img_gray_data48" type="PortType" coreName="FIFO_SRL" coreId="928939424" bitwidth="32" iftype="IfTypeRom">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <edges id="37" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="40" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="41" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="42" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="43" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="44" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="45" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="46" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="49" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.4"/>
+  <edges id="50" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.4"/>
+  <edges id="51" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.4"/>
+  <edges id="52" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="53" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@ports.2"/>
+  <edges id="56" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="59" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="62" source_obj="//@ports.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="63" source_obj="//@regions.0/@basic_blocks.1/@node_objs.4" sink_obj="//@ports.1"/>
+  <edges id="65" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="66" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="67" source_obj="//@regions.0/@basic_blocks.1/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="68" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.6"/>
+  <edges id="69" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.6"/>
+  <edges id="70" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.7"/>
+  <edges id="125" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0"/>
+  <edges id="126" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1"/>
+  <edges id="127" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="128" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0" is_back_edge="1"/>
+  <edges id="129" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="130" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.6"/>
+  <edges id="131" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.6"/>
+  <blocks id="12" name="newFuncRoot" type="BlockType">
+    <controlOutputObjs>for.inc</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="5" name="col_V" originalName="col.V" coreId="0" bitwidth="13" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="img_width_read" coreId="538" bitwidth="16" opcode="read" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <dataInputObjs>img_width</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="col_V_write_ln0" coreId="927802576" opcode="store" m_display="0" m_delay="0.48" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="11" name="br_ln0" coreId="927692592" opcode="br" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <controlInputObjs>for.inc</controlInputObjs>
+    </node_objs>
+  </blocks>
+  <blocks id="32" name="for.body43.preheader.exitStub" type="BlockType">
+    <controlInputObjs>for.inc</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="_ln0" coreId="926422896" opcode="ret" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1"/>
+  </blocks>
+  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" iiViolation="" id="101" pipe_depth="2" RegionName="Clear_Row_Loop">
+    <basic_blocks id="18" name="for.inc" type="BlockType">
+      <controlInputObjs>newFuncRoot</controlInputObjs>
+      <controlInputObjs>for.inc.split</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>for.inc.split</controlOutputObjs>
+      <controlOutputObjs>for.body43.preheader.exitStub</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="13" name="col_V_3" lineNumber="840" originalName="col.V" fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." coreId="3315912167" contextFuncName="operator_add_assign_1_false" bitwidth="13" opcode="load" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h" linenumber="840" fileDirectory="/misc/scratch/sp02-senior-design/augmented-reality-glasses/fpga_software/PL" functionName="operator+=&amp;lt;1, false&amp;gt;"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="14" name="zext_ln1027" lineNumber="1027" fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="zext_ln1027_fu_108_p1" coreId="927444720" contextFuncName="operator_lt_16_false" bitwidth="16" opcode="zext" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h" linenumber="1027" fileDirectory="/misc/scratch/sp02-senior-design/augmented-reality-glasses/fpga_software/PL" functionName="operator&amp;lt;&amp;lt;16, false&amp;gt;"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="15" name="icmp_ln1027" lineNumber="1027" fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="icmp_ln1027_fu_112_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="operator_lt_16_false" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.86" m_topoIndex="7" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h" linenumber="1027" fileDirectory="/misc/scratch/sp02-senior-design/augmented-reality-glasses/fpga_software/PL" functionName="operator&amp;lt;&amp;lt;16, false&amp;gt;"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="16" name="col_V_4" lineNumber="840" originalName="col.V" fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="col_V_4_fu_118_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="operator_add_assign_1_false" bitwidth="13" opcode="add" m_display="0" m_delay="0.97" m_topoIndex="8" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h" linenumber="840" fileDirectory="/misc/scratch/sp02-senior-design/augmented-reality-glasses/fpga_software/PL" functionName="operator+=&amp;lt;1, false&amp;gt;"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="17" name="br_ln482" lineNumber="482" fileName="/misc/scratch/sp02-senior-design/augmented-reality-glasses/fpga_software/PL/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp" fileDirectory=".." coreId="927071952" contextFuncName="xfGaussianFilter3x3_0_460_640_1_0_4_2_2_12_160_s" opcode="br" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/misc/scratch/sp02-senior-design/augmented-reality-glasses/fpga_software/PL/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp" linenumber="482" fileDirectory="/misc/scratch/sp02-senior-design/augmented-reality-glasses/fpga_software/PL" functionName="xfGaussianFilter3x3&amp;lt;0, 460, 640, 1, 0, 4, 2, 2, 12, 160&amp;gt;"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>for.body43.preheader.exitStub</controlInputObjs>
+        <controlInputObjs>for.inc.split</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="/misc/scratch/sp02-senior-design/augmented-reality-glasses/fpga_software/PL/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp">
+        <validLinenumbers>482</validLinenumbers>
+      </fileValidLineNumbers>
+      <fileValidLineNumbers fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h">
+        <validLinenumbers>840</validLinenumbers>
+        <validLinenumbers>1027</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="30" name="for.inc.split" type="BlockType">
+      <controlInputObjs>for.inc</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>for.inc</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="22" name="zext_ln541" lineNumber="541" fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="zext_ln541_fu_124_p1" coreId="928495952" contextFuncName="operator_unsigned_long_long" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h" linenumber="541" fileDirectory="/misc/scratch/sp02-senior-design/augmented-reality-glasses/fpga_software/PL" functionName="operator unsigned long long"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="23" name="buf_V_addr" lineNumber="488" fileName="/misc/scratch/sp02-senior-design/augmented-reality-glasses/fpga_software/PL/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp" fileDirectory=".." coreId="928485776" contextFuncName="xfGaussianFilter3x3_0_460_640_1_0_4_2_2_12_160_s" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/misc/scratch/sp02-senior-design/augmented-reality-glasses/fpga_software/PL/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp" linenumber="488" fileDirectory="/misc/scratch/sp02-senior-design/augmented-reality-glasses/fpga_software/PL" functionName="xfGaussianFilter3x3&amp;lt;0, 460, 640, 1, 0, 4, 2, 2, 12, 160&amp;gt;"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>buf_V</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="24" name="buf_V_addr_write_ln488" lineNumber="488" fileName="/misc/scratch/sp02-senior-design/augmented-reality-glasses/fpga_software/PL/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp" fileDirectory=".." coreName="RAM_S2P_BRAM" implIndex="bram" control="no" opType="ram_s2p" coreId="97" contextFuncName="xfGaussianFilter3x3_0_460_640_1_0_4_2_2_12_160_s" opcode="store" m_display="0" m_delay="1.35" m_topoIndex="12" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/misc/scratch/sp02-senior-design/augmented-reality-glasses/fpga_software/PL/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp" linenumber="488" fileDirectory="/misc/scratch/sp02-senior-design/augmented-reality-glasses/fpga_software/PL" functionName="xfGaussianFilter3x3&amp;lt;0, 460, 640, 1, 0, 4, 2, 2, 12, 160&amp;gt;"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="25" name="img_gray_data48_read" lineNumber="542" fileName="/misc/scratch/sp02-senior-design/augmented-reality-glasses/fpga_software/PL/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp" fileDirectory=".." coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="read_2_nullptr_s" bitwidth="32" opcode="read" nodeLabel="1.0" m_display="0" m_delay="2.16" m_topoIndex="15" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/misc/scratch/sp02-senior-design/augmented-reality-glasses/fpga_software/PL/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp" linenumber="542" fileDirectory="/misc/scratch/sp02-senior-design/augmented-reality-glasses/fpga_software/PL" functionName="read&amp;lt;2, nullptr&amp;gt;"/>
+        <dataInputObjs>img_gray_data48</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="26" name="buf_V_1_addr" lineNumber="489" fileName="/misc/scratch/sp02-senior-design/augmented-reality-glasses/fpga_software/PL/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp" fileDirectory=".." coreId="926582048" contextFuncName="xfGaussianFilter3x3_0_460_640_1_0_4_2_2_12_160_s" bitwidth="8" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/misc/scratch/sp02-senior-design/augmented-reality-glasses/fpga_software/PL/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp" linenumber="489" fileDirectory="/misc/scratch/sp02-senior-design/augmented-reality-glasses/fpga_software/PL" functionName="xfGaussianFilter3x3&amp;lt;0, 460, 640, 1, 0, 4, 2, 2, 12, 160&amp;gt;"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>buf_V_1</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="27" name="buf_V_1_addr_write_ln489" lineNumber="489" fileName="/misc/scratch/sp02-senior-design/augmented-reality-glasses/fpga_software/PL/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp" fileDirectory=".." coreName="RAM_S2P_BRAM" implIndex="bram" control="no" opType="ram_s2p" coreId="97" contextFuncName="xfGaussianFilter3x3_0_460_640_1_0_4_2_2_12_160_s" opcode="store" nodeLabel="1.0" m_display="0" m_delay="1.35" m_topoIndex="17" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/misc/scratch/sp02-senior-design/augmented-reality-glasses/fpga_software/PL/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp" linenumber="489" fileDirectory="/misc/scratch/sp02-senior-design/augmented-reality-glasses/fpga_software/PL" functionName="xfGaussianFilter3x3&amp;lt;0, 460, 640, 1, 0, 4, 2, 2, 12, 160&amp;gt;"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="col_V_write_ln482" lineNumber="482" fileName="/misc/scratch/sp02-senior-design/augmented-reality-glasses/fpga_software/PL/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp" fileDirectory=".." coreId="3315914661" contextFuncName="xfGaussianFilter3x3_0_460_640_1_0_4_2_2_12_160_s" opcode="store" m_display="0" m_delay="0.48" m_topoIndex="13" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/misc/scratch/sp02-senior-design/augmented-reality-glasses/fpga_software/PL/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp" linenumber="482" fileDirectory="/misc/scratch/sp02-senior-design/augmented-reality-glasses/fpga_software/PL" functionName="xfGaussianFilter3x3&amp;lt;0, 460, 640, 1, 0, 4, 2, 2, 12, 160&amp;gt;"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="29" name="br_ln482" lineNumber="482" fileName="/misc/scratch/sp02-senior-design/augmented-reality-glasses/fpga_software/PL/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp" fileDirectory=".." coreId="927805328" contextFuncName="xfGaussianFilter3x3_0_460_640_1_0_4_2_2_12_160_s" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/misc/scratch/sp02-senior-design/augmented-reality-glasses/fpga_software/PL/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp" linenumber="482" fileDirectory="/misc/scratch/sp02-senior-design/augmented-reality-glasses/fpga_software/PL" functionName="xfGaussianFilter3x3&amp;lt;0, 460, 640, 1, 0, 4, 2, 2, 12, 160&amp;gt;"/>
+        <controlInputObjs>for.inc</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="/misc/scratch/sp02-senior-design/augmented-reality-glasses/fpga_software/PL/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp">
+        <validLinenumbers>488</validLinenumbers>
+        <validLinenumbers>489</validLinenumbers>
+        <validLinenumbers>482</validLinenumbers>
+      </fileValidLineNumbers>
+      <fileValidLineNumbers fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h">
+        <validLinenumbers>541</validLinenumbers>
+      </fileValidLineNumbers>
+      <fileValidLineNumbers fileName="/misc/scratch/sp02-senior-design/augmented-reality-glasses/fpga_software/PL/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp">
+        <validLinenumbers>542</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <regnodes realName="zext_ln541_reg_144">
+    <nodeIds>22</nodeIds>
+  </regnodes>
+  <regnodes realName="col_V_reg_134">
+    <nodeIds>5</nodeIds>
+  </regnodes>
+  <expressionNodes realName="buf_V_1_addr_gep_fu_82">
+    <nodeIds>26</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="col_V_fu_48">
+    <nodeIds>5</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="col_V_4_fu_118">
+    <nodeIds>16</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln541_fu_124">
+    <nodeIds>22</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln1027_fu_112">
+    <nodeIds>15</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln1027_fu_108">
+    <nodeIds>14</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="buf_V_addr_gep_fu_64">
+    <nodeIds>23</nodeIds>
+  </expressionNodes>
+  <ioNodes realName="img_gray_data48_read_read_fu_58">
+    <nodeIds>25</nodeIds>
+  </ioNodes>
+  <ioNodes realName="img_width_read_read_fu_52">
+    <nodeIds>9</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln482_store_fu_129">
+    <nodeIds>28</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln0_store_fu_100">
+    <nodeIds>10</nodeIds>
+  </ioNodes>
+  <ioNodes realName="col_V_3_load_fu_105">
+    <nodeIds>13</nodeIds>
+  </ioNodes>
+  <memoryPorts dataString="buf_V" portID="1">
+    <nodeIds>24</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="buf_V_1" portID="1">
+    <nodeIds>27</nodeIds>
+  </memoryPorts>
+  <ioPorts name="buf_V(p1)">
+    <contents name="store">
+      <nodeIds>24</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="buf_V_1(p1)">
+    <contents name="store">
+      <nodeIds>27</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="img_gray_data48">
+    <contents name="read">
+      <nodeIds>25</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="img_width">
+    <contents name="read">
+      <nodeIds>9</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="5" stage="1" latency="1"/>
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="xfGaussianFilter3x3_0_460_640_1_0_4_2_2_12_160_Pipeline_Clear_Row_Loop" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="162" mMaxLatency="162">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>4</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>12</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="Clear_Row_Loop" mII="1" mDepth="2" mMinTripCount="160" mMaxTripCount="160" mMinLatency="160" mMaxLatency="160" mType="1">
+      <basicBlocks>18</basicBlocks>
+      <basicBlocks>30</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>32</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>
