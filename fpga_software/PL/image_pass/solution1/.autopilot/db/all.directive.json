@@ -1,0 +1,18 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [{
+          "functionName": "image_passthrough",
+          "label": "",
+          "functionLabel": "",
+          "id": "1",
+          "sourceFile": "\/home\/ecelrc\/students\/gwl459\/workspace\/augmented-reality-glasses\/fpga_software\/PL\/image_pass\/solution1\/csynth.tcl",
+          "sourceLine": "14",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "image_passthrough"
+              }]
+          }
+        }]
+    }]}
