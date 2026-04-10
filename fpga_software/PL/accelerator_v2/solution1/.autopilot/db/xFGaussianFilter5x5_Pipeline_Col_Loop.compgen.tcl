@@ -1,6 +1,6 @@
 # This script segment is generated automatically by AutoPilot
 
-set id 153
+set id 116
 set name accelerator_v2_mux_53_8_1_1
 set corename simcore_mux
 set op mux
@@ -66,7 +66,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 169 \
+    id 129 \
     name buf_V_4 \
     reset_level 1 \
     sync_rst true \
@@ -85,7 +85,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 170 \
+    id 130 \
     name buf_V_3 \
     reset_level 1 \
     sync_rst true \
@@ -104,7 +104,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 171 \
+    id 131 \
     name buf_V_2 \
     reset_level 1 \
     sync_rst true \
@@ -123,7 +123,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 172 \
+    id 132 \
     name buf_V_1 \
     reset_level 1 \
     sync_rst true \
@@ -142,7 +142,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 173 \
+    id 133 \
     name buf_V \
     reset_level 1 \
     sync_rst true \
@@ -160,7 +160,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 159 \
+    id 122 \
     name tp1_V_cast \
     type other \
     dir I \
@@ -175,7 +175,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 160 \
+    id 123 \
     name tp2_V_cast \
     type other \
     dir I \
@@ -190,7 +190,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 161 \
+    id 124 \
     name mid_V_cast \
     type other \
     dir I \
@@ -205,7 +205,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 162 \
+    id 125 \
     name bottom1_V_cast \
     type other \
     dir I \
@@ -220,7 +220,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 163 \
+    id 126 \
     name bottom2_V_cast \
     type other \
     dir I \
@@ -235,52 +235,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 164 \
-    name p_read \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_p_read \
-    op interface \
-    ports { p_read { I 8 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 165 \
-    name p_read1 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_p_read1 \
-    op interface \
-    ports { p_read1 { I 8 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 166 \
-    name p_read2 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_p_read2 \
-    op interface \
-    ports { p_read2 { I 8 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 167 \
+    id 127 \
     name gray_mat_data44 \
     type fifo \
     dir I \
@@ -288,14 +243,14 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_gray_mat_data44 \
     op interface \
-    ports { gray_mat_data44_dout { I 8 vector } gray_mat_data44_num_data_valid { I 20 vector } gray_mat_data44_fifo_cap { I 20 vector } gray_mat_data44_empty_n { I 1 bit } gray_mat_data44_read { O 1 bit } } \
+    ports { gray_mat_data44_dout { I 8 vector } gray_mat_data44_num_data_valid { I 13 vector } gray_mat_data44_fifo_cap { I 13 vector } gray_mat_data44_empty_n { I 1 bit } gray_mat_data44_read { O 1 bit } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 168 \
+    id 128 \
     name row_ind_V_cast \
     type other \
     dir I \
@@ -310,7 +265,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 174 \
+    id 134 \
     name cmp_i_i380_i \
     type other \
     dir I \
@@ -325,7 +280,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 175 \
+    id 135 \
     name blurred_mat_data45 \
     type fifo \
     dir O \
@@ -333,14 +288,14 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_blurred_mat_data45 \
     op interface \
-    ports { blurred_mat_data45_din { O 8 vector } blurred_mat_data45_num_data_valid { I 20 vector } blurred_mat_data45_fifo_cap { I 20 vector } blurred_mat_data45_full_n { I 1 bit } blurred_mat_data45_write { O 1 bit } } \
+    ports { blurred_mat_data45_din { O 8 vector } blurred_mat_data45_num_data_valid { I 13 vector } blurred_mat_data45_fifo_cap { I 13 vector } blurred_mat_data45_full_n { I 1 bit } blurred_mat_data45_write { O 1 bit } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 176 \
+    id 136 \
     name src_buf5_V_2_out \
     type other \
     dir O \
@@ -355,7 +310,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 177 \
+    id 137 \
     name src_buf5_V_1_out \
     type other \
     dir O \
@@ -370,7 +325,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 178 \
+    id 138 \
     name src_buf5_V_out \
     type other \
     dir O \
@@ -385,7 +340,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 179 \
+    id 139 \
     name src_buf5_V_0_out \
     type other \
     dir O \
@@ -400,7 +355,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 180 \
+    id 140 \
     name src_buf4_V_2_out \
     type other \
     dir O \
@@ -415,7 +370,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 181 \
+    id 141 \
     name src_buf4_V_1_out \
     type other \
     dir O \
@@ -430,7 +385,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 182 \
+    id 142 \
     name src_buf4_V_out \
     type other \
     dir O \
@@ -445,7 +400,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 183 \
+    id 143 \
     name src_buf4_V_0_out \
     type other \
     dir O \
@@ -460,7 +415,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 184 \
+    id 144 \
     name src_buf3_V_2_out \
     type other \
     dir O \
@@ -475,7 +430,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 185 \
+    id 145 \
     name src_buf3_V_1_out \
     type other \
     dir O \
@@ -490,7 +445,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 186 \
+    id 146 \
     name src_buf3_V_out \
     type other \
     dir O \
@@ -505,7 +460,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 187 \
+    id 147 \
     name src_buf3_V_0_out \
     type other \
     dir O \
@@ -520,7 +475,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 188 \
+    id 148 \
     name src_buf2_V_2_out \
     type other \
     dir O \
@@ -535,7 +490,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 189 \
+    id 149 \
     name src_buf2_V_1_out \
     type other \
     dir O \
@@ -550,7 +505,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 190 \
+    id 150 \
     name src_buf2_V_out \
     type other \
     dir O \
@@ -565,7 +520,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 191 \
+    id 151 \
     name src_buf2_V_0_out \
     type other \
     dir O \
@@ -580,7 +535,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 192 \
+    id 152 \
     name src_buf1_V_2_out \
     type other \
     dir O \
@@ -595,7 +550,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 193 \
+    id 153 \
     name src_buf1_V_1_out \
     type other \
     dir O \
@@ -610,7 +565,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 194 \
+    id 154 \
     name src_buf1_V_out \
     type other \
     dir O \
@@ -625,7 +580,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 195 \
+    id 155 \
     name src_buf1_V_0_out \
     type other \
     dir O \

@@ -16,7 +16,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 255 \
+    id 205 \
     name out_stream_V_data_V \
     reset_level 1 \
     sync_rst true \
@@ -35,7 +35,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 256 \
+    id 206 \
     name out_stream_V_keep_V \
     reset_level 1 \
     sync_rst true \
@@ -54,7 +54,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 257 \
+    id 207 \
     name out_stream_V_strb_V \
     reset_level 1 \
     sync_rst true \
@@ -73,7 +73,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 258 \
+    id 208 \
     name out_stream_V_user_V \
     reset_level 1 \
     sync_rst true \
@@ -92,7 +92,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 259 \
+    id 209 \
     name out_stream_V_last_V \
     reset_level 1 \
     sync_rst true \
@@ -111,7 +111,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 260 \
+    id 210 \
     name out_stream_V_id_V \
     reset_level 1 \
     sync_rst true \
@@ -130,7 +130,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 261 \
+    id 211 \
     name out_stream_V_dest_V \
     reset_level 1 \
     sync_rst true \
@@ -148,7 +148,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 253 \
+    id 203 \
     name gray_stream3 \
     type fifo \
     dir I \
@@ -156,14 +156,14 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_gray_stream3 \
     op interface \
-    ports { gray_stream3_dout { I 8 vector } gray_stream3_num_data_valid { I 20 vector } gray_stream3_fifo_cap { I 20 vector } gray_stream3_empty_n { I 1 bit } gray_stream3_read { O 1 bit } } \
+    ports { gray_stream3_dout { I 8 vector } gray_stream3_num_data_valid { I 13 vector } gray_stream3_fifo_cap { I 13 vector } gray_stream3_empty_n { I 1 bit } gray_stream3_read { O 1 bit } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 254 \
+    id 204 \
     name hdr_stream4 \
     type fifo \
     dir I \
@@ -171,7 +171,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_hdr_stream4 \
     op interface \
-    ports { hdr_stream4_dout { I 8 vector } hdr_stream4_num_data_valid { I 17 vector } hdr_stream4_fifo_cap { I 17 vector } hdr_stream4_empty_n { I 1 bit } hdr_stream4_read { O 1 bit } } \
+    ports { hdr_stream4_dout { I 8 vector } hdr_stream4_num_data_valid { I 10 vector } hdr_stream4_fifo_cap { I 10 vector } hdr_stream4_empty_n { I 1 bit } hdr_stream4_read { O 1 bit } } \
 } "
 }
 
@@ -240,7 +240,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 
 
 # RegSlice definition:
-set ID 262
+set ID 212
 set RegSliceName accelerator_v2_regslice_both
 set RegSliceInstName accelerator_v2_regslice_both_U
 set CoreName ap_simcore_accelerator_v2_regslice_both
@@ -263,7 +263,7 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check you
 
 
 # RegSlice definition:
-set ID 263
+set ID 213
 set RegSliceName accelerator_v2_regslice_both
 set RegSliceInstName accelerator_v2_regslice_both_U
 set CoreName ap_simcore_accelerator_v2_regslice_both
@@ -286,7 +286,7 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check you
 
 
 # RegSlice definition:
-set ID 264
+set ID 214
 set RegSliceName accelerator_v2_regslice_both
 set RegSliceInstName accelerator_v2_regslice_both_U
 set CoreName ap_simcore_accelerator_v2_regslice_both
@@ -309,7 +309,7 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check you
 
 
 # RegSlice definition:
-set ID 265
+set ID 215
 set RegSliceName accelerator_v2_regslice_both
 set RegSliceInstName accelerator_v2_regslice_both_U
 set CoreName ap_simcore_accelerator_v2_regslice_both
@@ -332,7 +332,7 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check you
 
 
 # RegSlice definition:
-set ID 266
+set ID 216
 set RegSliceName accelerator_v2_regslice_both
 set RegSliceInstName accelerator_v2_regslice_both_U
 set CoreName ap_simcore_accelerator_v2_regslice_both
@@ -355,7 +355,7 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check you
 
 
 # RegSlice definition:
-set ID 267
+set ID 217
 set RegSliceName accelerator_v2_regslice_both
 set RegSliceInstName accelerator_v2_regslice_both_U
 set CoreName ap_simcore_accelerator_v2_regslice_both
@@ -378,7 +378,7 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check you
 
 
 # RegSlice definition:
-set ID 268
+set ID 218
 set RegSliceName accelerator_v2_regslice_both
 set RegSliceInstName accelerator_v2_regslice_both_U
 set CoreName ap_simcore_accelerator_v2_regslice_both

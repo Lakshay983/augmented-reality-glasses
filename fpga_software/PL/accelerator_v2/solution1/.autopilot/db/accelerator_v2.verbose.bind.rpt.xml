@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'accelerator_v2'" level="0">
-<item name = "Date">Thu Apr  9 16:57:14 2026
+<item name = "Date">Fri Apr 10 15:48:23 2026
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">accelerator_v2</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 6.919 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 5.886 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -31,13 +31,13 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="call_ln0_Block_entry1_proc_fu_126">Block_entry1_proc, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
-<column name="grp_unpack_fu_131">unpack, 368642, 368642, 3.686 ms, 3.686 ms, 368642, 368642, no</column>
-<column name="grp_pad_fu_154">pad, 317003, 625643, 3.170 ms, 6.256 ms, 317003, 625643, no</column>
-<column name="grp_process_pixels_fu_160">process_pixels, 325757, 325757, 3.258 ms, 3.258 ms, 325758, 325758, dataflow</column>
-<column name="grp_repack_fu_166">repack, 314602, 401238, 3.146 ms, 4.012 ms, 314602, 401238, no</column>
-<column name="call_ln0_Block_entry14_proc_fu_186">Block_entry14_proc, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
-<column name="call_ln0_Block_entry110_proc_fu_193">Block_entry110_proc, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
+<column name="call_ln0_Block_entry1_proc_fu_128">Block_entry1_proc, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
+<column name="grp_unpack_fu_133">unpack, 368642, 368642, 3.686 ms, 3.686 ms, 368642, 368642, no</column>
+<column name="grp_pad_fu_156">pad, 317003, 625643, 3.170 ms, 6.256 ms, 317003, 625643, no</column>
+<column name="grp_process_pixels_fu_162">process_pixels, 323650, 323650, 3.236 ms, 3.236 ms, 323644, 323644, dataflow</column>
+<column name="grp_repack_fu_168">repack, 315086, 401238, 3.151 ms, 4.012 ms, 315086, 401238, no</column>
+<column name="call_ln0_Block_entry14_proc_fu_188">Block_entry14_proc, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
+<column name="call_ln0_Block_entry110_proc_fu_195">Block_entry110_proc, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

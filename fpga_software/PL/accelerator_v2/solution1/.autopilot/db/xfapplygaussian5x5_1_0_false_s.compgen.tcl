@@ -1,131 +1,7 @@
 # This script segment is generated automatically by AutoPilot
 
-set name accelerator_v2_mul_8ns_8ns_16_1_0
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 0 ALLOW_PRAGMA 1
-}
-
-
-set id 106
-set name accelerator_v2_am_addmul_8ns_8ns_8ns_17_4_0
-set corename simcore_am
-set op am
-set stage_num 4
-set clk_width 1
-set clk_signed 0
-set reset_width 1
-set reset_signed 0
-set in0_width 8
-set in0_signed 0
-set in1_width 8
-set in1_signed 0
-set in2_width 8
-set in2_signed 0
-set ce_width 1
-set ce_signed 0
-set out_width 17
-set arg_lists {i0 {8 0 +} i1 {8 0 +} s {9 0 +} i2 {8 0 +} p {17 0 +} c_expval {c} acc {0} }
-set TrueReset 0
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {all} IMPL {dsp48} LATENCY 3 ALLOW_PRAGMA 1
-}
-
-
-set op am
-set corename DSP48
-if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
-if {[info proc ::AESL_LIB_VIRTEX::xil_gen_dsp48] == "::AESL_LIB_VIRTEX::xil_gen_dsp48"} {
-eval "::AESL_LIB_VIRTEX::xil_gen_dsp48 { \
-    id ${id} \
-    name ${name} \
-    corename ${corename} \
-    op ${op} \
-    reset_level 1 \
-    sync_rst true \
-    true_reset ${TrueReset} \
-    stage_num ${stage_num} \
-    clk_width ${clk_width} \
-    clk_signed ${clk_signed} \
-    reset_width ${reset_width} \
-    reset_signed ${reset_signed} \
-    in0_width ${in0_width} \
-    in0_signed ${in0_signed} \
-    in1_width ${in1_width} \
-    in1_signed ${in1_signed} \
-    in2_width ${in2_width} \
-    in2_signed ${in2_signed} \
-    ce_width ${ce_width} \
-    ce_signed ${ce_signed} \
-    out_width ${out_width} \
-    arg_lists {${arg_lists}} \
-}"
-} else {
-puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your platform lib"
-}
-}
-
-
-set id 107
-set name accelerator_v2_am_addmul_9ns_9ns_8ns_18_4_0
-set corename simcore_am
-set op am
-set stage_num 4
-set clk_width 1
-set clk_signed 0
-set reset_width 1
-set reset_signed 0
-set in0_width 9
-set in0_signed 0
-set in1_width 9
-set in1_signed 0
-set in2_width 8
-set in2_signed 0
-set ce_width 1
-set ce_signed 0
-set out_width 18
-set arg_lists {i0 {9 0 +} i1 {9 0 +} s {10 0 +} i2 {8 0 +} p {18 0 +} c_expval {c} acc {0} }
-set TrueReset 0
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {all} IMPL {dsp48} LATENCY 3 ALLOW_PRAGMA 1
-}
-
-
-set op am
-set corename DSP48
-if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
-if {[info proc ::AESL_LIB_VIRTEX::xil_gen_dsp48] == "::AESL_LIB_VIRTEX::xil_gen_dsp48"} {
-eval "::AESL_LIB_VIRTEX::xil_gen_dsp48 { \
-    id ${id} \
-    name ${name} \
-    corename ${corename} \
-    op ${op} \
-    reset_level 1 \
-    sync_rst true \
-    true_reset ${TrueReset} \
-    stage_num ${stage_num} \
-    clk_width ${clk_width} \
-    clk_signed ${clk_signed} \
-    reset_width ${reset_width} \
-    reset_signed ${reset_signed} \
-    in0_width ${in0_width} \
-    in0_signed ${in0_signed} \
-    in1_width ${in1_width} \
-    in1_signed ${in1_signed} \
-    in2_width ${in2_width} \
-    in2_signed ${in2_signed} \
-    ce_width ${ce_width} \
-    ce_signed ${ce_signed} \
-    out_width ${out_width} \
-    arg_lists {${arg_lists}} \
-}"
-} else {
-puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your platform lib"
-}
-}
-
-
-set id 109
-set name accelerator_v2_ama_addmuladd_8ns_8ns_8ns_17ns_18_4_0
+set id 84
+set name accelerator_v2_ama_addmuladd_8ns_8ns_7ns_18s_19_4_0
 set corename simcore_ama
 set op ama
 set stage_num 4
@@ -137,77 +13,14 @@ set in0_width 8
 set in0_signed 0
 set in1_width 8
 set in1_signed 0
-set in2_width 8
-set in2_signed 0
-set in3_width 17
-set in3_signed 0
-set ce_width 1
-set ce_signed 0
-set out_width 18
-set arg_lists {i0 {8 0 +} i1 {8 0 +} s {9 0 +} i2 {8 0 +} m {17 0 +} i3 {17 0 +} p {18 0 +} c_expval {c} c_reg {1} rnd {0} acc {0} }
-set TrueReset 0
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {all} IMPL {dsp48} LATENCY 3 ALLOW_PRAGMA 1
-}
-
-
-set op ama
-set corename DSP48
-if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
-if {[info proc ::AESL_LIB_VIRTEX::xil_gen_dsp48] == "::AESL_LIB_VIRTEX::xil_gen_dsp48"} {
-eval "::AESL_LIB_VIRTEX::xil_gen_dsp48 { \
-    id ${id} \
-    name ${name} \
-    corename ${corename} \
-    op ${op} \
-    reset_level 1 \
-    sync_rst true \
-    true_reset ${TrueReset} \
-    stage_num ${stage_num} \
-    clk_width ${clk_width} \
-    clk_signed ${clk_signed} \
-    reset_width ${reset_width} \
-    reset_signed ${reset_signed} \
-    in0_width ${in0_width} \
-    in0_signed ${in0_signed} \
-    in1_width ${in1_width} \
-    in1_signed ${in1_signed} \
-    in2_width ${in2_width} \
-    in2_signed ${in2_signed} \
-    in3_width ${in3_width} \
-    in3_signed ${in3_signed} \
-    ce_width ${ce_width} \
-    ce_signed ${ce_signed} \
-    out_width ${out_width} \
-    arg_lists {${arg_lists}} \
-}"
-} else {
-puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your platform lib"
-}
-}
-
-
-set id 110
-set name accelerator_v2_ama_addmuladd_9ns_9ns_8ns_18ns_19_4_0
-set corename simcore_ama
-set op ama
-set stage_num 4
-set clk_width 1
-set clk_signed 0
-set reset_width 1
-set reset_signed 0
-set in0_width 9
-set in0_signed 0
-set in1_width 9
-set in1_signed 0
-set in2_width 8
+set in2_width 7
 set in2_signed 0
 set in3_width 18
-set in3_signed 0
+set in3_signed 1
 set ce_width 1
 set ce_signed 0
 set out_width 19
-set arg_lists {i0 {9 0 +} i1 {9 0 +} s {10 0 +} i2 {8 0 +} m {18 0 +} i3 {18 0 +} p {19 0 +} c_expval {c} c_reg {1} rnd {0} acc {0} }
+set arg_lists {i0 {8 0 +} i1 {8 0 +} s {9 0 +} i2 {7 0 +} m {16 0 +} i3 {18 1 +} p {19 1 +} c_expval {c} c_reg {1} rnd {0} acc {0} }
 set TrueReset 0
 if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {all} IMPL {dsp48} LATENCY 3 ALLOW_PRAGMA 1
@@ -250,32 +63,32 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your p
 }
 
 
-set id 114
-set name accelerator_v2_am_addmul_19ns_17ns_8ns_28_4_0
-set corename simcore_am
-set op am
+set id 86
+set name accelerator_v2_mac_muladd_8ns_7ns_17s_18_4_0
+set corename simcore_mac
+set op mac
 set stage_num 4
 set clk_width 1
 set clk_signed 0
 set reset_width 1
 set reset_signed 0
-set in0_width 19
+set in0_width 8
 set in0_signed 0
-set in1_width 17
+set in1_width 7
 set in1_signed 0
-set in2_width 8
-set in2_signed 0
+set in2_width 17
+set in2_signed 1
 set ce_width 1
 set ce_signed 0
-set out_width 28
-set arg_lists {i0 {19 0 +} i1 {17 0 +} s {20 0 +} i2 {8 0 +} p {28 1 +} c_expval {c} acc {0} }
+set out_width 18
+set arg_lists {i0 {8 0 +} i1 {7 0 +} m {15 0 +} i2 {17 1 +} p {18 1 +} c_reg {1} rnd {0} acc {0} }
 set TrueReset 0
 if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {all} IMPL {dsp48} LATENCY 3 ALLOW_PRAGMA 1
 }
 
 
-set op am
+set op mac
 set corename DSP48
 if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
 if {[info proc ::AESL_LIB_VIRTEX::xil_gen_dsp48] == "::AESL_LIB_VIRTEX::xil_gen_dsp48"} {
@@ -309,34 +122,32 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your p
 }
 
 
-set id 115
-set name accelerator_v2_ama_addmuladd_19ns_17ns_8ns_16ns_28_4_0
-set corename simcore_ama
-set op ama
+set id 87
+set name accelerator_v2_mac_muladd_24ns_7ns_30s_32_4_0
+set corename simcore_mac
+set op mac
 set stage_num 4
 set clk_width 1
 set clk_signed 0
 set reset_width 1
 set reset_signed 0
-set in0_width 19
+set in0_width 24
 set in0_signed 0
-set in1_width 17
+set in1_width 7
 set in1_signed 0
-set in2_width 8
-set in2_signed 0
-set in3_width 16
-set in3_signed 0
+set in2_width 30
+set in2_signed 1
 set ce_width 1
 set ce_signed 0
-set out_width 28
-set arg_lists {i0 {19 0 +} i1 {17 0 +} s {20 0 +} i2 {8 0 +} m {28 1 +} i3 {16 0 +} p {28 0 +} c_expval {c} c_reg {1} rnd {0} acc {0} }
+set out_width 32
+set arg_lists {i0 {24 0 +} i1 {7 0 +} m {31 0 +} i2 {30 1 +} p {32 1 +} c_reg {1} rnd {0} acc {0} }
 set TrueReset 0
 if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {all} IMPL {dsp48} LATENCY 3 ALLOW_PRAGMA 1
 }
 
 
-set op ama
+set op mac
 set corename DSP48
 if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
 if {[info proc ::AESL_LIB_VIRTEX::xil_gen_dsp48] == "::AESL_LIB_VIRTEX::xil_gen_dsp48"} {
@@ -359,71 +170,6 @@ eval "::AESL_LIB_VIRTEX::xil_gen_dsp48 { \
     in1_signed ${in1_signed} \
     in2_width ${in2_width} \
     in2_signed ${in2_signed} \
-    in3_width ${in3_width} \
-    in3_signed ${in3_signed} \
-    ce_width ${ce_width} \
-    ce_signed ${ce_signed} \
-    out_width ${out_width} \
-    arg_lists {${arg_lists}} \
-}"
-} else {
-puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your platform lib"
-}
-}
-
-
-set id 116
-set name accelerator_v2_ama_addmuladd_18ns_16ns_8ns_28ns_28_4_0
-set corename simcore_ama
-set op ama
-set stage_num 4
-set clk_width 1
-set clk_signed 0
-set reset_width 1
-set reset_signed 0
-set in0_width 18
-set in0_signed 0
-set in1_width 16
-set in1_signed 0
-set in2_width 8
-set in2_signed 0
-set in3_width 28
-set in3_signed 0
-set ce_width 1
-set ce_signed 0
-set out_width 28
-set arg_lists {i0 {18 0 +} i1 {16 0 +} s {19 0 +} i2 {8 0 +} m {27 0 +} i3 {28 0 +} p {28 0 +} c_expval {c} c_reg {1} rnd {0} acc {0} }
-set TrueReset 0
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {all} IMPL {dsp48} LATENCY 3 ALLOW_PRAGMA 1
-}
-
-
-set op ama
-set corename DSP48
-if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
-if {[info proc ::AESL_LIB_VIRTEX::xil_gen_dsp48] == "::AESL_LIB_VIRTEX::xil_gen_dsp48"} {
-eval "::AESL_LIB_VIRTEX::xil_gen_dsp48 { \
-    id ${id} \
-    name ${name} \
-    corename ${corename} \
-    op ${op} \
-    reset_level 1 \
-    sync_rst true \
-    true_reset ${TrueReset} \
-    stage_num ${stage_num} \
-    clk_width ${clk_width} \
-    clk_signed ${clk_signed} \
-    reset_width ${reset_width} \
-    reset_signed ${reset_signed} \
-    in0_width ${in0_width} \
-    in0_signed ${in0_signed} \
-    in1_width ${in1_width} \
-    in1_signed ${in1_signed} \
-    in2_width ${in2_width} \
-    in2_signed ${in2_signed} \
-    in3_width ${in3_width} \
-    in3_signed ${in3_signed} \
     ce_width ${ce_width} \
     ce_signed ${ce_signed} \
     out_width ${out_width} \
@@ -445,7 +191,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 125 \
+    id 91 \
     name src_buf1_V_read \
     type other \
     dir I \
@@ -460,7 +206,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 126 \
+    id 92 \
     name src_buf1_V_read_5 \
     type other \
     dir I \
@@ -475,7 +221,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 127 \
+    id 93 \
     name src_buf1_V_read_6 \
     type other \
     dir I \
@@ -490,7 +236,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 128 \
+    id 94 \
     name src_buf1_V_read_7 \
     type other \
     dir I \
@@ -505,7 +251,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 129 \
+    id 95 \
     name src_buf1_V_read_8 \
     type other \
     dir I \
@@ -520,7 +266,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 130 \
+    id 96 \
     name src_buf2_V_read \
     type other \
     dir I \
@@ -535,7 +281,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 131 \
+    id 97 \
     name src_buf2_V_read_5 \
     type other \
     dir I \
@@ -550,7 +296,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 132 \
+    id 98 \
     name src_buf2_V_read_6 \
     type other \
     dir I \
@@ -565,7 +311,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 133 \
+    id 99 \
     name src_buf2_V_read_7 \
     type other \
     dir I \
@@ -580,7 +326,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 134 \
+    id 100 \
     name src_buf2_V_read_8 \
     type other \
     dir I \
@@ -595,7 +341,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 135 \
+    id 101 \
     name src_buf3_V_read \
     type other \
     dir I \
@@ -610,7 +356,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 136 \
+    id 102 \
     name src_buf3_V_read_5 \
     type other \
     dir I \
@@ -625,7 +371,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 137 \
+    id 103 \
     name src_buf3_V_read_6 \
     type other \
     dir I \
@@ -640,7 +386,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 138 \
+    id 104 \
     name src_buf3_V_read_7 \
     type other \
     dir I \
@@ -655,7 +401,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 139 \
+    id 105 \
     name src_buf3_V_read_8 \
     type other \
     dir I \
@@ -670,7 +416,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 140 \
+    id 106 \
     name src_buf4_V_read \
     type other \
     dir I \
@@ -685,7 +431,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 141 \
+    id 107 \
     name src_buf4_V_read_5 \
     type other \
     dir I \
@@ -700,7 +446,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 142 \
+    id 108 \
     name src_buf4_V_read_6 \
     type other \
     dir I \
@@ -715,7 +461,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 143 \
+    id 109 \
     name src_buf4_V_read_7 \
     type other \
     dir I \
@@ -730,7 +476,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 144 \
+    id 110 \
     name src_buf4_V_read_8 \
     type other \
     dir I \
@@ -745,7 +491,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 145 \
+    id 111 \
     name src_buf5_V_read \
     type other \
     dir I \
@@ -760,7 +506,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 146 \
+    id 112 \
     name src_buf5_V_read_5 \
     type other \
     dir I \
@@ -775,7 +521,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 147 \
+    id 113 \
     name src_buf5_V_read_6 \
     type other \
     dir I \
@@ -790,7 +536,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 148 \
+    id 114 \
     name src_buf5_V_read_7 \
     type other \
     dir I \
@@ -805,7 +551,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 149 \
+    id 115 \
     name src_buf5_V_read_8 \
     type other \
     dir I \
@@ -814,51 +560,6 @@ eval "cg_default_interface_gen_dc { \
     corename dc_src_buf5_V_read_8 \
     op interface \
     ports { src_buf5_V_read_8 { I 8 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 150 \
-    name weights_read \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_weights_read \
-    op interface \
-    ports { weights_read { I 8 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 151 \
-    name weights_read_3 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_weights_read_3 \
-    op interface \
-    ports { weights_read_3 { I 8 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 152 \
-    name weights_read_4 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_weights_read_4 \
-    op interface \
-    ports { weights_read_4 { I 8 vector } } \
 } "
 }
 

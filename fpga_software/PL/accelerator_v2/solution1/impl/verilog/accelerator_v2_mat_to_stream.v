@@ -37,13 +37,13 @@ input   ap_continue;
 output   ap_idle;
 output   ap_ready;
 input  [7:0] blurred_mat_data45_dout;
-input  [19:0] blurred_mat_data45_num_data_valid;
-input  [19:0] blurred_mat_data45_fifo_cap;
+input  [12:0] blurred_mat_data45_num_data_valid;
+input  [12:0] blurred_mat_data45_fifo_cap;
 input   blurred_mat_data45_empty_n;
 output   blurred_mat_data45_read;
 output  [7:0] gray_stream3_din;
-input  [19:0] gray_stream3_num_data_valid;
-input  [19:0] gray_stream3_fifo_cap;
+input  [12:0] gray_stream3_num_data_valid;
+input  [12:0] gray_stream3_fifo_cap;
 input   gray_stream3_full_n;
 output   gray_stream3_write;
 

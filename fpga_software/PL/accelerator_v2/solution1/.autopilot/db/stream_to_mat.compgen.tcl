@@ -18,7 +18,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_padded_stream2 \
     op interface \
-    ports { padded_stream2_dout { I 24 vector } padded_stream2_num_data_valid { I 20 vector } padded_stream2_fifo_cap { I 20 vector } padded_stream2_empty_n { I 1 bit } padded_stream2_read { O 1 bit } } \
+    ports { padded_stream2_dout { I 24 vector } padded_stream2_num_data_valid { I 12 vector } padded_stream2_fifo_cap { I 12 vector } padded_stream2_empty_n { I 1 bit } padded_stream2_read { O 1 bit } } \
 } "
 }
 
@@ -33,7 +33,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_bgr_mat_data43 \
     op interface \
-    ports { bgr_mat_data43_din { O 24 vector } bgr_mat_data43_num_data_valid { I 20 vector } bgr_mat_data43_fifo_cap { I 20 vector } bgr_mat_data43_full_n { I 1 bit } bgr_mat_data43_write { O 1 bit } } \
+    ports { bgr_mat_data43_din { O 24 vector } bgr_mat_data43_num_data_valid { I 13 vector } bgr_mat_data43_fifo_cap { I 13 vector } bgr_mat_data43_full_n { I 1 bit } bgr_mat_data43_write { O 1 bit } } \
 } "
 }
 

@@ -1,27 +1,27 @@
 # This script segment is generated automatically by AutoPilot
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler accelerator_v2_fifo_w24_d311696_A BINDTYPE {storage} TYPE {fifo} IMPL {memory} ALLOW_PRAGMA 1 INSTNAME {bgr_mat_data_U}
+	::AP::rtl_comp_handler accelerator_v2_fifo_w24_d3872_A BINDTYPE {storage} TYPE {fifo} IMPL {memory} ALLOW_PRAGMA 1 INSTNAME {bgr_mat_data_U}
 }
 
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler accelerator_v2_fifo_w8_d311696_A BINDTYPE {storage} TYPE {fifo} IMPL {memory} ALLOW_PRAGMA 1 INSTNAME {gray_mat_data_U}
+	::AP::rtl_comp_handler accelerator_v2_fifo_w8_d3872_A BINDTYPE {storage} TYPE {fifo} IMPL {memory} ALLOW_PRAGMA 1 INSTNAME {gray_mat_data_U}
 }
 
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler accelerator_v2_fifo_w8_d311696_A BINDTYPE {storage} TYPE {fifo} IMPL {memory} ALLOW_PRAGMA 1 INSTNAME {blurred_mat_data_U}
+	::AP::rtl_comp_handler accelerator_v2_fifo_w8_d3872_A BINDTYPE {storage} TYPE {fifo} IMPL {memory} ALLOW_PRAGMA 1 INSTNAME {blurred_mat_data_U}
 }
 
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler accelerator_v2_start_for_bgr2gray_9_0_484_644_1_311696_311696_U0 BINDTYPE {storage} TYPE {fifo} IMPL {srl} ALLOW_PRAGMA 1 INSTNAME {start_for_bgr2gray_9_0_484_644_1_311696_311696_U0_U}
+	::AP::rtl_comp_handler accelerator_v2_start_for_bgr2gray_9_0_484_644_1_3872_3872_U0 BINDTYPE {storage} TYPE {fifo} IMPL {srl} ALLOW_PRAGMA 1 INSTNAME {start_for_bgr2gray_9_0_484_644_1_3872_3872_U0_U}
 }
 
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler accelerator_v2_start_for_GaussianBlur_5_1_0_484_644_1_311696_311696_U0 BINDTYPE {storage} TYPE {fifo} IMPL {srl} ALLOW_PRAGMA 1 INSTNAME {start_for_GaussianBlur_5_1_0_484_644_1_311696_311696_U0_U}
+	::AP::rtl_comp_handler accelerator_v2_start_for_GaussianBlur_5_1_0_484_644_1_3872_3872_U0 BINDTYPE {storage} TYPE {fifo} IMPL {srl} ALLOW_PRAGMA 1 INSTNAME {start_for_GaussianBlur_5_1_0_484_644_1_3872_3872_U0_U}
 }
 
 
@@ -40,7 +40,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 219 \
+    id 169 \
     name padded_stream2 \
     type fifo \
     dir I \
@@ -55,7 +55,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 220 \
+    id 170 \
     name gray_stream3 \
     type fifo \
     dir O \

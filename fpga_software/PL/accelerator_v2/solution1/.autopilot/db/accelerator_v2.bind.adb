@@ -178,7 +178,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2259487392</coreId>
+						<coreId>1547485184</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -214,7 +214,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2259465248</coreId>
+						<coreId>1549921168</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -250,7 +250,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2258095216</coreId>
+						<coreId>1545656720</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -286,7 +286,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1314013527</coreId>
+						<coreId>2765530880</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>128</bitwidth>
@@ -322,7 +322,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2256727760</coreId>
+						<coreId>2762095103</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -358,7 +358,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2245157056</coreId>
+						<coreId>2762621464</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -394,7 +394,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2133509946</coreId>
+						<coreId>1547278880</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -430,7 +430,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2258806208</coreId>
+						<coreId>1548173536</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -466,7 +466,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2258208008</coreId>
+						<coreId>1549103616</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -502,7 +502,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2131396795</coreId>
+						<coreId>1549459328</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -538,7 +538,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2257285552</coreId>
+						<coreId>1548836704</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -574,7 +574,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2245148272</coreId>
+						<coreId>1549921168</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -725,7 +725,7 @@
 						<name>bgr_stream</name>
 						<fileName>accelerator_v2.cpp</fileName>
 						<fileDirectory>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL</fileDirectory>
-						<lineNumber>262</lineNumber>
+						<lineNumber>264</lineNumber>
 						<contextFuncName>accelerator_v2</contextFuncName>
 						<contextNormFuncName>accelerator_v2</contextNormFuncName>
 						<inlineStackInfo>
@@ -741,7 +741,7 @@
 											<first>accelerator_v2.cpp</first>
 											<second>accelerator_v2</second>
 										</first>
-										<second>262</second>
+										<second>264</second>
 									</item>
 								</second>
 							</item>
@@ -781,7 +781,7 @@
 						<name>padded_stream</name>
 						<fileName>accelerator_v2.cpp</fileName>
 						<fileDirectory>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL</fileDirectory>
-						<lineNumber>263</lineNumber>
+						<lineNumber>265</lineNumber>
 						<contextFuncName>accelerator_v2</contextFuncName>
 						<contextNormFuncName>accelerator_v2</contextNormFuncName>
 						<inlineStackInfo>
@@ -797,7 +797,7 @@
 											<first>accelerator_v2.cpp</first>
 											<second>accelerator_v2</second>
 										</first>
-										<second>263</second>
+										<second>265</second>
 									</item>
 								</second>
 							</item>
@@ -837,7 +837,7 @@
 						<name>gray_stream</name>
 						<fileName>accelerator_v2.cpp</fileName>
 						<fileDirectory>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL</fileDirectory>
-						<lineNumber>264</lineNumber>
+						<lineNumber>266</lineNumber>
 						<contextFuncName>accelerator_v2</contextFuncName>
 						<contextNormFuncName>accelerator_v2</contextNormFuncName>
 						<inlineStackInfo>
@@ -853,7 +853,7 @@
 											<first>accelerator_v2.cpp</first>
 											<second>accelerator_v2</second>
 										</first>
-										<second>264</second>
+										<second>266</second>
 									</item>
 								</second>
 							</item>
@@ -893,7 +893,7 @@
 						<name>hdr_stream</name>
 						<fileName>accelerator_v2.cpp</fileName>
 						<fileDirectory>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL</fileDirectory>
-						<lineNumber>265</lineNumber>
+						<lineNumber>267</lineNumber>
 						<contextFuncName>accelerator_v2</contextFuncName>
 						<contextNormFuncName>accelerator_v2</contextNormFuncName>
 						<inlineStackInfo>
@@ -909,7 +909,7 @@
 											<first>accelerator_v2.cpp</first>
 											<second>accelerator_v2</second>
 										</first>
-										<second>265</second>
+										<second>267</second>
 									</item>
 								</second>
 							</item>
@@ -964,7 +964,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2258180656</coreId>
+						<coreId>3022789216</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -989,10 +989,10 @@
 					<Obj>
 						<type>0</type>
 						<id>57</id>
-						<name>_ln273</name>
+						<name>_ln275</name>
 						<fileName>accelerator_v2.cpp</fileName>
 						<fileDirectory>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL</fileDirectory>
-						<lineNumber>273</lineNumber>
+						<lineNumber>275</lineNumber>
 						<contextFuncName>accelerator_v2</contextFuncName>
 						<contextNormFuncName>accelerator_v2</contextNormFuncName>
 						<inlineStackInfo>
@@ -1008,7 +1008,7 @@
 											<first>accelerator_v2.cpp</first>
 											<second>accelerator_v2</second>
 										</first>
-										<second>273</second>
+										<second>275</second>
 									</item>
 								</second>
 							</item>
@@ -1021,7 +1021,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2258095216</coreId>
+						<coreId>3022789216</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1042,8 +1042,8 @@
 					<item>87</item>
 					<item>88</item>
 					<item>89</item>
-					<item>403</item>
 					<item>404</item>
+					<item>405</item>
 				</oprand_edges>
 				<opcode>call</opcode>
 				<m_Display>0</m_Display>
@@ -1077,7 +1077,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2245042272</coreId>
+						<coreId>3022789216</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1088,8 +1088,8 @@
 					<item>91</item>
 					<item>92</item>
 					<item>93</item>
-					<item>400</item>
-					<item>405</item>
+					<item>401</item>
+					<item>406</item>
 				</oprand_edges>
 				<opcode>call</opcode>
 				<m_Display>0</m_Display>
@@ -1105,65 +1105,6 @@
 					<Obj>
 						<type>0</type>
 						<id>59</id>
-						<name>_ln277</name>
-						<fileName>accelerator_v2.cpp</fileName>
-						<fileDirectory>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL</fileDirectory>
-						<lineNumber>277</lineNumber>
-						<contextFuncName>accelerator_v2</contextFuncName>
-						<contextNormFuncName>accelerator_v2</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>accelerator_v2.cpp</first>
-											<second>accelerator_v2</second>
-										</first>
-										<second>277</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>2258095216</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>0</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>4</count>
-					<item_version>0</item_version>
-					<item>95</item>
-					<item>96</item>
-					<item>97</item>
-					<item>401</item>
-				</oprand_edges>
-				<opcode>call</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>10</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_28">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>60</id>
 						<name>_ln279</name>
 						<fileName>accelerator_v2.cpp</fileName>
 						<fileDirectory>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL</fileDirectory>
@@ -1196,7 +1137,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2132714764</coreId>
+						<coreId>3022789216</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1204,10 +1145,10 @@
 				<oprand_edges>
 					<count>4</count>
 					<item_version>0</item_version>
-					<item>99</item>
-					<item>100</item>
-					<item>101</item>
-					<item>399</item>
+					<item>95</item>
+					<item>96</item>
+					<item>97</item>
+					<item>402</item>
 				</oprand_edges>
 				<opcode>call</opcode>
 				<m_Display>0</m_Display>
@@ -1215,14 +1156,14 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>11</m_topoIndex>
+				<m_topoIndex>10</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_29">
+			<item class_id_reference="9" object_id="_28">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>61</id>
+						<id>60</id>
 						<name>_ln281</name>
 						<fileName>accelerator_v2.cpp</fileName>
 						<fileDirectory>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL</fileDirectory>
@@ -1255,7 +1196,66 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2258095216</coreId>
+						<coreId>3022789216</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>0</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>4</count>
+					<item_version>0</item_version>
+					<item>99</item>
+					<item>100</item>
+					<item>101</item>
+					<item>400</item>
+				</oprand_edges>
+				<opcode>call</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>11</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_29">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>61</id>
+						<name>_ln283</name>
+						<fileName>accelerator_v2.cpp</fileName>
+						<fileDirectory>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL</fileDirectory>
+						<lineNumber>283</lineNumber>
+						<contextFuncName>accelerator_v2</contextFuncName>
+						<contextNormFuncName>accelerator_v2</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>accelerator_v2.cpp</first>
+											<second>accelerator_v2</second>
+										</first>
+										<second>283</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>3022789216</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1273,7 +1273,7 @@
 					<item>110</item>
 					<item>111</item>
 					<item>112</item>
-					<item>398</item>
+					<item>399</item>
 				</oprand_edges>
 				<opcode>call</opcode>
 				<m_Display>0</m_Display>
@@ -1307,7 +1307,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2258095216</coreId>
+						<coreId>1543857248</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1318,7 +1318,7 @@
 					<item>114</item>
 					<item>115</item>
 					<item>116</item>
-					<item>402</item>
+					<item>403</item>
 				</oprand_edges>
 				<opcode>call</opcode>
 				<m_Display>0</m_Display>
@@ -1334,10 +1334,10 @@
 					<Obj>
 						<type>0</type>
 						<id>63</id>
-						<name>_ln286</name>
+						<name>_ln288</name>
 						<fileName>accelerator_v2.cpp</fileName>
 						<fileDirectory>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL</fileDirectory>
-						<lineNumber>286</lineNumber>
+						<lineNumber>288</lineNumber>
 						<contextFuncName>accelerator_v2</contextFuncName>
 						<contextNormFuncName>accelerator_v2</contextNormFuncName>
 						<inlineStackInfo>
@@ -1353,7 +1353,7 @@
 											<first>accelerator_v2.cpp</first>
 											<second>accelerator_v2</second>
 										</first>
-										<second>286</second>
+										<second>288</second>
 									</item>
 								</second>
 							</item>
@@ -1366,7 +1366,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2258030000</coreId>
+						<coreId>2764151733</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1411,7 +1411,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2257285552</coreId>
+						<coreId>1545885584</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -1442,7 +1442,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2258095216</coreId>
+						<coreId>1548273824</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1473,7 +1473,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2130910375</coreId>
+						<coreId>1547907568</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1504,7 +1504,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2258095216</coreId>
+						<coreId>1547907568</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1535,7 +1535,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2258964576</coreId>
+						<coreId>1547907568</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1566,7 +1566,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2132077064</coreId>
+						<coreId>3022789216</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1597,7 +1597,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2258617520</coreId>
+						<coreId>3022789216</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1628,7 +1628,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2143404204</coreId>
+						<coreId>3022789216</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1662,7 +1662,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>2133107330</coreId>
+					<coreId>1547907568</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -1998,56 +1998,56 @@
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_85">
-				<id>398</id>
+				<id>399</id>
 				<edge_type>4</edge_type>
 				<source_obj>60</source_obj>
 				<sink_obj>61</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_86">
-				<id>399</id>
+				<id>400</id>
 				<edge_type>4</edge_type>
 				<source_obj>59</source_obj>
 				<sink_obj>60</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_87">
-				<id>400</id>
+				<id>401</id>
 				<edge_type>4</edge_type>
 				<source_obj>57</source_obj>
 				<sink_obj>58</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_88">
-				<id>401</id>
+				<id>402</id>
 				<edge_type>4</edge_type>
 				<source_obj>57</source_obj>
 				<sink_obj>59</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_89">
-				<id>402</id>
+				<id>403</id>
 				<edge_type>4</edge_type>
 				<source_obj>57</source_obj>
 				<sink_obj>62</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_90">
-				<id>403</id>
-				<edge_type>4</edge_type>
-				<source_obj>56</source_obj>
-				<sink_obj>57</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_91">
 				<id>404</id>
 				<edge_type>4</edge_type>
 				<source_obj>56</source_obj>
 				<sink_obj>57</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_92">
+			<item class_id_reference="20" object_id="_91">
 				<id>405</id>
+				<edge_type>4</edge_type>
+				<source_obj>56</source_obj>
+				<sink_obj>57</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_92">
+				<id>406</id>
 				<edge_type>4</edge_type>
 				<source_obj>57</source_obj>
 				<sink_obj>58</sink_obj>
@@ -2544,10 +2544,10 @@
 						<name>bgr_stream</name>
 						<ssdmobj_id>42</ssdmobj_id>
 						<ctype>0</ctype>
-						<depth>307200</depth>
+						<depth>1288</depth>
 						<bitwidth>24</bitwidth>
 						<suggested_type>0</suggested_type>
-						<suggested_depth>307200</suggested_depth>
+						<suggested_depth>1288</suggested_depth>
 						<source_list>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -2588,10 +2588,10 @@
 						<name>hdr_stream</name>
 						<ssdmobj_id>51</ssdmobj_id>
 						<ctype>0</ctype>
-						<depth>61440</depth>
+						<depth>512</depth>
 						<bitwidth>8</bitwidth>
 						<suggested_type>0</suggested_type>
-						<suggested_depth>61440</suggested_depth>
+						<suggested_depth>512</suggested_depth>
 						<source_list>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -2708,10 +2708,10 @@
 						<name>padded_stream</name>
 						<ssdmobj_id>45</ssdmobj_id>
 						<ctype>0</ctype>
-						<depth>311296</depth>
+						<depth>1932</depth>
 						<bitwidth>24</bitwidth>
 						<suggested_type>0</suggested_type>
-						<suggested_depth>311296</suggested_depth>
+						<suggested_depth>1932</suggested_depth>
 						<source_list>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -2752,10 +2752,10 @@
 						<name>gray_stream</name>
 						<ssdmobj_id>48</ssdmobj_id>
 						<ctype>0</ctype>
-						<depth>311296</depth>
+						<depth>3220</depth>
 						<bitwidth>8</bitwidth>
 						<suggested_type>0</suggested_type>
-						<suggested_depth>311296</suggested_depth>
+						<suggested_depth>3220</suggested_depth>
 						<source_list>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -3461,7 +3461,7 @@
 		<count>14</count>
 		<item_version>0</item_version>
 		<item class_id="55" tracking_level="0" version="0">
-			<first>98</first>
+			<first>100</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3469,7 +3469,7 @@
 			</second>
 		</item>
 		<item>
-			<first>102</first>
+			<first>104</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3477,7 +3477,7 @@
 			</second>
 		</item>
 		<item>
-			<first>106</first>
+			<first>108</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3485,7 +3485,7 @@
 			</second>
 		</item>
 		<item>
-			<first>110</first>
+			<first>112</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3493,7 +3493,7 @@
 			</second>
 		</item>
 		<item>
-			<first>114</first>
+			<first>116</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3501,7 +3501,7 @@
 			</second>
 		</item>
 		<item>
-			<first>118</first>
+			<first>120</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3509,7 +3509,7 @@
 			</second>
 		</item>
 		<item>
-			<first>122</first>
+			<first>124</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3517,7 +3517,7 @@
 			</second>
 		</item>
 		<item>
-			<first>126</first>
+			<first>128</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3525,7 +3525,7 @@
 			</second>
 		</item>
 		<item>
-			<first>131</first>
+			<first>133</first>
 			<second>
 				<count>2</count>
 				<item_version>0</item_version>
@@ -3534,7 +3534,7 @@
 			</second>
 		</item>
 		<item>
-			<first>154</first>
+			<first>156</first>
 			<second>
 				<count>2</count>
 				<item_version>0</item_version>
@@ -3543,7 +3543,7 @@
 			</second>
 		</item>
 		<item>
-			<first>160</first>
+			<first>162</first>
 			<second>
 				<count>2</count>
 				<item_version>0</item_version>
@@ -3552,7 +3552,7 @@
 			</second>
 		</item>
 		<item>
-			<first>166</first>
+			<first>168</first>
 			<second>
 				<count>2</count>
 				<item_version>0</item_version>
@@ -3561,7 +3561,7 @@
 			</second>
 		</item>
 		<item>
-			<first>186</first>
+			<first>188</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3569,7 +3569,7 @@
 			</second>
 		</item>
 		<item>
-			<first>193</first>
+			<first>195</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3581,7 +3581,7 @@
 		<count>7</count>
 		<item_version>0</item_version>
 		<item class_id="58" tracking_level="0" version="0">
-			<first>bgr_stream_fu_110</first>
+			<first>bgr_stream_fu_112</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3589,7 +3589,7 @@
 			</second>
 		</item>
 		<item>
-			<first>frame_start_c17_channel_fu_98</first>
+			<first>frame_start_c17_channel_fu_100</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3597,7 +3597,7 @@
 			</second>
 		</item>
 		<item>
-			<first>frame_start_c_channel_fu_102</first>
+			<first>frame_start_c_channel_fu_104</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3605,7 +3605,7 @@
 			</second>
 		</item>
 		<item>
-			<first>frame_start_out_tmp_channel_fu_106</first>
+			<first>frame_start_out_tmp_channel_fu_108</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3613,7 +3613,7 @@
 			</second>
 		</item>
 		<item>
-			<first>gray_stream_fu_118</first>
+			<first>gray_stream_fu_120</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3621,7 +3621,7 @@
 			</second>
 		</item>
 		<item>
-			<first>hdr_stream_fu_122</first>
+			<first>hdr_stream_fu_124</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3629,7 +3629,7 @@
 			</second>
 		</item>
 		<item>
-			<first>padded_stream_fu_114</first>
+			<first>padded_stream_fu_116</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3641,7 +3641,7 @@
 		<count>7</count>
 		<item_version>0</item_version>
 		<item>
-			<first>call_ln0_Block_entry110_proc_fu_193</first>
+			<first>call_ln0_Block_entry110_proc_fu_195</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3649,7 +3649,7 @@
 			</second>
 		</item>
 		<item>
-			<first>call_ln0_Block_entry14_proc_fu_186</first>
+			<first>call_ln0_Block_entry14_proc_fu_188</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3657,7 +3657,7 @@
 			</second>
 		</item>
 		<item>
-			<first>call_ln0_Block_entry1_proc_fu_126</first>
+			<first>call_ln0_Block_entry1_proc_fu_128</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3665,7 +3665,7 @@
 			</second>
 		</item>
 		<item>
-			<first>grp_pad_fu_154</first>
+			<first>grp_pad_fu_156</first>
 			<second>
 				<count>2</count>
 				<item_version>0</item_version>
@@ -3674,7 +3674,7 @@
 			</second>
 		</item>
 		<item>
-			<first>grp_process_pixels_fu_160</first>
+			<first>grp_process_pixels_fu_162</first>
 			<second>
 				<count>2</count>
 				<item_version>0</item_version>
@@ -3683,7 +3683,7 @@
 			</second>
 		</item>
 		<item>
-			<first>grp_repack_fu_166</first>
+			<first>grp_repack_fu_168</first>
 			<second>
 				<count>2</count>
 				<item_version>0</item_version>
@@ -3692,7 +3692,7 @@
 			</second>
 		</item>
 		<item>
-			<first>grp_unpack_fu_131</first>
+			<first>grp_unpack_fu_133</first>
 			<second>
 				<count>2</count>
 				<item_version>0</item_version>
@@ -3717,7 +3717,7 @@
 		<count>7</count>
 		<item_version>0</item_version>
 		<item>
-			<first>200</first>
+			<first>202</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3725,7 +3725,7 @@
 			</second>
 		</item>
 		<item>
-			<first>206</first>
+			<first>208</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3733,7 +3733,7 @@
 			</second>
 		</item>
 		<item>
-			<first>212</first>
+			<first>214</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3741,7 +3741,7 @@
 			</second>
 		</item>
 		<item>
-			<first>218</first>
+			<first>220</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3749,7 +3749,7 @@
 			</second>
 		</item>
 		<item>
-			<first>224</first>
+			<first>226</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3757,7 +3757,7 @@
 			</second>
 		</item>
 		<item>
-			<first>230</first>
+			<first>232</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3765,7 +3765,7 @@
 			</second>
 		</item>
 		<item>
-			<first>236</first>
+			<first>238</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3777,7 +3777,7 @@
 		<count>7</count>
 		<item_version>0</item_version>
 		<item>
-			<first>bgr_stream_reg_218</first>
+			<first>bgr_stream_reg_220</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3785,7 +3785,7 @@
 			</second>
 		</item>
 		<item>
-			<first>frame_start_c17_channel_reg_200</first>
+			<first>frame_start_c17_channel_reg_202</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3793,7 +3793,7 @@
 			</second>
 		</item>
 		<item>
-			<first>frame_start_c_channel_reg_206</first>
+			<first>frame_start_c_channel_reg_208</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3801,7 +3801,7 @@
 			</second>
 		</item>
 		<item>
-			<first>frame_start_out_tmp_channel_reg_212</first>
+			<first>frame_start_out_tmp_channel_reg_214</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3809,7 +3809,7 @@
 			</second>
 		</item>
 		<item>
-			<first>gray_stream_reg_230</first>
+			<first>gray_stream_reg_232</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3817,7 +3817,7 @@
 			</second>
 		</item>
 		<item>
-			<first>hdr_stream_reg_236</first>
+			<first>hdr_stream_reg_238</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3825,7 +3825,7 @@
 			</second>
 		</item>
 		<item>
-			<first>padded_stream_reg_224</first>
+			<first>padded_stream_reg_226</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>

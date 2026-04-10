@@ -1,0 +1,202 @@
+<stg><name>GaussianBlur<5, 1, 0, 484, 644, 1, 3872, 3872></name>
+
+
+<trans_list>
+
+<trans id="8" from="1" to="2">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="3" st_id="1" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="5" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="8">
+<![CDATA[
+entry:2 %call_ln1320 = call void @xFGaussianFilter5x5<0, 484, 644, 1, 0, 1, 3872, 3872, 1, 644, false>, i8 %gray_mat_data44, i8 %blurred_mat_data45
+
+]]></Node>
+<StgValue><ssdm name="call_ln1320"/></StgValue>
+</operation>
+</state>
+
+<state id="2" st_id="2">
+
+<operation id="4" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="3" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
+<![CDATA[
+entry:0 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %blurred_mat_data45, void @empty_1, i32 0, i32 0, void @empty_2, i32 0, i32 0, void @empty_2, void @empty_2, void @empty_2, i32 0, i32 0, i32 0, i32 0, void @empty_2, void @empty_2, i32 4294967295, i32 0
+
+]]></Node>
+<StgValue><ssdm name="specinterface_ln0"/></StgValue>
+</operation>
+
+<operation id="5" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="4" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
+<![CDATA[
+entry:1 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %gray_mat_data44, void @empty_1, i32 0, i32 0, void @empty_2, i32 0, i32 0, void @empty_2, void @empty_2, void @empty_2, i32 0, i32 0, i32 0, i32 0, void @empty_2, void @empty_2, i32 4294967295, i32 0
+
+]]></Node>
+<StgValue><ssdm name="specinterface_ln0"/></StgValue>
+</operation>
+
+<operation id="6" st_id="2" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="5" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="8">
+<![CDATA[
+entry:2 %call_ln1320 = call void @xFGaussianFilter5x5<0, 484, 644, 1, 0, 1, 3872, 3872, 1, 644, false>, i8 %gray_mat_data44, i8 %blurred_mat_data45
+
+]]></Node>
+<StgValue><ssdm name="call_ln1320"/></StgValue>
+</operation>
+
+<operation id="7" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="6" bw="0">
+<![CDATA[
+entry:3 %ret_ln1333 = ret
+
+]]></Node>
+<StgValue><ssdm name="ret_ln1333"/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+<port id="9" name="gray_mat_data44" dir="0" iftype="3">
+<core>NULL</core><StgValue><ssdm name="gray_mat_data44"/></StgValue>
+</port>
+<port id="10" name="blurred_mat_data45" dir="1" iftype="3">
+<core>NULL</core><StgValue><ssdm name="blurred_mat_data45"/></StgValue>
+</port>
+</ports>
+
+
+<dataflows>
+<dataflow id="12" from="xFGaussianFilter5x5<0, 484, 644, 1, 0, 1, 3872, 3872, 1, 644, false>" to="call_ln1320" fromId="11" toId="3">
+</dataflow>
+<dataflow id="13" from="gray_mat_data44" to="call_ln1320" fromId="9" toId="3">
+</dataflow>
+<dataflow id="14" from="blurred_mat_data45" to="call_ln1320" fromId="10" toId="3">
+</dataflow>
+<dataflow id="16" from="_ssdm_op_SpecInterface" to="specinterface_ln0" fromId="15" toId="4">
+</dataflow>
+<dataflow id="17" from="blurred_mat_data45" to="specinterface_ln0" fromId="10" toId="4">
+</dataflow>
+<dataflow id="19" from="empty_1" to="specinterface_ln0" fromId="18" toId="4">
+</dataflow>
+<dataflow id="21" from="StgValue_20" to="specinterface_ln0" fromId="20" toId="4">
+</dataflow>
+<dataflow id="22" from="StgValue_20" to="specinterface_ln0" fromId="20" toId="4">
+</dataflow>
+<dataflow id="24" from="empty_2" to="specinterface_ln0" fromId="23" toId="4">
+</dataflow>
+<dataflow id="25" from="StgValue_20" to="specinterface_ln0" fromId="20" toId="4">
+</dataflow>
+<dataflow id="26" from="StgValue_20" to="specinterface_ln0" fromId="20" toId="4">
+</dataflow>
+<dataflow id="27" from="empty_2" to="specinterface_ln0" fromId="23" toId="4">
+</dataflow>
+<dataflow id="28" from="empty_2" to="specinterface_ln0" fromId="23" toId="4">
+</dataflow>
+<dataflow id="29" from="empty_2" to="specinterface_ln0" fromId="23" toId="4">
+</dataflow>
+<dataflow id="30" from="StgValue_20" to="specinterface_ln0" fromId="20" toId="4">
+</dataflow>
+<dataflow id="31" from="StgValue_20" to="specinterface_ln0" fromId="20" toId="4">
+</dataflow>
+<dataflow id="32" from="StgValue_20" to="specinterface_ln0" fromId="20" toId="4">
+</dataflow>
+<dataflow id="33" from="StgValue_20" to="specinterface_ln0" fromId="20" toId="4">
+</dataflow>
+<dataflow id="34" from="empty_2" to="specinterface_ln0" fromId="23" toId="4">
+</dataflow>
+<dataflow id="35" from="empty_2" to="specinterface_ln0" fromId="23" toId="4">
+</dataflow>
+<dataflow id="37" from="StgValue_36" to="specinterface_ln0" fromId="36" toId="4">
+</dataflow>
+<dataflow id="38" from="StgValue_20" to="specinterface_ln0" fromId="20" toId="4">
+</dataflow>
+<dataflow id="39" from="_ssdm_op_SpecInterface" to="specinterface_ln0" fromId="15" toId="5">
+</dataflow>
+<dataflow id="40" from="gray_mat_data44" to="specinterface_ln0" fromId="9" toId="5">
+</dataflow>
+<dataflow id="41" from="empty_1" to="specinterface_ln0" fromId="18" toId="5">
+</dataflow>
+<dataflow id="42" from="StgValue_20" to="specinterface_ln0" fromId="20" toId="5">
+</dataflow>
+<dataflow id="43" from="StgValue_20" to="specinterface_ln0" fromId="20" toId="5">
+</dataflow>
+<dataflow id="44" from="empty_2" to="specinterface_ln0" fromId="23" toId="5">
+</dataflow>
+<dataflow id="45" from="StgValue_20" to="specinterface_ln0" fromId="20" toId="5">
+</dataflow>
+<dataflow id="46" from="StgValue_20" to="specinterface_ln0" fromId="20" toId="5">
+</dataflow>
+<dataflow id="47" from="empty_2" to="specinterface_ln0" fromId="23" toId="5">
+</dataflow>
+<dataflow id="48" from="empty_2" to="specinterface_ln0" fromId="23" toId="5">
+</dataflow>
+<dataflow id="49" from="empty_2" to="specinterface_ln0" fromId="23" toId="5">
+</dataflow>
+<dataflow id="50" from="StgValue_20" to="specinterface_ln0" fromId="20" toId="5">
+</dataflow>
+<dataflow id="51" from="StgValue_20" to="specinterface_ln0" fromId="20" toId="5">
+</dataflow>
+<dataflow id="52" from="StgValue_20" to="specinterface_ln0" fromId="20" toId="5">
+</dataflow>
+<dataflow id="53" from="StgValue_20" to="specinterface_ln0" fromId="20" toId="5">
+</dataflow>
+<dataflow id="54" from="empty_2" to="specinterface_ln0" fromId="23" toId="5">
+</dataflow>
+<dataflow id="55" from="empty_2" to="specinterface_ln0" fromId="23" toId="5">
+</dataflow>
+<dataflow id="56" from="StgValue_36" to="specinterface_ln0" fromId="36" toId="5">
+</dataflow>
+<dataflow id="57" from="StgValue_20" to="specinterface_ln0" fromId="20" toId="5">
+</dataflow>
+<dataflow id="58" from="xFGaussianFilter5x5<0, 484, 644, 1, 0, 1, 3872, 3872, 1, 644, false>" to="call_ln1320" fromId="11" toId="6">
+</dataflow>
+<dataflow id="59" from="gray_mat_data44" to="call_ln1320" fromId="9" toId="6">
+</dataflow>
+<dataflow id="60" from="blurred_mat_data45" to="call_ln1320" fromId="10" toId="6">
+</dataflow>
+</dataflows>
+
+
+</stg>

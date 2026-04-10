@@ -11,7 +11,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 103 \
+    id 82 \
     name buf_V_3 \
     reset_level 1 \
     sync_rst true \
@@ -29,7 +29,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 104 \
+    id 83 \
     name gray_mat_data44 \
     type fifo \
     dir I \
@@ -37,7 +37,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_gray_mat_data44 \
     op interface \
-    ports { gray_mat_data44_dout { I 8 vector } gray_mat_data44_num_data_valid { I 20 vector } gray_mat_data44_fifo_cap { I 20 vector } gray_mat_data44_empty_n { I 1 bit } gray_mat_data44_read { O 1 bit } } \
+    ports { gray_mat_data44_dout { I 8 vector } gray_mat_data44_num_data_valid { I 13 vector } gray_mat_data44_fifo_cap { I 13 vector } gray_mat_data44_empty_n { I 1 bit } gray_mat_data44_read { O 1 bit } } \
 } "
 }
 

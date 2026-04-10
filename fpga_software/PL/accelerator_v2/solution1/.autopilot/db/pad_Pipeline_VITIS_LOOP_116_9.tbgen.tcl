@@ -33,8 +33,8 @@ set portList {
 	{ ap_idle sc_out sc_logic 1 done -1 } 
 	{ ap_ready sc_out sc_logic 1 ready -1 } 
 	{ padded_stream2_din sc_out sc_lv 24 signal 3 } 
-	{ padded_stream2_num_data_valid sc_in sc_lv 20 signal 3 } 
-	{ padded_stream2_fifo_cap sc_in sc_lv 20 signal 3 } 
+	{ padded_stream2_num_data_valid sc_in sc_lv 12 signal 3 } 
+	{ padded_stream2_fifo_cap sc_in sc_lv 12 signal 3 } 
 	{ padded_stream2_full_n sc_in sc_logic 1 signal 3 } 
 	{ padded_stream2_write sc_out sc_logic 1 signal 3 } 
 	{ row_buf_V_2_address0 sc_out sc_lv 10 signal 0 } 
@@ -53,8 +53,8 @@ set NewPortList {[
  	{ "name": "ap_idle", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "done", "bundle":{"name": "ap_idle", "role": "default" }} , 
  	{ "name": "ap_ready", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "ready", "bundle":{"name": "ap_ready", "role": "default" }} , 
  	{ "name": "padded_stream2_din", "direction": "out", "datatype": "sc_lv", "bitwidth":24, "type": "signal", "bundle":{"name": "padded_stream2", "role": "din" }} , 
- 	{ "name": "padded_stream2_num_data_valid", "direction": "in", "datatype": "sc_lv", "bitwidth":20, "type": "signal", "bundle":{"name": "padded_stream2", "role": "num_data_valid" }} , 
- 	{ "name": "padded_stream2_fifo_cap", "direction": "in", "datatype": "sc_lv", "bitwidth":20, "type": "signal", "bundle":{"name": "padded_stream2", "role": "fifo_cap" }} , 
+ 	{ "name": "padded_stream2_num_data_valid", "direction": "in", "datatype": "sc_lv", "bitwidth":12, "type": "signal", "bundle":{"name": "padded_stream2", "role": "num_data_valid" }} , 
+ 	{ "name": "padded_stream2_fifo_cap", "direction": "in", "datatype": "sc_lv", "bitwidth":12, "type": "signal", "bundle":{"name": "padded_stream2", "role": "fifo_cap" }} , 
  	{ "name": "padded_stream2_full_n", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "padded_stream2", "role": "full_n" }} , 
  	{ "name": "padded_stream2_write", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "padded_stream2", "role": "write" }} , 
  	{ "name": "row_buf_V_2_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":10, "type": "signal", "bundle":{"name": "row_buf_V_2", "role": "address0" }} , 
@@ -116,5 +116,5 @@ set Spec2ImplPortList {
 	row_buf_V_2 { ap_memory {  { row_buf_V_2_address0 mem_address 1 10 }  { row_buf_V_2_ce0 mem_ce 1 1 }  { row_buf_V_2_q0 in_data 0 24 } } }
 	row_buf_V_3 { ap_memory {  { row_buf_V_3_address0 mem_address 1 10 }  { row_buf_V_3_ce0 mem_ce 1 1 }  { row_buf_V_3_q0 in_data 0 24 } } }
 	r_5_cast { ap_none {  { r_5_cast in_data 0 1 } } }
-	padded_stream2 { ap_fifo {  { padded_stream2_din fifo_port_we 1 24 }  { padded_stream2_num_data_valid fifo_status_num_data_valid 0 20 }  { padded_stream2_fifo_cap fifo_update 0 20 }  { padded_stream2_full_n fifo_status 0 1 }  { padded_stream2_write fifo_data 1 1 } } }
+	padded_stream2 { ap_fifo {  { padded_stream2_din fifo_port_we 1 24 }  { padded_stream2_num_data_valid fifo_status_num_data_valid 0 12 }  { padded_stream2_fifo_cap fifo_update 0 12 }  { padded_stream2_full_n fifo_status 0 1 }  { padded_stream2_write fifo_data 1 1 } } }
 }

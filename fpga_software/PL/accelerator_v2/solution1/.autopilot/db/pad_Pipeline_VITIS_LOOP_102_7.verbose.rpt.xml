@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'pad_Pipeline_VITIS_LOOP_102_7'" level="0">
-<item name = "Date">Thu Apr  9 16:57:15 2026
+<item name = "Date">Fri Apr 10 15:48:24 2026
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">accelerator_v2</item>
@@ -116,8 +116,8 @@
 <column name="ap_idle">out, 1, ap_ctrl_hs, pad_Pipeline_VITIS_LOOP_102_7, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, pad_Pipeline_VITIS_LOOP_102_7, return value</column>
 <column name="padded_stream2_din">out, 24, ap_fifo, padded_stream2, pointer</column>
-<column name="padded_stream2_num_data_valid">in, 20, ap_fifo, padded_stream2, pointer</column>
-<column name="padded_stream2_fifo_cap">in, 20, ap_fifo, padded_stream2, pointer</column>
+<column name="padded_stream2_num_data_valid">in, 12, ap_fifo, padded_stream2, pointer</column>
+<column name="padded_stream2_fifo_cap">in, 12, ap_fifo, padded_stream2, pointer</column>
 <column name="padded_stream2_full_n">in, 1, ap_fifo, padded_stream2, pointer</column>
 <column name="padded_stream2_write">out, 1, ap_fifo, padded_stream2, pointer</column>
 <column name="row_buf_V_address0">out, 10, ap_memory, row_buf_V, array</column>

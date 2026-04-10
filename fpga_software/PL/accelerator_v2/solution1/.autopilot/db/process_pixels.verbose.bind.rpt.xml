@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'process_pixels'" level="0">
-<item name = "Date">Thu Apr  9 16:57:12 2026
+<item name = "Date">Fri Apr 10 15:48:21 2026
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">accelerator_v2</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 6.919 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 5.886 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">325757, 325757, 3.258 ms, 3.258 ms, 325758, 325758, dataflow</column>
+<column name="">323650, 323650, 3.236 ms, 3.236 ms, 323644, 323644, dataflow</column>
 </table>
 </item>
 <item name = "Detail">
@@ -32,8 +32,8 @@
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
 <column name="grp_stream_to_mat_fu_52">stream_to_mat, 311698, 311698, 3.117 ms, 3.117 ms, 311698, 311698, no</column>
-<column name="grp_bgr2gray_9_0_484_644_1_311696_311696_s_fu_59">bgr2gray_9_0_484_644_1_311696_311696_s, 316053, 316053, 3.161 ms, 3.161 ms, 316053, 316053, no</column>
-<column name="grp_GaussianBlur_5_1_0_484_644_1_311696_311696_s_fu_65">GaussianBlur_5_1_0_484_644_1_311696_311696_s, 325757, 325757, 3.258 ms, 3.258 ms, 325757, 325757, no</column>
+<column name="grp_bgr2gray_9_0_484_644_1_3872_3872_s_fu_59">bgr2gray_9_0_484_644_1_3872_3872_s, 316053, 316053, 3.161 ms, 3.161 ms, 316053, 316053, no</column>
+<column name="grp_GaussianBlur_5_1_0_484_644_1_3872_3872_s_fu_65">GaussianBlur_5_1_0_484_644_1_3872_3872_s, 323643, 323643, 3.236 ms, 3.236 ms, 323643, 323643, no</column>
 <column name="grp_mat_to_stream_fu_71">mat_to_stream, 311698, 311698, 3.117 ms, 3.117 ms, 311698, 311698, no</column>
 </table>
 </item>

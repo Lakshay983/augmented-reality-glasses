@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'accelerator_v2'" level="0">
-<item name = "Date">Thu Apr  9 16:57:20 2026
+<item name = "Date">Fri Apr 10 15:48:28 2026
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">accelerator_v2</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 6.919 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 5.886 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -34,8 +34,8 @@
 <column name="Block_entry1_proc_U0">Block_entry1_proc, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
 <column name="unpack_U0">unpack, 368642, 368642, 3.686 ms, 3.686 ms, 368642, 368642, no</column>
 <column name="pad_U0">pad, 317003, 625643, 3.170 ms, 6.256 ms, 317003, 625643, no</column>
-<column name="process_pixels_U0">process_pixels, 325757, 325757, 3.258 ms, 3.258 ms, 325758, 325758, dataflow</column>
-<column name="repack_U0">repack, 314602, 401238, 3.146 ms, 4.012 ms, 314602, 401238, no</column>
+<column name="process_pixels_U0">process_pixels, 323650, 323650, 3.236 ms, 3.236 ms, 323644, 323644, dataflow</column>
+<column name="repack_U0">repack, 315086, 401238, 3.151 ms, 4.012 ms, 315086, 401238, no</column>
 <column name="Block_entry14_proc_U0">Block_entry14_proc, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
 <column name="Block_entry110_proc_U0">Block_entry110_proc, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
 </table>
@@ -55,13 +55,13 @@
 <keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="DSP">-, -, -, -, -</column>
 <column name="Expression">-, -, 0, 16, -</column>
-<column name="FIFO">1016, -, 949, 453, -</column>
-<column name="Instance">777, 40, 6462, 10466, 0</column>
+<column name="FIFO">9, -, 947, 445, -</column>
+<column name="Instance">51, 11, 4079, 7316, 0</column>
 <column name="Memory">-, -, -, -, -</column>
 <column name="Multiplexer">-, -, -, 18, -</column>
 <column name="Register">-, -, 2, -, -</column>
 <specialColumn name="Available">432, 360, 141120, 70560, 0</specialColumn>
-<specialColumn name="Utilization (%)">415, 11, 5, 15, 0</specialColumn>
+<specialColumn name="Utilization (%)">13, 3, 3, 11, 0</specialColumn>
 </table>
 </item>
 <item name = "Detail">
@@ -72,8 +72,8 @@
 <column name="Block_entry14_proc_U0">Block_entry14_proc, 0, 0, 3, 20, 0</column>
 <column name="Block_entry1_proc_U0">Block_entry1_proc, 0, 0, 2, 11, 0</column>
 <column name="pad_U0">pad, 8, 0, 734, 1470, 0</column>
-<column name="process_pixels_U0">process_pixels, 741, 40, 5475, 7358, 0</column>
-<column name="repack_U0">repack, 28, 0, 117, 1365, 0</column>
+<column name="process_pixels_U0">process_pixels, 15, 11, 3093, 4210, 0</column>
+<column name="repack_U0">repack, 28, 0, 116, 1363, 0</column>
 <column name="unpack_U0">unpack, 0, 0, 128, 222, 0</column>
 </table>
 </item>
@@ -87,13 +87,13 @@
 </item>
 <item name = "FIFO"><table name="" hasTotal="1">
 <keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
-<column name="bgr_stream_U">414, 163, 0, -, 307200, 24, 7372800</column>
+<column name="bgr_stream_U">3, 163, 0, -, 1288, 24, 30912</column>
 <column name="frame_start_c17_channel_U">0, 99, 0, -, 2, 1, 2</column>
 <column name="frame_start_c_channel_U">0, 99, 0, -, 2, 1, 2</column>
 <column name="frame_start_out_tmp_channel_U">0, 99, 0, -, 2, 1, 2</column>
-<column name="gray_stream_U">152, 163, 0, -, 311296, 8, 2490368</column>
-<column name="hdr_stream_U">32, 163, 0, -, 61440, 8, 491520</column>
-<column name="padded_stream_U">418, 163, 0, -, 311296, 24, 7471104</column>
+<column name="gray_stream_U">2, 163, 0, -, 3220, 8, 25760</column>
+<column name="hdr_stream_U">1, 161, 0, -, 512, 8, 4096</column>
+<column name="padded_stream_U">3, 163, 0, -, 1932, 24, 46368</column>
 </table>
 </item>
 <item name = "Expression"><table name="" hasTotal="1">

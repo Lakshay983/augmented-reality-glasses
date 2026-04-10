@@ -7,7 +7,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="accelerator_v2_accelerator_v2,hls_ip_2022_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xczu3eg-sbva484-1-i,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=6.919000,HLS_SYN_LAT=471569,HLS_SYN_TPT=471564,HLS_SYN_MEM=1793,HLS_SYN_DSP=0,HLS_SYN_FF=7413,HLS_SYN_LUT=10953,HLS_VERSION=2022_2}" *)
+(* CORE_GENERATION_INFO="accelerator_v2_accelerator_v2,hls_ip_2022_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xczu3eg-sbva484-1-i,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=5.886313,HLS_SYN_LAT=471569,HLS_SYN_TPT=471564,HLS_SYN_MEM=60,HLS_SYN_DSP=0,HLS_SYN_FF=5028,HLS_SYN_LUT=7795,HLS_VERSION=2022_2}" *)
 
 module accelerator_v2 (
         in_stream_TDATA,
@@ -151,13 +151,13 @@ wire   [1:0] frame_start_out_tmp_channel_fifo_cap;
 wire    frame_start_out_tmp_channel_empty_n;
 wire    bgr_stream_full_n;
 wire   [23:0] bgr_stream_dout;
-wire   [19:0] bgr_stream_num_data_valid;
-wire   [19:0] bgr_stream_fifo_cap;
+wire   [11:0] bgr_stream_num_data_valid;
+wire   [11:0] bgr_stream_fifo_cap;
 wire    bgr_stream_empty_n;
 wire    hdr_stream_full_n;
 wire   [7:0] hdr_stream_dout;
-wire   [16:0] hdr_stream_num_data_valid;
-wire   [16:0] hdr_stream_fifo_cap;
+wire   [9:0] hdr_stream_num_data_valid;
+wire   [9:0] hdr_stream_fifo_cap;
 wire    hdr_stream_empty_n;
 wire   [0:0] frame_start_c_channel_dout;
 wire   [1:0] frame_start_c_channel_num_data_valid;
@@ -169,13 +169,13 @@ wire   [1:0] frame_start_c17_channel_fifo_cap;
 wire    frame_start_c17_channel_empty_n;
 wire    padded_stream_full_n;
 wire   [23:0] padded_stream_dout;
-wire   [19:0] padded_stream_num_data_valid;
-wire   [19:0] padded_stream_fifo_cap;
+wire   [11:0] padded_stream_num_data_valid;
+wire   [11:0] padded_stream_fifo_cap;
 wire    padded_stream_empty_n;
 wire    gray_stream_full_n;
 wire   [7:0] gray_stream_dout;
-wire   [19:0] gray_stream_num_data_valid;
-wire   [19:0] gray_stream_fifo_cap;
+wire   [12:0] gray_stream_num_data_valid;
+wire   [12:0] gray_stream_fifo_cap;
 wire    gray_stream_empty_n;
 wire    ap_sync_done;
 wire   [0:0] start_for_pad_U0_din;
@@ -353,7 +353,7 @@ accelerator_v2_fifo_w1_d2_S frame_start_out_tmp_channel_U(
     .if_read(unpack_U0_ap_ready)
 );
 
-accelerator_v2_fifo_w24_d307200_A bgr_stream_U(
+accelerator_v2_fifo_w24_d1288_A bgr_stream_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
     .if_read_ce(1'b1),
@@ -368,7 +368,7 @@ accelerator_v2_fifo_w24_d307200_A bgr_stream_U(
     .if_read(pad_U0_bgr_stream1_read)
 );
 
-accelerator_v2_fifo_w8_d61440_A hdr_stream_U(
+accelerator_v2_fifo_w8_d512_A hdr_stream_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
     .if_read_ce(1'b1),
@@ -413,7 +413,7 @@ accelerator_v2_fifo_w1_d2_S frame_start_c17_channel_U(
     .if_read(Block_entry14_proc_U0_ap_ready)
 );
 
-accelerator_v2_fifo_w24_d311296_A padded_stream_U(
+accelerator_v2_fifo_w24_d1932_A padded_stream_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
     .if_read_ce(1'b1),
@@ -428,7 +428,7 @@ accelerator_v2_fifo_w24_d311296_A padded_stream_U(
     .if_read(process_pixels_U0_padded_stream2_read)
 );
 
-accelerator_v2_fifo_w8_d311296_A gray_stream_U(
+accelerator_v2_fifo_w8_d3220_A gray_stream_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
     .if_read_ce(1'b1),

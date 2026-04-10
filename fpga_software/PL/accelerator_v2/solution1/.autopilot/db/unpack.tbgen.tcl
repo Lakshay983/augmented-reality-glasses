@@ -62,13 +62,13 @@ set portList {
 	{ in_stream_TID sc_in sc_lv 1 signal 5 } 
 	{ in_stream_TDEST sc_in sc_lv 1 signal 6 } 
 	{ bgr_stream1_din sc_out sc_lv 24 signal 7 } 
-	{ bgr_stream1_num_data_valid sc_in sc_lv 20 signal 7 } 
-	{ bgr_stream1_fifo_cap sc_in sc_lv 20 signal 7 } 
+	{ bgr_stream1_num_data_valid sc_in sc_lv 12 signal 7 } 
+	{ bgr_stream1_fifo_cap sc_in sc_lv 12 signal 7 } 
 	{ bgr_stream1_full_n sc_in sc_logic 1 signal 7 } 
 	{ bgr_stream1_write sc_out sc_logic 1 signal 7 } 
 	{ hdr_stream4_din sc_out sc_lv 8 signal 8 } 
-	{ hdr_stream4_num_data_valid sc_in sc_lv 17 signal 8 } 
-	{ hdr_stream4_fifo_cap sc_in sc_lv 17 signal 8 } 
+	{ hdr_stream4_num_data_valid sc_in sc_lv 10 signal 8 } 
+	{ hdr_stream4_fifo_cap sc_in sc_lv 10 signal 8 } 
 	{ hdr_stream4_full_n sc_in sc_logic 1 signal 8 } 
 	{ hdr_stream4_write sc_out sc_logic 1 signal 8 } 
 	{ frame_start_out_in sc_in sc_lv 1 signal 9 } 
@@ -96,13 +96,13 @@ set NewPortList {[
  	{ "name": "in_stream_TID", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "in_stream_V_id_V", "role": "default" }} , 
  	{ "name": "in_stream_TDEST", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "in_stream_V_dest_V", "role": "default" }} , 
  	{ "name": "bgr_stream1_din", "direction": "out", "datatype": "sc_lv", "bitwidth":24, "type": "signal", "bundle":{"name": "bgr_stream1", "role": "din" }} , 
- 	{ "name": "bgr_stream1_num_data_valid", "direction": "in", "datatype": "sc_lv", "bitwidth":20, "type": "signal", "bundle":{"name": "bgr_stream1", "role": "num_data_valid" }} , 
- 	{ "name": "bgr_stream1_fifo_cap", "direction": "in", "datatype": "sc_lv", "bitwidth":20, "type": "signal", "bundle":{"name": "bgr_stream1", "role": "fifo_cap" }} , 
+ 	{ "name": "bgr_stream1_num_data_valid", "direction": "in", "datatype": "sc_lv", "bitwidth":12, "type": "signal", "bundle":{"name": "bgr_stream1", "role": "num_data_valid" }} , 
+ 	{ "name": "bgr_stream1_fifo_cap", "direction": "in", "datatype": "sc_lv", "bitwidth":12, "type": "signal", "bundle":{"name": "bgr_stream1", "role": "fifo_cap" }} , 
  	{ "name": "bgr_stream1_full_n", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "bgr_stream1", "role": "full_n" }} , 
  	{ "name": "bgr_stream1_write", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "bgr_stream1", "role": "write" }} , 
  	{ "name": "hdr_stream4_din", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "hdr_stream4", "role": "din" }} , 
- 	{ "name": "hdr_stream4_num_data_valid", "direction": "in", "datatype": "sc_lv", "bitwidth":17, "type": "signal", "bundle":{"name": "hdr_stream4", "role": "num_data_valid" }} , 
- 	{ "name": "hdr_stream4_fifo_cap", "direction": "in", "datatype": "sc_lv", "bitwidth":17, "type": "signal", "bundle":{"name": "hdr_stream4", "role": "fifo_cap" }} , 
+ 	{ "name": "hdr_stream4_num_data_valid", "direction": "in", "datatype": "sc_lv", "bitwidth":10, "type": "signal", "bundle":{"name": "hdr_stream4", "role": "num_data_valid" }} , 
+ 	{ "name": "hdr_stream4_fifo_cap", "direction": "in", "datatype": "sc_lv", "bitwidth":10, "type": "signal", "bundle":{"name": "hdr_stream4", "role": "fifo_cap" }} , 
  	{ "name": "hdr_stream4_full_n", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "hdr_stream4", "role": "full_n" }} , 
  	{ "name": "hdr_stream4_write", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "hdr_stream4", "role": "write" }} , 
  	{ "name": "frame_start_out_in", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "frame_start_out_in", "role": "default" }} , 
@@ -134,10 +134,10 @@ set RtlHierarchyInfo {[
 			{"Name" : "in_stream_V_last_V", "Type" : "Axis", "Direction" : "I", "BaseName" : "in_stream"},
 			{"Name" : "in_stream_V_id_V", "Type" : "Axis", "Direction" : "I", "BaseName" : "in_stream"},
 			{"Name" : "in_stream_V_dest_V", "Type" : "Axis", "Direction" : "I", "BaseName" : "in_stream"},
-			{"Name" : "bgr_stream1", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "307200", "DependentChanType" : "0",
+			{"Name" : "bgr_stream1", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "1288", "DependentChanType" : "0",
 				"BlockSignal" : [
 					{"Name" : "bgr_stream1_blk_n", "Type" : "RtlSignal"}]},
-			{"Name" : "hdr_stream4", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "61440", "DependentChanType" : "0",
+			{"Name" : "hdr_stream4", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "512", "DependentChanType" : "0",
 				"BlockSignal" : [
 					{"Name" : "hdr_stream4_blk_n", "Type" : "RtlSignal"}]},
 			{"Name" : "frame_start_out_in", "Type" : "None", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "2", "DependentChanType" : "1"},
@@ -188,8 +188,8 @@ set Spec2ImplPortList {
 	in_stream_V_last_V { axis {  { in_stream_TLAST in_data 0 1 } } }
 	in_stream_V_id_V { axis {  { in_stream_TID in_data 0 1 } } }
 	in_stream_V_dest_V { axis {  { in_stream_TVALID in_vld 0 1 }  { in_stream_TREADY in_acc 1 1 }  { in_stream_TDEST in_data 0 1 } } }
-	bgr_stream1 { ap_fifo {  { bgr_stream1_din fifo_port_we 1 24 }  { bgr_stream1_num_data_valid fifo_status_num_data_valid 0 20 }  { bgr_stream1_fifo_cap fifo_update 0 20 }  { bgr_stream1_full_n fifo_status 0 1 }  { bgr_stream1_write fifo_data 1 1 } } }
-	hdr_stream4 { ap_fifo {  { hdr_stream4_din fifo_port_we 1 8 }  { hdr_stream4_num_data_valid fifo_status_num_data_valid 0 17 }  { hdr_stream4_fifo_cap fifo_update 0 17 }  { hdr_stream4_full_n fifo_status 0 1 }  { hdr_stream4_write fifo_data 1 1 } } }
+	bgr_stream1 { ap_fifo {  { bgr_stream1_din fifo_port_we 1 24 }  { bgr_stream1_num_data_valid fifo_status_num_data_valid 0 12 }  { bgr_stream1_fifo_cap fifo_update 0 12 }  { bgr_stream1_full_n fifo_status 0 1 }  { bgr_stream1_write fifo_data 1 1 } } }
+	hdr_stream4 { ap_fifo {  { hdr_stream4_din fifo_port_we 1 8 }  { hdr_stream4_num_data_valid fifo_status_num_data_valid 0 10 }  { hdr_stream4_fifo_cap fifo_update 0 10 }  { hdr_stream4_full_n fifo_status 0 1 }  { hdr_stream4_write fifo_data 1 1 } } }
 	frame_start_out_in { ap_none {  { frame_start_out_in in_data 0 1 } } }
 	frame_start_c { ap_none {  { frame_start_c out_data 1 1 } } }
 	frame_start_c17 { ap_none {  { frame_start_c17 out_data 1 1 } } }

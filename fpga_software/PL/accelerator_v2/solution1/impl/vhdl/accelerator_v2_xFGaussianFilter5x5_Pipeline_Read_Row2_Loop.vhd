@@ -18,8 +18,8 @@ port (
     ap_idle : OUT STD_LOGIC;
     ap_ready : OUT STD_LOGIC;
     gray_mat_data44_dout : IN STD_LOGIC_VECTOR (7 downto 0);
-    gray_mat_data44_num_data_valid : IN STD_LOGIC_VECTOR (19 downto 0);
-    gray_mat_data44_fifo_cap : IN STD_LOGIC_VECTOR (19 downto 0);
+    gray_mat_data44_num_data_valid : IN STD_LOGIC_VECTOR (12 downto 0);
+    gray_mat_data44_fifo_cap : IN STD_LOGIC_VECTOR (12 downto 0);
     gray_mat_data44_empty_n : IN STD_LOGIC;
     gray_mat_data44_read : OUT STD_LOGIC;
     buf_V_3_address1 : OUT STD_LOGIC_VECTOR (9 downto 0);

@@ -151,7 +151,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_bgr_stream1 \
     op interface \
-    ports { bgr_stream1_din { O 24 vector } bgr_stream1_num_data_valid { I 20 vector } bgr_stream1_fifo_cap { I 20 vector } bgr_stream1_full_n { I 1 bit } bgr_stream1_write { O 1 bit } } \
+    ports { bgr_stream1_din { O 24 vector } bgr_stream1_num_data_valid { I 12 vector } bgr_stream1_fifo_cap { I 12 vector } bgr_stream1_full_n { I 1 bit } bgr_stream1_write { O 1 bit } } \
 } "
 }
 
@@ -166,7 +166,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_hdr_stream4 \
     op interface \
-    ports { hdr_stream4_din { O 8 vector } hdr_stream4_num_data_valid { I 17 vector } hdr_stream4_fifo_cap { I 17 vector } hdr_stream4_full_n { I 1 bit } hdr_stream4_write { O 1 bit } } \
+    ports { hdr_stream4_din { O 8 vector } hdr_stream4_num_data_valid { I 10 vector } hdr_stream4_fifo_cap { I 10 vector } hdr_stream4_full_n { I 1 bit } hdr_stream4_write { O 1 bit } } \
 } "
 }
 

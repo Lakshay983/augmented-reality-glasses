@@ -18,27 +18,27 @@
 <PipelineType>no</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>6.498</EstimatedClockPeriod>
+<EstimatedClockPeriod>5.886</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>657</Best-caseLatency>
-<Average-caseLatency>657</Average-caseLatency>
-<Worst-caseLatency>657</Worst-caseLatency>
-<Best-caseRealTimeLatency>6.570 us</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>6.570 us</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>6.570 us</Worst-caseRealTimeLatency>
-<Interval-min>657</Interval-min>
-<Interval-max>657</Interval-max>
+<Best-caseLatency>655</Best-caseLatency>
+<Average-caseLatency>655</Average-caseLatency>
+<Worst-caseLatency>655</Worst-caseLatency>
+<Best-caseRealTimeLatency>6.550 us</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>6.550 us</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>6.550 us</Worst-caseRealTimeLatency>
+<Interval-min>655</Interval-min>
+<Interval-max>655</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <Col_Loop>
 <Slack>7.30</Slack>
 <TripCount>644</TripCount>
-<Latency>655</Latency>
-<AbsoluteTimeLatency>6550</AbsoluteTimeLatency>
+<Latency>653</Latency>
+<AbsoluteTimeLatency>6530</AbsoluteTimeLatency>
 <PipelineII>1</PipelineII>
-<PipelineDepth>13</PipelineDepth>
+<PipelineDepth>11</PipelineDepth>
 <InstanceList>
 </InstanceList>
 </Col_Loop>
@@ -47,7 +47,7 @@
 
 <AreaEstimates>
 <Resources>
-<FF>1465</FF>
+<FF>1461</FF>
 <LUT>1081</LUT>
 <BRAM_18K>0</BRAM_18K>
 <DSP>0</DSP>
@@ -130,7 +130,7 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_din1</name>
+<name>grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_din1</name>
 <Object>xFGaussianFilter5x5_Pipeline_Col_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -141,7 +141,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_din2</name>
+<name>grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_din2</name>
 <Object>xFGaussianFilter5x5_Pipeline_Col_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -152,7 +152,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_din3</name>
+<name>grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_din3</name>
 <Object>xFGaussianFilter5x5_Pipeline_Col_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -163,7 +163,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_din4</name>
+<name>grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_din4</name>
 <Object>xFGaussianFilter5x5_Pipeline_Col_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -174,7 +174,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_din5</name>
+<name>grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_din5</name>
 <Object>xFGaussianFilter5x5_Pipeline_Col_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -185,7 +185,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_din6</name>
+<name>grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_din6</name>
 <Object>xFGaussianFilter5x5_Pipeline_Col_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -196,7 +196,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_din7</name>
+<name>grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_din7</name>
 <Object>xFGaussianFilter5x5_Pipeline_Col_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -207,7 +207,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_din8</name>
+<name>grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_din8</name>
 <Object>xFGaussianFilter5x5_Pipeline_Col_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -218,7 +218,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_din9</name>
+<name>grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_din9</name>
 <Object>xFGaussianFilter5x5_Pipeline_Col_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -229,7 +229,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_din10</name>
+<name>grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_din10</name>
 <Object>xFGaussianFilter5x5_Pipeline_Col_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -240,7 +240,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_din11</name>
+<name>grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_din11</name>
 <Object>xFGaussianFilter5x5_Pipeline_Col_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -251,7 +251,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_din12</name>
+<name>grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_din12</name>
 <Object>xFGaussianFilter5x5_Pipeline_Col_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -262,7 +262,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_din13</name>
+<name>grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_din13</name>
 <Object>xFGaussianFilter5x5_Pipeline_Col_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -273,7 +273,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_din14</name>
+<name>grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_din14</name>
 <Object>xFGaussianFilter5x5_Pipeline_Col_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -284,7 +284,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_din15</name>
+<name>grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_din15</name>
 <Object>xFGaussianFilter5x5_Pipeline_Col_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -295,7 +295,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_din16</name>
+<name>grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_din16</name>
 <Object>xFGaussianFilter5x5_Pipeline_Col_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -306,7 +306,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_din17</name>
+<name>grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_din17</name>
 <Object>xFGaussianFilter5x5_Pipeline_Col_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -317,7 +317,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_din18</name>
+<name>grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_din18</name>
 <Object>xFGaussianFilter5x5_Pipeline_Col_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -328,7 +328,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_din19</name>
+<name>grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_din19</name>
 <Object>xFGaussianFilter5x5_Pipeline_Col_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -339,7 +339,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_din20</name>
+<name>grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_din20</name>
 <Object>xFGaussianFilter5x5_Pipeline_Col_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -350,7 +350,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_din21</name>
+<name>grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_din21</name>
 <Object>xFGaussianFilter5x5_Pipeline_Col_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -361,7 +361,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_din22</name>
+<name>grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_din22</name>
 <Object>xFGaussianFilter5x5_Pipeline_Col_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -372,7 +372,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_din23</name>
+<name>grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_din23</name>
 <Object>xFGaussianFilter5x5_Pipeline_Col_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -383,7 +383,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_din24</name>
+<name>grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_din24</name>
 <Object>xFGaussianFilter5x5_Pipeline_Col_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -394,7 +394,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_din25</name>
+<name>grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_din25</name>
 <Object>xFGaussianFilter5x5_Pipeline_Col_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -405,40 +405,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_din26</name>
-<Object>xFGaussianFilter5x5_Pipeline_Col_Loop</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>8</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_din27</name>
-<Object>xFGaussianFilter5x5_Pipeline_Col_Loop</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>8</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_din28</name>
-<Object>xFGaussianFilter5x5_Pipeline_Col_Loop</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>8</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_dout0</name>
+<name>grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_dout0</name>
 <Object>xFGaussianFilter5x5_Pipeline_Col_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -449,7 +416,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_ce</name>
+<name>grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_ce</name>
 <Object>xFGaussianFilter5x5_Pipeline_Col_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -478,7 +445,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>20</Bits>
+<Bits>13</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -489,7 +456,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>20</Bits>
+<Bits>13</Bits>
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -533,7 +500,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>20</Bits>
+<Bits>13</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -544,7 +511,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>20</Bits>
+<Bits>13</Bits>
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -622,39 +589,6 @@
 <IOConfig></IOConfig>
 <Dir>in</Dir>
 <Bits>3</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>p_read</name>
-<Object>p_read</Object>
-<Type>scalar</Type>
-<Scope></Scope>
-<IOProtocol>ap_none</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>in</Dir>
-<Bits>8</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>p_read1</name>
-<Object>p_read1</Object>
-<Type>scalar</Type>
-<Scope></Scope>
-<IOProtocol>ap_none</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>in</Dir>
-<Bits>8</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>p_read2</name>
-<Object>p_read2</Object>
-<Type>scalar</Type>
-<Scope></Scope>
-<IOProtocol>ap_none</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>in</Dir>
-<Bits>8</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>

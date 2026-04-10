@@ -3,18 +3,18 @@ MainSourceFile:  /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL
 Diagnostics:     
   - DiagnosticName:  clang-diagnostic-warning
     Message:         '[xlx-df-check-10] Either use an argument of the function or declare the variable inside the dataflow loop body'
-    FileOffset:      '275:5'
+    FileOffset:      '277:5'
     FilePath:        accelerator_v2.cpp
   - DiagnosticName:  clang-diagnostic-warning
     Message:         '[xlx-df-check-10] Either use an argument of the function or declare the variable inside the dataflow loop body'
-    FileOffset:      '275:18'
+    FileOffset:      '277:18'
     FilePath:        accelerator_v2.cpp
   - DiagnosticName:  clang-diagnostic-warning
     Message:         '[xlx-df-check-10] Either use an argument of the function or declare the variable inside the dataflow loop body'
-    FileOffset:      '283:5'
+    FileOffset:      '285:5'
     FilePath:        accelerator_v2.cpp
   - DiagnosticName:  clang-diagnostic-warning
     Message:         '[xlx-df-check-10] Either use an argument of the function or declare the variable inside the dataflow loop body'
-    FileOffset:      '283:19'
+    FileOffset:      '285:19'
     FilePath:        accelerator_v2.cpp
 ...

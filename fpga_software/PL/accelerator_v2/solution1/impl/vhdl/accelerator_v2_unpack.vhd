@@ -31,13 +31,13 @@ port (
     in_stream_TID : IN STD_LOGIC_VECTOR (0 downto 0);
     in_stream_TDEST : IN STD_LOGIC_VECTOR (0 downto 0);
     bgr_stream1_din : OUT STD_LOGIC_VECTOR (23 downto 0);
-    bgr_stream1_num_data_valid : IN STD_LOGIC_VECTOR (19 downto 0);
-    bgr_stream1_fifo_cap : IN STD_LOGIC_VECTOR (19 downto 0);
+    bgr_stream1_num_data_valid : IN STD_LOGIC_VECTOR (11 downto 0);
+    bgr_stream1_fifo_cap : IN STD_LOGIC_VECTOR (11 downto 0);
     bgr_stream1_full_n : IN STD_LOGIC;
     bgr_stream1_write : OUT STD_LOGIC;
     hdr_stream4_din : OUT STD_LOGIC_VECTOR (7 downto 0);
-    hdr_stream4_num_data_valid : IN STD_LOGIC_VECTOR (16 downto 0);
-    hdr_stream4_fifo_cap : IN STD_LOGIC_VECTOR (16 downto 0);
+    hdr_stream4_num_data_valid : IN STD_LOGIC_VECTOR (9 downto 0);
+    hdr_stream4_fifo_cap : IN STD_LOGIC_VECTOR (9 downto 0);
     hdr_stream4_full_n : IN STD_LOGIC;
     hdr_stream4_write : OUT STD_LOGIC;
     frame_start_out_in : IN STD_LOGIC_VECTOR (0 downto 0);

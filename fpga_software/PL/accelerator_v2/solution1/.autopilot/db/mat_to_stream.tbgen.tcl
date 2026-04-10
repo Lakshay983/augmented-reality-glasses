@@ -30,13 +30,13 @@ set portList {
 	{ ap_idle sc_out sc_logic 1 done -1 } 
 	{ ap_ready sc_out sc_logic 1 ready -1 } 
 	{ blurred_mat_data45_dout sc_in sc_lv 8 signal 0 } 
-	{ blurred_mat_data45_num_data_valid sc_in sc_lv 20 signal 0 } 
-	{ blurred_mat_data45_fifo_cap sc_in sc_lv 20 signal 0 } 
+	{ blurred_mat_data45_num_data_valid sc_in sc_lv 13 signal 0 } 
+	{ blurred_mat_data45_fifo_cap sc_in sc_lv 13 signal 0 } 
 	{ blurred_mat_data45_empty_n sc_in sc_logic 1 signal 0 } 
 	{ blurred_mat_data45_read sc_out sc_logic 1 signal 0 } 
 	{ gray_stream3_din sc_out sc_lv 8 signal 1 } 
-	{ gray_stream3_num_data_valid sc_in sc_lv 20 signal 1 } 
-	{ gray_stream3_fifo_cap sc_in sc_lv 20 signal 1 } 
+	{ gray_stream3_num_data_valid sc_in sc_lv 13 signal 1 } 
+	{ gray_stream3_fifo_cap sc_in sc_lv 13 signal 1 } 
 	{ gray_stream3_full_n sc_in sc_logic 1 signal 1 } 
 	{ gray_stream3_write sc_out sc_logic 1 signal 1 } 
 }
@@ -49,13 +49,13 @@ set NewPortList {[
  	{ "name": "ap_idle", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "done", "bundle":{"name": "ap_idle", "role": "default" }} , 
  	{ "name": "ap_ready", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "ready", "bundle":{"name": "ap_ready", "role": "default" }} , 
  	{ "name": "blurred_mat_data45_dout", "direction": "in", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "blurred_mat_data45", "role": "dout" }} , 
- 	{ "name": "blurred_mat_data45_num_data_valid", "direction": "in", "datatype": "sc_lv", "bitwidth":20, "type": "signal", "bundle":{"name": "blurred_mat_data45", "role": "num_data_valid" }} , 
- 	{ "name": "blurred_mat_data45_fifo_cap", "direction": "in", "datatype": "sc_lv", "bitwidth":20, "type": "signal", "bundle":{"name": "blurred_mat_data45", "role": "fifo_cap" }} , 
+ 	{ "name": "blurred_mat_data45_num_data_valid", "direction": "in", "datatype": "sc_lv", "bitwidth":13, "type": "signal", "bundle":{"name": "blurred_mat_data45", "role": "num_data_valid" }} , 
+ 	{ "name": "blurred_mat_data45_fifo_cap", "direction": "in", "datatype": "sc_lv", "bitwidth":13, "type": "signal", "bundle":{"name": "blurred_mat_data45", "role": "fifo_cap" }} , 
  	{ "name": "blurred_mat_data45_empty_n", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "blurred_mat_data45", "role": "empty_n" }} , 
  	{ "name": "blurred_mat_data45_read", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "blurred_mat_data45", "role": "read" }} , 
  	{ "name": "gray_stream3_din", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "gray_stream3", "role": "din" }} , 
- 	{ "name": "gray_stream3_num_data_valid", "direction": "in", "datatype": "sc_lv", "bitwidth":20, "type": "signal", "bundle":{"name": "gray_stream3", "role": "num_data_valid" }} , 
- 	{ "name": "gray_stream3_fifo_cap", "direction": "in", "datatype": "sc_lv", "bitwidth":20, "type": "signal", "bundle":{"name": "gray_stream3", "role": "fifo_cap" }} , 
+ 	{ "name": "gray_stream3_num_data_valid", "direction": "in", "datatype": "sc_lv", "bitwidth":13, "type": "signal", "bundle":{"name": "gray_stream3", "role": "num_data_valid" }} , 
+ 	{ "name": "gray_stream3_fifo_cap", "direction": "in", "datatype": "sc_lv", "bitwidth":13, "type": "signal", "bundle":{"name": "gray_stream3", "role": "fifo_cap" }} , 
  	{ "name": "gray_stream3_full_n", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "gray_stream3", "role": "full_n" }} , 
  	{ "name": "gray_stream3_write", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "gray_stream3", "role": "write" }}  ]}
 
@@ -75,10 +75,10 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
-			{"Name" : "blurred_mat_data45", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "311696", "DependentChanType" : "0",
+			{"Name" : "blurred_mat_data45", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "3872", "DependentChanType" : "0",
 				"BlockSignal" : [
 					{"Name" : "blurred_mat_data45_blk_n", "Type" : "RtlSignal"}]},
-			{"Name" : "gray_stream3", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "311296", "DependentChanType" : "0",
+			{"Name" : "gray_stream3", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "3220", "DependentChanType" : "0",
 				"BlockSignal" : [
 					{"Name" : "gray_stream3_blk_n", "Type" : "RtlSignal"}]}],
 		"Loop" : [
@@ -104,6 +104,6 @@ set PipelineEnableSignalInfo {[
 ]}
 
 set Spec2ImplPortList { 
-	blurred_mat_data45 { ap_fifo {  { blurred_mat_data45_dout fifo_port_we 0 8 }  { blurred_mat_data45_num_data_valid fifo_status_num_data_valid 0 20 }  { blurred_mat_data45_fifo_cap fifo_update 0 20 }  { blurred_mat_data45_empty_n fifo_status 0 1 }  { blurred_mat_data45_read fifo_data 1 1 } } }
-	gray_stream3 { ap_fifo {  { gray_stream3_din fifo_port_we 1 8 }  { gray_stream3_num_data_valid fifo_status_num_data_valid 0 20 }  { gray_stream3_fifo_cap fifo_update 0 20 }  { gray_stream3_full_n fifo_status 0 1 }  { gray_stream3_write fifo_data 1 1 } } }
+	blurred_mat_data45 { ap_fifo {  { blurred_mat_data45_dout fifo_port_we 0 8 }  { blurred_mat_data45_num_data_valid fifo_status_num_data_valid 0 13 }  { blurred_mat_data45_fifo_cap fifo_update 0 13 }  { blurred_mat_data45_empty_n fifo_status 0 1 }  { blurred_mat_data45_read fifo_data 1 1 } } }
+	gray_stream3 { ap_fifo {  { gray_stream3_din fifo_port_we 1 8 }  { gray_stream3_num_data_valid fifo_status_num_data_valid 0 13 }  { gray_stream3_fifo_cap fifo_update 0 13 }  { gray_stream3_full_n fifo_status 0 1 }  { gray_stream3_write fifo_data 1 1 } } }
 }

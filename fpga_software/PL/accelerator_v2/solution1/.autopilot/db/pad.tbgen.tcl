@@ -33,13 +33,13 @@ set portList {
 	{ start_out sc_out sc_logic 1 signal -1 } 
 	{ start_write sc_out sc_logic 1 signal -1 } 
 	{ bgr_stream1_dout sc_in sc_lv 24 signal 0 } 
-	{ bgr_stream1_num_data_valid sc_in sc_lv 20 signal 0 } 
-	{ bgr_stream1_fifo_cap sc_in sc_lv 20 signal 0 } 
+	{ bgr_stream1_num_data_valid sc_in sc_lv 12 signal 0 } 
+	{ bgr_stream1_fifo_cap sc_in sc_lv 12 signal 0 } 
 	{ bgr_stream1_empty_n sc_in sc_logic 1 signal 0 } 
 	{ bgr_stream1_read sc_out sc_logic 1 signal 0 } 
 	{ padded_stream2_din sc_out sc_lv 24 signal 1 } 
-	{ padded_stream2_num_data_valid sc_in sc_lv 20 signal 1 } 
-	{ padded_stream2_fifo_cap sc_in sc_lv 20 signal 1 } 
+	{ padded_stream2_num_data_valid sc_in sc_lv 12 signal 1 } 
+	{ padded_stream2_fifo_cap sc_in sc_lv 12 signal 1 } 
 	{ padded_stream2_full_n sc_in sc_logic 1 signal 1 } 
 	{ padded_stream2_write sc_out sc_logic 1 signal 1 } 
 }
@@ -55,13 +55,13 @@ set NewPortList {[
  	{ "name": "start_out", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "start_out", "role": "default" }} , 
  	{ "name": "start_write", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "start_write", "role": "default" }} , 
  	{ "name": "bgr_stream1_dout", "direction": "in", "datatype": "sc_lv", "bitwidth":24, "type": "signal", "bundle":{"name": "bgr_stream1", "role": "dout" }} , 
- 	{ "name": "bgr_stream1_num_data_valid", "direction": "in", "datatype": "sc_lv", "bitwidth":20, "type": "signal", "bundle":{"name": "bgr_stream1", "role": "num_data_valid" }} , 
- 	{ "name": "bgr_stream1_fifo_cap", "direction": "in", "datatype": "sc_lv", "bitwidth":20, "type": "signal", "bundle":{"name": "bgr_stream1", "role": "fifo_cap" }} , 
+ 	{ "name": "bgr_stream1_num_data_valid", "direction": "in", "datatype": "sc_lv", "bitwidth":12, "type": "signal", "bundle":{"name": "bgr_stream1", "role": "num_data_valid" }} , 
+ 	{ "name": "bgr_stream1_fifo_cap", "direction": "in", "datatype": "sc_lv", "bitwidth":12, "type": "signal", "bundle":{"name": "bgr_stream1", "role": "fifo_cap" }} , 
  	{ "name": "bgr_stream1_empty_n", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "bgr_stream1", "role": "empty_n" }} , 
  	{ "name": "bgr_stream1_read", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "bgr_stream1", "role": "read" }} , 
  	{ "name": "padded_stream2_din", "direction": "out", "datatype": "sc_lv", "bitwidth":24, "type": "signal", "bundle":{"name": "padded_stream2", "role": "din" }} , 
- 	{ "name": "padded_stream2_num_data_valid", "direction": "in", "datatype": "sc_lv", "bitwidth":20, "type": "signal", "bundle":{"name": "padded_stream2", "role": "num_data_valid" }} , 
- 	{ "name": "padded_stream2_fifo_cap", "direction": "in", "datatype": "sc_lv", "bitwidth":20, "type": "signal", "bundle":{"name": "padded_stream2", "role": "fifo_cap" }} , 
+ 	{ "name": "padded_stream2_num_data_valid", "direction": "in", "datatype": "sc_lv", "bitwidth":12, "type": "signal", "bundle":{"name": "padded_stream2", "role": "num_data_valid" }} , 
+ 	{ "name": "padded_stream2_fifo_cap", "direction": "in", "datatype": "sc_lv", "bitwidth":12, "type": "signal", "bundle":{"name": "padded_stream2", "role": "fifo_cap" }} , 
  	{ "name": "padded_stream2_full_n", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "padded_stream2", "role": "full_n" }} , 
  	{ "name": "padded_stream2_write", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "padded_stream2", "role": "write" }}  ]}
 
@@ -81,11 +81,11 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
-			{"Name" : "bgr_stream1", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "307200", "DependentChanType" : "0",
+			{"Name" : "bgr_stream1", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "1288", "DependentChanType" : "0",
 				"SubConnect" : [
 					{"ID" : "5", "SubInstance" : "grp_pad_Pipeline_VITIS_LOOP_67_1_VITIS_LOOP_68_2_fu_329", "Port" : "bgr_stream1", "Inst_start_state" : "1", "Inst_end_state" : "2"},
 					{"ID" : "10", "SubInstance" : "grp_pad_Pipeline_VITIS_LOOP_94_6_fu_350", "Port" : "bgr_stream1", "Inst_start_state" : "14", "Inst_end_state" : "15"}]},
-			{"Name" : "padded_stream2", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["0","0"], "DependentChan" : "0", "DependentChanDepth" : "311296", "DependentChanType" : "0",
+			{"Name" : "padded_stream2", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["0","0"], "DependentChan" : "0", "DependentChanDepth" : "1932", "DependentChanType" : "0",
 				"BlockSignal" : [
 					{"Name" : "padded_stream2_blk_n", "Type" : "RtlSignal"}],
 				"SubConnect" : [
@@ -290,6 +290,6 @@ set PipelineEnableSignalInfo {[
 ]}
 
 set Spec2ImplPortList { 
-	bgr_stream1 { ap_fifo {  { bgr_stream1_dout fifo_port_we 0 24 }  { bgr_stream1_num_data_valid fifo_status_num_data_valid 0 20 }  { bgr_stream1_fifo_cap fifo_update 0 20 }  { bgr_stream1_empty_n fifo_status 0 1 }  { bgr_stream1_read fifo_data 1 1 } } }
-	padded_stream2 { ap_fifo {  { padded_stream2_din fifo_port_we 1 24 }  { padded_stream2_num_data_valid fifo_status_num_data_valid 0 20 }  { padded_stream2_fifo_cap fifo_update 0 20 }  { padded_stream2_full_n fifo_status 0 1 }  { padded_stream2_write fifo_data 1 1 } } }
+	bgr_stream1 { ap_fifo {  { bgr_stream1_dout fifo_port_we 0 24 }  { bgr_stream1_num_data_valid fifo_status_num_data_valid 0 12 }  { bgr_stream1_fifo_cap fifo_update 0 12 }  { bgr_stream1_empty_n fifo_status 0 1 }  { bgr_stream1_read fifo_data 1 1 } } }
+	padded_stream2 { ap_fifo {  { padded_stream2_din fifo_port_we 1 24 }  { padded_stream2_num_data_valid fifo_status_num_data_valid 0 12 }  { padded_stream2_fifo_cap fifo_update 0 12 }  { padded_stream2_full_n fifo_status 0 1 }  { padded_stream2_write fifo_data 1 1 } } }
 }

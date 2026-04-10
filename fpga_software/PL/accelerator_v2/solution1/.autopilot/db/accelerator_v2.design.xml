@@ -8,19 +8,19 @@
 <InstName>Block_entry1_proc_U0</InstName>
 <ModuleName>Block_entry1_proc</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>126</ID>
+<ID>128</ID>
 </Instance>
 <Instance>
 <InstName>unpack_U0</InstName>
 <ModuleName>unpack</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>131</ID>
+<ID>133</ID>
 </Instance>
 <Instance>
 <InstName>pad_U0</InstName>
 <ModuleName>pad</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>154</ID>
+<ID>156</ID>
 <InstancesList>
 <Instance>
 <InstName>grp_pad_Pipeline_VITIS_LOOP_67_1_VITIS_LOOP_68_2_fu_329</InstName>
@@ -58,7 +58,7 @@
 <InstName>process_pixels_U0</InstName>
 <ModuleName>process_pixels</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>160</ID>
+<ID>162</ID>
 <InstancesList>
 <Instance>
 <InstName>stream_to_mat_U0</InstName>
@@ -67,80 +67,68 @@
 <ID>52</ID>
 </Instance>
 <Instance>
-<InstName>bgr2gray_9_0_484_644_1_311696_311696_U0</InstName>
-<ModuleName>bgr2gray_9_0_484_644_1_311696_311696_s</ModuleName>
+<InstName>bgr2gray_9_0_484_644_1_3872_3872_U0</InstName>
+<ModuleName>bgr2gray_9_0_484_644_1_3872_3872_s</ModuleName>
 <IsCompInst>true</IsCompInst>
 <ID>59</ID>
 <InstancesList>
 <Instance>
-<InstName>grp_bgr2gray_9_0_484_644_1_311696_311696_Pipeline_columnloop_fu_38</InstName>
-<ModuleName>bgr2gray_9_0_484_644_1_311696_311696_Pipeline_columnloop</ModuleName>
+<InstName>grp_bgr2gray_9_0_484_644_1_3872_3872_Pipeline_columnloop_fu_38</InstName>
+<ModuleName>bgr2gray_9_0_484_644_1_3872_3872_Pipeline_columnloop</ModuleName>
 <IsCompInst>true</IsCompInst>
 <ID>38</ID>
 </Instance>
 </InstancesList>
 </Instance>
 <Instance>
-<InstName>GaussianBlur_5_1_0_484_644_1_311696_311696_U0</InstName>
-<ModuleName>GaussianBlur_5_1_0_484_644_1_311696_311696_s</ModuleName>
+<InstName>GaussianBlur_5_1_0_484_644_1_3872_3872_U0</InstName>
+<ModuleName>GaussianBlur_5_1_0_484_644_1_3872_3872_s</ModuleName>
 <IsCompInst>true</IsCompInst>
 <ID>65</ID>
 <InstancesList>
 <Instance>
-<InstName>grp_GaussianBlur_5_1_0_484_644_1_311696_311696_Pipeline_VITIS_LOOP_85_1_fu_44</InstName>
-<ModuleName>GaussianBlur_5_1_0_484_644_1_311696_311696_Pipeline_VITIS_LOOP_85_1</ModuleName>
+<InstName>grp_xFGaussianFilter5x5_0_484_644_1_0_1_3872_3872_1_644_false_s_fu_16</InstName>
+<ModuleName>xFGaussianFilter5x5_0_484_644_1_0_1_3872_3872_1_644_false_s</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>44</ID>
-</Instance>
-<Instance>
-<InstName>grp_GaussianBlur_5_1_0_484_644_1_311696_311696_Pipeline_VITIS_LOOP_94_2_fu_51</InstName>
-<ModuleName>GaussianBlur_5_1_0_484_644_1_311696_311696_Pipeline_VITIS_LOOP_94_2</ModuleName>
-<IsCompInst>true</IsCompInst>
-<ID>51</ID>
-</Instance>
-<Instance>
-<InstName>grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60</InstName>
-<ModuleName>xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s</ModuleName>
-<IsCompInst>true</IsCompInst>
-<ID>60</ID>
+<ID>16</ID>
 <InstancesList>
 <Instance>
-<InstName>grp_xFGaussianFilter5x5_Pipeline_Clear_Row_Loop_fu_408</InstName>
+<InstName>grp_xFGaussianFilter5x5_Pipeline_Clear_Row_Loop_fu_370</InstName>
 <ModuleName>xFGaussianFilter5x5_Pipeline_Clear_Row_Loop</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>408</ID>
+<ID>370</ID>
 </Instance>
 <Instance>
-<InstName>grp_xFGaussianFilter5x5_Pipeline_Read_Row2_Loop_fu_417</InstName>
+<InstName>grp_xFGaussianFilter5x5_Pipeline_Read_Row2_Loop_fu_382</InstName>
 <ModuleName>xFGaussianFilter5x5_Pipeline_Read_Row2_Loop</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>417</ID>
+<ID>382</ID>
 </Instance>
 <Instance>
-<InstName>grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424</InstName>
+<InstName>grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_389</InstName>
 <ModuleName>xFGaussianFilter5x5_Pipeline_Col_Loop</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>424</ID>
+<ID>389</ID>
 <InstancesList>
 <Instance>
-<InstName>grp_xfapplygaussian5x5_1_0_false_s_fu_536</InstName>
+<InstName>grp_xfapplygaussian5x5_1_0_false_s_fu_510</InstName>
 <ModuleName>xfapplygaussian5x5_1_0_false_s</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>536</ID>
+<ID>510</ID>
 </Instance>
 </InstancesList>
 </Instance>
 <Instance>
-<InstName>grp_xfapplygaussian5x5_1_0_false_s_fu_322</InstName>
+<InstName>grp_xfapplygaussian5x5_1_0_false_s_fu_290</InstName>
 <ModuleName>xfapplygaussian5x5_1_0_false_s</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>322</ID>
+<ID>290</ID>
 </Instance>
 <Instance>
-<InstName>grp_xfapplygaussian5x5_1_0_false_s_fu_243</InstName>
+<InstName>grp_xfapplygaussian5x5_1_0_false_s_fu_217</InstName>
 <ModuleName>xfapplygaussian5x5_1_0_false_s</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>243</ID>
+<ID>217</ID>
 </Instance>
 </InstancesList>
 </Instance>
@@ -158,23 +146,23 @@
 <InstName>repack_U0</InstName>
 <ModuleName>repack</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>166</ID>
+<ID>168</ID>
 <InstancesList>
 <Instance>
-<InstName>grp_repack_Pipeline_VITIS_LOOP_205_2_fu_92</InstName>
-<ModuleName>repack_Pipeline_VITIS_LOOP_205_2</ModuleName>
+<InstName>grp_repack_Pipeline_VITIS_LOOP_206_2_fu_92</InstName>
+<ModuleName>repack_Pipeline_VITIS_LOOP_206_2</ModuleName>
 <IsCompInst>true</IsCompInst>
 <ID>92</ID>
 </Instance>
 <Instance>
-<InstName>grp_repack_Pipeline_VITIS_LOOP_211_3_fu_100</InstName>
-<ModuleName>repack_Pipeline_VITIS_LOOP_211_3</ModuleName>
+<InstName>grp_repack_Pipeline_VITIS_LOOP_212_3_fu_100</InstName>
+<ModuleName>repack_Pipeline_VITIS_LOOP_212_3</ModuleName>
 <IsCompInst>true</IsCompInst>
 <ID>100</ID>
 </Instance>
 <Instance>
-<InstName>grp_repack_Pipeline_VITIS_LOOP_238_5_fu_122</InstName>
-<ModuleName>repack_Pipeline_VITIS_LOOP_238_5</ModuleName>
+<InstName>grp_repack_Pipeline_VITIS_LOOP_239_5_fu_122</InstName>
+<ModuleName>repack_Pipeline_VITIS_LOOP_239_5</ModuleName>
 <IsCompInst>true</IsCompInst>
 <ID>122</ID>
 </Instance>
@@ -184,13 +172,13 @@
 <InstName>Block_entry14_proc_U0</InstName>
 <ModuleName>Block_entry14_proc</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>186</ID>
+<ID>188</ID>
 </Instance>
 <Instance>
 <InstName>Block_entry110_proc_U0</InstName>
 <ModuleName>Block_entry110_proc</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>193</ID>
+<ID>195</ID>
 </Instance>
 </InstancesList>
 </TopModule>
@@ -610,7 +598,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>20</Bits>
+<Bits>12</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -621,7 +609,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>20</Bits>
+<Bits>12</Bits>
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -665,7 +653,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>17</Bits>
+<Bits>10</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -676,7 +664,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>17</Bits>
+<Bits>10</Bits>
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -1028,7 +1016,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>20</Bits>
+<Bits>12</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -1039,7 +1027,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>20</Bits>
+<Bits>12</Bits>
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -1339,7 +1327,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>20</Bits>
+<Bits>12</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -1350,7 +1338,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>20</Bits>
+<Bits>12</Bits>
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -1595,7 +1583,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>20</Bits>
+<Bits>12</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -1606,7 +1594,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>20</Bits>
+<Bits>12</Bits>
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -1873,7 +1861,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>20</Bits>
+<Bits>12</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -1884,7 +1872,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>20</Bits>
+<Bits>12</Bits>
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -2195,7 +2183,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>20</Bits>
+<Bits>12</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -2206,7 +2194,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>20</Bits>
+<Bits>12</Bits>
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -2530,7 +2518,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>20</Bits>
+<Bits>12</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -2541,7 +2529,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>20</Bits>
+<Bits>12</Bits>
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -2585,7 +2573,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>20</Bits>
+<Bits>12</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -2596,7 +2584,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>20</Bits>
+<Bits>12</Bits>
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -2808,7 +2796,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>20</Bits>
+<Bits>12</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -2819,7 +2807,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>20</Bits>
+<Bits>12</Bits>
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -2863,7 +2851,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>20</Bits>
+<Bits>13</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -2874,7 +2862,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>20</Bits>
+<Bits>13</Bits>
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -2902,7 +2890,7 @@
 </InterfaceSummary>
 </Module>
 <Module>
-<Name>bgr2gray_9_0_484_644_1_311696_311696_Pipeline_columnloop</Name>
+<Name>bgr2gray_9_0_484_644_1_3872_3872_Pipeline_columnloop</Name>
 <Loops>
 <columnloop></columnloop>
 </Loops>
@@ -2959,7 +2947,7 @@
 <InterfaceSummary>
 <RtlPorts>
 <name>ap_clk</name>
-<Object>bgr2gray&lt;9, 0, 484, 644, 1, 311696, 311696&gt;_Pipeline_columnloop</Object>
+<Object>bgr2gray&lt;9, 0, 484, 644, 1, 3872, 3872&gt;_Pipeline_columnloop</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -2970,7 +2958,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_rst</name>
-<Object>bgr2gray&lt;9, 0, 484, 644, 1, 311696, 311696&gt;_Pipeline_columnloop</Object>
+<Object>bgr2gray&lt;9, 0, 484, 644, 1, 3872, 3872&gt;_Pipeline_columnloop</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -2981,7 +2969,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_start</name>
-<Object>bgr2gray&lt;9, 0, 484, 644, 1, 311696, 311696&gt;_Pipeline_columnloop</Object>
+<Object>bgr2gray&lt;9, 0, 484, 644, 1, 3872, 3872&gt;_Pipeline_columnloop</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -2992,7 +2980,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_done</name>
-<Object>bgr2gray&lt;9, 0, 484, 644, 1, 311696, 311696&gt;_Pipeline_columnloop</Object>
+<Object>bgr2gray&lt;9, 0, 484, 644, 1, 3872, 3872&gt;_Pipeline_columnloop</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -3003,7 +2991,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_idle</name>
-<Object>bgr2gray&lt;9, 0, 484, 644, 1, 311696, 311696&gt;_Pipeline_columnloop</Object>
+<Object>bgr2gray&lt;9, 0, 484, 644, 1, 3872, 3872&gt;_Pipeline_columnloop</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -3014,7 +3002,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_ready</name>
-<Object>bgr2gray&lt;9, 0, 484, 644, 1, 311696, 311696&gt;_Pipeline_columnloop</Object>
+<Object>bgr2gray&lt;9, 0, 484, 644, 1, 3872, 3872&gt;_Pipeline_columnloop</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -3042,7 +3030,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>20</Bits>
+<Bits>13</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -3053,7 +3041,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>20</Bits>
+<Bits>13</Bits>
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -3097,7 +3085,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>20</Bits>
+<Bits>13</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -3108,7 +3096,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>20</Bits>
+<Bits>13</Bits>
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -3136,7 +3124,7 @@
 </InterfaceSummary>
 </Module>
 <Module>
-<Name>bgr2gray_9_0_484_644_1_311696_311696_s</Name>
+<Name>bgr2gray_9_0_484_644_1_3872_3872_s</Name>
 <Loops>
 <rowloop></rowloop>
 </Loops>
@@ -3167,7 +3155,7 @@
 <PipelineDepth>653</PipelineDepth>
 <PipelineType>no</PipelineType>
 <InstanceList>
-<Instance>grp_bgr2gray_9_0_484_644_1_311696_311696_Pipeline_columnloop_fu_38</Instance>
+<Instance>grp_bgr2gray_9_0_484_644_1_3872_3872_Pipeline_columnloop_fu_38</Instance>
 </InstanceList>
 </rowloop>
 </SummaryOfLoopLatency>
@@ -3194,7 +3182,7 @@
 <InterfaceSummary>
 <RtlPorts>
 <name>ap_clk</name>
-<Object>bgr2gray&lt;9, 0, 484, 644, 1, 311696, 311696&gt;</Object>
+<Object>bgr2gray&lt;9, 0, 484, 644, 1, 3872, 3872&gt;</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -3205,7 +3193,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_rst</name>
-<Object>bgr2gray&lt;9, 0, 484, 644, 1, 311696, 311696&gt;</Object>
+<Object>bgr2gray&lt;9, 0, 484, 644, 1, 3872, 3872&gt;</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -3216,7 +3204,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_start</name>
-<Object>bgr2gray&lt;9, 0, 484, 644, 1, 311696, 311696&gt;</Object>
+<Object>bgr2gray&lt;9, 0, 484, 644, 1, 3872, 3872&gt;</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -3227,7 +3215,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>start_full_n</name>
-<Object>bgr2gray&lt;9, 0, 484, 644, 1, 311696, 311696&gt;</Object>
+<Object>bgr2gray&lt;9, 0, 484, 644, 1, 3872, 3872&gt;</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -3238,7 +3226,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_done</name>
-<Object>bgr2gray&lt;9, 0, 484, 644, 1, 311696, 311696&gt;</Object>
+<Object>bgr2gray&lt;9, 0, 484, 644, 1, 3872, 3872&gt;</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -3249,7 +3237,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_continue</name>
-<Object>bgr2gray&lt;9, 0, 484, 644, 1, 311696, 311696&gt;</Object>
+<Object>bgr2gray&lt;9, 0, 484, 644, 1, 3872, 3872&gt;</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -3260,7 +3248,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_idle</name>
-<Object>bgr2gray&lt;9, 0, 484, 644, 1, 311696, 311696&gt;</Object>
+<Object>bgr2gray&lt;9, 0, 484, 644, 1, 3872, 3872&gt;</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -3271,7 +3259,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_ready</name>
-<Object>bgr2gray&lt;9, 0, 484, 644, 1, 311696, 311696&gt;</Object>
+<Object>bgr2gray&lt;9, 0, 484, 644, 1, 3872, 3872&gt;</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -3282,7 +3270,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>start_out</name>
-<Object>bgr2gray&lt;9, 0, 484, 644, 1, 311696, 311696&gt;</Object>
+<Object>bgr2gray&lt;9, 0, 484, 644, 1, 3872, 3872&gt;</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -3293,7 +3281,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>start_write</name>
-<Object>bgr2gray&lt;9, 0, 484, 644, 1, 311696, 311696&gt;</Object>
+<Object>bgr2gray&lt;9, 0, 484, 644, 1, 3872, 3872&gt;</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -3321,7 +3309,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>20</Bits>
+<Bits>13</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -3332,7 +3320,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>20</Bits>
+<Bits>13</Bits>
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -3376,7 +3364,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>20</Bits>
+<Bits>13</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -3387,7 +3375,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>20</Bits>
+<Bits>13</Bits>
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -3407,650 +3395,6 @@
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_fifo</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>1</Bits>
-<Attribute>control</Attribute>
-</RtlPorts>
-</InterfaceSummary>
-</Module>
-<Module>
-<Name>GaussianBlur_5_1_0_484_644_1_311696_311696_Pipeline_VITIS_LOOP_85_1</Name>
-<Loops>
-<VITIS_LOOP_85_1></VITIS_LOOP_85_1>
-</Loops>
-<PerformanceEstimates>
-<SummaryOfTimingAnalysis>
-<TargetClockPeriod>10.00</TargetClockPeriod>
-<ClockUncertainty>2.70</ClockUncertainty>
-<EstimatedClockPeriod>6.794</EstimatedClockPeriod>
-</SummaryOfTimingAnalysis>
-<SummaryOfOverallLatency>
-<Best-caseLatency>44</Best-caseLatency>
-<Average-caseLatency>44</Average-caseLatency>
-<Worst-caseLatency>44</Worst-caseLatency>
-<Best-caseRealTimeLatency>0.440 us</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>0.440 us</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>0.440 us</Worst-caseRealTimeLatency>
-<PipelineInitiationInterval>44</PipelineInitiationInterval>
-<PipelineType>no</PipelineType>
-</SummaryOfOverallLatency>
-<SummaryOfLoopLatency>
-<VITIS_LOOP_85_1>
-<Name>VITIS_LOOP_85_1</Name>
-<Slack>7.30</Slack>
-<TripCount>5</TripCount>
-<Latency>42</Latency>
-<AbsoluteTimeLatency>0.420 us</AbsoluteTimeLatency>
-<PipelineII>4</PipelineII>
-<PipelineDepth>27</PipelineDepth>
-<PipelineType>yes</PipelineType>
-<InstanceList>
-</InstanceList>
-</VITIS_LOOP_85_1>
-</SummaryOfLoopLatency>
-</PerformanceEstimates>
-<AreaEstimates>
-<Resources>
-<DSP>7</DSP>
-<AVAIL_DSP>360</AVAIL_DSP>
-<UTIL_DSP>1</UTIL_DSP>
-<FF>703</FF>
-<AVAIL_FF>141120</AVAIL_FF>
-<UTIL_FF>~0</UTIL_FF>
-<LUT>1202</LUT>
-<AVAIL_LUT>70560</AVAIL_LUT>
-<UTIL_LUT>1</UTIL_LUT>
-<BRAM_18K>0</BRAM_18K>
-<AVAIL_BRAM>432</AVAIL_BRAM>
-<UTIL_BRAM>0</UTIL_BRAM>
-<URAM>0</URAM>
-<AVAIL_URAM>0</AVAIL_URAM>
-<UTIL_URAM>0</UTIL_URAM>
-</Resources>
-</AreaEstimates>
-<InterfaceSummary>
-<RtlPorts>
-<name>ap_clk</name>
-<Object>GaussianBlur&lt;5, 1, 0, 484, 644, 1, 311696, 311696&gt;_Pipeline_VITIS_LOOP_85_1</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>in</Dir>
-<Bits>1</Bits>
-<Attribute>control</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>ap_rst</name>
-<Object>GaussianBlur&lt;5, 1, 0, 484, 644, 1, 311696, 311696&gt;_Pipeline_VITIS_LOOP_85_1</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>in</Dir>
-<Bits>1</Bits>
-<Attribute>control</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>ap_start</name>
-<Object>GaussianBlur&lt;5, 1, 0, 484, 644, 1, 311696, 311696&gt;_Pipeline_VITIS_LOOP_85_1</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>in</Dir>
-<Bits>1</Bits>
-<Attribute>control</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>ap_done</name>
-<Object>GaussianBlur&lt;5, 1, 0, 484, 644, 1, 311696, 311696&gt;_Pipeline_VITIS_LOOP_85_1</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>1</Bits>
-<Attribute>control</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>ap_idle</name>
-<Object>GaussianBlur&lt;5, 1, 0, 484, 644, 1, 311696, 311696&gt;_Pipeline_VITIS_LOOP_85_1</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>1</Bits>
-<Attribute>control</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>ap_ready</name>
-<Object>GaussianBlur&lt;5, 1, 0, 484, 644, 1, 311696, 311696&gt;_Pipeline_VITIS_LOOP_85_1</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>1</Bits>
-<Attribute>control</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>grp_fu_134_p_din0</name>
-<Object>GaussianBlur&lt;5, 1, 0, 484, 644, 1, 311696, 311696&gt;_Pipeline_VITIS_LOOP_85_1</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>32</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>grp_fu_134_p_din1</name>
-<Object>GaussianBlur&lt;5, 1, 0, 484, 644, 1, 311696, 311696&gt;_Pipeline_VITIS_LOOP_85_1</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>32</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>grp_fu_134_p_opcode</name>
-<Object>GaussianBlur&lt;5, 1, 0, 484, 644, 1, 311696, 311696&gt;_Pipeline_VITIS_LOOP_85_1</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>1</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>grp_fu_134_p_dout0</name>
-<Object>GaussianBlur&lt;5, 1, 0, 484, 644, 1, 311696, 311696&gt;_Pipeline_VITIS_LOOP_85_1</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>in</Dir>
-<Bits>32</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>grp_fu_134_p_ce</name>
-<Object>GaussianBlur&lt;5, 1, 0, 484, 644, 1, 311696, 311696&gt;_Pipeline_VITIS_LOOP_85_1</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>1</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>grp_fu_138_p_din0</name>
-<Object>GaussianBlur&lt;5, 1, 0, 484, 644, 1, 311696, 311696&gt;_Pipeline_VITIS_LOOP_85_1</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>32</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>grp_fu_138_p_din1</name>
-<Object>GaussianBlur&lt;5, 1, 0, 484, 644, 1, 311696, 311696&gt;_Pipeline_VITIS_LOOP_85_1</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>32</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>grp_fu_138_p_dout0</name>
-<Object>GaussianBlur&lt;5, 1, 0, 484, 644, 1, 311696, 311696&gt;_Pipeline_VITIS_LOOP_85_1</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>in</Dir>
-<Bits>32</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>grp_fu_138_p_ce</name>
-<Object>GaussianBlur&lt;5, 1, 0, 484, 644, 1, 311696, 311696&gt;_Pipeline_VITIS_LOOP_85_1</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>1</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>cf_address0</name>
-<Object>cf</Object>
-<Type>array</Type>
-<Scope></Scope>
-<IOProtocol>ap_memory</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>3</Bits>
-<Attribute>address</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>cf_ce0</name>
-<Object>cf</Object>
-<Type>array</Type>
-<Scope></Scope>
-<IOProtocol>ap_memory</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>1</Bits>
-<Attribute>control</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>cf_we0</name>
-<Object>cf</Object>
-<Type>array</Type>
-<Scope></Scope>
-<IOProtocol>ap_memory</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>1</Bits>
-<Attribute>control</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>cf_d0</name>
-<Object>cf</Object>
-<Type>array</Type>
-<Scope></Scope>
-<IOProtocol>ap_memory</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>32</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>sum_1_out</name>
-<Object>sum_1_out</Object>
-<Type>pointer</Type>
-<Scope></Scope>
-<IOProtocol>ap_vld</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>32</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>sum_1_out_ap_vld</name>
-<Object>sum_1_out</Object>
-<Type>pointer</Type>
-<Scope></Scope>
-<IOProtocol>ap_vld</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>1</Bits>
-<Attribute>control</Attribute>
-</RtlPorts>
-</InterfaceSummary>
-</Module>
-<Module>
-<Name>GaussianBlur_5_1_0_484_644_1_311696_311696_Pipeline_VITIS_LOOP_94_2</Name>
-<Loops>
-<VITIS_LOOP_94_2></VITIS_LOOP_94_2>
-</Loops>
-<PerformanceEstimates>
-<SummaryOfTimingAnalysis>
-<TargetClockPeriod>10.00</TargetClockPeriod>
-<ClockUncertainty>2.70</ClockUncertainty>
-<EstimatedClockPeriod>6.919</EstimatedClockPeriod>
-</SummaryOfTimingAnalysis>
-<SummaryOfOverallLatency>
-<Best-caseLatency>120</Best-caseLatency>
-<Average-caseLatency>120</Average-caseLatency>
-<Worst-caseLatency>120</Worst-caseLatency>
-<Best-caseRealTimeLatency>1.200 us</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>1.200 us</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>1.200 us</Worst-caseRealTimeLatency>
-<PipelineInitiationInterval>120</PipelineInitiationInterval>
-<PipelineType>no</PipelineType>
-</SummaryOfOverallLatency>
-<SummaryOfLoopLatency>
-<VITIS_LOOP_94_2>
-<Name>VITIS_LOOP_94_2</Name>
-<Slack>7.30</Slack>
-<TripCount>5</TripCount>
-<Latency>118</Latency>
-<AbsoluteTimeLatency>1.180 us</AbsoluteTimeLatency>
-<PipelineII>22</PipelineII>
-<PipelineDepth>31</PipelineDepth>
-<PipelineType>yes</PipelineType>
-<InstanceList>
-</InstanceList>
-</VITIS_LOOP_94_2>
-</SummaryOfLoopLatency>
-</PerformanceEstimates>
-<AreaEstimates>
-<Resources>
-<DSP>3</DSP>
-<AVAIL_DSP>360</AVAIL_DSP>
-<UTIL_DSP>~0</UTIL_DSP>
-<FF>799</FF>
-<AVAIL_FF>141120</AVAIL_FF>
-<UTIL_FF>~0</UTIL_FF>
-<LUT>1847</LUT>
-<AVAIL_LUT>70560</AVAIL_LUT>
-<UTIL_LUT>2</UTIL_LUT>
-<BRAM_18K>0</BRAM_18K>
-<AVAIL_BRAM>432</AVAIL_BRAM>
-<UTIL_BRAM>0</UTIL_BRAM>
-<URAM>0</URAM>
-<AVAIL_URAM>0</AVAIL_URAM>
-<UTIL_URAM>0</UTIL_URAM>
-</Resources>
-</AreaEstimates>
-<InterfaceSummary>
-<RtlPorts>
-<name>ap_clk</name>
-<Object>GaussianBlur&lt;5, 1, 0, 484, 644, 1, 311696, 311696&gt;_Pipeline_VITIS_LOOP_94_2</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>in</Dir>
-<Bits>1</Bits>
-<Attribute>control</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>ap_rst</name>
-<Object>GaussianBlur&lt;5, 1, 0, 484, 644, 1, 311696, 311696&gt;_Pipeline_VITIS_LOOP_94_2</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>in</Dir>
-<Bits>1</Bits>
-<Attribute>control</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>ap_start</name>
-<Object>GaussianBlur&lt;5, 1, 0, 484, 644, 1, 311696, 311696&gt;_Pipeline_VITIS_LOOP_94_2</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>in</Dir>
-<Bits>1</Bits>
-<Attribute>control</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>ap_done</name>
-<Object>GaussianBlur&lt;5, 1, 0, 484, 644, 1, 311696, 311696&gt;_Pipeline_VITIS_LOOP_94_2</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>1</Bits>
-<Attribute>control</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>ap_idle</name>
-<Object>GaussianBlur&lt;5, 1, 0, 484, 644, 1, 311696, 311696&gt;_Pipeline_VITIS_LOOP_94_2</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>1</Bits>
-<Attribute>control</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>ap_ready</name>
-<Object>GaussianBlur&lt;5, 1, 0, 484, 644, 1, 311696, 311696&gt;_Pipeline_VITIS_LOOP_94_2</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>1</Bits>
-<Attribute>control</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>grp_fu_134_p_din0</name>
-<Object>GaussianBlur&lt;5, 1, 0, 484, 644, 1, 311696, 311696&gt;_Pipeline_VITIS_LOOP_94_2</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>32</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>grp_fu_134_p_din1</name>
-<Object>GaussianBlur&lt;5, 1, 0, 484, 644, 1, 311696, 311696&gt;_Pipeline_VITIS_LOOP_94_2</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>32</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>grp_fu_134_p_opcode</name>
-<Object>GaussianBlur&lt;5, 1, 0, 484, 644, 1, 311696, 311696&gt;_Pipeline_VITIS_LOOP_94_2</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>2</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>grp_fu_134_p_dout0</name>
-<Object>GaussianBlur&lt;5, 1, 0, 484, 644, 1, 311696, 311696&gt;_Pipeline_VITIS_LOOP_94_2</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>in</Dir>
-<Bits>32</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>grp_fu_134_p_ce</name>
-<Object>GaussianBlur&lt;5, 1, 0, 484, 644, 1, 311696, 311696&gt;_Pipeline_VITIS_LOOP_94_2</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>1</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>grp_fu_138_p_din0</name>
-<Object>GaussianBlur&lt;5, 1, 0, 484, 644, 1, 311696, 311696&gt;_Pipeline_VITIS_LOOP_94_2</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>32</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>grp_fu_138_p_din1</name>
-<Object>GaussianBlur&lt;5, 1, 0, 484, 644, 1, 311696, 311696&gt;_Pipeline_VITIS_LOOP_94_2</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>32</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>grp_fu_138_p_dout0</name>
-<Object>GaussianBlur&lt;5, 1, 0, 484, 644, 1, 311696, 311696&gt;_Pipeline_VITIS_LOOP_94_2</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>in</Dir>
-<Bits>32</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>grp_fu_138_p_ce</name>
-<Object>GaussianBlur&lt;5, 1, 0, 484, 644, 1, 311696, 311696&gt;_Pipeline_VITIS_LOOP_94_2</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>1</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>cf_address0</name>
-<Object>cf</Object>
-<Type>array</Type>
-<Scope></Scope>
-<IOProtocol>ap_memory</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>3</Bits>
-<Attribute>address</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>cf_ce0</name>
-<Object>cf</Object>
-<Type>array</Type>
-<Scope></Scope>
-<IOProtocol>ap_memory</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>1</Bits>
-<Attribute>control</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>cf_we0</name>
-<Object>cf</Object>
-<Type>array</Type>
-<Scope></Scope>
-<IOProtocol>ap_memory</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>1</Bits>
-<Attribute>control</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>cf_d0</name>
-<Object>cf</Object>
-<Type>array</Type>
-<Scope></Scope>
-<IOProtocol>ap_memory</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>32</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>cf_q0</name>
-<Object>cf</Object>
-<Type>array</Type>
-<Scope></Scope>
-<IOProtocol>ap_memory</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>in</Dir>
-<Bits>32</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>sum</name>
-<Object>sum</Object>
-<Type>scalar</Type>
-<Scope></Scope>
-<IOProtocol>ap_none</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>in</Dir>
-<Bits>32</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>weights_2_out</name>
-<Object>weights_2_out</Object>
-<Type>pointer</Type>
-<Scope></Scope>
-<IOProtocol>ap_vld</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>8</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>weights_2_out_ap_vld</name>
-<Object>weights_2_out</Object>
-<Type>pointer</Type>
-<Scope></Scope>
-<IOProtocol>ap_vld</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>1</Bits>
-<Attribute>control</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>weights_1_out</name>
-<Object>weights_1_out</Object>
-<Type>pointer</Type>
-<Scope></Scope>
-<IOProtocol>ap_vld</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>8</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>weights_1_out_ap_vld</name>
-<Object>weights_1_out</Object>
-<Type>pointer</Type>
-<Scope></Scope>
-<IOProtocol>ap_vld</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>1</Bits>
-<Attribute>control</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>weights_out</name>
-<Object>weights_out</Object>
-<Type>pointer</Type>
-<Scope></Scope>
-<IOProtocol>ap_vld</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>8</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>weights_out_ap_vld</name>
-<Object>weights_out</Object>
-<Type>pointer</Type>
-<Scope></Scope>
-<IOProtocol>ap_vld</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>out</Dir>
 <Bits>1</Bits>
@@ -4199,7 +3543,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>20</Bits>
+<Bits>13</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -4210,7 +3554,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>20</Bits>
+<Bits>13</Bits>
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -4510,7 +3854,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>20</Bits>
+<Bits>13</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -4521,7 +3865,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>20</Bits>
+<Bits>13</Bits>
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -4599,29 +3943,29 @@
 <TargetClockPeriod>10.00</TargetClockPeriod>
 <ClockUncertainty>2.70</ClockUncertainty>
 <TargetInitiationInterval>4294967295</TargetInitiationInterval>
-<EstimatedClockPeriod>5.046</EstimatedClockPeriod>
+<EstimatedClockPeriod>3.871</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>8</Best-caseLatency>
-<Average-caseLatency>8</Average-caseLatency>
-<Worst-caseLatency>8</Worst-caseLatency>
-<Best-caseRealTimeLatency>80.000 ns</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>80.000 ns</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>80.000 ns</Worst-caseRealTimeLatency>
+<Best-caseLatency>6</Best-caseLatency>
+<Average-caseLatency>6</Average-caseLatency>
+<Worst-caseLatency>6</Worst-caseLatency>
+<Best-caseRealTimeLatency>60.000 ns</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>60.000 ns</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>60.000 ns</Worst-caseRealTimeLatency>
 <PipelineInitiationInterval>1</PipelineInitiationInterval>
-<PipelineDepth>9</PipelineDepth>
+<PipelineDepth>7</PipelineDepth>
 <PipelineType>yes</PipelineType>
 </SummaryOfOverallLatency>
 </PerformanceEstimates>
 <AreaEstimates>
 <Resources>
-<DSP>11</DSP>
+<DSP>4</DSP>
 <AVAIL_DSP>360</AVAIL_DSP>
-<UTIL_DSP>3</UTIL_DSP>
-<FF>659</FF>
+<UTIL_DSP>1</UTIL_DSP>
+<FF>436</FF>
 <AVAIL_FF>141120</AVAIL_FF>
 <UTIL_FF>~0</UTIL_FF>
-<LUT>397</LUT>
+<LUT>655</LUT>
 <AVAIL_LUT>70560</AVAIL_LUT>
 <UTIL_LUT>~0</UTIL_LUT>
 <BRAM_18K>0</BRAM_18K>
@@ -4952,39 +4296,6 @@
 <Bits>8</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
-<RtlPorts>
-<name>weights_read</name>
-<Object>weights_read</Object>
-<Type>scalar</Type>
-<Scope></Scope>
-<IOProtocol>ap_none</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>in</Dir>
-<Bits>8</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>weights_read_3</name>
-<Object>weights_read_3</Object>
-<Type>scalar</Type>
-<Scope></Scope>
-<IOProtocol>ap_none</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>in</Dir>
-<Bits>8</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>weights_read_4</name>
-<Object>weights_read_4</Object>
-<Type>scalar</Type>
-<Scope></Scope>
-<IOProtocol>ap_none</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>in</Dir>
-<Bits>8</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
 </InterfaceSummary>
 </Module>
 <Module>
@@ -4996,16 +4307,16 @@
 <SummaryOfTimingAnalysis>
 <TargetClockPeriod>10.00</TargetClockPeriod>
 <ClockUncertainty>2.70</ClockUncertainty>
-<EstimatedClockPeriod>6.498</EstimatedClockPeriod>
+<EstimatedClockPeriod>5.886</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>657</Best-caseLatency>
-<Average-caseLatency>657</Average-caseLatency>
-<Worst-caseLatency>657</Worst-caseLatency>
-<Best-caseRealTimeLatency>6.570 us</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>6.570 us</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>6.570 us</Worst-caseRealTimeLatency>
-<PipelineInitiationInterval>657</PipelineInitiationInterval>
+<Best-caseLatency>655</Best-caseLatency>
+<Average-caseLatency>655</Average-caseLatency>
+<Worst-caseLatency>655</Worst-caseLatency>
+<Best-caseRealTimeLatency>6.550 us</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>6.550 us</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>6.550 us</Worst-caseRealTimeLatency>
+<PipelineInitiationInterval>655</PipelineInitiationInterval>
 <PipelineType>no</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
@@ -5013,20 +4324,20 @@
 <Name>Col_Loop</Name>
 <Slack>7.30</Slack>
 <TripCount>644</TripCount>
-<Latency>655</Latency>
-<AbsoluteTimeLatency>6.550 us</AbsoluteTimeLatency>
+<Latency>653</Latency>
+<AbsoluteTimeLatency>6.530 us</AbsoluteTimeLatency>
 <PipelineII>1</PipelineII>
-<PipelineDepth>13</PipelineDepth>
+<PipelineDepth>11</PipelineDepth>
 <PipelineType>yes</PipelineType>
 <InstanceList>
-<Instance>grp_xfapplygaussian5x5_1_0_false_s_fu_536</Instance>
+<Instance>grp_xfapplygaussian5x5_1_0_false_s_fu_510</Instance>
 </InstanceList>
 </Col_Loop>
 </SummaryOfLoopLatency>
 </PerformanceEstimates>
 <AreaEstimates>
 <Resources>
-<FF>1465</FF>
+<FF>1461</FF>
 <AVAIL_FF>141120</AVAIL_FF>
 <UTIL_FF>1</UTIL_FF>
 <LUT>1081</LUT>
@@ -5111,7 +4422,7 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_din1</name>
+<name>grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_din1</name>
 <Object>xFGaussianFilter5x5_Pipeline_Col_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5122,7 +4433,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_din2</name>
+<name>grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_din2</name>
 <Object>xFGaussianFilter5x5_Pipeline_Col_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5133,7 +4444,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_din3</name>
+<name>grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_din3</name>
 <Object>xFGaussianFilter5x5_Pipeline_Col_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5144,7 +4455,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_din4</name>
+<name>grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_din4</name>
 <Object>xFGaussianFilter5x5_Pipeline_Col_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5155,7 +4466,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_din5</name>
+<name>grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_din5</name>
 <Object>xFGaussianFilter5x5_Pipeline_Col_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5166,7 +4477,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_din6</name>
+<name>grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_din6</name>
 <Object>xFGaussianFilter5x5_Pipeline_Col_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5177,7 +4488,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_din7</name>
+<name>grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_din7</name>
 <Object>xFGaussianFilter5x5_Pipeline_Col_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5188,7 +4499,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_din8</name>
+<name>grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_din8</name>
 <Object>xFGaussianFilter5x5_Pipeline_Col_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5199,7 +4510,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_din9</name>
+<name>grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_din9</name>
 <Object>xFGaussianFilter5x5_Pipeline_Col_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5210,7 +4521,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_din10</name>
+<name>grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_din10</name>
 <Object>xFGaussianFilter5x5_Pipeline_Col_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5221,7 +4532,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_din11</name>
+<name>grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_din11</name>
 <Object>xFGaussianFilter5x5_Pipeline_Col_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5232,7 +4543,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_din12</name>
+<name>grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_din12</name>
 <Object>xFGaussianFilter5x5_Pipeline_Col_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5243,7 +4554,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_din13</name>
+<name>grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_din13</name>
 <Object>xFGaussianFilter5x5_Pipeline_Col_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5254,7 +4565,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_din14</name>
+<name>grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_din14</name>
 <Object>xFGaussianFilter5x5_Pipeline_Col_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5265,7 +4576,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_din15</name>
+<name>grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_din15</name>
 <Object>xFGaussianFilter5x5_Pipeline_Col_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5276,7 +4587,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_din16</name>
+<name>grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_din16</name>
 <Object>xFGaussianFilter5x5_Pipeline_Col_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5287,7 +4598,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_din17</name>
+<name>grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_din17</name>
 <Object>xFGaussianFilter5x5_Pipeline_Col_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5298,7 +4609,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_din18</name>
+<name>grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_din18</name>
 <Object>xFGaussianFilter5x5_Pipeline_Col_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5309,7 +4620,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_din19</name>
+<name>grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_din19</name>
 <Object>xFGaussianFilter5x5_Pipeline_Col_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5320,7 +4631,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_din20</name>
+<name>grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_din20</name>
 <Object>xFGaussianFilter5x5_Pipeline_Col_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5331,7 +4642,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_din21</name>
+<name>grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_din21</name>
 <Object>xFGaussianFilter5x5_Pipeline_Col_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5342,7 +4653,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_din22</name>
+<name>grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_din22</name>
 <Object>xFGaussianFilter5x5_Pipeline_Col_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5353,7 +4664,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_din23</name>
+<name>grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_din23</name>
 <Object>xFGaussianFilter5x5_Pipeline_Col_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5364,7 +4675,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_din24</name>
+<name>grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_din24</name>
 <Object>xFGaussianFilter5x5_Pipeline_Col_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5375,7 +4686,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_din25</name>
+<name>grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_din25</name>
 <Object>xFGaussianFilter5x5_Pipeline_Col_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5386,40 +4697,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_din26</name>
-<Object>xFGaussianFilter5x5_Pipeline_Col_Loop</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>8</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_din27</name>
-<Object>xFGaussianFilter5x5_Pipeline_Col_Loop</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>8</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_din28</name>
-<Object>xFGaussianFilter5x5_Pipeline_Col_Loop</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>8</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_dout0</name>
+<name>grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_dout0</name>
 <Object>xFGaussianFilter5x5_Pipeline_Col_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5430,7 +4708,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_xfapplygaussian5x5_1_0_false_s_fu_243_p_ce</name>
+<name>grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_ce</name>
 <Object>xFGaussianFilter5x5_Pipeline_Col_Loop</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -5459,7 +4737,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>20</Bits>
+<Bits>13</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -5470,7 +4748,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>20</Bits>
+<Bits>13</Bits>
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -5514,7 +4792,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>20</Bits>
+<Bits>13</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -5525,7 +4803,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>20</Bits>
+<Bits>13</Bits>
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -5603,39 +4881,6 @@
 <IOConfig></IOConfig>
 <Dir>in</Dir>
 <Bits>3</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>p_read</name>
-<Object>p_read</Object>
-<Type>scalar</Type>
-<Scope></Scope>
-<IOProtocol>ap_none</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>in</Dir>
-<Bits>8</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>p_read1</name>
-<Object>p_read1</Object>
-<Type>scalar</Type>
-<Scope></Scope>
-<IOProtocol>ap_none</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>in</Dir>
-<Bits>8</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>p_read2</name>
-<Object>p_read2</Object>
-<Type>scalar</Type>
-<Scope></Scope>
-<IOProtocol>ap_none</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>in</Dir>
-<Bits>8</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -6488,7 +5733,7 @@
 </InterfaceSummary>
 </Module>
 <Module>
-<Name>xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s</Name>
+<Name>xFGaussianFilter5x5_0_484_644_1_0_1_3872_3872_1_644_false_s</Name>
 <Loops>
 <Row_Loop></Row_Loop>
 </Loops>
@@ -6496,16 +5741,16 @@
 <SummaryOfTimingAnalysis>
 <TargetClockPeriod>10.00</TargetClockPeriod>
 <ClockUncertainty>2.70</ClockUncertainty>
-<EstimatedClockPeriod>6.498</EstimatedClockPeriod>
+<EstimatedClockPeriod>5.886</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>325579</Best-caseLatency>
-<Average-caseLatency>325579</Average-caseLatency>
-<Worst-caseLatency>325579</Worst-caseLatency>
-<Best-caseRealTimeLatency>3.256 ms</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>3.256 ms</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>3.256 ms</Worst-caseRealTimeLatency>
-<PipelineInitiationInterval>325579</PipelineInitiationInterval>
+<Best-caseLatency>323642</Best-caseLatency>
+<Average-caseLatency>323642</Average-caseLatency>
+<Worst-caseLatency>323642</Worst-caseLatency>
+<Best-caseRealTimeLatency>3.236 ms</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>3.236 ms</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>3.236 ms</Worst-caseRealTimeLatency>
+<PipelineInitiationInterval>323642</PipelineInitiationInterval>
 <PipelineType>no</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
@@ -6513,15 +5758,15 @@
 <Name>Row_Loop</Name>
 <Slack>7.30</Slack>
 <TripCount>484</TripCount>
-<Latency>324280</Latency>
-<AbsoluteTimeLatency>3.243 ms</AbsoluteTimeLatency>
-<IterationLatency>670</IterationLatency>
-<PipelineDepth>670</PipelineDepth>
+<Latency>322344</Latency>
+<AbsoluteTimeLatency>3.223 ms</AbsoluteTimeLatency>
+<IterationLatency>666</IterationLatency>
+<PipelineDepth>666</PipelineDepth>
 <PipelineType>no</PipelineType>
 <InstanceList>
-<Instance>grp_xfapplygaussian5x5_1_0_false_s_fu_322</Instance>
-<Instance>grp_xfapplygaussian5x5_1_0_false_s_fu_243</Instance>
-<Instance>grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424</Instance>
+<Instance>grp_xfapplygaussian5x5_1_0_false_s_fu_290</Instance>
+<Instance>grp_xfapplygaussian5x5_1_0_false_s_fu_217</Instance>
+<Instance>grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_389</Instance>
 </InstanceList>
 </Row_Loop>
 </SummaryOfLoopLatency>
@@ -6531,15 +5776,15 @@
 <BRAM_18K>5</BRAM_18K>
 <AVAIL_BRAM>432</AVAIL_BRAM>
 <UTIL_BRAM>1</UTIL_BRAM>
-<DSP>22</DSP>
+<DSP>8</DSP>
 <AVAIL_DSP>360</AVAIL_DSP>
-<UTIL_DSP>6</UTIL_DSP>
-<FF>2921</FF>
+<UTIL_DSP>2</UTIL_DSP>
+<FF>2468</FF>
 <AVAIL_FF>141120</AVAIL_FF>
-<UTIL_FF>2</UTIL_FF>
-<LUT>3119</LUT>
+<UTIL_FF>1</UTIL_FF>
+<LUT>3574</LUT>
 <AVAIL_LUT>70560</AVAIL_LUT>
-<UTIL_LUT>4</UTIL_LUT>
+<UTIL_LUT>5</UTIL_LUT>
 <URAM>0</URAM>
 <AVAIL_URAM>0</AVAIL_URAM>
 <UTIL_URAM>0</UTIL_URAM>
@@ -6548,7 +5793,7 @@
 <InterfaceSummary>
 <RtlPorts>
 <name>ap_clk</name>
-<Object>xFGaussianFilter5x5&lt;0, 484, 644, 1, 0, 1, 311696, 311696, 1, 644, false&gt;</Object>
+<Object>xFGaussianFilter5x5&lt;0, 484, 644, 1, 0, 1, 3872, 3872, 1, 644, false&gt;</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -6559,7 +5804,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_rst</name>
-<Object>xFGaussianFilter5x5&lt;0, 484, 644, 1, 0, 1, 311696, 311696, 1, 644, false&gt;</Object>
+<Object>xFGaussianFilter5x5&lt;0, 484, 644, 1, 0, 1, 3872, 3872, 1, 644, false&gt;</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -6570,7 +5815,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_start</name>
-<Object>xFGaussianFilter5x5&lt;0, 484, 644, 1, 0, 1, 311696, 311696, 1, 644, false&gt;</Object>
+<Object>xFGaussianFilter5x5&lt;0, 484, 644, 1, 0, 1, 3872, 3872, 1, 644, false&gt;</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -6581,7 +5826,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_done</name>
-<Object>xFGaussianFilter5x5&lt;0, 484, 644, 1, 0, 1, 311696, 311696, 1, 644, false&gt;</Object>
+<Object>xFGaussianFilter5x5&lt;0, 484, 644, 1, 0, 1, 3872, 3872, 1, 644, false&gt;</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -6592,7 +5837,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_idle</name>
-<Object>xFGaussianFilter5x5&lt;0, 484, 644, 1, 0, 1, 311696, 311696, 1, 644, false&gt;</Object>
+<Object>xFGaussianFilter5x5&lt;0, 484, 644, 1, 0, 1, 3872, 3872, 1, 644, false&gt;</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -6603,7 +5848,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_ready</name>
-<Object>xFGaussianFilter5x5&lt;0, 484, 644, 1, 0, 1, 311696, 311696, 1, 644, false&gt;</Object>
+<Object>xFGaussianFilter5x5&lt;0, 484, 644, 1, 0, 1, 3872, 3872, 1, 644, false&gt;</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -6631,7 +5876,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>20</Bits>
+<Bits>13</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -6642,7 +5887,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>20</Bits>
+<Bits>13</Bits>
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -6686,7 +5931,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>20</Bits>
+<Bits>13</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -6697,7 +5942,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>20</Bits>
+<Bits>13</Bits>
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -6722,57 +5967,24 @@
 <Bits>1</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>
-<RtlPorts>
-<name>p_read</name>
-<Object>p_read</Object>
-<Type>scalar</Type>
-<Scope></Scope>
-<IOProtocol>ap_none</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>in</Dir>
-<Bits>8</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>p_read1</name>
-<Object>p_read1</Object>
-<Type>scalar</Type>
-<Scope></Scope>
-<IOProtocol>ap_none</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>in</Dir>
-<Bits>8</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>p_read2</name>
-<Object>p_read2</Object>
-<Type>scalar</Type>
-<Scope></Scope>
-<IOProtocol>ap_none</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>in</Dir>
-<Bits>8</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
 </InterfaceSummary>
 </Module>
 <Module>
-<Name>GaussianBlur_5_1_0_484_644_1_311696_311696_s</Name>
+<Name>GaussianBlur_5_1_0_484_644_1_3872_3872_s</Name>
 <PerformanceEstimates>
 <SummaryOfTimingAnalysis>
 <TargetClockPeriod>10.00</TargetClockPeriod>
 <ClockUncertainty>2.70</ClockUncertainty>
-<EstimatedClockPeriod>6.919</EstimatedClockPeriod>
+<EstimatedClockPeriod>5.886</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>325757</Best-caseLatency>
-<Average-caseLatency>325757</Average-caseLatency>
-<Worst-caseLatency>325757</Worst-caseLatency>
-<Best-caseRealTimeLatency>3.258 ms</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>3.258 ms</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>3.258 ms</Worst-caseRealTimeLatency>
-<PipelineInitiationInterval>325757</PipelineInitiationInterval>
+<Best-caseLatency>323643</Best-caseLatency>
+<Average-caseLatency>323643</Average-caseLatency>
+<Worst-caseLatency>323643</Worst-caseLatency>
+<Best-caseRealTimeLatency>3.236 ms</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>3.236 ms</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>3.236 ms</Worst-caseRealTimeLatency>
+<PipelineInitiationInterval>323643</PipelineInitiationInterval>
 <PipelineType>no</PipelineType>
 </SummaryOfOverallLatency>
 </PerformanceEstimates>
@@ -6781,15 +5993,15 @@
 <BRAM_18K>5</BRAM_18K>
 <AVAIL_BRAM>432</AVAIL_BRAM>
 <UTIL_BRAM>1</UTIL_BRAM>
-<DSP>37</DSP>
+<DSP>8</DSP>
 <AVAIL_DSP>360</AVAIL_DSP>
-<UTIL_DSP>10</UTIL_DSP>
-<FF>4855</FF>
+<UTIL_DSP>2</UTIL_DSP>
+<FF>2473</FF>
 <AVAIL_FF>141120</AVAIL_FF>
-<UTIL_FF>3</UTIL_FF>
-<LUT>6774</LUT>
+<UTIL_FF>1</UTIL_FF>
+<LUT>3626</LUT>
 <AVAIL_LUT>70560</AVAIL_LUT>
-<UTIL_LUT>9</UTIL_LUT>
+<UTIL_LUT>5</UTIL_LUT>
 <URAM>0</URAM>
 <AVAIL_URAM>0</AVAIL_URAM>
 <UTIL_URAM>0</UTIL_URAM>
@@ -6798,7 +6010,7 @@
 <InterfaceSummary>
 <RtlPorts>
 <name>ap_clk</name>
-<Object>GaussianBlur&lt;5, 1, 0, 484, 644, 1, 311696, 311696&gt;</Object>
+<Object>GaussianBlur&lt;5, 1, 0, 484, 644, 1, 3872, 3872&gt;</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -6809,7 +6021,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_rst</name>
-<Object>GaussianBlur&lt;5, 1, 0, 484, 644, 1, 311696, 311696&gt;</Object>
+<Object>GaussianBlur&lt;5, 1, 0, 484, 644, 1, 3872, 3872&gt;</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -6820,7 +6032,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_start</name>
-<Object>GaussianBlur&lt;5, 1, 0, 484, 644, 1, 311696, 311696&gt;</Object>
+<Object>GaussianBlur&lt;5, 1, 0, 484, 644, 1, 3872, 3872&gt;</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -6831,7 +6043,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>start_full_n</name>
-<Object>GaussianBlur&lt;5, 1, 0, 484, 644, 1, 311696, 311696&gt;</Object>
+<Object>GaussianBlur&lt;5, 1, 0, 484, 644, 1, 3872, 3872&gt;</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -6842,7 +6054,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_done</name>
-<Object>GaussianBlur&lt;5, 1, 0, 484, 644, 1, 311696, 311696&gt;</Object>
+<Object>GaussianBlur&lt;5, 1, 0, 484, 644, 1, 3872, 3872&gt;</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -6853,7 +6065,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_continue</name>
-<Object>GaussianBlur&lt;5, 1, 0, 484, 644, 1, 311696, 311696&gt;</Object>
+<Object>GaussianBlur&lt;5, 1, 0, 484, 644, 1, 3872, 3872&gt;</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -6864,7 +6076,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_idle</name>
-<Object>GaussianBlur&lt;5, 1, 0, 484, 644, 1, 311696, 311696&gt;</Object>
+<Object>GaussianBlur&lt;5, 1, 0, 484, 644, 1, 3872, 3872&gt;</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -6875,7 +6087,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_ready</name>
-<Object>GaussianBlur&lt;5, 1, 0, 484, 644, 1, 311696, 311696&gt;</Object>
+<Object>GaussianBlur&lt;5, 1, 0, 484, 644, 1, 3872, 3872&gt;</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -6886,7 +6098,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>start_out</name>
-<Object>GaussianBlur&lt;5, 1, 0, 484, 644, 1, 311696, 311696&gt;</Object>
+<Object>GaussianBlur&lt;5, 1, 0, 484, 644, 1, 3872, 3872&gt;</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -6897,7 +6109,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>start_write</name>
-<Object>GaussianBlur&lt;5, 1, 0, 484, 644, 1, 311696, 311696&gt;</Object>
+<Object>GaussianBlur&lt;5, 1, 0, 484, 644, 1, 3872, 3872&gt;</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -6925,7 +6137,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>20</Bits>
+<Bits>13</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -6936,7 +6148,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>20</Bits>
+<Bits>13</Bits>
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -6980,7 +6192,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>20</Bits>
+<Bits>13</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -6991,7 +6203,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>20</Bits>
+<Bits>13</Bits>
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -7170,7 +6382,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>20</Bits>
+<Bits>13</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -7181,7 +6393,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>20</Bits>
+<Bits>13</Bits>
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -7225,7 +6437,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>20</Bits>
+<Bits>13</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -7236,7 +6448,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>20</Bits>
+<Bits>13</Bits>
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -7269,34 +6481,34 @@
 <SummaryOfTimingAnalysis>
 <TargetClockPeriod>10.00</TargetClockPeriod>
 <ClockUncertainty>2.70</ClockUncertainty>
-<EstimatedClockPeriod>6.919</EstimatedClockPeriod>
+<EstimatedClockPeriod>5.886</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>325757</Best-caseLatency>
-<Average-caseLatency>325757</Average-caseLatency>
-<Worst-caseLatency>325757</Worst-caseLatency>
-<Best-caseRealTimeLatency>3.258 ms</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>3.258 ms</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>3.258 ms</Worst-caseRealTimeLatency>
-<DataflowPipelineThroughput>325758</DataflowPipelineThroughput>
-<PipelineInitiationInterval>325758</PipelineInitiationInterval>
+<Best-caseLatency>323650</Best-caseLatency>
+<Average-caseLatency>323650</Average-caseLatency>
+<Worst-caseLatency>323650</Worst-caseLatency>
+<Best-caseRealTimeLatency>3.236 ms</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>3.236 ms</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>3.236 ms</Worst-caseRealTimeLatency>
+<DataflowPipelineThroughput>323644</DataflowPipelineThroughput>
+<PipelineInitiationInterval>323644</PipelineInitiationInterval>
 <PipelineType>dataflow</PipelineType>
 </SummaryOfOverallLatency>
 </PerformanceEstimates>
 <AreaEstimates>
 <Resources>
-<BRAM_18K>741</BRAM_18K>
+<BRAM_18K>15</BRAM_18K>
 <AVAIL_BRAM>432</AVAIL_BRAM>
-<UTIL_BRAM>171</UTIL_BRAM>
-<DSP>40</DSP>
+<UTIL_BRAM>3</UTIL_BRAM>
+<DSP>11</DSP>
 <AVAIL_DSP>360</AVAIL_DSP>
-<UTIL_DSP>11</UTIL_DSP>
-<FF>5475</FF>
+<UTIL_DSP>3</UTIL_DSP>
+<FF>3093</FF>
 <AVAIL_FF>141120</AVAIL_FF>
-<UTIL_FF>3</UTIL_FF>
-<LUT>7358</LUT>
+<UTIL_FF>2</UTIL_FF>
+<LUT>4210</LUT>
 <AVAIL_LUT>70560</AVAIL_LUT>
-<UTIL_LUT>10</UTIL_LUT>
+<UTIL_LUT>5</UTIL_LUT>
 <URAM>0</URAM>
 <AVAIL_URAM>0</AVAIL_URAM>
 <UTIL_URAM>0</UTIL_URAM>
@@ -7449,9 +6661,9 @@
 </InterfaceSummary>
 </Module>
 <Module>
-<Name>repack_Pipeline_VITIS_LOOP_205_2</Name>
+<Name>repack_Pipeline_VITIS_LOOP_206_2</Name>
 <Loops>
-<VITIS_LOOP_205_2></VITIS_LOOP_205_2>
+<VITIS_LOOP_206_2></VITIS_LOOP_206_2>
 </Loops>
 <PerformanceEstimates>
 <SummaryOfTimingAnalysis>
@@ -7470,8 +6682,8 @@
 <PipelineType>no</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
-<VITIS_LOOP_205_2>
-<Name>VITIS_LOOP_205_2</Name>
+<VITIS_LOOP_206_2>
+<Name>VITIS_LOOP_206_2</Name>
 <Slack>7.30</Slack>
 <TripCount>644</TripCount>
 <Latency>644</Latency>
@@ -7481,7 +6693,7 @@
 <PipelineType>yes</PipelineType>
 <InstanceList>
 </InstanceList>
-</VITIS_LOOP_205_2>
+</VITIS_LOOP_206_2>
 </SummaryOfLoopLatency>
 </PerformanceEstimates>
 <AreaEstimates>
@@ -7506,7 +6718,7 @@
 <InterfaceSummary>
 <RtlPorts>
 <name>ap_clk</name>
-<Object>repack_Pipeline_VITIS_LOOP_205_2</Object>
+<Object>repack_Pipeline_VITIS_LOOP_206_2</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -7517,7 +6729,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_rst</name>
-<Object>repack_Pipeline_VITIS_LOOP_205_2</Object>
+<Object>repack_Pipeline_VITIS_LOOP_206_2</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -7528,7 +6740,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_start</name>
-<Object>repack_Pipeline_VITIS_LOOP_205_2</Object>
+<Object>repack_Pipeline_VITIS_LOOP_206_2</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -7539,7 +6751,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_done</name>
-<Object>repack_Pipeline_VITIS_LOOP_205_2</Object>
+<Object>repack_Pipeline_VITIS_LOOP_206_2</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -7550,7 +6762,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_idle</name>
-<Object>repack_Pipeline_VITIS_LOOP_205_2</Object>
+<Object>repack_Pipeline_VITIS_LOOP_206_2</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -7561,7 +6773,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_ready</name>
-<Object>repack_Pipeline_VITIS_LOOP_205_2</Object>
+<Object>repack_Pipeline_VITIS_LOOP_206_2</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -7589,7 +6801,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>20</Bits>
+<Bits>13</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -7600,7 +6812,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>20</Bits>
+<Bits>13</Bits>
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -7716,9 +6928,9 @@
 </InterfaceSummary>
 </Module>
 <Module>
-<Name>repack_Pipeline_VITIS_LOOP_211_3</Name>
+<Name>repack_Pipeline_VITIS_LOOP_212_3</Name>
 <Loops>
-<VITIS_LOOP_211_3></VITIS_LOOP_211_3>
+<VITIS_LOOP_212_3></VITIS_LOOP_212_3>
 </Loops>
 <PerformanceEstimates>
 <SummaryOfTimingAnalysis>
@@ -7737,8 +6949,8 @@
 <PipelineType>no</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
-<VITIS_LOOP_211_3>
-<Name>VITIS_LOOP_211_3</Name>
+<VITIS_LOOP_212_3>
+<Name>VITIS_LOOP_212_3</Name>
 <Slack>7.30</Slack>
 <TripCount>43</TripCount>
 <Latency>43</Latency>
@@ -7748,7 +6960,7 @@
 <PipelineType>yes</PipelineType>
 <InstanceList>
 </InstanceList>
-</VITIS_LOOP_211_3>
+</VITIS_LOOP_212_3>
 </SummaryOfLoopLatency>
 </PerformanceEstimates>
 <AreaEstimates>
@@ -7773,7 +6985,7 @@
 <InterfaceSummary>
 <RtlPorts>
 <name>ap_clk</name>
-<Object>repack_Pipeline_VITIS_LOOP_211_3</Object>
+<Object>repack_Pipeline_VITIS_LOOP_212_3</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -7784,7 +6996,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_rst</name>
-<Object>repack_Pipeline_VITIS_LOOP_211_3</Object>
+<Object>repack_Pipeline_VITIS_LOOP_212_3</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -7795,7 +7007,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_start</name>
-<Object>repack_Pipeline_VITIS_LOOP_211_3</Object>
+<Object>repack_Pipeline_VITIS_LOOP_212_3</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -7806,7 +7018,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_done</name>
-<Object>repack_Pipeline_VITIS_LOOP_211_3</Object>
+<Object>repack_Pipeline_VITIS_LOOP_212_3</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -7817,7 +7029,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_idle</name>
-<Object>repack_Pipeline_VITIS_LOOP_211_3</Object>
+<Object>repack_Pipeline_VITIS_LOOP_212_3</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -7828,7 +7040,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_ready</name>
-<Object>repack_Pipeline_VITIS_LOOP_211_3</Object>
+<Object>repack_Pipeline_VITIS_LOOP_212_3</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -8951,15 +8163,15 @@
 </InterfaceSummary>
 </Module>
 <Module>
-<Name>repack_Pipeline_VITIS_LOOP_238_5</Name>
+<Name>repack_Pipeline_VITIS_LOOP_239_5</Name>
 <Loops>
-<VITIS_LOOP_238_5></VITIS_LOOP_238_5>
+<VITIS_LOOP_239_5></VITIS_LOOP_239_5>
 </Loops>
 <PerformanceEstimates>
 <SummaryOfTimingAnalysis>
 <TargetClockPeriod>10.00</TargetClockPeriod>
 <ClockUncertainty>2.70</ClockUncertainty>
-<EstimatedClockPeriod>1.946</EstimatedClockPeriod>
+<EstimatedClockPeriod>2.022</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <Best-caseLatency>130</Best-caseLatency>
@@ -8972,8 +8184,8 @@
 <PipelineType>no</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
-<VITIS_LOOP_238_5>
-<Name>VITIS_LOOP_238_5</Name>
+<VITIS_LOOP_239_5>
+<Name>VITIS_LOOP_239_5</Name>
 <Slack>7.30</Slack>
 <TripCount>128</TripCount>
 <Latency>128</Latency>
@@ -8983,7 +8195,7 @@
 <PipelineType>yes</PipelineType>
 <InstanceList>
 </InstanceList>
-</VITIS_LOOP_238_5>
+</VITIS_LOOP_239_5>
 </SummaryOfLoopLatency>
 </PerformanceEstimates>
 <AreaEstimates>
@@ -9008,7 +8220,7 @@
 <InterfaceSummary>
 <RtlPorts>
 <name>ap_clk</name>
-<Object>repack_Pipeline_VITIS_LOOP_238_5</Object>
+<Object>repack_Pipeline_VITIS_LOOP_239_5</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -9019,7 +8231,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_rst</name>
-<Object>repack_Pipeline_VITIS_LOOP_238_5</Object>
+<Object>repack_Pipeline_VITIS_LOOP_239_5</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -9030,7 +8242,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_start</name>
-<Object>repack_Pipeline_VITIS_LOOP_238_5</Object>
+<Object>repack_Pipeline_VITIS_LOOP_239_5</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -9041,7 +8253,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_done</name>
-<Object>repack_Pipeline_VITIS_LOOP_238_5</Object>
+<Object>repack_Pipeline_VITIS_LOOP_239_5</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -9052,7 +8264,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_idle</name>
-<Object>repack_Pipeline_VITIS_LOOP_238_5</Object>
+<Object>repack_Pipeline_VITIS_LOOP_239_5</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -9063,7 +8275,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_ready</name>
-<Object>repack_Pipeline_VITIS_LOOP_238_5</Object>
+<Object>repack_Pipeline_VITIS_LOOP_239_5</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -9091,7 +8303,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>17</Bits>
+<Bits>10</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -9102,7 +8314,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>17</Bits>
+<Bits>10</Bits>
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -9132,7 +8344,7 @@
 <Module>
 <Name>repack</Name>
 <Loops>
-<VITIS_LOOP_203_1></VITIS_LOOP_203_1>
+<VITIS_LOOP_204_1></VITIS_LOOP_204_1>
 </Loops>
 <PerformanceEstimates>
 <SummaryOfTimingAnalysis>
@@ -9141,36 +8353,36 @@
 <EstimatedClockPeriod>3.298</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>314602</Best-caseLatency>
-<Average-caseLatency>351386</Average-caseLatency>
+<Best-caseLatency>315086</Best-caseLatency>
+<Average-caseLatency>358646</Average-caseLatency>
 <Worst-caseLatency>401238</Worst-caseLatency>
-<Best-caseRealTimeLatency>3.146 ms</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>3.514 ms</Average-caseRealTimeLatency>
+<Best-caseRealTimeLatency>3.151 ms</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>3.586 ms</Average-caseRealTimeLatency>
 <Worst-caseRealTimeLatency>4.012 ms</Worst-caseRealTimeLatency>
-<PipelineInitiationInterval>314602 ~ 401238</PipelineInitiationInterval>
+<PipelineInitiationInterval>315086 ~ 401238</PipelineInitiationInterval>
 <PipelineType>no</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
-<VITIS_LOOP_203_1>
-<Name>VITIS_LOOP_203_1</Name>
+<VITIS_LOOP_204_1>
+<Name>VITIS_LOOP_204_1</Name>
 <Slack>7.30</Slack>
 <TripCount>484</TripCount>
-<Latency>314600 ~ 401236</Latency>
-<AbsoluteTimeLatency>3.146 ms ~ 4.012 ms</AbsoluteTimeLatency>
+<Latency>315084 ~ 401236</Latency>
+<AbsoluteTimeLatency>3.151 ms ~ 4.012 ms</AbsoluteTimeLatency>
 <IterationLatency>
 <range>
-<min>650</min>
+<min>651</min>
 <max>829</max>
 </range>
 </IterationLatency>
-<PipelineDepth>650 ~ 829</PipelineDepth>
+<PipelineDepth>651 ~ 829</PipelineDepth>
 <PipelineType>no</PipelineType>
 <InstanceList>
-<Instance>grp_repack_Pipeline_VITIS_LOOP_205_2_fu_92</Instance>
-<Instance>grp_repack_Pipeline_VITIS_LOOP_211_3_fu_100</Instance>
-<Instance>grp_repack_Pipeline_VITIS_LOOP_238_5_fu_122</Instance>
+<Instance>grp_repack_Pipeline_VITIS_LOOP_206_2_fu_92</Instance>
+<Instance>grp_repack_Pipeline_VITIS_LOOP_212_3_fu_100</Instance>
+<Instance>grp_repack_Pipeline_VITIS_LOOP_239_5_fu_122</Instance>
 </InstanceList>
-</VITIS_LOOP_203_1>
+</VITIS_LOOP_204_1>
 </SummaryOfLoopLatency>
 </PerformanceEstimates>
 <AreaEstimates>
@@ -9178,10 +8390,10 @@
 <BRAM_18K>28</BRAM_18K>
 <AVAIL_BRAM>432</AVAIL_BRAM>
 <UTIL_BRAM>6</UTIL_BRAM>
-<FF>117</FF>
+<FF>116</FF>
 <AVAIL_FF>141120</AVAIL_FF>
 <UTIL_FF>~0</UTIL_FF>
-<LUT>1365</LUT>
+<LUT>1363</LUT>
 <AVAIL_LUT>70560</AVAIL_LUT>
 <UTIL_LUT>1</UTIL_LUT>
 <URAM>0</URAM>
@@ -9289,7 +8501,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>20</Bits>
+<Bits>13</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -9300,7 +8512,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>20</Bits>
+<Bits>13</Bits>
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -9344,7 +8556,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>17</Bits>
+<Bits>10</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -9355,7 +8567,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>17</Bits>
+<Bits>10</Bits>
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -9638,7 +8850,7 @@
 <SummaryOfTimingAnalysis>
 <TargetClockPeriod>10.00</TargetClockPeriod>
 <ClockUncertainty>2.70</ClockUncertainty>
-<EstimatedClockPeriod>6.919</EstimatedClockPeriod>
+<EstimatedClockPeriod>5.886</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <Best-caseLatency>368644</Best-caseLatency>
@@ -9659,18 +8871,18 @@
 </PerformanceEstimates>
 <AreaEstimates>
 <Resources>
-<BRAM_18K>1793</BRAM_18K>
+<BRAM_18K>60</BRAM_18K>
 <AVAIL_BRAM>432</AVAIL_BRAM>
-<UTIL_BRAM>415</UTIL_BRAM>
-<DSP>40</DSP>
+<UTIL_BRAM>13</UTIL_BRAM>
+<DSP>11</DSP>
 <AVAIL_DSP>360</AVAIL_DSP>
-<UTIL_DSP>11</UTIL_DSP>
-<FF>7413</FF>
+<UTIL_DSP>3</UTIL_DSP>
+<FF>5028</FF>
 <AVAIL_FF>141120</AVAIL_FF>
-<UTIL_FF>5</UTIL_FF>
-<LUT>10953</LUT>
+<UTIL_FF>3</UTIL_FF>
+<LUT>7795</LUT>
 <AVAIL_LUT>70560</AVAIL_LUT>
-<UTIL_LUT>15</UTIL_LUT>
+<UTIL_LUT>11</UTIL_LUT>
 <URAM>0</URAM>
 <AVAIL_URAM>0</AVAIL_URAM>
 <UTIL_URAM>0</UTIL_URAM>
@@ -9991,7 +9203,7 @@
 <FIFOInst>
 <Name>bgr_mat_data_U</Name>
 <ParentInst>process_pixels_U0</ParentInst>
-<StaticDepth>311696</StaticDepth>
+<StaticDepth>3872</StaticDepth>
 <RuntimeDepth>mOutPtr</RuntimeDepth>
 <InterfaceList>
 <Interface>clk</Interface>
@@ -10006,7 +9218,7 @@
 <FIFOInst>
 <Name>gray_mat_data_U</Name>
 <ParentInst>process_pixels_U0</ParentInst>
-<StaticDepth>311696</StaticDepth>
+<StaticDepth>3872</StaticDepth>
 <RuntimeDepth>mOutPtr</RuntimeDepth>
 <InterfaceList>
 <Interface>clk</Interface>
@@ -10021,7 +9233,7 @@
 <FIFOInst>
 <Name>blurred_mat_data_U</Name>
 <ParentInst>process_pixels_U0</ParentInst>
-<StaticDepth>311696</StaticDepth>
+<StaticDepth>3872</StaticDepth>
 <RuntimeDepth>mOutPtr</RuntimeDepth>
 <InterfaceList>
 <Interface>clk</Interface>
@@ -10036,7 +9248,7 @@
 <FIFOInst>
 <Name>bgr_stream_U</Name>
 <ParentInst></ParentInst>
-<StaticDepth>307200</StaticDepth>
+<StaticDepth>1288</StaticDepth>
 <RuntimeDepth>mOutPtr</RuntimeDepth>
 <InterfaceList>
 <Interface>clk</Interface>
@@ -10051,7 +9263,7 @@
 <FIFOInst>
 <Name>hdr_stream_U</Name>
 <ParentInst></ParentInst>
-<StaticDepth>61440</StaticDepth>
+<StaticDepth>512</StaticDepth>
 <RuntimeDepth>mOutPtr</RuntimeDepth>
 <InterfaceList>
 <Interface>clk</Interface>
@@ -10066,7 +9278,7 @@
 <FIFOInst>
 <Name>padded_stream_U</Name>
 <ParentInst></ParentInst>
-<StaticDepth>311296</StaticDepth>
+<StaticDepth>1932</StaticDepth>
 <RuntimeDepth>mOutPtr</RuntimeDepth>
 <InterfaceList>
 <Interface>clk</Interface>
@@ -10081,7 +9293,7 @@
 <FIFOInst>
 <Name>gray_stream_U</Name>
 <ParentInst></ParentInst>
-<StaticDepth>311296</StaticDepth>
+<StaticDepth>3220</StaticDepth>
 <RuntimeDepth>mOutPtr</RuntimeDepth>
 <InterfaceList>
 <Interface>clk</Interface>

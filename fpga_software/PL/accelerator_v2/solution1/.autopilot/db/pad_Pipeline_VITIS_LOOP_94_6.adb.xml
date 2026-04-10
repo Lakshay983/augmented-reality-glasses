@@ -70,7 +70,7 @@ newFuncRoot:2 %specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i24 %ro
 
 <Node id="8" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-newFuncRoot:3 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %bgr_stream1, void @empty_8, i32 0, i32 0, void @empty_29, i32 0, i32 0, void @empty_29, void @empty_29, void @empty_29, i32 0, i32 0, i32 0, i32 0, void @empty_29, void @empty_29, i32 4294967295, i32 0
+newFuncRoot:3 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %bgr_stream1, void @empty_1, i32 0, i32 0, void @empty_2, i32 0, i32 0, void @empty_2, void @empty_2, void @empty_2, i32 0, i32 0, i32 0, i32 0, void @empty_2, void @empty_2, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -287,7 +287,7 @@ for.inc65.split:0 %zext_ln94 = zext i10 %c_2
 
 <Node id="20" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="0">
 <![CDATA[
-for.inc65.split:1 %specpipeline_ln95 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_29
+for.inc65.split:1 %specpipeline_ln95 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_2
 
 ]]></Node>
 <StgValue><ssdm name="specpipeline_ln95"/></StgValue>
@@ -302,7 +302,7 @@ for.inc65.split:1 %specpipeline_ln95 = specpipeline void @_ssdm_op_SpecPipeline,
 
 <Node id="21" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.inc65.split:2 %specloopname_ln94 = specloopname void @_ssdm_op_SpecLoopName, void @empty_3
+for.inc65.split:2 %specloopname_ln94 = specloopname void @_ssdm_op_SpecLoopName, void @empty_5
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln94"/></StgValue>
@@ -465,23 +465,23 @@ arrayidx6411.case.3:1 %br_ln96 = br void %arrayidx6411.exit
 </dataflow>
 <dataflow id="62" from="bgr_stream1" to="specinterface_ln0" fromId="42" toId="8">
 </dataflow>
-<dataflow id="64" from="empty_8" to="specinterface_ln0" fromId="63" toId="8">
+<dataflow id="64" from="empty_1" to="specinterface_ln0" fromId="63" toId="8">
 </dataflow>
 <dataflow id="66" from="StgValue_65" to="specinterface_ln0" fromId="65" toId="8">
 </dataflow>
 <dataflow id="67" from="StgValue_65" to="specinterface_ln0" fromId="65" toId="8">
 </dataflow>
-<dataflow id="69" from="empty_29" to="specinterface_ln0" fromId="68" toId="8">
+<dataflow id="69" from="empty_2" to="specinterface_ln0" fromId="68" toId="8">
 </dataflow>
 <dataflow id="70" from="StgValue_65" to="specinterface_ln0" fromId="65" toId="8">
 </dataflow>
 <dataflow id="71" from="StgValue_65" to="specinterface_ln0" fromId="65" toId="8">
 </dataflow>
-<dataflow id="72" from="empty_29" to="specinterface_ln0" fromId="68" toId="8">
+<dataflow id="72" from="empty_2" to="specinterface_ln0" fromId="68" toId="8">
 </dataflow>
-<dataflow id="73" from="empty_29" to="specinterface_ln0" fromId="68" toId="8">
+<dataflow id="73" from="empty_2" to="specinterface_ln0" fromId="68" toId="8">
 </dataflow>
-<dataflow id="74" from="empty_29" to="specinterface_ln0" fromId="68" toId="8">
+<dataflow id="74" from="empty_2" to="specinterface_ln0" fromId="68" toId="8">
 </dataflow>
 <dataflow id="75" from="StgValue_65" to="specinterface_ln0" fromId="65" toId="8">
 </dataflow>
@@ -491,9 +491,9 @@ arrayidx6411.case.3:1 %br_ln96 = br void %arrayidx6411.exit
 </dataflow>
 <dataflow id="78" from="StgValue_65" to="specinterface_ln0" fromId="65" toId="8">
 </dataflow>
-<dataflow id="79" from="empty_29" to="specinterface_ln0" fromId="68" toId="8">
+<dataflow id="79" from="empty_2" to="specinterface_ln0" fromId="68" toId="8">
 </dataflow>
-<dataflow id="80" from="empty_29" to="specinterface_ln0" fromId="68" toId="8">
+<dataflow id="80" from="empty_2" to="specinterface_ln0" fromId="68" toId="8">
 </dataflow>
 <dataflow id="82" from="StgValue_81" to="specinterface_ln0" fromId="81" toId="8">
 </dataflow>
@@ -545,11 +545,11 @@ arrayidx6411.case.3:1 %br_ln96 = br void %arrayidx6411.exit
 </dataflow>
 <dataflow id="113" from="StgValue_65" to="specpipeline_ln95" fromId="65" toId="21">
 </dataflow>
-<dataflow id="114" from="empty_29" to="specpipeline_ln95" fromId="68" toId="21">
+<dataflow id="114" from="empty_2" to="specpipeline_ln95" fromId="68" toId="21">
 </dataflow>
 <dataflow id="116" from="_ssdm_op_SpecLoopName" to="specloopname_ln94" fromId="115" toId="22">
 </dataflow>
-<dataflow id="118" from="empty_3" to="specloopname_ln94" fromId="117" toId="22">
+<dataflow id="118" from="empty_5" to="specloopname_ln94" fromId="117" toId="22">
 </dataflow>
 <dataflow id="120" from="_ssdm_op_Read.ap_fifo.volatile.i24P0A" to="bgr_stream1_read" fromId="119" toId="23">
 </dataflow>

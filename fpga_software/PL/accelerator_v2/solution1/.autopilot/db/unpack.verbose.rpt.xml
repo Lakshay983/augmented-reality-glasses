@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'unpack'" level="0">
-<item name = "Date">Thu Apr  9 16:57:14 2026
+<item name = "Date">Fri Apr 10 15:48:23 2026
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">accelerator_v2</item>
@@ -151,13 +151,13 @@
 <column name="in_stream_TLAST">in, 1, axis, in_stream_V_last_V, pointer</column>
 <column name="in_stream_TID">in, 1, axis, in_stream_V_id_V, pointer</column>
 <column name="bgr_stream1_din">out, 24, ap_fifo, bgr_stream1, pointer</column>
-<column name="bgr_stream1_num_data_valid">in, 20, ap_fifo, bgr_stream1, pointer</column>
-<column name="bgr_stream1_fifo_cap">in, 20, ap_fifo, bgr_stream1, pointer</column>
+<column name="bgr_stream1_num_data_valid">in, 12, ap_fifo, bgr_stream1, pointer</column>
+<column name="bgr_stream1_fifo_cap">in, 12, ap_fifo, bgr_stream1, pointer</column>
 <column name="bgr_stream1_full_n">in, 1, ap_fifo, bgr_stream1, pointer</column>
 <column name="bgr_stream1_write">out, 1, ap_fifo, bgr_stream1, pointer</column>
 <column name="hdr_stream4_din">out, 8, ap_fifo, hdr_stream4, pointer</column>
-<column name="hdr_stream4_num_data_valid">in, 17, ap_fifo, hdr_stream4, pointer</column>
-<column name="hdr_stream4_fifo_cap">in, 17, ap_fifo, hdr_stream4, pointer</column>
+<column name="hdr_stream4_num_data_valid">in, 10, ap_fifo, hdr_stream4, pointer</column>
+<column name="hdr_stream4_fifo_cap">in, 10, ap_fifo, hdr_stream4, pointer</column>
 <column name="hdr_stream4_full_n">in, 1, ap_fifo, hdr_stream4, pointer</column>
 <column name="hdr_stream4_write">out, 1, ap_fifo, hdr_stream4, pointer</column>
 <column name="frame_start_out_in">in, 1, ap_none, frame_start_out_in, pointer</column>

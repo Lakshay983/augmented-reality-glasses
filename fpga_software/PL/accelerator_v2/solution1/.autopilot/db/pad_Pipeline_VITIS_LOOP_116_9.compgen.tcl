@@ -114,7 +114,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_padded_stream2 \
     op interface \
-    ports { padded_stream2_din { O 24 vector } padded_stream2_num_data_valid { I 20 vector } padded_stream2_fifo_cap { I 20 vector } padded_stream2_full_n { I 1 bit } padded_stream2_write { O 1 bit } } \
+    ports { padded_stream2_din { O 24 vector } padded_stream2_num_data_valid { I 12 vector } padded_stream2_fifo_cap { I 12 vector } padded_stream2_full_n { I 1 bit } padded_stream2_write { O 1 bit } } \
 } "
 }
 

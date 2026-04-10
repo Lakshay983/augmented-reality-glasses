@@ -32376,12 +32376,12 @@ void GaussianBlur(xf::cv::Mat<SRC_T, ROWS, COLS, NPC, XFCVDEPTH_IN_1>& _src,
                             XFCVDEPTH_OUT_1, DataType<SRC_T, NPC>::wordwidth, (COLS >> xfNPixelsPerCycle<NPC>::datashift)>(
             _src, _dst, _src.rows, imgwidth, weights);
     } else if (FILTER_SIZE == XF_FILTER_5X5) {
-        unsigned char weights[5];
+        unsigned char weights[5] = {15, 62, 103, 62, 15};
 
 #pragma HLS ARRAY_PARTITION variable=weights complete dim=1
 
- weightsghcalculation5x5(sigma, weights);
-        xFGaussianFilter5x5<SRC_T, ROWS, COLS, DataType<SRC_T, NPC>::channel, DataType<SRC_T, NPC>::pixeldepth, NPC, XFCVDEPTH_IN_1,
+
+ xFGaussianFilter5x5<SRC_T, ROWS, COLS, DataType<SRC_T, NPC>::channel, DataType<SRC_T, NPC>::pixeldepth, NPC, XFCVDEPTH_IN_1,
                             XFCVDEPTH_OUT_1, DataType<SRC_T, NPC>::wordwidth, (COLS >> xfNPixelsPerCycle<NPC>::datashift), false>(
             _src, _dst, _src.rows, imgwidth, weights);
     } else if (FILTER_SIZE == XF_FILTER_7X7) {
@@ -32403,7 +32403,7 @@ typedef ap_axiu<128, 1, 1, 1> AxiBurst;
 
 void stream_to_mat(
     hls::stream<ap_uint<24>>& in,
-    xf::cv::Mat<XF_8UC3, (480 + 2*2), (640 + 2*2), XF_NPPC1, ((480 + 2*2) * (640 + 2*2))>& out,
+    xf::cv::Mat<XF_8UC3, (480 + 2*2), (640 + 2*2), XF_NPPC1, ((480 + 2*2) * 8)>& out,
     int rows, int cols)
 {
 
@@ -32418,7 +32418,7 @@ void stream_to_mat(
 }
 
 void mat_to_stream(
-    xf::cv::Mat<XF_8UC1, (480 + 2*2), (640 + 2*2), XF_NPPC1, ((480 + 2*2) * (640 + 2*2))>& in,
+    xf::cv::Mat<XF_8UC1, (480 + 2*2), (640 + 2*2), XF_NPPC1, ((480 + 2*2) * 8)>& in,
     hls::stream<ap_uint<8>>& out,
     int rows, int cols)
 {
@@ -32547,9 +32547,9 @@ void process_pixels(
 
 
 
- xf::cv::Mat<XF_8UC3, (480 + 2*2), (640 + 2*2), XF_NPPC1, ((480 + 2*2) * (640 + 2*2))> bgr_mat(rows, cols);
-    xf::cv::Mat<XF_8UC1, (480 + 2*2), (640 + 2*2), XF_NPPC1, ((480 + 2*2) * (640 + 2*2))> gray_mat(rows, cols);
-    xf::cv::Mat<XF_8UC1, (480 + 2*2), (640 + 2*2), XF_NPPC1, ((480 + 2*2) * (640 + 2*2))> blurred_mat(rows, cols);
+ xf::cv::Mat<XF_8UC3, (480 + 2*2), (640 + 2*2), XF_NPPC1, ((480 + 2*2) * 8)> bgr_mat(rows, cols);
+    xf::cv::Mat<XF_8UC1, (480 + 2*2), (640 + 2*2), XF_NPPC1, ((480 + 2*2) * 8)> gray_mat(rows, cols);
+    xf::cv::Mat<XF_8UC1, (480 + 2*2), (640 + 2*2), XF_NPPC1, ((480 + 2*2) * 8)> blurred_mat(rows, cols);
 
 
     stream_to_mat(bgr_stream, bgr_mat, rows, cols);
@@ -32559,14 +32559,15 @@ void process_pixels(
 
 
 #pragma HLS DEPENDENCE variable=gray_mat inter false
+#pragma HLS DEPENDENCE variable=blurred_mat inter false
 
  xf::cv::GaussianBlur<5, XF_BORDER_REPLICATE, XF_8UC1, (480 + 2*2), (640 + 2*2), XF_NPPC1>(
         gray_mat, blurred_mat, 0.0f);
-#pragma HLS DEPENDENCE variable=blurred_mat inter false
 
 
 
- mat_to_stream(blurred_mat, gray_stream_out, rows, cols);
+
+    mat_to_stream(blurred_mat, gray_stream_out, rows, cols);
 }
 
 
@@ -32581,15 +32582,15 @@ void repack(
 
  int hdr_rows_drained = 0;
 
-    VITIS_LOOP_203_1: for (int r = 0; r < (480 + 2*2); r++) {
+    VITIS_LOOP_204_1: for (int r = 0; r < (480 + 2*2); r++) {
         ap_uint<8> row_pixels[(640 + 2*2)];
-        VITIS_LOOP_205_2: for (int c = 0; c < (640 + 2*2); c++) {
+        VITIS_LOOP_206_2: for (int c = 0; c < (640 + 2*2); c++) {
 #pragma HLS PIPELINE II=1
  row_pixels[c] = gray_stream.read();
         }
 
         if (r >= 2 && r < (480 + 2*2) - 2) {
-            VITIS_LOOP_211_3: for (int ob = 0; ob < 43; ob++) {
+            VITIS_LOOP_212_3: for (int ob = 0; ob < 43; ob++) {
 #pragma HLS PIPELINE II=1
  AxiBurst out_burst;
                 out_burst.data = 0;
@@ -32598,7 +32599,7 @@ void repack(
 
                 int n_pix = (ob < 42) ? 15 : 10;
 
-                VITIS_LOOP_220_4: for (int p = 0; p < 15; p++) {
+                VITIS_LOOP_221_4: for (int p = 0; p < 15; p++) {
 #pragma HLS UNROLL
  if (p < n_pix) {
                         ap_uint<8> gray = row_pixels[2 + ob * 15 + p];
@@ -32613,15 +32614,16 @@ void repack(
                 out_burst.user = (ob == 0) && (out_row == 0);
                 burst_out.write(out_burst);
             }
+        }
 
-
-            if (hdr_rows_drained < 480) {
-                VITIS_LOOP_238_5: for (int ib = 0; ib < 128; ib++) {
+  if (hdr_rows_drained < 480) {
+   VITIS_LOOP_239_5: for (int ib = 0; ib < 128; ib++) {
 #pragma HLS PIPELINE II=1
  hdr_stream.read();
-                }
-                hdr_rows_drained++;
-            }
+   }
+   hdr_rows_drained++;
+
+
         }
     }
 }
@@ -32636,11 +32638,11 @@ __attribute__((sdx_kernel("accelerator_v2", 0))) void accelerator_v2(
 ){
 #line 16 "/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL/accelerator_v2/solution1/csynth.tcl"
 #pragma HLSDIRECTIVE TOP name=accelerator_v2
-# 255 "accelerator_v2.cpp"
+# 257 "accelerator_v2.cpp"
 
 #line 6 "/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL/accelerator_v2/solution1/directives.tcl"
 #pragma HLSDIRECTIVE TOP name=accelerator_v2
-# 255 "accelerator_v2.cpp"
+# 257 "accelerator_v2.cpp"
 
 #pragma HLS INTERFACE axis port=in_stream
 #pragma HLS INTERFACE axis port=out_stream
@@ -32652,10 +32654,10 @@ __attribute__((sdx_kernel("accelerator_v2", 0))) void accelerator_v2(
     hls::stream<ap_uint<24>> padded_stream("padded_stream");
     hls::stream<ap_uint<8>> gray_stream("gray_stream");
     hls::stream<ap_uint<8>> hdr_stream("hdr_stream");
-#pragma HLS STREAM variable=bgr_stream depth=307200
-#pragma HLS STREAM variable=padded_stream depth=311296
-#pragma HLS STREAM variable=gray_stream depth=311296
-#pragma HLS STREAM variable=hdr_stream depth=61440
+#pragma HLS STREAM variable=bgr_stream depth=1288
+#pragma HLS STREAM variable=padded_stream depth=1932
+#pragma HLS STREAM variable=gray_stream depth=3220
+#pragma HLS STREAM variable=hdr_stream depth=512
 
  volatile bool frame_start = false;
 

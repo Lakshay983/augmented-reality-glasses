@@ -18,8 +18,8 @@ port (
     ap_idle : OUT STD_LOGIC;
     ap_ready : OUT STD_LOGIC;
     padded_stream2_din : OUT STD_LOGIC_VECTOR (23 downto 0);
-    padded_stream2_num_data_valid : IN STD_LOGIC_VECTOR (19 downto 0);
-    padded_stream2_fifo_cap : IN STD_LOGIC_VECTOR (19 downto 0);
+    padded_stream2_num_data_valid : IN STD_LOGIC_VECTOR (11 downto 0);
+    padded_stream2_fifo_cap : IN STD_LOGIC_VECTOR (11 downto 0);
     padded_stream2_full_n : IN STD_LOGIC;
     padded_stream2_write : OUT STD_LOGIC;
     row_buf_V_1_address0 : OUT STD_LOGIC_VECTOR (9 downto 0);

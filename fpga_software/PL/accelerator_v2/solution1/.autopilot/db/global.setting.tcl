@@ -8,7 +8,7 @@ set PipelineFlag 1
 set DataflowTaskPipelineFlag 1
 set TrivialPipelineFlag 0
 set noPortSwitchingFlag 0
-set FloatingPointFlag 1
+set FloatingPointFlag 0
 set FftOrFirFlag 0
 set NbRWValue 0
 set intNbAccess 0
@@ -45,7 +45,7 @@ set TargetInfo xczu3eg:-sbva484:-1-i
 set SourceFiles {sc {} c ../../accelerator_v2.cpp}
 set SourceFlags {sc {} c {{-Wno-unknown-pragmas -I/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include}}}
 set DirectiveFile /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL/accelerator_v2/solution1/solution1.directive
-set TBFiles {verilog {../../tb_data ../../accelerator_v2_tb.cpp} bc {../../tb_data ../../accelerator_v2_tb.cpp} sc {../../tb_data ../../accelerator_v2_tb.cpp} vhdl {../../tb_data ../../accelerator_v2_tb.cpp} c {} cas {../../tb_data ../../accelerator_v2_tb.cpp}}
+set TBFiles {verilog {../../accelerator_v2_tb.cpp ../../tb_data} bc {../../accelerator_v2_tb.cpp ../../tb_data} sc {../../accelerator_v2_tb.cpp ../../tb_data} vhdl {../../accelerator_v2_tb.cpp ../../tb_data} c {} cas {../../accelerator_v2_tb.cpp ../../tb_data}}
 set SpecLanguage C
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
 set TVOutFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
