@@ -11,7 +11,7 @@
 #define PAD              2
 #define PAD_W            (IMG_W + 2*PAD)  // 644
 #define PAD_H            (IMG_H + 2*PAD)  // 484
-#define FIFO_DEPTH       (PAD_H * PAD_W)
+#define FIFO_DEPTH       (PAD_H * 8)
 #define FULL_BURSTS_OUT  42
 #define PARTIAL_PIX_OUT  10
 #define TOTAL_BURSTS_OUT 43
@@ -178,10 +178,11 @@ void process_pixels(
 
 
 #pragma HLS DEPENDENCE variable=gray_mat inter false
+#pragma HLS DEPENDENCE variable=blurred_mat inter false
     // Gaussian Filter - Ensure sigma is provided if not using 0.0f
     xf::cv::GaussianBlur<KERNEL_SIZE, XF_BORDER_REPLICATE, XF_8UC1, PAD_H, PAD_W, XF_NPPC1>(
         gray_mat, blurred_mat, 0.0f); // Try 1.0f instead of 0.0f to see if it stabilizes
-#pragma HLS DEPENDENCE variable=blurred_mat inter false
+
 
 
 
@@ -232,15 +233,16 @@ void repack(
                 out_burst.user = (ob == 0) && (out_row == 0);
                 burst_out.write(out_burst);
             }
-
-            // Only drain headers for real input rows (IMG_H total)
-            if (hdr_rows_drained < IMG_H) {
-                for (int ib = 0; ib < INPUT_BURSTS_ROW; ib++) {
+        }
+		// Only drain headers for real input rows (IMG_H total)
+		if (hdr_rows_drained < IMG_H) {
+			for (int ib = 0; ib < INPUT_BURSTS_ROW; ib++) {
 #pragma HLS PIPELINE II=1
-                    hdr_stream.read();
-                }
-                hdr_rows_drained++;
-            }
+				hdr_stream.read();
+			}
+			hdr_rows_drained++;
+
+
         }
     }
 }
@@ -257,16 +259,17 @@ void accelerator_v2(
 #pragma HLS INTERFACE axis port=out_stream
 #pragma HLS INTERFACE ap_none port=in_breath
 #pragma HLS INTERFACE ap_none port=out_breath
+#pragma HLS INTERFACE s_axilite port=return bundle=CTRL
 #pragma HLS DATAFLOW
 
     hls::stream<ap_uint<24>> bgr_stream("bgr_stream");
     hls::stream<ap_uint<24>> padded_stream("padded_stream");
     hls::stream<ap_uint<8>>  gray_stream("gray_stream");
     hls::stream<ap_uint<8>>  hdr_stream("hdr_stream");
-#pragma HLS STREAM variable=bgr_stream  depth=307200
-#pragma HLS STREAM variable=padded_stream depth=311296
-#pragma HLS STREAM variable=gray_stream depth=311296
-#pragma HLS STREAM variable=hdr_stream  depth=61440
+#pragma HLS STREAM variable=bgr_stream  depth=1288
+#pragma HLS STREAM variable=padded_stream depth=1932
+#pragma HLS STREAM variable=gray_stream depth=3220
+#pragma HLS STREAM variable=hdr_stream  depth=512
 
     volatile bool frame_start = false;
 
