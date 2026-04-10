@@ -870,7 +870,7 @@ end
         .token_out_vec(token_out_vec_7),
         .dl_detect_out(dl_in_vec[7]));
 
-    assign proc_7_data_FIFO_blk[0] = 1'b0 | (~AESL_inst_accelerator_v2.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_424.gray_mat_data44_blk_n);
+    assign proc_7_data_FIFO_blk[0] = 1'b0 | (~AESL_inst_accelerator_v2.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60.grp_xFGaussianFilter5x5_Pipeline_Read_Row2_Loop_fu_417.gray_mat_data44_blk_n);
     assign proc_7_data_PIPO_blk[0] = 1'b0;
     assign proc_7_start_FIFO_blk[0] = 1'b0 | (~AESL_inst_accelerator_v2.process_pixels_U0.start_for_GaussianBlur_5_1_0_484_644_1_311696_311696_U0_U.if_empty_n & AESL_inst_accelerator_v2.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_311696_311696_U0.ap_idle & ~AESL_inst_accelerator_v2.process_pixels_U0.start_for_GaussianBlur_5_1_0_484_644_1_311696_311696_U0_U.if_write);
     assign proc_7_TLF_FIFO_blk[0] = 1'b0;

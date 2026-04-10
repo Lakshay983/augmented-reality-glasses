@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1775130573873">
-  <ports id="1" name="padded_stream2" type="PortType" coreId="1317022048" bitwidth="24" iftype="IfTypeRom">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1775771839576">
+  <ports id="1" name="padded_stream2" type="PortType" coreId="2255956960" bitwidth="24" iftype="IfTypeRom">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="2" name="gray_stream3" type="PortType" coreId="1316731248" bitwidth="8" direction="DirOut" iftype="IfTypeRom">
+  <ports id="2" name="gray_stream3" type="PortType" coreId="897" bitwidth="8" direction="DirOut" iftype="IfTypeRom">
     <dataInputObjs>call</dataInputObjs>
   </ports>
   <edges id="27" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
@@ -38,31 +38,31 @@
         <dataOutputObjs>call</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="15" name="_ln174" lineNumber="174" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="stream_to_mat_U0" coreId="1315502128" contextFuncName="process_pixels" opcode="call" nodeLatency="1" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="15" name="_ln174" lineNumber="174" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="stream_to_mat_U0" coreId="2255495040" contextFuncName="process_pixels" opcode="call" nodeLatency="1" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="174" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="process_pixels"/>
         <dataInputObjs>padded_stream2</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
         <constName>stream_to_mat</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="16" name="_ln177" lineNumber="177" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="bgr2gray_9_0_484_644_1_311696_311696_U0" coreId="1315502128" contextFuncName="process_pixels" opcode="call" nodeLabel="2.0" nodeLatency="1" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="16" name="_ln177" lineNumber="177" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="bgr2gray_9_0_484_644_1_311696_311696_U0" coreId="2256750208" contextFuncName="process_pixels" opcode="call" nodeLabel="2.0" nodeLatency="1" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="177" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="process_pixels"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
         <constName>bgr2gray_9_0_484_644_1_311696_311696_s</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="17" name="_ln182" lineNumber="182" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="GaussianBlur_5_1_0_484_644_1_311696_311696_U0" coreId="1316558504" contextFuncName="process_pixels" opcode="call" nodeLabel="4.0" nodeLatency="1" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="17" name="_ln182" lineNumber="182" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="GaussianBlur_5_1_0_484_644_1_311696_311696_U0" coreId="2131415625" contextFuncName="process_pixels" opcode="call" nodeLabel="4.0" nodeLatency="1" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="182" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="process_pixels"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
         <constName>GaussianBlur_5_1_0_484_644_1_311696_311696_s</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="18" name="_ln188" lineNumber="188" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="mat_to_stream_U0" coreId="1310008592" contextFuncName="process_pixels" opcode="call" nodeLabel="6.0" nodeLatency="1" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="18" name="_ln188" lineNumber="188" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="mat_to_stream_U0" coreId="2246559824" contextFuncName="process_pixels" opcode="call" nodeLabel="6.0" nodeLatency="1" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="188" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="process_pixels"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataOutputObjs>gray_stream3</dataOutputObjs>
         <constName>mat_to_stream</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="19" name="_ln189" lineNumber="189" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="1397508187" contextFuncName="process_pixels" opcode="ret" nodeLabel="7.0" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="19" name="_ln189" lineNumber="189" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="2255396304" contextFuncName="process_pixels" opcode="ret" nodeLabel="7.0" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="189" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="process_pixels"/>
       </node_objs>
       <fileValidLineNumbers fileName="accelerator_v2.cpp">
@@ -186,7 +186,7 @@
     </transitions>
   </fsm>
   <CFGRegionsRoot>
-    <cfgRegions mId="1" mTag="process_pixels" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="325690" mMaxLatency="325690" mIsDfPipe="true">
+    <cfgRegions mId="1" mTag="process_pixels" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="325757" mMaxLatency="325757" mIsDfPipe="true">
       <basicBlocks>20</basicBlocks>
       <mDfPipe allPipePinInst="//@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.0/@pins.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.3/@pins.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@channel_list.0/@sink.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@channel_list.1/@sink.0/@inst">
         <processe_list name="stream_to_mat_U0" ssdmobj_id="15">

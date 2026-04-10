@@ -47,15 +47,15 @@ set SynModuleInfo {
   {SRCNAME {bgr2gray<9, 0, 484, 644, 1, 311696, 311696>} MODELNAME bgr2gray_9_0_484_644_1_311696_311696_s RTLNAME accelerator_v2_bgr2gray_9_0_484_644_1_311696_311696_s}
   {SRCNAME {GaussianBlur<5, 1, 0, 484, 644, 1, 311696, 311696>_Pipeline_VITIS_LOOP_85_1} MODELNAME GaussianBlur_5_1_0_484_644_1_311696_311696_Pipeline_VITIS_LOOP_85_1 RTLNAME accelerator_v2_GaussianBlur_5_1_0_484_644_1_311696_311696_Pipeline_VITIS_LOOP_85_1
     SUBMODULES {
-      {MODELNAME accelerator_v2_sitofp_32s_32_2_no_dsp_1 RTLNAME accelerator_v2_sitofp_32s_32_2_no_dsp_1 BINDTYPE op TYPE sitofp IMPL auto LATENCY 1 ALLOW_PRAGMA 1}
-      {MODELNAME accelerator_v2_fexp_32ns_32ns_32_5_full_dsp_1 RTLNAME accelerator_v2_fexp_32ns_32ns_32_5_full_dsp_1 BINDTYPE op TYPE fexp IMPL fulldsp LATENCY 4 ALLOW_PRAGMA 1}
+      {MODELNAME accelerator_v2_sitofp_32s_32_4_no_dsp_1 RTLNAME accelerator_v2_sitofp_32s_32_4_no_dsp_1 BINDTYPE op TYPE sitofp IMPL auto LATENCY 3 ALLOW_PRAGMA 1}
+      {MODELNAME accelerator_v2_fexp_32ns_32ns_32_8_full_dsp_1 RTLNAME accelerator_v2_fexp_32ns_32ns_32_8_full_dsp_1 BINDTYPE op TYPE fexp IMPL fulldsp LATENCY 7 ALLOW_PRAGMA 1}
     }
   }
   {SRCNAME {GaussianBlur<5, 1, 0, 484, 644, 1, 311696, 311696>_Pipeline_VITIS_LOOP_94_2} MODELNAME GaussianBlur_5_1_0_484_644_1_311696_311696_Pipeline_VITIS_LOOP_94_2 RTLNAME accelerator_v2_GaussianBlur_5_1_0_484_644_1_311696_311696_Pipeline_VITIS_LOOP_94_2
     SUBMODULES {
-      {MODELNAME accelerator_v2_sitofp_32ns_32_2_no_dsp_1 RTLNAME accelerator_v2_sitofp_32ns_32_2_no_dsp_1 BINDTYPE op TYPE sitofp IMPL auto LATENCY 1 ALLOW_PRAGMA 1}
-      {MODELNAME accelerator_v2_fpext_32ns_64_1_no_dsp_1 RTLNAME accelerator_v2_fpext_32ns_64_1_no_dsp_1 BINDTYPE op TYPE fpext IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
-      {MODELNAME accelerator_v2_dadd_64ns_64ns_64_4_full_dsp_1 RTLNAME accelerator_v2_dadd_64ns_64ns_64_4_full_dsp_1 BINDTYPE op TYPE dadd IMPL fulldsp LATENCY 3 ALLOW_PRAGMA 1}
+      {MODELNAME accelerator_v2_sitofp_32ns_32_4_no_dsp_1 RTLNAME accelerator_v2_sitofp_32ns_32_4_no_dsp_1 BINDTYPE op TYPE sitofp IMPL auto LATENCY 3 ALLOW_PRAGMA 1}
+      {MODELNAME accelerator_v2_fpext_32ns_64_2_no_dsp_1 RTLNAME accelerator_v2_fpext_32ns_64_2_no_dsp_1 BINDTYPE op TYPE fpext IMPL auto LATENCY 1 ALLOW_PRAGMA 1}
+      {MODELNAME accelerator_v2_dadd_64ns_64ns_64_5_full_dsp_1 RTLNAME accelerator_v2_dadd_64ns_64ns_64_5_full_dsp_1 BINDTYPE op TYPE dadd IMPL fulldsp LATENCY 4 ALLOW_PRAGMA 1}
     }
   }
   {SRCNAME xFGaussianFilter5x5_Pipeline_Clear_Row_Loop MODELNAME xFGaussianFilter5x5_Pipeline_Clear_Row_Loop RTLNAME accelerator_v2_xFGaussianFilter5x5_Pipeline_Clear_Row_Loop}
@@ -84,9 +84,9 @@ set SynModuleInfo {
   }
   {SRCNAME {GaussianBlur<5, 1, 0, 484, 644, 1, 311696, 311696>} MODELNAME GaussianBlur_5_1_0_484_644_1_311696_311696_s RTLNAME accelerator_v2_GaussianBlur_5_1_0_484_644_1_311696_311696_s
     SUBMODULES {
-      {MODELNAME accelerator_v2_fdiv_32ns_32ns_32_7_no_dsp_1 RTLNAME accelerator_v2_fdiv_32ns_32ns_32_7_no_dsp_1 BINDTYPE op TYPE fdiv IMPL fabric LATENCY 6 ALLOW_PRAGMA 1}
-      {MODELNAME accelerator_v2_faddfsub_32ns_32ns_32_3_full_dsp_1 RTLNAME accelerator_v2_faddfsub_32ns_32ns_32_3_full_dsp_1 BINDTYPE op TYPE fadd IMPL fulldsp LATENCY 2 ALLOW_PRAGMA 1}
-      {MODELNAME accelerator_v2_fmul_32ns_32ns_32_2_max_dsp_1 RTLNAME accelerator_v2_fmul_32ns_32ns_32_2_max_dsp_1 BINDTYPE op TYPE fmul IMPL maxdsp LATENCY 1 ALLOW_PRAGMA 1}
+      {MODELNAME accelerator_v2_fdiv_32ns_32ns_32_10_no_dsp_1 RTLNAME accelerator_v2_fdiv_32ns_32ns_32_10_no_dsp_1 BINDTYPE op TYPE fdiv IMPL fabric LATENCY 9 ALLOW_PRAGMA 1}
+      {MODELNAME accelerator_v2_faddfsub_32ns_32ns_32_5_full_dsp_1 RTLNAME accelerator_v2_faddfsub_32ns_32ns_32_5_full_dsp_1 BINDTYPE op TYPE fadd IMPL fulldsp LATENCY 4 ALLOW_PRAGMA 1}
+      {MODELNAME accelerator_v2_fmul_32ns_32ns_32_4_max_dsp_1 RTLNAME accelerator_v2_fmul_32ns_32ns_32_4_max_dsp_1 BINDTYPE op TYPE fmul IMPL maxdsp LATENCY 3 ALLOW_PRAGMA 1}
       {MODELNAME accelerator_v2_GaussianBlur_5_1_0_484_644_1_311696_311696_s_cf_RAM_AUTO_1R1W RTLNAME accelerator_v2_GaussianBlur_5_1_0_484_644_1_311696_311696_s_cf_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
     }
   }

@@ -70,7 +70,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1305252441</coreId>
+              <coreId>2244881604</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -140,7 +140,7 @@
           <m_isOnCriticalPath>0</m_isOnCriticalPath>
           <m_isLCDNode>0</m_isLCDNode>
           <m_isStartOfPath>0</m_isStartOfPath>
-          <m_delay>2.10</m_delay>
+          <m_delay>2.16</m_delay>
           <m_topoIndex>1</m_topoIndex>
           <m_clusterGroupNumber>-1</m_clusterGroupNumber>
         </item>
@@ -181,7 +181,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1316669424</coreId>
+              <coreId>2255518144</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -225,7 +225,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1316419072</coreId>
+              <coreId>2259103216</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -273,7 +273,7 @@
             <coreName/>
             <isStorage>0</isStorage>
             <storageDepth>0</storageDepth>
-            <coreId>1318067184</coreId>
+            <coreId>2259470720</coreId>
             <rtlModuleName/>
           </Obj>
           <node_objs>

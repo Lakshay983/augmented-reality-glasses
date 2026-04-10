@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1775130573321">
-  <ports id="1" name="gray_mat_data44" type="PortType" coreId="1315642208" bitwidth="8" iftype="IfTypeRom">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1775771839013">
+  <ports id="1" name="gray_mat_data44" type="PortType" coreId="2256021840" bitwidth="8" iftype="IfTypeRom">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="2" name="blurred_mat_data45" type="PortType" coreId="1316767008" bitwidth="8" direction="DirOut" iftype="IfTypeRom">
+  <ports id="2" name="blurred_mat_data45" type="PortType" coreId="2250745072" bitwidth="8" direction="DirOut" iftype="IfTypeRom">
     <dataInputObjs>call</dataInputObjs>
   </ports>
   <edges id="28" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.5"/>
@@ -30,22 +30,22 @@
   <edges id="98" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.0/@node_objs.6"/>
   <edges id="99" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.0/@node_objs.8"/>
   <blocks id="19" name="GaussianBlur&lt;5, 1, 0, 484, 644, 1, 311696, 311696>" type="BlockType">
-    <node_objs xsi:type="cdfg:CdfgNode" id="3" name="weights_loc" coreId="1315314496" bitwidth="8" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="3" name="weights_loc" coreId="2255755952" bitwidth="8" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
       <dataOutputObjs>call</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="4" name="weights_1_loc" coreId="1315328976" bitwidth="8" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="4" name="weights_1_loc" coreId="2250671616" bitwidth="8" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
       <dataOutputObjs>call</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="5" name="weights_2_loc" coreId="1313322272" bitwidth="8" opcode="alloca" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="5" name="weights_2_loc" coreId="2251386624" bitwidth="8" opcode="alloca" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
       <dataOutputObjs>call</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="sum_1_loc" coreId="1315528896" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="sum_1_loc" coreId="2251916800" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
       <dataOutputObjs>call</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
@@ -56,22 +56,22 @@
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="_ln0" rtlName="grp_GaussianBlur_5_1_0_484_644_1_311696_311696_Pipeline_VITIS_LOOP_85_1_fu_44" coreId="1315176720" opcode="call" nodeLatency="1" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="_ln0" rtlName="grp_GaussianBlur_5_1_0_484_644_1_311696_311696_Pipeline_VITIS_LOOP_85_1_fu_44" coreId="2252494784" opcode="call" nodeLatency="1" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
       <constName>GaussianBlur_5_1_0_484_644_1_311696_311696_Pipeline_VITIS_LOOP_85_1</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="11" name="sum_1_loc_load" coreId="1315133456" bitwidth="32" opcode="load" nodeLabel="2.0" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="11" name="sum_1_loc_load" coreId="2142588283" bitwidth="32" opcode="load" nodeLabel="2.0" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>fdiv</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="sum" lineNumber="93" originalName="sum" fileName="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp" fileDirectory=".." rtlName="fdiv_32ns_32ns_32_7_no_dsp_1_U202" coreName="FDiv" implIndex="fabric" control="no" opType="fdiv" coreId="20" contextFuncName="weightsghcalculation5x5" bitwidth="32" opcode="fdiv" nodeLabel="2.0" nodeLatency="6" m_display="0" m_delay="6.31" m_topoIndex="8" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="sum" lineNumber="93" originalName="sum" fileName="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp" fileDirectory=".." rtlName="fdiv_32ns_32ns_32_10_no_dsp_1_U202" coreName="FDiv" implIndex="fabric" control="no" opType="fdiv" coreId="20" contextFuncName="weightsghcalculation5x5" bitwidth="32" opcode="fdiv" nodeLabel="2.0" nodeLatency="9" m_display="0" m_delay="6.7" m_topoIndex="8" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp" linenumber="93" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="weightsghcalculation5x5"/>
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="_ln93" lineNumber="93" fileName="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp" fileDirectory=".." rtlName="grp_GaussianBlur_5_1_0_484_644_1_311696_311696_Pipeline_VITIS_LOOP_94_2_fu_51" coreId="1316380496" contextFuncName="weightsghcalculation5x5" opcode="call" nodeLabel="8.0" nodeLatency="1" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="_ln93" lineNumber="93" fileName="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp" fileDirectory=".." rtlName="grp_GaussianBlur_5_1_0_484_644_1_311696_311696_Pipeline_VITIS_LOOP_94_2_fu_51" coreId="1397508187" contextFuncName="weightsghcalculation5x5" opcode="call" nodeLabel="11.0" nodeLatency="1" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp" linenumber="93" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="weightsghcalculation5x5"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataInputObjs>fdiv</dataInputObjs>
@@ -80,19 +80,19 @@
       <dataInputObjs>alloca</dataInputObjs>
       <constName>GaussianBlur_5_1_0_484_644_1_311696_311696_Pipeline_VITIS_LOOP_94_2</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="weights_2_loc_load" coreId="0" bitwidth="8" opcode="load" nodeLabel="10.0" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="weights_2_loc_load" coreId="2252594752" bitwidth="8" opcode="load" nodeLabel="13.0" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="weights_1_loc_load" coreId="1316380496" bitwidth="8" opcode="load" nodeLabel="10.0" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="weights_1_loc_load" coreId="2251334144" bitwidth="8" opcode="load" nodeLabel="13.0" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="weights_loc_load" coreId="1315326144" bitwidth="8" opcode="load" nodeLabel="10.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="weights_loc_load" coreId="2254675328" bitwidth="8" opcode="load" nodeLabel="13.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="_ln1320" lineNumber="1320" fileName="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp" fileDirectory=".." rtlName="grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60" coreId="1315643632" contextFuncName="GaussianBlur_5_1_0_484_644_1_311696_311696_s" opcode="call" nodeLabel="10.0" nodeLatency="1" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="_ln1320" lineNumber="1320" fileName="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp" fileDirectory=".." rtlName="grp_xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s_fu_60" coreId="2256377088" contextFuncName="GaussianBlur_5_1_0_484_644_1_311696_311696_s" opcode="call" nodeLabel="13.0" nodeLatency="1" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp" linenumber="1320" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="GaussianBlur&amp;lt;5, 1, 0, 484, 644, 1, 311696, 311696&amp;gt;"/>
       <dataInputObjs>gray_mat_data44</dataInputObjs>
       <dataInputObjs>load</dataInputObjs>
@@ -101,7 +101,7 @@
       <dataOutputObjs>blurred_mat_data45</dataOutputObjs>
       <constName>xFGaussianFilter5x5_0_484_644_1_0_1_311696_311696_1_644_false_s</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="_ln1333" lineNumber="1333" fileName="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp" fileDirectory=".." coreId="1313602784" contextFuncName="GaussianBlur_5_1_0_484_644_1_311696_311696_s" opcode="ret" nodeLabel="11.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="_ln1333" lineNumber="1333" fileName="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp" fileDirectory=".." coreId="2251887632" contextFuncName="GaussianBlur_5_1_0_484_644_1_311696_311696_s" opcode="ret" nodeLabel="14.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp" linenumber="1333" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="GaussianBlur&amp;lt;5, 1, 0, 484, 644, 1, 311696, 311696&amp;gt;"/>
     </node_objs>
     <fileValidLineNumbers fileName="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp">
@@ -123,6 +123,9 @@
   <ScheduleInfo time="9"/>
   <ScheduleInfo time="10"/>
   <ScheduleInfo time="11"/>
+  <ScheduleInfo time="12"/>
+  <ScheduleInfo time="13"/>
+  <ScheduleInfo time="14"/>
   <regnodes realName="sum_1_loc_reg_111">
     <nodeIds>6</nodeIds>
   </regnodes>
@@ -201,37 +204,46 @@
     </states>
     <states id="3">
       <operations id="11" stage="1" latency="1"/>
-      <operations id="12" stage="7" latency="7"/>
+      <operations id="12" stage="10" latency="10"/>
     </states>
     <states id="4">
-      <operations id="12" stage="6" latency="7"/>
+      <operations id="12" stage="9" latency="10"/>
     </states>
     <states id="5">
-      <operations id="12" stage="5" latency="7"/>
+      <operations id="12" stage="8" latency="10"/>
     </states>
     <states id="6">
-      <operations id="12" stage="4" latency="7"/>
+      <operations id="12" stage="7" latency="10"/>
     </states>
     <states id="7">
-      <operations id="12" stage="3" latency="7"/>
+      <operations id="12" stage="6" latency="10"/>
     </states>
     <states id="8">
-      <operations id="12" stage="2" latency="7"/>
+      <operations id="12" stage="5" latency="10"/>
     </states>
     <states id="9">
-      <operations id="12" stage="1" latency="7"/>
-      <operations id="13" stage="2" latency="2"/>
+      <operations id="12" stage="4" latency="10"/>
     </states>
     <states id="10">
-      <operations id="13" stage="1" latency="2"/>
+      <operations id="12" stage="3" latency="10"/>
     </states>
     <states id="11">
+      <operations id="12" stage="2" latency="10"/>
+    </states>
+    <states id="12">
+      <operations id="12" stage="1" latency="10"/>
+      <operations id="13" stage="2" latency="2"/>
+    </states>
+    <states id="13">
+      <operations id="13" stage="1" latency="2"/>
+    </states>
+    <states id="14">
       <operations id="14" stage="1" latency="1"/>
       <operations id="15" stage="1" latency="1"/>
       <operations id="16" stage="1" latency="1"/>
       <operations id="17" stage="2" latency="2"/>
     </states>
-    <states id="12">
+    <states id="15">
       <operations id="7" stage="1" latency="1"/>
       <operations id="8" stage="1" latency="1"/>
       <operations id="17" stage="1" latency="2"/>
@@ -270,9 +282,18 @@
     <transitions inState="11" outState="12">
       <condition id="-1"/>
     </transitions>
+    <transitions inState="12" outState="13">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="13" outState="14">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="14" outState="15">
+      <condition id="-1"/>
+    </transitions>
   </fsm>
   <CFGRegionsRoot>
-    <cfgRegions mId="1" mTag="GaussianBlur_5_1_0_484_644_1_311696_311696_s" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="325690" mMaxLatency="325690">
+    <cfgRegions mId="1" mTag="GaussianBlur_5_1_0_484_644_1_311696_311696_s" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="325757" mMaxLatency="325757">
       <basicBlocks>19</basicBlocks>
       <mDfPipe/>
     </cfgRegions>

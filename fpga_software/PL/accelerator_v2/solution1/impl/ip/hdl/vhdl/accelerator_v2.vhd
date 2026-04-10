@@ -43,7 +43,7 @@ end;
 architecture behav of accelerator_v2 is 
     attribute CORE_GENERATION_INFO : STRING;
     attribute CORE_GENERATION_INFO of behav : architecture is
-    "accelerator_v2_accelerator_v2,hls_ip_2022_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xcvu11p-flga2577-1-e,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=7.297000,HLS_SYN_LAT=471569,HLS_SYN_TPT=471564,HLS_SYN_MEM=1793,HLS_SYN_DSP=0,HLS_SYN_FF=7168,HLS_SYN_LUT=10532,HLS_VERSION=2022_2}";
+    "accelerator_v2_accelerator_v2,hls_ip_2022_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xczu3eg-sbva484-1-i,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=6.919000,HLS_SYN_LAT=471569,HLS_SYN_TPT=471564,HLS_SYN_MEM=1793,HLS_SYN_DSP=0,HLS_SYN_FF=7413,HLS_SYN_LUT=10953,HLS_VERSION=2022_2}";
     constant ap_const_logic_1 : STD_LOGIC := '1';
     constant ap_const_logic_0 : STD_LOGIC := '0';
     constant ap_const_boolean_1 : BOOLEAN := true;

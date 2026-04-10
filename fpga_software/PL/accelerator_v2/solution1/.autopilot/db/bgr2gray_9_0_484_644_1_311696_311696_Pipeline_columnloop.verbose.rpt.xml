@@ -1,13 +1,13 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'bgr2gray_9_0_484_644_1_311696_311696_Pipeline_columnloop'" level="0">
-<item name = "Date">Thu Apr  2 06:49:30 2026
+<item name = "Date">Thu Apr  9 16:57:16 2026
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">accelerator_v2</item>
 <item name = "Solution">solution1 (Vivado IP Flow Target)</item>
-<item name = "Product family">virtexuplus</item>
-<item name = "Target device">xcvu11p-flga2577-1-e</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xczu3eg-sbva484-1-i</item>
 </section>
 
 <section name = "Performance Estimates" level="0">
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 2.557 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 2.777 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -54,9 +54,7 @@
 <column name="Memory">-, -, -, -, -</column>
 <column name="Multiplexer">-, -, -, 54, -</column>
 <column name="Register">-, -, 47, -, -</column>
-<specialColumn name="Available SLR">1344, 3072, 864000, 432000, 320</specialColumn>
-<specialColumn name="Utilization SLR (%)">0, ~0, ~0, ~0, 0</specialColumn>
-<specialColumn name="Available">4032, 9216, 2592000, 1296000, 960</specialColumn>
+<specialColumn name="Available">432, 360, 141120, 70560, 0</specialColumn>
 <specialColumn name="Utilization (%)">0, ~0, ~0, ~0, 0</specialColumn>
 </table>
 </item>

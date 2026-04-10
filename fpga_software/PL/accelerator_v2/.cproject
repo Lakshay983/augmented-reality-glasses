@@ -62,8 +62,6 @@
                                     <listOptionValue builtIn="false" value="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/lnx64/tools/systemc/include"/>
                                     									
                                     <listOptionValue builtIn="false" value="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/include/ap_sysc"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL"/>
                                     								
                                 </option>
                                 								
@@ -100,8 +98,6 @@
                                     <listOptionValue builtIn="false" value="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/lnx64/tools/systemc/include"/>
                                     									
                                     <listOptionValue builtIn="false" value="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/include/ap_sysc"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL"/>
                                     								
                                 </option>
                                 								
@@ -302,8 +298,6 @@
                                     <listOptionValue builtIn="false" value="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/lnx64/tools/systemc/include"/>
                                     									
                                     <listOptionValue builtIn="false" value="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/include/ap_sysc"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL"/>
                                     								
                                 </option>
                                 								
@@ -330,8 +324,6 @@
                                     <listOptionValue builtIn="false" value="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/lnx64/tools/systemc/include"/>
                                     									
                                     <listOptionValue builtIn="false" value="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/include/ap_sysc"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL"/>
                                     								
                                 </option>
                                 								

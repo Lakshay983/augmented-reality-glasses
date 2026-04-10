@@ -6,8 +6,8 @@
 <Project Version="7" Minor="61" Path="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL/accelerator_v2/solution1/.autopilot/db/ip_tmp/prj.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="53c152150a4d44bca943d73a93a2e811"/>
-    <Option Name="Part" Val="xcvu11p-flga2577-1-e"/>
+    <Option Name="Id" Val="a7ae65796d2f4bcbb1112dce6967d038"/>
+    <Option Name="Part" Val="xczu3eg-sbva484-1-i"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
     <Option Name="CompiledLibDirModelSim" Val="$PCACHEDIR/compile_simlib/modelsim"/>
@@ -88,56 +88,56 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PSRCDIR/sources_1/ip/accelerator_v2_sitofp_32s_32_2_no_dsp_1_ip/accelerator_v2_sitofp_32s_32_2_no_dsp_1_ip.xci">
+      <File Path="$PSRCDIR/sources_1/ip/accelerator_v2_sitofp_32s_32_4_no_dsp_1_ip/accelerator_v2_sitofp_32s_32_4_no_dsp_1_ip.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/ip/accelerator_v2_fexp_32ns_32ns_32_5_full_dsp_1_ip/accelerator_v2_fexp_32ns_32ns_32_5_full_dsp_1_ip.xci">
+      <File Path="$PSRCDIR/sources_1/ip/accelerator_v2_fexp_32ns_32ns_32_8_full_dsp_1_ip/accelerator_v2_fexp_32ns_32ns_32_8_full_dsp_1_ip.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/ip/accelerator_v2_sitofp_32ns_32_2_no_dsp_1_ip/accelerator_v2_sitofp_32ns_32_2_no_dsp_1_ip.xci">
+      <File Path="$PSRCDIR/sources_1/ip/accelerator_v2_sitofp_32ns_32_4_no_dsp_1_ip/accelerator_v2_sitofp_32ns_32_4_no_dsp_1_ip.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/ip/accelerator_v2_fpext_32ns_64_1_no_dsp_1_ip/accelerator_v2_fpext_32ns_64_1_no_dsp_1_ip.xci">
+      <File Path="$PSRCDIR/sources_1/ip/accelerator_v2_fpext_32ns_64_2_no_dsp_1_ip/accelerator_v2_fpext_32ns_64_2_no_dsp_1_ip.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/ip/accelerator_v2_dadd_64ns_64ns_64_4_full_dsp_1_ip/accelerator_v2_dadd_64ns_64ns_64_4_full_dsp_1_ip.xci">
+      <File Path="$PSRCDIR/sources_1/ip/accelerator_v2_dadd_64ns_64ns_64_5_full_dsp_1_ip/accelerator_v2_dadd_64ns_64ns_64_5_full_dsp_1_ip.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/ip/accelerator_v2_fdiv_32ns_32ns_32_7_no_dsp_1_ip/accelerator_v2_fdiv_32ns_32ns_32_7_no_dsp_1_ip.xci">
+      <File Path="$PSRCDIR/sources_1/ip/accelerator_v2_fdiv_32ns_32ns_32_10_no_dsp_1_ip/accelerator_v2_fdiv_32ns_32ns_32_10_no_dsp_1_ip.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/ip/accelerator_v2_faddfsub_32ns_32ns_32_3_full_dsp_1_ip/accelerator_v2_faddfsub_32ns_32ns_32_3_full_dsp_1_ip.xci">
+      <File Path="$PSRCDIR/sources_1/ip/accelerator_v2_faddfsub_32ns_32ns_32_5_full_dsp_1_ip/accelerator_v2_faddfsub_32ns_32ns_32_5_full_dsp_1_ip.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/ip/accelerator_v2_fmul_32ns_32ns_32_2_max_dsp_1_ip/accelerator_v2_fmul_32ns_32ns_32_2_max_dsp_1_ip.xci">
+      <File Path="$PSRCDIR/sources_1/ip/accelerator_v2_fmul_32ns_32ns_32_4_max_dsp_1_ip/accelerator_v2_fmul_32ns_32ns_32_4_max_dsp_1_ip.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -198,7 +198,7 @@
     </Simulator>
   </Simulators>
   <Runs Version="1" Minor="19">
-    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xcvu11p-flga2577-1-e" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="true" WriteIncrSynthDcp="false" State="current" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/synth_1">
+    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xczu3eg-sbva484-1-i" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="true" WriteIncrSynthDcp="false" State="current" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -209,7 +209,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xcvu11p-flga2577-1-e" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" SynthRun="synth_1" IncludeInArchive="true" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/impl_1">
+    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" SynthRun="synth_1" IncludeInArchive="true" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022">
           <Desc>Default settings for Implementation.</Desc>

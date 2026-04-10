@@ -347,7 +347,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>2f510b65</spirit:value>
+            <spirit:value>2fd291a8</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -366,7 +366,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>0b960a62</spirit:value>
+            <spirit:value>698bd22d</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -385,7 +385,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>9266c78d</spirit:value>
+            <spirit:value>1410643c</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -404,7 +404,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>60890321</spirit:value>
+            <spirit:value>2c7dff64</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -886,35 +886,35 @@
     <spirit:fileSet>
       <spirit:name>xilinx_verilogsynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>hdl/ip/accelerator_v2_dadd_64ns_64ns_64_4_full_dsp_1_ip.v</spirit:name>
+        <spirit:name>hdl/ip/accelerator_v2_dadd_64ns_64ns_64_5_full_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/accelerator_v2_faddfsub_32ns_32ns_32_3_full_dsp_1_ip.v</spirit:name>
+        <spirit:name>hdl/ip/accelerator_v2_faddfsub_32ns_32ns_32_5_full_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/accelerator_v2_fdiv_32ns_32ns_32_7_no_dsp_1_ip.v</spirit:name>
+        <spirit:name>hdl/ip/accelerator_v2_fdiv_32ns_32ns_32_10_no_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/accelerator_v2_fexp_32ns_32ns_32_5_full_dsp_1_ip.v</spirit:name>
+        <spirit:name>hdl/ip/accelerator_v2_fexp_32ns_32ns_32_8_full_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/accelerator_v2_fmul_32ns_32ns_32_2_max_dsp_1_ip.v</spirit:name>
+        <spirit:name>hdl/ip/accelerator_v2_fmul_32ns_32ns_32_4_max_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/accelerator_v2_fpext_32ns_64_1_no_dsp_1_ip.v</spirit:name>
+        <spirit:name>hdl/ip/accelerator_v2_fpext_32ns_64_2_no_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/accelerator_v2_sitofp_32ns_32_2_no_dsp_1_ip.v</spirit:name>
+        <spirit:name>hdl/ip/accelerator_v2_sitofp_32ns_32_4_no_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/accelerator_v2_sitofp_32s_32_2_no_dsp_1_ip.v</spirit:name>
+        <spirit:name>hdl/ip/accelerator_v2_sitofp_32s_32_4_no_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -971,19 +971,19 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/accelerator_v2_dadd_64ns_64ns_64_4_full_dsp_1.v</spirit:name>
+        <spirit:name>hdl/verilog/accelerator_v2_dadd_64ns_64ns_64_5_full_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/accelerator_v2_faddfsub_32ns_32ns_32_3_full_dsp_1.v</spirit:name>
+        <spirit:name>hdl/verilog/accelerator_v2_faddfsub_32ns_32ns_32_5_full_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/accelerator_v2_fdiv_32ns_32ns_32_7_no_dsp_1.v</spirit:name>
+        <spirit:name>hdl/verilog/accelerator_v2_fdiv_32ns_32ns_32_10_no_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/accelerator_v2_fexp_32ns_32ns_32_5_full_dsp_1.v</spirit:name>
+        <spirit:name>hdl/verilog/accelerator_v2_fexp_32ns_32ns_32_8_full_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1023,11 +1023,11 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/accelerator_v2_fmul_32ns_32ns_32_2_max_dsp_1.v</spirit:name>
+        <spirit:name>hdl/verilog/accelerator_v2_fmul_32ns_32ns_32_4_max_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/accelerator_v2_fpext_32ns_64_1_no_dsp_1.v</spirit:name>
+        <spirit:name>hdl/verilog/accelerator_v2_fpext_32ns_64_2_no_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1167,11 +1167,11 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/accelerator_v2_sitofp_32ns_32_2_no_dsp_1.v</spirit:name>
+        <spirit:name>hdl/verilog/accelerator_v2_sitofp_32ns_32_4_no_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/accelerator_v2_sitofp_32s_32_2_no_dsp_1.v</spirit:name>
+        <spirit:name>hdl/verilog/accelerator_v2_sitofp_32s_32_4_no_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1308,22 +1308,22 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/accelerator_v2_dadd_64ns_64ns_64_4_full_dsp_1.v</spirit:name>
+        <spirit:name>hdl/verilog/accelerator_v2_dadd_64ns_64ns_64_5_full_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/accelerator_v2_faddfsub_32ns_32ns_32_3_full_dsp_1.v</spirit:name>
+        <spirit:name>hdl/verilog/accelerator_v2_faddfsub_32ns_32ns_32_5_full_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/accelerator_v2_fdiv_32ns_32ns_32_7_no_dsp_1.v</spirit:name>
+        <spirit:name>hdl/verilog/accelerator_v2_fdiv_32ns_32ns_32_10_no_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/accelerator_v2_fexp_32ns_32ns_32_5_full_dsp_1.v</spirit:name>
+        <spirit:name>hdl/verilog/accelerator_v2_fexp_32ns_32ns_32_8_full_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -1373,12 +1373,12 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/accelerator_v2_fmul_32ns_32ns_32_2_max_dsp_1.v</spirit:name>
+        <spirit:name>hdl/verilog/accelerator_v2_fmul_32ns_32ns_32_4_max_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/accelerator_v2_fpext_32ns_64_1_no_dsp_1.v</spirit:name>
+        <spirit:name>hdl/verilog/accelerator_v2_fpext_32ns_64_2_no_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -1552,12 +1552,12 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/accelerator_v2_sitofp_32ns_32_2_no_dsp_1.v</spirit:name>
+        <spirit:name>hdl/verilog/accelerator_v2_sitofp_32ns_32_4_no_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/accelerator_v2_sitofp_32s_32_2_no_dsp_1.v</spirit:name>
+        <spirit:name>hdl/verilog/accelerator_v2_sitofp_32s_32_4_no_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -1637,42 +1637,42 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/accelerator_v2_dadd_64ns_64ns_64_4_full_dsp_1_ip.v</spirit:name>
+        <spirit:name>hdl/ip/accelerator_v2_dadd_64ns_64ns_64_5_full_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/accelerator_v2_faddfsub_32ns_32ns_32_3_full_dsp_1_ip.v</spirit:name>
+        <spirit:name>hdl/ip/accelerator_v2_faddfsub_32ns_32ns_32_5_full_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/accelerator_v2_fdiv_32ns_32ns_32_7_no_dsp_1_ip.v</spirit:name>
+        <spirit:name>hdl/ip/accelerator_v2_fdiv_32ns_32ns_32_10_no_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/accelerator_v2_fexp_32ns_32ns_32_5_full_dsp_1_ip.v</spirit:name>
+        <spirit:name>hdl/ip/accelerator_v2_fexp_32ns_32ns_32_8_full_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/accelerator_v2_fmul_32ns_32ns_32_2_max_dsp_1_ip.v</spirit:name>
+        <spirit:name>hdl/ip/accelerator_v2_fmul_32ns_32ns_32_4_max_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/accelerator_v2_fpext_32ns_64_1_no_dsp_1_ip.v</spirit:name>
+        <spirit:name>hdl/ip/accelerator_v2_fpext_32ns_64_2_no_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/accelerator_v2_sitofp_32ns_32_2_no_dsp_1_ip.v</spirit:name>
+        <spirit:name>hdl/ip/accelerator_v2_sitofp_32ns_32_4_no_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/accelerator_v2_sitofp_32s_32_2_no_dsp_1_ip.v</spirit:name>
+        <spirit:name>hdl/ip/accelerator_v2_sitofp_32s_32_4_no_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -1690,35 +1690,35 @@
     <spirit:fileSet>
       <spirit:name>xilinx_vhdlsynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>hdl/ip/accelerator_v2_dadd_64ns_64ns_64_4_full_dsp_1_ip.v</spirit:name>
+        <spirit:name>hdl/ip/accelerator_v2_dadd_64ns_64ns_64_5_full_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/accelerator_v2_faddfsub_32ns_32ns_32_3_full_dsp_1_ip.v</spirit:name>
+        <spirit:name>hdl/ip/accelerator_v2_faddfsub_32ns_32ns_32_5_full_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/accelerator_v2_fdiv_32ns_32ns_32_7_no_dsp_1_ip.v</spirit:name>
+        <spirit:name>hdl/ip/accelerator_v2_fdiv_32ns_32ns_32_10_no_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/accelerator_v2_fexp_32ns_32ns_32_5_full_dsp_1_ip.v</spirit:name>
+        <spirit:name>hdl/ip/accelerator_v2_fexp_32ns_32ns_32_8_full_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/accelerator_v2_fmul_32ns_32ns_32_2_max_dsp_1_ip.v</spirit:name>
+        <spirit:name>hdl/ip/accelerator_v2_fmul_32ns_32ns_32_4_max_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/accelerator_v2_fpext_32ns_64_1_no_dsp_1_ip.v</spirit:name>
+        <spirit:name>hdl/ip/accelerator_v2_fpext_32ns_64_2_no_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/accelerator_v2_sitofp_32ns_32_2_no_dsp_1_ip.v</spirit:name>
+        <spirit:name>hdl/ip/accelerator_v2_sitofp_32ns_32_4_no_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/accelerator_v2_sitofp_32s_32_2_no_dsp_1_ip.v</spirit:name>
+        <spirit:name>hdl/ip/accelerator_v2_sitofp_32s_32_4_no_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1775,19 +1775,19 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/accelerator_v2_dadd_64ns_64ns_64_4_full_dsp_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/accelerator_v2_dadd_64ns_64ns_64_5_full_dsp_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/accelerator_v2_faddfsub_32ns_32ns_32_3_full_dsp_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/accelerator_v2_faddfsub_32ns_32ns_32_5_full_dsp_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/accelerator_v2_fdiv_32ns_32ns_32_7_no_dsp_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/accelerator_v2_fdiv_32ns_32ns_32_10_no_dsp_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/accelerator_v2_fexp_32ns_32ns_32_5_full_dsp_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/accelerator_v2_fexp_32ns_32ns_32_8_full_dsp_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1827,11 +1827,11 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/accelerator_v2_fmul_32ns_32ns_32_2_max_dsp_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/accelerator_v2_fmul_32ns_32ns_32_4_max_dsp_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/accelerator_v2_fpext_32ns_64_1_no_dsp_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/accelerator_v2_fpext_32ns_64_2_no_dsp_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1947,11 +1947,11 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/accelerator_v2_sitofp_32ns_32_2_no_dsp_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/accelerator_v2_sitofp_32ns_32_4_no_dsp_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/accelerator_v2_sitofp_32s_32_2_no_dsp_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/accelerator_v2_sitofp_32s_32_4_no_dsp_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -2013,7 +2013,7 @@
       <spirit:file>
         <spirit:name>hdl/vhdl/accelerator_v2.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_7368aec6</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_eededa84</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -2089,22 +2089,22 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/accelerator_v2_dadd_64ns_64ns_64_4_full_dsp_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/accelerator_v2_dadd_64ns_64ns_64_5_full_dsp_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/accelerator_v2_faddfsub_32ns_32ns_32_3_full_dsp_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/accelerator_v2_faddfsub_32ns_32ns_32_5_full_dsp_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/accelerator_v2_fdiv_32ns_32ns_32_7_no_dsp_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/accelerator_v2_fdiv_32ns_32ns_32_10_no_dsp_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/accelerator_v2_fexp_32ns_32ns_32_5_full_dsp_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/accelerator_v2_fexp_32ns_32ns_32_8_full_dsp_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -2154,12 +2154,12 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/accelerator_v2_fmul_32ns_32ns_32_2_max_dsp_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/accelerator_v2_fmul_32ns_32ns_32_4_max_dsp_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/accelerator_v2_fpext_32ns_64_1_no_dsp_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/accelerator_v2_fpext_32ns_64_2_no_dsp_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -2304,12 +2304,12 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/accelerator_v2_sitofp_32ns_32_2_no_dsp_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/accelerator_v2_sitofp_32ns_32_4_no_dsp_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/accelerator_v2_sitofp_32s_32_2_no_dsp_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/accelerator_v2_sitofp_32s_32_4_no_dsp_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -2389,42 +2389,42 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/accelerator_v2_dadd_64ns_64ns_64_4_full_dsp_1_ip.v</spirit:name>
+        <spirit:name>hdl/ip/accelerator_v2_dadd_64ns_64ns_64_5_full_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/accelerator_v2_faddfsub_32ns_32ns_32_3_full_dsp_1_ip.v</spirit:name>
+        <spirit:name>hdl/ip/accelerator_v2_faddfsub_32ns_32ns_32_5_full_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/accelerator_v2_fdiv_32ns_32ns_32_7_no_dsp_1_ip.v</spirit:name>
+        <spirit:name>hdl/ip/accelerator_v2_fdiv_32ns_32ns_32_10_no_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/accelerator_v2_fexp_32ns_32ns_32_5_full_dsp_1_ip.v</spirit:name>
+        <spirit:name>hdl/ip/accelerator_v2_fexp_32ns_32ns_32_8_full_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/accelerator_v2_fmul_32ns_32ns_32_2_max_dsp_1_ip.v</spirit:name>
+        <spirit:name>hdl/ip/accelerator_v2_fmul_32ns_32ns_32_4_max_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/accelerator_v2_fpext_32ns_64_1_no_dsp_1_ip.v</spirit:name>
+        <spirit:name>hdl/ip/accelerator_v2_fpext_32ns_64_2_no_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/accelerator_v2_sitofp_32ns_32_2_no_dsp_1_ip.v</spirit:name>
+        <spirit:name>hdl/ip/accelerator_v2_sitofp_32ns_32_4_no_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/accelerator_v2_sitofp_32s_32_2_no_dsp_1_ip.v</spirit:name>
+        <spirit:name>hdl/ip/accelerator_v2_sitofp_32s_32_4_no_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -2501,15 +2501,15 @@
   <spirit:vendorExtensions>
     <xilinx:coreExtensions>
       <xilinx:supportedFamilies>
-        <xilinx:family xilinx:lifeCycle="Pre-Production">virtexuplus</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Pre-Production">zynquplus</xilinx:family>
       </xilinx:supportedFamilies>
       <xilinx:taxonomies>
         <xilinx:taxonomy>/VITIS_HLS_IP</xilinx:taxonomy>
       </xilinx:taxonomies>
       <xilinx:displayName>Accelerator_v2</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>2114547770</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2026-04-02T14:51:11Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>2114558422</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2026-04-10T00:22:49Z</xilinx:coreCreationDateTime>
       <xilinx:sdxKernelAttributes>
         <xilinx:sdx_kernel>true</xilinx:sdx_kernel>
         <xilinx:sdx_kernel_type>hls</xilinx:sdx_kernel_type>
@@ -2518,7 +2518,7 @@
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2022.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="4e4ffb26"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="519ade0b"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="3a96998b"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="00197385"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="f4d466ee"/>
     </xilinx:packagingInfo>

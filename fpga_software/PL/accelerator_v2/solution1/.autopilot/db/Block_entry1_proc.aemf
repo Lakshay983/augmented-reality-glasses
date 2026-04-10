@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1775130569232">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1775771834887">
   <ports id="1" name="frame_start" type="PortType" lineNumber="271" originalName="frame_start" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="0" contextFuncName="accelerator_v2" bitwidth="1" direction="DirOut">
     <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="271" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="accelerator_v2"/>
     <dataInputObjs>write</dataInputObjs>
   </ports>
   <edges id="7" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@ports.0"/>
   <blocks id="4" name="Block_entry1_proc" type="BlockType">
-    <node_objs xsi:type="cdfg:CdfgNode" id="2" name="frame_start_write_ln271" lineNumber="271" fileName="accelerator_v2.cpp" fileDirectory=".." coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="accelerator_v2" opcode="write" m_display="0" m_delay="2.1" m_topoIndex="1" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="2" name="frame_start_write_ln271" lineNumber="271" fileName="accelerator_v2.cpp" fileDirectory=".." coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="accelerator_v2" opcode="write" m_display="0" m_delay="2.16" m_topoIndex="1" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="271" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="accelerator_v2"/>
       <dataOutputObjs>frame_start</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="3" name="_ln0" coreId="3361360608" opcode="ret" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="3" name="_ln0" coreId="4251409120" opcode="ret" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1"/>
     <fileValidLineNumbers fileName="accelerator_v2.cpp">
       <validLinenumbers>271</validLinenumbers>
     </fileValidLineNumbers>

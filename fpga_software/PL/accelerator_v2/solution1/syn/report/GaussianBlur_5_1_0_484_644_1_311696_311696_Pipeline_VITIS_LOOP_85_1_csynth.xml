@@ -6,8 +6,8 @@
 
 <UserAssignments>
 <unit>ns</unit>
-<ProductFamily>virtexuplus</ProductFamily>
-<Part>xcvu11p-flga2577-1-e</Part>
+<ProductFamily>zynquplus</ProductFamily>
+<Part>xczu3eg-sbva484-1-i</Part>
 <TopModelName>GaussianBlur_5_1_0_484_644_1_311696_311696_Pipeline_VITIS_LOOP_85_1</TopModelName>
 <TargetClockPeriod>10.00</TargetClockPeriod>
 <ClockUncertainty>2.70</ClockUncertainty>
@@ -18,27 +18,27 @@
 <PipelineType>no</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>7.297</EstimatedClockPeriod>
+<EstimatedClockPeriod>6.794</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>28</Best-caseLatency>
-<Average-caseLatency>28</Average-caseLatency>
-<Worst-caseLatency>28</Worst-caseLatency>
-<Best-caseRealTimeLatency>0.280 us</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>0.280 us</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>0.280 us</Worst-caseRealTimeLatency>
-<Interval-min>28</Interval-min>
-<Interval-max>28</Interval-max>
+<Best-caseLatency>44</Best-caseLatency>
+<Average-caseLatency>44</Average-caseLatency>
+<Worst-caseLatency>44</Worst-caseLatency>
+<Best-caseRealTimeLatency>0.440 us</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>0.440 us</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>0.440 us</Worst-caseRealTimeLatency>
+<Interval-min>44</Interval-min>
+<Interval-max>44</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <VITIS_LOOP_85_1>
 <Slack>7.30</Slack>
 <TripCount>5</TripCount>
-<Latency>26</Latency>
-<AbsoluteTimeLatency>260</AbsoluteTimeLatency>
-<PipelineII>3</PipelineII>
-<PipelineDepth>15</PipelineDepth>
+<Latency>42</Latency>
+<AbsoluteTimeLatency>420</AbsoluteTimeLatency>
+<PipelineII>4</PipelineII>
+<PipelineDepth>27</PipelineDepth>
 <InstanceList>
 </InstanceList>
 </VITIS_LOOP_85_1>
@@ -48,17 +48,17 @@
 <AreaEstimates>
 <Resources>
 <DSP>7</DSP>
-<FF>534</FF>
-<LUT>936</LUT>
+<FF>703</FF>
+<LUT>1202</LUT>
 <BRAM_18K>0</BRAM_18K>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>
-<BRAM_18K>4032</BRAM_18K>
-<DSP>9216</DSP>
-<FF>2592000</FF>
-<LUT>1296000</LUT>
-<URAM>960</URAM>
+<BRAM_18K>432</BRAM_18K>
+<DSP>360</DSP>
+<FF>141120</FF>
+<LUT>70560</LUT>
+<URAM>0</URAM>
 </AvailableResources>
 </AreaEstimates>
 

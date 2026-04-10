@@ -1,20 +1,20 @@
 # This script segment is generated automatically by AutoPilot
 
-set name accelerator_v2_sitofp_32ns_32_2_no_dsp_1
+set name accelerator_v2_sitofp_32ns_32_4_no_dsp_1
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {sitofp} IMPL {auto} LATENCY 1 ALLOW_PRAGMA 1
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {sitofp} IMPL {auto} LATENCY 3 ALLOW_PRAGMA 1
 }
 
 
-set name accelerator_v2_fpext_32ns_64_1_no_dsp_1
+set name accelerator_v2_fpext_32ns_64_2_no_dsp_1
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fpext} IMPL {auto} LATENCY 0 ALLOW_PRAGMA 1
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fpext} IMPL {auto} LATENCY 1 ALLOW_PRAGMA 1
 }
 
 
-set name accelerator_v2_dadd_64ns_64ns_64_4_full_dsp_1
+set name accelerator_v2_dadd_64ns_64ns_64_5_full_dsp_1
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {dadd} IMPL {fulldsp} LATENCY 3 ALLOW_PRAGMA 1
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {dadd} IMPL {fulldsp} LATENCY 4 ALLOW_PRAGMA 1
 }
 
 
