@@ -32648,6 +32648,7 @@ __attribute__((sdx_kernel("accelerator_v2", 0))) void accelerator_v2(
 #pragma HLS INTERFACE axis port=out_stream
 #pragma HLS INTERFACE ap_none port=in_breath
 #pragma HLS INTERFACE ap_none port=out_breath
+#pragma HLS INTERFACE s_axilite port=return bundle=CTRL
 #pragma HLS DATAFLOW
 
  hls::stream<ap_uint<24>> bgr_stream("bgr_stream");

@@ -105,8 +105,8 @@ set RtlHierarchyInfo {[
 			{"Name" : "gray_mat_data44", "Type" : "Fifo", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "17", "SubInstance" : "grp_xFGaussianFilter5x5_Pipeline_Clear_Row_Loop_fu_370", "Port" : "gray_mat_data44", "Inst_start_state" : "1", "Inst_end_state" : "2"},
-					{"ID" : "21", "SubInstance" : "grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_389", "Port" : "gray_mat_data44", "Inst_start_state" : "7", "Inst_end_state" : "8"},
-					{"ID" : "19", "SubInstance" : "grp_xFGaussianFilter5x5_Pipeline_Read_Row2_Loop_fu_382", "Port" : "gray_mat_data44", "Inst_start_state" : "4", "Inst_end_state" : "5"}]},
+					{"ID" : "19", "SubInstance" : "grp_xFGaussianFilter5x5_Pipeline_Read_Row2_Loop_fu_382", "Port" : "gray_mat_data44", "Inst_start_state" : "4", "Inst_end_state" : "5"},
+					{"ID" : "21", "SubInstance" : "grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_389", "Port" : "gray_mat_data44", "Inst_start_state" : "7", "Inst_end_state" : "8"}]},
 			{"Name" : "blurred_mat_data45", "Type" : "Fifo", "Direction" : "O",
 				"BlockSignal" : [
 					{"Name" : "blurred_mat_data45_blk_n", "Type" : "RtlSignal"}],

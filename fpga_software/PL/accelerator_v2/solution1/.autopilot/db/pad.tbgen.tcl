@@ -89,9 +89,9 @@ set RtlHierarchyInfo {[
 				"BlockSignal" : [
 					{"Name" : "padded_stream2_blk_n", "Type" : "RtlSignal"}],
 				"SubConnect" : [
-					{"ID" : "12", "SubInstance" : "grp_pad_Pipeline_VITIS_LOOP_102_7_fu_359", "Port" : "padded_stream2", "Inst_start_state" : "19", "Inst_end_state" : "20"},
 					{"ID" : "15", "SubInstance" : "grp_pad_Pipeline_VITIS_LOOP_116_9_fu_371", "Port" : "padded_stream2", "Inst_start_state" : "26", "Inst_end_state" : "27"},
-					{"ID" : "7", "SubInstance" : "grp_pad_Pipeline_VITIS_LOOP_79_4_fu_341", "Port" : "padded_stream2", "Inst_start_state" : "8", "Inst_end_state" : "9"}]}],
+					{"ID" : "7", "SubInstance" : "grp_pad_Pipeline_VITIS_LOOP_79_4_fu_341", "Port" : "padded_stream2", "Inst_start_state" : "8", "Inst_end_state" : "9"},
+					{"ID" : "12", "SubInstance" : "grp_pad_Pipeline_VITIS_LOOP_102_7_fu_359", "Port" : "padded_stream2", "Inst_start_state" : "19", "Inst_end_state" : "20"}]}],
 		"Loop" : [
 			{"Name" : "VITIS_LOOP_76_3", "PipelineType" : "no",
 				"LoopDec" : {"FSMBitwidth" : "29", "FirstState" : "ap_ST_fsm_state6", "LastState" : ["ap_ST_fsm_state11"], "QuitState" : ["ap_ST_fsm_state6"], "PreState" : ["ap_ST_fsm_state5"], "PostState" : ["ap_ST_fsm_state12"], "OneDepthLoop" : "0", "OneStateBlock": ""}},

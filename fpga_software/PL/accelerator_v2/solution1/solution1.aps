@@ -7,7 +7,7 @@
     </downStreamTool>
     <synthesis askAgain="true"/>
     <config>
-        <config_export format="ip_catalog" output="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/Accelerators" rtl="verilog"/>
+        <config_export display_name="Accelerator_v3" format="ip_catalog" output="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/Accelerators" rtl="verilog" version="2.0"/>
     </config>
     <UIConfigurations>
         <UIAutosynConf hideTrivialOp="true" isBasedOnBoard="false" isSolutionDirty="false" isStopAskAgain="false" showDetailDesignViewer="false">
@@ -41,7 +41,7 @@
         </UIAutoSimConf>
     </UIConfigurations>
     <ExportDesign askAgain="true" evaluate="false" flow="false" flowChoice="syn" formatName="ip_catalog" output="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/Accelerators" rtl="verilog" rtlButton="true" rtlCombo="verilog">
-        <Format formatName="ip_catalog" description="" vendor="" library="" ipname="accelerator_v2" version="" display_name="" taxonomy=""/>
+        <Format formatName="ip_catalog" description="" vendor="" library="" ipname="accelerator_v2" version="2.0" display_name="Accelerator_v3" taxonomy=""/>
         <Format formatName="sysgen"/>
         <Format formatName="sysgen_ise"/>
         <Format formatName="syn_dcp"/>

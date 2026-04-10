@@ -2,10 +2,10 @@
     <msg msg_groups="" msg_id="207-5529" msg_severity="WARNING" msg_loc="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:759:47" msg_body="'factor' in '#pragma HLS array_reshape' is ignored">
         <args ClangWarningOption="extra-tokens"/>
     </msg>
-    <msg msg_groups="PRAGMA_DATAFLOW" msg_id="214-113" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:277:5" msg_body="Either use an argument of the function or declare the variable inside the dataflow loop body"/>
-    <msg msg_groups="PRAGMA_DATAFLOW" msg_id="214-113" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:277:18" msg_body="Either use an argument of the function or declare the variable inside the dataflow loop body"/>
-    <msg msg_groups="PRAGMA_DATAFLOW" msg_id="214-113" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:285:5" msg_body="Either use an argument of the function or declare the variable inside the dataflow loop body"/>
-    <msg msg_groups="PRAGMA_DATAFLOW" msg_id="214-113" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:285:19" msg_body="Either use an argument of the function or declare the variable inside the dataflow loop body"/>
+    <msg msg_groups="PRAGMA_DATAFLOW" msg_id="214-113" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:278:5" msg_body="Either use an argument of the function or declare the variable inside the dataflow loop body"/>
+    <msg msg_groups="PRAGMA_DATAFLOW" msg_id="214-113" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:278:18" msg_body="Either use an argument of the function or declare the variable inside the dataflow loop body"/>
+    <msg msg_groups="PRAGMA_DATAFLOW" msg_id="214-113" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:286:5" msg_body="Either use an argument of the function or declare the variable inside the dataflow loop body"/>
+    <msg msg_groups="PRAGMA_DATAFLOW" msg_id="214-113" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:286:19" msg_body="Either use an argument of the function or declare the variable inside the dataflow loop body"/>
     <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:517:30" msg_body="unused parameter 'src'">
         <args ClangWarningOption="unused-parameter"/>
     </msg>
@@ -3151,18 +3151,21 @@
         <args ARG_PragmaFunction="accelerator_v2" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_none port=out_breath" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:262:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="accelerator_v2" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return bundle=CTRL" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:263:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="accelerator_v2" ARG_PragmaIsValid="1" ARG_PragmaType="dataflow" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:268:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:269:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="accelerator_v2" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=bgr_stream depth=1288" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:269:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:270:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="accelerator_v2" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=padded_stream depth=1932" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:270:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:271:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="accelerator_v2" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=gray_stream depth=3220" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:271:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:272:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="accelerator_v2" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=hdr_stream depth=512" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_MISC" msg_id="214-273" msg_severity="WARNING" msg_loc="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:670:0" msg_body="In function 'xf::cv::Mat&lt;9, 484, 644, 1, 3872&gt;::Mat(int, int)', Pragma conflict happens on 'INLINE' and DATAFLOW pragmas: Inline into dataflow region may break the canonical form">

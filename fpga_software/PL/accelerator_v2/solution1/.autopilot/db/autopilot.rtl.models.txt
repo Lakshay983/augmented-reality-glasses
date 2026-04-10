@@ -56,6 +56,7 @@ accelerator_v2_fifo_w8_d3220_A
 accelerator_v2_start_for_pad_U0
 accelerator_v2_start_for_repack_U0
 accelerator_v2_start_for_process_pixels_U0
+accelerator_v2_CTRL_s_axi
 Block_entry1_proc
 unpack
 Block_entry14_proc

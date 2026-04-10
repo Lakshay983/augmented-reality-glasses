@@ -208,8 +208,8 @@ attribute shreg_extract : string;
     signal tmp_8_reg_936 : STD_LOGIC_VECTOR (23 downto 0);
     signal tmp_11_fu_553_p6 : STD_LOGIC_VECTOR (23 downto 0);
     signal tmp_11_reg_941 : STD_LOGIC_VECTOR (23 downto 0);
-    signal empty_82_fu_600_p1 : STD_LOGIC_VECTOR (0 downto 0);
-    signal empty_82_reg_949 : STD_LOGIC_VECTOR (0 downto 0);
+    signal empty_84_fu_600_p1 : STD_LOGIC_VECTOR (0 downto 0);
+    signal empty_84_reg_949 : STD_LOGIC_VECTOR (0 downto 0);
     signal row_buf_V_address0 : STD_LOGIC_VECTOR (9 downto 0);
     signal row_buf_V_ce0 : STD_LOGIC;
     signal row_buf_V_address1 : STD_LOGIC_VECTOR (9 downto 0);
@@ -764,7 +764,7 @@ begin
         row_buf_V_3_address0 => grp_pad_Pipeline_VITIS_LOOP_116_9_fu_371_row_buf_V_3_address0,
         row_buf_V_3_ce0 => grp_pad_Pipeline_VITIS_LOOP_116_9_fu_371_row_buf_V_3_ce0,
         row_buf_V_3_q0 => row_buf_V_3_q0,
-        r_5_cast => empty_82_reg_949);
+        r_5_cast => empty_84_reg_949);
 
     mux_32_24_1_1_U51 : component accelerator_v2_mux_32_24_1_1
     generic map (
@@ -927,7 +927,7 @@ begin
     port map (
         din0 => mux_case_2129_phi_fu_116,
         din1 => mux_case_3130_phi_fu_112,
-        din2 => empty_82_reg_949,
+        din2 => empty_84_reg_949,
         dout => tmp_5_fu_632_p4);
 
     mux_21_24_1_1_U61 : component accelerator_v2_mux_21_24_1_1
@@ -941,7 +941,7 @@ begin
     port map (
         din0 => mux_case_2137_phi_fu_140,
         din1 => mux_case_3138_phi_fu_136,
-        din2 => empty_82_reg_949,
+        din2 => empty_84_reg_949,
         dout => tmp_6_fu_648_p4);
 
     mux_21_24_1_1_U62 : component accelerator_v2_mux_21_24_1_1
@@ -955,7 +955,7 @@ begin
     port map (
         din0 => mux_case_2141_phi_fu_132,
         din1 => mux_case_3142_phi_fu_128,
-        din2 => empty_82_reg_949,
+        din2 => empty_84_reg_949,
         dout => tmp_7_fu_664_p4);
 
 
@@ -1133,7 +1133,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_logic_1 = ap_CS_fsm_state24) and (icmp_ln112_fu_588_p2 = ap_const_lv1_1))) then
-                empty_82_reg_949 <= empty_82_fu_600_p1;
+                empty_84_reg_949 <= empty_84_fu_600_p1;
             end if;
         end if;
     end process;
@@ -1675,7 +1675,7 @@ begin
         end if; 
     end process;
 
-    empty_82_fu_600_p1 <= r_4_fu_148(1 - 1 downto 0);
+    empty_84_fu_600_p1 <= r_4_fu_148(1 - 1 downto 0);
     grp_pad_Pipeline_VITIS_LOOP_102_7_fu_359_ap_start <= grp_pad_Pipeline_VITIS_LOOP_102_7_fu_359_ap_start_reg;
     grp_pad_Pipeline_VITIS_LOOP_116_9_fu_371_ap_start <= grp_pad_Pipeline_VITIS_LOOP_116_9_fu_371_ap_start_reg;
     grp_pad_Pipeline_VITIS_LOOP_67_1_VITIS_LOOP_68_2_fu_329_ap_start <= grp_pad_Pipeline_VITIS_LOOP_67_1_VITIS_LOOP_68_2_fu_329_ap_start_reg;

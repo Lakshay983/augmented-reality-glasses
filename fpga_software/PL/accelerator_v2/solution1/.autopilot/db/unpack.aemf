@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1775854103777">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1775856313063">
   <ports id="1" name="in_stream_V_data_V" type="PortType" coreId="0" bitwidth="128">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="2" name="in_stream_V_keep_V" type="PortType" coreId="959788140" bitwidth="16">
+  <ports id="2" name="in_stream_V_keep_V" type="PortType" coreId="0" bitwidth="16">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="3" name="in_stream_V_strb_V" type="PortType" coreId="256" bitwidth="16">
+  <ports id="3" name="in_stream_V_strb_V" type="PortType" coreId="1600218992" bitwidth="16">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="4" name="in_stream_V_user_V" type="PortType" coreId="4294967040" bitwidth="1">
+  <ports id="4" name="in_stream_V_user_V" type="PortType" coreId="448" bitwidth="1">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="5" name="in_stream_V_last_V" type="PortType" coreId="1886351180" bitwidth="1">
+  <ports id="5" name="in_stream_V_last_V" type="PortType" coreId="128" bitwidth="1">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="6" name="in_stream_V_id_V" type="PortType" coreId="1738600976" bitwidth="1">
+  <ports id="6" name="in_stream_V_id_V" type="PortType" coreId="1886351180" bitwidth="1">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="7" name="in_stream_V_dest_V" type="PortType" coreId="1397508187" bitwidth="1">
+  <ports id="7" name="in_stream_V_dest_V" type="PortType" coreId="240" bitwidth="1">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="8" name="bgr_stream1" type="PortType" coreName="FIFO" coreId="1737732048" bitwidth="24" direction="DirOut" iftype="IfTypeRom">
+  <ports id="8" name="bgr_stream1" type="PortType" coreName="FIFO" coreId="4294967295" bitwidth="24" direction="DirOut" iftype="IfTypeRom">
     <dataInputObjs>write</dataInputObjs>
     <dataInputObjs>write</dataInputObjs>
     <dataInputObjs>write</dataInputObjs>
@@ -31,13 +31,13 @@
   <ports id="9" name="hdr_stream4" type="PortType" coreName="FIFO" coreId="4294967295" bitwidth="8" direction="DirOut" iftype="IfTypeRom">
     <dataInputObjs>write</dataInputObjs>
   </ports>
-  <ports id="10" name="frame_start_out_in" type="PortType" coreId="4294967295" bitwidth="1">
+  <ports id="10" name="frame_start_out_in" type="PortType" coreId="4019755712" bitwidth="1">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="11" name="frame_start_c" type="PortType" coreId="0" bitwidth="1" direction="DirOut">
+  <ports id="11" name="frame_start_c" type="PortType" coreId="6775040" bitwidth="1" direction="DirOut">
     <dataInputObjs>write</dataInputObjs>
   </ports>
-  <ports id="12" name="frame_start_c17" type="PortType" coreId="0" bitwidth="1" direction="DirOut">
+  <ports id="12" name="frame_start_c17" type="PortType" coreId="4019783712" bitwidth="1" direction="DirOut">
     <dataInputObjs>write</dataInputObjs>
   </ports>
   <edges id="66" source_obj="//@ports.9" sink_obj="//@blocks.0/@node_objs.1"/>
@@ -116,7 +116,7 @@
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>for.body4</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="indvar_flatten" coreId="2163307904" bitwidth="16" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="indvar_flatten" coreId="4173444707" bitwidth="16" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
@@ -126,12 +126,12 @@
       <dataInputObjs>frame_start_out_in</dataInputObjs>
       <dataOutputObjs>phi</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="indvar_flatten_write_ln137" lineNumber="137" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="2144650976" contextFuncName="unpack" opcode="store" m_display="0" m_delay="0.48" m_topoIndex="3" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="indvar_flatten_write_ln137" lineNumber="137" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="145945584" contextFuncName="unpack" opcode="store" m_display="0" m_delay="0.48" m_topoIndex="3" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="137" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="unpack"/>
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="br_ln137" lineNumber="137" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="2268297336" contextFuncName="unpack" opcode="br" m_display="0" m_delay="0.48" m_topoIndex="4" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="br_ln137" lineNumber="137" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="131557344" contextFuncName="unpack" opcode="br" m_display="0" m_delay="0.48" m_topoIndex="4" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="137" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="unpack"/>
       <controlInputObjs>for.body4</controlInputObjs>
     </node_objs>
@@ -152,7 +152,7 @@
       <dataInputObjs>phi</dataInputObjs>
       <dataOutputObjs>frame_start_c17</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="60" name="_ln157" lineNumber="157" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="543517696" contextFuncName="unpack" opcode="ret" nodeLabel="7.0" m_display="0" m_topoIndex="37" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="60" name="_ln157" lineNumber="157" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="4020246752" contextFuncName="unpack" opcode="ret" nodeLabel="7.0" m_display="0" m_topoIndex="37" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="157" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="unpack"/>
     </node_objs>
     <fileValidLineNumbers fileName="accelerator_v2.cpp">
@@ -167,7 +167,7 @@
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>for.end27</controlOutputObjs>
       <controlOutputObjs>for.inc25</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="22" name="p_02" lineNumber="142" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="2144823216" contextFuncName="unpack" bitwidth="1" opcode="phi" nodeLabel="2.0" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="22" name="p_02" lineNumber="142" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="673211748" contextFuncName="unpack" bitwidth="1" opcode="phi" nodeLabel="2.0" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="142" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="unpack"/>
         <dataInputObjs>read</dataInputObjs>
         <dataInputObjs>or</dataInputObjs>
@@ -185,7 +185,7 @@
         <controlInputObjs>for.inc25</controlInputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="24" name="indvar_flatten_load" lineNumber="137" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="1738310640" contextFuncName="unpack" bitwidth="16" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="24" name="indvar_flatten_load" lineNumber="137" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="4019752272" contextFuncName="unpack" bitwidth="16" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="137" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="unpack"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataOutputObjs>icmp</dataOutputObjs>
@@ -203,7 +203,7 @@
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="27" name="br_ln137" lineNumber="137" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="1738279824" contextFuncName="unpack" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="27" name="br_ln137" lineNumber="137" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="0" contextFuncName="unpack" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="137" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="unpack"/>
         <dataInputObjs>icmp</dataInputObjs>
         <controlInputObjs>for.inc25</controlInputObjs>
@@ -233,7 +233,7 @@
         <dataOutputObjs>extractvalue</dataOutputObjs>
         <dataOutputObjs>extractvalue</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="34" name="tmp_data_V" lineNumber="247" originalName="tmp.data.V" fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h" fileDirectory=".." coreId="573456967" contextFuncName="read" bitwidth="128" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="34" name="tmp_data_V" lineNumber="247" originalName="tmp.data.V" fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h" fileDirectory=".." coreId="4019832384" contextFuncName="read" bitwidth="128" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h" linenumber="247" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="read"/>
         <dataInputObjs>read</dataInputObjs>
         <dataOutputObjs>trunc</dataOutputObjs>
@@ -243,13 +243,13 @@
         <dataOutputObjs>partselect</dataOutputObjs>
         <dataOutputObjs>partselect</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="35" name="tmp_user_V" lineNumber="247" originalName="tmp.user.V" fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h" fileDirectory=".." coreId="1738461248" contextFuncName="read" bitwidth="1" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="35" name="tmp_user_V" lineNumber="247" originalName="tmp.user.V" fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h" fileDirectory=".." coreId="4019979488" contextFuncName="read" bitwidth="1" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h" linenumber="247" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="read"/>
         <dataInputObjs>read</dataInputObjs>
         <dataOutputObjs>and</dataOutputObjs>
         <dataOutputObjs>or</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="36" name="tmp_last_V" lineNumber="247" originalName="tmp.last.V" fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h" fileDirectory=".." coreId="1737816192" contextFuncName="read" bitwidth="1" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="15" m_clusterGroupNumber="1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="36" name="tmp_last_V" lineNumber="247" originalName="tmp.last.V" fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h" fileDirectory=".." coreId="4019800096" contextFuncName="read" bitwidth="1" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="15" m_clusterGroupNumber="1">
         <inlineStackInfo fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h" linenumber="247" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="read"/>
         <dataInputObjs>read</dataInputObjs>
         <dataOutputObjs>xor</dataOutputObjs>
@@ -290,7 +290,7 @@
         <dataInputObjs>xor</dataInputObjs>
         <dataOutputObjs>phi</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="43" name="trunc_ln628" lineNumber="628" fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h" fileDirectory=".." rtlName="hdr_stream4_din" coreId="1738038048" contextFuncName="get" bitwidth="8" opcode="trunc" nodeLabel="2.0" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="43" name="trunc_ln628" lineNumber="628" fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h" fileDirectory=".." rtlName="hdr_stream4_din" coreId="1295780106" contextFuncName="get" bitwidth="8" opcode="trunc" nodeLabel="2.0" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h" linenumber="628" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="get"/>
         <dataInputObjs>extractvalue</dataInputObjs>
         <dataOutputObjs>write</dataOutputObjs>
@@ -300,7 +300,7 @@
         <dataInputObjs>trunc</dataInputObjs>
         <dataOutputObjs>hdr_stream4</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="45" name="tmp_s" lineNumber="628" fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h" fileDirectory=".." rtlName="bgr_stream1_din" coreId="1738317072" contextFuncName="get" bitwidth="24" opcode="partselect" nodeLabel="2.0" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="45" name="tmp_s" lineNumber="628" fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h" fileDirectory=".." rtlName="bgr_stream1_din" coreId="0" contextFuncName="get" bitwidth="24" opcode="partselect" nodeLabel="2.0" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h" linenumber="628" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="get"/>
         <dataInputObjs>extractvalue</dataInputObjs>
         <dataOutputObjs>write</dataOutputObjs>
@@ -311,7 +311,7 @@
         <dataInputObjs>partselect</dataInputObjs>
         <dataOutputObjs>bgr_stream1</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="47" name="tmp_1" lineNumber="628" fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h" fileDirectory=".." rtlName="tmp_1_reg_334" coreId="1738178288" contextFuncName="get" bitwidth="24" opcode="partselect" nodeLabel="2.0" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="47" name="tmp_1" lineNumber="628" fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h" fileDirectory=".." rtlName="tmp_1_reg_334" coreId="4019884384" contextFuncName="get" bitwidth="24" opcode="partselect" nodeLabel="2.0" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h" linenumber="628" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="get"/>
         <dataInputObjs>extractvalue</dataInputObjs>
         <dataOutputObjs>write</dataOutputObjs>
@@ -322,7 +322,7 @@
         <dataInputObjs>partselect</dataInputObjs>
         <dataOutputObjs>bgr_stream1</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="49" name="tmp_2" lineNumber="628" fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h" fileDirectory=".." rtlName="tmp_2_reg_339" coreId="0" contextFuncName="get" bitwidth="24" opcode="partselect" nodeLabel="2.0" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="49" name="tmp_2" lineNumber="628" fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h" fileDirectory=".." rtlName="tmp_2_reg_339" coreId="10" contextFuncName="get" bitwidth="24" opcode="partselect" nodeLabel="2.0" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h" linenumber="628" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="get"/>
         <dataInputObjs>extractvalue</dataInputObjs>
         <dataOutputObjs>write</dataOutputObjs>
@@ -333,7 +333,7 @@
         <dataInputObjs>partselect</dataInputObjs>
         <dataOutputObjs>bgr_stream1</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="51" name="tmp_3" lineNumber="628" fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h" fileDirectory=".." rtlName="tmp_3_reg_344" coreId="543517696" contextFuncName="get" bitwidth="24" opcode="partselect" nodeLabel="2.0" m_display="0" m_topoIndex="28" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="51" name="tmp_3" lineNumber="628" fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h" fileDirectory=".." rtlName="tmp_3_reg_344" coreId="4019975472" contextFuncName="get" bitwidth="24" opcode="partselect" nodeLabel="2.0" m_display="0" m_topoIndex="28" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h" linenumber="628" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="get"/>
         <dataInputObjs>extractvalue</dataInputObjs>
         <dataOutputObjs>write</dataOutputObjs>
@@ -344,7 +344,7 @@
         <dataInputObjs>partselect</dataInputObjs>
         <dataOutputObjs>bgr_stream1</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="53" name="tmp_4" lineNumber="628" fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h" fileDirectory=".." rtlName="tmp_4_reg_349" coreId="1738283560" contextFuncName="get" bitwidth="24" opcode="partselect" nodeLabel="2.0" m_display="0" m_topoIndex="29" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="53" name="tmp_4" lineNumber="628" fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h" fileDirectory=".." rtlName="tmp_4_reg_349" coreId="4019950144" contextFuncName="get" bitwidth="24" opcode="partselect" nodeLabel="2.0" m_display="0" m_topoIndex="29" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h" linenumber="628" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="get"/>
         <dataInputObjs>extractvalue</dataInputObjs>
         <dataOutputObjs>write</dataOutputObjs>
@@ -355,12 +355,12 @@
         <dataInputObjs>partselect</dataInputObjs>
         <dataOutputObjs>bgr_stream1</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="55" name="indvar_flatten_write_ln138" lineNumber="138" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="1738581760" contextFuncName="unpack" opcode="store" nodeLabel="1.0" m_display="0" m_delay="0.48" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="55" name="indvar_flatten_write_ln138" lineNumber="138" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="4019975472" contextFuncName="unpack" opcode="store" nodeLabel="1.0" m_display="0" m_delay="0.48" m_topoIndex="11" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="138" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="unpack"/>
         <dataInputObjs>add</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="56" name="br_ln138" lineNumber="138" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="2672207629" contextFuncName="unpack" opcode="br" nodeLabel="6.0" m_display="0" m_topoIndex="34" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="56" name="br_ln138" lineNumber="138" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="533605997" contextFuncName="unpack" opcode="br" nodeLabel="6.0" m_display="0" m_topoIndex="34" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="138" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="unpack"/>
         <controlInputObjs>for.body4</controlInputObjs>
       </node_objs>

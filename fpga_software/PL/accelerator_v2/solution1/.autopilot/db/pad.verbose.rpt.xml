@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'pad'" level="0">
-<item name = "Date">Fri Apr 10 15:48:24 2026
+<item name = "Date">Fri Apr 10 16:25:13 2026
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">accelerator_v2</item>
@@ -158,7 +158,7 @@
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
 <column name="ap_CS_fsm">29, 0, 29, 0</column>
 <column name="ap_done_reg">1, 0, 1, 0</column>
-<column name="empty_82_reg_949">1, 0, 1, 0</column>
+<column name="empty_84_reg_949">1, 0, 1, 0</column>
 <column name="grp_pad_Pipeline_VITIS_LOOP_102_7_fu_359_ap_start_reg">1, 0, 1, 0</column>
 <column name="grp_pad_Pipeline_VITIS_LOOP_116_9_fu_371_ap_start_reg">1, 0, 1, 0</column>
 <column name="grp_pad_Pipeline_VITIS_LOOP_67_1_VITIS_LOOP_68_2_fu_329_ap_start_reg">1, 0, 1, 0</column>

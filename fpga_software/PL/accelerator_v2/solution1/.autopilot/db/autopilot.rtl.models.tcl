@@ -101,6 +101,7 @@ set SynModuleInfo {
       {MODELNAME accelerator_v2_start_for_pad_U0 RTLNAME accelerator_v2_start_for_pad_U0 BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME start_for_pad_U0_U}
       {MODELNAME accelerator_v2_start_for_repack_U0 RTLNAME accelerator_v2_start_for_repack_U0 BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME start_for_repack_U0_U}
       {MODELNAME accelerator_v2_start_for_process_pixels_U0 RTLNAME accelerator_v2_start_for_process_pixels_U0 BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME start_for_process_pixels_U0_U}
+      {MODELNAME accelerator_v2_CTRL_s_axi RTLNAME accelerator_v2_CTRL_s_axi BINDTYPE interface TYPE interface_s_axilite}
     }
   }
 }

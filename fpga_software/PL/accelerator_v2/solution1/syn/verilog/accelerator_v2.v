@@ -7,9 +7,29 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="accelerator_v2_accelerator_v2,hls_ip_2022_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xczu3eg-sbva484-1-i,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=5.886313,HLS_SYN_LAT=471569,HLS_SYN_TPT=471564,HLS_SYN_MEM=60,HLS_SYN_DSP=0,HLS_SYN_FF=5028,HLS_SYN_LUT=7795,HLS_VERSION=2022_2}" *)
+(* CORE_GENERATION_INFO="accelerator_v2_accelerator_v2,hls_ip_2022_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xczu3eg-sbva484-1-i,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=5.886313,HLS_SYN_LAT=471569,HLS_SYN_TPT=471564,HLS_SYN_MEM=60,HLS_SYN_DSP=0,HLS_SYN_FF=5064,HLS_SYN_LUT=7835,HLS_VERSION=2022_2}" *)
 
 module accelerator_v2 (
+        s_axi_CTRL_AWVALID,
+        s_axi_CTRL_AWREADY,
+        s_axi_CTRL_AWADDR,
+        s_axi_CTRL_WVALID,
+        s_axi_CTRL_WREADY,
+        s_axi_CTRL_WDATA,
+        s_axi_CTRL_WSTRB,
+        s_axi_CTRL_ARVALID,
+        s_axi_CTRL_ARREADY,
+        s_axi_CTRL_ARADDR,
+        s_axi_CTRL_RVALID,
+        s_axi_CTRL_RREADY,
+        s_axi_CTRL_RDATA,
+        s_axi_CTRL_RRESP,
+        s_axi_CTRL_BVALID,
+        s_axi_CTRL_BREADY,
+        s_axi_CTRL_BRESP,
+        ap_clk,
+        ap_rst_n,
+        interrupt,
         in_stream_TDATA,
         in_stream_TKEEP,
         in_stream_TSTRB,
@@ -26,19 +46,39 @@ module accelerator_v2 (
         out_stream_TDEST,
         in_breath,
         out_breath,
-        ap_clk,
-        ap_rst_n,
-        ap_start,
         in_stream_TVALID,
         in_stream_TREADY,
-        ap_done,
         out_stream_TVALID,
-        out_stream_TREADY,
-        ap_ready,
-        ap_idle
+        out_stream_TREADY
 );
 
+parameter    C_S_AXI_CTRL_DATA_WIDTH = 32;
+parameter    C_S_AXI_CTRL_ADDR_WIDTH = 4;
+parameter    C_S_AXI_DATA_WIDTH = 32;
 
+parameter C_S_AXI_CTRL_WSTRB_WIDTH = (32 / 8);
+parameter C_S_AXI_WSTRB_WIDTH = (32 / 8);
+
+input   s_axi_CTRL_AWVALID;
+output   s_axi_CTRL_AWREADY;
+input  [C_S_AXI_CTRL_ADDR_WIDTH - 1:0] s_axi_CTRL_AWADDR;
+input   s_axi_CTRL_WVALID;
+output   s_axi_CTRL_WREADY;
+input  [C_S_AXI_CTRL_DATA_WIDTH - 1:0] s_axi_CTRL_WDATA;
+input  [C_S_AXI_CTRL_WSTRB_WIDTH - 1:0] s_axi_CTRL_WSTRB;
+input   s_axi_CTRL_ARVALID;
+output   s_axi_CTRL_ARREADY;
+input  [C_S_AXI_CTRL_ADDR_WIDTH - 1:0] s_axi_CTRL_ARADDR;
+output   s_axi_CTRL_RVALID;
+input   s_axi_CTRL_RREADY;
+output  [C_S_AXI_CTRL_DATA_WIDTH - 1:0] s_axi_CTRL_RDATA;
+output  [1:0] s_axi_CTRL_RRESP;
+output   s_axi_CTRL_BVALID;
+input   s_axi_CTRL_BREADY;
+output  [1:0] s_axi_CTRL_BRESP;
+input   ap_clk;
+input   ap_rst_n;
+output   interrupt;
 input  [127:0] in_stream_TDATA;
 input  [15:0] in_stream_TKEEP;
 input  [15:0] in_stream_TSTRB;
@@ -55,18 +95,16 @@ output  [0:0] out_stream_TID;
 output  [0:0] out_stream_TDEST;
 output  [0:0] in_breath;
 output  [0:0] out_breath;
-input   ap_clk;
-input   ap_rst_n;
-input   ap_start;
 input   in_stream_TVALID;
 output   in_stream_TREADY;
-output   ap_done;
 output   out_stream_TVALID;
 input   out_stream_TREADY;
-output   ap_ready;
-output   ap_idle;
 
  reg    ap_rst_n_inv;
+wire    ap_start;
+wire    ap_ready;
+wire    ap_done;
+wire    ap_idle;
 wire    Block_entry1_proc_U0_ap_start;
 wire    Block_entry1_proc_U0_ap_done;
 wire    Block_entry1_proc_U0_ap_continue;
@@ -197,6 +235,37 @@ initial begin
 #0 ap_sync_reg_channel_write_frame_start_c17_channel = 1'b0;
 #0 ap_sync_reg_channel_write_frame_start_c_channel = 1'b0;
 end
+
+accelerator_v2_CTRL_s_axi #(
+    .C_S_AXI_ADDR_WIDTH( C_S_AXI_CTRL_ADDR_WIDTH ),
+    .C_S_AXI_DATA_WIDTH( C_S_AXI_CTRL_DATA_WIDTH ))
+CTRL_s_axi_U(
+    .AWVALID(s_axi_CTRL_AWVALID),
+    .AWREADY(s_axi_CTRL_AWREADY),
+    .AWADDR(s_axi_CTRL_AWADDR),
+    .WVALID(s_axi_CTRL_WVALID),
+    .WREADY(s_axi_CTRL_WREADY),
+    .WDATA(s_axi_CTRL_WDATA),
+    .WSTRB(s_axi_CTRL_WSTRB),
+    .ARVALID(s_axi_CTRL_ARVALID),
+    .ARREADY(s_axi_CTRL_ARREADY),
+    .ARADDR(s_axi_CTRL_ARADDR),
+    .RVALID(s_axi_CTRL_RVALID),
+    .RREADY(s_axi_CTRL_RREADY),
+    .RDATA(s_axi_CTRL_RDATA),
+    .RRESP(s_axi_CTRL_RRESP),
+    .BVALID(s_axi_CTRL_BVALID),
+    .BREADY(s_axi_CTRL_BREADY),
+    .BRESP(s_axi_CTRL_BRESP),
+    .ACLK(ap_clk),
+    .ARESET(ap_rst_n_inv),
+    .ACLK_EN(1'b1),
+    .ap_start(ap_start),
+    .interrupt(interrupt),
+    .ap_ready(ap_ready),
+    .ap_done(ap_done),
+    .ap_idle(ap_idle)
+);
 
 accelerator_v2_Block_entry1_proc Block_entry1_proc_U0(
     .ap_clk(ap_clk),

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1775854105061">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1775856314392">
   <ports id="1" name="bgr_mat_data43" type="PortType" coreId="0" bitwidth="24" iftype="IfTypeRom">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
@@ -29,18 +29,18 @@
   <edges id="108" edge_type="VirtEdge" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.2/@node_objs.2"/>
   <blocks id="8" name="entry" type="BlockType">
     <controlOutputObjs>columnloop.i</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="3" name="i_V" originalName="i.V" coreId="44" bitwidth="9" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="3" name="i_V" originalName="i.V" coreId="39" bitwidth="9" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="i_V_write_ln5576" lineNumber="5576" fileName="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_cvt_color.hpp" fileDirectory=".." coreId="1742571312" contextFuncName="xfbgr2gray_9_0_484_644_1_3872_3872_9_1_155848_s" opcode="store" m_display="0" m_delay="0.48" m_topoIndex="2" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="i_V_write_ln5576" lineNumber="5576" fileName="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_cvt_color.hpp" fileDirectory=".." coreId="4024109104" contextFuncName="xfbgr2gray_9_0_484_644_1_3872_3872_9_1_155848_s" opcode="store" m_display="0" m_delay="0.48" m_topoIndex="2" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_cvt_color.hpp" linenumber="5576" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="xfbgr2gray&amp;lt;9, 0, 484, 644, 1, 3872, 3872, 9, 1, 155848&amp;gt;"/>
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="br_ln5576" lineNumber="5576" fileName="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_cvt_color.hpp" fileDirectory=".." coreId="1739935792" contextFuncName="xfbgr2gray_9_0_484_644_1_3872_3872_9_1_155848_s" opcode="br" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="br_ln5576" lineNumber="5576" fileName="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_cvt_color.hpp" fileDirectory=".." coreId="4021398304" contextFuncName="xfbgr2gray_9_0_484_644_1_3872_3872_9_1_155848_s" opcode="br" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_cvt_color.hpp" linenumber="5576" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="xfbgr2gray&amp;lt;9, 0, 484, 644, 1, 3872, 3872, 9, 1, 155848&amp;gt;"/>
       <controlInputObjs>columnloop.i</controlInputObjs>
     </node_objs>
@@ -55,7 +55,7 @@
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>_ZN2xf2cv10xfbgr2grayILi9ELi0ELi484ELi644ELi1ELi3872ELi3872ELi9ELi1ELi155848EEEvRNS0_3MatIXT_EXT1_EXT2_EXT3_EXT4_EEERNS2_IXT0_EXT1_EXT2_EXT3_EXT5_EEEtt.exit.loopexit</controlOutputObjs>
     <controlOutputObjs>columnloop.i.split</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="i_V_1" lineNumber="840" originalName="i.V" fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." coreId="1740559552" contextFuncName="operator_add_assign_1_false" bitwidth="9" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="i_V_1" lineNumber="840" originalName="i.V" fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." coreId="530606082" contextFuncName="operator_add_assign_1_false" bitwidth="9" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h" linenumber="840" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="operator+=&amp;lt;1, false&amp;gt;"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
@@ -73,7 +73,7 @@
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="br_ln5576" lineNumber="5576" fileName="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_cvt_color.hpp" fileDirectory=".." coreId="1739935792" contextFuncName="xfbgr2gray_9_0_484_644_1_3872_3872_9_1_155848_s" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="br_ln5576" lineNumber="5576" fileName="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_cvt_color.hpp" fileDirectory=".." coreId="534580383" contextFuncName="xfbgr2gray_9_0_484_644_1_3872_3872_9_1_155848_s" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_cvt_color.hpp" linenumber="5576" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="xfbgr2gray&amp;lt;9, 0, 484, 644, 1, 3872, 3872, 9, 1, 155848&amp;gt;"/>
       <dataInputObjs>icmp</dataInputObjs>
       <controlInputObjs>columnloop.i.split</controlInputObjs>
@@ -90,18 +90,18 @@
     <controlInputObjs>columnloop.i</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>columnloop.i</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="empty" coreId="2670821951" bitwidth="32" opcode="wait" nodeLabel="1.0" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1"/>
-    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="_ln0" rtlName="grp_bgr2gray_9_0_484_644_1_3872_3872_Pipeline_columnloop_fu_38" coreId="1742273680" opcode="call" nodeLabel="1.0" nodeLatency="1" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="empty" coreId="1397508187" bitwidth="32" opcode="wait" nodeLabel="1.0" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="_ln0" rtlName="grp_bgr2gray_9_0_484_644_1_3872_3872_Pipeline_columnloop_fu_38" coreId="4021398304" opcode="call" nodeLabel="1.0" nodeLatency="1" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
       <dataInputObjs>bgr_mat_data43</dataInputObjs>
       <dataOutputObjs>gray_mat_data44</dataOutputObjs>
       <constName>bgr2gray_9_0_484_644_1_3872_3872_Pipeline_columnloop</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="i_V_write_ln5576" lineNumber="5576" fileName="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_cvt_color.hpp" fileDirectory=".." coreId="1740559552" contextFuncName="xfbgr2gray_9_0_484_644_1_3872_3872_9_1_155848_s" opcode="store" nodeLabel="1.0" m_display="0" m_delay="0.48" m_topoIndex="10" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="i_V_write_ln5576" lineNumber="5576" fileName="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_cvt_color.hpp" fileDirectory=".." coreId="4023835200" contextFuncName="xfbgr2gray_9_0_484_644_1_3872_3872_9_1_155848_s" opcode="store" nodeLabel="1.0" m_display="0" m_delay="0.48" m_topoIndex="10" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_cvt_color.hpp" linenumber="5576" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="xfbgr2gray&amp;lt;9, 0, 484, 644, 1, 3872, 3872, 9, 1, 155848&amp;gt;"/>
       <dataInputObjs>add</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="br_ln5576" lineNumber="5576" fileName="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_cvt_color.hpp" fileDirectory=".." coreId="1739121056" contextFuncName="xfbgr2gray_9_0_484_644_1_3872_3872_9_1_155848_s" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="br_ln5576" lineNumber="5576" fileName="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_cvt_color.hpp" fileDirectory=".." coreId="4021398304" contextFuncName="xfbgr2gray_9_0_484_644_1_3872_3872_9_1_155848_s" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_cvt_color.hpp" linenumber="5576" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="xfbgr2gray&amp;lt;9, 0, 484, 644, 1, 3872, 3872, 9, 1, 155848&amp;gt;"/>
       <controlInputObjs>columnloop.i</controlInputObjs>
     </node_objs>
@@ -112,7 +112,7 @@
   <blocks id="22" name="_ZN2xf2cv10xfbgr2grayILi9ELi0ELi484ELi644ELi1ELi3872ELi3872ELi9ELi1ELi155848EEEvRNS0_3MatIXT_EXT1_EXT2_EXT3_EXT4_EEERNS2_IXT0_EXT1_EXT2_EXT3_EXT5_EEEtt.exit.loopexit" type="BlockType">
     <controlInputObjs>columnloop.i</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="_ln5624" lineNumber="5624" fileName="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_cvt_color.hpp" fileDirectory=".." coreId="2670752032" contextFuncName="bgr2gray_9_0_484_644_1_3872_3872_s" opcode="ret" nodeLabel="1.0" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="_ln5624" lineNumber="5624" fileName="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_cvt_color.hpp" fileDirectory=".." coreId="4024185920" contextFuncName="bgr2gray_9_0_484_644_1_3872_3872_s" opcode="ret" nodeLabel="1.0" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_cvt_color.hpp" linenumber="5624" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="bgr2gray&amp;lt;9, 0, 484, 644, 1, 3872, 3872&amp;gt;"/>
     </node_objs>
     <fileValidLineNumbers fileName="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_cvt_color.hpp">
