@@ -23,13 +23,13 @@
 #define TB_FIFO_DEPTH    (5 * IMG_W)
 
 // TX: 2 byte header + 5 rows BGR = 9602 bytes = 601 bursts
-#define TX_HEADER_BYTES  2
+#define TX_HEADER_BYTES  16
 #define TX_PIXEL_BYTES   (ROWS_PER_TX * IMG_W * 3)
 #define TX_TOTAL_BYTES   (TX_HEADER_BYTES + TX_PIXEL_BYTES)
 #define TX_BURSTS        ((TX_TOTAL_BYTES + 15) / 16)  // 601
 
 // RX: 2 byte header + 1 row gray = 642 bytes = 41 bursts
-#define RX_HEADER_BYTES  2
+#define RX_HEADER_BYTES  16
 #define RX_PIXEL_BYTES   IMG_W
 #define RX_TOTAL_BYTES   (RX_HEADER_BYTES + RX_PIXEL_BYTES)
 #define RX_BURSTS        ((RX_TOTAL_BYTES + 15) / 16)  // 41
@@ -103,12 +103,14 @@ void pack_bursts(unsigned char* bgr_buf, hls::stream<AxiBurst>& s)
     {
         // Build byte array for this transaction
         unsigned char txBuf[TX_TOTAL_BYTES];
+        memset(txBuf, 0, sizeof(txBuf));
 
-        // 16-bit header = tx index
+        // 16-byte header — tx index in bytes 0-1, rest zeroed
         txBuf[0] = (tx >> 0) & 0xFF;
         txBuf[1] = (tx >> 8) & 0xFF;
+        // bytes 2-15 already zeroed
 
-        // 5 rows of BGR
+        // 5 rows of BGR starting at byte 16
         for (int r = 0; r < ROWS_PER_TX; r++)
         {
             int srcRow = tx * ROWS_PER_TX + r;
@@ -122,7 +124,7 @@ void pack_bursts(unsigned char* bgr_buf, hls::stream<AxiBurst>& s)
             }
         }
 
-        // Pack into 601 bursts of 16 bytes
+        // pack into TX_BURSTS bursts of 16 bytes
         for (int b = 0; b < TX_BURSTS; b++)
         {
             AxiBurst burst;
@@ -130,7 +132,7 @@ void pack_bursts(unsigned char* bgr_buf, hls::stream<AxiBurst>& s)
             burst.keep = -1;
             burst.strb = -1;
             burst.user = (tx == 0 && b == 0) ? 1 : 0;
-            burst.last = (tx == txCount - 1 && b == TX_BURSTS - 1) ? 1 : 0;
+            burst.last = (tx == txCount-1 && b == TX_BURSTS-1) ? 1 : 0;
 
             for (int i = 0; i < 16; i++)
             {
@@ -155,7 +157,7 @@ void unpack_output(hls::stream<AxiBurst>& s, unsigned char* gray_out)
 
     for (int row = 0; row < IMG_H; row++)
     {
-        // Collect 41 bursts = 642 bytes
+        // collect RX_BURSTS bursts = 656 bytes
         unsigned char rxBuf[RX_TOTAL_BYTES];
         memset(rxBuf, 0, sizeof(rxBuf));
 
@@ -170,18 +172,19 @@ void unpack_output(hls::stream<AxiBurst>& s, unsigned char* gray_out)
             }
         }
 
-        // Check header
+        // check header — row index in bytes [1:0]
         uint16_t header = (uint16_t)rxBuf[0] | ((uint16_t)rxBuf[1] << 8);
         if (header != (uint16_t)row)
             printf("  WARNING: row %d header mismatch got %d\n", row, (int)header);
 
-        // Copy 640 gray pixels
+        // copy 640 gray pixels starting at byte 16
         memcpy(gray_out + row * IMG_W, rxBuf + RX_HEADER_BYTES, IMG_W);
         total += IMG_W;
     }
 
     printf("  Unpacked %d output pixels\n", total);
 }
+
 
 int compare(unsigned char* got, unsigned char* ref, int n, int tolerance, const char* label)
 {

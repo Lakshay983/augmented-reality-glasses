@@ -1,0 +1,232 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'pad'" level="0">
+<item name = "Date">Sun Apr 12 15:59:08 2026
+</item>
+<item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
+<item name = "Project">accelerator_v2</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xczu3eg-sbva484-1-i</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 3.903 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">317003, 625643, 3.170 ms, 6.256 ms, 317003, 625643, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_pad_Pipeline_VITIS_LOOP_92_1_VITIS_LOOP_93_2_fu_329">pad_Pipeline_VITIS_LOOP_92_1_VITIS_LOOP_93_2, 1922, 1922, 19.220 us, 19.220 us, 1922, 1922, no</column>
+<column name="grp_pad_Pipeline_VITIS_LOOP_103_4_fu_341">pad_Pipeline_VITIS_LOOP_103_4, 642, 642, 6.420 us, 6.420 us, 642, 642, no</column>
+<column name="grp_pad_Pipeline_VITIS_LOOP_118_6_fu_350">pad_Pipeline_VITIS_LOOP_118_6, 642, 642, 6.420 us, 6.420 us, 642, 642, no</column>
+<column name="grp_pad_Pipeline_VITIS_LOOP_125_7_fu_359">pad_Pipeline_VITIS_LOOP_125_7, 642, 642, 6.420 us, 6.420 us, 642, 642, no</column>
+<column name="grp_pad_Pipeline_VITIS_LOOP_138_9_fu_371">pad_Pipeline_VITIS_LOOP_138_9, 642, 642, 6.420 us, 6.420 us, 642, 642, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- VITIS_LOOP_100_3">1296, 1296, 648, -, -, 2, no</column>
+<column name="- VITIS_LOOP_112_5">312480, 621120, 651 ~ 1294, -, -, 480, no</column>
+<column name="- VITIS_LOOP_134_8">1296, 1296, 648, -, -, 2, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 85, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, 88, 667, -</column>
+<column name="Memory">8, -, 0, 0, -</column>
+<column name="Multiplexer">-, -, -, 718, -</column>
+<column name="Register">-, -, 646, -, -</column>
+<specialColumn name="Available">432, 360, 141120, 70560, 0</specialColumn>
+<specialColumn name="Utilization (%)">1, 0, ~0, 2, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="mux_21_24_1_1_U61">mux_21_24_1_1, 0, 0, 0, 9, 0</column>
+<column name="mux_21_24_1_1_U62">mux_21_24_1_1, 0, 0, 0, 9, 0</column>
+<column name="mux_21_24_1_1_U63">mux_21_24_1_1, 0, 0, 0, 9, 0</column>
+<column name="mux_21_24_1_1_U64">mux_21_24_1_1, 0, 0, 0, 9, 0</column>
+<column name="mux_32_24_1_1_U53">mux_32_24_1_1, 0, 0, 0, 14, 0</column>
+<column name="mux_32_24_1_1_U54">mux_32_24_1_1, 0, 0, 0, 14, 0</column>
+<column name="mux_32_24_1_1_U55">mux_32_24_1_1, 0, 0, 0, 14, 0</column>
+<column name="mux_32_24_1_1_U56">mux_32_24_1_1, 0, 0, 0, 14, 0</column>
+<column name="mux_42_24_1_1_U57">mux_42_24_1_1, 0, 0, 0, 20, 0</column>
+<column name="mux_42_24_1_1_U58">mux_42_24_1_1, 0, 0, 0, 20, 0</column>
+<column name="mux_42_24_1_1_U59">mux_42_24_1_1, 0, 0, 0, 20, 0</column>
+<column name="mux_42_24_1_1_U60">mux_42_24_1_1, 0, 0, 0, 20, 0</column>
+<column name="grp_pad_Pipeline_VITIS_LOOP_103_4_fu_341">pad_Pipeline_VITIS_LOOP_103_4, 0, 0, 13, 91, 0</column>
+<column name="grp_pad_Pipeline_VITIS_LOOP_118_6_fu_350">pad_Pipeline_VITIS_LOOP_118_6, 0, 0, 23, 77, 0</column>
+<column name="grp_pad_Pipeline_VITIS_LOOP_125_7_fu_359">pad_Pipeline_VITIS_LOOP_125_7, 0, 0, 13, 97, 0</column>
+<column name="grp_pad_Pipeline_VITIS_LOOP_138_9_fu_371">pad_Pipeline_VITIS_LOOP_138_9, 0, 0, 13, 86, 0</column>
+<column name="grp_pad_Pipeline_VITIS_LOOP_92_1_VITIS_LOOP_93_2_fu_329">pad_Pipeline_VITIS_LOOP_92_1_VITIS_LOOP_93_2, 0, 0, 26, 144, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="row_buf_V_U">pad_row_buf_V_RAM_2P_BRAM_1R1W, 2, 0, 0, 0, 640, 24, 1, 15360</column>
+<column name="row_buf_V_1_U">pad_row_buf_V_RAM_2P_BRAM_1R1W, 2, 0, 0, 0, 640, 24, 1, 15360</column>
+<column name="row_buf_V_2_U">pad_row_buf_V_RAM_2P_BRAM_1R1W, 2, 0, 0, 0, 640, 24, 1, 15360</column>
+<column name="row_buf_V_3_U">pad_row_buf_V_RAM_2P_BRAM_1R1W, 2, 0, 0, 0, 640, 24, 1, 15360</column>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln100_fu_405_p2">+, 0, 0, 9, 2, 2</column>
+<column name="r_8_fu_615_p2">+, 0, 0, 14, 7, 2</column>
+<column name="r_9_fu_458_p2">+, 0, 0, 16, 9, 1</column>
+<column name="ap_block_state24">and, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state6">and, 0, 0, 2, 1, 1</column>
+<column name="icmp_ln100_fu_388_p2">icmp, 0, 0, 8, 2, 1</column>
+<column name="icmp_ln112_fu_452_p2">icmp, 0, 0, 11, 9, 7</column>
+<column name="icmp_ln114_fu_473_p2">icmp, 0, 0, 11, 9, 2</column>
+<column name="icmp_ln134_fu_588_p2">icmp, 0, 0, 10, 7, 7</column>
+<column name="ap_block_state1">or, 0, 0, 2, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">141, 30, 1, 30</column>
+<column name="ap_done">9, 2, 1, 2</column>
+<column name="bgr_stream1_read">14, 3, 1, 3</column>
+<column name="padded_stream2_blk_n">9, 2, 1, 2</column>
+<column name="padded_stream2_din">65, 15, 24, 360</column>
+<column name="padded_stream2_write">26, 5, 1, 5</column>
+<column name="r_2_fu_92">9, 2, 2, 4</column>
+<column name="r_4_fu_148">9, 2, 7, 14</column>
+<column name="r_fu_144">9, 2, 9, 18</column>
+<column name="real_start">9, 2, 1, 2</column>
+<column name="row_buf_V_1_address0">26, 5, 10, 50</column>
+<column name="row_buf_V_1_address1">20, 4, 10, 40</column>
+<column name="row_buf_V_1_ce0">20, 4, 1, 4</column>
+<column name="row_buf_V_1_ce1">14, 3, 1, 3</column>
+<column name="row_buf_V_1_we1">9, 2, 1, 2</column>
+<column name="row_buf_V_2_address0">43, 8, 10, 80</column>
+<column name="row_buf_V_2_address1">37, 7, 10, 70</column>
+<column name="row_buf_V_2_ce0">26, 5, 1, 5</column>
+<column name="row_buf_V_2_ce1">20, 4, 1, 4</column>
+<column name="row_buf_V_2_d1">14, 3, 24, 72</column>
+<column name="row_buf_V_2_we1">14, 3, 1, 3</column>
+<column name="row_buf_V_3_address0">26, 5, 10, 50</column>
+<column name="row_buf_V_3_address1">20, 4, 10, 40</column>
+<column name="row_buf_V_3_ce0">20, 4, 1, 4</column>
+<column name="row_buf_V_3_ce1">14, 3, 1, 3</column>
+<column name="row_buf_V_3_we1">9, 2, 1, 2</column>
+<column name="row_buf_V_address0">20, 4, 10, 40</column>
+<column name="row_buf_V_address1">20, 4, 10, 40</column>
+<column name="row_buf_V_ce0">14, 3, 1, 3</column>
+<column name="row_buf_V_ce1">14, 3, 1, 3</column>
+<column name="row_buf_V_we1">9, 2, 1, 2</column>
+<column name="slot_reg_319">9, 2, 2, 4</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">29, 0, 29, 0</column>
+<column name="ap_done_reg">1, 0, 1, 0</column>
+<column name="empty_78_reg_949">1, 0, 1, 0</column>
+<column name="grp_pad_Pipeline_VITIS_LOOP_103_4_fu_341_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_pad_Pipeline_VITIS_LOOP_118_6_fu_350_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_pad_Pipeline_VITIS_LOOP_125_7_fu_359_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_pad_Pipeline_VITIS_LOOP_138_9_fu_371_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_pad_Pipeline_VITIS_LOOP_92_1_VITIS_LOOP_93_2_fu_329_ap_start_reg">1, 0, 1, 0</column>
+<column name="icmp_ln114_reg_920">1, 0, 1, 0</column>
+<column name="mux_case_2126_phi_fu_124">24, 0, 24, 0</column>
+<column name="mux_case_2129_phi_fu_116">24, 0, 24, 0</column>
+<column name="mux_case_2137_phi_fu_140">24, 0, 24, 0</column>
+<column name="mux_case_2141_phi_fu_132">24, 0, 24, 0</column>
+<column name="mux_case_3130_phi_fu_112">24, 0, 24, 0</column>
+<column name="mux_case_3138_phi_fu_136">24, 0, 24, 0</column>
+<column name="mux_case_3142_phi_fu_128">24, 0, 24, 0</column>
+<column name="mux_case_3_phi_fu_120">24, 0, 24, 0</column>
+<column name="r_2_fu_92">2, 0, 2, 0</column>
+<column name="r_3_reg_765">2, 0, 2, 0</column>
+<column name="r_4_fu_148">7, 0, 7, 0</column>
+<column name="r_9_reg_904">9, 0, 9, 0</column>
+<column name="r_fu_144">9, 0, 9, 0</column>
+<column name="row_buf_V_1_load_1_reg_727">24, 0, 24, 0</column>
+<column name="row_buf_V_1_load_2_reg_743">24, 0, 24, 0</column>
+<column name="row_buf_V_1_load_3_reg_754">24, 0, 24, 0</column>
+<column name="row_buf_V_1_load_reg_716">24, 0, 24, 0</column>
+<column name="row_buf_V_2_load_1_reg_733">24, 0, 24, 0</column>
+<column name="row_buf_V_2_load_2_reg_749">24, 0, 24, 0</column>
+<column name="row_buf_V_2_load_3_reg_760">24, 0, 24, 0</column>
+<column name="row_buf_V_2_load_reg_722">24, 0, 24, 0</column>
+<column name="row_buf_V_load_1_reg_861">24, 0, 24, 0</column>
+<column name="row_buf_V_load_2_reg_886">24, 0, 24, 0</column>
+<column name="row_buf_V_load_3_reg_896">24, 0, 24, 0</column>
+<column name="row_buf_V_load_reg_856">24, 0, 24, 0</column>
+<column name="slot_reg_319">2, 0, 2, 0</column>
+<column name="start_once_reg">1, 0, 1, 0</column>
+<column name="tmp_10_reg_941">24, 0, 24, 0</column>
+<column name="tmp_3_reg_936">24, 0, 24, 0</column>
+<column name="tmp_6_reg_841">24, 0, 24, 0</column>
+<column name="tmp_7_reg_846">24, 0, 24, 0</column>
+<column name="trunc_ln112_1_reg_914">1, 0, 1, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, pad, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, pad, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, pad, return value</column>
+<column name="start_full_n">in, 1, ap_ctrl_hs, pad, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, pad, return value</column>
+<column name="ap_continue">in, 1, ap_ctrl_hs, pad, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, pad, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, pad, return value</column>
+<column name="start_out">out, 1, ap_ctrl_hs, pad, return value</column>
+<column name="start_write">out, 1, ap_ctrl_hs, pad, return value</column>
+<column name="bgr_stream1_dout">in, 24, ap_fifo, bgr_stream1, pointer</column>
+<column name="bgr_stream1_num_data_valid">in, 13, ap_fifo, bgr_stream1, pointer</column>
+<column name="bgr_stream1_fifo_cap">in, 13, ap_fifo, bgr_stream1, pointer</column>
+<column name="bgr_stream1_empty_n">in, 1, ap_fifo, bgr_stream1, pointer</column>
+<column name="bgr_stream1_read">out, 1, ap_fifo, bgr_stream1, pointer</column>
+<column name="padded_stream2_din">out, 24, ap_fifo, padded_stream2, pointer</column>
+<column name="padded_stream2_num_data_valid">in, 13, ap_fifo, padded_stream2, pointer</column>
+<column name="padded_stream2_fifo_cap">in, 13, ap_fifo, padded_stream2, pointer</column>
+<column name="padded_stream2_full_n">in, 1, ap_fifo, padded_stream2, pointer</column>
+<column name="padded_stream2_write">out, 1, ap_fifo, padded_stream2, pointer</column>
+</table>
+</item>
+</section>
+</profile>

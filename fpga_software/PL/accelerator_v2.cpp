@@ -11,22 +11,24 @@
 #define PAD              2
 #define PAD_W            (IMG_W + 2*PAD)  // 644
 #define PAD_H            (IMG_H + 2*PAD)  // 484
-#define FIFO_DEPTH       (5 * PAD_W)      // 5-row line buffer depth for xf::cv::Mat FIFOs
+#define FIFO_DEPTH       (5 * PAD_W)      // 5-row line buffer — no full frame buffering
 #define ROWS_PER_TX      5
 #define KERNEL_SIZE      5
-#define TX_HEADER_BYTES  2
-#define TX_PIXEL_BYTES   (ROWS_PER_TX * IMG_W * 3)          // 9600
-#define TX_TOTAL_BYTES   (TX_HEADER_BYTES + TX_PIXEL_BYTES)  // 9602
-#define TX_BURSTS        ((TX_TOTAL_BYTES + 15) / 16)        // 601
+#define TX_HEADER_BYTES  16                                          // one full 128-bit burst
+#define TX_PIXEL_BYTES   (ROWS_PER_TX * IMG_W * 3)                  // 9600
+#define TX_TOTAL_BYTES   (TX_HEADER_BYTES + TX_PIXEL_BYTES)          // 9616
+#define TX_BURSTS        ((TX_TOTAL_BYTES + 15) / 16)                // 601
+#define RX_HEADER_BYTES  16                                          // one full 128-bit burst
+#define RX_PIXEL_BYTES   IMG_W                                       // 640
+#define RX_TOTAL_BYTES   (RX_HEADER_BYTES + RX_PIXEL_BYTES)          // 656
+#define RX_BURSTS        ((RX_TOTAL_BYTES + 15) / 16)                // 41
 
 typedef ap_axiu<128, 1, 1, 1> AxiBurst;
 
-// ─────────────────────────────────────────────────────────────────────────────
-// unpack
-//   Reads TX_BURSTS×128-bit bursts per 5-row transaction.
-//   Strips the 2-byte header and emits BGR pixels into bgr_stream.
-//   Uses a 3-byte carry window — no large flat partitioned array.
-// ─────────────────────────────────────────────────────────────────────────────
+// ─────────────────────────────────────────────
+// unpack: reads 16-byte header burst + pixel bursts
+// strips header, streams BGR pixels into bgr_stream
+// ─────────────────────────────────────────────
 void unpack(
     hls::stream<AxiBurst>&    burst_in,
     hls::stream<ap_uint<24>>& bgr_stream,
@@ -38,46 +40,44 @@ void unpack(
     {
         if (tx == 0) *in_breath = 1;
 
-        ap_uint<8> carry[3];
-#pragma HLS ARRAY_PARTITION variable=carry complete
+        AxiBurst hdr_burst = burst_in.read();
+        (void)hdr_burst;
 
-        const int TOTAL_PIX = ROWS_PER_TX * IMG_W;
-        int pixel_emit = 0;
+        const int TOTAL_BYTES = ROWS_PER_TX * IMG_W * 3;  // 9600
 
-        for (int b = 0; b < TX_BURSTS && pixel_emit < TOTAL_PIX; b++)
+        ap_uint<8>  carry_b = 0;
+        ap_uint<8>  carry_g = 0;
+        AxiBurst    cur_burst;
+        bool        burst_valid = false;
+
+        for (int byte_idx = 0; byte_idx < TOTAL_BYTES; byte_idx++)
         {
 #pragma HLS PIPELINE II=1
-            AxiBurst burst = burst_in.read();
 
-            for (int i = 0; i < 16; i++)
-            {
-#pragma HLS UNROLL
-                int global_byte = b * 16 + i;
-                if (global_byte >= TX_TOTAL_BYTES) break;
-                if (global_byte < TX_HEADER_BYTES) continue;
+            // fetch a new burst every 16 bytes
+            if (byte_idx % 16 == 0) {
+                cur_burst   = burst_in.read();
+                burst_valid = true;
+            }
 
-                int payload_byte  = global_byte - TX_HEADER_BYTES;
-                int byte_in_pixel = payload_byte % 3;
+            ap_uint<8> bval = cur_burst.data((byte_idx % 16)*8+7, (byte_idx % 16)*8);
+            int        lane = byte_idx % 3;
 
-                ap_uint<8> bval = burst.data(i*8+7, i*8);
-
-                if      (byte_in_pixel == 0) carry[0] = bval;
-                else if (byte_in_pixel == 1) carry[1] = bval;
-                else {
-                    ap_uint<24> bgr = ((ap_uint<24>)bval     << 16) |
-                                      ((ap_uint<24>)carry[1] <<  8) |
-                                       (ap_uint<24>)carry[0];
-                    bgr_stream.write(bgr);
-                    pixel_emit++;
-                }
+            if      (lane == 0) { carry_b = bval; }
+            else if (lane == 1) { carry_g = bval; }
+            else {
+                ap_uint<24> bgr = ((ap_uint<24>)bval    << 16) |
+                                  ((ap_uint<24>)carry_g <<  8) |
+                                   (ap_uint<24>)carry_b;
+                bgr_stream.write(bgr);
             }
         }
     }
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// pad  —  REFLECT_101, 4-slot row buffer
-// ─────────────────────────────────────────────────────────────────────────────
+// ─────────────────────────────────────────────
+// pad: REFLECT_101, 4-slot row buffer
+// ─────────────────────────────────────────────
 void pad(
     hls::stream<ap_uint<24>>& in,
     hls::stream<ap_uint<24>>& out)
@@ -144,9 +144,9 @@ void pad(
     }
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
+// ─────────────────────────────────────────────
 // stream_to_mat / mat_to_stream
-// ─────────────────────────────────────────────────────────────────────────────
+// ─────────────────────────────────────────────
 void stream_to_mat(
     hls::stream<ap_uint<24>>& in,
     xf::cv::Mat<XF_8UC3, PAD_H, PAD_W, XF_NPPC1, FIFO_DEPTH>& out,
@@ -177,13 +177,10 @@ void mat_to_stream(
     }
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// process_pixels
-//   Uses xf::cv library calls unchanged from v2.
-//   FIFO_DEPTH = 5*PAD_W makes xf::cv::Mat behave as a streaming FIFO
-//   (not a frame buffer) so the DATAFLOW pipeline is truly streaming.
-//   GaussianBlur maintains its own internal 5-row line buffer.
-// ─────────────────────────────────────────────────────────────────────────────
+// ─────────────────────────────────────────────
+// process_pixels: BGR->Gray + GaussianBlur
+// FIFO_DEPTH = 5*PAD_W — line buffer, no full frame buffering
+// ─────────────────────────────────────────────
 void process_pixels(
     hls::stream<ap_uint<24>>& bgr_stream,
     hls::stream<ap_uint<8>>&  gray_stream_out,
@@ -208,9 +205,11 @@ void process_pixels(
     mat_to_stream(blurred_mat, gray_stream_out, rows, cols);
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// repack
-// ─────────────────────────────────────────────────────────────────────────────
+// ─────────────────────────────────────────────
+// repack: reads PAD_H rows of grayscale
+// outputs IMG_H real rows with 16-byte header burst
+// discards PAD rows at top and bottom
+// ─────────────────────────────────────────────
 void repack(
     hls::stream<ap_uint<8>>& gray_stream,
     hls::stream<AxiBurst>&   burst_out,
@@ -231,24 +230,20 @@ void repack(
 
         int out_row = r - PAD;
 
-        // first burst: 16-bit row header + 14 pixels
+        // first burst: 16-byte header
+        // row index in bits [15:0], rest zeroed
         {
-            AxiBurst out_burst;
-            out_burst.data = 0;
-            out_burst.keep = -1;
-            out_burst.strb = -1;
-            out_burst.user = (out_row == 0) ? 1 : 0;
-            out_burst.last = 0;
-
-            out_burst.data(15, 0) = (ap_uint<16>)out_row;
-            for (int p = 0; p < 14; p++) {
-#pragma HLS UNROLL
-                out_burst.data(16 + p*8 + 7, 16 + p*8) = row_pixels[PAD + p];
-            }
-            burst_out.write(out_burst);
+            AxiBurst hdr_burst;
+            hdr_burst.data = 0;
+            hdr_burst.keep = -1;
+            hdr_burst.strb = -1;
+            hdr_burst.user = (out_row == 0) ? 1 : 0;
+            hdr_burst.last = 0;
+            hdr_burst.data(15, 0) = (ap_uint<16>)out_row;
+            burst_out.write(hdr_burst);
         }
 
-        // 40 more bursts: 39×16 + 1×2 = 626 pixels covering cols 14..639
+        // 40 pixel bursts: 640 bytes = 40 × 16 bytes, clean alignment
         for (int b = 0; b < 40; b++) {
 #pragma HLS PIPELINE II=1
             AxiBurst out_burst;
@@ -257,13 +252,10 @@ void repack(
             out_burst.strb = -1;
             out_burst.user = 0;
 
-            int base_pix = 14 + b * 16;
-            int n_pix    = (b < 39) ? 16 : 2;
-
+            int base_pix = b * 16;
             for (int p = 0; p < 16; p++) {
 #pragma HLS UNROLL
-                if (p < n_pix)
-                    out_burst.data(p*8+7, p*8) = row_pixels[PAD + base_pix + p];
+                out_burst.data(p*8+7, p*8) = row_pixels[PAD + base_pix + p];
             }
 
             out_burst.last = (b == 39 && out_row == IMG_H-1) ? 1 : 0;
@@ -272,10 +264,10 @@ void repack(
     }
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
+// ─────────────────────────────────────────────
 // top-level
-// ─────────────────────────────────────────────────────────────────────────────
-void accelerator_v3(
+// ─────────────────────────────────────────────
+void accelerator_v2(
     hls::stream<ap_axiu<128,1,1,1>>& in_stream,
     hls::stream<ap_axiu<128,1,1,1>>& out_stream,
     volatile ap_uint<1>* in_breath,
@@ -292,9 +284,9 @@ void accelerator_v3(
     hls::stream<ap_uint<24>> padded_stream("padded_stream");
     hls::stream<ap_uint<8>>  gray_stream("gray_stream");
 
-#pragma HLS STREAM variable=bgr_stream    depth=1288
-#pragma HLS STREAM variable=padded_stream depth=1932
-#pragma HLS STREAM variable=gray_stream   depth=1932
+#pragma HLS STREAM variable=bgr_stream    depth=2560
+#pragma HLS STREAM variable=padded_stream depth=2576
+#pragma HLS STREAM variable=gray_stream   depth=3864
 
     unpack(in_stream, bgr_stream, in_breath);
     pad(bgr_stream, padded_stream);

@@ -16329,7 +16329,7 @@
       <key>filename</key>
       <string>accelerator_v2.cpp</string>
       <key>line</key>
-      <integer>34</integer>
+      <integer>37</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -16345,75 +16345,11 @@
       <key>filename</key>
       <string>accelerator_v2.cpp</string>
       <key>line</key>
-      <integer>46</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=unpack_XLX_SEP_ PragmaOptions=variable=tx_bytes complete_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>accelerator_v2.cpp</string>
-      <key>line</key>
-      <integer>51</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=unpack_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>accelerator_v2.cpp</string>
-      <key>line</key>
       <integer>55</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=unpack_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>accelerator_v2.cpp</string>
-      <key>line</key>
-      <integer>65</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
       <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=unpack_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>accelerator_v2.cpp</string>
-      <key>line</key>
-      <integer>82</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=pad_XLX_SEP_ PragmaOptions=off_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -16429,6 +16365,22 @@
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=pad_XLX_SEP_ PragmaOptions=off_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>accelerator_v2.cpp</string>
+      <key>line</key>
+      <integer>88</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
       <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=pad_XLX_SEP_ PragmaOptions=variable=row_buf complete dim=1_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
@@ -16441,7 +16393,7 @@
       <key>filename</key>
       <string>accelerator_v2.cpp</string>
       <key>line</key>
-      <integer>86</integer>
+      <integer>89</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -16457,7 +16409,7 @@
       <key>filename</key>
       <string>accelerator_v2.cpp</string>
       <key>line</key>
-      <integer>91</integer>
+      <integer>94</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -16473,7 +16425,7 @@
       <key>filename</key>
       <string>accelerator_v2.cpp</string>
       <key>line</key>
-      <integer>101</integer>
+      <integer>104</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -16489,7 +16441,7 @@
       <key>filename</key>
       <string>accelerator_v2.cpp</string>
       <key>line</key>
-      <integer>116</integer>
+      <integer>119</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -16505,7 +16457,7 @@
       <key>filename</key>
       <string>accelerator_v2.cpp</string>
       <key>line</key>
-      <integer>123</integer>
+      <integer>126</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -16521,27 +16473,11 @@
       <key>filename</key>
       <string>accelerator_v2.cpp</string>
       <key>line</key>
-      <integer>136</integer>
+      <integer>139</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
       <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=pad_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>accelerator_v2.cpp</string>
-      <key>line</key>
-      <integer>152</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=stream_to_mat_XLX_SEP_ PragmaOptions=off_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -16557,7 +16493,7 @@
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=stream_to_mat_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=stream_to_mat_XLX_SEP_ PragmaOptions=off_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -16569,11 +16505,11 @@
       <key>filename</key>
       <string>accelerator_v2.cpp</string>
       <key>line</key>
-      <integer>167</integer>
+      <integer>158</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mat_to_stream_XLX_SEP_ PragmaOptions=off_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=stream_to_mat_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -16589,6 +16525,22 @@
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mat_to_stream_XLX_SEP_ PragmaOptions=off_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>accelerator_v2.cpp</string>
+      <key>line</key>
+      <integer>173</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
       <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mat_to_stream_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
@@ -16601,7 +16553,7 @@
       <key>filename</key>
       <string>accelerator_v2.cpp</string>
       <key>line</key>
-      <integer>186</integer>
+      <integer>189</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -16617,7 +16569,7 @@
       <key>filename</key>
       <string>accelerator_v2.cpp</string>
       <key>line</key>
-      <integer>196</integer>
+      <integer>199</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -16633,7 +16585,7 @@
       <key>filename</key>
       <string>accelerator_v2.cpp</string>
       <key>line</key>
-      <integer>197</integer>
+      <integer>200</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -16649,7 +16601,7 @@
       <key>filename</key>
       <string>accelerator_v2.cpp</string>
       <key>line</key>
-      <integer>216</integer>
+      <integer>218</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -16665,7 +16617,7 @@
       <key>filename</key>
       <string>accelerator_v2.cpp</string>
       <key>line</key>
-      <integer>224</integer>
+      <integer>225</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -16681,23 +16633,7 @@
       <key>filename</key>
       <string>accelerator_v2.cpp</string>
       <key>line</key>
-      <integer>246</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=repack_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>accelerator_v2.cpp</string>
-      <key>line</key>
-      <integer>256</integer>
+      <integer>248</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -16713,7 +16649,7 @@
       <key>filename</key>
       <string>accelerator_v2.cpp</string>
       <key>line</key>
-      <integer>267</integer>
+      <integer>257</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -16761,7 +16697,7 @@
       <key>filename</key>
       <string>accelerator_v2.cpp</string>
       <key>line</key>
-      <integer>288</integer>
+      <integer>276</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -16777,7 +16713,7 @@
       <key>filename</key>
       <string>accelerator_v2.cpp</string>
       <key>line</key>
-      <integer>289</integer>
+      <integer>277</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -16793,7 +16729,7 @@
       <key>filename</key>
       <string>accelerator_v2.cpp</string>
       <key>line</key>
-      <integer>290</integer>
+      <integer>278</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -16809,7 +16745,7 @@
       <key>filename</key>
       <string>accelerator_v2.cpp</string>
       <key>line</key>
-      <integer>291</integer>
+      <integer>279</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -16825,7 +16761,7 @@
       <key>filename</key>
       <string>accelerator_v2.cpp</string>
       <key>line</key>
-      <integer>292</integer>
+      <integer>280</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -16841,7 +16777,7 @@
       <key>filename</key>
       <string>accelerator_v2.cpp</string>
       <key>line</key>
-      <integer>293</integer>
+      <integer>281</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -16857,11 +16793,11 @@
       <key>filename</key>
       <string>accelerator_v2.cpp</string>
       <key>line</key>
-      <integer>299</integer>
+      <integer>287</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=accelerator_v2_XLX_SEP_ PragmaOptions=variable=bgr_stream depth=1920_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=accelerator_v2_XLX_SEP_ PragmaOptions=variable=bgr_stream depth=2560_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -16873,11 +16809,11 @@
       <key>filename</key>
       <string>accelerator_v2.cpp</string>
       <key>line</key>
-      <integer>300</integer>
+      <integer>288</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=accelerator_v2_XLX_SEP_ PragmaOptions=variable=padded_stream depth=1932_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=accelerator_v2_XLX_SEP_ PragmaOptions=variable=padded_stream depth=2576_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -16889,11 +16825,11 @@
       <key>filename</key>
       <string>accelerator_v2.cpp</string>
       <key>line</key>
-      <integer>301</integer>
+      <integer>289</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=accelerator_v2_XLX_SEP_ PragmaOptions=variable=gray_stream depth=3220_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=accelerator_v2_XLX_SEP_ PragmaOptions=variable=gray_stream depth=3864_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>

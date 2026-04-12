@@ -1,0 +1,5 @@
+<VitisHLS:BurstInfo>
+    <burst group="BURST_VERBOSE_MISSED" fe_name="NonSimpleMemoryAccessMissed" src_info="accelerator_v2.cpp:41:33" msg_id="214-227" msg_severity="INFO" msg_body="Volatile or Atomic access cannot be transformed" resolution="214-227" ID="if.then.store.0" VarName="in_breath" ParentFunc="unpack(hls::stream&lt;hls::axis&lt;ap_uint&lt;128&gt;, 1ul, 1ul, 1ul&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;24&gt;, 0&gt;&amp;, ap_uint&lt;1&gt; volatile*)"/>
+    <burst group="BURST_VERBOSE_MISSED" fe_name="NonSimpleMemoryAccessMissed" src_info="accelerator_v2.cpp:219:14" msg_id="214-227" msg_severity="INFO" msg_body="Volatile or Atomic access cannot be transformed" resolution="214-227" ID="entry.store.10" VarName="out_breath" ParentFunc="repack(hls::stream&lt;ap_uint&lt;8&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;128&gt;, 1ul, 1ul, 1ul&gt;, 0&gt;&amp;, ap_uint&lt;1&gt; volatile*)"/>
+</VitisHLS:BurstInfo>
+

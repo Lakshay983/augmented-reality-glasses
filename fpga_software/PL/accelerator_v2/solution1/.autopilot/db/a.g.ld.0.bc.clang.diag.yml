@@ -198,7 +198,7 @@ Args:
 --- !Passed
 Pass:            inline
 Name:            AlwaysInline
-DebugLoc:        { File: accelerator_v2.cpp, Line: 188, Column: 78 }
+DebugLoc:        { File: accelerator_v2.cpp, Line: 191, Column: 78 }
 Function:        _Z14process_pixelsRN3hls6streamI7ap_uintILi24EELi0EEERNS0_IS1_ILi8EELi0EEEii
 Args:            
   - String:          'Inlining function '''
@@ -207,13 +207,13 @@ Args:
                        Line: 670, Column: 0 }
   - String:          ''' into '''
   - Caller:          'process_pixels(hls::stream<ap_uint<24>, 0>&, hls::stream<ap_uint<8>, 0>&, int, int)'
-    DebugLoc:        { File: accelerator_v2.cpp, Line: 185, Column: 0 }
+    DebugLoc:        { File: accelerator_v2.cpp, Line: 188, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            inline
 Name:            AlwaysInline
-DebugLoc:        { File: accelerator_v2.cpp, Line: 189, Column: 81 }
+DebugLoc:        { File: accelerator_v2.cpp, Line: 192, Column: 81 }
 Function:        _Z14process_pixelsRN3hls6streamI7ap_uintILi24EELi0EEERNS0_IS1_ILi8EELi0EEEii
 Args:            
   - String:          'Inlining function '''
@@ -222,13 +222,13 @@ Args:
                        Line: 670, Column: 0 }
   - String:          ''' into '''
   - Caller:          'process_pixels(hls::stream<ap_uint<24>, 0>&, hls::stream<ap_uint<8>, 0>&, int, int)'
-    DebugLoc:        { File: accelerator_v2.cpp, Line: 185, Column: 0 }
+    DebugLoc:        { File: accelerator_v2.cpp, Line: 188, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            inline
 Name:            AlwaysInline
-DebugLoc:        { File: accelerator_v2.cpp, Line: 190, Column: 81 }
+DebugLoc:        { File: accelerator_v2.cpp, Line: 193, Column: 81 }
 Function:        _Z14process_pixelsRN3hls6streamI7ap_uintILi24EELi0EEERNS0_IS1_ILi8EELi0EEEii
 Args:            
   - String:          'Inlining function '''
@@ -237,17 +237,17 @@ Args:
                        Line: 670, Column: 0 }
   - String:          ''' into '''
   - Caller:          'process_pixels(hls::stream<ap_uint<24>, 0>&, hls::stream<ap_uint<8>, 0>&, int, int)'
-    DebugLoc:        { File: accelerator_v2.cpp, Line: 185, Column: 0 }
+    DebugLoc:        { File: accelerator_v2.cpp, Line: 188, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
-DebugLoc:        { File: accelerator_v2.cpp, Line: 266, Column: 31 }
+DebugLoc:        { File: accelerator_v2.cpp, Line: 256, Column: 31 }
 Function:        _Z6repackRN3hls6streamI7ap_uintILi8EELi0EEERNS0_INS_4axisIS1_ILi128EELm1ELm1ELm1EEELi0EEEPVS1_ILi1EE
 Args:            
   - String:          'Loop '''
-  - LoopName:        VITIS_LOOP_266_5
+  - LoopName:        VITIS_LOOP_256_4
   - String:          ''' is marked as complete unroll implied by the pipeline pragma'
 ...
 --- !Passed
@@ -317,41 +317,15 @@ Args:
   - String:          ''' is marked as complete unroll implied by the pipeline pragma'
 ...
 --- !Passed
-Pass:            reflow-infer-unroll
-Name:            ImplicitUnroll
-DebugLoc:        { File: accelerator_v2.cpp, Line: 53, Column: 30 }
-Function:        _Z6unpackRN3hls6streamINS_4axisI7ap_uintILi128EELm1ELm1ELm1EEELi0EEERNS0_IS2_ILi24EELi0EEEPVS2_ILi1EE
-Args:            
-  - String:          'Loop '''
-  - LoopName:        VITIS_LOOP_53_3
-  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
-...
---- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: accelerator_v2.cpp, Line: 215, Column: 0 }
+DebugLoc:        { File: accelerator_v2.cpp, Line: 217, Column: 0 }
 Function:        _Z6repackRN3hls6streamI7ap_uintILi8EELi0EEERNS0_INS_4axisIS1_ILi128EELm1ELm1ELm1EEELi0EEEPVS1_ILi1EE
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_245_3
+  - LoopName:        VITIS_LOOP_256_4
   - String:          ''' ('
-  - LoopLoc:         'accelerator_v2.cpp:245:31'
-  - String:          ') '
-  - String:          'in function '''
-  - String:          repack
-  - String:          ''' completely with a factor of '
-  - Factor:          '14'
-...
---- !Passed
-Pass:            reflow-pragma-loop-unroll
-Name:            PragmaFullyUnroll
-DebugLoc:        { File: accelerator_v2.cpp, Line: 215, Column: 0 }
-Function:        _Z6repackRN3hls6streamI7ap_uintILi8EELi0EEERNS0_INS_4axisIS1_ILi128EELm1ELm1ELm1EEELi0EEEPVS1_ILi1EE
-Args:            
-  - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_266_5
-  - String:          ''' ('
-  - LoopLoc:         'accelerator_v2.cpp:266:31'
+  - LoopLoc:         'accelerator_v2.cpp:256:31'
   - String:          ') '
   - String:          'in function '''
   - String:          repack
@@ -478,25 +452,9 @@ Args:
   - Factor:          '3'
 ...
 --- !Passed
-Pass:            reflow-pragma-loop-unroll
-Name:            PragmaFullyUnroll
-DebugLoc:        { File: accelerator_v2.cpp, Line: 33, Column: 0 }
-Function:        _Z6unpackRN3hls6streamINS_4axisI7ap_uintILi128EELm1ELm1ELm1EEELi0EEERNS0_IS2_ILi24EELi0EEEPVS2_ILi1EE
-Args:            
-  - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_53_3
-  - String:          ''' ('
-  - LoopLoc:         'accelerator_v2.cpp:53:30'
-  - String:          ') '
-  - String:          'in function '''
-  - String:          unpack
-  - String:          ''' completely with a factor of '
-  - Factor:          '16'
-...
---- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: accelerator_v2.cpp, Line: 151, Column: 0 }
+DebugLoc:        { File: accelerator_v2.cpp, Line: 154, Column: 0 }
 Function:        _Z13stream_to_matRN3hls6streamI7ap_uintILi24EELi0EEERN2xf2cv3MatILi9ELi484ELi644ELi1ELi3220EEEii
 Args:            
   - String:          'Inlining function '''
@@ -505,7 +463,7 @@ Args:
                        Line: 552, Column: 0 }
   - String:          ''' into '''
   - Caller:          'stream_to_mat(hls::stream<ap_uint<24>, 0>&, xf::cv::Mat<9, 484, 644, 1, 3220>&, int, int)'
-    DebugLoc:        { File: accelerator_v2.cpp, Line: 151, Column: 0 }
+    DebugLoc:        { File: accelerator_v2.cpp, Line: 154, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
@@ -630,7 +588,7 @@ Args:
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: accelerator_v2.cpp, Line: 166, Column: 0 }
+DebugLoc:        { File: accelerator_v2.cpp, Line: 169, Column: 0 }
 Function:        _Z13mat_to_streamRN2xf2cv3MatILi0ELi484ELi644ELi1ELi3220EEERN3hls6streamI7ap_uintILi8EELi0EEEii
 Args:            
   - String:          'Inlining function '''
@@ -639,7 +597,7 @@ Args:
                        Line: 541, Column: 0 }
   - String:          ''' into '''
   - Caller:          'mat_to_stream(xf::cv::Mat<0, 484, 644, 1, 3220>&, hls::stream<ap_uint<8>, 0>&, int, int)'
-    DebugLoc:        { File: accelerator_v2.cpp, Line: 166, Column: 0 }
+    DebugLoc:        { File: accelerator_v2.cpp, Line: 169, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
@@ -662,5 +620,230 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: accelerator_v2.cpp, Line: 45, Column: 20 }
-Function:        _Z6unpackRN3hls6streamINS_4axisI7ap_uintILi128EELm1ELm1ELm1EEELi0EE
+DebugLoc:        { File: accelerator_v2.cpp, Line: 87, Column: 14 }
+Function:        _Z3padRN3hls6streamI7ap_uintILi24EELi0EEES4_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          row_buf
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp, 
+                   Line: 738, Column: 5 }
+Function:        _ZN2xf2cv19xFGaussianFilter5x5ILi0ELi484ELi644ELi1ELi0ELi1ELi3220ELi3220ELi1ELi644ELb0EEEvRNS0_3MatIXT_EXT0_EXT1_EXT4_EXT5_EEERNS2_IXT_EXT0_EXT1_EXT4_EXT6_EEEttPh
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          src_buf1
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp, 
+                   Line: 738, Column: 49 }
+Function:        _ZN2xf2cv19xFGaussianFilter5x5ILi0ELi484ELi644ELi1ELi0ELi1ELi3220ELi3220ELi1ELi644ELb0EEEvRNS0_3MatIXT_EXT0_EXT1_EXT4_EXT5_EEERNS2_IXT_EXT0_EXT1_EXT4_EXT6_EEEttPh
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          src_buf2
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp, 
+                   Line: 738, Column: 93 }
+Function:        _ZN2xf2cv19xFGaussianFilter5x5ILi0ELi484ELi644ELi1ELi0ELi1ELi3220ELi3220ELi1ELi644ELb0EEEvRNS0_3MatIXT_EXT0_EXT1_EXT4_EXT5_EEERNS2_IXT_EXT0_EXT1_EXT4_EXT6_EEEttPh
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          src_buf3
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp, 
+                   Line: 739, Column: 9 }
+Function:        _ZN2xf2cv19xFGaussianFilter5x5ILi0ELi484ELi644ELi1ELi0ELi1ELi3220ELi3220ELi1ELi644ELb0EEEvRNS0_3MatIXT_EXT0_EXT1_EXT4_EXT5_EEERNS2_IXT_EXT0_EXT1_EXT4_EXT6_EEEttPh
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          src_buf4
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp, 
+                   Line: 739, Column: 53 }
+Function:        _ZN2xf2cv19xFGaussianFilter5x5ILi0ELi484ELi644ELi1ELi0ELi1ELi3220ELi3220ELi1ELi644ELb0EEEvRNS0_3MatIXT_EXT0_EXT1_EXT4_EXT5_EEERNS2_IXT_EXT0_EXT1_EXT4_EXT6_EEEttPh
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          src_buf5
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp, 
+                   Line: 751, Column: 42 }
+Function:        _ZN2xf2cv19xFGaussianFilter5x5ILi0ELi484ELi644ELi1ELi0ELi1ELi3220ELi3220ELi1ELi644ELb0EEEvRNS0_3MatIXT_EXT0_EXT1_EXT4_EXT5_EEERNS2_IXT_EXT0_EXT1_EXT4_EXT6_EEEttPh
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          buf
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: accelerator_v2.cpp, Line: 41, Column: 33 }
+Function:        _Z6unpackRN3hls6streamINS_4axisI7ap_uintILi128EELm1ELm1ELm1EEELi0EEERNS0_IS2_ILi24EELi0EEEPVS2_ILi1EE
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        if.then.store.0
+  - String:          ' '
+  - ArrayName:       in_breath
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'unpack(hls::stream<hls::axis<ap_uint<128>, 1ul, 1ul, 1ul>, 0>&, hls::stream<ap_uint<24>, 0>&, ap_uint<1> volatile*)'
+    DebugLoc:        { File: accelerator_v2.cpp, Line: 36, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: accelerator_v2.cpp, Line: 219, Column: 14 }
+Function:        _Z6repackRN3hls6streamI7ap_uintILi8EELi0EEERNS0_INS_4axisIS1_ILi128EELm1ELm1ELm1EEELi0EEEPVS1_ILi1EE
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        entry.store.10
+  - String:          ' '
+  - ArrayName:       out_breath
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'repack(hls::stream<ap_uint<8>, 0>&, hls::stream<hls::axis<ap_uint<128>, 1ul, 1ul, 1ul>, 0>&, ap_uint<1> volatile*)'
+    DebugLoc:        { File: accelerator_v2.cpp, Line: 217, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: accelerator_v2.cpp, Line: 0, Column: 1 }
+Function:        _Z6repackRN3hls6streamI7ap_uintILi8EELi0EEERNS0_INS_4axisIS1_ILi128EELm1ELm1ELm1EEELi0EEEPVS1_ILi1EE
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=cyclic factor=2 variable=row_pixels'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  repack
+  - String:          ' '
+  - varLoc:          'accelerator_v2.cpp:223:20'
+  - String:          ' '
+  - PragmaSrcLoc:    'accelerator_v2.cpp:248:9'
+    DebugLoc:        { File: accelerator_v2.cpp, Line: 248, Column: 9 }
+  - VarName:         row_pixels
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: accelerator_v2.cpp, Line: 248, Column: 9 }
+Function:        _Z6repackRN3hls6streamI7ap_uintILi8EELi0EEERNS0_INS_4axisIS1_ILi128EELm1ELm1ELm1EEELi0EEEPVS1_ILi1EE
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            cyclic
+  - String:          ' factor='
+  - Factor:          '2'
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            row_pixels
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: accelerator_v2.cpp, Line: 223, Column: 20 }
+Function:        _Z6repackRN3hls6streamI7ap_uintILi8EELi0EEERNS0_INS_4axisIS1_ILi128EELm1ELm1ELm1EEELi0EEEPVS1_ILi1EE
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          row_pixels
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '2'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
