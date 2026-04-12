@@ -7,11 +7,11 @@ OPTION psf_version = 2.1;
 
 BEGIN driver accelerator_v2
 
- OPTION supported_peripherals = (accelerator_v2_v1_0 );
+ OPTION supported_peripherals = (accelerator_v2_v4_0 );
  OPTION driver_state = ACTIVE;
  OPTION copyfiles = all;
  OPTION name = accelerator_v2;
- OPTION version = 1.0;
+ OPTION version = 4.0;
 
 END driver
 

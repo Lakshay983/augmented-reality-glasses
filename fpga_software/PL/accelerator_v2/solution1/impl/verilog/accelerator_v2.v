@@ -461,5 +461,17 @@ reg find_kernel_block = 0;
 `include "accelerator_v2_hls_deadlock_kernel_monitor_top.vh"
 // synthesis translate_on
 
+
+reg find_df_deadlock = 0;
+// synthesis translate_off
+`include "accelerator_v2_hls_deadlock_detector.vh"
+// synthesis translate_on
+
+reg find_kernel_block = 0;
+// synthesis translate_off
+`include "accelerator_v2_hls_deadlock_kernel_monitor_top.vh"
+// synthesis translate_on
+
 endmodule //accelerator_v2
+
 

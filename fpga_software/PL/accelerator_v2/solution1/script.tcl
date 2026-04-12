@@ -11,7 +11,7 @@ add_files -tb accelerator_v2_tb.cpp -cflags "-I/misc/scratch/gwl459/augmented-re
 open_solution "solution1" -flow_target vivado
 set_part {xczu3eg-sbva484-1-i}
 create_clock -period 10 -name default
-config_export -display_name Accelerator_v4 -format ip_catalog -output /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/Accelerators -rtl verilog
+config_export -display_name Accelerator_v4 -format ip_catalog -output /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/Accelerators -rtl verilog -version 4.0
 source "./accelerator_v2/solution1/directives.tcl"
 csim_design
 csynth_design
