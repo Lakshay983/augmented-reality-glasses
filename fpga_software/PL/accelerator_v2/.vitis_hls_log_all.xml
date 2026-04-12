@@ -3,33 +3,28 @@
   <errorLogs>
     <logs>
       <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
     </logs>
   </errorLogs>
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="WARNING: [RTGEN 206-101] Port 'out_breath' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port." projectName="accelerator_v2" solutionName="solution1" date="2026-04-10T16:25:18.159-0500" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Port 'in_breath' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port." projectName="accelerator_v2" solutionName="solution1" date="2026-04-10T16:25:18.142-0500" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="accelerator_v2" solutionName="solution1" date="2026-04-10T16:25:18.020-0500" type="Warning"/>
-        <logs message="WARNING: [BIND 205-102] The specified resource core for memory 'row_buf_V_3' will be ignored if a simpler one can be used." projectName="accelerator_v2" solutionName="solution1" date="2026-04-10T16:25:07.599-0500" type="Warning"/>
-        <logs message="WARNING: [BIND 205-102] The specified resource core for memory 'row_buf_V' will be ignored if a simpler one can be used." projectName="accelerator_v2" solutionName="solution1" date="2026-04-10T16:25:07.593-0500" type="Warning"/>
-        <logs message="WARNING: [BIND 205-102] The specified resource core for memory 'row_buf_V_2' will be ignored if a simpler one can be used." projectName="accelerator_v2" solutionName="solution1" date="2026-04-10T16:25:07.588-0500" type="Warning"/>
-        <logs message="WARNING: [BIND 205-102] The specified resource core for memory 'row_buf_V_1' will be ignored if a simpler one can be used." projectName="accelerator_v2" solutionName="solution1" date="2026-04-10T16:25:07.584-0500" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'GaussianBlur&lt;5, 1, 0, 484, 644, 1, 3872, 3872>' to 'GaussianBlur_5_1_0_484_644_1_3872_3872_s'." projectName="accelerator_v2" solutionName="solution1" date="2026-04-10T16:25:06.467-0500" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'xFGaussianFilter5x5&lt;0, 484, 644, 1, 0, 1, 3872, 3872, 1, 644, false>' to 'xFGaussianFilter5x5_0_484_644_1_0_1_3872_3872_1_644_false_s'." projectName="accelerator_v2" solutionName="solution1" date="2026-04-10T16:25:06.425-0500" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'xfapplygaussian5x5&lt;1, 0, false>' to 'xfapplygaussian5x5_1_0_false_s'." projectName="accelerator_v2" solutionName="solution1" date="2026-04-10T16:25:06.421-0500" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'bgr2gray&lt;9, 0, 484, 644, 1, 3872, 3872>' to 'bgr2gray_9_0_484_644_1_3872_3872_s'." projectName="accelerator_v2" solutionName="solution1" date="2026-04-10T16:25:06.418-0500" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'bgr2gray&lt;9, 0, 484, 644, 1, 3872, 3872>_Pipeline_columnloop' to 'bgr2gray_9_0_484_644_1_3872_3872_Pipeline_columnloop'." projectName="accelerator_v2" solutionName="solution1" date="2026-04-10T16:25:06.412-0500" type="Warning"/>
-        <logs message="WARNING: [HLS 200-1614] Cosimulation may deadlock if process unpack has a streamed top-level array input and has predecessor processes. If a deadlock occurs, please consider converting the streamed array into an hls::stream" projectName="accelerator_v2" solutionName="solution1" date="2026-04-10T16:25:06.300-0500" type="Warning"/>
-        <logs message="WARNING: [XFORM 203-631] Renaming function 'xfapplygaussian5x5&lt;1, 0, false>' to 'xfapplygaussian5x5_1_0_false_s' (/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp:176:1)" projectName="accelerator_v2" solutionName="solution1" date="2026-04-10T16:25:06.286-0500" type="Warning"/>
-        <logs message="WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'blurred_mat.data' (accelerator_v2.cpp:171)." projectName="accelerator_v2" solutionName="solution1" date="2026-04-10T16:25:06.146-0500" type="Warning"/>
-        <logs message="WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'gray_mat.data' (accelerator_v2.cpp:170)." projectName="accelerator_v2" solutionName="solution1" date="2026-04-10T16:25:06.065-0500" type="Warning"/>
-        <logs message="WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'gray_mat.cols'." projectName="accelerator_v2" solutionName="solution1" date="2026-04-10T16:25:06.061-0500" type="Warning"/>
-        <logs message="WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'gray_mat.rows'." projectName="accelerator_v2" solutionName="solution1" date="2026-04-10T16:25:06.058-0500" type="Warning"/>
-        <logs message="WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.V' (/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp:751)." projectName="accelerator_v2" solutionName="solution1" date="2026-04-10T16:25:06.054-0500" type="Warning"/>
-        <logs message="WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.V.1' (/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp:751)." projectName="accelerator_v2" solutionName="solution1" date="2026-04-10T16:25:06.051-0500" type="Warning"/>
-        <logs message="WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'buf.V.2' (/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp:751)." projectName="accelerator_v2" solutionName="solution1" date="2026-04-10T16:25:06.047-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5292] unused parameter 'index' (/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1530:34)" projectName="accelerator_v2" solutionName="solution1" date="2026-04-12T09:47:43.989-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5292] unused parameter 'index' (/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1224:102)" projectName="accelerator_v2" solutionName="solution1" date="2026-04-12T09:47:43.873-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5292] unused parameter 'stride' (/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1036:41)" projectName="accelerator_v2" solutionName="solution1" date="2026-04-12T09:47:43.869-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5292] unused parameter 'index' (/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:552:20)" projectName="accelerator_v2" solutionName="solution1" date="2026-04-12T09:47:43.865-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5292] unused parameter 'index' (/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:541:14)" projectName="accelerator_v2" solutionName="solution1" date="2026-04-12T09:47:43.861-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5292] unused parameter '_data' (/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:528:30)" projectName="accelerator_v2" solutionName="solution1" date="2026-04-12T09:47:43.857-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5292] unused parameter 'src' (/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:517:30)" projectName="accelerator_v2" solutionName="solution1" date="2026-04-12T09:47:43.853-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5529] 'factor' in '#pragma HLS array_reshape' is ignored (/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/common/xf_video_mem.hpp:759:47)" projectName="accelerator_v2" solutionName="solution1" date="2026-04-12T09:47:43.848-0500" type="Warning"/>
       </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
     </logs>
   </warningLogs>
 </vivadoHLSLog:LogRoot>

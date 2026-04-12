@@ -3,10 +3,10 @@ Pass:            reflow-pragma-conflict-handle
 Name:            FunctionPragmaConflictWarn
 DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp, 
                    Line: 670, Column: 0 }
-Function:        _ZN2xf2cv3MatILi9ELi484ELi644ELi1ELi3872EEC2Eii
+Function:        _ZN2xf2cv3MatILi9ELi484ELi644ELi1ELi3220EEC2Eii
 Args:            
   - String:          'In function '''
-  - Function:        'xf::cv::Mat<9, 484, 644, 1, 3872>::Mat(int, int)'
+  - Function:        'xf::cv::Mat<9, 484, 644, 1, 3220>::Mat(int, int)'
     DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp, 
                        Line: 670, Column: 0 }
   - String:          ''', '
@@ -22,10 +22,10 @@ Pass:            reflow-pragma-conflict-handle
 Name:            FunctionPragmaConflictWarn
 DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp, 
                    Line: 670, Column: 0 }
-Function:        _ZN2xf2cv3MatILi0ELi484ELi644ELi1ELi3872EEC2Eii
+Function:        _ZN2xf2cv3MatILi0ELi484ELi644ELi1ELi3220EEC2Eii
 Args:            
   - String:          'In function '''
-  - Function:        'xf::cv::Mat<0, 484, 644, 1, 3872>::Mat(int, int)'
+  - Function:        'xf::cv::Mat<0, 484, 644, 1, 3220>::Mat(int, int)'
     DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp, 
                        Line: 670, Column: 0 }
   - String:          ''', '
@@ -41,10 +41,10 @@ Pass:            reflow-pragma-conflict-handle
 Name:            FunctionPragmaConflictWarn
 DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp, 
                    Line: 670, Column: 0 }
-Function:        _ZN2xf2cv3MatILi0ELi484ELi644ELi1ELi3872EEC2Eii
+Function:        _ZN2xf2cv3MatILi0ELi484ELi644ELi1ELi3220EEC2Eii
 Args:            
   - String:          'In function '''
-  - Function:        'xf::cv::Mat<0, 484, 644, 1, 3872>::Mat(int, int)'
+  - Function:        'xf::cv::Mat<0, 484, 644, 1, 3220>::Mat(int, int)'
     DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp, 
                        Line: 670, Column: 0 }
   - String:          ''', '
@@ -60,10 +60,10 @@ Pass:            reflow-pragma-conflict-handle
 Name:            FunctionPragmaConflictWarn
 DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp, 
                    Line: 605, Column: 0 }
-Function:        _ZN2xf2cv3MatILi0ELi484ELi644ELi1ELi3872EE4initEiib
+Function:        _ZN2xf2cv3MatILi0ELi484ELi644ELi1ELi3220EE4initEiib
 Args:            
   - String:          'In function '''
-  - Function:        'xf::cv::Mat<0, 484, 644, 1, 3872>::init(int, int, bool)'
+  - Function:        'xf::cv::Mat<0, 484, 644, 1, 3220>::init(int, int, bool)'
     DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp, 
                        Line: 605, Column: 0 }
   - String:          ''', '
@@ -79,10 +79,10 @@ Pass:            reflow-pragma-conflict-handle
 Name:            FunctionPragmaConflictWarn
 DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp, 
                    Line: 605, Column: 0 }
-Function:        _ZN2xf2cv3MatILi9ELi484ELi644ELi1ELi3872EE4initEiib
+Function:        _ZN2xf2cv3MatILi9ELi484ELi644ELi1ELi3220EE4initEiib
 Args:            
   - String:          'In function '''
-  - Function:        'xf::cv::Mat<9, 484, 644, 1, 3872>::init(int, int, bool)'
+  - Function:        'xf::cv::Mat<9, 484, 644, 1, 3220>::init(int, int, bool)'
     DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp, 
                        Line: 605, Column: 0 }
   - String:          ''', '
@@ -98,14 +98,14 @@ Pass:            inline
 Name:            AlwaysInline
 DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp, 
                    Line: 675, Column: 2 }
-Function:        _ZN2xf2cv3MatILi9ELi484ELi644ELi1ELi3872EEC2Eii
+Function:        _ZN2xf2cv3MatILi9ELi484ELi644ELi1ELi3220EEC2Eii
 Args:            
   - String:          'Inlining function '''
-  - Callee:          'xf::cv::Mat<9, 484, 644, 1, 3872>::init(int, int, bool)'
+  - Callee:          'xf::cv::Mat<9, 484, 644, 1, 3220>::init(int, int, bool)'
     DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp, 
                        Line: 605, Column: 0 }
   - String:          ''' into '''
-  - Caller:          'xf::cv::Mat<9, 484, 644, 1, 3872>::Mat(int, int)'
+  - Caller:          'xf::cv::Mat<9, 484, 644, 1, 3220>::Mat(int, int)'
     DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp, 
                        Line: 670, Column: 0 }
   - String:          ''''
@@ -115,14 +115,14 @@ Pass:            inline
 Name:            AlwaysInline
 DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp, 
                    Line: 675, Column: 2 }
-Function:        _ZN2xf2cv3MatILi0ELi484ELi644ELi1ELi3872EEC2Eii
+Function:        _ZN2xf2cv3MatILi0ELi484ELi644ELi1ELi3220EEC2Eii
 Args:            
   - String:          'Inlining function '''
-  - Callee:          'xf::cv::Mat<0, 484, 644, 1, 3872>::init(int, int, bool)'
+  - Callee:          'xf::cv::Mat<0, 484, 644, 1, 3220>::init(int, int, bool)'
     DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp, 
                        Line: 605, Column: 0 }
   - String:          ''' into '''
-  - Caller:          'xf::cv::Mat<0, 484, 644, 1, 3872>::Mat(int, int)'
+  - Caller:          'xf::cv::Mat<0, 484, 644, 1, 3220>::Mat(int, int)'
     DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp, 
                        Line: 670, Column: 0 }
   - String:          ''''
@@ -132,14 +132,14 @@ Pass:            inline
 Name:            AlwaysInline
 DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_cvt_color.hpp, 
                    Line: 5594, Column: 12 }
-Function:        _ZN2xf2cv10xfbgr2grayILi9ELi0ELi484ELi644ELi1ELi3872ELi3872ELi9ELi1ELi155848EEEvRNS0_3MatIXT_EXT1_EXT2_EXT3_EXT4_EEERNS2_IXT0_EXT1_EXT2_EXT3_EXT5_EEEtt
+Function:        _ZN2xf2cv10xfbgr2grayILi9ELi0ELi484ELi644ELi1ELi3220ELi3220ELi9ELi1ELi155848EEEvRNS0_3MatIXT_EXT1_EXT2_EXT3_EXT4_EEERNS2_IXT0_EXT1_EXT2_EXT3_EXT5_EEEtt
 Args:            
   - String:          'Inlining function '''
   - Callee:          'CalculateGRAY(unsigned char, unsigned char, unsigned char)'
     DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_cvt_color_utils.hpp, 
                        Line: 882, Column: 0 }
   - String:          ''' into '''
-  - Caller:          'void xf::cv::xfbgr2gray<9, 0, 484, 644, 1, 3872, 3872, 9, 1, 155848>(xf::cv::Mat<9, 484, 644, 1, 3872>&, xf::cv::Mat<0, 484, 644, 1, 3872>&, unsigned short, unsigned short)'
+  - Caller:          'void xf::cv::xfbgr2gray<9, 0, 484, 644, 1, 3220, 3220, 9, 1, 155848>(xf::cv::Mat<9, 484, 644, 1, 3220>&, xf::cv::Mat<0, 484, 644, 1, 3220>&, unsigned short, unsigned short)'
     DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_cvt_color.hpp, 
                        Line: 5566, Column: 0 }
   - String:          ''''
@@ -149,14 +149,14 @@ Pass:            inline
 Name:            AlwaysInline
 DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp, 
                    Line: 672, Column: 13 }
-Function:        _ZN2xf2cv18ProcessGaussian5x5ILi0ELi484ELi644ELi1ELi0ELi1ELi3872ELi3872ELi1ELi644ELb0EEEvRNS0_3MatIXT_EXT0_EXT1_EXT4_EXT5_EEERNS2_IXT_EXT0_EXT1_EXT4_EXT6_EEEPArsT1_sr17xfNPixelsPerCycleIXT4_EEE9datashift_N10StreamTypeIXT7_EE4nameEPN9PixelTypeIXT3_EE4nameESF_SF_SF_SF_SF_RS9_tt7ap_uintILi13EERtSH_ILi4EESK_SK_SK_SK_SI_PhRiSM_
+Function:        _ZN2xf2cv18ProcessGaussian5x5ILi0ELi484ELi644ELi1ELi0ELi1ELi3220ELi3220ELi1ELi644ELb0EEEvRNS0_3MatIXT_EXT0_EXT1_EXT4_EXT5_EEERNS2_IXT_EXT0_EXT1_EXT4_EXT6_EEEPArsT1_sr17xfNPixelsPerCycleIXT4_EEE9datashift_N10StreamTypeIXT7_EE4nameEPN9PixelTypeIXT3_EE4nameESF_SF_SF_SF_SF_RS9_tt7ap_uintILi13EERtSH_ILi4EESK_SK_SK_SK_SI_PhRiSM_
 Args:            
   - String:          'Inlining function '''
   - Callee:          'void xf::cv::xfPackPixels<1, 1, 0>(PixelType<0>::name*, StreamType<1>::name&, unsigned short, short, unsigned short&)'
     DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp, 
                        Line: 297, Column: 0 }
   - String:          ''' into '''
-  - Caller:          'void xf::cv::ProcessGaussian5x5<0, 484, 644, 1, 0, 1, 3872, 3872, 1, 644, false>(xf::cv::Mat<0, 484, 644, 1, 3872>&, xf::cv::Mat<0, 484, 644, 1, 3872>&, StreamType<1>::name (*) [(644) >> (xfNPixelsPerCycle<1>::datashift)], PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, StreamType<1>::name&, unsigned short, unsigned short, ap_uint<13>, unsigned short&, ap_uint<4>, ap_uint<4>, ap_uint<4>, ap_uint<4>, ap_uint<4>, ap_uint<13>, unsigned char*, int&, int&)'
+  - Caller:          'void xf::cv::ProcessGaussian5x5<0, 484, 644, 1, 0, 1, 3220, 3220, 1, 644, false>(xf::cv::Mat<0, 484, 644, 1, 3220>&, xf::cv::Mat<0, 484, 644, 1, 3220>&, StreamType<1>::name (*) [(644) >> (xfNPixelsPerCycle<1>::datashift)], PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, StreamType<1>::name&, unsigned short, unsigned short, ap_uint<13>, unsigned short&, ap_uint<4>, ap_uint<4>, ap_uint<4>, ap_uint<4>, ap_uint<4>, ap_uint<13>, unsigned char*, int&, int&)'
     DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp, 
                        Line: 613, Column: 0 }
   - String:          ''''
@@ -166,14 +166,14 @@ Pass:            inline
 Name:            AlwaysInline
 DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp, 
                    Line: 654, Column: 9 }
-Function:        _ZN2xf2cv18ProcessGaussian5x5ILi0ELi484ELi644ELi1ELi0ELi1ELi3872ELi3872ELi1ELi644ELb0EEEvRNS0_3MatIXT_EXT0_EXT1_EXT4_EXT5_EEERNS2_IXT_EXT0_EXT1_EXT4_EXT6_EEEPArsT1_sr17xfNPixelsPerCycleIXT4_EEE9datashift_N10StreamTypeIXT7_EE4nameEPN9PixelTypeIXT3_EE4nameESF_SF_SF_SF_SF_RS9_tt7ap_uintILi13EERtSH_ILi4EESK_SK_SK_SK_SI_PhRiSM_
+Function:        _ZN2xf2cv18ProcessGaussian5x5ILi0ELi484ELi644ELi1ELi0ELi1ELi3220ELi3220ELi1ELi644ELb0EEEvRNS0_3MatIXT_EXT0_EXT1_EXT4_EXT5_EEERNS2_IXT_EXT0_EXT1_EXT4_EXT6_EEEPArsT1_sr17xfNPixelsPerCycleIXT4_EEE9datashift_N10StreamTypeIXT7_EE4nameEPN9PixelTypeIXT3_EE4nameESF_SF_SF_SF_SF_RS9_tt7ap_uintILi13EERtSH_ILi4EESK_SK_SK_SK_SI_PhRiSM_
 Args:            
   - String:          'Inlining function '''
   - Callee:          'void xf::cv::xFGaussian5x5<1, 0, 1, false>(PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, unsigned char*)'
     DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp, 
                        Line: 568, Column: 0 }
   - String:          ''' into '''
-  - Caller:          'void xf::cv::ProcessGaussian5x5<0, 484, 644, 1, 0, 1, 3872, 3872, 1, 644, false>(xf::cv::Mat<0, 484, 644, 1, 3872>&, xf::cv::Mat<0, 484, 644, 1, 3872>&, StreamType<1>::name (*) [(644) >> (xfNPixelsPerCycle<1>::datashift)], PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, StreamType<1>::name&, unsigned short, unsigned short, ap_uint<13>, unsigned short&, ap_uint<4>, ap_uint<4>, ap_uint<4>, ap_uint<4>, ap_uint<4>, ap_uint<13>, unsigned char*, int&, int&)'
+  - Caller:          'void xf::cv::ProcessGaussian5x5<0, 484, 644, 1, 0, 1, 3220, 3220, 1, 644, false>(xf::cv::Mat<0, 484, 644, 1, 3220>&, xf::cv::Mat<0, 484, 644, 1, 3220>&, StreamType<1>::name (*) [(644) >> (xfNPixelsPerCycle<1>::datashift)], PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, StreamType<1>::name&, unsigned short, unsigned short, ap_uint<13>, unsigned short&, ap_uint<4>, ap_uint<4>, ap_uint<4>, ap_uint<4>, ap_uint<4>, ap_uint<13>, unsigned char*, int&, int&)'
     DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp, 
                        Line: 613, Column: 0 }
   - String:          ''''
@@ -183,14 +183,14 @@ Pass:            inline
 Name:            AlwaysInline
 DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp, 
                    Line: 831, Column: 9 }
-Function:        _ZN2xf2cv19xFGaussianFilter5x5ILi0ELi484ELi644ELi1ELi0ELi1ELi3872ELi3872ELi1ELi644ELb0EEEvRNS0_3MatIXT_EXT0_EXT1_EXT4_EXT5_EEERNS2_IXT_EXT0_EXT1_EXT4_EXT6_EEEttPh
+Function:        _ZN2xf2cv19xFGaussianFilter5x5ILi0ELi484ELi644ELi1ELi0ELi1ELi3220ELi3220ELi1ELi644ELb0EEEvRNS0_3MatIXT_EXT0_EXT1_EXT4_EXT5_EEERNS2_IXT_EXT0_EXT1_EXT4_EXT6_EEEttPh
 Args:            
   - String:          'Inlining function '''
-  - Callee:          'void xf::cv::ProcessGaussian5x5<0, 484, 644, 1, 0, 1, 3872, 3872, 1, 644, false>(xf::cv::Mat<0, 484, 644, 1, 3872>&, xf::cv::Mat<0, 484, 644, 1, 3872>&, StreamType<1>::name (*) [(644) >> (xfNPixelsPerCycle<1>::datashift)], PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, StreamType<1>::name&, unsigned short, unsigned short, ap_uint<13>, unsigned short&, ap_uint<4>, ap_uint<4>, ap_uint<4>, ap_uint<4>, ap_uint<4>, ap_uint<13>, unsigned char*, int&, int&)'
+  - Callee:          'void xf::cv::ProcessGaussian5x5<0, 484, 644, 1, 0, 1, 3220, 3220, 1, 644, false>(xf::cv::Mat<0, 484, 644, 1, 3220>&, xf::cv::Mat<0, 484, 644, 1, 3220>&, StreamType<1>::name (*) [(644) >> (xfNPixelsPerCycle<1>::datashift)], PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, StreamType<1>::name&, unsigned short, unsigned short, ap_uint<13>, unsigned short&, ap_uint<4>, ap_uint<4>, ap_uint<4>, ap_uint<4>, ap_uint<4>, ap_uint<13>, unsigned char*, int&, int&)'
     DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp, 
                        Line: 613, Column: 0 }
   - String:          ''' into '''
-  - Caller:          'void xf::cv::xFGaussianFilter5x5<0, 484, 644, 1, 0, 1, 3872, 3872, 1, 644, false>(xf::cv::Mat<0, 484, 644, 1, 3872>&, xf::cv::Mat<0, 484, 644, 1, 3872>&, unsigned short, unsigned short, unsigned char*)'
+  - Caller:          'void xf::cv::xFGaussianFilter5x5<0, 484, 644, 1, 0, 1, 3220, 3220, 1, 644, false>(xf::cv::Mat<0, 484, 644, 1, 3220>&, xf::cv::Mat<0, 484, 644, 1, 3220>&, unsigned short, unsigned short, unsigned char*)'
     DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp, 
                        Line: 716, Column: 0 }
   - String:          ''''
@@ -198,56 +198,56 @@ Args:
 --- !Passed
 Pass:            inline
 Name:            AlwaysInline
-DebugLoc:        { File: accelerator_v2.cpp, Line: 169, Column: 78 }
+DebugLoc:        { File: accelerator_v2.cpp, Line: 188, Column: 78 }
 Function:        _Z14process_pixelsRN3hls6streamI7ap_uintILi24EELi0EEERNS0_IS1_ILi8EELi0EEEii
 Args:            
   - String:          'Inlining function '''
-  - Callee:          'xf::cv::Mat<9, 484, 644, 1, 3872>::Mat(int, int)'
+  - Callee:          'xf::cv::Mat<9, 484, 644, 1, 3220>::Mat(int, int)'
     DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp, 
                        Line: 670, Column: 0 }
   - String:          ''' into '''
   - Caller:          'process_pixels(hls::stream<ap_uint<24>, 0>&, hls::stream<ap_uint<8>, 0>&, int, int)'
-    DebugLoc:        { File: accelerator_v2.cpp, Line: 163, Column: 0 }
+    DebugLoc:        { File: accelerator_v2.cpp, Line: 185, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            inline
 Name:            AlwaysInline
-DebugLoc:        { File: accelerator_v2.cpp, Line: 170, Column: 81 }
+DebugLoc:        { File: accelerator_v2.cpp, Line: 189, Column: 81 }
 Function:        _Z14process_pixelsRN3hls6streamI7ap_uintILi24EELi0EEERNS0_IS1_ILi8EELi0EEEii
 Args:            
   - String:          'Inlining function '''
-  - Callee:          'xf::cv::Mat<0, 484, 644, 1, 3872>::Mat(int, int)'
+  - Callee:          'xf::cv::Mat<0, 484, 644, 1, 3220>::Mat(int, int)'
     DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp, 
                        Line: 670, Column: 0 }
   - String:          ''' into '''
   - Caller:          'process_pixels(hls::stream<ap_uint<24>, 0>&, hls::stream<ap_uint<8>, 0>&, int, int)'
-    DebugLoc:        { File: accelerator_v2.cpp, Line: 163, Column: 0 }
+    DebugLoc:        { File: accelerator_v2.cpp, Line: 185, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            inline
 Name:            AlwaysInline
-DebugLoc:        { File: accelerator_v2.cpp, Line: 171, Column: 81 }
+DebugLoc:        { File: accelerator_v2.cpp, Line: 190, Column: 81 }
 Function:        _Z14process_pixelsRN3hls6streamI7ap_uintILi24EELi0EEERNS0_IS1_ILi8EELi0EEEii
 Args:            
   - String:          'Inlining function '''
-  - Callee:          'xf::cv::Mat<0, 484, 644, 1, 3872>::Mat(int, int)'
+  - Callee:          'xf::cv::Mat<0, 484, 644, 1, 3220>::Mat(int, int)'
     DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp, 
                        Line: 670, Column: 0 }
   - String:          ''' into '''
   - Caller:          'process_pixels(hls::stream<ap_uint<24>, 0>&, hls::stream<ap_uint<8>, 0>&, int, int)'
-    DebugLoc:        { File: accelerator_v2.cpp, Line: 163, Column: 0 }
+    DebugLoc:        { File: accelerator_v2.cpp, Line: 185, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
-DebugLoc:        { File: accelerator_v2.cpp, Line: 221, Column: 35 }
-Function:        _Z6repackRN3hls6streamI7ap_uintILi8EELi0EEES4_RNS0_INS_4axisIS1_ILi128EELm1ELm1ELm1EEELi0EEEi
+DebugLoc:        { File: accelerator_v2.cpp, Line: 266, Column: 31 }
+Function:        _Z6repackRN3hls6streamI7ap_uintILi8EELi0EEERNS0_INS_4axisIS1_ILi128EELm1ELm1ELm1EEELi0EEEPVS1_ILi1EE
 Args:            
   - String:          'Loop '''
-  - LoopName:        VITIS_LOOP_221_4
+  - LoopName:        VITIS_LOOP_266_5
   - String:          ''' is marked as complete unroll implied by the pipeline pragma'
 ...
 --- !Passed
@@ -255,7 +255,7 @@ Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
 DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp, 
                    Line: 574, Column: 5 }
-Function:        _ZN2xf2cv19xFGaussianFilter5x5ILi0ELi484ELi644ELi1ELi0ELi1ELi3872ELi3872ELi1ELi644ELb0EEEvRNS0_3MatIXT_EXT0_EXT1_EXT4_EXT5_EEERNS2_IXT_EXT0_EXT1_EXT4_EXT6_EEEttPh
+Function:        _ZN2xf2cv19xFGaussianFilter5x5ILi0ELi484ELi644ELi1ELi0ELi1ELi3220ELi3220ELi1ELi644ELb0EEEvRNS0_3MatIXT_EXT0_EXT1_EXT4_EXT5_EEERNS2_IXT_EXT0_EXT1_EXT4_EXT6_EEEttPh
 Args:            
   - String:          'Loop '''
   - LoopName:        Compute_Grad_Loop
@@ -266,7 +266,7 @@ Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
 DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp, 
                    Line: 657, Column: 27 }
-Function:        _ZN2xf2cv19xFGaussianFilter5x5ILi0ELi484ELi644ELi1ELi0ELi1ELi3872ELi3872ELi1ELi644ELb0EEEvRNS0_3MatIXT_EXT0_EXT1_EXT4_EXT5_EEERNS2_IXT_EXT0_EXT1_EXT4_EXT6_EEEttPh
+Function:        _ZN2xf2cv19xFGaussianFilter5x5ILi0ELi484ELi644ELi1ELi0ELi1ELi3220ELi3220ELi1ELi644ELb0EEEvRNS0_3MatIXT_EXT0_EXT1_EXT4_EXT5_EEERNS2_IXT_EXT0_EXT1_EXT4_EXT6_EEEttPh
 Args:            
   - String:          'Loop '''
   - LoopName:        VITIS_LOOP_657_1
@@ -277,7 +277,7 @@ Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
 DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp, 
                    Line: 303, Column: 23 }
-Function:        _ZN2xf2cv19xFGaussianFilter5x5ILi0ELi484ELi644ELi1ELi0ELi1ELi3872ELi3872ELi1ELi644ELb0EEEvRNS0_3MatIXT_EXT0_EXT1_EXT4_EXT5_EEERNS2_IXT_EXT0_EXT1_EXT4_EXT6_EEEttPh
+Function:        _ZN2xf2cv19xFGaussianFilter5x5ILi0ELi484ELi644ELi1ELi0ELi1ELi3220ELi3220ELi1ELi644ELb0EEEvRNS0_3MatIXT_EXT0_EXT1_EXT4_EXT5_EEERNS2_IXT_EXT0_EXT1_EXT4_EXT6_EEEttPh
 Args:            
   - String:          'Loop '''
   - LoopName:        VITIS_LOOP_303_1
@@ -299,7 +299,7 @@ Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
 DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_cvt_color.hpp, 
                    Line: 5590, Column: 32 }
-Function:        _ZN2xf2cv10xfbgr2grayILi9ELi0ELi484ELi644ELi1ELi3872ELi3872ELi9ELi1ELi155848EEEvRNS0_3MatIXT_EXT1_EXT2_EXT3_EXT4_EEERNS2_IXT0_EXT1_EXT2_EXT3_EXT5_EEEtt
+Function:        _ZN2xf2cv10xfbgr2grayILi9ELi0ELi484ELi644ELi1ELi3220ELi3220ELi9ELi1ELi155848EEEvRNS0_3MatIXT_EXT1_EXT2_EXT3_EXT4_EEERNS2_IXT0_EXT1_EXT2_EXT3_EXT5_EEEtt
 Args:            
   - String:          'Loop '''
   - LoopName:        VITIS_LOOP_5590_1
@@ -317,27 +317,53 @@ Args:
   - String:          ''' is marked as complete unroll implied by the pipeline pragma'
 ...
 --- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: accelerator_v2.cpp, Line: 53, Column: 30 }
+Function:        _Z6unpackRN3hls6streamINS_4axisI7ap_uintILi128EELm1ELm1ELm1EEELi0EEERNS0_IS2_ILi24EELi0EEEPVS2_ILi1EE
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_53_3
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: accelerator_v2.cpp, Line: 199, Column: 0 }
-Function:        _Z6repackRN3hls6streamI7ap_uintILi8EELi0EEES4_RNS0_INS_4axisIS1_ILi128EELm1ELm1ELm1EEELi0EEEi
+DebugLoc:        { File: accelerator_v2.cpp, Line: 215, Column: 0 }
+Function:        _Z6repackRN3hls6streamI7ap_uintILi8EELi0EEERNS0_INS_4axisIS1_ILi128EELm1ELm1ELm1EEELi0EEEPVS1_ILi1EE
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_221_4
+  - LoopName:        VITIS_LOOP_245_3
   - String:          ''' ('
-  - LoopLoc:         'accelerator_v2.cpp:221:35'
+  - LoopLoc:         'accelerator_v2.cpp:245:31'
   - String:          ') '
   - String:          'in function '''
   - String:          repack
   - String:          ''' completely with a factor of '
-  - Factor:          '15'
+  - Factor:          '14'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: accelerator_v2.cpp, Line: 215, Column: 0 }
+Function:        _Z6repackRN3hls6streamI7ap_uintILi8EELi0EEERNS0_INS_4axisIS1_ILi128EELm1ELm1ELm1EEELi0EEEPVS1_ILi1EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_266_5
+  - String:          ''' ('
+  - LoopLoc:         'accelerator_v2.cpp:266:31'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          repack
+  - String:          ''' completely with a factor of '
+  - Factor:          '16'
 ...
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp, 
                    Line: 716, Column: 0 }
-Function:        _ZN2xf2cv19xFGaussianFilter5x5ILi0ELi484ELi644ELi1ELi0ELi1ELi3872ELi3872ELi1ELi644ELb0EEEvRNS0_3MatIXT_EXT0_EXT1_EXT4_EXT5_EEERNS2_IXT_EXT0_EXT1_EXT4_EXT6_EEEttPh
+Function:        _ZN2xf2cv19xFGaussianFilter5x5ILi0ELi484ELi644ELi1ELi0ELi1ELi3220ELi3220ELi1ELi644ELb0EEEvRNS0_3MatIXT_EXT0_EXT1_EXT4_EXT5_EEERNS2_IXT_EXT0_EXT1_EXT4_EXT6_EEEttPh
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        Compute_Grad_Loop
@@ -345,7 +371,7 @@ Args:
   - LoopLoc:         '/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp:574:5'
   - String:          ') '
   - String:          'in function '''
-  - String:          'xf::cv::xFGaussianFilter5x5<0, 484, 644, 1, 0, 1, 3872, 3872, 1, 644, false>'
+  - String:          'xf::cv::xFGaussianFilter5x5<0, 484, 644, 1, 0, 1, 3220, 3220, 1, 644, false>'
   - String:          ''' completely with a factor of '
   - Factor:          '1'
 ...
@@ -354,7 +380,7 @@ Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp, 
                    Line: 716, Column: 0 }
-Function:        _ZN2xf2cv19xFGaussianFilter5x5ILi0ELi484ELi644ELi1ELi0ELi1ELi3872ELi3872ELi1ELi644ELb0EEEvRNS0_3MatIXT_EXT0_EXT1_EXT4_EXT5_EEERNS2_IXT_EXT0_EXT1_EXT4_EXT6_EEEttPh
+Function:        _ZN2xf2cv19xFGaussianFilter5x5ILi0ELi484ELi644ELi1ELi0ELi1ELi3220ELi3220ELi1ELi644ELb0EEEvRNS0_3MatIXT_EXT0_EXT1_EXT4_EXT5_EEERNS2_IXT_EXT0_EXT1_EXT4_EXT6_EEEttPh
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        VITIS_LOOP_657_1
@@ -362,7 +388,7 @@ Args:
   - LoopLoc:         '/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp:657:27'
   - String:          ') '
   - String:          'in function '''
-  - String:          'xf::cv::xFGaussianFilter5x5<0, 484, 644, 1, 0, 1, 3872, 3872, 1, 644, false>'
+  - String:          'xf::cv::xFGaussianFilter5x5<0, 484, 644, 1, 0, 1, 3220, 3220, 1, 644, false>'
   - String:          ''' completely with a factor of '
   - Factor:          '4'
 ...
@@ -371,7 +397,7 @@ Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp, 
                    Line: 716, Column: 0 }
-Function:        _ZN2xf2cv19xFGaussianFilter5x5ILi0ELi484ELi644ELi1ELi0ELi1ELi3872ELi3872ELi1ELi644ELb0EEEvRNS0_3MatIXT_EXT0_EXT1_EXT4_EXT5_EEERNS2_IXT_EXT0_EXT1_EXT4_EXT6_EEEttPh
+Function:        _ZN2xf2cv19xFGaussianFilter5x5ILi0ELi484ELi644ELi1ELi0ELi1ELi3220ELi3220ELi1ELi644ELb0EEEvRNS0_3MatIXT_EXT0_EXT1_EXT4_EXT5_EEERNS2_IXT_EXT0_EXT1_EXT4_EXT6_EEEttPh
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        VITIS_LOOP_303_1
@@ -379,7 +405,7 @@ Args:
   - LoopLoc:         '/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:303:23'
   - String:          ') '
   - String:          'in function '''
-  - String:          'xf::cv::xFGaussianFilter5x5<0, 484, 644, 1, 0, 1, 3872, 3872, 1, 644, false>'
+  - String:          'xf::cv::xFGaussianFilter5x5<0, 484, 644, 1, 0, 1, 3220, 3220, 1, 644, false>'
   - String:          ''' completely with a factor of '
   - Factor:          '1'
 ...
@@ -388,7 +414,7 @@ Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp, 
                    Line: 716, Column: 0 }
-Function:        _ZN2xf2cv19xFGaussianFilter5x5ILi0ELi484ELi644ELi1ELi0ELi1ELi3872ELi3872ELi1ELi644ELb0EEEvRNS0_3MatIXT_EXT0_EXT1_EXT4_EXT5_EEERNS2_IXT_EXT0_EXT1_EXT4_EXT6_EEEttPh
+Function:        _ZN2xf2cv19xFGaussianFilter5x5ILi0ELi484ELi644ELi1ELi0ELi1ELi3220ELi3220ELi1ELi644ELb0EEEvRNS0_3MatIXT_EXT0_EXT1_EXT4_EXT5_EEERNS2_IXT_EXT0_EXT1_EXT4_EXT6_EEEttPh
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        VITIS_LOOP_870_2
@@ -396,7 +422,7 @@ Args:
   - LoopLoc:         '/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp:870:31'
   - String:          ') '
   - String:          'in function '''
-  - String:          'xf::cv::xFGaussianFilter5x5<0, 484, 644, 1, 0, 1, 3872, 3872, 1, 644, false>'
+  - String:          'xf::cv::xFGaussianFilter5x5<0, 484, 644, 1, 0, 1, 3220, 3220, 1, 644, false>'
   - String:          ''' completely with a factor of '
   - Factor:          '4'
 ...
@@ -422,7 +448,7 @@ Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_cvt_color.hpp, 
                    Line: 5566, Column: 0 }
-Function:        _ZN2xf2cv10xfbgr2grayILi9ELi0ELi484ELi644ELi1ELi3872ELi3872ELi9ELi1ELi155848EEEvRNS0_3MatIXT_EXT1_EXT2_EXT3_EXT4_EEERNS2_IXT0_EXT1_EXT2_EXT3_EXT5_EEEtt
+Function:        _ZN2xf2cv10xfbgr2grayILi9ELi0ELi484ELi644ELi1ELi3220ELi3220ELi9ELi1ELi155848EEEvRNS0_3MatIXT_EXT1_EXT2_EXT3_EXT4_EEERNS2_IXT0_EXT1_EXT2_EXT3_EXT5_EEEtt
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        VITIS_LOOP_5590_1
@@ -430,7 +456,7 @@ Args:
   - LoopLoc:         '/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_cvt_color.hpp:5590:32'
   - String:          ') '
   - String:          'in function '''
-  - String:          'xf::cv::xfbgr2gray<9, 0, 484, 644, 1, 3872, 3872, 9, 1, 155848>'
+  - String:          'xf::cv::xfbgr2gray<9, 0, 484, 644, 1, 3220, 3220, 9, 1, 155848>'
   - String:          ''' completely with a factor of '
   - Factor:          '1'
 ...
@@ -452,18 +478,34 @@ Args:
   - Factor:          '3'
 ...
 --- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: accelerator_v2.cpp, Line: 33, Column: 0 }
+Function:        _Z6unpackRN3hls6streamINS_4axisI7ap_uintILi128EELm1ELm1ELm1EEELi0EEERNS0_IS2_ILi24EELi0EEEPVS2_ILi1EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_53_3
+  - String:          ''' ('
+  - LoopLoc:         'accelerator_v2.cpp:53:30'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          unpack
+  - String:          ''' completely with a factor of '
+  - Factor:          '16'
+...
+--- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: accelerator_v2.cpp, Line: 27, Column: 0 }
-Function:        _Z13stream_to_matRN3hls6streamI7ap_uintILi24EELi0EEERN2xf2cv3MatILi9ELi484ELi644ELi1ELi3872EEEii
+DebugLoc:        { File: accelerator_v2.cpp, Line: 151, Column: 0 }
+Function:        _Z13stream_to_matRN3hls6streamI7ap_uintILi24EELi0EEERN2xf2cv3MatILi9ELi484ELi644ELi1ELi3220EEEii
 Args:            
   - String:          'Inlining function '''
-  - Callee:          'void xf::cv::Mat<9, 484, 644, 1, 3872>::write<3872, (void*)0>(int, ap_uint<24>)'
+  - Callee:          'void xf::cv::Mat<9, 484, 644, 1, 3220>::write<3220, (void*)0>(int, ap_uint<24>)'
     DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp, 
                        Line: 552, Column: 0 }
   - String:          ''' into '''
-  - Caller:          'stream_to_mat(hls::stream<ap_uint<24>, 0>&, xf::cv::Mat<9, 484, 644, 1, 3872>&, int, int)'
-    DebugLoc:        { File: accelerator_v2.cpp, Line: 27, Column: 0 }
+  - Caller:          'stream_to_mat(hls::stream<ap_uint<24>, 0>&, xf::cv::Mat<9, 484, 644, 1, 3220>&, int, int)'
+    DebugLoc:        { File: accelerator_v2.cpp, Line: 151, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
@@ -471,14 +513,14 @@ Pass:            reflow-inliner
 Name:            AutoInline
 DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_cvt_color.hpp, 
                    Line: 5566, Column: 0 }
-Function:        _ZN2xf2cv10xfbgr2grayILi9ELi0ELi484ELi644ELi1ELi3872ELi3872ELi9ELi1ELi155848EEEvRNS0_3MatIXT_EXT1_EXT2_EXT3_EXT4_EEERNS2_IXT0_EXT1_EXT2_EXT3_EXT5_EEEtt
+Function:        _ZN2xf2cv10xfbgr2grayILi9ELi0ELi484ELi644ELi1ELi3220ELi3220ELi9ELi1ELi155848EEEvRNS0_3MatIXT_EXT1_EXT2_EXT3_EXT4_EEERNS2_IXT0_EXT1_EXT2_EXT3_EXT5_EEEtt
 Args:            
   - String:          'Inlining function '''
-  - Callee:          'ap_uint<24> xf::cv::Mat<9, 484, 644, 1, 3872>::read<3872, (void*)0>(int)'
+  - Callee:          'ap_uint<24> xf::cv::Mat<9, 484, 644, 1, 3220>::read<3220, (void*)0>(int)'
     DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp, 
                        Line: 541, Column: 0 }
   - String:          ''' into '''
-  - Caller:          'void xf::cv::xfbgr2gray<9, 0, 484, 644, 1, 3872, 3872, 9, 1, 155848>(xf::cv::Mat<9, 484, 644, 1, 3872>&, xf::cv::Mat<0, 484, 644, 1, 3872>&, unsigned short, unsigned short)'
+  - Caller:          'void xf::cv::xfbgr2gray<9, 0, 484, 644, 1, 3220, 3220, 9, 1, 155848>(xf::cv::Mat<9, 484, 644, 1, 3220>&, xf::cv::Mat<0, 484, 644, 1, 3220>&, unsigned short, unsigned short)'
     DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_cvt_color.hpp, 
                        Line: 5566, Column: 0 }
   - String:          ''''
@@ -488,14 +530,14 @@ Pass:            reflow-inliner
 Name:            AutoInline
 DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_cvt_color.hpp, 
                    Line: 5566, Column: 0 }
-Function:        _ZN2xf2cv10xfbgr2grayILi9ELi0ELi484ELi644ELi1ELi3872ELi3872ELi9ELi1ELi155848EEEvRNS0_3MatIXT_EXT1_EXT2_EXT3_EXT4_EEERNS2_IXT0_EXT1_EXT2_EXT3_EXT5_EEEtt
+Function:        _ZN2xf2cv10xfbgr2grayILi9ELi0ELi484ELi644ELi1ELi3220ELi3220ELi9ELi1ELi155848EEEvRNS0_3MatIXT_EXT1_EXT2_EXT3_EXT4_EEERNS2_IXT0_EXT1_EXT2_EXT3_EXT5_EEEtt
 Args:            
   - String:          'Inlining function '''
   - Callee:          'void ExtractUYVYPixels<9>(StreamType<9>::name, ap_uint<8>*)'
     DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_cvt_color_utils.hpp, 
                        Line: 142, Column: 0 }
   - String:          ''' into '''
-  - Caller:          'void xf::cv::xfbgr2gray<9, 0, 484, 644, 1, 3872, 3872, 9, 1, 155848>(xf::cv::Mat<9, 484, 644, 1, 3872>&, xf::cv::Mat<0, 484, 644, 1, 3872>&, unsigned short, unsigned short)'
+  - Caller:          'void xf::cv::xfbgr2gray<9, 0, 484, 644, 1, 3220, 3220, 9, 1, 155848>(xf::cv::Mat<9, 484, 644, 1, 3220>&, xf::cv::Mat<0, 484, 644, 1, 3220>&, unsigned short, unsigned short)'
     DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_cvt_color.hpp, 
                        Line: 5566, Column: 0 }
   - String:          ''''
@@ -505,14 +547,14 @@ Pass:            reflow-inliner
 Name:            AutoInline
 DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_cvt_color.hpp, 
                    Line: 5566, Column: 0 }
-Function:        _ZN2xf2cv10xfbgr2grayILi9ELi0ELi484ELi644ELi1ELi3872ELi3872ELi9ELi1ELi155848EEEvRNS0_3MatIXT_EXT1_EXT2_EXT3_EXT4_EEERNS2_IXT0_EXT1_EXT2_EXT3_EXT5_EEEtt
+Function:        _ZN2xf2cv10xfbgr2grayILi9ELi0ELi484ELi644ELi1ELi3220ELi3220ELi9ELi1ELi155848EEEvRNS0_3MatIXT_EXT1_EXT2_EXT3_EXT4_EEERNS2_IXT0_EXT1_EXT2_EXT3_EXT5_EEEtt
 Args:            
   - String:          'Inlining function '''
   - Callee:          'saturate_cast(int, int)'
     DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_cvt_color_utils.hpp, 
                        Line: 757, Column: 0 }
   - String:          ''' into '''
-  - Caller:          'void xf::cv::xfbgr2gray<9, 0, 484, 644, 1, 3872, 3872, 9, 1, 155848>(xf::cv::Mat<9, 484, 644, 1, 3872>&, xf::cv::Mat<0, 484, 644, 1, 3872>&, unsigned short, unsigned short)'
+  - Caller:          'void xf::cv::xfbgr2gray<9, 0, 484, 644, 1, 3220, 3220, 9, 1, 155848>(xf::cv::Mat<9, 484, 644, 1, 3220>&, xf::cv::Mat<0, 484, 644, 1, 3220>&, unsigned short, unsigned short)'
     DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_cvt_color.hpp, 
                        Line: 5566, Column: 0 }
   - String:          ''''
@@ -522,14 +564,14 @@ Pass:            reflow-inliner
 Name:            AutoInline
 DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_cvt_color.hpp, 
                    Line: 5566, Column: 0 }
-Function:        _ZN2xf2cv10xfbgr2grayILi9ELi0ELi484ELi644ELi1ELi3872ELi3872ELi9ELi1ELi155848EEEvRNS0_3MatIXT_EXT1_EXT2_EXT3_EXT4_EEERNS2_IXT0_EXT1_EXT2_EXT3_EXT5_EEEtt
+Function:        _ZN2xf2cv10xfbgr2grayILi9ELi0ELi484ELi644ELi1ELi3220ELi3220ELi9ELi1ELi155848EEEvRNS0_3MatIXT_EXT1_EXT2_EXT3_EXT4_EEERNS2_IXT0_EXT1_EXT2_EXT3_EXT5_EEEtt
 Args:            
   - String:          'Inlining function '''
-  - Callee:          'void xf::cv::Mat<0, 484, 644, 1, 3872>::write<3872, (void*)0>(int, ap_uint<8>)'
+  - Callee:          'void xf::cv::Mat<0, 484, 644, 1, 3220>::write<3220, (void*)0>(int, ap_uint<8>)'
     DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp, 
                        Line: 552, Column: 0 }
   - String:          ''' into '''
-  - Caller:          'void xf::cv::xfbgr2gray<9, 0, 484, 644, 1, 3872, 3872, 9, 1, 155848>(xf::cv::Mat<9, 484, 644, 1, 3872>&, xf::cv::Mat<0, 484, 644, 1, 3872>&, unsigned short, unsigned short)'
+  - Caller:          'void xf::cv::xfbgr2gray<9, 0, 484, 644, 1, 3220, 3220, 9, 1, 155848>(xf::cv::Mat<9, 484, 644, 1, 3220>&, xf::cv::Mat<0, 484, 644, 1, 3220>&, unsigned short, unsigned short)'
     DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_cvt_color.hpp, 
                        Line: 5566, Column: 0 }
   - String:          ''''
@@ -539,14 +581,14 @@ Pass:            reflow-inliner
 Name:            AutoInline
 DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_cvt_color.hpp, 
                    Line: 5611, Column: 0 }
-Function:        _ZN2xf2cv8bgr2grayILi9ELi0ELi484ELi644ELi1ELi3872ELi3872EEEvRNS0_3MatIXT_EXT1_EXT2_EXT3_EXT4_EEERNS2_IXT0_EXT1_EXT2_EXT3_EXT5_EEE
+Function:        _ZN2xf2cv8bgr2grayILi9ELi0ELi484ELi644ELi1ELi3220ELi3220EEEvRNS0_3MatIXT_EXT1_EXT2_EXT3_EXT4_EEERNS2_IXT0_EXT1_EXT2_EXT3_EXT5_EEE
 Args:            
   - String:          'Inlining function '''
-  - Callee:          'void xf::cv::xfbgr2gray<9, 0, 484, 644, 1, 3872, 3872, 9, 1, 155848>(xf::cv::Mat<9, 484, 644, 1, 3872>&, xf::cv::Mat<0, 484, 644, 1, 3872>&, unsigned short, unsigned short)'
+  - Callee:          'void xf::cv::xfbgr2gray<9, 0, 484, 644, 1, 3220, 3220, 9, 1, 155848>(xf::cv::Mat<9, 484, 644, 1, 3220>&, xf::cv::Mat<0, 484, 644, 1, 3220>&, unsigned short, unsigned short)'
     DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_cvt_color.hpp, 
                        Line: 5566, Column: 0 }
   - String:          ''' into '''
-  - Caller:          'void xf::cv::bgr2gray<9, 0, 484, 644, 1, 3872, 3872>(xf::cv::Mat<9, 484, 644, 1, 3872>&, xf::cv::Mat<0, 484, 644, 1, 3872>&)'
+  - Caller:          'void xf::cv::bgr2gray<9, 0, 484, 644, 1, 3220, 3220>(xf::cv::Mat<9, 484, 644, 1, 3220>&, xf::cv::Mat<0, 484, 644, 1, 3220>&)'
     DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_cvt_color.hpp, 
                        Line: 5611, Column: 0 }
   - String:          ''''
@@ -556,14 +598,14 @@ Pass:            reflow-inliner
 Name:            AutoInline
 DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp, 
                    Line: 716, Column: 0 }
-Function:        _ZN2xf2cv19xFGaussianFilter5x5ILi0ELi484ELi644ELi1ELi0ELi1ELi3872ELi3872ELi1ELi644ELb0EEEvRNS0_3MatIXT_EXT0_EXT1_EXT4_EXT5_EEERNS2_IXT_EXT0_EXT1_EXT4_EXT6_EEEttPh
+Function:        _ZN2xf2cv19xFGaussianFilter5x5ILi0ELi484ELi644ELi1ELi0ELi1ELi3220ELi3220ELi1ELi644ELb0EEEvRNS0_3MatIXT_EXT0_EXT1_EXT4_EXT5_EEERNS2_IXT_EXT0_EXT1_EXT4_EXT6_EEEttPh
 Args:            
   - String:          'Inlining function '''
-  - Callee:          'ap_uint<8> xf::cv::Mat<0, 484, 644, 1, 3872>::read<3872, (void*)0>(int)'
+  - Callee:          'ap_uint<8> xf::cv::Mat<0, 484, 644, 1, 3220>::read<3220, (void*)0>(int)'
     DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp, 
                        Line: 541, Column: 0 }
   - String:          ''' into '''
-  - Caller:          'void xf::cv::xFGaussianFilter5x5<0, 484, 644, 1, 0, 1, 3872, 3872, 1, 644, false>(xf::cv::Mat<0, 484, 644, 1, 3872>&, xf::cv::Mat<0, 484, 644, 1, 3872>&, unsigned short, unsigned short, unsigned char*)'
+  - Caller:          'void xf::cv::xFGaussianFilter5x5<0, 484, 644, 1, 0, 1, 3220, 3220, 1, 644, false>(xf::cv::Mat<0, 484, 644, 1, 3220>&, xf::cv::Mat<0, 484, 644, 1, 3220>&, unsigned short, unsigned short, unsigned char*)'
     DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp, 
                        Line: 716, Column: 0 }
   - String:          ''''
@@ -573,14 +615,14 @@ Pass:            reflow-inliner
 Name:            AutoInline
 DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp, 
                    Line: 716, Column: 0 }
-Function:        _ZN2xf2cv19xFGaussianFilter5x5ILi0ELi484ELi644ELi1ELi0ELi1ELi3872ELi3872ELi1ELi644ELb0EEEvRNS0_3MatIXT_EXT0_EXT1_EXT4_EXT5_EEERNS2_IXT_EXT0_EXT1_EXT4_EXT6_EEEttPh
+Function:        _ZN2xf2cv19xFGaussianFilter5x5ILi0ELi484ELi644ELi1ELi0ELi1ELi3220ELi3220ELi1ELi644ELb0EEEvRNS0_3MatIXT_EXT0_EXT1_EXT4_EXT5_EEERNS2_IXT_EXT0_EXT1_EXT4_EXT6_EEEttPh
 Args:            
   - String:          'Inlining function '''
-  - Callee:          'void xf::cv::Mat<0, 484, 644, 1, 3872>::write<3872, (void*)0>(int, ap_uint<8>)'
+  - Callee:          'void xf::cv::Mat<0, 484, 644, 1, 3220>::write<3220, (void*)0>(int, ap_uint<8>)'
     DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp, 
                        Line: 552, Column: 0 }
   - String:          ''' into '''
-  - Caller:          'void xf::cv::xFGaussianFilter5x5<0, 484, 644, 1, 0, 1, 3872, 3872, 1, 644, false>(xf::cv::Mat<0, 484, 644, 1, 3872>&, xf::cv::Mat<0, 484, 644, 1, 3872>&, unsigned short, unsigned short, unsigned char*)'
+  - Caller:          'void xf::cv::xFGaussianFilter5x5<0, 484, 644, 1, 0, 1, 3220, 3220, 1, 644, false>(xf::cv::Mat<0, 484, 644, 1, 3220>&, xf::cv::Mat<0, 484, 644, 1, 3220>&, unsigned short, unsigned short, unsigned char*)'
     DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp, 
                        Line: 716, Column: 0 }
   - String:          ''''
@@ -588,16 +630,16 @@ Args:
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: accelerator_v2.cpp, Line: 43, Column: 0 }
-Function:        _Z13mat_to_streamRN2xf2cv3MatILi0ELi484ELi644ELi1ELi3872EEERN3hls6streamI7ap_uintILi8EELi0EEEii
+DebugLoc:        { File: accelerator_v2.cpp, Line: 166, Column: 0 }
+Function:        _Z13mat_to_streamRN2xf2cv3MatILi0ELi484ELi644ELi1ELi3220EEERN3hls6streamI7ap_uintILi8EELi0EEEii
 Args:            
   - String:          'Inlining function '''
-  - Callee:          'ap_uint<8> xf::cv::Mat<0, 484, 644, 1, 3872>::read<3872, (void*)0>(int)'
+  - Callee:          'ap_uint<8> xf::cv::Mat<0, 484, 644, 1, 3220>::read<3220, (void*)0>(int)'
     DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp, 
                        Line: 541, Column: 0 }
   - String:          ''' into '''
-  - Caller:          'mat_to_stream(xf::cv::Mat<0, 484, 644, 1, 3872>&, hls::stream<ap_uint<8>, 0>&, int, int)'
-    DebugLoc:        { File: accelerator_v2.cpp, Line: 43, Column: 0 }
+  - Caller:          'mat_to_stream(xf::cv::Mat<0, 484, 644, 1, 3220>&, hls::stream<ap_uint<8>, 0>&, int, int)'
+    DebugLoc:        { File: accelerator_v2.cpp, Line: 166, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
@@ -620,302 +662,5 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: accelerator_v2.cpp, Line: 62, Column: 14 }
-Function:        _Z3padRN3hls6streamI7ap_uintILi24EELi0EEES4_
-Args:            
-  - String:          'Applying '
-  - String:          array_partition
-  - String:          ' to '''
-  - UOName:          row_buf
-  - String:          ''':'
-  - String:          ' '
-  - Mode:            Complete
-  - String:          ' partitioning'
-  - String:          ' on dimension '
-  - Dim:             '1'
-  - String:          .
-...
---- !Passed
-Pass:            reflow-array-partition
-Name:            ArrayXform
-DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp, 
-                   Line: 738, Column: 5 }
-Function:        _ZN2xf2cv19xFGaussianFilter5x5ILi0ELi484ELi644ELi1ELi0ELi1ELi3872ELi3872ELi1ELi644ELb0EEEvRNS0_3MatIXT_EXT0_EXT1_EXT4_EXT5_EEERNS2_IXT_EXT0_EXT1_EXT4_EXT6_EEEttPh
-Args:            
-  - String:          'Applying '
-  - String:          array_partition
-  - String:          ' to '''
-  - UOName:          src_buf1
-  - String:          ''':'
-  - String:          ' '
-  - Mode:            Complete
-  - String:          ' partitioning'
-  - String:          ' on dimension '
-  - Dim:             '1'
-  - String:          .
-...
---- !Passed
-Pass:            reflow-array-partition
-Name:            ArrayXform
-DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp, 
-                   Line: 738, Column: 49 }
-Function:        _ZN2xf2cv19xFGaussianFilter5x5ILi0ELi484ELi644ELi1ELi0ELi1ELi3872ELi3872ELi1ELi644ELb0EEEvRNS0_3MatIXT_EXT0_EXT1_EXT4_EXT5_EEERNS2_IXT_EXT0_EXT1_EXT4_EXT6_EEEttPh
-Args:            
-  - String:          'Applying '
-  - String:          array_partition
-  - String:          ' to '''
-  - UOName:          src_buf2
-  - String:          ''':'
-  - String:          ' '
-  - Mode:            Complete
-  - String:          ' partitioning'
-  - String:          ' on dimension '
-  - Dim:             '1'
-  - String:          .
-...
---- !Passed
-Pass:            reflow-array-partition
-Name:            ArrayXform
-DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp, 
-                   Line: 738, Column: 93 }
-Function:        _ZN2xf2cv19xFGaussianFilter5x5ILi0ELi484ELi644ELi1ELi0ELi1ELi3872ELi3872ELi1ELi644ELb0EEEvRNS0_3MatIXT_EXT0_EXT1_EXT4_EXT5_EEERNS2_IXT_EXT0_EXT1_EXT4_EXT6_EEEttPh
-Args:            
-  - String:          'Applying '
-  - String:          array_partition
-  - String:          ' to '''
-  - UOName:          src_buf3
-  - String:          ''':'
-  - String:          ' '
-  - Mode:            Complete
-  - String:          ' partitioning'
-  - String:          ' on dimension '
-  - Dim:             '1'
-  - String:          .
-...
---- !Passed
-Pass:            reflow-array-partition
-Name:            ArrayXform
-DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp, 
-                   Line: 739, Column: 9 }
-Function:        _ZN2xf2cv19xFGaussianFilter5x5ILi0ELi484ELi644ELi1ELi0ELi1ELi3872ELi3872ELi1ELi644ELb0EEEvRNS0_3MatIXT_EXT0_EXT1_EXT4_EXT5_EEERNS2_IXT_EXT0_EXT1_EXT4_EXT6_EEEttPh
-Args:            
-  - String:          'Applying '
-  - String:          array_partition
-  - String:          ' to '''
-  - UOName:          src_buf4
-  - String:          ''':'
-  - String:          ' '
-  - Mode:            Complete
-  - String:          ' partitioning'
-  - String:          ' on dimension '
-  - Dim:             '1'
-  - String:          .
-...
---- !Passed
-Pass:            reflow-array-partition
-Name:            ArrayXform
-DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp, 
-                   Line: 739, Column: 53 }
-Function:        _ZN2xf2cv19xFGaussianFilter5x5ILi0ELi484ELi644ELi1ELi0ELi1ELi3872ELi3872ELi1ELi644ELb0EEEvRNS0_3MatIXT_EXT0_EXT1_EXT4_EXT5_EEERNS2_IXT_EXT0_EXT1_EXT4_EXT6_EEEttPh
-Args:            
-  - String:          'Applying '
-  - String:          array_partition
-  - String:          ' to '''
-  - UOName:          src_buf5
-  - String:          ''':'
-  - String:          ' '
-  - Mode:            Complete
-  - String:          ' partitioning'
-  - String:          ' on dimension '
-  - Dim:             '1'
-  - String:          .
-...
---- !Passed
-Pass:            reflow-array-partition
-Name:            ArrayXform
-DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp, 
-                   Line: 751, Column: 42 }
-Function:        _ZN2xf2cv19xFGaussianFilter5x5ILi0ELi484ELi644ELi1ELi0ELi1ELi3872ELi3872ELi1ELi644ELb0EEEvRNS0_3MatIXT_EXT0_EXT1_EXT4_EXT5_EEERNS2_IXT_EXT0_EXT1_EXT4_EXT6_EEEttPh
-Args:            
-  - String:          'Applying '
-  - String:          array_partition
-  - String:          ' to '''
-  - UOName:          buf
-  - String:          ''':'
-  - String:          ' '
-  - Mode:            Complete
-  - String:          ' partitioning'
-  - String:          ' on dimension '
-  - Dim:             '1'
-  - String:          .
-...
---- !Missed
-Pass:            reflow-burst-inference
-Name:            NonSimpleMemoryAccess
-DebugLoc:        { File: accelerator_v2.cpp, Line: 143, Column: 33 }
-Function:        _Z6unpackRN3hls6streamINS_4axisI7ap_uintILi128EELm1ELm1ELm1EEELi0EEERNS0_IS2_ILi24EELi0EEERNS0_IS2_ILi8EELi0EEERVb
-Args:            
-  - String:          Volatile or Atomic access cannot be transformed
-  - String:          ' _XLX_SEP_ '
-  - AccessID:        if.then.store.0
-  - String:          ' '
-  - ArrayName:       frame_start_out
-  - String:          ' '
-  - BundleName:      ''
-  - String:          ' '
-  - Function:        'unpack(hls::stream<hls::axis<ap_uint<128>, 1ul, 1ul, 1ul>, 0>&, hls::stream<ap_uint<24>, 0>&, hls::stream<ap_uint<8>, 0>&, bool volatile&)'
-    DebugLoc:        { File: accelerator_v2.cpp, Line: 133, Column: 0 }
-  - String:          ' '
-...
---- !Missed
-Pass:            reflow-burst-inference
-Name:            NonSimpleMemoryAccess
-DebugLoc:        { File: accelerator_v2.cpp, Line: 274, Column: 16 }
-Function:        _Z14accelerator_v2RN3hls6streamINS_4axisI7ap_uintILi128EELm1ELm1ELm1EEELi0EEES6_PVS2_ILi1EES9_
-Args:            
-  - String:          Volatile or Atomic access cannot be transformed
-  - String:          ' _XLX_SEP_ '
-  - AccessID:        entry.store.27
-  - String:          ' '
-  - ArrayName:       frame_start
-  - String:          ' '
-  - BundleName:      ''
-  - String:          ' '
-  - Function:        'accelerator_v2(hls::stream<hls::axis<ap_uint<128>, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::axis<ap_uint<128>, 1ul, 1ul, 1ul>, 0>&, ap_uint<1> volatile*, ap_uint<1> volatile*)'
-    DebugLoc:        { File: accelerator_v2.cpp, Line: 257, Column: 0 }
-  - String:          ' '
-...
---- !Missed
-Pass:            reflow-burst-inference
-Name:            NonSimpleMemoryAccess
-DebugLoc:        { File: accelerator_v2.cpp, Line: 278, Column: 18 }
-Function:        _Z14accelerator_v2RN3hls6streamINS_4axisI7ap_uintILi128EELm1ELm1ELm1EEELi0EEES6_PVS2_ILi1EES9_
-Args:            
-  - String:          Volatile or Atomic access cannot be transformed
-  - String:          ' _XLX_SEP_ '
-  - AccessID:        entry.load.31
-  - String:          ' '
-  - ArrayName:       frame_start
-  - String:          ' '
-  - BundleName:      ''
-  - String:          ' '
-  - Function:        'accelerator_v2(hls::stream<hls::axis<ap_uint<128>, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::axis<ap_uint<128>, 1ul, 1ul, 1ul>, 0>&, ap_uint<1> volatile*, ap_uint<1> volatile*)'
-    DebugLoc:        { File: accelerator_v2.cpp, Line: 257, Column: 0 }
-  - String:          ' '
-...
---- !Missed
-Pass:            reflow-burst-inference
-Name:            NonSimpleMemoryAccess
-DebugLoc:        { File: accelerator_v2.cpp, Line: 278, Column: 16 }
-Function:        _Z14accelerator_v2RN3hls6streamINS_4axisI7ap_uintILi128EELm1ELm1ELm1EEELi0EEES6_PVS2_ILi1EES9_
-Args:            
-  - String:          Volatile or Atomic access cannot be transformed
-  - String:          ' _XLX_SEP_ '
-  - AccessID:        entry.store.35
-  - String:          ' '
-  - ArrayName:       in_breath
-  - String:          ' '
-  - BundleName:      ''
-  - String:          ' '
-  - Function:        'accelerator_v2(hls::stream<hls::axis<ap_uint<128>, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::axis<ap_uint<128>, 1ul, 1ul, 1ul>, 0>&, ap_uint<1> volatile*, ap_uint<1> volatile*)'
-    DebugLoc:        { File: accelerator_v2.cpp, Line: 257, Column: 0 }
-  - String:          ' '
-...
---- !Missed
-Pass:            reflow-burst-inference
-Name:            NonSimpleMemoryAccess
-DebugLoc:        { File: accelerator_v2.cpp, Line: 286, Column: 19 }
-Function:        _Z14accelerator_v2RN3hls6streamINS_4axisI7ap_uintILi128EELm1ELm1ELm1EEELi0EEES6_PVS2_ILi1EES9_
-Args:            
-  - String:          Volatile or Atomic access cannot be transformed
-  - String:          ' _XLX_SEP_ '
-  - AccessID:        entry.load.41
-  - String:          ' '
-  - ArrayName:       frame_start
-  - String:          ' '
-  - BundleName:      ''
-  - String:          ' '
-  - Function:        'accelerator_v2(hls::stream<hls::axis<ap_uint<128>, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::axis<ap_uint<128>, 1ul, 1ul, 1ul>, 0>&, ap_uint<1> volatile*, ap_uint<1> volatile*)'
-    DebugLoc:        { File: accelerator_v2.cpp, Line: 257, Column: 0 }
-  - String:          ' '
-...
---- !Missed
-Pass:            reflow-burst-inference
-Name:            NonSimpleMemoryAccess
-DebugLoc:        { File: accelerator_v2.cpp, Line: 286, Column: 17 }
-Function:        _Z14accelerator_v2RN3hls6streamINS_4axisI7ap_uintILi128EELm1ELm1ELm1EEELi0EEES6_PVS2_ILi1EES9_
-Args:            
-  - String:          Volatile or Atomic access cannot be transformed
-  - String:          ' _XLX_SEP_ '
-  - AccessID:        entry.store.45
-  - String:          ' '
-  - ArrayName:       out_breath
-  - String:          ' '
-  - BundleName:      ''
-  - String:          ' '
-  - Function:        'accelerator_v2(hls::stream<hls::axis<ap_uint<128>, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::axis<ap_uint<128>, 1ul, 1ul, 1ul>, 0>&, ap_uint<1> volatile*, ap_uint<1> volatile*)'
-    DebugLoc:        { File: accelerator_v2.cpp, Line: 257, Column: 0 }
-  - String:          ' '
-...
---- !Passed
-Pass:            reflow-auto-array-partition
-Name:            AutoParallelPerformanceDrivenVerbosePassed
-DebugLoc:        { File: accelerator_v2.cpp, Line: 0, Column: 1 }
-Function:        _Z6repackRN3hls6streamI7ap_uintILi8EELi0EEES4_RNS0_INS_4axisIS1_ILi128EELm1ELm1ELm1EEELi0EEEi
-Args:            
-  - PragmaType:      array_partition
-  - String:          ' '
-  - PragmaOptions:   'dim=1 type=cyclic factor=2 variable=row_pixels'
-  - String:          ' '
-  - PragmaIsAuto:    '1'
-  - String:          ' '
-  - PragmaFunction:  repack
-  - String:          ' '
-  - varLoc:          'accelerator_v2.cpp:205:20'
-  - String:          ' '
-  - PragmaSrcLoc:    'accelerator_v2.cpp:213:9'
-    DebugLoc:        { File: accelerator_v2.cpp, Line: 213, Column: 9 }
-  - VarName:         row_pixels
-  - String:          ' '
-...
---- !Passed
-Pass:            reflow-auto-array-partition
-Name:            AutoArrayXform
-DebugLoc:        { File: accelerator_v2.cpp, Line: 213, Column: 9 }
-Function:        _Z6repackRN3hls6streamI7ap_uintILi8EELi0EEES4_RNS0_INS_4axisIS1_ILi128EELm1ELm1ELm1EEELi0EEEi
-Args:            
-  - String:          'Inferring pragma '''
-  - PragmaType:      array_partition
-  - String:          ' type='
-  - Mode:            cyclic
-  - String:          ' factor='
-  - Factor:          '2'
-  - String:          ' dim='
-  - Dim:             '1'
-  - String:          ''' for array '''
-  - Name:            row_pixels
-  - String:          ''''
-  - String:          ' due to '
-  - String:          pipeline
-  - String:          ' pragma'
-...
---- !Passed
-Pass:            reflow-array-partition
-Name:            ArrayXform
-DebugLoc:        { File: accelerator_v2.cpp, Line: 205, Column: 20 }
-Function:        _Z6repackRN3hls6streamI7ap_uintILi8EELi0EEES4_RNS0_INS_4axisIS1_ILi128EELm1ELm1ELm1EEELi0EEEi
-Args:            
-  - String:          'Applying '
-  - String:          array_partition
-  - String:          ' to '''
-  - UOName:          row_pixels
-  - String:          ''':'
-  - String:          ' '
-  - Mode:            Cyclic
-  - String:          ' partitioning'
-  - String:          ' with factor '
-  - Factor:          '2'
-  - String:          ' on dimension '
-  - Dim:             '1'
-  - String:          .
-...
+DebugLoc:        { File: accelerator_v2.cpp, Line: 45, Column: 20 }
+Function:        _Z6unpackRN3hls6streamINS_4axisI7ap_uintILi128EELm1ELm1ELm1EEELi0EE

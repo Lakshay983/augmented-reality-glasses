@@ -5,6 +5,11 @@
                 <option name="name" value="accelerator_v2"/>
             </pragma>
         </directive>
+        <directive functionName="accelerator_v2" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="accelerator_v2"/>
+            </pragma>
+        </directive>
     </sourceFile>
 </AutoPilot:ProjectResources>
 

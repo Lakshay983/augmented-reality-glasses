@@ -32398,40 +32398,61 @@ void GaussianBlur(xf::cv::Mat<SRC_T, ROWS, COLS, NPC, XFCVDEPTH_IN_1>& _src,
 }
 }
 # 8 "accelerator_v2.cpp" 2
-# 21 "accelerator_v2.cpp"
+# 22 "accelerator_v2.cpp"
 typedef ap_axiu<128, 1, 1, 1> AxiBurst;
 
-void stream_to_mat(
-    hls::stream<ap_uint<24>>& in,
-    xf::cv::Mat<XF_8UC3, (480 + 2*2), (640 + 2*2), XF_NPPC1, ((480 + 2*2) * 8)>& out,
-    int rows, int cols)
-{
 
+
+
+
+
+void unpack(
+    hls::stream<AxiBurst>& burst_in,
+    hls::stream<ap_uint<24>>& bgr_stream,
+    volatile ap_uint<1>* in_breath)
+{
 #pragma HLS INLINE off
- VITIS_LOOP_30_1: for (int r = 0; r < rows; r++) {
-        VITIS_LOOP_31_2: for (int c = 0; c < cols; c++) {
+ bool frame_started = false;
+
+    VITIS_LOOP_37_1: for (int tx = 0; tx < 480 / 5; tx++)
+    {
+        if (tx == 0 && !frame_started)
+        {
+            *in_breath = 1;
+            frame_started = true;
+        }
+
+        ap_uint<8> tx_bytes[(2 + (5 * 640 * 3))];
+#pragma HLS ARRAY_PARTITION variable=tx_bytes complete
+
+
+ VITIS_LOOP_49_2: for (int b = 0; b < (((2 + (5 * 640 * 3)) + 15) / 16); b++)
+        {
 #pragma HLS PIPELINE II=1
- ap_uint<24> px = in.read();
-            out.write(r * cols + c, (ap_uint<32>)px);
+ AxiBurst burst = burst_in.read();
+            VITIS_LOOP_53_3: for (int i = 0; i < 16; i++)
+            {
+#pragma HLS UNROLL
+ int idx = b * 16 + i;
+                if (idx < (2 + (5 * 640 * 3)))
+                    tx_bytes[idx] = burst.data(i*8+7, i*8);
+            }
+        }
+
+
+        VITIS_LOOP_63_4: for (int pix = 0; pix < 5 * 640; pix++)
+        {
+#pragma HLS PIPELINE II=1
+ int base = 2 + pix * 3;
+            ap_uint<24> bgr = ((ap_uint<24>)tx_bytes[base + 2] << 16) |
+                              ((ap_uint<24>)tx_bytes[base + 1] << 8) |
+                               (ap_uint<24>)tx_bytes[base + 0];
+            bgr_stream.write(bgr);
         }
     }
 }
 
-void mat_to_stream(
-    xf::cv::Mat<XF_8UC1, (480 + 2*2), (640 + 2*2), XF_NPPC1, ((480 + 2*2) * 8)>& in,
-    hls::stream<ap_uint<8>>& out,
-    int rows, int cols)
-{
 
-#pragma HLS INLINE off
- VITIS_LOOP_46_1: for (int r = 0; r < rows; r++) {
-        VITIS_LOOP_47_2: for (int c = 0; c < cols; c++) {
-#pragma HLS PIPELINE II=1
- ap_uint<32> px = in.read(r * cols + c);
-            out.write(px(7, 0));
-        }
-    }
-}
 
 
 void pad(
@@ -32445,19 +32466,18 @@ void pad(
 #pragma HLS BIND_STORAGE variable=row_buf type=RAM_2P impl=BRAM
 
 
- VITIS_LOOP_67_1: for (int r = 0; r < 3; r++) {
-        VITIS_LOOP_68_2: for (int c = 0; c < 640; c++) {
+ VITIS_LOOP_89_1: for (int r = 0; r < 3; r++) {
+        VITIS_LOOP_90_2: for (int c = 0; c < 640; c++) {
 #pragma HLS PIPELINE II=1
  row_buf[r][c] = in.read();
         }
     }
 
 
-
-    VITIS_LOOP_76_3: for (int r = 2; r >= 1; r--) {
+    VITIS_LOOP_97_3: for (int r = 2; r >= 1; r--) {
         out.write(row_buf[r][2]);
         out.write(row_buf[r][1]);
-        VITIS_LOOP_79_4: for (int c = 0; c < 640; c++) {
+        VITIS_LOOP_100_4: for (int c = 0; c < 640; c++) {
 #pragma HLS PIPELINE II=1
  out.write(row_buf[r][c]);
         }
@@ -32466,21 +32486,20 @@ void pad(
     }
 
 
-    VITIS_LOOP_88_5: for (int r = 0; r < 480; r++) {
+    VITIS_LOOP_109_5: for (int r = 0; r < 480; r++) {
         int slot;
         if (r < 3) {
             slot = r;
         } else {
             slot = r % 2 + 2;
-            VITIS_LOOP_94_6: for (int c = 0; c < 640; c++) {
+            VITIS_LOOP_115_6: for (int c = 0; c < 640; c++) {
 #pragma HLS PIPELINE II=1
  row_buf[slot][c] = in.read();
             }
         }
-
         out.write(row_buf[slot][2]);
         out.write(row_buf[slot][1]);
-        VITIS_LOOP_102_7: for (int c = 0; c < 640; c++) {
+        VITIS_LOOP_122_7: for (int c = 0; c < 640; c++) {
 #pragma HLS PIPELINE II=1
  out.write(row_buf[slot][c]);
         }
@@ -32489,12 +32508,11 @@ void pad(
     }
 
 
-
-    VITIS_LOOP_112_8: for (int r = 480 -2; r >= 480 -3; r--) {
+    VITIS_LOOP_131_8: for (int r = 480 -2; r >= 480 -3; r--) {
         int slot = (r < 3) ? r : (r % 2 + 2);
         out.write(row_buf[slot][2]);
         out.write(row_buf[slot][1]);
-        VITIS_LOOP_116_9: for (int c = 0; c < 640; c++) {
+        VITIS_LOOP_135_9: for (int c = 0; c < 640; c++) {
 #pragma HLS PIPELINE II=1
  out.write(row_buf[slot][c]);
         }
@@ -32506,57 +32524,54 @@ void pad(
 
 
 
-void unpack(
-    hls::stream<AxiBurst>& burst_in,
-    hls::stream<ap_uint<24>>& bgr_stream,
-    hls::stream<ap_uint<8>>& hdr_stream,
-    volatile bool& frame_start_out)
+void stream_to_mat(
+    hls::stream<ap_uint<24>>& in,
+    xf::cv::Mat<XF_8UC3, (480 + 2*2), (640 + 2*2), XF_NPPC1, (5 * (640 + 2*2))>& out,
+    int rows, int cols)
 {
 #pragma HLS INLINE off
- bool frame_started = false;
-
-    VITIS_LOOP_137_1: for (int row = 0; row < 480; row++) {
-        VITIS_LOOP_138_2: for (int b = 0; b < 128; b++) {
-#pragma HLS PIPELINE II=6
- AxiBurst burst = burst_in.read();
-
-            if (burst.user && !frame_started) {
-                frame_start_out = true;
-                frame_started = true;
-            }
-            if (burst.last) frame_started = false;
-
-            hdr_stream.write(burst.data(7, 0));
-
-            bgr_stream.write(burst.data(31, 8));
-            bgr_stream.write(burst.data(55, 32));
-            bgr_stream.write(burst.data(79, 56));
-            bgr_stream.write(burst.data(103, 80));
-            bgr_stream.write(burst.data(127, 104));
+ VITIS_LOOP_153_1: for (int r = 0; r < rows; r++) {
+        VITIS_LOOP_154_2: for (int c = 0; c < cols; c++) {
+#pragma HLS PIPELINE II=1
+ ap_uint<24> px = in.read();
+            out.write(r * cols + c, (ap_uint<32>)px);
         }
     }
 }
+
+void mat_to_stream(
+    xf::cv::Mat<XF_8UC1, (480 + 2*2), (640 + 2*2), XF_NPPC1, (5 * (640 + 2*2))>& in,
+    hls::stream<ap_uint<8>>& out,
+    int rows, int cols)
+{
+#pragma HLS INLINE off
+ VITIS_LOOP_168_1: for (int r = 0; r < rows; r++) {
+        VITIS_LOOP_169_2: for (int c = 0; c < cols; c++) {
+#pragma HLS PIPELINE II=1
+ ap_uint<32> px = in.read(r * cols + c);
+            out.write(px(7, 0));
+        }
+    }
+}
+
+
+
+
 
 void process_pixels(
     hls::stream<ap_uint<24>>& bgr_stream,
     hls::stream<ap_uint<8>>& gray_stream_out,
     int rows, int cols)
 {
-
 #pragma HLS DATAFLOW
 
-
-
- xf::cv::Mat<XF_8UC3, (480 + 2*2), (640 + 2*2), XF_NPPC1, ((480 + 2*2) * 8)> bgr_mat(rows, cols);
-    xf::cv::Mat<XF_8UC1, (480 + 2*2), (640 + 2*2), XF_NPPC1, ((480 + 2*2) * 8)> gray_mat(rows, cols);
-    xf::cv::Mat<XF_8UC1, (480 + 2*2), (640 + 2*2), XF_NPPC1, ((480 + 2*2) * 8)> blurred_mat(rows, cols);
-
+ xf::cv::Mat<XF_8UC3, (480 + 2*2), (640 + 2*2), XF_NPPC1, (5 * (640 + 2*2))> bgr_mat(rows, cols);
+    xf::cv::Mat<XF_8UC1, (480 + 2*2), (640 + 2*2), XF_NPPC1, (5 * (640 + 2*2))> gray_mat(rows, cols);
+    xf::cv::Mat<XF_8UC1, (480 + 2*2), (640 + 2*2), XF_NPPC1, (5 * (640 + 2*2))> blurred_mat(rows, cols);
 
     stream_to_mat(bgr_stream, bgr_mat, rows, cols);
 
-
     xf::cv::bgr2gray<XF_8UC3, XF_8UC1, (480 + 2*2), (640 + 2*2), XF_NPPC1>(bgr_mat, gray_mat);
-
 
 #pragma HLS DEPENDENCE variable=gray_mat inter false
 #pragma HLS DEPENDENCE variable=blurred_mat inter false
@@ -32564,85 +32579,99 @@ void process_pixels(
  xf::cv::GaussianBlur<5, XF_BORDER_REPLICATE, XF_8UC1, (480 + 2*2), (640 + 2*2), XF_NPPC1>(
         gray_mat, blurred_mat, 0.0f);
 
-
-
-
     mat_to_stream(blurred_mat, gray_stream_out, rows, cols);
 }
 
 
 
+
+
+
+
 void repack(
     hls::stream<ap_uint<8>>& gray_stream,
-    hls::stream<ap_uint<8>>& hdr_stream,
     hls::stream<AxiBurst>& burst_out,
-    int rows)
+    volatile ap_uint<1>* out_breath)
 {
 #pragma HLS INLINE off
+ *out_breath = 1;
 
- int hdr_rows_drained = 0;
+    VITIS_LOOP_219_1: for (int r = 0; r < (480 + 2*2); r++)
+    {
 
-    VITIS_LOOP_204_1: for (int r = 0; r < (480 + 2*2); r++) {
         ap_uint<8> row_pixels[(640 + 2*2)];
-        VITIS_LOOP_206_2: for (int c = 0; c < (640 + 2*2); c++) {
+        VITIS_LOOP_223_2: for (int c = 0; c < (640 + 2*2); c++) {
 #pragma HLS PIPELINE II=1
  row_pixels[c] = gray_stream.read();
         }
 
-        if (r >= 2 && r < (480 + 2*2) - 2) {
-            VITIS_LOOP_212_3: for (int ob = 0; ob < 43; ob++) {
-#pragma HLS PIPELINE II=1
- AxiBurst out_burst;
-                out_burst.data = 0;
-                out_burst.keep = -1;
-                out_burst.strb = -1;
 
-                int n_pix = (ob < 42) ? 15 : 10;
+        if (r < 2 || r >= (480 + 2*2) - 2)
+            continue;
 
-                VITIS_LOOP_221_4: for (int p = 0; p < 15; p++) {
+        int out_row = r - 2;
+
+
+        {
+            AxiBurst out_burst;
+            out_burst.data = 0;
+            out_burst.keep = -1;
+            out_burst.strb = -1;
+            out_burst.user = (out_row == 0) ? 1 : 0;
+            out_burst.last = 0;
+
+            out_burst.data(15, 0) = (ap_uint<16>)out_row;
+
+            VITIS_LOOP_245_3: for (int p = 0; p < 14; p++) {
 #pragma HLS UNROLL
- if (p < n_pix) {
-                        ap_uint<8> gray = row_pixels[2 + ob * 15 + p];
-                        int bit_hi = 127 - p * 8;
-                        out_burst.data(bit_hi, bit_hi - 7) = gray;
-                    }
-                }
-
-                out_burst.data(7, 0) = (ap_uint<8>)ob;
-                int out_row = r - 2;
-                out_burst.last = (ob == 43 -1) && (out_row == 480 -1);
-                out_burst.user = (ob == 0) && (out_row == 0);
-                burst_out.write(out_burst);
+ out_burst.data(16 + p*8 + 7, 16 + p*8) = row_pixels[2 + p];
             }
+
+            burst_out.write(out_burst);
         }
 
-  if (hdr_rows_drained < 480) {
-   VITIS_LOOP_239_5: for (int ib = 0; ib < 128; ib++) {
+
+
+        VITIS_LOOP_255_4: for (int b = 0; b < 40; b++) {
 #pragma HLS PIPELINE II=1
- hdr_stream.read();
-   }
-   hdr_rows_drained++;
+ AxiBurst out_burst;
+            out_burst.data = 0;
+            out_burst.keep = -1;
+            out_burst.strb = -1;
+            out_burst.user = 0;
 
+            int base_pix = 14 + b * 16;
+            int n_pix = (b < 39) ? 16 : 2;
 
+            VITIS_LOOP_266_5: for (int p = 0; p < 16; p++) {
+#pragma HLS UNROLL
+ if (p < n_pix) {
+                    out_burst.data(p*8+7, p*8) = row_pixels[2 + base_pix + p];
+                }
+            }
+
+            out_burst.last = (b == 39 && out_row == 480 - 1) ? 1 : 0;
+            burst_out.write(out_burst);
         }
     }
 }
 
 
 
+
 __attribute__((sdx_kernel("accelerator_v2", 0))) void accelerator_v2(
- hls::stream<ap_axiu<128,1,1,1>>& in_stream,
- hls::stream<ap_axiu<128,1,1,1>>& out_stream,
- volatile ap_uint<1>* in_breath,
- volatile ap_uint<1>* out_breath
-){
+    hls::stream<ap_axiu<128,1,1,1>>& in_stream,
+    hls::stream<ap_axiu<128,1,1,1>>& out_stream,
+    volatile ap_uint<1>* in_breath,
+    volatile ap_uint<1>* out_breath)
+{
 #line 16 "/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL/accelerator_v2/solution1/csynth.tcl"
 #pragma HLSDIRECTIVE TOP name=accelerator_v2
-# 257 "accelerator_v2.cpp"
+# 287 "accelerator_v2.cpp"
 
 #line 6 "/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL/accelerator_v2/solution1/directives.tcl"
 #pragma HLSDIRECTIVE TOP name=accelerator_v2
-# 257 "accelerator_v2.cpp"
+# 287 "accelerator_v2.cpp"
 
 #pragma HLS INTERFACE axis port=in_stream
 #pragma HLS INTERFACE axis port=out_stream
@@ -32654,25 +32683,16 @@ __attribute__((sdx_kernel("accelerator_v2", 0))) void accelerator_v2(
  hls::stream<ap_uint<24>> bgr_stream("bgr_stream");
     hls::stream<ap_uint<24>> padded_stream("padded_stream");
     hls::stream<ap_uint<8>> gray_stream("gray_stream");
-    hls::stream<ap_uint<8>> hdr_stream("hdr_stream");
-#pragma HLS STREAM variable=bgr_stream depth=1288
+
+#pragma HLS STREAM variable=bgr_stream depth=1920
 #pragma HLS STREAM variable=padded_stream depth=1932
 #pragma HLS STREAM variable=gray_stream depth=3220
-#pragma HLS STREAM variable=hdr_stream depth=512
 
- volatile bool frame_start = false;
-
-    unpack(in_stream, bgr_stream, hdr_stream, frame_start);
-
-    *in_breath = frame_start ? 1 : 0;
+ unpack(in_stream, bgr_stream, in_breath);
 
     pad(bgr_stream, padded_stream);
 
     process_pixels(padded_stream, gray_stream, (480 + 2*2), (640 + 2*2));
 
-    repack(gray_stream, hdr_stream, out_stream, 480);
-
-    *out_breath = frame_start ? 1 : 0;
-
-
+    repack(gray_stream, out_stream, out_breath);
 }
