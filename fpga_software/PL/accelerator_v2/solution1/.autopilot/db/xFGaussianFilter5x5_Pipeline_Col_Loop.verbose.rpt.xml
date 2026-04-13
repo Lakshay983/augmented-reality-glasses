@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'xFGaussianFilter5x5_Pipeline_Col_Loop'" level="0">
-<item name = "Date">Sun Apr 12 15:59:10 2026
+<item name = "Date">Sun Apr 12 20:26:03 2026
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">accelerator_v2</item>

@@ -230,8 +230,6 @@ void repack(
 
         int out_row = r - PAD;
 
-        // first burst: 16-byte header
-        // row index in bits [15:0], rest zeroed
         {
             AxiBurst hdr_burst;
             hdr_burst.data = 0;
@@ -243,7 +241,6 @@ void repack(
             burst_out.write(hdr_burst);
         }
 
-        // 40 pixel bursts: 640 bytes = 40 × 16 bytes, clean alignment
         for (int b = 0; b < 40; b++) {
 #pragma HLS PIPELINE II=1
             AxiBurst out_burst;
@@ -258,7 +255,7 @@ void repack(
                 out_burst.data(p*8+7, p*8) = row_pixels[PAD + base_pix + p];
             }
 
-            out_burst.last = (b == 39 && out_row == IMG_H-1) ? 1 : 0;
+            out_burst.last = (b == 39) ? 1 : 0;  // TLAST on every row, not just last row of frame
             burst_out.write(out_burst);
         }
     }
@@ -284,8 +281,8 @@ void accelerator_v2(
     hls::stream<ap_uint<24>> padded_stream("padded_stream");
     hls::stream<ap_uint<8>>  gray_stream("gray_stream");
 
-#pragma HLS STREAM variable=bgr_stream    depth=2560
-#pragma HLS STREAM variable=padded_stream depth=2576
+#pragma HLS STREAM variable=bgr_stream    depth=5120
+#pragma HLS STREAM variable=padded_stream depth=3864
 #pragma HLS STREAM variable=gray_stream   depth=3864
 
     unpack(in_stream, bgr_stream, in_breath);

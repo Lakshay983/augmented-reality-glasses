@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1776027552013">
-  <ports id="1" name="padded_stream2" type="PortType" coreId="172870784" bitwidth="24" iftype="IfTypeRom">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1776043565588">
+  <ports id="1" name="padded_stream2" type="PortType" coreId="4199723808" bitwidth="24" iftype="IfTypeRom">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="2" name="gray_stream3" type="PortType" coreId="172885248" bitwidth="8" direction="DirOut" iftype="IfTypeRom">
+  <ports id="2" name="gray_stream3" type="PortType" coreId="4200654336" bitwidth="8" direction="DirOut" iftype="IfTypeRom">
     <dataInputObjs>call</dataInputObjs>
   </ports>
   <edges id="27" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
@@ -38,31 +38,31 @@
         <dataOutputObjs>call</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="15" name="_ln195" lineNumber="195" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="stream_to_mat_U0" coreId="173612176" contextFuncName="process_pixels" opcode="call" nodeLatency="1" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="15" name="_ln195" lineNumber="195" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="stream_to_mat_U0" coreId="4196260416" contextFuncName="process_pixels" opcode="call" nodeLatency="1" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="195" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="process_pixels"/>
         <dataInputObjs>padded_stream2</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
         <constName>stream_to_mat</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="16" name="_ln197" lineNumber="197" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="bgr2gray_9_0_484_644_1_3220_3220_U0" coreId="173273136" contextFuncName="process_pixels" opcode="call" nodeLabel="2.0" nodeLatency="1" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="16" name="_ln197" lineNumber="197" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="bgr2gray_9_0_484_644_1_3220_3220_U0" coreId="4196260416" contextFuncName="process_pixels" opcode="call" nodeLabel="2.0" nodeLatency="1" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="197" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="process_pixels"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
         <constName>bgr2gray_9_0_484_644_1_3220_3220_s</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="17" name="_ln202" lineNumber="202" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="GaussianBlur_5_1_0_484_644_1_3220_3220_U0" coreId="4066257327" contextFuncName="process_pixels" opcode="call" nodeLabel="4.0" nodeLatency="1" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="17" name="_ln202" lineNumber="202" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="GaussianBlur_5_1_0_484_644_1_3220_3220_U0" coreId="4196260416" contextFuncName="process_pixels" opcode="call" nodeLabel="4.0" nodeLatency="1" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="202" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="process_pixels"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
         <constName>GaussianBlur_5_1_0_484_644_1_3220_3220_s</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="18" name="_ln205" lineNumber="205" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="mat_to_stream_U0" coreId="174454336" contextFuncName="process_pixels" opcode="call" nodeLabel="6.0" nodeLatency="1" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="18" name="_ln205" lineNumber="205" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="mat_to_stream_U0" coreId="4196260416" contextFuncName="process_pixels" opcode="call" nodeLabel="6.0" nodeLatency="1" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="205" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="process_pixels"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataOutputObjs>gray_stream3</dataOutputObjs>
         <constName>mat_to_stream</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="19" name="_ln206" lineNumber="206" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="172958816" contextFuncName="process_pixels" opcode="ret" nodeLabel="7.0" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="19" name="_ln206" lineNumber="206" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="4196260416" contextFuncName="process_pixels" opcode="ret" nodeLabel="7.0" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="206" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="process_pixels"/>
       </node_objs>
       <fileValidLineNumbers fileName="accelerator_v2.cpp">

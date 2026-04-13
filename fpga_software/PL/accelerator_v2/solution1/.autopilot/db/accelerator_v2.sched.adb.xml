@@ -121,10 +121,10 @@ entry:29 %gray_stream = alloca i64 1
 
 <Node id="51" bw="0" op_0_bw="0" op_1_bw="128" op_2_bw="16" op_3_bw="16" op_4_bw="1" op_5_bw="1" op_6_bw="1" op_7_bw="1" op_8_bw="24" op_9_bw="1">
 <![CDATA[
-entry:34 %call_ln291 = call void @unpack, i128 %in_stream_V_data_V, i16 %in_stream_V_keep_V, i16 %in_stream_V_strb_V, i1 %in_stream_V_user_V, i1 %in_stream_V_last_V, i1 %in_stream_V_id_V, i1 %in_stream_V_dest_V, i24 %bgr_stream, i1 %in_breath
+entry:34 %call_ln288 = call void @unpack, i128 %in_stream_V_data_V, i16 %in_stream_V_keep_V, i16 %in_stream_V_strb_V, i1 %in_stream_V_user_V, i1 %in_stream_V_last_V, i1 %in_stream_V_id_V, i1 %in_stream_V_dest_V, i24 %bgr_stream, i1 %in_breath
 
 ]]></Node>
-<StgValue><ssdm name="call_ln291"/></StgValue>
+<StgValue><ssdm name="call_ln288"/></StgValue>
 </operation>
 </state>
 
@@ -139,10 +139,10 @@ entry:34 %call_ln291 = call void @unpack, i128 %in_stream_V_data_V, i16 %in_stre
 
 <Node id="51" bw="0" op_0_bw="0" op_1_bw="128" op_2_bw="16" op_3_bw="16" op_4_bw="1" op_5_bw="1" op_6_bw="1" op_7_bw="1" op_8_bw="24" op_9_bw="1">
 <![CDATA[
-entry:34 %call_ln291 = call void @unpack, i128 %in_stream_V_data_V, i16 %in_stream_V_keep_V, i16 %in_stream_V_strb_V, i1 %in_stream_V_user_V, i1 %in_stream_V_last_V, i1 %in_stream_V_id_V, i1 %in_stream_V_dest_V, i24 %bgr_stream, i1 %in_breath
+entry:34 %call_ln288 = call void @unpack, i128 %in_stream_V_data_V, i16 %in_stream_V_keep_V, i16 %in_stream_V_strb_V, i1 %in_stream_V_user_V, i1 %in_stream_V_last_V, i1 %in_stream_V_id_V, i1 %in_stream_V_dest_V, i24 %bgr_stream, i1 %in_breath
 
 ]]></Node>
-<StgValue><ssdm name="call_ln291"/></StgValue>
+<StgValue><ssdm name="call_ln288"/></StgValue>
 </operation>
 </state>
 
@@ -157,10 +157,10 @@ entry:34 %call_ln291 = call void @unpack, i128 %in_stream_V_data_V, i16 %in_stre
 
 <Node id="52" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="24" op_3_bw="0" op_4_bw="0">
 <![CDATA[
-entry:35 %call_ln292 = call void @pad, i24 %bgr_stream, i24 %padded_stream
+entry:35 %call_ln289 = call void @pad, i24 %bgr_stream, i24 %padded_stream
 
 ]]></Node>
-<StgValue><ssdm name="call_ln292"/></StgValue>
+<StgValue><ssdm name="call_ln289"/></StgValue>
 </operation>
 </state>
 
@@ -175,10 +175,10 @@ entry:35 %call_ln292 = call void @pad, i24 %bgr_stream, i24 %padded_stream
 
 <Node id="52" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="24" op_3_bw="0" op_4_bw="0">
 <![CDATA[
-entry:35 %call_ln292 = call void @pad, i24 %bgr_stream, i24 %padded_stream
+entry:35 %call_ln289 = call void @pad, i24 %bgr_stream, i24 %padded_stream
 
 ]]></Node>
-<StgValue><ssdm name="call_ln292"/></StgValue>
+<StgValue><ssdm name="call_ln289"/></StgValue>
 </operation>
 </state>
 
@@ -193,10 +193,10 @@ entry:35 %call_ln292 = call void @pad, i24 %bgr_stream, i24 %padded_stream
 
 <Node id="53" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="8" op_3_bw="0" op_4_bw="0">
 <![CDATA[
-entry:36 %call_ln293 = call void @process_pixels, i24 %padded_stream, i8 %gray_stream
+entry:36 %call_ln290 = call void @process_pixels, i24 %padded_stream, i8 %gray_stream
 
 ]]></Node>
-<StgValue><ssdm name="call_ln293"/></StgValue>
+<StgValue><ssdm name="call_ln290"/></StgValue>
 </operation>
 </state>
 
@@ -211,10 +211,10 @@ entry:36 %call_ln293 = call void @process_pixels, i24 %padded_stream, i8 %gray_s
 
 <Node id="53" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="8" op_3_bw="0" op_4_bw="0">
 <![CDATA[
-entry:36 %call_ln293 = call void @process_pixels, i24 %padded_stream, i8 %gray_stream
+entry:36 %call_ln290 = call void @process_pixels, i24 %padded_stream, i8 %gray_stream
 
 ]]></Node>
-<StgValue><ssdm name="call_ln293"/></StgValue>
+<StgValue><ssdm name="call_ln290"/></StgValue>
 </operation>
 </state>
 
@@ -229,10 +229,10 @@ entry:36 %call_ln293 = call void @process_pixels, i24 %padded_stream, i8 %gray_s
 
 <Node id="54" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="128" op_3_bw="16" op_4_bw="16" op_5_bw="1" op_6_bw="1" op_7_bw="1" op_8_bw="1" op_9_bw="1" op_10_bw="0" op_11_bw="0">
 <![CDATA[
-entry:37 %call_ln294 = call void @repack, i8 %gray_stream, i128 %out_stream_V_data_V, i16 %out_stream_V_keep_V, i16 %out_stream_V_strb_V, i1 %out_stream_V_user_V, i1 %out_stream_V_last_V, i1 %out_stream_V_id_V, i1 %out_stream_V_dest_V, i1 %out_breath
+entry:37 %call_ln291 = call void @repack, i8 %gray_stream, i128 %out_stream_V_data_V, i16 %out_stream_V_keep_V, i16 %out_stream_V_strb_V, i1 %out_stream_V_user_V, i1 %out_stream_V_last_V, i1 %out_stream_V_id_V, i1 %out_stream_V_dest_V, i1 %out_breath
 
 ]]></Node>
-<StgValue><ssdm name="call_ln294"/></StgValue>
+<StgValue><ssdm name="call_ln291"/></StgValue>
 </operation>
 </state>
 
@@ -247,10 +247,10 @@ entry:37 %call_ln294 = call void @repack, i8 %gray_stream, i128 %out_stream_V_da
 
 <Node id="54" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="128" op_3_bw="16" op_4_bw="16" op_5_bw="1" op_6_bw="1" op_7_bw="1" op_8_bw="1" op_9_bw="1" op_10_bw="0" op_11_bw="0">
 <![CDATA[
-entry:37 %call_ln294 = call void @repack, i8 %gray_stream, i128 %out_stream_V_data_V, i16 %out_stream_V_keep_V, i16 %out_stream_V_strb_V, i1 %out_stream_V_user_V, i1 %out_stream_V_last_V, i1 %out_stream_V_id_V, i1 %out_stream_V_dest_V, i1 %out_breath
+entry:37 %call_ln291 = call void @repack, i8 %gray_stream, i128 %out_stream_V_data_V, i16 %out_stream_V_keep_V, i16 %out_stream_V_strb_V, i1 %out_stream_V_user_V, i1 %out_stream_V_last_V, i1 %out_stream_V_id_V, i1 %out_stream_V_dest_V, i1 %out_breath
 
 ]]></Node>
-<StgValue><ssdm name="call_ln294"/></StgValue>
+<StgValue><ssdm name="call_ln291"/></StgValue>
 </operation>
 </state>
 
@@ -265,10 +265,10 @@ entry:37 %call_ln294 = call void @repack, i8 %gray_stream, i128 %out_stream_V_da
 
 <Node id="17" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="0">
 <![CDATA[
-entry:0 %specdataflowpipeline_ln281 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 0, void @empty_29
+entry:0 %specdataflowpipeline_ln278 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 0, void @empty_29
 
 ]]></Node>
-<StgValue><ssdm name="specdataflowpipeline_ln281"/></StgValue>
+<StgValue><ssdm name="specdataflowpipeline_ln278"/></StgValue>
 </operation>
 
 <operation id="23" st_id="10" stage="1" lat="1">
@@ -280,10 +280,10 @@ entry:0 %specdataflowpipeline_ln281 = specdataflowpipeline void @_ssdm_op_SpecDa
 
 <Node id="18" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-entry:1 %spectopmodule_ln270 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_8
+entry:1 %spectopmodule_ln267 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_8
 
 ]]></Node>
-<StgValue><ssdm name="spectopmodule_ln270"/></StgValue>
+<StgValue><ssdm name="spectopmodule_ln267"/></StgValue>
 </operation>
 
 <operation id="24" st_id="10" stage="1" lat="1">
@@ -610,7 +610,7 @@ entry:22 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0,
 
 <Node id="41" bw="32" op_0_bw="32" op_1_bw="0" op_2_bw="32" op_3_bw="0" op_4_bw="0" op_5_bw="32" op_6_bw="32" op_7_bw="24" op_8_bw="24">
 <![CDATA[
-entry:24 %empty = specchannel i32 @_ssdm_op_SpecChannel, void @bgr_stream_str, i32 1, void @p_str, void @p_str, i32 2560, i32 2560, i24 %bgr_stream, i24 %bgr_stream
+entry:24 %empty = specchannel i32 @_ssdm_op_SpecChannel, void @bgr_stream_str, i32 1, void @p_str, void @p_str, i32 5120, i32 5120, i24 %bgr_stream, i24 %bgr_stream
 
 ]]></Node>
 <StgValue><ssdm name="empty"/></StgValue>
@@ -640,7 +640,7 @@ entry:25 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %b
 
 <Node id="44" bw="32" op_0_bw="32" op_1_bw="0" op_2_bw="32" op_3_bw="0" op_4_bw="0" op_5_bw="32" op_6_bw="32" op_7_bw="24" op_8_bw="24">
 <![CDATA[
-entry:27 %empty_81 = specchannel i32 @_ssdm_op_SpecChannel, void @padded_stream_str, i32 1, void @p_str, void @p_str, i32 2576, i32 2576, i24 %padded_stream, i24 %padded_stream
+entry:27 %empty_81 = specchannel i32 @_ssdm_op_SpecChannel, void @padded_stream_str, i32 1, void @p_str, void @p_str, i32 3864, i32 3864, i24 %padded_stream, i24 %padded_stream
 
 ]]></Node>
 <StgValue><ssdm name="empty_81"/></StgValue>
@@ -700,10 +700,10 @@ entry:31 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %gr
 
 <Node id="49" bw="0" op_0_bw="0" op_1_bw="128" op_2_bw="16" op_3_bw="16" op_4_bw="1" op_5_bw="1" op_6_bw="1" op_7_bw="1" op_8_bw="0">
 <![CDATA[
-entry:32 %specaxissidechannel_ln295 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i128 %in_stream_V_data_V, i16 %in_stream_V_keep_V, i16 %in_stream_V_strb_V, i1 %in_stream_V_user_V, i1 %in_stream_V_last_V, i1 %in_stream_V_id_V, i1 %in_stream_V_dest_V, void @empty_25
+entry:32 %specaxissidechannel_ln292 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i128 %in_stream_V_data_V, i16 %in_stream_V_keep_V, i16 %in_stream_V_strb_V, i1 %in_stream_V_user_V, i1 %in_stream_V_last_V, i1 %in_stream_V_id_V, i1 %in_stream_V_dest_V, void @empty_25
 
 ]]></Node>
-<StgValue><ssdm name="specaxissidechannel_ln295"/></StgValue>
+<StgValue><ssdm name="specaxissidechannel_ln292"/></StgValue>
 </operation>
 
 <operation id="52" st_id="10" stage="1" lat="1">
@@ -715,10 +715,10 @@ entry:32 %specaxissidechannel_ln295 = specaxissidechannel void @_ssdm_op_SpecAXI
 
 <Node id="50" bw="0" op_0_bw="0" op_1_bw="128" op_2_bw="16" op_3_bw="16" op_4_bw="1" op_5_bw="1" op_6_bw="1" op_7_bw="1" op_8_bw="0">
 <![CDATA[
-entry:33 %specaxissidechannel_ln295 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i128 %out_stream_V_data_V, i16 %out_stream_V_keep_V, i16 %out_stream_V_strb_V, i1 %out_stream_V_user_V, i1 %out_stream_V_last_V, i1 %out_stream_V_id_V, i1 %out_stream_V_dest_V, void @empty_1
+entry:33 %specaxissidechannel_ln292 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i128 %out_stream_V_data_V, i16 %out_stream_V_keep_V, i16 %out_stream_V_strb_V, i1 %out_stream_V_user_V, i1 %out_stream_V_last_V, i1 %out_stream_V_id_V, i1 %out_stream_V_dest_V, void @empty_1
 
 ]]></Node>
-<StgValue><ssdm name="specaxissidechannel_ln295"/></StgValue>
+<StgValue><ssdm name="specaxissidechannel_ln292"/></StgValue>
 </operation>
 
 <operation id="53" st_id="10" stage="1" lat="1">
@@ -730,10 +730,10 @@ entry:33 %specaxissidechannel_ln295 = specaxissidechannel void @_ssdm_op_SpecAXI
 
 <Node id="55" bw="0">
 <![CDATA[
-entry:38 %ret_ln295 = ret
+entry:38 %ret_ln292 = ret
 
 ]]></Node>
-<StgValue><ssdm name="ret_ln295"/></StgValue>
+<StgValue><ssdm name="ret_ln292"/></StgValue>
 </operation>
 </state>
 </state_list>

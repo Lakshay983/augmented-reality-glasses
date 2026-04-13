@@ -76,7 +76,7 @@ set SynModuleInfo {
     }
   }
   {SRCNAME repack_Pipeline_VITIS_LOOP_224_2 MODELNAME repack_Pipeline_VITIS_LOOP_224_2 RTLNAME accelerator_v2_repack_Pipeline_VITIS_LOOP_224_2}
-  {SRCNAME repack_Pipeline_VITIS_LOOP_247_3 MODELNAME repack_Pipeline_VITIS_LOOP_247_3 RTLNAME accelerator_v2_repack_Pipeline_VITIS_LOOP_247_3}
+  {SRCNAME repack_Pipeline_VITIS_LOOP_244_3 MODELNAME repack_Pipeline_VITIS_LOOP_244_3 RTLNAME accelerator_v2_repack_Pipeline_VITIS_LOOP_244_3}
   {SRCNAME repack MODELNAME repack RTLNAME accelerator_v2_repack
     SUBMODULES {
       {MODELNAME accelerator_v2_repack_row_pixels_V_RAM_1WNR_AUTO_1R1W RTLNAME accelerator_v2_repack_row_pixels_V_RAM_1WNR_AUTO_1R1W BINDTYPE storage TYPE ram_1wnr IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
@@ -84,8 +84,8 @@ set SynModuleInfo {
   }
   {SRCNAME accelerator_v2 MODELNAME accelerator_v2 RTLNAME accelerator_v2 IS_TOP 1
     SUBMODULES {
-      {MODELNAME accelerator_v2_fifo_w24_d2560_A RTLNAME accelerator_v2_fifo_w24_d2560_A BINDTYPE storage TYPE fifo IMPL memory ALLOW_PRAGMA 1 INSTNAME bgr_stream_U}
-      {MODELNAME accelerator_v2_fifo_w24_d2576_A RTLNAME accelerator_v2_fifo_w24_d2576_A BINDTYPE storage TYPE fifo IMPL memory ALLOW_PRAGMA 1 INSTNAME padded_stream_U}
+      {MODELNAME accelerator_v2_fifo_w24_d5120_A RTLNAME accelerator_v2_fifo_w24_d5120_A BINDTYPE storage TYPE fifo IMPL memory ALLOW_PRAGMA 1 INSTNAME bgr_stream_U}
+      {MODELNAME accelerator_v2_fifo_w24_d3864_A RTLNAME accelerator_v2_fifo_w24_d3864_A BINDTYPE storage TYPE fifo IMPL memory ALLOW_PRAGMA 1 INSTNAME padded_stream_U}
       {MODELNAME accelerator_v2_fifo_w8_d3864_A RTLNAME accelerator_v2_fifo_w8_d3864_A BINDTYPE storage TYPE fifo IMPL memory ALLOW_PRAGMA 1 INSTNAME gray_stream_U}
       {MODELNAME accelerator_v2_start_for_pad_U0 RTLNAME accelerator_v2_start_for_pad_U0 BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME start_for_pad_U0_U}
       {MODELNAME accelerator_v2_start_for_process_pixels_U0 RTLNAME accelerator_v2_start_for_process_pixels_U0 BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME start_for_process_pixels_U0_U}

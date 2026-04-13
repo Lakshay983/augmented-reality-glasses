@@ -243,11 +243,11 @@ Args:
 --- !Passed
 Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
-DebugLoc:        { File: accelerator_v2.cpp, Line: 256, Column: 31 }
+DebugLoc:        { File: accelerator_v2.cpp, Line: 253, Column: 31 }
 Function:        _Z6repackRN3hls6streamI7ap_uintILi8EELi0EEERNS0_INS_4axisIS1_ILi128EELm1ELm1ELm1EEELi0EEEPVS1_ILi1EE
 Args:            
   - String:          'Loop '''
-  - LoopName:        VITIS_LOOP_256_4
+  - LoopName:        VITIS_LOOP_253_4
   - String:          ''' is marked as complete unroll implied by the pipeline pragma'
 ...
 --- !Passed
@@ -323,9 +323,9 @@ DebugLoc:        { File: accelerator_v2.cpp, Line: 217, Column: 0 }
 Function:        _Z6repackRN3hls6streamI7ap_uintILi8EELi0EEERNS0_INS_4axisIS1_ILi128EELm1ELm1ELm1EEELi0EEEPVS1_ILi1EE
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_256_4
+  - LoopName:        VITIS_LOOP_253_4
   - String:          ''' ('
-  - LoopLoc:         'accelerator_v2.cpp:256:31'
+  - LoopLoc:         'accelerator_v2.cpp:253:31'
   - String:          ') '
   - String:          'in function '''
   - String:          repack
@@ -801,15 +801,15 @@ Args:
   - String:          ' '
   - varLoc:          'accelerator_v2.cpp:223:20'
   - String:          ' '
-  - PragmaSrcLoc:    'accelerator_v2.cpp:248:9'
-    DebugLoc:        { File: accelerator_v2.cpp, Line: 248, Column: 9 }
+  - PragmaSrcLoc:    'accelerator_v2.cpp:245:9'
+    DebugLoc:        { File: accelerator_v2.cpp, Line: 245, Column: 9 }
   - VarName:         row_pixels
   - String:          ' '
 ...
 --- !Passed
 Pass:            reflow-auto-array-partition
 Name:            AutoArrayXform
-DebugLoc:        { File: accelerator_v2.cpp, Line: 248, Column: 9 }
+DebugLoc:        { File: accelerator_v2.cpp, Line: 245, Column: 9 }
 Function:        _Z6repackRN3hls6streamI7ap_uintILi8EELi0EEERNS0_INS_4axisIS1_ILi128EELm1ELm1ELm1EEELi0EEEPVS1_ILi1EE
 Args:            
   - String:          'Inferring pragma '''

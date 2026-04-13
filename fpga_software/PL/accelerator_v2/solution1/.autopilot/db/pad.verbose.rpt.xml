@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'pad'" level="0">
-<item name = "Date">Sun Apr 12 15:59:08 2026
+<item name = "Date">Sun Apr 12 20:26:02 2026
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">accelerator_v2</item>
@@ -217,8 +217,8 @@
 <column name="start_out">out, 1, ap_ctrl_hs, pad, return value</column>
 <column name="start_write">out, 1, ap_ctrl_hs, pad, return value</column>
 <column name="bgr_stream1_dout">in, 24, ap_fifo, bgr_stream1, pointer</column>
-<column name="bgr_stream1_num_data_valid">in, 13, ap_fifo, bgr_stream1, pointer</column>
-<column name="bgr_stream1_fifo_cap">in, 13, ap_fifo, bgr_stream1, pointer</column>
+<column name="bgr_stream1_num_data_valid">in, 14, ap_fifo, bgr_stream1, pointer</column>
+<column name="bgr_stream1_fifo_cap">in, 14, ap_fifo, bgr_stream1, pointer</column>
 <column name="bgr_stream1_empty_n">in, 1, ap_fifo, bgr_stream1, pointer</column>
 <column name="bgr_stream1_read">out, 1, ap_fifo, bgr_stream1, pointer</column>
 <column name="padded_stream2_din">out, 24, ap_fifo, padded_stream2, pointer</column>

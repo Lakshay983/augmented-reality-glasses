@@ -42,8 +42,8 @@ set portList {
 	{ ap_ready sc_out sc_logic 1 ready -1 } 
 	{ in_stream_TVALID sc_in sc_logic 1 invld 0 } 
 	{ bgr_stream1_din sc_out sc_lv 24 signal 7 } 
-	{ bgr_stream1_num_data_valid sc_in sc_lv 13 signal 7 } 
-	{ bgr_stream1_fifo_cap sc_in sc_lv 13 signal 7 } 
+	{ bgr_stream1_num_data_valid sc_in sc_lv 14 signal 7 } 
+	{ bgr_stream1_fifo_cap sc_in sc_lv 14 signal 7 } 
 	{ bgr_stream1_full_n sc_in sc_logic 1 signal 7 } 
 	{ bgr_stream1_write sc_out sc_logic 1 signal 7 } 
 	{ in_stream_TDATA sc_in sc_lv 128 signal 0 } 
@@ -64,8 +64,8 @@ set NewPortList {[
  	{ "name": "ap_ready", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "ready", "bundle":{"name": "ap_ready", "role": "default" }} , 
  	{ "name": "in_stream_TVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "invld", "bundle":{"name": "in_stream_V_data_V", "role": "default" }} , 
  	{ "name": "bgr_stream1_din", "direction": "out", "datatype": "sc_lv", "bitwidth":24, "type": "signal", "bundle":{"name": "bgr_stream1", "role": "din" }} , 
- 	{ "name": "bgr_stream1_num_data_valid", "direction": "in", "datatype": "sc_lv", "bitwidth":13, "type": "signal", "bundle":{"name": "bgr_stream1", "role": "num_data_valid" }} , 
- 	{ "name": "bgr_stream1_fifo_cap", "direction": "in", "datatype": "sc_lv", "bitwidth":13, "type": "signal", "bundle":{"name": "bgr_stream1", "role": "fifo_cap" }} , 
+ 	{ "name": "bgr_stream1_num_data_valid", "direction": "in", "datatype": "sc_lv", "bitwidth":14, "type": "signal", "bundle":{"name": "bgr_stream1", "role": "num_data_valid" }} , 
+ 	{ "name": "bgr_stream1_fifo_cap", "direction": "in", "datatype": "sc_lv", "bitwidth":14, "type": "signal", "bundle":{"name": "bgr_stream1", "role": "fifo_cap" }} , 
  	{ "name": "bgr_stream1_full_n", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "bgr_stream1", "role": "full_n" }} , 
  	{ "name": "bgr_stream1_write", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "bgr_stream1", "role": "write" }} , 
  	{ "name": "in_stream_TDATA", "direction": "in", "datatype": "sc_lv", "bitwidth":128, "type": "signal", "bundle":{"name": "in_stream_V_data_V", "role": "default" }} , 
@@ -141,5 +141,5 @@ set Spec2ImplPortList {
 	in_stream_V_last_V { axis {  { in_stream_TLAST in_data 0 1 } } }
 	in_stream_V_id_V { axis {  { in_stream_TID in_data 0 1 } } }
 	in_stream_V_dest_V { axis {  { in_stream_TREADY in_acc 1 1 }  { in_stream_TDEST in_data 0 1 } } }
-	bgr_stream1 { ap_fifo {  { bgr_stream1_din fifo_port_we 1 24 }  { bgr_stream1_num_data_valid fifo_status_num_data_valid 0 13 }  { bgr_stream1_fifo_cap fifo_update 0 13 }  { bgr_stream1_full_n fifo_status 0 1 }  { bgr_stream1_write fifo_data 1 1 } } }
+	bgr_stream1 { ap_fifo {  { bgr_stream1_din fifo_port_we 1 24 }  { bgr_stream1_num_data_valid fifo_status_num_data_valid 0 14 }  { bgr_stream1_fifo_cap fifo_update 0 14 }  { bgr_stream1_full_n fifo_status 0 1 }  { bgr_stream1_write fifo_data 1 1 } } }
 }

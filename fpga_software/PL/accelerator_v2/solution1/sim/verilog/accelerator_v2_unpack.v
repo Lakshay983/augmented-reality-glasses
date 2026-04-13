@@ -61,8 +61,8 @@ input  [0:0] in_stream_TLAST;
 input  [0:0] in_stream_TID;
 input  [0:0] in_stream_TDEST;
 output  [23:0] bgr_stream1_din;
-input  [12:0] bgr_stream1_num_data_valid;
-input  [12:0] bgr_stream1_fifo_cap;
+input  [13:0] bgr_stream1_num_data_valid;
+input  [13:0] bgr_stream1_fifo_cap;
 input   bgr_stream1_full_n;
 output   bgr_stream1_write;
 output  [0:0] in_breath;
@@ -154,8 +154,8 @@ accelerator_v2_unpack_Pipeline_VITIS_LOOP_53_2 grp_unpack_Pipeline_VITIS_LOOP_53
     .ap_ready(grp_unpack_Pipeline_VITIS_LOOP_53_2_fu_92_ap_ready),
     .in_stream_TVALID(in_stream_TVALID_int_regslice),
     .bgr_stream1_din(grp_unpack_Pipeline_VITIS_LOOP_53_2_fu_92_bgr_stream1_din),
-    .bgr_stream1_num_data_valid(13'd0),
-    .bgr_stream1_fifo_cap(13'd0),
+    .bgr_stream1_num_data_valid(14'd0),
+    .bgr_stream1_fifo_cap(14'd0),
     .bgr_stream1_full_n(bgr_stream1_full_n),
     .bgr_stream1_write(grp_unpack_Pipeline_VITIS_LOOP_53_2_fu_92_bgr_stream1_write),
     .in_stream_TDATA(in_stream_TDATA_int_regslice),

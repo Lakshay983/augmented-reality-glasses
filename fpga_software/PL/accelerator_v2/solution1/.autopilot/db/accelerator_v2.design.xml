@@ -8,7 +8,7 @@
 <InstName>unpack_U0</InstName>
 <ModuleName>unpack</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>106</ID>
+<ID>104</ID>
 <InstancesList>
 <Instance>
 <InstName>grp_unpack_Pipeline_VITIS_LOOP_53_2_fu_92</InstName>
@@ -22,7 +22,7 @@
 <InstName>pad_U0</InstName>
 <ModuleName>pad</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>127</ID>
+<ID>125</ID>
 <InstancesList>
 <Instance>
 <InstName>grp_pad_Pipeline_VITIS_LOOP_92_1_VITIS_LOOP_93_2_fu_329</InstName>
@@ -60,7 +60,7 @@
 <InstName>process_pixels_U0</InstName>
 <ModuleName>process_pixels</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>133</ID>
+<ID>131</ID>
 <InstancesList>
 <Instance>
 <InstName>stream_to_mat_U0</InstName>
@@ -148,7 +148,7 @@
 <InstName>repack_U0</InstName>
 <ModuleName>repack</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>139</ID>
+<ID>137</ID>
 <InstancesList>
 <Instance>
 <InstName>grp_repack_Pipeline_VITIS_LOOP_224_2_fu_134</InstName>
@@ -157,8 +157,8 @@
 <ID>134</ID>
 </Instance>
 <Instance>
-<InstName>grp_repack_Pipeline_VITIS_LOOP_247_3_fu_142</InstName>
-<ModuleName>repack_Pipeline_VITIS_LOOP_247_3</ModuleName>
+<InstName>grp_repack_Pipeline_VITIS_LOOP_244_3_fu_142</InstName>
+<ModuleName>repack_Pipeline_VITIS_LOOP_244_3</ModuleName>
 <IsCompInst>true</IsCompInst>
 <ID>142</ID>
 </Instance>
@@ -332,7 +332,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>13</Bits>
+<Bits>14</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -343,7 +343,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>13</Bits>
+<Bits>14</Bits>
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -732,7 +732,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>13</Bits>
+<Bits>14</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -743,7 +743,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>13</Bits>
+<Bits>14</Bits>
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -933,7 +933,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>13</Bits>
+<Bits>14</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -944,7 +944,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>13</Bits>
+<Bits>14</Bits>
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -1500,7 +1500,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>13</Bits>
+<Bits>14</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -1511,7 +1511,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>13</Bits>
+<Bits>14</Bits>
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -2435,7 +2435,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>13</Bits>
+<Bits>14</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -2446,7 +2446,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>13</Bits>
+<Bits>14</Bits>
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -6878,9 +6878,9 @@
 </InterfaceSummary>
 </Module>
 <Module>
-<Name>repack_Pipeline_VITIS_LOOP_247_3</Name>
+<Name>repack_Pipeline_VITIS_LOOP_244_3</Name>
 <Loops>
-<VITIS_LOOP_247_3></VITIS_LOOP_247_3>
+<VITIS_LOOP_244_3></VITIS_LOOP_244_3>
 </Loops>
 <PerformanceEstimates>
 <SummaryOfTimingAnalysis>
@@ -6899,8 +6899,8 @@
 <PipelineType>no</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
-<VITIS_LOOP_247_3>
-<Name>VITIS_LOOP_247_3</Name>
+<VITIS_LOOP_244_3>
+<Name>VITIS_LOOP_244_3</Name>
 <Slack>7.30</Slack>
 <TripCount>40</TripCount>
 <Latency>40</Latency>
@@ -6910,7 +6910,7 @@
 <PipelineType>yes</PipelineType>
 <InstanceList>
 </InstanceList>
-</VITIS_LOOP_247_3>
+</VITIS_LOOP_244_3>
 </SummaryOfLoopLatency>
 </PerformanceEstimates>
 <AreaEstimates>
@@ -6918,7 +6918,7 @@
 <FF>10</FF>
 <AVAIL_FF>141120</AVAIL_FF>
 <UTIL_FF>~0</UTIL_FF>
-<LUT>163</LUT>
+<LUT>161</LUT>
 <AVAIL_LUT>70560</AVAIL_LUT>
 <UTIL_LUT>~0</UTIL_LUT>
 <BRAM_18K>0</BRAM_18K>
@@ -6935,7 +6935,7 @@
 <InterfaceSummary>
 <RtlPorts>
 <name>ap_clk</name>
-<Object>repack_Pipeline_VITIS_LOOP_247_3</Object>
+<Object>repack_Pipeline_VITIS_LOOP_244_3</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -6946,7 +6946,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_rst</name>
-<Object>repack_Pipeline_VITIS_LOOP_247_3</Object>
+<Object>repack_Pipeline_VITIS_LOOP_244_3</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -6957,7 +6957,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_start</name>
-<Object>repack_Pipeline_VITIS_LOOP_247_3</Object>
+<Object>repack_Pipeline_VITIS_LOOP_244_3</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -6968,7 +6968,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_done</name>
-<Object>repack_Pipeline_VITIS_LOOP_247_3</Object>
+<Object>repack_Pipeline_VITIS_LOOP_244_3</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -6979,7 +6979,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_idle</name>
-<Object>repack_Pipeline_VITIS_LOOP_247_3</Object>
+<Object>repack_Pipeline_VITIS_LOOP_244_3</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -6990,7 +6990,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_ready</name>
-<Object>repack_Pipeline_VITIS_LOOP_247_3</Object>
+<Object>repack_Pipeline_VITIS_LOOP_244_3</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -7550,17 +7550,6 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>cmp48</name>
-<Object>cmp48</Object>
-<Type>scalar</Type>
-<Scope></Scope>
-<IOProtocol>ap_none</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>in</Dir>
-<Bits>1</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
 <name>out_stream_TVALID</name>
 <Object>out_stream_V_dest_V</Object>
 <Type>pointer</Type>
@@ -7677,7 +7666,7 @@
 <PipelineType>no</PipelineType>
 <InstanceList>
 <Instance>grp_repack_Pipeline_VITIS_LOOP_224_2_fu_134</Instance>
-<Instance>grp_repack_Pipeline_VITIS_LOOP_247_3_fu_142</Instance>
+<Instance>grp_repack_Pipeline_VITIS_LOOP_244_3_fu_142</Instance>
 </InstanceList>
 </VITIS_LOOP_221_1>
 </SummaryOfLoopLatency>
@@ -7687,10 +7676,10 @@
 <BRAM_18K>14</BRAM_18K>
 <AVAIL_BRAM>432</AVAIL_BRAM>
 <UTIL_BRAM>3</UTIL_BRAM>
-<FF>65</FF>
+<FF>64</FF>
 <AVAIL_FF>141120</AVAIL_FF>
 <UTIL_FF>~0</UTIL_FF>
-<LUT>743</LUT>
+<LUT>730</LUT>
 <AVAIL_LUT>70560</AVAIL_LUT>
 <UTIL_LUT>1</UTIL_LUT>
 <URAM>0</URAM>
@@ -7979,16 +7968,16 @@
 </PerformanceEstimates>
 <AreaEstimates>
 <Resources>
-<BRAM_18K>51</BRAM_18K>
+<BRAM_18K>55</BRAM_18K>
 <AVAIL_BRAM>432</AVAIL_BRAM>
-<UTIL_BRAM>11</UTIL_BRAM>
+<UTIL_BRAM>12</UTIL_BRAM>
 <DSP>11</DSP>
 <AVAIL_DSP>360</AVAIL_DSP>
 <UTIL_DSP>3</UTIL_DSP>
-<FF>4614</FF>
+<FF>4613</FF>
 <AVAIL_FF>141120</AVAIL_FF>
 <UTIL_FF>3</UTIL_FF>
-<LUT>7411</LUT>
+<LUT>7398</LUT>
 <AVAIL_LUT>70560</AVAIL_LUT>
 <UTIL_LUT>10</UTIL_LUT>
 <URAM>0</URAM>
@@ -8510,7 +8499,7 @@
 <FIFOInst>
 <Name>bgr_stream_U</Name>
 <ParentInst></ParentInst>
-<StaticDepth>2560</StaticDepth>
+<StaticDepth>5120</StaticDepth>
 <RuntimeDepth>mOutPtr</RuntimeDepth>
 <InterfaceList>
 <Interface>clk</Interface>
@@ -8525,7 +8514,7 @@
 <FIFOInst>
 <Name>padded_stream_U</Name>
 <ParentInst></ParentInst>
-<StaticDepth>2576</StaticDepth>
+<StaticDepth>3864</StaticDepth>
 <RuntimeDepth>mOutPtr</RuntimeDepth>
 <InterfaceList>
 <Interface>clk</Interface>

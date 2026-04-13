@@ -18,8 +18,8 @@ port (
     ap_idle : OUT STD_LOGIC;
     ap_ready : OUT STD_LOGIC;
     bgr_stream1_dout : IN STD_LOGIC_VECTOR (23 downto 0);
-    bgr_stream1_num_data_valid : IN STD_LOGIC_VECTOR (12 downto 0);
-    bgr_stream1_fifo_cap : IN STD_LOGIC_VECTOR (12 downto 0);
+    bgr_stream1_num_data_valid : IN STD_LOGIC_VECTOR (13 downto 0);
+    bgr_stream1_fifo_cap : IN STD_LOGIC_VECTOR (13 downto 0);
     bgr_stream1_empty_n : IN STD_LOGIC;
     bgr_stream1_read : OUT STD_LOGIC;
     row_buf_V_2_address1 : OUT STD_LOGIC_VECTOR (9 downto 0);
