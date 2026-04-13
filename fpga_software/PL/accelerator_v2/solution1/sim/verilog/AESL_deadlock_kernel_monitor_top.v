@@ -10,18 +10,18 @@ wire [7:0] inst_block_sigs;
 wire kernel_block;
 
 assign axis_block_sigs[0] = ~AESL_inst_accelerator_v2.unpack_U0.in_stream_TDATA_blk_n;
-assign axis_block_sigs[1] = ~AESL_inst_accelerator_v2.unpack_U0.grp_unpack_Pipeline_VITIS_LOOP_53_2_fu_92.in_stream_TDATA_blk_n;
+assign axis_block_sigs[1] = ~AESL_inst_accelerator_v2.unpack_U0.grp_unpack_Pipeline_VITIS_LOOP_48_2_fu_92.in_stream_TDATA_blk_n;
 assign axis_block_sigs[2] = ~AESL_inst_accelerator_v2.repack_U0.out_stream_TDATA_blk_n;
-assign axis_block_sigs[3] = ~AESL_inst_accelerator_v2.repack_U0.grp_repack_Pipeline_VITIS_LOOP_244_3_fu_142.out_stream_TDATA_blk_n;
+assign axis_block_sigs[3] = ~AESL_inst_accelerator_v2.repack_U0.grp_repack_Pipeline_VITIS_LOOP_215_3_fu_142.out_stream_TDATA_blk_n;
 
 assign inst_idle_sigs[0] = AESL_inst_accelerator_v2.unpack_U0.ap_idle;
-assign inst_block_sigs[0] = (AESL_inst_accelerator_v2.unpack_U0.ap_done & ~AESL_inst_accelerator_v2.unpack_U0.ap_continue) | ~AESL_inst_accelerator_v2.unpack_U0.grp_unpack_Pipeline_VITIS_LOOP_53_2_fu_92.bgr_stream1_blk_n;
+assign inst_block_sigs[0] = (AESL_inst_accelerator_v2.unpack_U0.ap_done & ~AESL_inst_accelerator_v2.unpack_U0.ap_continue) | ~AESL_inst_accelerator_v2.unpack_U0.grp_unpack_Pipeline_VITIS_LOOP_48_2_fu_92.bgr_stream1_blk_n;
 assign inst_idle_sigs[1] = AESL_inst_accelerator_v2.pad_U0.ap_idle;
-assign inst_block_sigs[1] = (AESL_inst_accelerator_v2.pad_U0.ap_done & ~AESL_inst_accelerator_v2.pad_U0.ap_continue) | ~AESL_inst_accelerator_v2.pad_U0.grp_pad_Pipeline_VITIS_LOOP_92_1_VITIS_LOOP_93_2_fu_329.bgr_stream1_blk_n | ~AESL_inst_accelerator_v2.pad_U0.grp_pad_Pipeline_VITIS_LOOP_118_6_fu_350.bgr_stream1_blk_n | ~AESL_inst_accelerator_v2.pad_U0.padded_stream2_blk_n | ~AESL_inst_accelerator_v2.pad_U0.grp_pad_Pipeline_VITIS_LOOP_138_9_fu_371.padded_stream2_blk_n | ~AESL_inst_accelerator_v2.pad_U0.grp_pad_Pipeline_VITIS_LOOP_103_4_fu_341.padded_stream2_blk_n | ~AESL_inst_accelerator_v2.pad_U0.grp_pad_Pipeline_VITIS_LOOP_125_7_fu_359.padded_stream2_blk_n;
+assign inst_block_sigs[1] = (AESL_inst_accelerator_v2.pad_U0.ap_done & ~AESL_inst_accelerator_v2.pad_U0.ap_continue) | ~AESL_inst_accelerator_v2.pad_U0.grp_pad_Pipeline_VITIS_LOOP_79_1_VITIS_LOOP_80_2_fu_329.bgr_stream1_blk_n | ~AESL_inst_accelerator_v2.pad_U0.grp_pad_Pipeline_VITIS_LOOP_103_6_fu_350.bgr_stream1_blk_n | ~AESL_inst_accelerator_v2.pad_U0.padded_stream2_blk_n | ~AESL_inst_accelerator_v2.pad_U0.grp_pad_Pipeline_VITIS_LOOP_110_7_fu_359.padded_stream2_blk_n | ~AESL_inst_accelerator_v2.pad_U0.grp_pad_Pipeline_VITIS_LOOP_89_4_fu_341.padded_stream2_blk_n | ~AESL_inst_accelerator_v2.pad_U0.grp_pad_Pipeline_VITIS_LOOP_122_9_fu_371.padded_stream2_blk_n;
 assign inst_idle_sigs[2] = AESL_inst_accelerator_v2.process_pixels_U0.ap_idle;
 assign inst_block_sigs[2] = (AESL_inst_accelerator_v2.process_pixels_U0.ap_done & ~AESL_inst_accelerator_v2.process_pixels_U0.ap_continue) | ~AESL_inst_accelerator_v2.process_pixels_U0.stream_to_mat_U0.padded_stream2_blk_n | ~AESL_inst_accelerator_v2.process_pixels_U0.mat_to_stream_U0.gray_stream3_blk_n;
 assign inst_idle_sigs[3] = AESL_inst_accelerator_v2.repack_U0.ap_idle;
-assign inst_block_sigs[3] = (AESL_inst_accelerator_v2.repack_U0.ap_done & ~AESL_inst_accelerator_v2.repack_U0.ap_continue) | ~AESL_inst_accelerator_v2.repack_U0.grp_repack_Pipeline_VITIS_LOOP_224_2_fu_134.gray_stream3_blk_n;
+assign inst_block_sigs[3] = (AESL_inst_accelerator_v2.repack_U0.ap_done & ~AESL_inst_accelerator_v2.repack_U0.ap_continue) | ~AESL_inst_accelerator_v2.repack_U0.grp_repack_Pipeline_VITIS_LOOP_195_2_fu_134.gray_stream3_blk_n;
 assign inst_idle_sigs[4] = AESL_inst_accelerator_v2.process_pixels_U0.stream_to_mat_U0.ap_idle;
 assign inst_block_sigs[4] = (AESL_inst_accelerator_v2.process_pixels_U0.stream_to_mat_U0.ap_done & ~AESL_inst_accelerator_v2.process_pixels_U0.stream_to_mat_U0.ap_continue);
 assign inst_idle_sigs[5] = AESL_inst_accelerator_v2.process_pixels_U0.bgr2gray_9_0_484_644_1_3220_3220_U0.ap_idle;
@@ -33,9 +33,9 @@ assign inst_block_sigs[7] = (AESL_inst_accelerator_v2.process_pixels_U0.mat_to_s
 
 assign inst_idle_sigs[8] = 1'b0;
 assign inst_idle_sigs[9] = AESL_inst_accelerator_v2.unpack_U0.ap_idle;
-assign inst_idle_sigs[10] = AESL_inst_accelerator_v2.unpack_U0.grp_unpack_Pipeline_VITIS_LOOP_53_2_fu_92.ap_idle;
+assign inst_idle_sigs[10] = AESL_inst_accelerator_v2.unpack_U0.grp_unpack_Pipeline_VITIS_LOOP_48_2_fu_92.ap_idle;
 assign inst_idle_sigs[11] = AESL_inst_accelerator_v2.repack_U0.ap_idle;
-assign inst_idle_sigs[12] = AESL_inst_accelerator_v2.repack_U0.grp_repack_Pipeline_VITIS_LOOP_244_3_fu_142.ap_idle;
+assign inst_idle_sigs[12] = AESL_inst_accelerator_v2.repack_U0.grp_repack_Pipeline_VITIS_LOOP_215_3_fu_142.ap_idle;
 
 AESL_deadlock_idx0_monitor AESL_deadlock_idx0_monitor_U (
     .clock(kernel_monitor_clock),
@@ -150,10 +150,10 @@ begin
     else begin 
         out_proc_hit = 2'h0;
 // check block with process 'accelerator_v2.pad_U0'
-        if (AESL_inst_accelerator_v2.bgr_stream_U.if_empty_n == 1'b0 && ~AESL_inst_accelerator_v2.unpack_U0.grp_unpack_Pipeline_VITIS_LOOP_53_2_fu_92.bgr_stream1_blk_n == 1'b1) begin
+        if (AESL_inst_accelerator_v2.bgr_stream_U.if_empty_n == 1'b0 && ~AESL_inst_accelerator_v2.unpack_U0.grp_unpack_Pipeline_VITIS_LOOP_48_2_fu_92.bgr_stream1_blk_n == 1'b1) begin
             out_proc_hit[0] = 1'b1;
         end
-        else if (AESL_inst_accelerator_v2.bgr_stream_U.if_full_n == 1'b0 && ~AESL_inst_accelerator_v2.unpack_U0.grp_unpack_Pipeline_VITIS_LOOP_53_2_fu_92.bgr_stream1_blk_n == 1'b1) begin
+        else if (AESL_inst_accelerator_v2.bgr_stream_U.if_full_n == 1'b0 && ~AESL_inst_accelerator_v2.unpack_U0.grp_unpack_Pipeline_VITIS_LOOP_48_2_fu_92.bgr_stream1_blk_n == 1'b1) begin
             out_proc_hit[0] = 1'b1;
         end
         if (AESL_inst_accelerator_v2.start_for_pad_U0_U.if_full_n == 1'b0 && AESL_inst_accelerator_v2.unpack_U0.real_start == 1'b0 && AESL_inst_accelerator_v2.unpack_U0.ap_start == 1'b1 && AESL_inst_accelerator_v2.unpack_U0.start_once_reg == 1'b0) begin
@@ -166,11 +166,11 @@ begin
             $fdisplay(fp,"//");
             $fdisplay(fp,"//    Process 'accelerator_v2.unpack_U0' is blocked by following channel which connected with process 'accelerator_v2.pad_U0' :");
 
-            if (AESL_inst_accelerator_v2.bgr_stream_U.if_empty_n == 1'b0 && ~AESL_inst_accelerator_v2.unpack_U0.grp_unpack_Pipeline_VITIS_LOOP_53_2_fu_92.bgr_stream1_blk_n == 1'b1) begin
+            if (AESL_inst_accelerator_v2.bgr_stream_U.if_empty_n == 1'b0 && ~AESL_inst_accelerator_v2.unpack_U0.grp_unpack_Pipeline_VITIS_LOOP_48_2_fu_92.bgr_stream1_blk_n == 1'b1) begin
                 $display("//        empty input FIFO 'accelerator_v2.bgr_stream_U' written by process 'accelerator_v2.pad_U0'");
                 $fdisplay(fp,"//        empty input FIFO 'accelerator_v2.bgr_stream_U' written by process 'accelerator_v2.pad_U0'");
             end
-            else if (AESL_inst_accelerator_v2.bgr_stream_U.if_full_n == 1'b0 && ~AESL_inst_accelerator_v2.unpack_U0.grp_unpack_Pipeline_VITIS_LOOP_53_2_fu_92.bgr_stream1_blk_n == 1'b1) begin
+            else if (AESL_inst_accelerator_v2.bgr_stream_U.if_full_n == 1'b0 && ~AESL_inst_accelerator_v2.unpack_U0.grp_unpack_Pipeline_VITIS_LOOP_48_2_fu_92.bgr_stream1_blk_n == 1'b1) begin
                 $display("//        full output FIFO 'accelerator_v2.bgr_stream_U' read by process 'accelerator_v2.pad_U0'");
                 $fdisplay(fp,"//        full output FIFO 'accelerator_v2.bgr_stream_U' read by process 'accelerator_v2.pad_U0'");
             end
@@ -208,10 +208,10 @@ begin
     if (1) begin
         out_proc_hit = 3'h0;
 // check block with process 'accelerator_v2.unpack_U0'
-        if (AESL_inst_accelerator_v2.bgr_stream_U.if_empty_n == 1'b0 && ~AESL_inst_accelerator_v2.pad_U0.grp_pad_Pipeline_VITIS_LOOP_92_1_VITIS_LOOP_93_2_fu_329.bgr_stream1_blk_n == 1'b1) begin
+        if (AESL_inst_accelerator_v2.bgr_stream_U.if_empty_n == 1'b0 && ~AESL_inst_accelerator_v2.pad_U0.grp_pad_Pipeline_VITIS_LOOP_79_1_VITIS_LOOP_80_2_fu_329.bgr_stream1_blk_n == 1'b1) begin
             out_proc_hit[0] = 1'b1;
         end
-        else if (AESL_inst_accelerator_v2.bgr_stream_U.if_full_n == 1'b0 && ~AESL_inst_accelerator_v2.pad_U0.grp_pad_Pipeline_VITIS_LOOP_92_1_VITIS_LOOP_93_2_fu_329.bgr_stream1_blk_n == 1'b1) begin
+        else if (AESL_inst_accelerator_v2.bgr_stream_U.if_full_n == 1'b0 && ~AESL_inst_accelerator_v2.pad_U0.grp_pad_Pipeline_VITIS_LOOP_79_1_VITIS_LOOP_80_2_fu_329.bgr_stream1_blk_n == 1'b1) begin
             out_proc_hit[0] = 1'b1;
         end
         if (AESL_inst_accelerator_v2.start_for_pad_U0_U.if_empty_n == 1'b0 && AESL_inst_accelerator_v2.pad_U0.ap_idle == 1'b1) begin
@@ -224,11 +224,11 @@ begin
             $fdisplay(fp,"//");
             $fdisplay(fp,"//    Process 'accelerator_v2.pad_U0' is blocked by following channel which connected with process 'accelerator_v2.unpack_U0' :");
 
-            if (AESL_inst_accelerator_v2.bgr_stream_U.if_empty_n == 1'b0 && ~AESL_inst_accelerator_v2.pad_U0.grp_pad_Pipeline_VITIS_LOOP_92_1_VITIS_LOOP_93_2_fu_329.bgr_stream1_blk_n == 1'b1) begin
+            if (AESL_inst_accelerator_v2.bgr_stream_U.if_empty_n == 1'b0 && ~AESL_inst_accelerator_v2.pad_U0.grp_pad_Pipeline_VITIS_LOOP_79_1_VITIS_LOOP_80_2_fu_329.bgr_stream1_blk_n == 1'b1) begin
                 $display("//        empty input FIFO 'accelerator_v2.bgr_stream_U' written by process 'accelerator_v2.unpack_U0'");
                 $fdisplay(fp,"//        empty input FIFO 'accelerator_v2.bgr_stream_U' written by process 'accelerator_v2.unpack_U0'");
             end
-            else if (AESL_inst_accelerator_v2.bgr_stream_U.if_full_n == 1'b0 && ~AESL_inst_accelerator_v2.pad_U0.grp_pad_Pipeline_VITIS_LOOP_92_1_VITIS_LOOP_93_2_fu_329.bgr_stream1_blk_n == 1'b1) begin
+            else if (AESL_inst_accelerator_v2.bgr_stream_U.if_full_n == 1'b0 && ~AESL_inst_accelerator_v2.pad_U0.grp_pad_Pipeline_VITIS_LOOP_79_1_VITIS_LOOP_80_2_fu_329.bgr_stream1_blk_n == 1'b1) begin
                 $display("//        full output FIFO 'accelerator_v2.bgr_stream_U' read by process 'accelerator_v2.unpack_U0'");
                 $fdisplay(fp,"//        full output FIFO 'accelerator_v2.bgr_stream_U' read by process 'accelerator_v2.unpack_U0'");
             end
@@ -400,10 +400,10 @@ begin
     else begin 
         out_proc_hit = 3'h0;
 // check block with process 'accelerator_v2.process_pixels_U0'
-        if (AESL_inst_accelerator_v2.gray_stream_U.if_empty_n == 1'b0 && ~AESL_inst_accelerator_v2.repack_U0.grp_repack_Pipeline_VITIS_LOOP_224_2_fu_134.gray_stream3_blk_n == 1'b1) begin
+        if (AESL_inst_accelerator_v2.gray_stream_U.if_empty_n == 1'b0 && ~AESL_inst_accelerator_v2.repack_U0.grp_repack_Pipeline_VITIS_LOOP_195_2_fu_134.gray_stream3_blk_n == 1'b1) begin
             out_proc_hit[0] = 1'b1;
         end
-        else if (AESL_inst_accelerator_v2.gray_stream_U.if_full_n == 1'b0 && ~AESL_inst_accelerator_v2.repack_U0.grp_repack_Pipeline_VITIS_LOOP_224_2_fu_134.gray_stream3_blk_n == 1'b1) begin
+        else if (AESL_inst_accelerator_v2.gray_stream_U.if_full_n == 1'b0 && ~AESL_inst_accelerator_v2.repack_U0.grp_repack_Pipeline_VITIS_LOOP_195_2_fu_134.gray_stream3_blk_n == 1'b1) begin
             out_proc_hit[0] = 1'b1;
         end
         if (AESL_inst_accelerator_v2.start_for_repack_U0_U.if_empty_n == 1'b0 && AESL_inst_accelerator_v2.repack_U0.ap_idle == 1'b1) begin
@@ -416,11 +416,11 @@ begin
             $fdisplay(fp,"//");
             $fdisplay(fp,"//    Process 'accelerator_v2.repack_U0' is blocked by following channel which connected with process 'accelerator_v2.process_pixels_U0' :");
 
-            if (AESL_inst_accelerator_v2.gray_stream_U.if_empty_n == 1'b0 && ~AESL_inst_accelerator_v2.repack_U0.grp_repack_Pipeline_VITIS_LOOP_224_2_fu_134.gray_stream3_blk_n == 1'b1) begin
+            if (AESL_inst_accelerator_v2.gray_stream_U.if_empty_n == 1'b0 && ~AESL_inst_accelerator_v2.repack_U0.grp_repack_Pipeline_VITIS_LOOP_195_2_fu_134.gray_stream3_blk_n == 1'b1) begin
                 $display("//        empty input FIFO 'accelerator_v2.gray_stream_U' written by process 'accelerator_v2.process_pixels_U0'");
                 $fdisplay(fp,"//        empty input FIFO 'accelerator_v2.gray_stream_U' written by process 'accelerator_v2.process_pixels_U0'");
             end
-            else if (AESL_inst_accelerator_v2.gray_stream_U.if_full_n == 1'b0 && ~AESL_inst_accelerator_v2.repack_U0.grp_repack_Pipeline_VITIS_LOOP_224_2_fu_134.gray_stream3_blk_n == 1'b1) begin
+            else if (AESL_inst_accelerator_v2.gray_stream_U.if_full_n == 1'b0 && ~AESL_inst_accelerator_v2.repack_U0.grp_repack_Pipeline_VITIS_LOOP_195_2_fu_134.gray_stream3_blk_n == 1'b1) begin
                 $display("//        full output FIFO 'accelerator_v2.gray_stream_U' read by process 'accelerator_v2.process_pixels_U0'");
                 $fdisplay(fp,"//        full output FIFO 'accelerator_v2.gray_stream_U' read by process 'accelerator_v2.process_pixels_U0'");
             end
@@ -432,10 +432,10 @@ begin
         end
 
 // check block with process 'accelerator_v2.process_pixels_U0.mat_to_stream_U0'
-        if (AESL_inst_accelerator_v2.gray_stream_U.if_empty_n == 1'b0 && ~AESL_inst_accelerator_v2.repack_U0.grp_repack_Pipeline_VITIS_LOOP_224_2_fu_134.gray_stream3_blk_n == 1'b1) begin
+        if (AESL_inst_accelerator_v2.gray_stream_U.if_empty_n == 1'b0 && ~AESL_inst_accelerator_v2.repack_U0.grp_repack_Pipeline_VITIS_LOOP_195_2_fu_134.gray_stream3_blk_n == 1'b1) begin
             out_proc_hit[1] = 1'b1;
         end
-        else if (AESL_inst_accelerator_v2.gray_stream_U.if_full_n == 1'b0 && ~AESL_inst_accelerator_v2.repack_U0.grp_repack_Pipeline_VITIS_LOOP_224_2_fu_134.gray_stream3_blk_n == 1'b1) begin
+        else if (AESL_inst_accelerator_v2.gray_stream_U.if_full_n == 1'b0 && ~AESL_inst_accelerator_v2.repack_U0.grp_repack_Pipeline_VITIS_LOOP_195_2_fu_134.gray_stream3_blk_n == 1'b1) begin
             out_proc_hit[1] = 1'b1;
         end
 //  report path when block is found for process 'accelerator_v2.process_pixels_U0.mat_to_stream_U0'
@@ -445,11 +445,11 @@ begin
             $fdisplay(fp,"//");
             $fdisplay(fp,"//    Process 'accelerator_v2.repack_U0' is blocked by following channel which connected with process 'accelerator_v2.process_pixels_U0.mat_to_stream_U0' :");
 
-            if (AESL_inst_accelerator_v2.gray_stream_U.if_empty_n == 1'b0 && ~AESL_inst_accelerator_v2.repack_U0.grp_repack_Pipeline_VITIS_LOOP_224_2_fu_134.gray_stream3_blk_n == 1'b1) begin
+            if (AESL_inst_accelerator_v2.gray_stream_U.if_empty_n == 1'b0 && ~AESL_inst_accelerator_v2.repack_U0.grp_repack_Pipeline_VITIS_LOOP_195_2_fu_134.gray_stream3_blk_n == 1'b1) begin
                 $display("//        empty input FIFO 'accelerator_v2.gray_stream_U' written by process 'accelerator_v2.process_pixels_U0.mat_to_stream_U0'");
                 $fdisplay(fp,"//        empty input FIFO 'accelerator_v2.gray_stream_U' written by process 'accelerator_v2.process_pixels_U0.mat_to_stream_U0'");
             end
-            else if (AESL_inst_accelerator_v2.gray_stream_U.if_full_n == 1'b0 && ~AESL_inst_accelerator_v2.repack_U0.grp_repack_Pipeline_VITIS_LOOP_224_2_fu_134.gray_stream3_blk_n == 1'b1) begin
+            else if (AESL_inst_accelerator_v2.gray_stream_U.if_full_n == 1'b0 && ~AESL_inst_accelerator_v2.repack_U0.grp_repack_Pipeline_VITIS_LOOP_195_2_fu_134.gray_stream3_blk_n == 1'b1) begin
                 $display("//        full output FIFO 'accelerator_v2.gray_stream_U' read by process 'accelerator_v2.process_pixels_U0.mat_to_stream_U0'");
                 $fdisplay(fp,"//        full output FIFO 'accelerator_v2.gray_stream_U' read by process 'accelerator_v2.process_pixels_U0.mat_to_stream_U0'");
             end

@@ -19,23 +19,23 @@
         </SummaryOfTimingAnalysis>
         <SummaryOfOverallLatency>
             <unit>clock cycles</unit>
-            <Best-caseLatency>922081</Best-caseLatency>
-            <Average-caseLatency>922081</Average-caseLatency>
-            <Worst-caseLatency>922081</Worst-caseLatency>
-            <Best-caseRealTimeLatency>9.221 ms</Best-caseRealTimeLatency>
-            <Average-caseRealTimeLatency>9.221 ms</Average-caseRealTimeLatency>
-            <Worst-caseRealTimeLatency>9.221 ms</Worst-caseRealTimeLatency>
-            <DataflowPipelineThroughput>922082</DataflowPipelineThroughput>
-            <Interval-min>922082</Interval-min>
-            <Interval-max>922082</Interval-max>
+            <Best-caseLatency>924001</Best-caseLatency>
+            <Average-caseLatency>924001</Average-caseLatency>
+            <Worst-caseLatency>927887</Worst-caseLatency>
+            <Best-caseRealTimeLatency>9.240 ms</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>9.240 ms</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>9.279 ms</Worst-caseRealTimeLatency>
+            <DataflowPipelineThroughput>924002</DataflowPipelineThroughput>
+            <Interval-min>924002</Interval-min>
+            <Interval-max>924002</Interval-max>
         </SummaryOfOverallLatency>
     </PerformanceEstimates>
     <AreaEstimates>
         <Resources>
-            <BRAM_18K>55</BRAM_18K>
+            <BRAM_18K>51</BRAM_18K>
             <DSP>11</DSP>
-            <FF>4613</FF>
-            <LUT>7398</LUT>
+            <FF>4609</FF>
+            <LUT>7390</LUT>
             <URAM>0</URAM>
         </Resources>
         <AvailableResources>
@@ -519,11 +519,11 @@
                     <ID>104</ID>
                     <InstancesList>
                         <Instance>
-                            <InstName>grp_unpack_Pipeline_VITIS_LOOP_53_2_fu_92</InstName>
-                            <ModuleName>unpack_Pipeline_VITIS_LOOP_53_2</ModuleName>
+                            <InstName>grp_unpack_Pipeline_VITIS_LOOP_48_2_fu_92</InstName>
+                            <ModuleName>unpack_Pipeline_VITIS_LOOP_48_2</ModuleName>
                             <IsCompInst>true</IsCompInst>
                             <ID>92</ID>
-                            <BindInstances>byte_idx_2_fu_149_p2 add_ln50_fu_178_p2</BindInstances>
+                            <BindInstances>byte_idx_2_fu_149_p2 add_ln46_fu_178_p2</BindInstances>
                         </Instance>
                     </InstancesList>
                     <BindInstances>tx_2_fu_126_p2</BindInstances>
@@ -535,42 +535,42 @@
                     <ID>125</ID>
                     <InstancesList>
                         <Instance>
-                            <InstName>grp_pad_Pipeline_VITIS_LOOP_92_1_VITIS_LOOP_93_2_fu_329</InstName>
-                            <ModuleName>pad_Pipeline_VITIS_LOOP_92_1_VITIS_LOOP_93_2</ModuleName>
+                            <InstName>grp_pad_Pipeline_VITIS_LOOP_79_1_VITIS_LOOP_80_2_fu_329</InstName>
+                            <ModuleName>pad_Pipeline_VITIS_LOOP_79_1_VITIS_LOOP_80_2</ModuleName>
                             <IsCompInst>true</IsCompInst>
                             <ID>329</ID>
-                            <BindInstances>add_ln92_fu_156_p2 add_ln92_1_fu_187_p2 add_ln93_fu_208_p2</BindInstances>
+                            <BindInstances>add_ln79_fu_156_p2 add_ln79_1_fu_187_p2 add_ln80_fu_208_p2</BindInstances>
                         </Instance>
                         <Instance>
-                            <InstName>grp_pad_Pipeline_VITIS_LOOP_103_4_fu_341</InstName>
-                            <ModuleName>pad_Pipeline_VITIS_LOOP_103_4</ModuleName>
+                            <InstName>grp_pad_Pipeline_VITIS_LOOP_89_4_fu_341</InstName>
+                            <ModuleName>pad_Pipeline_VITIS_LOOP_89_4</ModuleName>
                             <IsCompInst>true</IsCompInst>
                             <ID>341</ID>
-                            <BindInstances>add_ln103_fu_111_p2</BindInstances>
+                            <BindInstances>add_ln89_fu_111_p2</BindInstances>
                         </Instance>
                         <Instance>
-                            <InstName>grp_pad_Pipeline_VITIS_LOOP_118_6_fu_350</InstName>
-                            <ModuleName>pad_Pipeline_VITIS_LOOP_118_6</ModuleName>
+                            <InstName>grp_pad_Pipeline_VITIS_LOOP_103_6_fu_350</InstName>
+                            <ModuleName>pad_Pipeline_VITIS_LOOP_103_6</ModuleName>
                             <IsCompInst>true</IsCompInst>
                             <ID>350</ID>
-                            <BindInstances>add_ln118_fu_116_p2</BindInstances>
+                            <BindInstances>add_ln103_fu_116_p2</BindInstances>
                         </Instance>
                         <Instance>
-                            <InstName>grp_pad_Pipeline_VITIS_LOOP_125_7_fu_359</InstName>
-                            <ModuleName>pad_Pipeline_VITIS_LOOP_125_7</ModuleName>
+                            <InstName>grp_pad_Pipeline_VITIS_LOOP_110_7_fu_359</InstName>
+                            <ModuleName>pad_Pipeline_VITIS_LOOP_110_7</ModuleName>
                             <IsCompInst>true</IsCompInst>
                             <ID>359</ID>
-                            <BindInstances>add_ln125_fu_139_p2</BindInstances>
+                            <BindInstances>add_ln110_fu_139_p2</BindInstances>
                         </Instance>
                         <Instance>
-                            <InstName>grp_pad_Pipeline_VITIS_LOOP_138_9_fu_371</InstName>
-                            <ModuleName>pad_Pipeline_VITIS_LOOP_138_9</ModuleName>
+                            <InstName>grp_pad_Pipeline_VITIS_LOOP_122_9_fu_371</InstName>
+                            <ModuleName>pad_Pipeline_VITIS_LOOP_122_9</ModuleName>
                             <IsCompInst>true</IsCompInst>
                             <ID>371</ID>
-                            <BindInstances>add_ln138_fu_109_p2</BindInstances>
+                            <BindInstances>add_ln122_fu_109_p2</BindInstances>
                         </Instance>
                     </InstancesList>
-                    <BindInstances>row_buf_V_U row_buf_V_1_U row_buf_V_2_U row_buf_V_3_U add_ln100_fu_405_p2 r_9_fu_458_p2 r_8_fu_615_p2</BindInstances>
+                    <BindInstances>row_buf_V_U row_buf_V_1_U row_buf_V_2_U row_buf_V_3_U add_ln86_fu_405_p2 r_9_fu_458_p2 r_8_fu_615_p2</BindInstances>
                 </Instance>
                 <Instance>
                     <InstName>process_pixels_U0</InstName>
@@ -583,7 +583,7 @@
                             <ModuleName>stream_to_mat</ModuleName>
                             <IsCompInst>true</IsCompInst>
                             <ID>52</ID>
-                            <BindInstances>add_ln156_fu_69_p2</BindInstances>
+                            <BindInstances>add_ln137_fu_69_p2</BindInstances>
                         </Instance>
                         <Instance>
                             <InstName>bgr2gray_9_0_484_644_1_3220_3220_U0</InstName>
@@ -667,7 +667,7 @@
                             <ModuleName>mat_to_stream</ModuleName>
                             <IsCompInst>true</IsCompInst>
                             <ID>71</ID>
-                            <BindInstances>add_ln171_fu_70_p2</BindInstances>
+                            <BindInstances>add_ln152_fu_70_p2</BindInstances>
                         </Instance>
                     </InstancesList>
                     <BindInstances>bgr_mat_data_U gray_mat_data_U blurred_mat_data_U</BindInstances>
@@ -679,18 +679,18 @@
                     <ID>137</ID>
                     <InstancesList>
                         <Instance>
-                            <InstName>grp_repack_Pipeline_VITIS_LOOP_224_2_fu_134</InstName>
-                            <ModuleName>repack_Pipeline_VITIS_LOOP_224_2</ModuleName>
+                            <InstName>grp_repack_Pipeline_VITIS_LOOP_195_2_fu_134</InstName>
+                            <ModuleName>repack_Pipeline_VITIS_LOOP_195_2</ModuleName>
                             <IsCompInst>true</IsCompInst>
                             <ID>134</ID>
-                            <BindInstances>add_ln224_fu_94_p2</BindInstances>
+                            <BindInstances>add_ln195_fu_94_p2</BindInstances>
                         </Instance>
                         <Instance>
-                            <InstName>grp_repack_Pipeline_VITIS_LOOP_244_3_fu_142</InstName>
-                            <ModuleName>repack_Pipeline_VITIS_LOOP_244_3</ModuleName>
+                            <InstName>grp_repack_Pipeline_VITIS_LOOP_215_3_fu_142</InstName>
+                            <ModuleName>repack_Pipeline_VITIS_LOOP_215_3</ModuleName>
                             <IsCompInst>true</IsCompInst>
                             <ID>142</ID>
-                            <BindInstances>add_ln244_fu_328_p2 add_ln186_fu_426_p2</BindInstances>
+                            <BindInstances>add_ln215_fu_328_p2 add_ln186_fu_426_p2</BindInstances>
                         </Instance>
                     </InstancesList>
                     <BindInstances>row_pixels_V_U row_pixels_V_1_U r_2_fu_176_p2 p_Result_s_fu_214_p2</BindInstances>
@@ -701,9 +701,9 @@
     </RTLDesignHierarchy>
     <ModuleInformation>
         <Module>
-            <Name>unpack_Pipeline_VITIS_LOOP_53_2</Name>
+            <Name>unpack_Pipeline_VITIS_LOOP_48_2</Name>
             <Loops>
-                <VITIS_LOOP_53_2/>
+                <VITIS_LOOP_48_2/>
             </Loops>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
@@ -712,35 +712,35 @@
                     <EstimatedClockPeriod>3.666</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>9602</Best-caseLatency>
-                    <Average-caseLatency>9602</Average-caseLatency>
-                    <Worst-caseLatency>9602</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>96.020 us</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>96.020 us</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>96.020 us</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>9602</PipelineInitiationInterval>
+                    <Best-caseLatency>1922</Best-caseLatency>
+                    <Average-caseLatency>1922</Average-caseLatency>
+                    <Worst-caseLatency>1922</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>19.220 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>19.220 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>19.220 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>1922</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
-                    <VITIS_LOOP_53_2>
-                        <Name>VITIS_LOOP_53_2</Name>
+                    <VITIS_LOOP_48_2>
+                        <Name>VITIS_LOOP_48_2</Name>
                         <Slack>7.30</Slack>
-                        <TripCount>9600</TripCount>
-                        <Latency>9600</Latency>
-                        <AbsoluteTimeLatency>96.000 us</AbsoluteTimeLatency>
+                        <TripCount>1920</TripCount>
+                        <Latency>1920</Latency>
+                        <AbsoluteTimeLatency>19.200 us</AbsoluteTimeLatency>
                         <PipelineII>1</PipelineII>
                         <PipelineDepth>2</PipelineDepth>
                         <PipelineType>yes</PipelineType>
                         <InstanceList/>
-                    </VITIS_LOOP_53_2>
+                    </VITIS_LOOP_48_2>
                 </SummaryOfLoopLatency>
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <FF>181</FF>
+                    <FF>175</FF>
                     <AVAIL_FF>141120</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>614</LUT>
+                    <LUT>602</LUT>
                     <AVAIL_LUT>70560</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
@@ -755,14 +755,14 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_53_2" OPTYPE="add" PRAGMA="" RTLNAME="byte_idx_2_fu_149_p2" SOURCE="accelerator_v2.cpp:53" URAM="0" VARIABLE="byte_idx_2"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_53_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln50_fu_178_p2" SOURCE="accelerator_v2.cpp:50" URAM="0" VARIABLE="add_ln50"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_48_2" OPTYPE="add" PRAGMA="" RTLNAME="byte_idx_2_fu_149_p2" SOURCE="accelerator_v2.cpp:48" URAM="0" VARIABLE="byte_idx_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_48_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln46_fu_178_p2" SOURCE="accelerator_v2.cpp:46" URAM="0" VARIABLE="add_ln46"/>
             </BindNodes>
         </Module>
         <Module>
             <Name>unpack</Name>
             <Loops>
-                <VITIS_LOOP_39_1/>
+                <VITIS_LOOP_35_1/>
             </Loops>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
@@ -771,37 +771,37 @@
                     <EstimatedClockPeriod>3.666</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>922081</Best-caseLatency>
-                    <Average-caseLatency>922081</Average-caseLatency>
-                    <Worst-caseLatency>922081</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>9.221 ms</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>9.221 ms</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>9.221 ms</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>922081</PipelineInitiationInterval>
+                    <Best-caseLatency>924001</Best-caseLatency>
+                    <Average-caseLatency>924001</Average-caseLatency>
+                    <Worst-caseLatency>924001</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>9.240 ms</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>9.240 ms</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>9.240 ms</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>924001</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
-                    <VITIS_LOOP_39_1>
-                        <Name>VITIS_LOOP_39_1</Name>
+                    <VITIS_LOOP_35_1>
+                        <Name>VITIS_LOOP_35_1</Name>
                         <Slack>7.30</Slack>
-                        <TripCount>96</TripCount>
-                        <Latency>922080</Latency>
-                        <AbsoluteTimeLatency>9.221 ms</AbsoluteTimeLatency>
-                        <IterationLatency>9605</IterationLatency>
-                        <PipelineDepth>9605</PipelineDepth>
+                        <TripCount>480</TripCount>
+                        <Latency>924000</Latency>
+                        <AbsoluteTimeLatency>9.240 ms</AbsoluteTimeLatency>
+                        <IterationLatency>1925</IterationLatency>
+                        <PipelineDepth>1925</PipelineDepth>
                         <PipelineType>no</PipelineType>
                         <InstanceList>
-                            <Instance>grp_unpack_Pipeline_VITIS_LOOP_53_2_fu_92</Instance>
+                            <Instance>grp_unpack_Pipeline_VITIS_LOOP_48_2_fu_92</Instance>
                         </InstanceList>
-                    </VITIS_LOOP_39_1>
+                    </VITIS_LOOP_35_1>
                 </SummaryOfLoopLatency>
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <FF>196</FF>
+                    <FF>192</FF>
                     <AVAIL_FF>141120</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>746</LUT>
+                    <LUT>738</LUT>
                     <AVAIL_LUT>70560</AVAIL_LUT>
                     <UTIL_LUT>1</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
@@ -816,13 +816,13 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_39_1" OPTYPE="add" PRAGMA="" RTLNAME="tx_2_fu_126_p2" SOURCE="accelerator_v2.cpp:39" URAM="0" VARIABLE="tx_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_35_1" OPTYPE="add" PRAGMA="" RTLNAME="tx_2_fu_126_p2" SOURCE="accelerator_v2.cpp:35" URAM="0" VARIABLE="tx_2"/>
             </BindNodes>
         </Module>
         <Module>
-            <Name>pad_Pipeline_VITIS_LOOP_92_1_VITIS_LOOP_93_2</Name>
+            <Name>pad_Pipeline_VITIS_LOOP_79_1_VITIS_LOOP_80_2</Name>
             <Loops>
-                <VITIS_LOOP_92_1_VITIS_LOOP_93_2/>
+                <VITIS_LOOP_79_1_VITIS_LOOP_80_2/>
             </Loops>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
@@ -841,8 +841,8 @@
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
-                    <VITIS_LOOP_92_1_VITIS_LOOP_93_2>
-                        <Name>VITIS_LOOP_92_1_VITIS_LOOP_93_2</Name>
+                    <VITIS_LOOP_79_1_VITIS_LOOP_80_2>
+                        <Name>VITIS_LOOP_79_1_VITIS_LOOP_80_2</Name>
                         <Slack>7.30</Slack>
                         <TripCount>1920</TripCount>
                         <Latency>1920</Latency>
@@ -851,7 +851,7 @@
                         <PipelineDepth>2</PipelineDepth>
                         <PipelineType>yes</PipelineType>
                         <InstanceList/>
-                    </VITIS_LOOP_92_1_VITIS_LOOP_93_2>
+                    </VITIS_LOOP_79_1_VITIS_LOOP_80_2>
                 </SummaryOfLoopLatency>
             </PerformanceEstimates>
             <AreaEstimates>
@@ -874,15 +874,15 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_92_1_VITIS_LOOP_93_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln92_fu_156_p2" SOURCE="accelerator_v2.cpp:92" URAM="0" VARIABLE="add_ln92"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_92_1_VITIS_LOOP_93_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln92_1_fu_187_p2" SOURCE="accelerator_v2.cpp:92" URAM="0" VARIABLE="add_ln92_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_92_1_VITIS_LOOP_93_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln93_fu_208_p2" SOURCE="accelerator_v2.cpp:93" URAM="0" VARIABLE="add_ln93"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_79_1_VITIS_LOOP_80_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln79_fu_156_p2" SOURCE="accelerator_v2.cpp:79" URAM="0" VARIABLE="add_ln79"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_79_1_VITIS_LOOP_80_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln79_1_fu_187_p2" SOURCE="accelerator_v2.cpp:79" URAM="0" VARIABLE="add_ln79_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_79_1_VITIS_LOOP_80_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln80_fu_208_p2" SOURCE="accelerator_v2.cpp:80" URAM="0" VARIABLE="add_ln80"/>
             </BindNodes>
         </Module>
         <Module>
-            <Name>pad_Pipeline_VITIS_LOOP_103_4</Name>
+            <Name>pad_Pipeline_VITIS_LOOP_89_4</Name>
             <Loops>
-                <VITIS_LOOP_103_4/>
+                <VITIS_LOOP_89_4/>
             </Loops>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
@@ -901,8 +901,8 @@
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
-                    <VITIS_LOOP_103_4>
-                        <Name>VITIS_LOOP_103_4</Name>
+                    <VITIS_LOOP_89_4>
+                        <Name>VITIS_LOOP_89_4</Name>
                         <Slack>7.30</Slack>
                         <TripCount>640</TripCount>
                         <Latency>640</Latency>
@@ -911,7 +911,7 @@
                         <PipelineDepth>2</PipelineDepth>
                         <PipelineType>yes</PipelineType>
                         <InstanceList/>
-                    </VITIS_LOOP_103_4>
+                    </VITIS_LOOP_89_4>
                 </SummaryOfLoopLatency>
             </PerformanceEstimates>
             <AreaEstimates>
@@ -934,13 +934,13 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_103_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln103_fu_111_p2" SOURCE="accelerator_v2.cpp:103" URAM="0" VARIABLE="add_ln103"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_89_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln89_fu_111_p2" SOURCE="accelerator_v2.cpp:89" URAM="0" VARIABLE="add_ln89"/>
             </BindNodes>
         </Module>
         <Module>
-            <Name>pad_Pipeline_VITIS_LOOP_118_6</Name>
+            <Name>pad_Pipeline_VITIS_LOOP_103_6</Name>
             <Loops>
-                <VITIS_LOOP_118_6/>
+                <VITIS_LOOP_103_6/>
             </Loops>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
@@ -959,8 +959,8 @@
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
-                    <VITIS_LOOP_118_6>
-                        <Name>VITIS_LOOP_118_6</Name>
+                    <VITIS_LOOP_103_6>
+                        <Name>VITIS_LOOP_103_6</Name>
                         <Slack>7.30</Slack>
                         <TripCount>640</TripCount>
                         <Latency>640</Latency>
@@ -969,7 +969,7 @@
                         <PipelineDepth>2</PipelineDepth>
                         <PipelineType>yes</PipelineType>
                         <InstanceList/>
-                    </VITIS_LOOP_118_6>
+                    </VITIS_LOOP_103_6>
                 </SummaryOfLoopLatency>
             </PerformanceEstimates>
             <AreaEstimates>
@@ -992,13 +992,13 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_118_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln118_fu_116_p2" SOURCE="accelerator_v2.cpp:118" URAM="0" VARIABLE="add_ln118"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_103_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln103_fu_116_p2" SOURCE="accelerator_v2.cpp:103" URAM="0" VARIABLE="add_ln103"/>
             </BindNodes>
         </Module>
         <Module>
-            <Name>pad_Pipeline_VITIS_LOOP_125_7</Name>
+            <Name>pad_Pipeline_VITIS_LOOP_110_7</Name>
             <Loops>
-                <VITIS_LOOP_125_7/>
+                <VITIS_LOOP_110_7/>
             </Loops>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
@@ -1017,8 +1017,8 @@
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
-                    <VITIS_LOOP_125_7>
-                        <Name>VITIS_LOOP_125_7</Name>
+                    <VITIS_LOOP_110_7>
+                        <Name>VITIS_LOOP_110_7</Name>
                         <Slack>7.30</Slack>
                         <TripCount>640</TripCount>
                         <Latency>640</Latency>
@@ -1027,7 +1027,7 @@
                         <PipelineDepth>2</PipelineDepth>
                         <PipelineType>yes</PipelineType>
                         <InstanceList/>
-                    </VITIS_LOOP_125_7>
+                    </VITIS_LOOP_110_7>
                 </SummaryOfLoopLatency>
             </PerformanceEstimates>
             <AreaEstimates>
@@ -1050,13 +1050,13 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_125_7" OPTYPE="add" PRAGMA="" RTLNAME="add_ln125_fu_139_p2" SOURCE="accelerator_v2.cpp:125" URAM="0" VARIABLE="add_ln125"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_110_7" OPTYPE="add" PRAGMA="" RTLNAME="add_ln110_fu_139_p2" SOURCE="accelerator_v2.cpp:110" URAM="0" VARIABLE="add_ln110"/>
             </BindNodes>
         </Module>
         <Module>
-            <Name>pad_Pipeline_VITIS_LOOP_138_9</Name>
+            <Name>pad_Pipeline_VITIS_LOOP_122_9</Name>
             <Loops>
-                <VITIS_LOOP_138_9/>
+                <VITIS_LOOP_122_9/>
             </Loops>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
@@ -1075,8 +1075,8 @@
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
-                    <VITIS_LOOP_138_9>
-                        <Name>VITIS_LOOP_138_9</Name>
+                    <VITIS_LOOP_122_9>
+                        <Name>VITIS_LOOP_122_9</Name>
                         <Slack>7.30</Slack>
                         <TripCount>640</TripCount>
                         <Latency>640</Latency>
@@ -1085,7 +1085,7 @@
                         <PipelineDepth>2</PipelineDepth>
                         <PipelineType>yes</PipelineType>
                         <InstanceList/>
-                    </VITIS_LOOP_138_9>
+                    </VITIS_LOOP_122_9>
                 </SummaryOfLoopLatency>
             </PerformanceEstimates>
             <AreaEstimates>
@@ -1108,15 +1108,15 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_138_9" OPTYPE="add" PRAGMA="" RTLNAME="add_ln138_fu_109_p2" SOURCE="accelerator_v2.cpp:138" URAM="0" VARIABLE="add_ln138"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_122_9" OPTYPE="add" PRAGMA="" RTLNAME="add_ln122_fu_109_p2" SOURCE="accelerator_v2.cpp:122" URAM="0" VARIABLE="add_ln122"/>
             </BindNodes>
         </Module>
         <Module>
             <Name>pad</Name>
             <Loops>
-                <VITIS_LOOP_100_3/>
-                <VITIS_LOOP_112_5/>
-                <VITIS_LOOP_134_8/>
+                <VITIS_LOOP_86_3/>
+                <VITIS_LOOP_97_5/>
+                <VITIS_LOOP_118_8/>
             </Loops>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
@@ -1135,8 +1135,8 @@
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
-                    <VITIS_LOOP_100_3>
-                        <Name>VITIS_LOOP_100_3</Name>
+                    <VITIS_LOOP_86_3>
+                        <Name>VITIS_LOOP_86_3</Name>
                         <Slack>7.30</Slack>
                         <TripCount>2</TripCount>
                         <Latency>1296</Latency>
@@ -1145,11 +1145,11 @@
                         <PipelineDepth>648</PipelineDepth>
                         <PipelineType>no</PipelineType>
                         <InstanceList>
-                            <Instance>grp_pad_Pipeline_VITIS_LOOP_103_4_fu_341</Instance>
+                            <Instance>grp_pad_Pipeline_VITIS_LOOP_89_4_fu_341</Instance>
                         </InstanceList>
-                    </VITIS_LOOP_100_3>
-                    <VITIS_LOOP_112_5>
-                        <Name>VITIS_LOOP_112_5</Name>
+                    </VITIS_LOOP_86_3>
+                    <VITIS_LOOP_97_5>
+                        <Name>VITIS_LOOP_97_5</Name>
                         <Slack>7.30</Slack>
                         <TripCount>480</TripCount>
                         <Latency>312480 ~ 621120</Latency>
@@ -1163,12 +1163,12 @@
                         <PipelineDepth>651 ~ 1294</PipelineDepth>
                         <PipelineType>no</PipelineType>
                         <InstanceList>
-                            <Instance>grp_pad_Pipeline_VITIS_LOOP_118_6_fu_350</Instance>
-                            <Instance>grp_pad_Pipeline_VITIS_LOOP_125_7_fu_359</Instance>
+                            <Instance>grp_pad_Pipeline_VITIS_LOOP_103_6_fu_350</Instance>
+                            <Instance>grp_pad_Pipeline_VITIS_LOOP_110_7_fu_359</Instance>
                         </InstanceList>
-                    </VITIS_LOOP_112_5>
-                    <VITIS_LOOP_134_8>
-                        <Name>VITIS_LOOP_134_8</Name>
+                    </VITIS_LOOP_97_5>
+                    <VITIS_LOOP_118_8>
+                        <Name>VITIS_LOOP_118_8</Name>
                         <Slack>7.30</Slack>
                         <TripCount>2</TripCount>
                         <Latency>1296</Latency>
@@ -1177,9 +1177,9 @@
                         <PipelineDepth>648</PipelineDepth>
                         <PipelineType>no</PipelineType>
                         <InstanceList>
-                            <Instance>grp_pad_Pipeline_VITIS_LOOP_138_9_fu_371</Instance>
+                            <Instance>grp_pad_Pipeline_VITIS_LOOP_122_9_fu_371</Instance>
                         </InstanceList>
-                    </VITIS_LOOP_134_8>
+                    </VITIS_LOOP_118_8>
                 </SummaryOfLoopLatency>
             </PerformanceEstimates>
             <AreaEstimates>
@@ -1202,19 +1202,19 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="row_buf_V_U" SOURCE="accelerator_v2.cpp:87" URAM="0" VARIABLE="row_buf_V"/>
-                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="row_buf_V_1_U" SOURCE="accelerator_v2.cpp:87" URAM="0" VARIABLE="row_buf_V_1"/>
-                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="row_buf_V_2_U" SOURCE="accelerator_v2.cpp:87" URAM="0" VARIABLE="row_buf_V_2"/>
-                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="row_buf_V_3_U" SOURCE="accelerator_v2.cpp:87" URAM="0" VARIABLE="row_buf_V_3"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_100_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln100_fu_405_p2" SOURCE="accelerator_v2.cpp:100" URAM="0" VARIABLE="add_ln100"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_112_5" OPTYPE="add" PRAGMA="" RTLNAME="r_9_fu_458_p2" SOURCE="accelerator_v2.cpp:112" URAM="0" VARIABLE="r_9"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_134_8" OPTYPE="add" PRAGMA="" RTLNAME="r_8_fu_615_p2" SOURCE="accelerator_v2.cpp:134" URAM="0" VARIABLE="r_8"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="row_buf_V_U" SOURCE="accelerator_v2.cpp:75" URAM="0" VARIABLE="row_buf_V"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="row_buf_V_1_U" SOURCE="accelerator_v2.cpp:75" URAM="0" VARIABLE="row_buf_V_1"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="row_buf_V_2_U" SOURCE="accelerator_v2.cpp:75" URAM="0" VARIABLE="row_buf_V_2"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="yes" RTLNAME="row_buf_V_3_U" SOURCE="accelerator_v2.cpp:75" URAM="0" VARIABLE="row_buf_V_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_86_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln86_fu_405_p2" SOURCE="accelerator_v2.cpp:86" URAM="0" VARIABLE="add_ln86"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_97_5" OPTYPE="add" PRAGMA="" RTLNAME="r_9_fu_458_p2" SOURCE="accelerator_v2.cpp:97" URAM="0" VARIABLE="r_9"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_118_8" OPTYPE="add" PRAGMA="" RTLNAME="r_8_fu_615_p2" SOURCE="accelerator_v2.cpp:118" URAM="0" VARIABLE="r_8"/>
             </BindNodes>
         </Module>
         <Module>
             <Name>stream_to_mat</Name>
             <Loops>
-                <VITIS_LOOP_156_1_VITIS_LOOP_157_2/>
+                <VITIS_LOOP_137_1_VITIS_LOOP_138_2/>
             </Loops>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
@@ -1233,8 +1233,8 @@
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
-                    <VITIS_LOOP_156_1_VITIS_LOOP_157_2>
-                        <Name>VITIS_LOOP_156_1_VITIS_LOOP_157_2</Name>
+                    <VITIS_LOOP_137_1_VITIS_LOOP_138_2>
+                        <Name>VITIS_LOOP_137_1_VITIS_LOOP_138_2</Name>
                         <Slack>7.30</Slack>
                         <TripCount>311696</TripCount>
                         <Latency>311696</Latency>
@@ -1243,7 +1243,7 @@
                         <PipelineDepth>2</PipelineDepth>
                         <PipelineType>yes</PipelineType>
                         <InstanceList/>
-                    </VITIS_LOOP_156_1_VITIS_LOOP_157_2>
+                    </VITIS_LOOP_137_1_VITIS_LOOP_138_2>
                 </SummaryOfLoopLatency>
             </PerformanceEstimates>
             <AreaEstimates>
@@ -1266,7 +1266,7 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_156_1_VITIS_LOOP_157_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln156_fu_69_p2" SOURCE="accelerator_v2.cpp:156" URAM="0" VARIABLE="add_ln156"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_137_1_VITIS_LOOP_138_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln137_fu_69_p2" SOURCE="accelerator_v2.cpp:137" URAM="0" VARIABLE="add_ln137"/>
             </BindNodes>
         </Module>
         <Module>
@@ -1758,7 +1758,7 @@
         <Module>
             <Name>mat_to_stream</Name>
             <Loops>
-                <VITIS_LOOP_171_1_VITIS_LOOP_172_2/>
+                <VITIS_LOOP_152_1_VITIS_LOOP_153_2/>
             </Loops>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
@@ -1777,8 +1777,8 @@
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
-                    <VITIS_LOOP_171_1_VITIS_LOOP_172_2>
-                        <Name>VITIS_LOOP_171_1_VITIS_LOOP_172_2</Name>
+                    <VITIS_LOOP_152_1_VITIS_LOOP_153_2>
+                        <Name>VITIS_LOOP_152_1_VITIS_LOOP_153_2</Name>
                         <Slack>7.30</Slack>
                         <TripCount>311696</TripCount>
                         <Latency>311696</Latency>
@@ -1787,7 +1787,7 @@
                         <PipelineDepth>2</PipelineDepth>
                         <PipelineType>yes</PipelineType>
                         <InstanceList/>
-                    </VITIS_LOOP_171_1_VITIS_LOOP_172_2>
+                    </VITIS_LOOP_152_1_VITIS_LOOP_153_2>
                 </SummaryOfLoopLatency>
             </PerformanceEstimates>
             <AreaEstimates>
@@ -1810,7 +1810,7 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_171_1_VITIS_LOOP_172_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln171_fu_70_p2" SOURCE="accelerator_v2.cpp:171" URAM="0" VARIABLE="add_ln171"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_152_1_VITIS_LOOP_153_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln152_fu_70_p2" SOURCE="accelerator_v2.cpp:152" URAM="0" VARIABLE="add_ln152"/>
             </BindNodes>
         </Module>
         <Module>
@@ -1853,15 +1853,15 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="storage" BRAM="6" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="memory" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="bgr_mat_data_U" SOURCE="accelerator_v2.cpp:191" URAM="0" VARIABLE="bgr_mat_data"/>
-                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="memory" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="gray_mat_data_U" SOURCE="accelerator_v2.cpp:192" URAM="0" VARIABLE="gray_mat_data"/>
-                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="memory" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="blurred_mat_data_U" SOURCE="accelerator_v2.cpp:193" URAM="0" VARIABLE="blurred_mat_data"/>
+                <BindNode BINDTYPE="storage" BRAM="6" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="memory" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="bgr_mat_data_U" SOURCE="accelerator_v2.cpp:168" URAM="0" VARIABLE="bgr_mat_data"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="memory" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="gray_mat_data_U" SOURCE="accelerator_v2.cpp:169" URAM="0" VARIABLE="gray_mat_data"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="memory" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="blurred_mat_data_U" SOURCE="accelerator_v2.cpp:170" URAM="0" VARIABLE="blurred_mat_data"/>
             </BindNodes>
         </Module>
         <Module>
-            <Name>repack_Pipeline_VITIS_LOOP_224_2</Name>
+            <Name>repack_Pipeline_VITIS_LOOP_195_2</Name>
             <Loops>
-                <VITIS_LOOP_224_2/>
+                <VITIS_LOOP_195_2/>
             </Loops>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
@@ -1880,8 +1880,8 @@
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
-                    <VITIS_LOOP_224_2>
-                        <Name>VITIS_LOOP_224_2</Name>
+                    <VITIS_LOOP_195_2>
+                        <Name>VITIS_LOOP_195_2</Name>
                         <Slack>7.30</Slack>
                         <TripCount>644</TripCount>
                         <Latency>644</Latency>
@@ -1890,7 +1890,7 @@
                         <PipelineDepth>2</PipelineDepth>
                         <PipelineType>yes</PipelineType>
                         <InstanceList/>
-                    </VITIS_LOOP_224_2>
+                    </VITIS_LOOP_195_2>
                 </SummaryOfLoopLatency>
             </PerformanceEstimates>
             <AreaEstimates>
@@ -1913,13 +1913,13 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_224_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln224_fu_94_p2" SOURCE="accelerator_v2.cpp:224" URAM="0" VARIABLE="add_ln224"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_195_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln195_fu_94_p2" SOURCE="accelerator_v2.cpp:195" URAM="0" VARIABLE="add_ln195"/>
             </BindNodes>
         </Module>
         <Module>
-            <Name>repack_Pipeline_VITIS_LOOP_244_3</Name>
+            <Name>repack_Pipeline_VITIS_LOOP_215_3</Name>
             <Loops>
-                <VITIS_LOOP_244_3/>
+                <VITIS_LOOP_215_3/>
             </Loops>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
@@ -1938,8 +1938,8 @@
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
-                    <VITIS_LOOP_244_3>
-                        <Name>VITIS_LOOP_244_3</Name>
+                    <VITIS_LOOP_215_3>
+                        <Name>VITIS_LOOP_215_3</Name>
                         <Slack>7.30</Slack>
                         <TripCount>40</TripCount>
                         <Latency>40</Latency>
@@ -1948,7 +1948,7 @@
                         <PipelineDepth>2</PipelineDepth>
                         <PipelineType>yes</PipelineType>
                         <InstanceList/>
-                    </VITIS_LOOP_244_3>
+                    </VITIS_LOOP_215_3>
                 </SummaryOfLoopLatency>
             </PerformanceEstimates>
             <AreaEstimates>
@@ -1971,14 +1971,14 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_244_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln244_fu_328_p2" SOURCE="accelerator_v2.cpp:244" URAM="0" VARIABLE="add_ln244"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_244_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln186_fu_426_p2" SOURCE="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h:186" URAM="0" VARIABLE="add_ln186"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_215_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln215_fu_328_p2" SOURCE="accelerator_v2.cpp:215" URAM="0" VARIABLE="add_ln215"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_215_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln186_fu_426_p2" SOURCE="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h:186" URAM="0" VARIABLE="add_ln186"/>
             </BindNodes>
         </Module>
         <Module>
             <Name>repack</Name>
             <Loops>
-                <VITIS_LOOP_221_1/>
+                <VITIS_LOOP_192_1/>
             </Loops>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
@@ -1997,8 +1997,8 @@
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
-                    <VITIS_LOOP_221_1>
-                        <Name>VITIS_LOOP_221_1</Name>
+                    <VITIS_LOOP_192_1>
+                        <Name>VITIS_LOOP_192_1</Name>
                         <Slack>7.30</Slack>
                         <TripCount>484</TripCount>
                         <Latency>314600 ~ 335896</Latency>
@@ -2012,10 +2012,10 @@
                         <PipelineDepth>650 ~ 694</PipelineDepth>
                         <PipelineType>no</PipelineType>
                         <InstanceList>
-                            <Instance>grp_repack_Pipeline_VITIS_LOOP_224_2_fu_134</Instance>
-                            <Instance>grp_repack_Pipeline_VITIS_LOOP_244_3_fu_142</Instance>
+                            <Instance>grp_repack_Pipeline_VITIS_LOOP_195_2_fu_134</Instance>
+                            <Instance>grp_repack_Pipeline_VITIS_LOOP_215_3_fu_142</Instance>
                         </InstanceList>
-                    </VITIS_LOOP_221_1>
+                    </VITIS_LOOP_192_1>
                 </SummaryOfLoopLatency>
             </PerformanceEstimates>
             <AreaEstimates>
@@ -2038,10 +2038,10 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_np" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_np" PRAGMA="" RTLNAME="row_pixels_V_U" SOURCE="accelerator_v2.cpp:223" URAM="0" VARIABLE="row_pixels_V"/>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_np" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_np" PRAGMA="" RTLNAME="row_pixels_V_1_U" SOURCE="accelerator_v2.cpp:223" URAM="0" VARIABLE="row_pixels_V_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_221_1" OPTYPE="add" PRAGMA="" RTLNAME="r_2_fu_176_p2" SOURCE="accelerator_v2.cpp:221" URAM="0" VARIABLE="r_2"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_221_1" OPTYPE="add" PRAGMA="" RTLNAME="p_Result_s_fu_214_p2" SOURCE="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h:214" URAM="0" VARIABLE="p_Result_s"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_np" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_np" PRAGMA="" RTLNAME="row_pixels_V_U" SOURCE="accelerator_v2.cpp:194" URAM="0" VARIABLE="row_pixels_V"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_np" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_np" PRAGMA="" RTLNAME="row_pixels_V_1_U" SOURCE="accelerator_v2.cpp:194" URAM="0" VARIABLE="row_pixels_V_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_192_1" OPTYPE="add" PRAGMA="" RTLNAME="r_2_fu_176_p2" SOURCE="accelerator_v2.cpp:192" URAM="0" VARIABLE="r_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_192_1" OPTYPE="add" PRAGMA="" RTLNAME="p_Result_s_fu_214_p2" SOURCE="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h:214" URAM="0" VARIABLE="p_Result_s"/>
             </BindNodes>
         </Module>
         <Module>
@@ -2053,29 +2053,29 @@
                     <EstimatedClockPeriod>5.886</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>922081</Best-caseLatency>
-                    <Average-caseLatency>922081</Average-caseLatency>
-                    <Worst-caseLatency>922081</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>9.221 ms</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>9.221 ms</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>9.221 ms</Worst-caseRealTimeLatency>
-                    <DataflowPipelineThroughput>922082</DataflowPipelineThroughput>
-                    <PipelineInitiationInterval>922082</PipelineInitiationInterval>
+                    <Best-caseLatency>924001</Best-caseLatency>
+                    <Average-caseLatency>924001</Average-caseLatency>
+                    <Worst-caseLatency>927887</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>9.240 ms</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>9.240 ms</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>9.279 ms</Worst-caseRealTimeLatency>
+                    <DataflowPipelineThroughput>924002</DataflowPipelineThroughput>
+                    <PipelineInitiationInterval>924002</PipelineInitiationInterval>
                     <PipelineType>dataflow</PipelineType>
                 </SummaryOfOverallLatency>
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <BRAM_18K>55</BRAM_18K>
+                    <BRAM_18K>51</BRAM_18K>
                     <AVAIL_BRAM>432</AVAIL_BRAM>
-                    <UTIL_BRAM>12</UTIL_BRAM>
+                    <UTIL_BRAM>11</UTIL_BRAM>
                     <DSP>11</DSP>
                     <AVAIL_DSP>360</AVAIL_DSP>
                     <UTIL_DSP>3</UTIL_DSP>
-                    <FF>4613</FF>
+                    <FF>4609</FF>
                     <AVAIL_FF>141120</AVAIL_FF>
                     <UTIL_FF>3</UTIL_FF>
-                    <LUT>7398</LUT>
+                    <LUT>7390</LUT>
                     <AVAIL_LUT>70560</AVAIL_LUT>
                     <UTIL_LUT>10</UTIL_LUT>
                     <URAM>0</URAM>
@@ -2084,9 +2084,9 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="storage" BRAM="10" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="memory" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="bgr_stream_U" SOURCE="accelerator_v2.cpp:280" URAM="0" VARIABLE="bgr_stream"/>
-                <BindNode BINDTYPE="storage" BRAM="6" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="memory" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="padded_stream_U" SOURCE="accelerator_v2.cpp:281" URAM="0" VARIABLE="padded_stream"/>
-                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="memory" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="gray_stream_U" SOURCE="accelerator_v2.cpp:282" URAM="0" VARIABLE="gray_stream"/>
+                <BindNode BINDTYPE="storage" BRAM="6" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="memory" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="bgr_stream_U" SOURCE="accelerator_v2.cpp:248" URAM="0" VARIABLE="bgr_stream"/>
+                <BindNode BINDTYPE="storage" BRAM="6" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="memory" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="padded_stream_U" SOURCE="accelerator_v2.cpp:249" URAM="0" VARIABLE="padded_stream"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="memory" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="gray_stream_U" SOURCE="accelerator_v2.cpp:250" URAM="0" VARIABLE="gray_stream"/>
             </BindNodes>
         </Module>
     </ModuleInformation>
@@ -2139,7 +2139,7 @@
         <FIFOInst>
             <Name>bgr_stream_U</Name>
             <ParentInst/>
-            <StaticDepth>5120</StaticDepth>
+            <StaticDepth>2560</StaticDepth>
             <RuntimeDepth>mOutPtr</RuntimeDepth>
             <InterfaceList>
                 <Interface>clk</Interface>
@@ -3398,39 +3398,39 @@
         <Pragma type="array_partition" location="../resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp:1308" status="valid" parentFunction="gaussianblur" variable="weights" isDirective="0" options="variable=weights complete dim=1"/>
         <Pragma type="array_partition" location="../resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp:1317" status="valid" parentFunction="gaussianblur" variable="weights" isDirective="0" options="variable=weights complete dim=1"/>
         <Pragma type="array_partition" location="../resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp:1326" status="valid" parentFunction="gaussianblur" variable="weights" isDirective="0" options="variable=weights complete dim=1"/>
-        <Pragma type="inline" location="accelerator_v2.cpp:37" status="valid" parentFunction="unpack" variable="" isDirective="0" options="off"/>
-        <Pragma type="pipeline" location="accelerator_v2.cpp:55" status="valid" parentFunction="unpack" variable="" isDirective="0" options="II=1"/>
-        <Pragma type="inline" location="accelerator_v2.cpp:85" status="valid" parentFunction="pad" variable="" isDirective="0" options="off"/>
-        <Pragma type="array_partition" location="accelerator_v2.cpp:88" status="valid" parentFunction="pad" variable="row_buf" isDirective="0" options="variable=row_buf complete dim=1"/>
-        <Pragma type="bind_storage" location="accelerator_v2.cpp:89" status="valid" parentFunction="pad" variable="row_buf" isDirective="0" options="variable=row_buf type=RAM_2P impl=BRAM"/>
-        <Pragma type="pipeline" location="accelerator_v2.cpp:94" status="valid" parentFunction="pad" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="accelerator_v2.cpp:33" status="valid" parentFunction="unpack" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="accelerator_v2.cpp:50" status="valid" parentFunction="unpack" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="accelerator_v2.cpp:73" status="valid" parentFunction="pad" variable="" isDirective="0" options="off"/>
+        <Pragma type="array_partition" location="accelerator_v2.cpp:76" status="valid" parentFunction="pad" variable="row_buf" isDirective="0" options="variable=row_buf complete dim=1"/>
+        <Pragma type="bind_storage" location="accelerator_v2.cpp:77" status="valid" parentFunction="pad" variable="row_buf" isDirective="0" options="variable=row_buf type=RAM_2P impl=BRAM"/>
+        <Pragma type="pipeline" location="accelerator_v2.cpp:81" status="valid" parentFunction="pad" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="pipeline" location="accelerator_v2.cpp:90" status="valid" parentFunction="pad" variable="" isDirective="0" options="II=1"/>
         <Pragma type="pipeline" location="accelerator_v2.cpp:104" status="valid" parentFunction="pad" variable="" isDirective="0" options="II=1"/>
-        <Pragma type="pipeline" location="accelerator_v2.cpp:119" status="valid" parentFunction="pad" variable="" isDirective="0" options="II=1"/>
-        <Pragma type="pipeline" location="accelerator_v2.cpp:126" status="valid" parentFunction="pad" variable="" isDirective="0" options="II=1"/>
-        <Pragma type="pipeline" location="accelerator_v2.cpp:139" status="valid" parentFunction="pad" variable="" isDirective="0" options="II=1"/>
-        <Pragma type="inline" location="accelerator_v2.cpp:155" status="valid" parentFunction="stream_to_mat" variable="" isDirective="0" options="off"/>
-        <Pragma type="pipeline" location="accelerator_v2.cpp:158" status="valid" parentFunction="stream_to_mat" variable="" isDirective="0" options="II=1"/>
-        <Pragma type="inline" location="accelerator_v2.cpp:170" status="valid" parentFunction="mat_to_stream" variable="" isDirective="0" options="off"/>
-        <Pragma type="pipeline" location="accelerator_v2.cpp:173" status="valid" parentFunction="mat_to_stream" variable="" isDirective="0" options="II=1"/>
-        <Pragma type="dataflow" location="accelerator_v2.cpp:189" status="valid" parentFunction="process_pixels" variable="" isDirective="0" options=""/>
-        <Pragma type="dependence" location="accelerator_v2.cpp:199" status="valid" parentFunction="process_pixels" variable="gray_mat" isDirective="0" options="variable=gray_mat inter false"/>
-        <Pragma type="dependence" location="accelerator_v2.cpp:200" status="valid" parentFunction="process_pixels" variable="blurred_mat" isDirective="0" options="variable=blurred_mat inter false"/>
-        <Pragma type="inline" location="accelerator_v2.cpp:218" status="valid" parentFunction="repack" variable="" isDirective="0" options="off"/>
-        <Pragma type="pipeline" location="accelerator_v2.cpp:225" status="valid" parentFunction="repack" variable="" isDirective="0" options="II=1"/>
-        <Pragma type="pipeline" location="accelerator_v2.cpp:245" status="valid" parentFunction="repack" variable="" isDirective="0" options="II=1"/>
-        <Pragma type="unroll" location="accelerator_v2.cpp:254" status="valid" parentFunction="repack" variable="" isDirective="0" options=""/>
-        <Pragma type="interface" location="accelerator_v2.cpp:273" status="valid" parentFunction="accelerator_v2" variable="in_stream" isDirective="0" options="axis port=in_stream"/>
-        <Pragma type="interface" location="accelerator_v2.cpp:274" status="valid" parentFunction="accelerator_v2" variable="out_stream" isDirective="0" options="axis port=out_stream"/>
-        <Pragma type="interface" location="accelerator_v2.cpp:275" status="valid" parentFunction="accelerator_v2" variable="in_breath" isDirective="0" options="ap_none port=in_breath"/>
-        <Pragma type="interface" location="accelerator_v2.cpp:276" status="valid" parentFunction="accelerator_v2" variable="out_breath" isDirective="0" options="ap_none port=out_breath"/>
-        <Pragma type="interface" location="accelerator_v2.cpp:277" status="valid" parentFunction="accelerator_v2" variable="return" isDirective="0" options="s_axilite port=return bundle=CTRL"/>
-        <Pragma type="dataflow" location="accelerator_v2.cpp:278" status="valid" parentFunction="accelerator_v2" variable="" isDirective="0" options=""/>
-        <Pragma type="stream" location="accelerator_v2.cpp:284" status="valid" parentFunction="accelerator_v2" variable="bgr_stream" isDirective="0" options="variable=bgr_stream depth=5120"/>
-        <Pragma type="stream" location="accelerator_v2.cpp:285" status="valid" parentFunction="accelerator_v2" variable="padded_stream" isDirective="0" options="variable=padded_stream depth=3864"/>
-        <Pragma type="stream" location="accelerator_v2.cpp:286" status="valid" parentFunction="accelerator_v2" variable="gray_stream" isDirective="0" options="variable=gray_stream depth=3864"/>
+        <Pragma type="pipeline" location="accelerator_v2.cpp:111" status="valid" parentFunction="pad" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="pipeline" location="accelerator_v2.cpp:123" status="valid" parentFunction="pad" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="accelerator_v2.cpp:136" status="valid" parentFunction="stream_to_mat" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="accelerator_v2.cpp:139" status="valid" parentFunction="stream_to_mat" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="accelerator_v2.cpp:151" status="valid" parentFunction="mat_to_stream" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="accelerator_v2.cpp:154" status="valid" parentFunction="mat_to_stream" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="dataflow" location="accelerator_v2.cpp:166" status="valid" parentFunction="process_pixels" variable="" isDirective="0" options=""/>
+        <Pragma type="dependence" location="accelerator_v2.cpp:175" status="valid" parentFunction="process_pixels" variable="gray_mat" isDirective="0" options="variable=gray_mat inter false"/>
+        <Pragma type="dependence" location="accelerator_v2.cpp:176" status="valid" parentFunction="process_pixels" variable="blurred_mat" isDirective="0" options="variable=blurred_mat inter false"/>
+        <Pragma type="inline" location="accelerator_v2.cpp:189" status="valid" parentFunction="repack" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="accelerator_v2.cpp:196" status="valid" parentFunction="repack" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="pipeline" location="accelerator_v2.cpp:216" status="valid" parentFunction="repack" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="unroll" location="accelerator_v2.cpp:225" status="valid" parentFunction="repack" variable="" isDirective="0" options=""/>
+        <Pragma type="interface" location="accelerator_v2.cpp:241" status="valid" parentFunction="accelerator_v2" variable="in_stream" isDirective="0" options="axis port=in_stream"/>
+        <Pragma type="interface" location="accelerator_v2.cpp:242" status="valid" parentFunction="accelerator_v2" variable="out_stream" isDirective="0" options="axis port=out_stream"/>
+        <Pragma type="interface" location="accelerator_v2.cpp:243" status="valid" parentFunction="accelerator_v2" variable="in_breath" isDirective="0" options="ap_none port=in_breath"/>
+        <Pragma type="interface" location="accelerator_v2.cpp:244" status="valid" parentFunction="accelerator_v2" variable="out_breath" isDirective="0" options="ap_none port=out_breath"/>
+        <Pragma type="interface" location="accelerator_v2.cpp:245" status="valid" parentFunction="accelerator_v2" variable="return" isDirective="0" options="s_axilite port=return bundle=CTRL"/>
+        <Pragma type="dataflow" location="accelerator_v2.cpp:246" status="valid" parentFunction="accelerator_v2" variable="" isDirective="0" options=""/>
+        <Pragma type="stream" location="accelerator_v2.cpp:252" status="valid" parentFunction="accelerator_v2" variable="bgr_stream" isDirective="0" options="variable=bgr_stream depth=2560"/>
+        <Pragma type="stream" location="accelerator_v2.cpp:253" status="valid" parentFunction="accelerator_v2" variable="padded_stream" isDirective="0" options="variable=padded_stream depth=3864"/>
+        <Pragma type="stream" location="accelerator_v2.cpp:254" status="valid" parentFunction="accelerator_v2" variable="gray_stream" isDirective="0" options="variable=gray_stream depth=3864"/>
     </PragmaReport>
     <AutoPragmaReport>
-        <AutoPragma type="array_partition" parentFunction="repack" options="dim=1 type=cyclic factor=2 variable=row_pixels" pragmaLocId="accelerator_v2.cpp:0:1" srcPragmaType="pipeline" srcPragmaLoc="accelerator_v2.cpp:245" srcPragmaSource="pragma" srcIsDirective="0" variable="row_pixels" varLoc=""/>
+        <AutoPragma type="array_partition" parentFunction="repack" options="dim=1 type=cyclic factor=2 variable=row_pixels" pragmaLocId="accelerator_v2.cpp:0:1" srcPragmaType="pipeline" srcPragmaLoc="accelerator_v2.cpp:216" srcPragmaSource="pragma" srcIsDirective="0" variable="row_pixels" varLoc=""/>
     </AutoPragmaReport>
 </profile>
 

@@ -106,7 +106,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>4201428208</coreId>
+              <coreId>3844576080</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -142,7 +142,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>4202058400</coreId>
+              <coreId>3846196704</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -178,7 +178,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>542329928</coreId>
+              <coreId>3845475384</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -214,7 +214,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>43</coreId>
+              <coreId>3844761376</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -250,7 +250,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>4202190144</coreId>
+              <coreId>3847400464</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -322,7 +322,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>128203650</coreId>
+              <coreId>1397508187</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -358,7 +358,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>4200621808</coreId>
+              <coreId>43</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>16</bitwidth>
@@ -394,7 +394,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1330007625</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -430,7 +430,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>128269369</coreId>
+              <coreId>3846466928</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -466,7 +466,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1330007625</coreId>
+              <coreId>544108393</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -502,7 +502,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>4201816112</coreId>
+              <coreId>469209964</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -574,7 +574,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1397508187</coreId>
+              <coreId>3846817776</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -599,7 +599,7 @@
               <name>bgr_stream</name>
               <fileName>accelerator_v2.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>280</lineNumber>
+              <lineNumber>248</lineNumber>
               <contextFuncName>accelerator_v2</contextFuncName>
               <contextNormFuncName>accelerator_v2</contextNormFuncName>
               <inlineStackInfo>
@@ -615,7 +615,7 @@
                         <first>accelerator_v2.cpp</first>
                         <second>accelerator_v2</second>
                       </first>
-                      <second>280</second>
+                      <second>248</second>
                     </item>
                   </second>
                 </item>
@@ -627,9 +627,9 @@
               <implIndex>memory</implIndex>
               <coreName>FIFO</coreName>
               <isStorage>1</isStorage>
-              <storageDepth>5120</storageDepth>
+              <storageDepth>2560</storageDepth>
               <coreId>78</coreId>
-              <rtlModuleName>accelerator_v2_fifo_w24_d5120_A</rtlModuleName>
+              <rtlModuleName>accelerator_v2_fifo_w24_d2560_A</rtlModuleName>
             </Obj>
             <bitwidth>24</bitwidth>
           </Value>
@@ -655,7 +655,7 @@
               <name>padded_stream</name>
               <fileName>accelerator_v2.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>281</lineNumber>
+              <lineNumber>249</lineNumber>
               <contextFuncName>accelerator_v2</contextFuncName>
               <contextNormFuncName>accelerator_v2</contextNormFuncName>
               <inlineStackInfo>
@@ -671,7 +671,7 @@
                         <first>accelerator_v2.cpp</first>
                         <second>accelerator_v2</second>
                       </first>
-                      <second>281</second>
+                      <second>249</second>
                     </item>
                   </second>
                 </item>
@@ -711,7 +711,7 @@
               <name>gray_stream</name>
               <fileName>accelerator_v2.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>282</lineNumber>
+              <lineNumber>250</lineNumber>
               <contextFuncName>accelerator_v2</contextFuncName>
               <contextNormFuncName>accelerator_v2</contextNormFuncName>
               <inlineStackInfo>
@@ -727,7 +727,7 @@
                         <first>accelerator_v2.cpp</first>
                         <second>accelerator_v2</second>
                       </first>
-                      <second>282</second>
+                      <second>250</second>
                     </item>
                   </second>
                 </item>
@@ -764,10 +764,10 @@
             <Obj>
               <type>0</type>
               <id>51</id>
-              <name>_ln288</name>
+              <name>_ln256</name>
               <fileName>accelerator_v2.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>288</lineNumber>
+              <lineNumber>256</lineNumber>
               <contextFuncName>accelerator_v2</contextFuncName>
               <contextNormFuncName>accelerator_v2</contextNormFuncName>
               <inlineStackInfo>
@@ -783,7 +783,7 @@
                         <first>accelerator_v2.cpp</first>
                         <second>accelerator_v2</second>
                       </first>
-                      <second>288</second>
+                      <second>256</second>
                     </item>
                   </second>
                 </item>
@@ -796,7 +796,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>4202391504</coreId>
+              <coreId>462410040</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -829,10 +829,10 @@
             <Obj>
               <type>0</type>
               <id>52</id>
-              <name>_ln289</name>
+              <name>_ln257</name>
               <fileName>accelerator_v2.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>289</lineNumber>
+              <lineNumber>257</lineNumber>
               <contextFuncName>accelerator_v2</contextFuncName>
               <contextNormFuncName>accelerator_v2</contextNormFuncName>
               <inlineStackInfo>
@@ -848,7 +848,7 @@
                         <first>accelerator_v2.cpp</first>
                         <second>accelerator_v2</second>
                       </first>
-                      <second>289</second>
+                      <second>257</second>
                     </item>
                   </second>
                 </item>
@@ -861,7 +861,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>123309074</coreId>
+              <coreId>3846547520</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -889,10 +889,10 @@
             <Obj>
               <type>0</type>
               <id>53</id>
-              <name>_ln290</name>
+              <name>_ln258</name>
               <fileName>accelerator_v2.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>290</lineNumber>
+              <lineNumber>258</lineNumber>
               <contextFuncName>accelerator_v2</contextFuncName>
               <contextNormFuncName>accelerator_v2</contextNormFuncName>
               <inlineStackInfo>
@@ -908,7 +908,7 @@
                         <first>accelerator_v2.cpp</first>
                         <second>accelerator_v2</second>
                       </first>
-                      <second>290</second>
+                      <second>258</second>
                     </item>
                   </second>
                 </item>
@@ -921,7 +921,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>128026930</coreId>
+              <coreId>464567182</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -949,10 +949,10 @@
             <Obj>
               <type>0</type>
               <id>54</id>
-              <name>_ln291</name>
+              <name>_ln259</name>
               <fileName>accelerator_v2.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>291</lineNumber>
+              <lineNumber>259</lineNumber>
               <contextFuncName>accelerator_v2</contextFuncName>
               <contextNormFuncName>accelerator_v2</contextNormFuncName>
               <inlineStackInfo>
@@ -968,7 +968,7 @@
                         <first>accelerator_v2.cpp</first>
                         <second>accelerator_v2</second>
                       </first>
-                      <second>291</second>
+                      <second>259</second>
                     </item>
                   </second>
                 </item>
@@ -981,7 +981,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>4201816112</coreId>
+              <coreId>468819740</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -1016,10 +1016,10 @@
             <Obj>
               <type>0</type>
               <id>55</id>
-              <name>_ln292</name>
+              <name>_ln260</name>
               <fileName>accelerator_v2.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>292</lineNumber>
+              <lineNumber>260</lineNumber>
               <contextFuncName>accelerator_v2</contextFuncName>
               <contextNormFuncName>accelerator_v2</contextNormFuncName>
               <inlineStackInfo>
@@ -1035,7 +1035,7 @@
                         <first>accelerator_v2.cpp</first>
                         <second>accelerator_v2</second>
                       </first>
-                      <second>292</second>
+                      <second>260</second>
                     </item>
                   </second>
                 </item>
@@ -1048,7 +1048,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>4201086864</coreId>
+              <coreId>3846547520</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -1093,7 +1093,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>4294967295</coreId>
+              <coreId>461756680</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -1124,7 +1124,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>4200783344</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -1155,7 +1155,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>128231776</coreId>
+              <coreId>3846331696</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -1186,7 +1186,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>4200420368</coreId>
+              <coreId>3846547520</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -1217,7 +1217,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>6775156</coreId>
+              <coreId>3845883984</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -1251,7 +1251,7 @@
             <coreName/>
             <isStorage>0</isStorage>
             <storageDepth>0</storageDepth>
-            <coreId>4201566432</coreId>
+            <coreId>3846547520</coreId>
             <rtlModuleName/>
           </Obj>
           <node_objs>
@@ -1539,8 +1539,8 @@
         <mDepth>-1</mDepth>
         <mMinTripCount>-1</mMinTripCount>
         <mMaxTripCount>-1</mMaxTripCount>
-        <mMinLatency>922081</mMinLatency>
-        <mMaxLatency>922081</mMaxLatency>
+        <mMinLatency>924001</mMinLatency>
+        <mMaxLatency>927887</mMaxLatency>
         <mIsDfPipe>1</mIsDfPipe>
         <mDfPipe class_id="23" tracking_level="1" version="0" object_id="_67">
           <port_list class_id="24" tracking_level="0" version="0">
@@ -1919,10 +1919,10 @@
               <name>bgr_stream</name>
               <ssdmobj_id>40</ssdmobj_id>
               <ctype>0</ctype>
-              <depth>5120</depth>
+              <depth>2560</depth>
               <bitwidth>24</bitwidth>
               <suggested_type>0</suggested_type>
-              <suggested_depth>5120</suggested_depth>
+              <suggested_depth>2560</suggested_depth>
               <source_list>
                 <count>1</count>
                 <item_version>0</item_version>
@@ -2600,11 +2600,11 @@
             <item_version>0</item_version>
             <item>
               <first>FF</first>
-              <second>196</second>
+              <second>192</second>
             </item>
             <item>
               <first>LUT</first>
-              <second>746</second>
+              <second>738</second>
             </item>
           </second>
         </item>
@@ -2669,7 +2669,7 @@
             <item_version>0</item_version>
             <item>
               <first>(0Depth)</first>
-              <second>5120</second>
+              <second>2560</second>
             </item>
             <item>
               <first>(1Bits)</first>
@@ -2677,11 +2677,11 @@
             </item>
             <item>
               <first>(2Size:D*B)</first>
-              <second>122880</second>
+              <second>61440</second>
             </item>
             <item>
               <first>BRAM</first>
-              <second>10</second>
+              <second>6</second>
             </item>
             <item>
               <first>FF</first>

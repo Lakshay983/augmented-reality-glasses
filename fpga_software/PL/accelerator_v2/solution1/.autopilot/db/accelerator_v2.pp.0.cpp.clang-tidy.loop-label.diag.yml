@@ -1538,179 +1538,179 @@ Diagnostics:
         Length:          0
         ReplacementText: 'VITIS_LOOP_1249_4: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_39_1:  '
-    FileOffset:      39
+    Message:         'Added loop label VITIS_LOOP_35_1:  '
+    FileOffset:      35
     FilePath:        accelerator_v2.cpp
     Replacements:    
       - FilePath:        /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL/accelerator_v2/solution1/.autopilot/db/accelerator_v2.pp.0.cpp
-        Offset:          1685877
+        Offset:          1685873
         Length:          0
-        ReplacementText: 'VITIS_LOOP_39_1: '
+        ReplacementText: 'VITIS_LOOP_35_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_53_2:  '
-    FileOffset:      53
+    Message:         'Added loop label VITIS_LOOP_48_2:  '
+    FileOffset:      48
     FilePath:        accelerator_v2.cpp
     Replacements:    
       - FilePath:        /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL/accelerator_v2/solution1/.autopilot/db/accelerator_v2.pp.0.cpp
-        Offset:          1686211
+        Offset:          1686173
         Length:          0
-        ReplacementText: 'VITIS_LOOP_53_2: '
+        ReplacementText: 'VITIS_LOOP_48_2: '
   - DiagnosticName:  clang-diagnostic-error
     Message:         'Invalid Directive: for current device, RAM_2P + BRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      77
+    FilePath:        accelerator_v2.cpp
+    Replacements:    
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_79_1:  '
+    FileOffset:      79
+    FilePath:        accelerator_v2.cpp
+    Replacements:    
+      - FilePath:        /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL/accelerator_v2/solution1/.autopilot/db/accelerator_v2.pp.0.cpp
+        Offset:          1687097
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_79_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_80_2:  '
+    FileOffset:      80
+    FilePath:        accelerator_v2.cpp
+    Replacements:    
+      - FilePath:        /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL/accelerator_v2/solution1/.autopilot/db/accelerator_v2.pp.0.cpp
+        Offset:          1687135
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_80_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_86_3:  '
+    FileOffset:      86
+    FilePath:        accelerator_v2.cpp
+    Replacements:    
+      - FilePath:        /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL/accelerator_v2/solution1/.autopilot/db/accelerator_v2.pp.0.cpp
+        Offset:          1687242
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_86_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_89_4:  '
     FileOffset:      89
     FilePath:        accelerator_v2.cpp
     Replacements:    
+      - FilePath:        /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL/accelerator_v2/solution1/.autopilot/db/accelerator_v2.pp.0.cpp
+        Offset:          1687349
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_89_4: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_92_1:  '
-    FileOffset:      92
+    Message:         'Added loop label VITIS_LOOP_97_5:  '
+    FileOffset:      97
     FilePath:        accelerator_v2.cpp
     Replacements:    
       - FilePath:        /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL/accelerator_v2/solution1/.autopilot/db/accelerator_v2.pp.0.cpp
-        Offset:          1687193
+        Offset:          1687533
         Length:          0
-        ReplacementText: 'VITIS_LOOP_92_1: '
+        ReplacementText: 'VITIS_LOOP_97_5: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_93_2:  '
-    FileOffset:      93
-    FilePath:        accelerator_v2.cpp
-    Replacements:    
-      - FilePath:        /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL/accelerator_v2/solution1/.autopilot/db/accelerator_v2.pp.0.cpp
-        Offset:          1687231
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_93_2: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_100_3:  '
-    FileOffset:      100
-    FilePath:        accelerator_v2.cpp
-    Replacements:    
-      - FilePath:        /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL/accelerator_v2/solution1/.autopilot/db/accelerator_v2.pp.0.cpp
-        Offset:          1687339
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_100_3: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_103_4:  '
+    Message:         'Added loop label VITIS_LOOP_103_6:  '
     FileOffset:      103
     FilePath:        accelerator_v2.cpp
     Replacements:    
       - FilePath:        /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL/accelerator_v2/solution1/.autopilot/db/accelerator_v2.pp.0.cpp
-        Offset:          1687446
+        Offset:          1687685
         Length:          0
-        ReplacementText: 'VITIS_LOOP_103_4: '
+        ReplacementText: 'VITIS_LOOP_103_6: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_112_5:  '
-    FileOffset:      112
+    Message:         'Added loop label VITIS_LOOP_110_7:  '
+    FileOffset:      110
     FilePath:        accelerator_v2.cpp
     Replacements:    
       - FilePath:        /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL/accelerator_v2/solution1/.autopilot/db/accelerator_v2.pp.0.cpp
-        Offset:          1687631
+        Offset:          1687880
         Length:          0
-        ReplacementText: 'VITIS_LOOP_112_5: '
+        ReplacementText: 'VITIS_LOOP_110_7: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_118_6:  '
+    Message:         'Added loop label VITIS_LOOP_118_8:  '
     FileOffset:      118
     FilePath:        accelerator_v2.cpp
     Replacements:    
       - FilePath:        /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL/accelerator_v2/solution1/.autopilot/db/accelerator_v2.pp.0.cpp
-        Offset:          1687783
+        Offset:          1688073
         Length:          0
-        ReplacementText: 'VITIS_LOOP_118_6: '
+        ReplacementText: 'VITIS_LOOP_118_8: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_125_7:  '
-    FileOffset:      125
+    Message:         'Added loop label VITIS_LOOP_122_9:  '
+    FileOffset:      122
     FilePath:        accelerator_v2.cpp
     Replacements:    
       - FilePath:        /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL/accelerator_v2/solution1/.autopilot/db/accelerator_v2.pp.0.cpp
-        Offset:          1687978
+        Offset:          1688242
         Length:          0
-        ReplacementText: 'VITIS_LOOP_125_7: '
+        ReplacementText: 'VITIS_LOOP_122_9: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_134_8:  '
-    FileOffset:      134
+    Message:         'Added loop label VITIS_LOOP_137_1:  '
+    FileOffset:      137
     FilePath:        accelerator_v2.cpp
     Replacements:    
       - FilePath:        /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL/accelerator_v2/solution1/.autopilot/db/accelerator_v2.pp.0.cpp
-        Offset:          1688172
+        Offset:          1688623
         Length:          0
-        ReplacementText: 'VITIS_LOOP_134_8: '
+        ReplacementText: 'VITIS_LOOP_137_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_138_9:  '
+    Message:         'Added loop label VITIS_LOOP_138_2:  '
     FileOffset:      138
     FilePath:        accelerator_v2.cpp
     Replacements:    
       - FilePath:        /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL/accelerator_v2/solution1/.autopilot/db/accelerator_v2.pp.0.cpp
-        Offset:          1688341
+        Offset:          1688664
         Length:          0
-        ReplacementText: 'VITIS_LOOP_138_9: '
+        ReplacementText: 'VITIS_LOOP_138_2: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_156_1:  '
-    FileOffset:      156
+    Message:         'Added loop label VITIS_LOOP_152_1:  '
+    FileOffset:      152
     FilePath:        accelerator_v2.cpp
     Replacements:    
       - FilePath:        /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL/accelerator_v2/solution1/.autopilot/db/accelerator_v2.pp.0.cpp
-        Offset:          1688725
+        Offset:          1689014
         Length:          0
-        ReplacementText: 'VITIS_LOOP_156_1: '
+        ReplacementText: 'VITIS_LOOP_152_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_157_2:  '
-    FileOffset:      157
+    Message:         'Added loop label VITIS_LOOP_153_2:  '
+    FileOffset:      153
     FilePath:        accelerator_v2.cpp
     Replacements:    
       - FilePath:        /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL/accelerator_v2/solution1/.autopilot/db/accelerator_v2.pp.0.cpp
-        Offset:          1688766
+        Offset:          1689055
         Length:          0
-        ReplacementText: 'VITIS_LOOP_157_2: '
+        ReplacementText: 'VITIS_LOOP_153_2: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_171_1:  '
-    FileOffset:      171
+    Message:         'Added loop label VITIS_LOOP_192_1:  '
+    FileOffset:      192
     FilePath:        accelerator_v2.cpp
     Replacements:    
       - FilePath:        /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL/accelerator_v2/solution1/.autopilot/db/accelerator_v2.pp.0.cpp
-        Offset:          1689116
+        Offset:          1690301
         Length:          0
-        ReplacementText: 'VITIS_LOOP_171_1: '
+        ReplacementText: 'VITIS_LOOP_192_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_172_2:  '
-    FileOffset:      172
+    Message:         'Added loop label VITIS_LOOP_195_2:  '
+    FileOffset:      195
     FilePath:        accelerator_v2.cpp
     Replacements:    
       - FilePath:        /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL/accelerator_v2/solution1/.autopilot/db/accelerator_v2.pp.0.cpp
-        Offset:          1689157
+        Offset:          1690397
         Length:          0
-        ReplacementText: 'VITIS_LOOP_172_2: '
+        ReplacementText: 'VITIS_LOOP_195_2: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_221_1:  '
-    FileOffset:      221
+    Message:         'Added loop label VITIS_LOOP_215_3:  '
+    FileOffset:      215
     FilePath:        accelerator_v2.cpp
     Replacements:    
       - FilePath:        /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL/accelerator_v2/solution1/.autopilot/db/accelerator_v2.pp.0.cpp
-        Offset:          1690413
+        Offset:          1690937
         Length:          0
-        ReplacementText: 'VITIS_LOOP_221_1: '
+        ReplacementText: 'VITIS_LOOP_215_3: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_224_2:  '
+    Message:         'Added loop label VITIS_LOOP_224_4:  '
     FileOffset:      224
     FilePath:        accelerator_v2.cpp
     Replacements:    
       - FilePath:        /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL/accelerator_v2/solution1/.autopilot/db/accelerator_v2.pp.0.cpp
-        Offset:          1690509
+        Offset:          1691193
         Length:          0
-        ReplacementText: 'VITIS_LOOP_224_2: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_244_3:  '
-    FileOffset:      244
-    FilePath:        accelerator_v2.cpp
-    Replacements:    
-      - FilePath:        /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL/accelerator_v2/solution1/.autopilot/db/accelerator_v2.pp.0.cpp
-        Offset:          1691049
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_244_3: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_253_4:  '
-    FileOffset:      253
-    FilePath:        accelerator_v2.cpp
-    Replacements:    
-      - FilePath:        /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL/accelerator_v2/solution1/.autopilot/db/accelerator_v2.pp.0.cpp
-        Offset:          1691305
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_253_4: '
+        ReplacementText: 'VITIS_LOOP_224_4: '
 ...

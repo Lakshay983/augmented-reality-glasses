@@ -106,10 +106,10 @@ entry:9 %blurred_mat_data = alloca i64 1
 
 <Node id="15" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="24">
 <![CDATA[
-entry:12 %call_ln195 = call void @stream_to_mat, i24 %padded_stream2, i24 %bgr_mat_data
+entry:12 %call_ln172 = call void @stream_to_mat, i24 %padded_stream2, i24 %bgr_mat_data
 
 ]]></Node>
-<StgValue><ssdm name="call_ln195"/></StgValue>
+<StgValue><ssdm name="call_ln172"/></StgValue>
 </operation>
 </state>
 
@@ -124,10 +124,10 @@ entry:12 %call_ln195 = call void @stream_to_mat, i24 %padded_stream2, i24 %bgr_m
 
 <Node id="15" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="24">
 <![CDATA[
-entry:12 %call_ln195 = call void @stream_to_mat, i24 %padded_stream2, i24 %bgr_mat_data
+entry:12 %call_ln172 = call void @stream_to_mat, i24 %padded_stream2, i24 %bgr_mat_data
 
 ]]></Node>
-<StgValue><ssdm name="call_ln195"/></StgValue>
+<StgValue><ssdm name="call_ln172"/></StgValue>
 </operation>
 </state>
 
@@ -142,10 +142,10 @@ entry:12 %call_ln195 = call void @stream_to_mat, i24 %padded_stream2, i24 %bgr_m
 
 <Node id="16" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="8" op_3_bw="0" op_4_bw="0">
 <![CDATA[
-entry:13 %call_ln197 = call void @bgr2gray<9, 0, 484, 644, 1, 3220, 3220>, i24 %bgr_mat_data, i8 %gray_mat_data
+entry:13 %call_ln173 = call void @bgr2gray<9, 0, 484, 644, 1, 3220, 3220>, i24 %bgr_mat_data, i8 %gray_mat_data
 
 ]]></Node>
-<StgValue><ssdm name="call_ln197"/></StgValue>
+<StgValue><ssdm name="call_ln173"/></StgValue>
 </operation>
 </state>
 
@@ -160,10 +160,10 @@ entry:13 %call_ln197 = call void @bgr2gray<9, 0, 484, 644, 1, 3220, 3220>, i24 %
 
 <Node id="16" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="8" op_3_bw="0" op_4_bw="0">
 <![CDATA[
-entry:13 %call_ln197 = call void @bgr2gray<9, 0, 484, 644, 1, 3220, 3220>, i24 %bgr_mat_data, i8 %gray_mat_data
+entry:13 %call_ln173 = call void @bgr2gray<9, 0, 484, 644, 1, 3220, 3220>, i24 %bgr_mat_data, i8 %gray_mat_data
 
 ]]></Node>
-<StgValue><ssdm name="call_ln197"/></StgValue>
+<StgValue><ssdm name="call_ln173"/></StgValue>
 </operation>
 </state>
 
@@ -178,10 +178,10 @@ entry:13 %call_ln197 = call void @bgr2gray<9, 0, 484, 644, 1, 3220, 3220>, i24 %
 
 <Node id="17" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="8" op_3_bw="0">
 <![CDATA[
-entry:14 %call_ln202 = call void @GaussianBlur<5, 1, 0, 484, 644, 1, 3220, 3220>, i8 %gray_mat_data, i8 %blurred_mat_data
+entry:14 %call_ln178 = call void @GaussianBlur<5, 1, 0, 484, 644, 1, 3220, 3220>, i8 %gray_mat_data, i8 %blurred_mat_data
 
 ]]></Node>
-<StgValue><ssdm name="call_ln202"/></StgValue>
+<StgValue><ssdm name="call_ln178"/></StgValue>
 </operation>
 </state>
 
@@ -196,10 +196,10 @@ entry:14 %call_ln202 = call void @GaussianBlur<5, 1, 0, 484, 644, 1, 3220, 3220>
 
 <Node id="17" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="8" op_3_bw="0">
 <![CDATA[
-entry:14 %call_ln202 = call void @GaussianBlur<5, 1, 0, 484, 644, 1, 3220, 3220>, i8 %gray_mat_data, i8 %blurred_mat_data
+entry:14 %call_ln178 = call void @GaussianBlur<5, 1, 0, 484, 644, 1, 3220, 3220>, i8 %gray_mat_data, i8 %blurred_mat_data
 
 ]]></Node>
-<StgValue><ssdm name="call_ln202"/></StgValue>
+<StgValue><ssdm name="call_ln178"/></StgValue>
 </operation>
 </state>
 
@@ -214,10 +214,10 @@ entry:14 %call_ln202 = call void @GaussianBlur<5, 1, 0, 484, 644, 1, 3220, 3220>
 
 <Node id="18" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="8" op_3_bw="0">
 <![CDATA[
-entry:15 %call_ln205 = call void @mat_to_stream, i8 %blurred_mat_data, i8 %gray_stream3
+entry:15 %call_ln181 = call void @mat_to_stream, i8 %blurred_mat_data, i8 %gray_stream3
 
 ]]></Node>
-<StgValue><ssdm name="call_ln205"/></StgValue>
+<StgValue><ssdm name="call_ln181"/></StgValue>
 </operation>
 </state>
 
@@ -367,10 +367,10 @@ entry:11 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %bl
 
 <Node id="18" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="8" op_3_bw="0">
 <![CDATA[
-entry:15 %call_ln205 = call void @mat_to_stream, i8 %blurred_mat_data, i8 %gray_stream3
+entry:15 %call_ln181 = call void @mat_to_stream, i8 %blurred_mat_data, i8 %gray_stream3
 
 ]]></Node>
-<StgValue><ssdm name="call_ln205"/></StgValue>
+<StgValue><ssdm name="call_ln181"/></StgValue>
 </operation>
 
 <operation id="29" st_id="8" stage="1" lat="1">
@@ -382,10 +382,10 @@ entry:15 %call_ln205 = call void @mat_to_stream, i8 %blurred_mat_data, i8 %gray_
 
 <Node id="19" bw="0">
 <![CDATA[
-entry:16 %ret_ln206 = ret
+entry:16 %ret_ln182 = ret
 
 ]]></Node>
-<StgValue><ssdm name="ret_ln206"/></StgValue>
+<StgValue><ssdm name="ret_ln182"/></StgValue>
 </operation>
 </state>
 </state_list>
@@ -408,47 +408,47 @@ entry:16 %ret_ln206 = ret
 </dataflow>
 <dataflow id="43" from="StgValue_40" to="blurred_mat_data" fromId="40" toId="11">
 </dataflow>
-<dataflow id="45" from="stream_to_mat" to="call_ln195" fromId="44" toId="12">
+<dataflow id="45" from="stream_to_mat" to="call_ln172" fromId="44" toId="12">
 </dataflow>
-<dataflow id="46" from="padded_stream2" to="call_ln195" fromId="38" toId="12">
+<dataflow id="46" from="padded_stream2" to="call_ln172" fromId="38" toId="12">
 </dataflow>
-<dataflow id="47" from="bgr_mat_data" to="call_ln195" fromId="9" toId="12">
+<dataflow id="47" from="bgr_mat_data" to="call_ln172" fromId="9" toId="12">
 </dataflow>
-<dataflow id="48" from="stream_to_mat" to="call_ln195" fromId="44" toId="13">
+<dataflow id="48" from="stream_to_mat" to="call_ln172" fromId="44" toId="13">
 </dataflow>
-<dataflow id="49" from="padded_stream2" to="call_ln195" fromId="38" toId="13">
+<dataflow id="49" from="padded_stream2" to="call_ln172" fromId="38" toId="13">
 </dataflow>
-<dataflow id="50" from="bgr_mat_data" to="call_ln195" fromId="9" toId="13">
+<dataflow id="50" from="bgr_mat_data" to="call_ln172" fromId="9" toId="13">
 </dataflow>
-<dataflow id="52" from="bgr2gray<9, 0, 484, 644, 1, 3220, 3220>" to="call_ln197" fromId="51" toId="14">
+<dataflow id="52" from="bgr2gray<9, 0, 484, 644, 1, 3220, 3220>" to="call_ln173" fromId="51" toId="14">
 </dataflow>
-<dataflow id="53" from="bgr_mat_data" to="call_ln197" fromId="9" toId="14">
+<dataflow id="53" from="bgr_mat_data" to="call_ln173" fromId="9" toId="14">
 </dataflow>
-<dataflow id="54" from="gray_mat_data" to="call_ln197" fromId="10" toId="14">
+<dataflow id="54" from="gray_mat_data" to="call_ln173" fromId="10" toId="14">
 </dataflow>
-<dataflow id="55" from="bgr2gray<9, 0, 484, 644, 1, 3220, 3220>" to="call_ln197" fromId="51" toId="15">
+<dataflow id="55" from="bgr2gray<9, 0, 484, 644, 1, 3220, 3220>" to="call_ln173" fromId="51" toId="15">
 </dataflow>
-<dataflow id="56" from="bgr_mat_data" to="call_ln197" fromId="9" toId="15">
+<dataflow id="56" from="bgr_mat_data" to="call_ln173" fromId="9" toId="15">
 </dataflow>
-<dataflow id="57" from="gray_mat_data" to="call_ln197" fromId="10" toId="15">
+<dataflow id="57" from="gray_mat_data" to="call_ln173" fromId="10" toId="15">
 </dataflow>
-<dataflow id="59" from="GaussianBlur<5, 1, 0, 484, 644, 1, 3220, 3220>" to="call_ln202" fromId="58" toId="16">
+<dataflow id="59" from="GaussianBlur<5, 1, 0, 484, 644, 1, 3220, 3220>" to="call_ln178" fromId="58" toId="16">
 </dataflow>
-<dataflow id="60" from="gray_mat_data" to="call_ln202" fromId="10" toId="16">
+<dataflow id="60" from="gray_mat_data" to="call_ln178" fromId="10" toId="16">
 </dataflow>
-<dataflow id="61" from="blurred_mat_data" to="call_ln202" fromId="11" toId="16">
+<dataflow id="61" from="blurred_mat_data" to="call_ln178" fromId="11" toId="16">
 </dataflow>
-<dataflow id="62" from="GaussianBlur<5, 1, 0, 484, 644, 1, 3220, 3220>" to="call_ln202" fromId="58" toId="17">
+<dataflow id="62" from="GaussianBlur<5, 1, 0, 484, 644, 1, 3220, 3220>" to="call_ln178" fromId="58" toId="17">
 </dataflow>
-<dataflow id="63" from="gray_mat_data" to="call_ln202" fromId="10" toId="17">
+<dataflow id="63" from="gray_mat_data" to="call_ln178" fromId="10" toId="17">
 </dataflow>
-<dataflow id="64" from="blurred_mat_data" to="call_ln202" fromId="11" toId="17">
+<dataflow id="64" from="blurred_mat_data" to="call_ln178" fromId="11" toId="17">
 </dataflow>
-<dataflow id="66" from="mat_to_stream" to="call_ln205" fromId="65" toId="18">
+<dataflow id="66" from="mat_to_stream" to="call_ln181" fromId="65" toId="18">
 </dataflow>
-<dataflow id="67" from="blurred_mat_data" to="call_ln205" fromId="11" toId="18">
+<dataflow id="67" from="blurred_mat_data" to="call_ln181" fromId="11" toId="18">
 </dataflow>
-<dataflow id="68" from="gray_stream3" to="call_ln205" fromId="39" toId="18">
+<dataflow id="68" from="gray_stream3" to="call_ln181" fromId="39" toId="18">
 </dataflow>
 <dataflow id="70" from="_ssdm_op_SpecDataflowPipeline" to="specdataflowpipeline_ln0" fromId="69" toId="19">
 </dataflow>
@@ -702,11 +702,11 @@ entry:16 %ret_ln206 = ret
 </dataflow>
 <dataflow id="207" from="StgValue_73" to="specinterface_ln0" fromId="73" toId="27">
 </dataflow>
-<dataflow id="208" from="mat_to_stream" to="call_ln205" fromId="65" toId="28">
+<dataflow id="208" from="mat_to_stream" to="call_ln181" fromId="65" toId="28">
 </dataflow>
-<dataflow id="209" from="blurred_mat_data" to="call_ln205" fromId="11" toId="28">
+<dataflow id="209" from="blurred_mat_data" to="call_ln181" fromId="11" toId="28">
 </dataflow>
-<dataflow id="210" from="gray_stream3" to="call_ln205" fromId="39" toId="28">
+<dataflow id="210" from="gray_stream3" to="call_ln181" fromId="39" toId="28">
 </dataflow>
 </dataflows>
 

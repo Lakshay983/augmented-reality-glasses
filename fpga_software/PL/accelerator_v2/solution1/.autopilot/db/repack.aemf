@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1776043566126">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1776050110558">
   <ports id="1" name="gray_stream3" type="PortType" coreId="3621216858" bitwidth="8" iftype="IfTypeRom">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="2" name="out_stream_V_data_V" type="PortType" coreId="4201184112" bitwidth="128" direction="DirOut">
+  <ports id="2" name="out_stream_V_data_V" type="PortType" coreId="3843976704" bitwidth="128" direction="DirOut">
     <dataInputObjs>write</dataInputObjs>
     <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="3" name="out_stream_V_keep_V" type="PortType" coreId="4202359440" bitwidth="16" direction="DirOut">
+  <ports id="3" name="out_stream_V_keep_V" type="PortType" coreId="3845446752" bitwidth="16" direction="DirOut">
     <dataInputObjs>write</dataInputObjs>
     <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="4" name="out_stream_V_strb_V" type="PortType" coreId="4201901776" bitwidth="16" direction="DirOut">
+  <ports id="4" name="out_stream_V_strb_V" type="PortType" coreId="3846065568" bitwidth="16" direction="DirOut">
     <dataInputObjs>write</dataInputObjs>
     <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="5" name="out_stream_V_user_V" type="PortType" coreId="4202359440" bitwidth="1" direction="DirOut">
+  <ports id="5" name="out_stream_V_user_V" type="PortType" coreId="463621101" bitwidth="1" direction="DirOut">
     <dataInputObjs>write</dataInputObjs>
     <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="6" name="out_stream_V_last_V" type="PortType" coreId="0" bitwidth="1" direction="DirOut">
+  <ports id="6" name="out_stream_V_last_V" type="PortType" coreId="443" bitwidth="1" direction="DirOut">
     <dataInputObjs>write</dataInputObjs>
     <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="7" name="out_stream_V_id_V" type="PortType" coreId="4201206544" bitwidth="1" direction="DirOut">
+  <ports id="7" name="out_stream_V_id_V" type="PortType" coreId="1330007625" bitwidth="1" direction="DirOut">
     <dataInputObjs>write</dataInputObjs>
     <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="8" name="out_stream_V_dest_V" type="PortType" coreId="4201206544" bitwidth="1" direction="DirOut">
+  <ports id="8" name="out_stream_V_dest_V" type="PortType" coreId="542329928" bitwidth="1" direction="DirOut">
     <dataInputObjs>write</dataInputObjs>
     <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="9" name="out_breath" type="PortType" coreId="4201206544" bitwidth="1" direction="DirOut">
+  <ports id="9" name="out_breath" type="PortType" coreId="3846001664" bitwidth="1" direction="DirOut">
     <dataInputObjs>write</dataInputObjs>
   </ports>
   <edges id="56" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@ports.8"/>
@@ -100,54 +100,54 @@
   <edges id="230" edge_type="VirtEdge" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.4/@node_objs.0"/>
   <edges id="231" edge_type="VirtEdge" source_obj="//@blocks.2/@node_objs.1" sink_obj="//@blocks.3/@node_objs.5"/>
   <blocks id="19" name="entry" type="BlockType">
-    <controlOutputObjs>VITIS_LOOP_224_2</controlOutputObjs>
+    <controlOutputObjs>VITIS_LOOP_195_2</controlOutputObjs>
     <node_objs xsi:type="cdfg:CdfgNode" id="10" name="r" originalName="r" coreId="959602553" bitwidth="9" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="row_pixels_V" lineNumber="223" originalName="row_pixels.V" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="row_pixels_V_U" coreName="RAM_1WnR" implIndex="auto" control="no" opType="rom_np" coreId="84" contextFuncName="repack" bitwidth="8" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="223" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="repack"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="row_pixels_V" lineNumber="194" originalName="row_pixels.V" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="row_pixels_V_U" coreName="RAM_1WnR" implIndex="auto" control="no" opType="rom_np" coreId="84" contextFuncName="repack" bitwidth="8" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="194" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="repack"/>
       <dataOutputObjs>call</dataOutputObjs>
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="row_pixels_V_1" lineNumber="223" originalName="row_pixels.V" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="row_pixels_V_1_U" coreName="RAM_1WnR" implIndex="auto" control="no" opType="rom_np" coreId="84" contextFuncName="repack" bitwidth="8" opcode="alloca" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="223" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="repack"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="row_pixels_V_1" lineNumber="194" originalName="row_pixels.V" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="row_pixels_V_1_U" coreName="RAM_1WnR" implIndex="auto" control="no" opType="rom_np" coreId="84" contextFuncName="repack" bitwidth="8" opcode="alloca" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="194" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="repack"/>
       <dataOutputObjs>call</dataOutputObjs>
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="out_breath_write_ln219" lineNumber="219" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="4202523120" contextFuncName="repack" opcode="write" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="219" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="repack"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="out_breath_write_ln190" lineNumber="190" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="462817138" contextFuncName="repack" opcode="write" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="190" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="repack"/>
       <dataOutputObjs>out_breath</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="r_write_ln221" lineNumber="221" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="4202523120" contextFuncName="repack" opcode="store" m_display="0" m_delay="0.48" m_topoIndex="5" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="221" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="repack"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="r_write_ln192" lineNumber="192" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="0" contextFuncName="repack" opcode="store" m_display="0" m_delay="0.48" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="192" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="repack"/>
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="br_ln221" lineNumber="221" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="4200139264" contextFuncName="repack" opcode="br" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="221" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="repack"/>
-      <controlInputObjs>VITIS_LOOP_224_2</controlInputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="br_ln192" lineNumber="192" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="3846055568" contextFuncName="repack" opcode="br" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="192" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="repack"/>
+      <controlInputObjs>VITIS_LOOP_195_2</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="accelerator_v2.cpp">
-      <validLinenumbers>223</validLinenumbers>
-      <validLinenumbers>219</validLinenumbers>
-      <validLinenumbers>221</validLinenumbers>
+      <validLinenumbers>194</validLinenumbers>
+      <validLinenumbers>190</validLinenumbers>
+      <validLinenumbers>192</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
-  <blocks id="25" name="VITIS_LOOP_224_2" type="BlockType">
+  <blocks id="25" name="VITIS_LOOP_195_2" type="BlockType">
     <controlInputObjs>entry</controlInputObjs>
     <controlInputObjs>cleanup</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>for.end56</controlOutputObjs>
-    <controlOutputObjs>VITIS_LOOP_224_2.split</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="r_1" lineNumber="229" originalName="r" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="4202522560" contextFuncName="repack" bitwidth="9" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="229" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="repack"/>
+    <controlOutputObjs>VITIS_LOOP_195_2.split</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="r_1" lineNumber="200" originalName="r" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="246210513" contextFuncName="repack" bitwidth="9" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="200" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="repack"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
       <dataOutputObjs>add</dataOutputObjs>
@@ -156,82 +156,82 @@
       <dataOutputObjs>icmp</dataOutputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="icmp_ln221" lineNumber="221" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="icmp_ln221_fu_170_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="repack" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="0.85" m_topoIndex="8" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="221" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="repack"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="icmp_ln192" lineNumber="192" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="icmp_ln192_fu_170_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="repack" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="0.85" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="192" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="repack"/>
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>br</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="r_2" lineNumber="221" originalName="r" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="r_2_fu_176_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="repack" bitwidth="9" opcode="add" nodeLabel="1.0" m_display="0" m_delay="0.92" m_topoIndex="9" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="221" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="repack"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="r_2" lineNumber="192" originalName="r" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="r_2_fu_176_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="repack" bitwidth="9" opcode="add" nodeLabel="1.0" m_display="0" m_delay="0.92" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="192" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="repack"/>
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="br_ln221" lineNumber="221" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="4201149776" contextFuncName="repack" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="221" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="repack"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="br_ln192" lineNumber="192" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="3846982992" contextFuncName="repack" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="192" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="repack"/>
       <dataInputObjs>icmp</dataInputObjs>
-      <controlInputObjs>VITIS_LOOP_224_2.split</controlInputObjs>
+      <controlInputObjs>VITIS_LOOP_195_2.split</controlInputObjs>
       <controlInputObjs>for.end56</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="accelerator_v2.cpp">
-      <validLinenumbers>229</validLinenumbers>
-      <validLinenumbers>221</validLinenumbers>
+      <validLinenumbers>200</validLinenumbers>
+      <validLinenumbers>192</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
-  <blocks id="35" name="VITIS_LOOP_224_2.split" type="BlockType">
-    <controlInputObjs>VITIS_LOOP_224_2</controlInputObjs>
+  <blocks id="35" name="VITIS_LOOP_195_2.split" type="BlockType">
+    <controlInputObjs>VITIS_LOOP_195_2</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>cleanup</controlOutputObjs>
-    <controlOutputObjs>VITIS_LOOP_244_3</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="empty" coreId="512" bitwidth="32" opcode="wait" nodeLabel="1.0" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1"/>
-    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="_ln0" rtlName="grp_repack_Pipeline_VITIS_LOOP_224_2_fu_134" coreId="1279207088" opcode="call" nodeLabel="1.0" nodeLatency="1" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+    <controlOutputObjs>VITIS_LOOP_215_3</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="empty" coreId="3846982992" bitwidth="32" opcode="wait" nodeLabel="1.0" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="_ln0" rtlName="grp_repack_Pipeline_VITIS_LOOP_195_2_fu_134" coreId="3846982864" opcode="call" nodeLabel="1.0" nodeLatency="1" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
       <dataInputObjs>gray_stream3</dataInputObjs>
-      <constName>repack_Pipeline_VITIS_LOOP_224_2</constName>
+      <constName>repack_Pipeline_VITIS_LOOP_195_2</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="29" name="empty_67" coreId="4199328416" bitwidth="32" opcode="wait" nodeLabel="3.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1"/>
-    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="tmp" lineNumber="229" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="tmp_fu_182_p4" coreId="0" contextFuncName="repack" bitwidth="8" opcode="partselect" nodeLabel="3.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="229" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="repack"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="29" name="empty_67" coreId="3846982992" bitwidth="32" opcode="wait" nodeLabel="3.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="tmp" lineNumber="200" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="tmp_fu_182_p4" coreId="3846202464" contextFuncName="repack" bitwidth="8" opcode="partselect" nodeLabel="3.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="200" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="repack"/>
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="icmp_ln229" lineNumber="229" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="icmp_ln229_fu_191_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="repack" bitwidth="1" opcode="icmp" nodeLabel="3.0" m_display="0" m_delay="0.85" m_topoIndex="15" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="229" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="repack"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="icmp_ln200" lineNumber="200" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="icmp_ln200_fu_191_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="repack" bitwidth="1" opcode="icmp" nodeLabel="3.0" m_display="0" m_delay="0.85" m_topoIndex="15" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="200" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="repack"/>
       <dataInputObjs>partselect</dataInputObjs>
       <dataOutputObjs>or</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="32" name="icmp_ln229_1" lineNumber="229" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="icmp_ln229_1_fu_197_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="repack" bitwidth="1" opcode="icmp" nodeLabel="3.0" m_display="0" m_delay="0.85" m_topoIndex="16" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="229" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="repack"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="32" name="icmp_ln200_1" lineNumber="200" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="icmp_ln200_1_fu_197_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="repack" bitwidth="1" opcode="icmp" nodeLabel="3.0" m_display="0" m_delay="0.85" m_topoIndex="16" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="200" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="repack"/>
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>or</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="33" name="or_ln229" lineNumber="229" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="or_ln229_fu_202_p2" coreName="LogicGate" implIndex="auto" control="no" opType="or" coreId="74" contextFuncName="repack" bitwidth="1" opcode="or" nodeLabel="3.0" m_display="0" m_delay="0.33" m_topoIndex="17" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="229" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="repack"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="33" name="or_ln200" lineNumber="200" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="or_ln200_fu_202_p2" coreName="LogicGate" implIndex="auto" control="no" opType="or" coreId="74" contextFuncName="repack" bitwidth="1" opcode="or" nodeLabel="3.0" m_display="0" m_delay="0.33" m_topoIndex="17" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="200" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="repack"/>
       <dataInputObjs>icmp</dataInputObjs>
       <dataInputObjs>icmp</dataInputObjs>
       <dataOutputObjs>br</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="34" name="br_ln229" lineNumber="229" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="342575072" contextFuncName="repack" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="229" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="repack"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="34" name="br_ln200" lineNumber="200" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="3846982992" contextFuncName="repack" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="200" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="repack"/>
       <dataInputObjs>or</dataInputObjs>
-      <controlInputObjs>VITIS_LOOP_244_3</controlInputObjs>
+      <controlInputObjs>VITIS_LOOP_215_3</controlInputObjs>
       <controlInputObjs>cleanup</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="accelerator_v2.cpp">
-      <validLinenumbers>229</validLinenumbers>
+      <validLinenumbers>200</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
-  <blocks id="43" name="VITIS_LOOP_244_3" type="BlockType">
-    <controlInputObjs>VITIS_LOOP_224_2.split</controlInputObjs>
+  <blocks id="43" name="VITIS_LOOP_215_3" type="BlockType">
+    <controlInputObjs>VITIS_LOOP_195_2.split</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>cleanup</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="36" name="hdr_burst_user_V" lineNumber="238" originalName="hdr_burst.user.V" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="hdr_burst_user_V_fu_208_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="repack" bitwidth="1" opcode="icmp" nodeLabel="3.0" m_display="0" m_delay="0.85" m_topoIndex="19" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="238" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="repack"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="36" name="hdr_burst_user_V" lineNumber="209" originalName="hdr_burst.user.V" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="hdr_burst_user_V_fu_208_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="repack" bitwidth="1" opcode="icmp" nodeLabel="3.0" m_display="0" m_delay="0.85" m_topoIndex="19" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="209" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="repack"/>
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>write</dataOutputObjs>
       <constName>empty</constName>
@@ -242,7 +242,7 @@
       <dataOutputObjs>zext</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="38" name="zext_ln368" lineNumber="368" fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h" fileDirectory=".." rtlName="zext_ln368_fu_219_p1" coreId="4200173392" contextFuncName="operator_assign_16_false" bitwidth="128" opcode="zext" nodeLabel="3.0" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="38" name="zext_ln368" lineNumber="368" fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h" fileDirectory=".." rtlName="zext_ln368_fu_219_p1" coreId="3846982992" contextFuncName="operator_assign_16_false" bitwidth="128" opcode="zext" nodeLabel="3.0" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h" linenumber="368" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="operator=&amp;lt;16, false&amp;gt;"/>
       <dataInputObjs>add</dataInputObjs>
       <dataOutputObjs>write</dataOutputObjs>
@@ -260,8 +260,8 @@
       <dataOutputObjs>out_stream_V_dest_V</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="40" name="empty_68" coreId="4294967040" bitwidth="32" opcode="wait" nodeLabel="4.0" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1"/>
-    <node_objs xsi:type="cdfg:CdfgNode" id="41" name="_ln0" rtlName="grp_repack_Pipeline_VITIS_LOOP_244_3_fu_142" coreId="4200772000" opcode="call" nodeLabel="5.0" nodeLatency="1" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="40" name="empty_68" coreId="469507332" bitwidth="32" opcode="wait" nodeLabel="4.0" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="41" name="_ln0" rtlName="grp_repack_Pipeline_VITIS_LOOP_215_3_fu_142" coreId="469072946" opcode="call" nodeLabel="5.0" nodeLatency="1" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>out_stream_V_data_V</dataOutputObjs>
@@ -271,16 +271,16 @@
       <dataOutputObjs>out_stream_V_last_V</dataOutputObjs>
       <dataOutputObjs>out_stream_V_id_V</dataOutputObjs>
       <dataOutputObjs>out_stream_V_dest_V</dataOutputObjs>
-      <constName>repack_Pipeline_VITIS_LOOP_244_3</constName>
+      <constName>repack_Pipeline_VITIS_LOOP_215_3</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="42" name="br_ln0" coreId="127042036" opcode="br" nodeLabel="6.0" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="42" name="br_ln0" coreId="539767072" opcode="br" nodeLabel="6.0" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1">
       <controlInputObjs>cleanup</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h">
       <validLinenumbers>258</validLinenumbers>
     </fileValidLineNumbers>
     <fileValidLineNumbers fileName="accelerator_v2.cpp">
-      <validLinenumbers>238</validLinenumbers>
+      <validLinenumbers>209</validLinenumbers>
     </fileValidLineNumbers>
     <fileValidLineNumbers fileName="/usr/local/packages/Xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h">
       <validLinenumbers>214</validLinenumbers>
@@ -290,32 +290,32 @@
     </fileValidLineNumbers>
   </blocks>
   <blocks id="46" name="cleanup" type="BlockType">
-    <controlInputObjs>VITIS_LOOP_224_2.split</controlInputObjs>
-    <controlInputObjs>VITIS_LOOP_244_3</controlInputObjs>
+    <controlInputObjs>VITIS_LOOP_195_2.split</controlInputObjs>
+    <controlInputObjs>VITIS_LOOP_215_3</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>br</controlOutputObjs>
-    <controlOutputObjs>VITIS_LOOP_224_2</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="44" name="r_write_ln221" lineNumber="221" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="4201891648" contextFuncName="repack" opcode="store" nodeLabel="6.0" m_display="0" m_delay="0.48" m_topoIndex="26" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="221" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="repack"/>
+    <controlOutputObjs>VITIS_LOOP_195_2</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="44" name="r_write_ln192" lineNumber="192" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="461790048" contextFuncName="repack" opcode="store" nodeLabel="6.0" m_display="0" m_delay="0.48" m_topoIndex="26" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="192" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="repack"/>
       <dataInputObjs>add</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="45" name="br_ln221" lineNumber="221" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="4202464256" contextFuncName="repack" opcode="br" nodeLabel="6.0" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="221" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="repack"/>
-      <controlInputObjs>VITIS_LOOP_224_2</controlInputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="45" name="br_ln192" lineNumber="192" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="3846982992" contextFuncName="repack" opcode="br" nodeLabel="6.0" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="192" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="repack"/>
+      <controlInputObjs>VITIS_LOOP_195_2</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="accelerator_v2.cpp">
-      <validLinenumbers>221</validLinenumbers>
+      <validLinenumbers>192</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
   <blocks id="48" name="for.end56" type="BlockType">
-    <controlInputObjs>VITIS_LOOP_224_2</controlInputObjs>
+    <controlInputObjs>VITIS_LOOP_195_2</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="47" name="_ln262" lineNumber="262" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="1330007552" contextFuncName="repack" opcode="ret" nodeLabel="7.0" m_display="0" m_topoIndex="28" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="262" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="repack"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="47" name="_ln233" lineNumber="233" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="3844787152" contextFuncName="repack" opcode="ret" nodeLabel="7.0" m_display="0" m_topoIndex="28" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="233" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="repack"/>
     </node_objs>
     <fileValidLineNumbers fileName="accelerator_v2.cpp">
-      <validLinenumbers>262</validLinenumbers>
+      <validLinenumbers>233</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
   <ScheduleInfo time="0"/>
@@ -329,11 +329,11 @@
   <regnodes realName="r_reg_228">
     <nodeIds>10</nodeIds>
   </regnodes>
-  <regnodes realName="or_ln229_reg_246">
-    <nodeIds>33</nodeIds>
-  </regnodes>
   <regnodes realName="hdr_burst_user_V_reg_250">
     <nodeIds>36</nodeIds>
+  </regnodes>
+  <regnodes realName="or_ln200_reg_246">
+    <nodeIds>33</nodeIds>
   </regnodes>
   <regnodes realName="r_2_reg_241">
     <nodeIds>23</nodeIds>
@@ -341,17 +341,23 @@
   <regnodes realName="zext_ln368_reg_255">
     <nodeIds>38</nodeIds>
   </regnodes>
-  <expressionNodes realName="icmp_ln229_fu_191">
-    <nodeIds>31</nodeIds>
+  <expressionNodes realName="icmp_ln200_1_fu_197">
+    <nodeIds>32</nodeIds>
   </expressionNodes>
   <expressionNodes realName="hdr_burst_user_V_fu_208">
     <nodeIds>36</nodeIds>
   </expressionNodes>
+  <expressionNodes realName="or_ln200_fu_202">
+    <nodeIds>33</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln192_fu_170">
+    <nodeIds>21</nodeIds>
+  </expressionNodes>
   <expressionNodes realName="zext_ln368_fu_219">
     <nodeIds>38</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="icmp_ln221_fu_170">
-    <nodeIds>21</nodeIds>
+  <expressionNodes realName="icmp_ln200_fu_191">
+    <nodeIds>31</nodeIds>
   </expressionNodes>
   <expressionNodes realName="p_Result_s_fu_214">
     <nodeIds>37</nodeIds>
@@ -362,25 +368,19 @@
   <expressionNodes realName="row_pixels_V_1_alloca_fu_92">
     <nodeIds>15</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="or_ln229_fu_202">
-    <nodeIds>33</nodeIds>
-  </expressionNodes>
   <expressionNodes realName="r_fu_84">
     <nodeIds>10</nodeIds>
   </expressionNodes>
   <expressionNodes realName="tmp_fu_182">
     <nodeIds>30</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="icmp_ln229_1_fu_197">
-    <nodeIds>32</nodeIds>
-  </expressionNodes>
   <expressionNodes realName="row_pixels_V_alloca_fu_88">
     <nodeIds>14</nodeIds>
   </expressionNodes>
-  <moduleNodes realName="grp_repack_Pipeline_VITIS_LOOP_244_3_fu_142">
+  <moduleNodes realName="grp_repack_Pipeline_VITIS_LOOP_215_3_fu_142">
     <nodeIds>41</nodeIds>
   </moduleNodes>
-  <moduleNodes realName="grp_repack_Pipeline_VITIS_LOOP_224_2_fu_134">
+  <moduleNodes realName="grp_repack_Pipeline_VITIS_LOOP_195_2_fu_134">
     <nodeIds>28</nodeIds>
   </moduleNodes>
   <ioNodes realName="grp_write_fu_104">
@@ -389,14 +389,14 @@
   <ioNodes realName="r_1_load_fu_167">
     <nodeIds>20</nodeIds>
   </ioNodes>
-  <ioNodes realName="store_ln221_store_fu_162">
+  <ioNodes realName="write_ln190_write_fu_96">
+    <nodeIds>16</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln192_store_fu_162">
     <nodeIds>17</nodeIds>
   </ioNodes>
-  <ioNodes realName="store_ln221_store_fu_224">
+  <ioNodes realName="store_ln192_store_fu_224">
     <nodeIds>44</nodeIds>
-  </ioNodes>
-  <ioNodes realName="write_ln219_write_fu_96">
-    <nodeIds>16</nodeIds>
   </ioNodes>
   <ioPorts name="gray_stream3">
     <contents name="call">
@@ -556,7 +556,7 @@
       <basicBlocks>19</basicBlocks>
       <mDfPipe/>
     </cfgRegions>
-    <cfgRegions mId="3" mTag="VITIS_LOOP_221_1" mII="-1" mDepth="-1" mMinTripCount="484" mMaxTripCount="484" mMinLatency="314600" mMaxLatency="335896" mType="1">
+    <cfgRegions mId="3" mTag="VITIS_LOOP_192_1" mII="-1" mDepth="-1" mMinTripCount="484" mMaxTripCount="484" mMinLatency="314600" mMaxLatency="335896" mType="1">
       <basicBlocks>25</basicBlocks>
       <basicBlocks>35</basicBlocks>
       <basicBlocks>43</basicBlocks>

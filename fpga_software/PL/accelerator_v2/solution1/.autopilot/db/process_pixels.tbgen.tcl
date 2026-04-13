@@ -105,7 +105,7 @@ set RtlHierarchyInfo {[
 				"BlockSignal" : [
 					{"Name" : "bgr_mat_data43_blk_n", "Type" : "RtlSignal"}]}],
 		"Loop" : [
-			{"Name" : "VITIS_LOOP_156_1_VITIS_LOOP_157_2", "PipelineType" : "UPC",
+			{"Name" : "VITIS_LOOP_137_1_VITIS_LOOP_138_2", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter1", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter0", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "1"}}]},
 	{"ID" : "2", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.stream_to_mat_U0.flow_control_loop_pipe_U", "Parent" : "1"},
 	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.bgr2gray_9_0_484_644_1_3220_3220_U0", "Parent" : "0", "Child" : ["4"],
@@ -202,8 +202,8 @@ set RtlHierarchyInfo {[
 		"Port" : [
 			{"Name" : "gray_mat_data44", "Type" : "Fifo", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "30", "SubInstance" : "grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_389", "Port" : "gray_mat_data44", "Inst_start_state" : "7", "Inst_end_state" : "8"},
 					{"ID" : "28", "SubInstance" : "grp_xFGaussianFilter5x5_Pipeline_Read_Row2_Loop_fu_382", "Port" : "gray_mat_data44", "Inst_start_state" : "4", "Inst_end_state" : "5"},
+					{"ID" : "30", "SubInstance" : "grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_389", "Port" : "gray_mat_data44", "Inst_start_state" : "7", "Inst_end_state" : "8"},
 					{"ID" : "26", "SubInstance" : "grp_xFGaussianFilter5x5_Pipeline_Clear_Row_Loop_fu_370", "Port" : "gray_mat_data44", "Inst_start_state" : "1", "Inst_end_state" : "2"}]},
 			{"Name" : "blurred_mat_data45", "Type" : "Fifo", "Direction" : "O",
 				"BlockSignal" : [
@@ -471,7 +471,7 @@ set RtlHierarchyInfo {[
 				"BlockSignal" : [
 					{"Name" : "gray_stream3_blk_n", "Type" : "RtlSignal"}]}],
 		"Loop" : [
-			{"Name" : "VITIS_LOOP_171_1_VITIS_LOOP_172_2", "PipelineType" : "UPC",
+			{"Name" : "VITIS_LOOP_152_1_VITIS_LOOP_153_2", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter1", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter0", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "1"}}]},
 	{"ID" : "38", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.mat_to_stream_U0.flow_control_loop_pipe_U", "Parent" : "37"},
 	{"ID" : "39", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.bgr_mat_data_U", "Parent" : "0"},

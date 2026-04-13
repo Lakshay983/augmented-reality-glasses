@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1776043562369">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1776050106515">
   <ports id="1" name="bgr_stream1" type="PortType" coreId="62" bitwidth="24" iftype="IfTypeRom">
     <dataOutputObjs>call</dataOutputObjs>
     <dataOutputObjs>call</dataOutputObjs>
@@ -320,15 +320,15 @@
   <edges id="684" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.10/@node_objs.14"/>
   <edges id="685" edge_type="VirtEdge" source_obj="//@blocks.6/@node_objs.1" sink_obj="//@blocks.7/@node_objs.10"/>
   <blocks id="35" name="entry" type="BlockType">
-    <controlOutputObjs>VITIS_LOOP_103_4</controlOutputObjs>
+    <controlOutputObjs>VITIS_LOOP_89_4</controlOutputObjs>
     <node_objs xsi:type="cdfg:CdfgNode" id="3" name="r_2" originalName="r" coreId="0" bitwidth="2" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="row_buf_V" lineNumber="87" originalName="row_buf.V" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="row_buf_V_U" coreName="RAM_2P_BRAM" implIndex="bram" control="yes" opType="ram_2p" coreId="94" contextFuncName="pad" bitwidth="24" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="87" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="row_buf_V" lineNumber="75" originalName="row_buf.V" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="row_buf_V_U" coreName="RAM_2P_BRAM" implIndex="bram" control="yes" opType="ram_2p" coreId="94" contextFuncName="pad" bitwidth="24" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="75" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataOutputObjs>call</dataOutputObjs>
       <dataOutputObjs>getelementptr</dataOutputObjs>
       <dataOutputObjs>getelementptr</dataOutputObjs>
@@ -337,8 +337,8 @@
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="row_buf_V_1" lineNumber="87" originalName="row_buf.V" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="row_buf_V_1_U" coreName="RAM_2P_BRAM" implIndex="bram" control="yes" opType="ram_2p" coreId="94" contextFuncName="pad" bitwidth="24" opcode="alloca" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="87" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="row_buf_V_1" lineNumber="75" originalName="row_buf.V" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="row_buf_V_1_U" coreName="RAM_2P_BRAM" implIndex="bram" control="yes" opType="ram_2p" coreId="94" contextFuncName="pad" bitwidth="24" opcode="alloca" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="75" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataOutputObjs>call</dataOutputObjs>
       <dataOutputObjs>getelementptr</dataOutputObjs>
       <dataOutputObjs>getelementptr</dataOutputObjs>
@@ -348,8 +348,8 @@
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="row_buf_V_2" lineNumber="87" originalName="row_buf.V" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="row_buf_V_2_U" coreName="RAM_2P_BRAM" implIndex="bram" control="yes" opType="ram_2p" coreId="94" contextFuncName="pad" bitwidth="24" opcode="alloca" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="87" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="row_buf_V_2" lineNumber="75" originalName="row_buf.V" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="row_buf_V_2_U" coreName="RAM_2P_BRAM" implIndex="bram" control="yes" opType="ram_2p" coreId="94" contextFuncName="pad" bitwidth="24" opcode="alloca" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="75" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataOutputObjs>call</dataOutputObjs>
       <dataOutputObjs>getelementptr</dataOutputObjs>
       <dataOutputObjs>getelementptr</dataOutputObjs>
@@ -361,8 +361,8 @@
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="row_buf_V_3" lineNumber="87" originalName="row_buf.V" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="row_buf_V_3_U" coreName="RAM_2P_BRAM" implIndex="bram" control="yes" opType="ram_2p" coreId="94" contextFuncName="pad" bitwidth="24" opcode="alloca" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="87" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="row_buf_V_3" lineNumber="75" originalName="row_buf.V" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="row_buf_V_3_U" coreName="RAM_2P_BRAM" implIndex="bram" control="yes" opType="ram_2p" coreId="94" contextFuncName="pad" bitwidth="24" opcode="alloca" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="75" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataOutputObjs>getelementptr</dataOutputObjs>
       <dataOutputObjs>getelementptr</dataOutputObjs>
       <dataOutputObjs>getelementptr</dataOutputObjs>
@@ -372,42 +372,42 @@
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="empty" coreId="4193877024" bitwidth="32" opcode="wait" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1"/>
-    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="_ln0" rtlName="grp_pad_Pipeline_VITIS_LOOP_92_1_VITIS_LOOP_93_2_fu_329" coreId="0" opcode="call" nodeLatency="1" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="empty" coreId="3838252624" bitwidth="32" opcode="wait" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="_ln0" rtlName="grp_pad_Pipeline_VITIS_LOOP_79_1_VITIS_LOOP_80_2_fu_329" coreId="3838328896" opcode="call" nodeLatency="1" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
       <dataInputObjs>bgr_stream1</dataInputObjs>
-      <constName>pad_Pipeline_VITIS_LOOP_92_1_VITIS_LOOP_93_2</constName>
+      <constName>pad_Pipeline_VITIS_LOOP_79_1_VITIS_LOOP_80_2</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="empty_71" coreId="128" bitwidth="32" opcode="wait" nodeLabel="2.0" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1"/>
-    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="row_buf_V_1_addr" lineNumber="107" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="69501368" contextFuncName="pad" bitwidth="10" opcode="getelementptr" nodeLabel="3.0" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="107" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="empty_71" coreId="4294967295" bitwidth="32" opcode="wait" nodeLabel="2.0" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="row_buf_V_1_addr" lineNumber="93" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="3838313696" contextFuncName="pad" bitwidth="10" opcode="getelementptr" nodeLabel="3.0" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="93" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="row_buf_V_2_addr" lineNumber="107" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="69220538" contextFuncName="pad" bitwidth="10" opcode="getelementptr" nodeLabel="3.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="107" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="row_buf_V_2_addr" lineNumber="93" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="3838708528" contextFuncName="pad" bitwidth="10" opcode="getelementptr" nodeLabel="3.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="93" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="row_buf_V_1_addr_1" lineNumber="100" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="4193881344" contextFuncName="pad" bitwidth="10" opcode="getelementptr" nodeLabel="3.0" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="100" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="row_buf_V_1_addr_1" lineNumber="86" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="0" contextFuncName="pad" bitwidth="10" opcode="getelementptr" nodeLabel="3.0" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="86" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="row_buf_V_1_addr_2" lineNumber="100" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="4294967295" contextFuncName="pad" bitwidth="10" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="100" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="row_buf_V_1_addr_2" lineNumber="86" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="3839351184" contextFuncName="pad" bitwidth="10" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="86" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="row_buf_V_1_addr_3" lineNumber="100" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="4194905584" contextFuncName="pad" bitwidth="10" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="100" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="row_buf_V_1_addr_3" lineNumber="86" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="0" contextFuncName="pad" bitwidth="10" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="86" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
@@ -418,8 +418,8 @@
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="row_buf_V_1_load" lineNumber="100" fileName="accelerator_v2.cpp" fileDirectory=".." coreName="RAM_2P_BRAM" implIndex="bram" control="no" opType="ram_2p" coreId="94" contextFuncName="pad" bitwidth="24" opcode="load" nodeLabel="2.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="13" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="100" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="row_buf_V_1_load" lineNumber="86" fileName="accelerator_v2.cpp" fileDirectory=".." coreName="RAM_2P_BRAM" implIndex="bram" control="no" opType="ram_2p" coreId="94" contextFuncName="pad" bitwidth="24" opcode="load" nodeLabel="2.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="86" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataOutputObjs>mux</dataOutputObjs>
       <dataOutputObjs>mux</dataOutputObjs>
@@ -428,14 +428,14 @@
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataOutputObjs>mux</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="row_buf_V_2_addr_2" coreId="0" bitwidth="10" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="row_buf_V_2_addr_2" coreId="3838934544" bitwidth="10" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="row_buf_V_1_load_1" lineNumber="100" fileName="accelerator_v2.cpp" fileDirectory=".." coreName="RAM_2P_BRAM" implIndex="bram" control="no" opType="ram_2p" coreId="94" contextFuncName="pad" bitwidth="24" opcode="load" nodeLabel="2.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="16" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="100" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="row_buf_V_1_load_1" lineNumber="86" fileName="accelerator_v2.cpp" fileDirectory=".." coreName="RAM_2P_BRAM" implIndex="bram" control="no" opType="ram_2p" coreId="94" contextFuncName="pad" bitwidth="24" opcode="load" nodeLabel="2.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="16" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="86" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataOutputObjs>mux</dataOutputObjs>
       <dataOutputObjs>mux</dataOutputObjs>
@@ -444,25 +444,25 @@
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataOutputObjs>mux</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="row_buf_V_1_load_2" lineNumber="107" fileName="accelerator_v2.cpp" fileDirectory=".." coreName="RAM_2P_BRAM" implIndex="bram" control="no" opType="ram_2p" coreId="94" contextFuncName="pad" bitwidth="24" opcode="load" nodeLabel="3.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="21" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="107" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="row_buf_V_1_load_2" lineNumber="93" fileName="accelerator_v2.cpp" fileDirectory=".." coreName="RAM_2P_BRAM" implIndex="bram" control="no" opType="ram_2p" coreId="94" contextFuncName="pad" bitwidth="24" opcode="load" nodeLabel="3.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="21" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="93" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataOutputObjs>mux</dataOutputObjs>
       <dataOutputObjs>mux</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="29" name="row_buf_V_2_load_2" lineNumber="107" fileName="accelerator_v2.cpp" fileDirectory=".." coreName="RAM_2P_BRAM" implIndex="bram" control="no" opType="ram_2p" coreId="94" contextFuncName="pad" bitwidth="24" opcode="load" nodeLabel="3.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="22" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="107" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="29" name="row_buf_V_2_load_2" lineNumber="93" fileName="accelerator_v2.cpp" fileDirectory=".." coreName="RAM_2P_BRAM" implIndex="bram" control="no" opType="ram_2p" coreId="94" contextFuncName="pad" bitwidth="24" opcode="load" nodeLabel="3.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="22" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="93" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataOutputObjs>mux</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="row_buf_V_2_addr_3" coreId="0" bitwidth="10" opcode="getelementptr" nodeLabel="3.0" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="row_buf_V_2_addr_3" coreId="3839163472" bitwidth="10" opcode="getelementptr" nodeLabel="3.0" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="row_buf_V_1_load_3" lineNumber="100" fileName="accelerator_v2.cpp" fileDirectory=".." coreName="RAM_2P_BRAM" implIndex="bram" control="no" opType="ram_2p" coreId="94" contextFuncName="pad" bitwidth="24" opcode="load" nodeLabel="3.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="24" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="100" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="row_buf_V_1_load_3" lineNumber="86" fileName="accelerator_v2.cpp" fileDirectory=".." coreName="RAM_2P_BRAM" implIndex="bram" control="no" opType="ram_2p" coreId="94" contextFuncName="pad" bitwidth="24" opcode="load" nodeLabel="3.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="24" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="86" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataOutputObjs>mux</dataOutputObjs>
       <dataOutputObjs>mux</dataOutputObjs>
@@ -471,30 +471,30 @@
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataOutputObjs>mux</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="33" name="r_2_write_ln100" lineNumber="100" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="0" contextFuncName="pad" opcode="store" m_display="0" m_delay="0.48" m_topoIndex="8" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="100" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="33" name="r_2_write_ln86" lineNumber="86" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="3839163472" contextFuncName="pad" opcode="store" m_display="0" m_delay="0.48" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="86" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="34" name="br_ln100" lineNumber="100" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="0" contextFuncName="pad" opcode="br" nodeLabel="4.0" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="100" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
-      <controlInputObjs>VITIS_LOOP_103_4</controlInputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="34" name="br_ln86" lineNumber="86" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="3839163472" contextFuncName="pad" opcode="br" nodeLabel="4.0" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="86" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+      <controlInputObjs>VITIS_LOOP_89_4</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="accelerator_v2.cpp">
-      <validLinenumbers>87</validLinenumbers>
-      <validLinenumbers>107</validLinenumbers>
-      <validLinenumbers>100</validLinenumbers>
+      <validLinenumbers>75</validLinenumbers>
+      <validLinenumbers>93</validLinenumbers>
+      <validLinenumbers>86</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
-  <blocks id="40" name="VITIS_LOOP_103_4" type="BlockType">
+  <blocks id="40" name="VITIS_LOOP_89_4" type="BlockType">
     <controlInputObjs>entry</controlInputObjs>
-    <controlInputObjs>VITIS_LOOP_103_4.split</controlInputObjs>
+    <controlInputObjs>VITIS_LOOP_89_4.split</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>br</controlOutputObjs>
-    <controlOutputObjs>VITIS_LOOP_112_5</controlOutputObjs>
-    <controlOutputObjs>VITIS_LOOP_103_4.split</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="36" name="r_3" lineNumber="100" originalName="r" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="4194882576" contextFuncName="pad" bitwidth="2" opcode="load" nodeLabel="5.0" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="100" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <controlOutputObjs>VITIS_LOOP_97_5</controlOutputObjs>
+    <controlOutputObjs>VITIS_LOOP_89_4.split</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="36" name="r_3" lineNumber="86" originalName="r" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="3839163472" contextFuncName="pad" bitwidth="2" opcode="load" nodeLabel="5.0" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="86" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
       <dataOutputObjs>mux</dataOutputObjs>
@@ -504,180 +504,180 @@
       <dataOutputObjs>mux</dataOutputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="icmp_ln100" lineNumber="100" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="icmp_ln100_fu_388_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="pad" bitwidth="1" opcode="icmp" nodeLabel="5.0" m_display="0" m_delay="0.51" m_topoIndex="28" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="100" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="icmp_ln86" lineNumber="86" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="icmp_ln86_fu_388_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="pad" bitwidth="1" opcode="icmp" nodeLabel="5.0" m_display="0" m_delay="0.51" m_topoIndex="28" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="86" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>br</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="39" name="br_ln100" lineNumber="100" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="4193808352" contextFuncName="pad" opcode="br" nodeLabel="5.0" m_display="0" m_topoIndex="29" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="100" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="39" name="br_ln86" lineNumber="86" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="3838775888" contextFuncName="pad" opcode="br" nodeLabel="5.0" m_display="0" m_topoIndex="29" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="86" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>icmp</dataInputObjs>
-      <controlInputObjs>VITIS_LOOP_103_4.split</controlInputObjs>
-      <controlInputObjs>VITIS_LOOP_112_5</controlInputObjs>
+      <controlInputObjs>VITIS_LOOP_89_4.split</controlInputObjs>
+      <controlInputObjs>VITIS_LOOP_97_5</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="accelerator_v2.cpp">
-      <validLinenumbers>100</validLinenumbers>
+      <validLinenumbers>86</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
-  <blocks id="56" name="VITIS_LOOP_103_4.split" type="BlockType">
-    <controlInputObjs>VITIS_LOOP_103_4</controlInputObjs>
+  <blocks id="56" name="VITIS_LOOP_89_4.split" type="BlockType">
+    <controlInputObjs>VITIS_LOOP_89_4</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
-    <controlOutputObjs>VITIS_LOOP_103_4</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="42" name="tmp" lineNumber="101" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="mux_32_24_1_1_U53" coreName="Multiplexer" implIndex="auto" control="no" opType="mux" coreId="76" contextFuncName="pad" bitwidth="24" opcode="mux" nodeLabel="5.0" m_display="0" m_delay="0.54" m_topoIndex="30" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="101" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <controlOutputObjs>VITIS_LOOP_89_4</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="42" name="tmp" lineNumber="87" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="mux_32_24_1_1_U53" coreName="Multiplexer" implIndex="auto" control="no" opType="mux" coreId="76" contextFuncName="pad" bitwidth="24" opcode="mux" nodeLabel="5.0" m_display="0" m_delay="0.54" m_topoIndex="30" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="87" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>write</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="43" name="padded_stream2_write_ln101" lineNumber="101" fileName="accelerator_v2.cpp" fileDirectory=".." coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="pad" opcode="write" nodeLabel="5.0" m_display="0" m_delay="1.94" m_topoIndex="31" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="101" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="43" name="padded_stream2_write_ln87" lineNumber="87" fileName="accelerator_v2.cpp" fileDirectory=".." coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="pad" opcode="write" nodeLabel="5.0" m_display="0" m_delay="1.94" m_topoIndex="31" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="87" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>mux</dataInputObjs>
       <dataOutputObjs>padded_stream2</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="44" name="tmp_5" lineNumber="102" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="mux_32_24_1_1_U54" coreName="Multiplexer" implIndex="auto" control="no" opType="mux" coreId="76" contextFuncName="pad" bitwidth="24" opcode="mux" nodeLabel="6.0" m_display="0" m_delay="0.54" m_topoIndex="48" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="102" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="44" name="tmp_5" lineNumber="88" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="mux_32_24_1_1_U54" coreName="Multiplexer" implIndex="auto" control="no" opType="mux" coreId="76" contextFuncName="pad" bitwidth="24" opcode="mux" nodeLabel="6.0" m_display="0" m_delay="0.54" m_topoIndex="48" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="88" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>write</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="45" name="padded_stream2_write_ln102" lineNumber="102" fileName="accelerator_v2.cpp" fileDirectory=".." coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="pad" opcode="write" nodeLabel="6.0" m_display="0" m_delay="1.94" m_topoIndex="49" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="102" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="45" name="padded_stream2_write_ln88" lineNumber="88" fileName="accelerator_v2.cpp" fileDirectory=".." coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="pad" opcode="write" nodeLabel="6.0" m_display="0" m_delay="1.94" m_topoIndex="49" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="88" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>mux</dataInputObjs>
       <dataOutputObjs>padded_stream2</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="46" name="empty_72" coreId="4194332384" bitwidth="32" opcode="wait" nodeLabel="7.0" m_display="0" m_topoIndex="50" m_clusterGroupNumber="-1"/>
-    <node_objs xsi:type="cdfg:CdfgNode" id="47" name="_ln100" lineNumber="100" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="grp_pad_Pipeline_VITIS_LOOP_103_4_fu_341" coreId="0" contextFuncName="pad" opcode="call" nodeLabel="7.0" nodeLatency="1" m_display="0" m_topoIndex="51" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="100" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="46" name="empty_72" coreId="3838701480" bitwidth="32" opcode="wait" nodeLabel="7.0" m_display="0" m_topoIndex="50" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="47" name="_ln86" lineNumber="86" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="grp_pad_Pipeline_VITIS_LOOP_89_4_fu_341" coreId="3838702288" contextFuncName="pad" opcode="call" nodeLabel="7.0" nodeLatency="1" m_display="0" m_topoIndex="51" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="86" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>padded_stream2</dataOutputObjs>
-      <constName>pad_Pipeline_VITIS_LOOP_103_4</constName>
+      <constName>pad_Pipeline_VITIS_LOOP_89_4</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="48" name="empty_73" coreId="4193877024" bitwidth="32" opcode="wait" nodeLabel="9.0" m_display="0" m_topoIndex="54" m_clusterGroupNumber="-1"/>
-    <node_objs xsi:type="cdfg:CdfgNode" id="49" name="tmp_6" lineNumber="107" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="mux_32_24_1_1_U55" coreName="Multiplexer" implIndex="auto" control="no" opType="mux" coreId="76" contextFuncName="pad" bitwidth="24" opcode="mux" nodeLabel="7.0" m_display="0" m_delay="0.54" m_topoIndex="52" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="107" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="48" name="empty_73" coreId="3839198160" bitwidth="32" opcode="wait" nodeLabel="9.0" m_display="0" m_topoIndex="54" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="49" name="tmp_6" lineNumber="93" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="mux_32_24_1_1_U55" coreName="Multiplexer" implIndex="auto" control="no" opType="mux" coreId="76" contextFuncName="pad" bitwidth="24" opcode="mux" nodeLabel="7.0" m_display="0" m_delay="0.54" m_topoIndex="52" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="93" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>write</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="50" name="padded_stream2_write_ln107" lineNumber="107" fileName="accelerator_v2.cpp" fileDirectory=".." coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="pad" opcode="write" nodeLabel="9.0" m_display="0" m_delay="1.94" m_topoIndex="55" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="107" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="50" name="padded_stream2_write_ln93" lineNumber="93" fileName="accelerator_v2.cpp" fileDirectory=".." coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="pad" opcode="write" nodeLabel="9.0" m_display="0" m_delay="1.94" m_topoIndex="55" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="93" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>mux</dataInputObjs>
       <dataOutputObjs>padded_stream2</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="51" name="tmp_7" lineNumber="108" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="mux_32_24_1_1_U56" coreName="Multiplexer" implIndex="auto" control="no" opType="mux" coreId="76" contextFuncName="pad" bitwidth="24" opcode="mux" nodeLabel="7.0" m_display="0" m_delay="0.54" m_topoIndex="53" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="108" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="51" name="tmp_7" lineNumber="94" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="mux_32_24_1_1_U56" coreName="Multiplexer" implIndex="auto" control="no" opType="mux" coreId="76" contextFuncName="pad" bitwidth="24" opcode="mux" nodeLabel="7.0" m_display="0" m_delay="0.54" m_topoIndex="53" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="94" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>write</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="52" name="padded_stream2_write_ln108" lineNumber="108" fileName="accelerator_v2.cpp" fileDirectory=".." coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="pad" opcode="write" nodeLabel="10.0" m_display="0" m_delay="1.94" m_topoIndex="56" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="108" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="52" name="padded_stream2_write_ln94" lineNumber="94" fileName="accelerator_v2.cpp" fileDirectory=".." coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="pad" opcode="write" nodeLabel="10.0" m_display="0" m_delay="1.94" m_topoIndex="56" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="94" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>mux</dataInputObjs>
       <dataOutputObjs>padded_stream2</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="add_ln100" lineNumber="100" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="add_ln100_fu_405_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="pad" bitwidth="2" opcode="add" nodeLabel="5.0" m_display="0" m_delay="0.62" m_topoIndex="32" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="100" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="add_ln86" lineNumber="86" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="add_ln86_fu_405_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="pad" bitwidth="2" opcode="add" nodeLabel="5.0" m_display="0" m_delay="0.62" m_topoIndex="32" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="86" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="54" name="r_2_write_ln100" lineNumber="100" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="0" contextFuncName="pad" opcode="store" nodeLabel="5.0" m_display="0" m_delay="0.48" m_topoIndex="33" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="100" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="54" name="r_2_write_ln86" lineNumber="86" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="3839344048" contextFuncName="pad" opcode="store" nodeLabel="5.0" m_display="0" m_delay="0.48" m_topoIndex="33" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="86" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>add</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="55" name="br_ln100" lineNumber="100" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="4194899584" contextFuncName="pad" opcode="br" nodeLabel="10.0" m_display="0" m_topoIndex="57" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="100" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
-      <controlInputObjs>VITIS_LOOP_103_4</controlInputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="55" name="br_ln86" lineNumber="86" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="7955819" contextFuncName="pad" opcode="br" nodeLabel="10.0" m_display="0" m_topoIndex="57" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="86" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+      <controlInputObjs>VITIS_LOOP_89_4</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="accelerator_v2.cpp">
-      <validLinenumbers>101</validLinenumbers>
-      <validLinenumbers>102</validLinenumbers>
-      <validLinenumbers>100</validLinenumbers>
-      <validLinenumbers>107</validLinenumbers>
-      <validLinenumbers>108</validLinenumbers>
+      <validLinenumbers>87</validLinenumbers>
+      <validLinenumbers>88</validLinenumbers>
+      <validLinenumbers>86</validLinenumbers>
+      <validLinenumbers>93</validLinenumbers>
+      <validLinenumbers>94</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
-  <blocks id="80" name="VITIS_LOOP_112_5" type="BlockType">
-    <controlInputObjs>VITIS_LOOP_103_4</controlInputObjs>
+  <blocks id="80" name="VITIS_LOOP_97_5" type="BlockType">
+    <controlInputObjs>VITIS_LOOP_89_4</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>for.body53</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="57" name="mux_case_3130_phi" coreId="4194752720" bitwidth="24" opcode="alloca" nodeLabel="5.0" m_display="0" m_topoIndex="34" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="57" name="mux_case_3130_phi" coreId="3839136416" bitwidth="24" opcode="alloca" nodeLabel="5.0" m_display="0" m_topoIndex="34" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="58" name="mux_case_2129_phi" coreId="131637568" bitwidth="24" opcode="alloca" nodeLabel="5.0" m_display="0" m_topoIndex="35" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="58" name="mux_case_2129_phi" coreId="0" bitwidth="24" opcode="alloca" nodeLabel="5.0" m_display="0" m_topoIndex="35" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="59" name="mux_case_3_phi" coreId="4194767048" bitwidth="24" opcode="alloca" nodeLabel="5.0" m_display="0" m_topoIndex="36" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="59" name="mux_case_3_phi" coreId="0" bitwidth="24" opcode="alloca" nodeLabel="5.0" m_display="0" m_topoIndex="36" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="60" name="mux_case_2126_phi" coreId="0" bitwidth="24" opcode="alloca" nodeLabel="5.0" m_display="0" m_topoIndex="37" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="60" name="mux_case_2126_phi" coreId="3839148736" bitwidth="24" opcode="alloca" nodeLabel="5.0" m_display="0" m_topoIndex="37" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="61" name="mux_case_3142_phi" coreId="1819113532" bitwidth="24" opcode="alloca" nodeLabel="5.0" m_display="0" m_topoIndex="38" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="61" name="mux_case_3142_phi" coreId="443190108" bitwidth="24" opcode="alloca" nodeLabel="5.0" m_display="0" m_topoIndex="38" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="62" name="mux_case_2141_phi" coreId="4194769056" bitwidth="24" opcode="alloca" nodeLabel="5.0" m_display="0" m_topoIndex="39" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="62" name="mux_case_2141_phi" coreId="1397508187" bitwidth="24" opcode="alloca" nodeLabel="5.0" m_display="0" m_topoIndex="39" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="63" name="mux_case_3138_phi" coreId="0" bitwidth="24" opcode="alloca" nodeLabel="5.0" m_display="0" m_topoIndex="40" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="63" name="mux_case_3138_phi" coreId="3839150768" bitwidth="24" opcode="alloca" nodeLabel="5.0" m_display="0" m_topoIndex="40" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="64" name="mux_case_2137_phi" coreId="4194690976" bitwidth="24" opcode="alloca" nodeLabel="5.0" m_display="0" m_topoIndex="41" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="64" name="mux_case_2137_phi" coreId="3839303472" bitwidth="24" opcode="alloca" nodeLabel="5.0" m_display="0" m_topoIndex="41" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="65" name="r" originalName="r" coreId="131704273" bitwidth="9" opcode="alloca" nodeLabel="5.0" m_display="0" m_topoIndex="42" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="65" name="r" originalName="r" coreId="443091685" bitwidth="9" opcode="alloca" nodeLabel="5.0" m_display="0" m_topoIndex="42" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="66" name="row_buf_V_addr" lineNumber="129" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="176" contextFuncName="pad" bitwidth="10" opcode="getelementptr" nodeLabel="11.0" m_display="0" m_topoIndex="58" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="129" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="66" name="row_buf_V_addr" lineNumber="114" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="176" contextFuncName="pad" bitwidth="10" opcode="getelementptr" nodeLabel="11.0" m_display="0" m_topoIndex="58" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="114" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="67" name="row_buf_V_3_addr" lineNumber="129" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="4194703808" contextFuncName="pad" bitwidth="10" opcode="getelementptr" nodeLabel="12.0" m_display="0" m_topoIndex="62" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="129" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="67" name="row_buf_V_3_addr" lineNumber="114" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="3839303472" contextFuncName="pad" bitwidth="10" opcode="getelementptr" nodeLabel="12.0" m_display="0" m_topoIndex="62" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="114" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="68" name="row_buf_V_3_addr_1" lineNumber="112" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="1599294536" contextFuncName="pad" bitwidth="10" opcode="getelementptr" nodeLabel="12.0" m_display="0" m_topoIndex="63" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="112" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="68" name="row_buf_V_3_addr_1" lineNumber="97" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="0" contextFuncName="pad" bitwidth="10" opcode="getelementptr" nodeLabel="12.0" m_display="0" m_topoIndex="63" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="97" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="69" name="row_buf_V_addr_1" coreId="0" bitwidth="10" opcode="getelementptr" nodeLabel="5.0" m_display="0" m_topoIndex="43" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="69" name="row_buf_V_addr_1" coreId="3839233136" bitwidth="10" opcode="getelementptr" nodeLabel="5.0" m_display="0" m_topoIndex="43" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
@@ -686,12 +686,12 @@
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataOutputObjs>mux</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="71" name="row_buf_V_addr_2" coreId="0" bitwidth="10" opcode="getelementptr" nodeLabel="5.0" m_display="0" m_topoIndex="45" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="71" name="row_buf_V_addr_2" coreId="176" bitwidth="10" opcode="getelementptr" nodeLabel="5.0" m_display="0" m_topoIndex="45" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="72" name="row_buf_V_3_addr_2" coreId="4194872832" bitwidth="10" opcode="getelementptr" nodeLabel="12.0" m_display="0" m_topoIndex="64" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="72" name="row_buf_V_3_addr_2" coreId="0" bitwidth="10" opcode="getelementptr" nodeLabel="12.0" m_display="0" m_topoIndex="64" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
@@ -700,12 +700,12 @@
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataOutputObjs>mux</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="74" name="row_buf_V_load_2" lineNumber="129" fileName="accelerator_v2.cpp" fileDirectory=".." coreName="RAM_2P_BRAM" implIndex="bram" control="no" opType="ram_2p" coreId="94" contextFuncName="pad" bitwidth="24" opcode="load" nodeLabel="11.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="59" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="129" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="74" name="row_buf_V_load_2" lineNumber="114" fileName="accelerator_v2.cpp" fileDirectory=".." coreName="RAM_2P_BRAM" implIndex="bram" control="no" opType="ram_2p" coreId="94" contextFuncName="pad" bitwidth="24" opcode="load" nodeLabel="11.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="59" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="114" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataOutputObjs>mux</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="75" name="row_buf_V_addr_3" coreId="0" bitwidth="10" opcode="getelementptr" nodeLabel="11.0" m_display="0" m_topoIndex="60" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="75" name="row_buf_V_addr_3" coreId="3839268304" bitwidth="10" opcode="getelementptr" nodeLabel="11.0" m_display="0" m_topoIndex="60" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
@@ -719,29 +719,29 @@
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataOutputObjs>mux</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="78" name="r_write_ln112" lineNumber="112" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="131612905" contextFuncName="pad" opcode="store" nodeLabel="5.0" m_display="0" m_delay="0.48" m_topoIndex="47" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="112" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="78" name="r_write_ln97" lineNumber="97" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="443111453" contextFuncName="pad" opcode="store" nodeLabel="5.0" m_display="0" m_delay="0.48" m_topoIndex="47" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="97" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="79" name="br_ln112" lineNumber="112" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="0" contextFuncName="pad" opcode="br" nodeLabel="12.0" m_display="0" m_topoIndex="66" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="112" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="79" name="br_ln97" lineNumber="97" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="784" contextFuncName="pad" opcode="br" nodeLabel="12.0" m_display="0" m_topoIndex="66" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="97" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <controlInputObjs>for.body53</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="accelerator_v2.cpp">
-      <validLinenumbers>129</validLinenumbers>
-      <validLinenumbers>112</validLinenumbers>
+      <validLinenumbers>114</validLinenumbers>
+      <validLinenumbers>97</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
   <blocks id="86" name="for.body53" type="BlockType">
-    <controlInputObjs>VITIS_LOOP_112_5</controlInputObjs>
-    <controlInputObjs>VITIS_LOOP_125_7</controlInputObjs>
+    <controlInputObjs>VITIS_LOOP_97_5</controlInputObjs>
+    <controlInputObjs>VITIS_LOOP_110_7</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>br</controlOutputObjs>
-    <controlOutputObjs>VITIS_LOOP_138_9.preheader</controlOutputObjs>
+    <controlOutputObjs>VITIS_LOOP_122_9.preheader</controlOutputObjs>
     <controlOutputObjs>for.body53.split</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="81" name="r_6" lineNumber="112" originalName="r" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="0" contextFuncName="pad" bitwidth="9" opcode="load" nodeLabel="13.0" m_display="0" m_topoIndex="67" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="112" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="81" name="r_6" lineNumber="97" originalName="r" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="3838321184" contextFuncName="pad" bitwidth="9" opcode="load" nodeLabel="13.0" m_display="0" m_topoIndex="67" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="97" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
       <dataOutputObjs>add</dataOutputObjs>
@@ -749,100 +749,100 @@
       <dataOutputObjs>trunc</dataOutputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="82" name="icmp_ln112" lineNumber="112" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="icmp_ln112_fu_452_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="pad" bitwidth="1" opcode="icmp" nodeLabel="13.0" m_display="0" m_delay="0.85" m_topoIndex="68" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="112" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="82" name="icmp_ln97" lineNumber="97" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="icmp_ln97_fu_452_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="pad" bitwidth="1" opcode="icmp" nodeLabel="13.0" m_display="0" m_delay="0.85" m_topoIndex="68" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="97" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>br</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="84" name="r_9" lineNumber="112" originalName="r" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="r_9_fu_458_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="pad" bitwidth="9" opcode="add" nodeLabel="13.0" m_display="0" m_delay="0.92" m_topoIndex="69" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="112" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="84" name="r_9" lineNumber="97" originalName="r" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="r_9_fu_458_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="pad" bitwidth="9" opcode="add" nodeLabel="13.0" m_display="0" m_delay="0.92" m_topoIndex="69" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="97" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="85" name="br_ln112" lineNumber="112" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="0" contextFuncName="pad" opcode="br" nodeLabel="13.0" m_display="0" m_topoIndex="70" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="112" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="85" name="br_ln97" lineNumber="97" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="0" contextFuncName="pad" opcode="br" nodeLabel="13.0" m_display="0" m_topoIndex="70" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="97" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>icmp</dataInputObjs>
       <controlInputObjs>for.body53.split</controlInputObjs>
-      <controlInputObjs>VITIS_LOOP_138_9.preheader</controlInputObjs>
+      <controlInputObjs>VITIS_LOOP_122_9.preheader</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="accelerator_v2.cpp">
-      <validLinenumbers>112</validLinenumbers>
+      <validLinenumbers>97</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
   <blocks id="92" name="for.body53.split" type="BlockType">
     <controlInputObjs>for.body53</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
-    <controlOutputObjs>VITIS_LOOP_125_7</controlOutputObjs>
+    <controlOutputObjs>VITIS_LOOP_110_7</controlOutputObjs>
     <controlOutputObjs>for.inc65.preheader</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="87" name="trunc_ln112" lineNumber="112" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="trunc_ln112_fu_464_p1" coreId="0" contextFuncName="pad" bitwidth="2" opcode="trunc" nodeLabel="13.0" m_display="0" m_topoIndex="71" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="112" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="87" name="trunc_ln97" lineNumber="97" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="trunc_ln97_fu_464_p1" coreId="3838313696" contextFuncName="pad" bitwidth="2" opcode="trunc" nodeLabel="13.0" m_display="0" m_topoIndex="71" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="97" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>phi</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="88" name="trunc_ln112_1" lineNumber="112" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="trunc_ln112_1_fu_468_p1" coreId="1881154127" contextFuncName="pad" bitwidth="1" opcode="trunc" nodeLabel="13.0" m_display="0" m_topoIndex="72" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="112" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="88" name="trunc_ln97_1" lineNumber="97" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="trunc_ln97_1_fu_468_p1" coreId="3838776192" contextFuncName="pad" bitwidth="1" opcode="trunc" nodeLabel="13.0" m_display="0" m_topoIndex="72" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="97" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="90" name="icmp_ln114" lineNumber="114" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="icmp_ln114_fu_473_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="pad" bitwidth="1" opcode="icmp" nodeLabel="13.0" m_display="0" m_delay="0.85" m_topoIndex="73" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="114" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="90" name="icmp_ln99" lineNumber="99" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="icmp_ln99_fu_473_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="pad" bitwidth="1" opcode="icmp" nodeLabel="13.0" m_display="0" m_delay="0.85" m_topoIndex="73" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="99" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>br</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="91" name="br_ln114" lineNumber="114" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="808542035" contextFuncName="pad" opcode="br" nodeLabel="13.0" m_display="0" m_delay="0.48" m_topoIndex="74" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="114" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="91" name="br_ln99" lineNumber="99" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="1914708526" contextFuncName="pad" opcode="br" nodeLabel="13.0" m_display="0" m_delay="0.48" m_topoIndex="74" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="99" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>icmp</dataInputObjs>
       <controlInputObjs>for.inc65.preheader</controlInputObjs>
-      <controlInputObjs>VITIS_LOOP_125_7</controlInputObjs>
+      <controlInputObjs>VITIS_LOOP_110_7</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="accelerator_v2.cpp">
-      <validLinenumbers>112</validLinenumbers>
-      <validLinenumbers>114</validLinenumbers>
+      <validLinenumbers>97</validLinenumbers>
+      <validLinenumbers>99</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
   <blocks id="98" name="for.inc65.preheader" type="BlockType">
     <controlInputObjs>for.body53.split</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
-    <controlOutputObjs>VITIS_LOOP_125_7</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="93" name="empty_74" coreId="757935405" bitwidth="32" opcode="wait" nodeLabel="13.0" m_display="0" m_topoIndex="75" m_clusterGroupNumber="-1"/>
-    <node_objs xsi:type="cdfg:CdfgNode" id="94" name="_ln112" lineNumber="112" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="grp_pad_Pipeline_VITIS_LOOP_118_6_fu_350" coreId="825306420" contextFuncName="pad" opcode="call" nodeLabel="13.0" nodeLatency="1" m_display="0" m_topoIndex="76" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="112" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <controlOutputObjs>VITIS_LOOP_110_7</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="93" name="empty_74" coreId="1025534068" bitwidth="32" opcode="wait" nodeLabel="13.0" m_display="0" m_topoIndex="75" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="94" name="_ln97" lineNumber="97" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="grp_pad_Pipeline_VITIS_LOOP_103_6_fu_350" coreId="1145981250" contextFuncName="pad" opcode="call" nodeLabel="13.0" nodeLatency="1" m_display="0" m_topoIndex="76" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="97" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
       <dataInputObjs>bgr_stream1</dataInputObjs>
       <dataInputObjs>trunc</dataInputObjs>
-      <constName>pad_Pipeline_VITIS_LOOP_118_6</constName>
+      <constName>pad_Pipeline_VITIS_LOOP_103_6</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="95" name="empty_75" coreId="4194256736" bitwidth="32" opcode="wait" nodeLabel="15.0" m_display="0" m_topoIndex="80" m_clusterGroupNumber="-1"/>
-    <node_objs xsi:type="cdfg:CdfgNode" id="96" name="slot_1" lineNumber="117" originalName="slot" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="slot_1_fu_484_p3" coreId="1701082476" contextFuncName="pad" bitwidth="2" opcode="bitconcatenate" nodeLabel="15.0" m_display="0" m_topoIndex="81" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="117" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="95" name="empty_75" coreId="757935405" bitwidth="32" opcode="wait" nodeLabel="15.0" m_display="0" m_topoIndex="80" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="96" name="slot_1" lineNumber="102" originalName="slot" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="slot_1_fu_484_p3" coreId="1919252069" contextFuncName="pad" bitwidth="2" opcode="bitconcatenate" nodeLabel="15.0" m_display="0" m_topoIndex="81" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="102" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>trunc</dataInputObjs>
       <dataOutputObjs>phi</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="97" name="br_ln123" lineNumber="123" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="1735419439" contextFuncName="pad" opcode="br" nodeLabel="15.0" m_display="0" m_delay="0.48" m_topoIndex="82" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="123" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
-      <controlInputObjs>VITIS_LOOP_125_7</controlInputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="97" name="br_ln108" lineNumber="108" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="1701669236" contextFuncName="pad" opcode="br" nodeLabel="15.0" m_display="0" m_delay="0.48" m_topoIndex="82" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="108" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+      <controlInputObjs>VITIS_LOOP_110_7</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="accelerator_v2.cpp">
-      <validLinenumbers>112</validLinenumbers>
-      <validLinenumbers>117</validLinenumbers>
-      <validLinenumbers>123</validLinenumbers>
+      <validLinenumbers>97</validLinenumbers>
+      <validLinenumbers>102</validLinenumbers>
+      <validLinenumbers>108</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
-  <blocks id="129" name="VITIS_LOOP_125_7" type="BlockType">
+  <blocks id="129" name="VITIS_LOOP_110_7" type="BlockType">
     <controlInputObjs>for.body53.split</controlInputObjs>
     <controlInputObjs>for.inc65.preheader</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>for.body53</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="99" name="slot" originalName="slot" coreId="1007225406" bitwidth="2" opcode="phi" nodeLabel="16.0" m_display="0" m_topoIndex="88" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="99" name="slot" originalName="slot" coreId="1869422695" bitwidth="2" opcode="phi" nodeLabel="16.0" m_display="0" m_topoIndex="88" m_clusterGroupNumber="-1">
       <dataInputObjs>bitconcatenate</dataInputObjs>
       <dataInputObjs>trunc</dataInputObjs>
       <dataOutputObjs>mux</dataOutputObjs>
@@ -853,20 +853,20 @@
       <controlInputObjs>for.inc65.preheader</controlInputObjs>
       <controlInputObjs>for.body53.split</controlInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="100" name="row_buf_V_2_load_4" lineNumber="123" fileName="accelerator_v2.cpp" fileDirectory=".." coreName="RAM_2P_BRAM" implIndex="bram" control="no" opType="ram_2p" coreId="94" contextFuncName="pad" bitwidth="24" opcode="load" nodeLabel="15.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="83" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="123" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="100" name="row_buf_V_2_load_4" lineNumber="108" fileName="accelerator_v2.cpp" fileDirectory=".." coreName="RAM_2P_BRAM" implIndex="bram" control="no" opType="ram_2p" coreId="94" contextFuncName="pad" bitwidth="24" opcode="load" nodeLabel="15.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="83" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="108" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataOutputObjs>mux</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="101" name="row_buf_V_3_load" lineNumber="123" fileName="accelerator_v2.cpp" fileDirectory=".." coreName="RAM_2P_BRAM" implIndex="bram" control="no" opType="ram_2p" coreId="94" contextFuncName="pad" bitwidth="24" opcode="load" nodeLabel="15.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="84" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="123" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="101" name="row_buf_V_3_load" lineNumber="108" fileName="accelerator_v2.cpp" fileDirectory=".." coreName="RAM_2P_BRAM" implIndex="bram" control="no" opType="ram_2p" coreId="94" contextFuncName="pad" bitwidth="24" opcode="load" nodeLabel="15.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="84" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="108" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataOutputObjs>mux</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="102" name="tmp_4" lineNumber="123" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="mux_42_24_1_1_U57" coreName="Multiplexer" implIndex="auto" control="no" opType="mux" coreId="76" contextFuncName="pad" bitwidth="24" opcode="mux" nodeLabel="16.0" m_display="0" m_delay="0.6" m_topoIndex="89" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="123" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="102" name="tmp_4" lineNumber="108" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="mux_42_24_1_1_U57" coreName="Multiplexer" implIndex="auto" control="no" opType="mux" coreId="76" contextFuncName="pad" bitwidth="24" opcode="mux" nodeLabel="16.0" m_display="0" m_delay="0.6" m_topoIndex="89" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="108" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>load</dataInputObjs>
@@ -874,25 +874,25 @@
       <dataInputObjs>phi</dataInputObjs>
       <dataOutputObjs>write</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="103" name="padded_stream2_write_ln123" lineNumber="123" fileName="accelerator_v2.cpp" fileDirectory=".." coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="pad" opcode="write" nodeLabel="16.0" m_display="0" m_delay="1.94" m_topoIndex="90" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="123" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="103" name="padded_stream2_write_ln108" lineNumber="108" fileName="accelerator_v2.cpp" fileDirectory=".." coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="pad" opcode="write" nodeLabel="16.0" m_display="0" m_delay="1.94" m_topoIndex="90" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="108" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>mux</dataInputObjs>
       <dataOutputObjs>padded_stream2</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="104" name="row_buf_V_2_load_5" lineNumber="124" fileName="accelerator_v2.cpp" fileDirectory=".." coreName="RAM_2P_BRAM" implIndex="bram" control="no" opType="ram_2p" coreId="94" contextFuncName="pad" bitwidth="24" opcode="load" nodeLabel="15.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="85" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="124" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="104" name="row_buf_V_2_load_5" lineNumber="109" fileName="accelerator_v2.cpp" fileDirectory=".." coreName="RAM_2P_BRAM" implIndex="bram" control="no" opType="ram_2p" coreId="94" contextFuncName="pad" bitwidth="24" opcode="load" nodeLabel="15.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="85" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="109" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataOutputObjs>mux</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="105" name="row_buf_V_3_load_1" lineNumber="124" fileName="accelerator_v2.cpp" fileDirectory=".." coreName="RAM_2P_BRAM" implIndex="bram" control="no" opType="ram_2p" coreId="94" contextFuncName="pad" bitwidth="24" opcode="load" nodeLabel="15.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="86" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="124" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="105" name="row_buf_V_3_load_1" lineNumber="109" fileName="accelerator_v2.cpp" fileDirectory=".." coreName="RAM_2P_BRAM" implIndex="bram" control="no" opType="ram_2p" coreId="94" contextFuncName="pad" bitwidth="24" opcode="load" nodeLabel="15.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="86" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="109" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataOutputObjs>mux</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="106" name="tmp_3" lineNumber="124" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="mux_42_24_1_1_U58" coreName="Multiplexer" implIndex="auto" control="no" opType="mux" coreId="76" contextFuncName="pad" bitwidth="24" opcode="mux" nodeLabel="16.0" m_display="0" m_delay="0.6" m_topoIndex="91" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="124" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="106" name="tmp_3" lineNumber="109" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="mux_42_24_1_1_U58" coreName="Multiplexer" implIndex="auto" control="no" opType="mux" coreId="76" contextFuncName="pad" bitwidth="24" opcode="mux" nodeLabel="16.0" m_display="0" m_delay="0.6" m_topoIndex="91" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="109" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>load</dataInputObjs>
@@ -900,63 +900,37 @@
       <dataInputObjs>phi</dataInputObjs>
       <dataOutputObjs>write</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="107" name="padded_stream2_write_ln124" lineNumber="124" fileName="accelerator_v2.cpp" fileDirectory=".." coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="pad" opcode="write" nodeLabel="17.0" m_display="0" m_delay="1.94" m_topoIndex="96" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="124" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="107" name="padded_stream2_write_ln109" lineNumber="109" fileName="accelerator_v2.cpp" fileDirectory=".." coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="pad" opcode="write" nodeLabel="17.0" m_display="0" m_delay="1.94" m_topoIndex="96" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="109" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>mux</dataInputObjs>
       <dataOutputObjs>padded_stream2</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="108" name="empty_76" coreId="4193877024" bitwidth="32" opcode="wait" nodeLabel="18.0" m_display="0" m_topoIndex="97" m_clusterGroupNumber="-1"/>
-    <node_objs xsi:type="cdfg:CdfgNode" id="109" name="_ln123" lineNumber="123" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="grp_pad_Pipeline_VITIS_LOOP_125_7_fu_359" coreId="4294967295" contextFuncName="pad" opcode="call" nodeLabel="18.0" nodeLatency="1" m_display="0" m_topoIndex="98" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="123" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="108" name="empty_76" coreId="3838717608" bitwidth="32" opcode="wait" nodeLabel="18.0" m_display="0" m_topoIndex="97" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="109" name="_ln108" lineNumber="108" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="grp_pad_Pipeline_VITIS_LOOP_110_7_fu_359" coreId="1969188961" contextFuncName="pad" opcode="call" nodeLabel="18.0" nodeLatency="1" m_display="0" m_topoIndex="98" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="108" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
       <dataInputObjs>phi</dataInputObjs>
       <dataOutputObjs>padded_stream2</dataOutputObjs>
-      <constName>pad_Pipeline_VITIS_LOOP_125_7</constName>
+      <constName>pad_Pipeline_VITIS_LOOP_110_7</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="110" name="empty_77" coreId="4194277920" bitwidth="32" opcode="wait" nodeLabel="20.0" m_display="0" m_topoIndex="99" m_clusterGroupNumber="-1"/>
-    <node_objs xsi:type="cdfg:CdfgNode" id="111" name="row_buf_V_2_load_6" lineNumber="129" fileName="accelerator_v2.cpp" fileDirectory=".." coreName="RAM_2P_BRAM" implIndex="bram" control="no" opType="ram_2p" coreId="94" contextFuncName="pad" bitwidth="24" opcode="load" nodeLabel="20.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="100" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="129" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="110" name="empty_77" coreId="3838641952" bitwidth="32" opcode="wait" nodeLabel="20.0" m_display="0" m_topoIndex="99" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="111" name="row_buf_V_2_load_6" lineNumber="114" fileName="accelerator_v2.cpp" fileDirectory=".." coreName="RAM_2P_BRAM" implIndex="bram" control="no" opType="ram_2p" coreId="94" contextFuncName="pad" bitwidth="24" opcode="load" nodeLabel="20.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="100" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="114" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataOutputObjs>mux</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="112" name="row_buf_V_3_load_2" lineNumber="129" fileName="accelerator_v2.cpp" fileDirectory=".." coreName="RAM_2P_BRAM" implIndex="bram" control="no" opType="ram_2p" coreId="94" contextFuncName="pad" bitwidth="24" opcode="load" nodeLabel="20.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="101" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="129" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="112" name="row_buf_V_3_load_2" lineNumber="114" fileName="accelerator_v2.cpp" fileDirectory=".." coreName="RAM_2P_BRAM" implIndex="bram" control="no" opType="ram_2p" coreId="94" contextFuncName="pad" bitwidth="24" opcode="load" nodeLabel="20.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="101" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="114" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataOutputObjs>mux</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="113" name="tmp_8" lineNumber="129" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="mux_42_24_1_1_U59" coreName="Multiplexer" implIndex="auto" control="no" opType="mux" coreId="76" contextFuncName="pad" bitwidth="24" opcode="mux" nodeLabel="21.0" m_display="0" m_delay="0.6" m_topoIndex="104" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="129" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
-      <dataInputObjs>load</dataInputObjs>
-      <dataInputObjs>load</dataInputObjs>
-      <dataInputObjs>load</dataInputObjs>
-      <dataInputObjs>load</dataInputObjs>
-      <dataInputObjs>phi</dataInputObjs>
-      <dataOutputObjs>write</dataOutputObjs>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="114" name="padded_stream2_write_ln129" lineNumber="129" fileName="accelerator_v2.cpp" fileDirectory=".." coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="pad" opcode="write" nodeLabel="21.0" m_display="0" m_delay="1.94" m_topoIndex="105" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="129" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
-      <dataInputObjs>mux</dataInputObjs>
-      <dataOutputObjs>padded_stream2</dataOutputObjs>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="115" name="row_buf_V_2_load_7" lineNumber="130" fileName="accelerator_v2.cpp" fileDirectory=".." coreName="RAM_2P_BRAM" implIndex="bram" control="no" opType="ram_2p" coreId="94" contextFuncName="pad" bitwidth="24" opcode="load" nodeLabel="20.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="102" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="130" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
-      <dataInputObjs>getelementptr</dataInputObjs>
-      <dataOutputObjs>mux</dataOutputObjs>
-      <dataOutputObjs>store</dataOutputObjs>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="116" name="row_buf_V_3_load_3" lineNumber="130" fileName="accelerator_v2.cpp" fileDirectory=".." coreName="RAM_2P_BRAM" implIndex="bram" control="no" opType="ram_2p" coreId="94" contextFuncName="pad" bitwidth="24" opcode="load" nodeLabel="20.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="103" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="130" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
-      <dataInputObjs>getelementptr</dataInputObjs>
-      <dataOutputObjs>mux</dataOutputObjs>
-      <dataOutputObjs>store</dataOutputObjs>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="117" name="tmp_10" lineNumber="130" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="mux_42_24_1_1_U60" coreName="Multiplexer" implIndex="auto" control="no" opType="mux" coreId="76" contextFuncName="pad" bitwidth="24" opcode="mux" nodeLabel="21.0" m_display="0" m_delay="0.6" m_topoIndex="106" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="130" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="113" name="tmp_8" lineNumber="114" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="mux_42_24_1_1_U59" coreName="Multiplexer" implIndex="auto" control="no" opType="mux" coreId="76" contextFuncName="pad" bitwidth="24" opcode="mux" nodeLabel="21.0" m_display="0" m_delay="0.6" m_topoIndex="104" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="114" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>load</dataInputObjs>
@@ -964,97 +938,123 @@
       <dataInputObjs>phi</dataInputObjs>
       <dataOutputObjs>write</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="118" name="padded_stream2_write_ln130" lineNumber="130" fileName="accelerator_v2.cpp" fileDirectory=".." coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="pad" opcode="write" nodeLabel="22.0" m_display="0" m_delay="1.94" m_topoIndex="111" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="130" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="114" name="padded_stream2_write_ln114" lineNumber="114" fileName="accelerator_v2.cpp" fileDirectory=".." coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="pad" opcode="write" nodeLabel="21.0" m_display="0" m_delay="1.94" m_topoIndex="105" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="114" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>mux</dataInputObjs>
       <dataOutputObjs>padded_stream2</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="119" name="r_write_ln112" lineNumber="112" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="4194888224" contextFuncName="pad" opcode="store" nodeLabel="15.0" m_display="0" m_delay="0.48" m_topoIndex="87" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="112" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="115" name="row_buf_V_2_load_7" lineNumber="115" fileName="accelerator_v2.cpp" fileDirectory=".." coreName="RAM_2P_BRAM" implIndex="bram" control="no" opType="ram_2p" coreId="94" contextFuncName="pad" bitwidth="24" opcode="load" nodeLabel="20.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="102" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="115" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+      <dataInputObjs>getelementptr</dataInputObjs>
+      <dataOutputObjs>mux</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="116" name="row_buf_V_3_load_3" lineNumber="115" fileName="accelerator_v2.cpp" fileDirectory=".." coreName="RAM_2P_BRAM" implIndex="bram" control="no" opType="ram_2p" coreId="94" contextFuncName="pad" bitwidth="24" opcode="load" nodeLabel="20.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="103" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="115" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+      <dataInputObjs>getelementptr</dataInputObjs>
+      <dataOutputObjs>mux</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="117" name="tmp_10" lineNumber="115" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="mux_42_24_1_1_U60" coreName="Multiplexer" implIndex="auto" control="no" opType="mux" coreId="76" contextFuncName="pad" bitwidth="24" opcode="mux" nodeLabel="21.0" m_display="0" m_delay="0.6" m_topoIndex="106" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="115" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="118" name="padded_stream2_write_ln115" lineNumber="115" fileName="accelerator_v2.cpp" fileDirectory=".." coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="pad" opcode="write" nodeLabel="22.0" m_display="0" m_delay="1.94" m_topoIndex="111" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="115" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+      <dataInputObjs>mux</dataInputObjs>
+      <dataOutputObjs>padded_stream2</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="119" name="r_write_ln97" lineNumber="97" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="443102200" contextFuncName="pad" opcode="store" nodeLabel="15.0" m_display="0" m_delay="0.48" m_topoIndex="87" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="97" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>add</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="120" name="mux_case_2137_phi_write_ln112" lineNumber="112" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="0" contextFuncName="pad" opcode="store" nodeLabel="21.0" m_display="0" m_topoIndex="107" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="112" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="120" name="mux_case_2137_phi_write_ln97" lineNumber="97" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="443140296" contextFuncName="pad" opcode="store" nodeLabel="21.0" m_display="0" m_topoIndex="107" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="97" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="121" name="mux_case_3138_phi_write_ln112" lineNumber="112" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="0" contextFuncName="pad" opcode="store" nodeLabel="21.0" m_display="0" m_topoIndex="108" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="112" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="121" name="mux_case_3138_phi_write_ln97" lineNumber="97" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="0" contextFuncName="pad" opcode="store" nodeLabel="21.0" m_display="0" m_topoIndex="108" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="97" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="122" name="mux_case_2141_phi_write_ln112" lineNumber="112" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="0" contextFuncName="pad" opcode="store" nodeLabel="21.0" m_display="0" m_topoIndex="109" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="112" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="122" name="mux_case_2141_phi_write_ln97" lineNumber="97" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="608" contextFuncName="pad" opcode="store" nodeLabel="21.0" m_display="0" m_topoIndex="109" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="97" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="123" name="mux_case_3142_phi_write_ln112" lineNumber="112" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="0" contextFuncName="pad" opcode="store" nodeLabel="21.0" m_display="0" m_topoIndex="110" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="112" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="123" name="mux_case_3142_phi_write_ln97" lineNumber="97" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="0" contextFuncName="pad" opcode="store" nodeLabel="21.0" m_display="0" m_topoIndex="110" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="97" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="124" name="mux_case_2126_phi_write_ln112" lineNumber="112" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="0" contextFuncName="pad" opcode="store" nodeLabel="16.0" m_display="0" m_topoIndex="92" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="112" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="124" name="mux_case_2126_phi_write_ln97" lineNumber="97" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="3839325344" contextFuncName="pad" opcode="store" nodeLabel="16.0" m_display="0" m_topoIndex="92" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="97" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="125" name="mux_case_3_phi_write_ln112" lineNumber="112" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="0" contextFuncName="pad" opcode="store" nodeLabel="16.0" m_display="0" m_topoIndex="93" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="112" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="125" name="mux_case_3_phi_write_ln97" lineNumber="97" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="3839325344" contextFuncName="pad" opcode="store" nodeLabel="16.0" m_display="0" m_topoIndex="93" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="97" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="126" name="mux_case_2129_phi_write_ln112" lineNumber="112" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="128" contextFuncName="pad" opcode="store" nodeLabel="16.0" m_display="0" m_topoIndex="94" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="112" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="126" name="mux_case_2129_phi_write_ln97" lineNumber="97" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="3839336960" contextFuncName="pad" opcode="store" nodeLabel="16.0" m_display="0" m_topoIndex="94" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="97" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="127" name="mux_case_3130_phi_write_ln112" lineNumber="112" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="1330007625" contextFuncName="pad" opcode="store" nodeLabel="16.0" m_display="0" m_topoIndex="95" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="112" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="127" name="mux_case_3130_phi_write_ln97" lineNumber="97" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="3839338176" contextFuncName="pad" opcode="store" nodeLabel="16.0" m_display="0" m_topoIndex="95" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="97" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="128" name="br_ln112" lineNumber="112" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="0" contextFuncName="pad" opcode="br" nodeLabel="22.0" m_display="0" m_topoIndex="112" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="112" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="128" name="br_ln97" lineNumber="97" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="0" contextFuncName="pad" opcode="br" nodeLabel="22.0" m_display="0" m_topoIndex="112" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="97" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <controlInputObjs>for.body53</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="accelerator_v2.cpp">
-      <validLinenumbers>123</validLinenumbers>
-      <validLinenumbers>124</validLinenumbers>
-      <validLinenumbers>129</validLinenumbers>
-      <validLinenumbers>130</validLinenumbers>
-      <validLinenumbers>112</validLinenumbers>
+      <validLinenumbers>108</validLinenumbers>
+      <validLinenumbers>109</validLinenumbers>
+      <validLinenumbers>114</validLinenumbers>
+      <validLinenumbers>115</validLinenumbers>
+      <validLinenumbers>97</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
-  <blocks id="133" name="VITIS_LOOP_138_9.preheader" type="BlockType">
+  <blocks id="133" name="VITIS_LOOP_122_9.preheader" type="BlockType">
     <controlInputObjs>for.body53</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
-    <controlOutputObjs>VITIS_LOOP_138_9</controlOutputObjs>
+    <controlOutputObjs>VITIS_LOOP_122_9</controlOutputObjs>
     <node_objs xsi:type="cdfg:CdfgNode" id="130" name="r_4" originalName="r" coreId="0" bitwidth="7" opcode="alloca" nodeLabel="13.0" m_display="0" m_topoIndex="77" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="131" name="r_4_write_ln134" lineNumber="134" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="4194473216" contextFuncName="pad" opcode="store" nodeLabel="13.0" m_display="0" m_delay="0.48" m_topoIndex="78" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="134" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="131" name="r_4_write_ln118" lineNumber="118" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="0" contextFuncName="pad" opcode="store" nodeLabel="13.0" m_display="0" m_delay="0.48" m_topoIndex="78" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="118" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="132" name="br_ln134" lineNumber="134" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="4194474416" contextFuncName="pad" opcode="br" nodeLabel="13.0" m_display="0" m_topoIndex="79" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="134" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
-      <controlInputObjs>VITIS_LOOP_138_9</controlInputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="132" name="br_ln118" lineNumber="118" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="443513315" contextFuncName="pad" opcode="br" nodeLabel="13.0" m_display="0" m_topoIndex="79" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="118" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+      <controlInputObjs>VITIS_LOOP_122_9</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="accelerator_v2.cpp">
-      <validLinenumbers>134</validLinenumbers>
+      <validLinenumbers>118</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
-  <blocks id="138" name="VITIS_LOOP_138_9" type="BlockType">
-    <controlInputObjs>VITIS_LOOP_138_9.preheader</controlInputObjs>
-    <controlInputObjs>VITIS_LOOP_138_9.split</controlInputObjs>
+  <blocks id="138" name="VITIS_LOOP_122_9" type="BlockType">
+    <controlInputObjs>VITIS_LOOP_122_9.preheader</controlInputObjs>
+    <controlInputObjs>VITIS_LOOP_122_9.split</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>br</controlOutputObjs>
-    <controlOutputObjs>VITIS_LOOP_138_9.split</controlOutputObjs>
+    <controlOutputObjs>VITIS_LOOP_122_9.split</controlOutputObjs>
     <controlOutputObjs>for.end130</controlOutputObjs>
     <node_objs xsi:type="cdfg:CdfgNode" id="134" name="r_7" originalName="r" coreId="0" bitwidth="7" opcode="load" nodeLabel="23.0" m_display="0" m_topoIndex="113" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
@@ -1062,67 +1062,67 @@
       <dataOutputObjs>trunc</dataOutputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="135" name="icmp_ln134" lineNumber="134" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="icmp_ln134_fu_588_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="pad" bitwidth="1" opcode="icmp" nodeLabel="23.0" m_display="0" m_delay="0.86" m_topoIndex="114" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="134" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="135" name="icmp_ln118" lineNumber="118" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="icmp_ln118_fu_588_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="pad" bitwidth="1" opcode="icmp" nodeLabel="23.0" m_display="0" m_delay="0.86" m_topoIndex="114" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="118" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>br</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="137" name="br_ln134" lineNumber="134" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="0" contextFuncName="pad" opcode="br" nodeLabel="23.0" m_display="0" m_topoIndex="115" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="134" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="137" name="br_ln118" lineNumber="118" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="3838920264" contextFuncName="pad" opcode="br" nodeLabel="23.0" m_display="0" m_topoIndex="115" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="118" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>icmp</dataInputObjs>
       <controlInputObjs>for.end130</controlInputObjs>
-      <controlInputObjs>VITIS_LOOP_138_9.split</controlInputObjs>
+      <controlInputObjs>VITIS_LOOP_122_9.split</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="accelerator_v2.cpp">
-      <validLinenumbers>134</validLinenumbers>
+      <validLinenumbers>118</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
-  <blocks id="163" name="VITIS_LOOP_138_9.split" type="BlockType">
-    <controlInputObjs>VITIS_LOOP_138_9</controlInputObjs>
+  <blocks id="163" name="VITIS_LOOP_122_9.split" type="BlockType">
+    <controlInputObjs>VITIS_LOOP_122_9</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
-    <controlOutputObjs>VITIS_LOOP_138_9</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="139" name="mux_case_3130_phi_load" lineNumber="137" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="131929066" contextFuncName="pad" bitwidth="24" opcode="load" nodeLabel="24.0" m_display="0" m_topoIndex="124" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="137" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <controlOutputObjs>VITIS_LOOP_122_9</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="139" name="mux_case_3130_phi_load" lineNumber="121" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="3838921520" contextFuncName="pad" bitwidth="24" opcode="load" nodeLabel="24.0" m_display="0" m_topoIndex="124" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="121" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>mux</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="140" name="mux_case_2129_phi_load" lineNumber="137" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="362" contextFuncName="pad" bitwidth="24" opcode="load" nodeLabel="24.0" m_display="0" m_topoIndex="125" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="137" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="140" name="mux_case_2129_phi_load" lineNumber="121" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="3838922696" contextFuncName="pad" bitwidth="24" opcode="load" nodeLabel="24.0" m_display="0" m_topoIndex="125" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="121" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>mux</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="141" name="mux_case_3_phi_load" lineNumber="136" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="4194482096" contextFuncName="pad" bitwidth="24" opcode="load" nodeLabel="23.0" m_display="0" m_topoIndex="116" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="136" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="141" name="mux_case_3_phi_load" lineNumber="120" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="443490277" contextFuncName="pad" bitwidth="24" opcode="load" nodeLabel="23.0" m_display="0" m_topoIndex="116" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="120" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>mux</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="142" name="mux_case_2126_phi_load" lineNumber="136" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="0" contextFuncName="pad" bitwidth="24" opcode="load" nodeLabel="23.0" m_display="0" m_topoIndex="117" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="136" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="142" name="mux_case_2126_phi_load" lineNumber="120" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="0" contextFuncName="pad" bitwidth="24" opcode="load" nodeLabel="23.0" m_display="0" m_topoIndex="117" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="120" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>mux</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="143" name="mux_case_3142_phi_load" lineNumber="143" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="4194239040" contextFuncName="pad" bitwidth="24" opcode="load" nodeLabel="28.0" m_display="0" m_topoIndex="135" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="143" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="143" name="mux_case_3142_phi_load" lineNumber="127" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="3838926304" contextFuncName="pad" bitwidth="24" opcode="load" nodeLabel="28.0" m_display="0" m_topoIndex="135" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="127" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>mux</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="144" name="mux_case_2141_phi_load" lineNumber="143" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="4194690976" contextFuncName="pad" bitwidth="24" opcode="load" nodeLabel="28.0" m_display="0" m_topoIndex="136" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="143" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="144" name="mux_case_2141_phi_load" lineNumber="127" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="0" contextFuncName="pad" bitwidth="24" opcode="load" nodeLabel="28.0" m_display="0" m_topoIndex="136" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="127" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>mux</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="145" name="mux_case_3138_phi_load" lineNumber="142" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="4194706176" contextFuncName="pad" bitwidth="24" opcode="load" nodeLabel="27.0" m_display="0" m_topoIndex="130" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="142" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="145" name="mux_case_3138_phi_load" lineNumber="126" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="0" contextFuncName="pad" bitwidth="24" opcode="load" nodeLabel="27.0" m_display="0" m_topoIndex="130" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="126" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>mux</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="146" name="mux_case_2137_phi_load" lineNumber="142" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="0" contextFuncName="pad" bitwidth="24" opcode="load" nodeLabel="27.0" m_display="0" m_topoIndex="131" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="142" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="146" name="mux_case_2137_phi_load" lineNumber="126" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="3838931152" contextFuncName="pad" bitwidth="24" opcode="load" nodeLabel="27.0" m_display="0" m_topoIndex="131" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="126" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>mux</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="148" name="empty_78" rtlName="tmp_9_fu_604_p3" coreId="4194709808" bitwidth="1" opcode="trunc" nodeLabel="23.0" m_display="0" m_topoIndex="118" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="148" name="empty_78" rtlName="tmp_9_fu_604_p3" coreId="3839136416" bitwidth="1" opcode="trunc" nodeLabel="23.0" m_display="0" m_topoIndex="118" m_clusterGroupNumber="-1">
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>mux</dataOutputObjs>
       <dataOutputObjs>mux</dataOutputObjs>
@@ -1130,94 +1130,94 @@
       <dataOutputObjs>mux</dataOutputObjs>
       <dataOutputObjs>mux</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="149" name="tmp_9" lineNumber="136" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="mux_21_24_1_1_U61" coreName="Multiplexer" implIndex="auto" control="no" opType="mux" coreId="76" contextFuncName="pad" bitwidth="24" opcode="mux" nodeLabel="23.0" m_display="0" m_delay="0.48" m_topoIndex="119" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="136" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="149" name="tmp_9" lineNumber="120" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="mux_21_24_1_1_U61" coreName="Multiplexer" implIndex="auto" control="no" opType="mux" coreId="76" contextFuncName="pad" bitwidth="24" opcode="mux" nodeLabel="23.0" m_display="0" m_delay="0.48" m_topoIndex="119" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="120" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>trunc</dataInputObjs>
       <dataOutputObjs>write</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="150" name="padded_stream2_write_ln136" lineNumber="136" fileName="accelerator_v2.cpp" fileDirectory=".." coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="pad" opcode="write" nodeLabel="23.0" m_display="0" m_delay="1.94" m_topoIndex="120" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="136" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="150" name="padded_stream2_write_ln120" lineNumber="120" fileName="accelerator_v2.cpp" fileDirectory=".." coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="pad" opcode="write" nodeLabel="23.0" m_display="0" m_delay="1.94" m_topoIndex="120" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="120" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>mux</dataInputObjs>
       <dataOutputObjs>padded_stream2</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="151" name="tmp_s" lineNumber="137" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="mux_21_24_1_1_U62" coreName="Multiplexer" implIndex="auto" control="no" opType="mux" coreId="76" contextFuncName="pad" bitwidth="24" opcode="mux" nodeLabel="24.0" m_display="0" m_delay="0.48" m_topoIndex="126" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="137" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="151" name="tmp_s" lineNumber="121" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="mux_21_24_1_1_U62" coreName="Multiplexer" implIndex="auto" control="no" opType="mux" coreId="76" contextFuncName="pad" bitwidth="24" opcode="mux" nodeLabel="24.0" m_display="0" m_delay="0.48" m_topoIndex="126" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="121" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>trunc</dataInputObjs>
       <dataOutputObjs>write</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="152" name="padded_stream2_write_ln137" lineNumber="137" fileName="accelerator_v2.cpp" fileDirectory=".." coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="pad" opcode="write" nodeLabel="24.0" m_display="0" m_delay="1.94" m_topoIndex="127" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="137" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="152" name="padded_stream2_write_ln121" lineNumber="121" fileName="accelerator_v2.cpp" fileDirectory=".." coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="pad" opcode="write" nodeLabel="24.0" m_display="0" m_delay="1.94" m_topoIndex="127" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="121" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>mux</dataInputObjs>
       <dataOutputObjs>padded_stream2</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="153" name="empty_79" coreId="4194715280" bitwidth="32" opcode="wait" nodeLabel="25.0" m_display="0" m_topoIndex="128" m_clusterGroupNumber="-1"/>
-    <node_objs xsi:type="cdfg:CdfgNode" id="154" name="_ln0" rtlName="grp_pad_Pipeline_VITIS_LOOP_138_9_fu_371" coreId="0" opcode="call" nodeLabel="25.0" nodeLatency="1" m_display="0" m_topoIndex="129" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="153" name="empty_79" coreId="3839136416" bitwidth="32" opcode="wait" nodeLabel="25.0" m_display="0" m_topoIndex="128" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="154" name="_ln0" rtlName="grp_pad_Pipeline_VITIS_LOOP_122_9_fu_371" coreId="1313423963" opcode="call" nodeLabel="25.0" nodeLatency="1" m_display="0" m_topoIndex="129" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
       <dataInputObjs>trunc</dataInputObjs>
       <dataOutputObjs>padded_stream2</dataOutputObjs>
-      <constName>pad_Pipeline_VITIS_LOOP_138_9</constName>
+      <constName>pad_Pipeline_VITIS_LOOP_122_9</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="155" name="empty_80" coreId="176" bitwidth="32" opcode="wait" nodeLabel="27.0" m_display="0" m_topoIndex="132" m_clusterGroupNumber="-1"/>
-    <node_objs xsi:type="cdfg:CdfgNode" id="156" name="tmp_1" lineNumber="142" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="mux_21_24_1_1_U63" coreName="Multiplexer" implIndex="auto" control="no" opType="mux" coreId="76" contextFuncName="pad" bitwidth="24" opcode="mux" nodeLabel="27.0" m_display="0" m_delay="0.48" m_topoIndex="133" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="142" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="155" name="empty_80" coreId="3839160576" bitwidth="32" opcode="wait" nodeLabel="27.0" m_display="0" m_topoIndex="132" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="156" name="tmp_1" lineNumber="126" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="mux_21_24_1_1_U63" coreName="Multiplexer" implIndex="auto" control="no" opType="mux" coreId="76" contextFuncName="pad" bitwidth="24" opcode="mux" nodeLabel="27.0" m_display="0" m_delay="0.48" m_topoIndex="133" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="126" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>trunc</dataInputObjs>
       <dataOutputObjs>write</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="157" name="padded_stream2_write_ln142" lineNumber="142" fileName="accelerator_v2.cpp" fileDirectory=".." coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="pad" opcode="write" nodeLabel="27.0" m_display="0" m_delay="1.94" m_topoIndex="134" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="142" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="157" name="padded_stream2_write_ln126" lineNumber="126" fileName="accelerator_v2.cpp" fileDirectory=".." coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="pad" opcode="write" nodeLabel="27.0" m_display="0" m_delay="1.94" m_topoIndex="134" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="126" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>mux</dataInputObjs>
       <dataOutputObjs>padded_stream2</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="158" name="tmp_2" lineNumber="143" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="mux_21_24_1_1_U64" coreName="Multiplexer" implIndex="auto" control="no" opType="mux" coreId="76" contextFuncName="pad" bitwidth="24" opcode="mux" nodeLabel="28.0" m_display="0" m_delay="0.48" m_topoIndex="137" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="143" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="158" name="tmp_2" lineNumber="127" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="mux_21_24_1_1_U64" coreName="Multiplexer" implIndex="auto" control="no" opType="mux" coreId="76" contextFuncName="pad" bitwidth="24" opcode="mux" nodeLabel="28.0" m_display="0" m_delay="0.48" m_topoIndex="137" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="127" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>trunc</dataInputObjs>
       <dataOutputObjs>write</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="159" name="padded_stream2_write_ln143" lineNumber="143" fileName="accelerator_v2.cpp" fileDirectory=".." coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="pad" opcode="write" nodeLabel="28.0" m_display="0" m_delay="1.94" m_topoIndex="138" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="143" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="159" name="padded_stream2_write_ln127" lineNumber="127" fileName="accelerator_v2.cpp" fileDirectory=".." coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="pad" opcode="write" nodeLabel="28.0" m_display="0" m_delay="1.94" m_topoIndex="138" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="127" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>mux</dataInputObjs>
       <dataOutputObjs>padded_stream2</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="160" name="r_8" lineNumber="134" originalName="r" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="r_8_fu_615_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="pad" bitwidth="7" opcode="add" nodeLabel="23.0" m_display="0" m_delay="0.89" m_topoIndex="121" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="134" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="160" name="r_8" lineNumber="118" originalName="r" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="r_8_fu_615_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="pad" bitwidth="7" opcode="add" nodeLabel="23.0" m_display="0" m_delay="0.89" m_topoIndex="121" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="118" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="161" name="r_4_write_ln134" lineNumber="134" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="4194724928" contextFuncName="pad" opcode="store" nodeLabel="23.0" m_display="0" m_delay="0.48" m_topoIndex="122" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="134" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="161" name="r_4_write_ln118" lineNumber="118" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="3839167176" contextFuncName="pad" opcode="store" nodeLabel="23.0" m_display="0" m_delay="0.48" m_topoIndex="122" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="118" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
       <dataInputObjs>add</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="162" name="br_ln134" lineNumber="134" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="131715783" contextFuncName="pad" opcode="br" nodeLabel="28.0" m_display="0" m_topoIndex="139" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="134" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
-      <controlInputObjs>VITIS_LOOP_138_9</controlInputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="162" name="br_ln118" lineNumber="118" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="0" contextFuncName="pad" opcode="br" nodeLabel="28.0" m_display="0" m_topoIndex="139" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="118" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+      <controlInputObjs>VITIS_LOOP_122_9</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="accelerator_v2.cpp">
-      <validLinenumbers>137</validLinenumbers>
-      <validLinenumbers>136</validLinenumbers>
-      <validLinenumbers>143</validLinenumbers>
-      <validLinenumbers>142</validLinenumbers>
-      <validLinenumbers>134</validLinenumbers>
+      <validLinenumbers>121</validLinenumbers>
+      <validLinenumbers>120</validLinenumbers>
+      <validLinenumbers>127</validLinenumbers>
+      <validLinenumbers>126</validLinenumbers>
+      <validLinenumbers>118</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
   <blocks id="165" name="for.end130" type="BlockType">
-    <controlInputObjs>VITIS_LOOP_138_9</controlInputObjs>
+    <controlInputObjs>VITIS_LOOP_122_9</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="164" name="_ln145" lineNumber="145" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="4194718032" contextFuncName="pad" opcode="ret" nodeLabel="23.0" m_display="0" m_topoIndex="123" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="145" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="164" name="_ln129" lineNumber="129" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="3839170016" contextFuncName="pad" opcode="ret" nodeLabel="23.0" m_display="0" m_topoIndex="123" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="129" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="pad"/>
     </node_objs>
     <fileValidLineNumbers fileName="accelerator_v2.cpp">
-      <validLinenumbers>145</validLinenumbers>
+      <validLinenumbers>129</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
   <ScheduleInfo time="0"/>
@@ -1267,17 +1267,20 @@
   <regnodes realName="row_buf_V_load_1_reg_861">
     <nodeIds>73</nodeIds>
   </regnodes>
+  <regnodes realName="icmp_ln99_reg_920">
+    <nodeIds>90</nodeIds>
+  </regnodes>
   <regnodes realName="row_buf_V_1_load_reg_716">
     <nodeIds>23</nodeIds>
-  </regnodes>
-  <regnodes realName="icmp_ln114_reg_920">
-    <nodeIds>90</nodeIds>
   </regnodes>
   <regnodes realName="row_buf_V_1_load_3_reg_754">
     <nodeIds>31</nodeIds>
   </regnodes>
   <regnodes realName="tmp_7_reg_846">
     <nodeIds>51</nodeIds>
+  </regnodes>
+  <regnodes realName="trunc_ln97_1_reg_914">
+    <nodeIds>88</nodeIds>
   </regnodes>
   <regnodes realName="mux_case_2129_phi_reg_782">
     <nodeIds>58</nodeIds>
@@ -1302,9 +1305,6 @@
   </regnodes>
   <regnodes realName="mux_case_3_phi_reg_788">
     <nodeIds>59</nodeIds>
-  </regnodes>
-  <regnodes realName="trunc_ln112_reg_909">
-    <nodeIds>87</nodeIds>
   </regnodes>
   <regnodes realName="mux_case_3138_phi_reg_812">
     <nodeIds>63</nodeIds>
@@ -1342,6 +1342,9 @@
   <regnodes realName="tmp_3_reg_936">
     <nodeIds>106</nodeIds>
   </regnodes>
+  <regnodes realName="trunc_ln97_reg_909">
+    <nodeIds>87</nodeIds>
+  </regnodes>
   <regnodes realName="row_buf_V_addr_2_reg_836">
     <nodeIds>71</nodeIds>
   </regnodes>
@@ -1365,9 +1368,6 @@
   </regnodes>
   <regnodes realName="tmp_6_reg_841">
     <nodeIds>49</nodeIds>
-  </regnodes>
-  <regnodes realName="trunc_ln112_1_reg_914">
-    <nodeIds>88</nodeIds>
   </regnodes>
   <regnodes realName="mux_case_3130_phi_reg_776">
     <nodeIds>57</nodeIds>
@@ -1414,9 +1414,6 @@
   <expressionNodes realName="r_fu_144">
     <nodeIds>65</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="trunc_ln112_fu_464">
-    <nodeIds>87</nodeIds>
-  </expressionNodes>
   <expressionNodes realName="mux_case_3138_phi_fu_136">
     <nodeIds>63</nodeIds>
   </expressionNodes>
@@ -1441,12 +1438,6 @@
   <expressionNodes realName="mux_case_2129_phi_fu_116">
     <nodeIds>58</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="trunc_ln112_1_fu_468">
-    <nodeIds>88</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="add_ln100_fu_405">
-    <nodeIds>53</nodeIds>
-  </expressionNodes>
   <expressionNodes realName="tmp_3_fu_508">
     <nodeIds>106</nodeIds>
   </expressionNodes>
@@ -1468,14 +1459,20 @@
   <expressionNodes realName="tmp_10_fu_553">
     <nodeIds>117</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="icmp_ln114_fu_473">
-    <nodeIds>90</nodeIds>
-  </expressionNodes>
   <expressionNodes realName="row_buf_V_1_addr_3_gep_fu_166">
     <nodeIds>21</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="icmp_ln134_fu_588">
+  <expressionNodes realName="icmp_ln118_fu_588">
     <nodeIds>135</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln97_fu_464">
+    <nodeIds>87</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln86_fu_405">
+    <nodeIds>53</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln99_fu_473">
+    <nodeIds>90</nodeIds>
   </expressionNodes>
   <expressionNodes realName="tmp_s_fu_632">
     <nodeIds>151</nodeIds>
@@ -1483,8 +1480,8 @@
   <expressionNodes realName="mux_case_3_phi_fu_120">
     <nodeIds>59</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="icmp_ln100_fu_388">
-    <nodeIds>37</nodeIds>
+  <expressionNodes realName="icmp_ln97_fu_452">
+    <nodeIds>82</nodeIds>
   </expressionNodes>
   <expressionNodes realName="row_buf_V_3_addr_3_gep_fu_303">
     <nodeIds>76</nodeIds>
@@ -1501,6 +1498,9 @@
   <expressionNodes realName="row_buf_V_2_addr_2_gep_fu_200">
     <nodeIds>25</nodeIds>
   </expressionNodes>
+  <expressionNodes realName="trunc_ln97_1_fu_468">
+    <nodeIds>88</nodeIds>
+  </expressionNodes>
   <expressionNodes realName="tmp_4_fu_495">
     <nodeIds>102</nodeIds>
   </expressionNodes>
@@ -1515,6 +1515,9 @@
   </expressionNodes>
   <expressionNodes realName="tmp_8_fu_540">
     <nodeIds>113</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln86_fu_388">
+    <nodeIds>37</nodeIds>
   </expressionNodes>
   <expressionNodes realName="row_buf_V_addr_3_gep_fu_274">
     <nodeIds>75</nodeIds>
@@ -1546,9 +1549,6 @@
   <expressionNodes realName="r_4_fu_148">
     <nodeIds>130</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="icmp_ln112_fu_452">
-    <nodeIds>82</nodeIds>
-  </expressionNodes>
   <expressionNodes realName="row_buf_V_addr_gep_fu_266">
     <nodeIds>66</nodeIds>
   </expressionNodes>
@@ -1567,20 +1567,20 @@
   <expressionNodes realName="row_buf_V_2_addr_3_gep_fu_232">
     <nodeIds>30</nodeIds>
   </expressionNodes>
-  <moduleNodes realName="grp_pad_Pipeline_VITIS_LOOP_92_1_VITIS_LOOP_93_2_fu_329">
+  <moduleNodes realName="grp_pad_Pipeline_VITIS_LOOP_110_7_fu_359">
+    <nodeIds>109</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_pad_Pipeline_VITIS_LOOP_79_1_VITIS_LOOP_80_2_fu_329">
     <nodeIds>15</nodeIds>
   </moduleNodes>
-  <moduleNodes realName="grp_pad_Pipeline_VITIS_LOOP_103_4_fu_341">
-    <nodeIds>47</nodeIds>
-  </moduleNodes>
-  <moduleNodes realName="grp_pad_Pipeline_VITIS_LOOP_138_9_fu_371">
-    <nodeIds>154</nodeIds>
-  </moduleNodes>
-  <moduleNodes realName="grp_pad_Pipeline_VITIS_LOOP_118_6_fu_350">
+  <moduleNodes realName="grp_pad_Pipeline_VITIS_LOOP_103_6_fu_350">
     <nodeIds>94</nodeIds>
   </moduleNodes>
-  <moduleNodes realName="grp_pad_Pipeline_VITIS_LOOP_125_7_fu_359">
-    <nodeIds>109</nodeIds>
+  <moduleNodes realName="grp_pad_Pipeline_VITIS_LOOP_122_9_fu_371">
+    <nodeIds>154</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_pad_Pipeline_VITIS_LOOP_89_4_fu_341">
+    <nodeIds>47</nodeIds>
   </moduleNodes>
   <ioNodes realName="mux_case_3142_phi_load_load_fu_658">
     <nodeIds>143</nodeIds>
@@ -1588,29 +1588,32 @@
   <ioNodes realName="r_7_load_fu_585">
     <nodeIds>134</nodeIds>
   </ioNodes>
-  <ioNodes realName="store_ln112_store_fu_575">
-    <nodeIds>122</nodeIds>
-  </ioNodes>
-  <ioNodes realName="store_ln112_store_fu_530">
-    <nodeIds>126</nodeIds>
-  </ioNodes>
-  <ioNodes realName="store_ln112_store_fu_570">
-    <nodeIds>121</nodeIds>
-  </ioNodes>
   <ioNodes realName="mux_case_2137_phi_load_load_fu_645">
     <nodeIds>146</nodeIds>
   </ioNodes>
   <ioNodes realName="r_6_load_fu_449">
     <nodeIds>81</nodeIds>
   </ioNodes>
-  <ioNodes realName="store_ln112_store_fu_491">
-    <nodeIds>119</nodeIds>
-  </ioNodes>
-  <ioNodes realName="store_ln134_store_fu_479">
+  <ioNodes realName="store_ln118_store_fu_479">
     <nodeIds>131</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln97_store_fu_520">
+    <nodeIds>124</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln97_store_fu_565">
+    <nodeIds>120</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln86_store_fu_411">
+    <nodeIds>54</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln97_store_fu_525">
+    <nodeIds>125</nodeIds>
   </ioNodes>
   <ioNodes realName="mux_case_2126_phi_load_load_fu_597">
     <nodeIds>142</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln97_store_fu_491">
+    <nodeIds>119</nodeIds>
   </ioNodes>
   <ioNodes realName="grp_write_fu_152">
     <nodeIds>43</nodeIds>
@@ -1626,20 +1629,14 @@
     <nodeIds>157</nodeIds>
     <nodeIds>159</nodeIds>
   </ioNodes>
-  <ioNodes realName="store_ln112_store_fu_416">
-    <nodeIds>78</nodeIds>
-  </ioNodes>
-  <ioNodes realName="store_ln112_store_fu_535">
-    <nodeIds>127</nodeIds>
-  </ioNodes>
-  <ioNodes realName="store_ln100_store_fu_380">
+  <ioNodes realName="store_ln86_store_fu_380">
     <nodeIds>33</nodeIds>
   </ioNodes>
-  <ioNodes realName="store_ln112_store_fu_565">
-    <nodeIds>120</nodeIds>
+  <ioNodes realName="store_ln97_store_fu_570">
+    <nodeIds>121</nodeIds>
   </ioNodes>
-  <ioNodes realName="store_ln112_store_fu_520">
-    <nodeIds>124</nodeIds>
+  <ioNodes realName="store_ln97_store_fu_416">
+    <nodeIds>78</nodeIds>
   </ioNodes>
   <ioNodes realName="mux_case_3130_phi_load_load_fu_626">
     <nodeIds>139</nodeIds>
@@ -1650,23 +1647,26 @@
   <ioNodes realName="mux_case_2129_phi_load_load_fu_629">
     <nodeIds>140</nodeIds>
   </ioNodes>
-  <ioNodes realName="store_ln112_store_fu_580">
-    <nodeIds>123</nodeIds>
-  </ioNodes>
-  <ioNodes realName="store_ln100_store_fu_411">
-    <nodeIds>54</nodeIds>
-  </ioNodes>
-  <ioNodes realName="store_ln134_store_fu_621">
+  <ioNodes realName="store_ln118_store_fu_621">
     <nodeIds>161</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln97_store_fu_530">
+    <nodeIds>126</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln97_store_fu_575">
+    <nodeIds>122</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln97_store_fu_535">
+    <nodeIds>127</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln97_store_fu_580">
+    <nodeIds>123</nodeIds>
   </ioNodes>
   <ioNodes realName="mux_case_2141_phi_load_load_fu_661">
     <nodeIds>144</nodeIds>
   </ioNodes>
   <ioNodes realName="r_3_load_fu_385">
     <nodeIds>36</nodeIds>
-  </ioNodes>
-  <ioNodes realName="store_ln112_store_fu_525">
-    <nodeIds>125</nodeIds>
   </ioNodes>
   <ioNodes realName="mux_case_3_phi_load_load_fu_594">
     <nodeIds>141</nodeIds>
@@ -2102,7 +2102,7 @@
       <basicBlocks>35</basicBlocks>
       <mDfPipe/>
     </cfgRegions>
-    <cfgRegions mId="3" mTag="VITIS_LOOP_100_3" mII="-1" mDepth="-1" mMinTripCount="2" mMaxTripCount="2" mMinLatency="1296" mMaxLatency="1296" mType="1">
+    <cfgRegions mId="3" mTag="VITIS_LOOP_86_3" mII="-1" mDepth="-1" mMinTripCount="2" mMaxTripCount="2" mMinLatency="1296" mMaxLatency="1296" mType="1">
       <basicBlocks>40</basicBlocks>
       <basicBlocks>56</basicBlocks>
       <mDfPipe/>
@@ -2111,7 +2111,7 @@
       <basicBlocks>80</basicBlocks>
       <mDfPipe/>
     </cfgRegions>
-    <cfgRegions mId="5" mTag="VITIS_LOOP_112_5" mII="-1" mDepth="-1" mMinTripCount="480" mMaxTripCount="480" mMinLatency="312480" mMaxLatency="621120" mType="1">
+    <cfgRegions mId="5" mTag="VITIS_LOOP_97_5" mII="-1" mDepth="-1" mMinTripCount="480" mMaxTripCount="480" mMinLatency="312480" mMaxLatency="621120" mType="1">
       <basicBlocks>86</basicBlocks>
       <basicBlocks>92</basicBlocks>
       <basicBlocks>98</basicBlocks>
@@ -2122,7 +2122,7 @@
       <basicBlocks>133</basicBlocks>
       <mDfPipe/>
     </cfgRegions>
-    <cfgRegions mId="7" mTag="VITIS_LOOP_134_8" mII="-1" mDepth="-1" mMinTripCount="2" mMaxTripCount="2" mMinLatency="1296" mMaxLatency="1296" mType="1">
+    <cfgRegions mId="7" mTag="VITIS_LOOP_118_8" mII="-1" mDepth="-1" mMinTripCount="2" mMaxTripCount="2" mMinLatency="1296" mMaxLatency="1296" mType="1">
       <basicBlocks>138</basicBlocks>
       <basicBlocks>163</basicBlocks>
       <mDfPipe/>

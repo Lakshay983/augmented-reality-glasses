@@ -1,51 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1776043567379">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1776050111992">
   <ports id="1" name="in_stream_V_data_V" type="PortType" originalName="in_stream" coreId="55" bitwidth="128">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
   <ports id="2" name="in_stream_V_keep_V" type="PortType" originalName="in_stream" coreId="43" bitwidth="16">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="3" name="in_stream_V_strb_V" type="PortType" originalName="in_stream" coreId="4201428208" bitwidth="16">
+  <ports id="3" name="in_stream_V_strb_V" type="PortType" originalName="in_stream" coreId="3844576080" bitwidth="16">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="4" name="in_stream_V_user_V" type="PortType" originalName="in_stream" coreId="4202058400" bitwidth="1">
+  <ports id="4" name="in_stream_V_user_V" type="PortType" originalName="in_stream" coreId="3846196704" bitwidth="1">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="5" name="in_stream_V_last_V" type="PortType" originalName="in_stream" coreId="542329928" bitwidth="1">
+  <ports id="5" name="in_stream_V_last_V" type="PortType" originalName="in_stream" coreId="3845475384" bitwidth="1">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="6" name="in_stream_V_id_V" type="PortType" originalName="in_stream" coreId="43" bitwidth="1">
+  <ports id="6" name="in_stream_V_id_V" type="PortType" originalName="in_stream" coreId="3844761376" bitwidth="1">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="7" name="in_stream_V_dest_V" type="PortType" originalName="in_stream" coreId="4202190144" bitwidth="1">
+  <ports id="7" name="in_stream_V_dest_V" type="PortType" originalName="in_stream" coreId="3847400464" bitwidth="1">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
   <ports id="8" name="out_stream_V_data_V" type="PortType" originalName="out_stream" coreId="43" bitwidth="128" direction="DirOut">
     <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="9" name="out_stream_V_keep_V" type="PortType" originalName="out_stream" coreId="128203650" bitwidth="16" direction="DirOut">
+  <ports id="9" name="out_stream_V_keep_V" type="PortType" originalName="out_stream" coreId="1397508187" bitwidth="16" direction="DirOut">
     <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="10" name="out_stream_V_strb_V" type="PortType" originalName="out_stream" coreId="4200621808" bitwidth="16" direction="DirOut">
+  <ports id="10" name="out_stream_V_strb_V" type="PortType" originalName="out_stream" coreId="43" bitwidth="16" direction="DirOut">
     <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="11" name="out_stream_V_user_V" type="PortType" originalName="out_stream" coreId="1330007625" bitwidth="1" direction="DirOut">
+  <ports id="11" name="out_stream_V_user_V" type="PortType" originalName="out_stream" coreId="0" bitwidth="1" direction="DirOut">
     <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="12" name="out_stream_V_last_V" type="PortType" originalName="out_stream" coreId="128269369" bitwidth="1" direction="DirOut">
+  <ports id="12" name="out_stream_V_last_V" type="PortType" originalName="out_stream" coreId="3846466928" bitwidth="1" direction="DirOut">
     <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="13" name="out_stream_V_id_V" type="PortType" originalName="out_stream" coreId="1330007625" bitwidth="1" direction="DirOut">
+  <ports id="13" name="out_stream_V_id_V" type="PortType" originalName="out_stream" coreId="544108393" bitwidth="1" direction="DirOut">
     <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="14" name="out_stream_V_dest_V" type="PortType" originalName="out_stream" coreId="4201816112" bitwidth="1" direction="DirOut">
+  <ports id="14" name="out_stream_V_dest_V" type="PortType" originalName="out_stream" coreId="469209964" bitwidth="1" direction="DirOut">
     <dataInputObjs>call</dataInputObjs>
   </ports>
   <ports id="15" name="in_breath" type="PortType" originalName="in_breath" coreId="1145981250" bitwidth="1" direction="DirOut">
     <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="16" name="out_breath" type="PortType" originalName="out_breath" coreId="1397508187" bitwidth="1" direction="DirOut">
+  <ports id="16" name="out_breath" type="PortType" originalName="out_breath" coreId="3846817776" bitwidth="1" direction="DirOut">
     <dataInputObjs>call</dataInputObjs>
   </ports>
   <edges id="63" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
@@ -78,26 +78,26 @@
   <edges id="368" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.6"/>
   <regions anchor_node="-1" region_type="16" typeName="Dataflow" iiViolation="" id="203" RegionName="accelerator_v2">
     <basic_blocks id="56" name="accelerator_v2" type="BlockType">
-      <node_objs xsi:type="cdfg:CdfgNode" id="40" name="bgr_stream" lineNumber="280" originalName="bgr_stream" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="bgr_stream_U" coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="accelerator_v2" bitwidth="24" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="280" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="accelerator_v2"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="40" name="bgr_stream" lineNumber="248" originalName="bgr_stream" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="bgr_stream_U" coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="accelerator_v2" bitwidth="24" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="248" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="accelerator_v2"/>
         <dataOutputObjs>call</dataOutputObjs>
         <dataOutputObjs>call</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="43" name="padded_stream" lineNumber="281" originalName="padded_stream" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="padded_stream_U" coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="accelerator_v2" bitwidth="24" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="281" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="accelerator_v2"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="43" name="padded_stream" lineNumber="249" originalName="padded_stream" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="padded_stream_U" coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="accelerator_v2" bitwidth="24" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="249" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="accelerator_v2"/>
         <dataOutputObjs>call</dataOutputObjs>
         <dataOutputObjs>call</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="46" name="gray_stream" lineNumber="282" originalName="gray_stream" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="gray_stream_U" coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="accelerator_v2" bitwidth="8" opcode="alloca" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="282" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="accelerator_v2"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="46" name="gray_stream" lineNumber="250" originalName="gray_stream" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="gray_stream_U" coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="accelerator_v2" bitwidth="8" opcode="alloca" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="250" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="accelerator_v2"/>
         <dataOutputObjs>call</dataOutputObjs>
         <dataOutputObjs>call</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="51" name="_ln288" lineNumber="288" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="unpack_U0" coreId="4202391504" contextFuncName="accelerator_v2" opcode="call" nodeLabel="1.0" nodeLatency="1" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="288" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="accelerator_v2"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="51" name="_ln256" lineNumber="256" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="unpack_U0" coreId="462410040" contextFuncName="accelerator_v2" opcode="call" nodeLabel="1.0" nodeLatency="1" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="256" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="accelerator_v2"/>
         <dataInputObjs>in_stream_V_data_V</dataInputObjs>
         <dataInputObjs>in_stream_V_keep_V</dataInputObjs>
         <dataInputObjs>in_stream_V_strb_V</dataInputObjs>
@@ -109,20 +109,20 @@
         <dataOutputObjs>in_breath</dataOutputObjs>
         <constName>unpack</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="52" name="_ln289" lineNumber="289" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="pad_U0" coreId="123309074" contextFuncName="accelerator_v2" opcode="call" nodeLabel="3.0" nodeLatency="1" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="289" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="accelerator_v2"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="52" name="_ln257" lineNumber="257" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="pad_U0" coreId="3846547520" contextFuncName="accelerator_v2" opcode="call" nodeLabel="3.0" nodeLatency="1" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="257" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="accelerator_v2"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
         <constName>pad</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="53" name="_ln290" lineNumber="290" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="process_pixels_U0" coreId="128026930" contextFuncName="accelerator_v2" opcode="call" nodeLabel="5.0" nodeLatency="1" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="290" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="accelerator_v2"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="53" name="_ln258" lineNumber="258" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="process_pixels_U0" coreId="464567182" contextFuncName="accelerator_v2" opcode="call" nodeLabel="5.0" nodeLatency="1" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="258" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="accelerator_v2"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
         <constName>process_pixels</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="54" name="_ln291" lineNumber="291" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="repack_U0" coreId="4201816112" contextFuncName="accelerator_v2" opcode="call" nodeLabel="7.0" nodeLatency="1" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="291" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="accelerator_v2"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="54" name="_ln259" lineNumber="259" fileName="accelerator_v2.cpp" fileDirectory=".." rtlName="repack_U0" coreId="468819740" contextFuncName="accelerator_v2" opcode="call" nodeLabel="7.0" nodeLatency="1" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="259" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="accelerator_v2"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataOutputObjs>out_stream_V_data_V</dataOutputObjs>
         <dataOutputObjs>out_stream_V_keep_V</dataOutputObjs>
@@ -134,18 +134,18 @@
         <dataOutputObjs>out_breath</dataOutputObjs>
         <constName>repack</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="55" name="_ln292" lineNumber="292" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="4201086864" contextFuncName="accelerator_v2" opcode="ret" nodeLabel="9.0" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="292" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="accelerator_v2"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="55" name="_ln260" lineNumber="260" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="3846547520" contextFuncName="accelerator_v2" opcode="ret" nodeLabel="9.0" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="260" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="accelerator_v2"/>
       </node_objs>
       <fileValidLineNumbers fileName="accelerator_v2.cpp">
-        <validLinenumbers>280</validLinenumbers>
-        <validLinenumbers>281</validLinenumbers>
-        <validLinenumbers>282</validLinenumbers>
-        <validLinenumbers>288</validLinenumbers>
-        <validLinenumbers>289</validLinenumbers>
-        <validLinenumbers>290</validLinenumbers>
-        <validLinenumbers>291</validLinenumbers>
-        <validLinenumbers>292</validLinenumbers>
+        <validLinenumbers>248</validLinenumbers>
+        <validLinenumbers>249</validLinenumbers>
+        <validLinenumbers>250</validLinenumbers>
+        <validLinenumbers>256</validLinenumbers>
+        <validLinenumbers>257</validLinenumbers>
+        <validLinenumbers>258</validLinenumbers>
+        <validLinenumbers>259</validLinenumbers>
+        <validLinenumbers>260</validLinenumbers>
       </fileValidLineNumbers>
     </basic_blocks>
   </regions>
@@ -362,7 +362,7 @@
     </transitions>
   </fsm>
   <CFGRegionsRoot>
-    <cfgRegions mId="1" mTag="accelerator_v2" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="922081" mMaxLatency="922081" mIsDfPipe="true">
+    <cfgRegions mId="1" mTag="accelerator_v2" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="924001" mMaxLatency="927887" mIsDfPipe="true">
       <basicBlocks>56</basicBlocks>
       <mDfPipe allPipePinInst="//@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.0/@pins.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.3/@pins.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@channel_list.0/@sink.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@channel_list.1/@sink.0/@inst">
         <processe_list name="unpack_U0" ssdmobj_id="51">
@@ -435,7 +435,7 @@
             <inst name="repack_U0" ssdmobj_id="54" object_id="_107"/>
           </pins>
         </processe_list>
-        <channel_list depth="5120" bitwidth="24" suggested_type="0" suggested_depth="5120" name="bgr_stream" ssdmobj_id="40">
+        <channel_list depth="2560" bitwidth="24" suggested_type="0" suggested_depth="2560" name="bgr_stream" ssdmobj_id="40">
           <source>
             <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
             <inst name="unpack_U0" ssdmobj_id="51" object_id="_87"/>

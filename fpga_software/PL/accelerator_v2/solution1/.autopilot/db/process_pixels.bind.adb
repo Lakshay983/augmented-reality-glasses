@@ -34,7 +34,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4199723808</coreId>
+						<coreId>3845587568</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>24</bitwidth>
@@ -70,7 +70,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4200654336</coreId>
+						<coreId>3840855552</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -95,7 +95,7 @@
 						<name>bgr_mat_data</name>
 						<fileName>accelerator_v2.cpp</fileName>
 						<fileDirectory>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL</fileDirectory>
-						<lineNumber>191</lineNumber>
+						<lineNumber>168</lineNumber>
 						<contextFuncName>process_pixels</contextFuncName>
 						<contextNormFuncName>process_pixels</contextNormFuncName>
 						<inlineStackInfo>
@@ -111,7 +111,7 @@
 											<first>accelerator_v2.cpp</first>
 											<second>process_pixels</second>
 										</first>
-										<second>191</second>
+										<second>168</second>
 									</item>
 								</second>
 							</item>
@@ -151,7 +151,7 @@
 						<name>gray_mat_data</name>
 						<fileName>accelerator_v2.cpp</fileName>
 						<fileDirectory>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL</fileDirectory>
-						<lineNumber>192</lineNumber>
+						<lineNumber>169</lineNumber>
 						<contextFuncName>process_pixels</contextFuncName>
 						<contextNormFuncName>process_pixels</contextNormFuncName>
 						<inlineStackInfo>
@@ -167,7 +167,7 @@
 											<first>accelerator_v2.cpp</first>
 											<second>process_pixels</second>
 										</first>
-										<second>192</second>
+										<second>169</second>
 									</item>
 								</second>
 							</item>
@@ -207,7 +207,7 @@
 						<name>blurred_mat_data</name>
 						<fileName>accelerator_v2.cpp</fileName>
 						<fileDirectory>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL</fileDirectory>
-						<lineNumber>193</lineNumber>
+						<lineNumber>170</lineNumber>
 						<contextFuncName>process_pixels</contextFuncName>
 						<contextNormFuncName>process_pixels</contextNormFuncName>
 						<inlineStackInfo>
@@ -223,7 +223,7 @@
 											<first>accelerator_v2.cpp</first>
 											<second>process_pixels</second>
 										</first>
-										<second>193</second>
+										<second>170</second>
 									</item>
 								</second>
 							</item>
@@ -260,10 +260,10 @@
 					<Obj>
 						<type>0</type>
 						<id>15</id>
-						<name>_ln195</name>
+						<name>_ln172</name>
 						<fileName>accelerator_v2.cpp</fileName>
 						<fileDirectory>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL</fileDirectory>
-						<lineNumber>195</lineNumber>
+						<lineNumber>172</lineNumber>
 						<contextFuncName>process_pixels</contextFuncName>
 						<contextNormFuncName>process_pixels</contextNormFuncName>
 						<inlineStackInfo>
@@ -279,7 +279,7 @@
 											<first>accelerator_v2.cpp</first>
 											<second>process_pixels</second>
 										</first>
-										<second>195</second>
+										<second>172</second>
 									</item>
 								</second>
 							</item>
@@ -292,7 +292,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4196260416</coreId>
+						<coreId>406</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -318,10 +318,10 @@
 					<Obj>
 						<type>0</type>
 						<id>16</id>
-						<name>_ln197</name>
+						<name>_ln173</name>
 						<fileName>accelerator_v2.cpp</fileName>
 						<fileDirectory>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL</fileDirectory>
-						<lineNumber>197</lineNumber>
+						<lineNumber>173</lineNumber>
 						<contextFuncName>process_pixels</contextFuncName>
 						<contextNormFuncName>process_pixels</contextNormFuncName>
 						<inlineStackInfo>
@@ -337,7 +337,7 @@
 											<first>accelerator_v2.cpp</first>
 											<second>process_pixels</second>
 										</first>
-										<second>197</second>
+										<second>173</second>
 									</item>
 								</second>
 							</item>
@@ -350,7 +350,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4196260416</coreId>
+						<coreId>3841111600</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -378,10 +378,10 @@
 					<Obj>
 						<type>0</type>
 						<id>17</id>
-						<name>_ln202</name>
+						<name>_ln178</name>
 						<fileName>accelerator_v2.cpp</fileName>
 						<fileDirectory>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL</fileDirectory>
-						<lineNumber>202</lineNumber>
+						<lineNumber>178</lineNumber>
 						<contextFuncName>process_pixels</contextFuncName>
 						<contextNormFuncName>process_pixels</contextNormFuncName>
 						<inlineStackInfo>
@@ -397,7 +397,7 @@
 											<first>accelerator_v2.cpp</first>
 											<second>process_pixels</second>
 										</first>
-										<second>202</second>
+										<second>178</second>
 									</item>
 								</second>
 							</item>
@@ -410,7 +410,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4196260416</coreId>
+						<coreId>3841350944</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -437,10 +437,10 @@
 					<Obj>
 						<type>0</type>
 						<id>18</id>
-						<name>_ln205</name>
+						<name>_ln181</name>
 						<fileName>accelerator_v2.cpp</fileName>
 						<fileDirectory>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL</fileDirectory>
-						<lineNumber>205</lineNumber>
+						<lineNumber>181</lineNumber>
 						<contextFuncName>process_pixels</contextFuncName>
 						<contextNormFuncName>process_pixels</contextNormFuncName>
 						<inlineStackInfo>
@@ -456,7 +456,7 @@
 											<first>accelerator_v2.cpp</first>
 											<second>process_pixels</second>
 										</first>
-										<second>205</second>
+										<second>181</second>
 									</item>
 								</second>
 							</item>
@@ -469,7 +469,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4196260416</coreId>
+						<coreId>3843403632</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -496,10 +496,10 @@
 					<Obj>
 						<type>0</type>
 						<id>19</id>
-						<name>_ln206</name>
+						<name>_ln182</name>
 						<fileName>accelerator_v2.cpp</fileName>
 						<fileDirectory>/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL</fileDirectory>
-						<lineNumber>206</lineNumber>
+						<lineNumber>182</lineNumber>
 						<contextFuncName>process_pixels</contextFuncName>
 						<contextNormFuncName>process_pixels</contextNormFuncName>
 						<inlineStackInfo>
@@ -515,7 +515,7 @@
 											<first>accelerator_v2.cpp</first>
 											<second>process_pixels</second>
 										</first>
-										<second>206</second>
+										<second>182</second>
 									</item>
 								</second>
 							</item>
@@ -528,7 +528,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4196260416</coreId>
+						<coreId>3841350944</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -573,7 +573,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4196260416</coreId>
+						<coreId>3841350944</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -604,7 +604,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>51</coreId>
+						<coreId>3841350944</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -635,7 +635,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4199467264</coreId>
+						<coreId>3841350944</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -666,7 +666,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4200565120</coreId>
+						<coreId>3841350944</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -697,7 +697,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>3841350944</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -731,7 +731,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>129245588</coreId>
+					<coreId>3844532240</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>

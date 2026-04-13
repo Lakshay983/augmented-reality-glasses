@@ -17,19 +17,19 @@
 #define PAD              2
 #define PAD_W            (IMG_W + 2*PAD)
 #define PAD_H            (IMG_H + 2*PAD)
-#define ROWS_PER_TX      5
+#define ROWS_PER_TX      1
 #define KERNEL_SIZE      5
 #define TOTAL_PIXELS     (IMG_W * IMG_H)
 
 #define TX_HEADER_BYTES  16
-#define TX_PIXEL_BYTES   (ROWS_PER_TX * IMG_W * 3)
-#define TX_TOTAL_BYTES   (TX_HEADER_BYTES + TX_PIXEL_BYTES)
-#define TX_BURSTS        ((TX_TOTAL_BYTES + 15) / 16)
+#define TX_PIXEL_BYTES   (ROWS_PER_TX * IMG_W * 3)                  // 1920
+#define TX_TOTAL_BYTES   (TX_HEADER_BYTES + TX_PIXEL_BYTES)          // 1936
+#define TX_BURSTS        ((TX_TOTAL_BYTES + 15) / 16)                // 121
 
 #define RX_HEADER_BYTES  16
 #define RX_PIXEL_BYTES   IMG_W
-#define RX_TOTAL_BYTES   (RX_HEADER_BYTES + RX_PIXEL_BYTES)
-#define RX_BURSTS        ((RX_TOTAL_BYTES + 15) / 16)
+#define RX_TOTAL_BYTES   (RX_HEADER_BYTES + RX_PIXEL_BYTES)          // 656
+#define RX_BURSTS        ((RX_TOTAL_BYTES + 15) / 16)                // 41
 
 typedef ap_axiu<128, 1, 1, 1> AxiBurst;
 
@@ -89,22 +89,21 @@ int parse_hexdump(const char* filename, unsigned char* buf, int max_bytes)
     return total;
 }
 
-// Each 5-row block is a separate MM2S transaction with its own TLAST,
-// matching the PS DMA behavior.
+// Each row is a separate MM2S transaction with its own TLAST — 480 transactions total.
 void pack_bursts(unsigned char* bgr_buf, hls::stream<AxiBurst>& s)
 {
-    int txCount = IMG_H / ROWS_PER_TX;  // 96
+    int txCount = IMG_H / ROWS_PER_TX;  // 480
 
     for (int tx = 0; tx < txCount; tx++)
     {
         unsigned char txBuf[TX_TOTAL_BYTES];
         memset(txBuf, 0, sizeof(txBuf));
 
-        // 16-byte header: tx index in bytes [1:0]
+        // 16-byte header: row index in bytes [1:0]
         txBuf[0] = (tx >> 0) & 0xFF;
         txBuf[1] = (tx >> 8) & 0xFF;
 
-        // 5 rows of BGR pixels starting at byte 16
+        // 1 row of BGR pixels starting at byte 16
         for (int r = 0; r < ROWS_PER_TX; r++)
         {
             int srcRow = tx * ROWS_PER_TX + r;
@@ -118,7 +117,7 @@ void pack_bursts(unsigned char* bgr_buf, hls::stream<AxiBurst>& s)
             }
         }
 
-        // pack into TX_BURSTS bursts — TLAST on last burst of each block
+        // pack into TX_BURSTS bursts — TLAST on last burst of each row transaction
         for (int b = 0; b < TX_BURSTS; b++)
         {
             AxiBurst burst;
@@ -143,8 +142,7 @@ void pack_bursts(unsigned char* bgr_buf, hls::stream<AxiBurst>& s)
            txCount, TX_BURSTS, txCount * TX_BURSTS);
 }
 
-// Each row is a separate S2MM transaction with its own TLAST,
-// matching receive_dma_frame arming S2MM once per row.
+// Each row is a separate S2MM transaction with its own TLAST.
 void unpack_output(hls::stream<AxiBurst>& s, unsigned char* gray_out)
 {
     int total = 0;
@@ -167,7 +165,6 @@ void unpack_output(hls::stream<AxiBurst>& s, unsigned char* gray_out)
                     rxBuf[byteIdx] = (unsigned char)burst.data(i*8+7, i*8);
             }
 
-            // TLAST must be set on last burst of every row
             if (b == RX_BURSTS - 1)
             {
                 if (!burst.last)
@@ -183,7 +180,6 @@ void unpack_output(hls::stream<AxiBurst>& s, unsigned char* gray_out)
             }
         }
 
-        // check header — row index in bytes [1:0]
         uint16_t header = (uint16_t)rxBuf[0] | ((uint16_t)rxBuf[1] << 8);
         if (header != (uint16_t)row)
         {
@@ -224,7 +220,7 @@ int compare(unsigned char* got, unsigned char* ref, int n, int tolerance, const 
 
 int test_full(unsigned char* bgr_buf, unsigned char* ref_blurred)
 {
-    printf("\n[Test] Full accelerator_v2 end-to-end (5-row streaming)\n");
+    printf("\n[Test] Full accelerator_v2 end-to-end (1-row streaming)\n");
 
     static hls::stream<AxiBurst> in_stream ("tb_in");
     static hls::stream<AxiBurst> out_stream("tb_out");

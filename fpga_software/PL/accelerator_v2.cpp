@@ -11,24 +11,20 @@
 #define PAD              2
 #define PAD_W            (IMG_W + 2*PAD)  // 644
 #define PAD_H            (IMG_H + 2*PAD)  // 484
-#define FIFO_DEPTH       (5 * PAD_W)      // 5-row line buffer — no full frame buffering
-#define ROWS_PER_TX      5
+#define FIFO_DEPTH       (5 * PAD_W)      // 5-row line buffer
+#define ROWS_PER_TX      1
 #define KERNEL_SIZE      5
-#define TX_HEADER_BYTES  16                                          // one full 128-bit burst
-#define TX_PIXEL_BYTES   (ROWS_PER_TX * IMG_W * 3)                  // 9600
-#define TX_TOTAL_BYTES   (TX_HEADER_BYTES + TX_PIXEL_BYTES)          // 9616
-#define TX_BURSTS        ((TX_TOTAL_BYTES + 15) / 16)                // 601
-#define RX_HEADER_BYTES  16                                          // one full 128-bit burst
+#define TX_HEADER_BYTES  16
+#define TX_PIXEL_BYTES   (ROWS_PER_TX * IMG_W * 3)                  // 1920
+#define TX_TOTAL_BYTES   (TX_HEADER_BYTES + TX_PIXEL_BYTES)          // 1936
+#define TX_BURSTS        ((TX_TOTAL_BYTES + 15) / 16)                // 121
+#define RX_HEADER_BYTES  16
 #define RX_PIXEL_BYTES   IMG_W                                       // 640
 #define RX_TOTAL_BYTES   (RX_HEADER_BYTES + RX_PIXEL_BYTES)          // 656
 #define RX_BURSTS        ((RX_TOTAL_BYTES + 15) / 16)                // 41
 
 typedef ap_axiu<128, 1, 1, 1> AxiBurst;
 
-// ─────────────────────────────────────────────
-// unpack: reads 16-byte header burst + pixel bursts
-// strips header, streams BGR pixels into bgr_stream
-// ─────────────────────────────────────────────
 void unpack(
     hls::stream<AxiBurst>&    burst_in,
     hls::stream<ap_uint<24>>& bgr_stream,
@@ -36,29 +32,24 @@ void unpack(
 {
 #pragma HLS INLINE off
 
-    for (int tx = 0; tx < IMG_H / ROWS_PER_TX; tx++)
+    for (int tx = 0; tx < IMG_H / ROWS_PER_TX; tx++)  // 480 iterations
     {
         if (tx == 0) *in_breath = 1;
 
         AxiBurst hdr_burst = burst_in.read();
         (void)hdr_burst;
 
-        const int TOTAL_BYTES = ROWS_PER_TX * IMG_W * 3;  // 9600
+        const int TOTAL_BYTES = ROWS_PER_TX * IMG_W * 3;  // 1920
 
-        ap_uint<8>  carry_b = 0;
-        ap_uint<8>  carry_g = 0;
-        AxiBurst    cur_burst;
-        bool        burst_valid = false;
+        ap_uint<8> carry_b = 0;
+        ap_uint<8> carry_g = 0;
+        AxiBurst   cur_burst;
 
         for (int byte_idx = 0; byte_idx < TOTAL_BYTES; byte_idx++)
         {
 #pragma HLS PIPELINE II=1
-
-            // fetch a new burst every 16 bytes
-            if (byte_idx % 16 == 0) {
-                cur_burst   = burst_in.read();
-                burst_valid = true;
-            }
+            if (byte_idx % 16 == 0)
+                cur_burst = burst_in.read();
 
             ap_uint<8> bval = cur_burst.data((byte_idx % 16)*8+7, (byte_idx % 16)*8);
             int        lane = byte_idx % 3;
@@ -75,9 +66,6 @@ void unpack(
     }
 }
 
-// ─────────────────────────────────────────────
-// pad: REFLECT_101, 4-slot row buffer
-// ─────────────────────────────────────────────
 void pad(
     hls::stream<ap_uint<24>>& in,
     hls::stream<ap_uint<24>>& out)
@@ -88,7 +76,6 @@ void pad(
 #pragma HLS ARRAY_PARTITION variable=row_buf complete dim=1
 #pragma HLS BIND_STORAGE variable=row_buf type=RAM_2P impl=BRAM
 
-    // buffer top 3 rows
     for (int r = 0; r < 3; r++) {
         for (int c = 0; c < IMG_W; c++) {
 #pragma HLS PIPELINE II=1
@@ -96,7 +83,6 @@ void pad(
         }
     }
 
-    // REFLECT_101 top pad: emit row2 then row1
     for (int r = 2; r >= 1; r--) {
         out.write(row_buf[r][2]);
         out.write(row_buf[r][1]);
@@ -108,7 +94,6 @@ void pad(
         out.write(row_buf[r][IMG_W-3]);
     }
 
-    // main body
     for (int r = 0; r < IMG_H; r++) {
         int slot;
         if (r < 3) {
@@ -130,7 +115,6 @@ void pad(
         out.write(row_buf[slot][IMG_W-3]);
     }
 
-    // REFLECT_101 bottom pad: emit row H-2 then row H-3
     for (int r = IMG_H-2; r >= IMG_H-3; r--) {
         int slot = (r < 3) ? r : (r % 2 + 2);
         out.write(row_buf[slot][2]);
@@ -144,9 +128,6 @@ void pad(
     }
 }
 
-// ─────────────────────────────────────────────
-// stream_to_mat / mat_to_stream
-// ─────────────────────────────────────────────
 void stream_to_mat(
     hls::stream<ap_uint<24>>& in,
     xf::cv::Mat<XF_8UC3, PAD_H, PAD_W, XF_NPPC1, FIFO_DEPTH>& out,
@@ -177,10 +158,6 @@ void mat_to_stream(
     }
 }
 
-// ─────────────────────────────────────────────
-// process_pixels: BGR->Gray + GaussianBlur
-// FIFO_DEPTH = 5*PAD_W — line buffer, no full frame buffering
-// ─────────────────────────────────────────────
 void process_pixels(
     hls::stream<ap_uint<24>>& bgr_stream,
     hls::stream<ap_uint<8>>&  gray_stream_out,
@@ -193,7 +170,6 @@ void process_pixels(
     xf::cv::Mat<XF_8UC1, PAD_H, PAD_W, XF_NPPC1, FIFO_DEPTH> blurred_mat(rows, cols);
 
     stream_to_mat(bgr_stream, bgr_mat, rows, cols);
-
     xf::cv::bgr2gray<XF_8UC3, XF_8UC1, PAD_H, PAD_W, XF_NPPC1>(bgr_mat, gray_mat);
 
 #pragma HLS DEPENDENCE variable=gray_mat inter false
@@ -205,11 +181,6 @@ void process_pixels(
     mat_to_stream(blurred_mat, gray_stream_out, rows, cols);
 }
 
-// ─────────────────────────────────────────────
-// repack: reads PAD_H rows of grayscale
-// outputs IMG_H real rows with 16-byte header burst
-// discards PAD rows at top and bottom
-// ─────────────────────────────────────────────
 void repack(
     hls::stream<ap_uint<8>>& gray_stream,
     hls::stream<AxiBurst>&   burst_out,
@@ -255,15 +226,12 @@ void repack(
                 out_burst.data(p*8+7, p*8) = row_pixels[PAD + base_pix + p];
             }
 
-            out_burst.last = (b == 39) ? 1 : 0;  // TLAST on every row, not just last row of frame
+            out_burst.last = (b == 39) ? 1 : 0;
             burst_out.write(out_burst);
         }
     }
 }
 
-// ─────────────────────────────────────────────
-// top-level
-// ─────────────────────────────────────────────
 void accelerator_v2(
     hls::stream<ap_axiu<128,1,1,1>>& in_stream,
     hls::stream<ap_axiu<128,1,1,1>>& out_stream,
@@ -281,7 +249,7 @@ void accelerator_v2(
     hls::stream<ap_uint<24>> padded_stream("padded_stream");
     hls::stream<ap_uint<8>>  gray_stream("gray_stream");
 
-#pragma HLS STREAM variable=bgr_stream    depth=5120
+#pragma HLS STREAM variable=bgr_stream    depth=2560
 #pragma HLS STREAM variable=padded_stream depth=3864
 #pragma HLS STREAM variable=gray_stream   depth=3864
 

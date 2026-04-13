@@ -23,7 +23,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_bgr_stream1 \
     op interface \
-    ports { bgr_stream1_dout { I 24 vector } bgr_stream1_num_data_valid { I 14 vector } bgr_stream1_fifo_cap { I 14 vector } bgr_stream1_empty_n { I 1 bit } bgr_stream1_read { O 1 bit } } \
+    ports { bgr_stream1_dout { I 24 vector } bgr_stream1_num_data_valid { I 13 vector } bgr_stream1_fifo_cap { I 13 vector } bgr_stream1_empty_n { I 1 bit } bgr_stream1_read { O 1 bit } } \
 } "
 }
 

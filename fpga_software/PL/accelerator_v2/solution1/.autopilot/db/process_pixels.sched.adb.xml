@@ -106,10 +106,10 @@ entry:9 %blurred_mat_data = alloca i64 1
 
 <Node id="15" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="24">
 <![CDATA[
-entry:12 %call_ln195 = call void @stream_to_mat, i24 %padded_stream2, i24 %bgr_mat_data
+entry:12 %call_ln172 = call void @stream_to_mat, i24 %padded_stream2, i24 %bgr_mat_data
 
 ]]></Node>
-<StgValue><ssdm name="call_ln195"/></StgValue>
+<StgValue><ssdm name="call_ln172"/></StgValue>
 </operation>
 </state>
 
@@ -124,10 +124,10 @@ entry:12 %call_ln195 = call void @stream_to_mat, i24 %padded_stream2, i24 %bgr_m
 
 <Node id="15" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="24">
 <![CDATA[
-entry:12 %call_ln195 = call void @stream_to_mat, i24 %padded_stream2, i24 %bgr_mat_data
+entry:12 %call_ln172 = call void @stream_to_mat, i24 %padded_stream2, i24 %bgr_mat_data
 
 ]]></Node>
-<StgValue><ssdm name="call_ln195"/></StgValue>
+<StgValue><ssdm name="call_ln172"/></StgValue>
 </operation>
 </state>
 
@@ -142,10 +142,10 @@ entry:12 %call_ln195 = call void @stream_to_mat, i24 %padded_stream2, i24 %bgr_m
 
 <Node id="16" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="8" op_3_bw="0" op_4_bw="0">
 <![CDATA[
-entry:13 %call_ln197 = call void @bgr2gray<9, 0, 484, 644, 1, 3220, 3220>, i24 %bgr_mat_data, i8 %gray_mat_data
+entry:13 %call_ln173 = call void @bgr2gray<9, 0, 484, 644, 1, 3220, 3220>, i24 %bgr_mat_data, i8 %gray_mat_data
 
 ]]></Node>
-<StgValue><ssdm name="call_ln197"/></StgValue>
+<StgValue><ssdm name="call_ln173"/></StgValue>
 </operation>
 </state>
 
@@ -160,10 +160,10 @@ entry:13 %call_ln197 = call void @bgr2gray<9, 0, 484, 644, 1, 3220, 3220>, i24 %
 
 <Node id="16" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="8" op_3_bw="0" op_4_bw="0">
 <![CDATA[
-entry:13 %call_ln197 = call void @bgr2gray<9, 0, 484, 644, 1, 3220, 3220>, i24 %bgr_mat_data, i8 %gray_mat_data
+entry:13 %call_ln173 = call void @bgr2gray<9, 0, 484, 644, 1, 3220, 3220>, i24 %bgr_mat_data, i8 %gray_mat_data
 
 ]]></Node>
-<StgValue><ssdm name="call_ln197"/></StgValue>
+<StgValue><ssdm name="call_ln173"/></StgValue>
 </operation>
 </state>
 
@@ -178,10 +178,10 @@ entry:13 %call_ln197 = call void @bgr2gray<9, 0, 484, 644, 1, 3220, 3220>, i24 %
 
 <Node id="17" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="8" op_3_bw="0">
 <![CDATA[
-entry:14 %call_ln202 = call void @GaussianBlur<5, 1, 0, 484, 644, 1, 3220, 3220>, i8 %gray_mat_data, i8 %blurred_mat_data
+entry:14 %call_ln178 = call void @GaussianBlur<5, 1, 0, 484, 644, 1, 3220, 3220>, i8 %gray_mat_data, i8 %blurred_mat_data
 
 ]]></Node>
-<StgValue><ssdm name="call_ln202"/></StgValue>
+<StgValue><ssdm name="call_ln178"/></StgValue>
 </operation>
 </state>
 
@@ -196,10 +196,10 @@ entry:14 %call_ln202 = call void @GaussianBlur<5, 1, 0, 484, 644, 1, 3220, 3220>
 
 <Node id="17" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="8" op_3_bw="0">
 <![CDATA[
-entry:14 %call_ln202 = call void @GaussianBlur<5, 1, 0, 484, 644, 1, 3220, 3220>, i8 %gray_mat_data, i8 %blurred_mat_data
+entry:14 %call_ln178 = call void @GaussianBlur<5, 1, 0, 484, 644, 1, 3220, 3220>, i8 %gray_mat_data, i8 %blurred_mat_data
 
 ]]></Node>
-<StgValue><ssdm name="call_ln202"/></StgValue>
+<StgValue><ssdm name="call_ln178"/></StgValue>
 </operation>
 </state>
 
@@ -214,10 +214,10 @@ entry:14 %call_ln202 = call void @GaussianBlur<5, 1, 0, 484, 644, 1, 3220, 3220>
 
 <Node id="18" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="8" op_3_bw="0">
 <![CDATA[
-entry:15 %call_ln205 = call void @mat_to_stream, i8 %blurred_mat_data, i8 %gray_stream3
+entry:15 %call_ln181 = call void @mat_to_stream, i8 %blurred_mat_data, i8 %gray_stream3
 
 ]]></Node>
-<StgValue><ssdm name="call_ln205"/></StgValue>
+<StgValue><ssdm name="call_ln181"/></StgValue>
 </operation>
 </state>
 
@@ -367,10 +367,10 @@ entry:11 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %bl
 
 <Node id="18" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="8" op_3_bw="0">
 <![CDATA[
-entry:15 %call_ln205 = call void @mat_to_stream, i8 %blurred_mat_data, i8 %gray_stream3
+entry:15 %call_ln181 = call void @mat_to_stream, i8 %blurred_mat_data, i8 %gray_stream3
 
 ]]></Node>
-<StgValue><ssdm name="call_ln205"/></StgValue>
+<StgValue><ssdm name="call_ln181"/></StgValue>
 </operation>
 
 <operation id="29" st_id="8" stage="1" lat="1">
@@ -382,10 +382,10 @@ entry:15 %call_ln205 = call void @mat_to_stream, i8 %blurred_mat_data, i8 %gray_
 
 <Node id="19" bw="0">
 <![CDATA[
-entry:16 %ret_ln206 = ret
+entry:16 %ret_ln182 = ret
 
 ]]></Node>
-<StgValue><ssdm name="ret_ln206"/></StgValue>
+<StgValue><ssdm name="ret_ln182"/></StgValue>
 </operation>
 </state>
 </state_list>

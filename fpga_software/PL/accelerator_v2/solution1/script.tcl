@@ -11,7 +11,7 @@ add_files -tb tb_data -cflags "-Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-un
 open_solution "solution1" -flow_target vivado
 set_part {xczu3eg-sbva484-1-i}
 create_clock -period 10 -name default
-config_export -display_name Accelerator_v4.1 -format ip_catalog -output /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/Accelerators -rtl verilog -version 4.1
+config_export -display_name Accelerator_v4.2 -format ip_catalog -output /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/Accelerators -rtl verilog -version 4.2
 source "./accelerator_v2/solution1/directives.tcl"
 csim_design
 csynth_design
