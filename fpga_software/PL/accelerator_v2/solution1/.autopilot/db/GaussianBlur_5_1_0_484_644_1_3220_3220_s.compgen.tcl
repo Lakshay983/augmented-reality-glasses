@@ -10,30 +10,30 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 161 \
-    name gray_mat_data44 \
+    id 171 \
+    name gray_mat_data2 \
     type fifo \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_gray_mat_data44 \
+    corename dc_gray_mat_data2 \
     op interface \
-    ports { gray_mat_data44_dout { I 8 vector } gray_mat_data44_num_data_valid { I 13 vector } gray_mat_data44_fifo_cap { I 13 vector } gray_mat_data44_empty_n { I 1 bit } gray_mat_data44_read { O 1 bit } } \
+    ports { gray_mat_data2_dout { I 8 vector } gray_mat_data2_num_data_valid { I 13 vector } gray_mat_data2_fifo_cap { I 13 vector } gray_mat_data2_empty_n { I 1 bit } gray_mat_data2_read { O 1 bit } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 162 \
-    name blurred_mat_data45 \
+    id 172 \
+    name blurred_mat_data3 \
     type fifo \
     dir O \
     reset_level 1 \
     sync_rst true \
-    corename dc_blurred_mat_data45 \
+    corename dc_blurred_mat_data3 \
     op interface \
-    ports { blurred_mat_data45_din { O 8 vector } blurred_mat_data45_num_data_valid { I 13 vector } blurred_mat_data45_fifo_cap { I 13 vector } blurred_mat_data45_full_n { I 1 bit } blurred_mat_data45_write { O 1 bit } } \
+    ports { blurred_mat_data3_din { O 8 vector } blurred_mat_data3_num_data_valid { I 13 vector } blurred_mat_data3_fifo_cap { I 13 vector } blurred_mat_data3_full_n { I 1 bit } blurred_mat_data3_write { O 1 bit } } \
 } "
 }
 

@@ -6,7 +6,7 @@
 `timescale 1ns/1ps
 module accelerator_v2_CTRL_s_axi
 #(parameter
-    C_S_AXI_ADDR_WIDTH = 4,
+    C_S_AXI_ADDR_WIDTH = 7,
     C_S_AXI_DATA_WIDTH = 32
 )(
     input  wire                          ACLK,
@@ -30,47 +30,97 @@ module accelerator_v2_CTRL_s_axi
     output wire                          RVALID,
     input  wire                          RREADY,
     output wire                          interrupt,
+    input  wire [7:0]                    in_breath,
+    input  wire                          in_breath_ap_vld,
+    input  wire [7:0]                    out_breath,
+    input  wire                          out_breath_ap_vld,
+    input  wire [7:0]                    bgr_fifo_breath,
+    input  wire                          bgr_fifo_breath_ap_vld,
+    input  wire [7:0]                    pad_fifo_breath,
+    input  wire                          pad_fifo_breath_ap_vld,
+    input  wire [7:0]                    gray_fifo_breath,
+    input  wire                          gray_fifo_breath_ap_vld,
     output wire                          ap_start,
     input  wire                          ap_done,
     input  wire                          ap_ready,
     input  wire                          ap_idle
 );
 //------------------------Address Info-------------------
-// 0x0 : Control signals
-//       bit 0  - ap_start (Read/Write/COH)
-//       bit 1  - ap_done (Read/COR)
-//       bit 2  - ap_idle (Read)
-//       bit 3  - ap_ready (Read/COR)
-//       bit 7  - auto_restart (Read/Write)
-//       bit 9  - interrupt (Read)
-//       others - reserved
-// 0x4 : Global Interrupt Enable Register
-//       bit 0  - Global Interrupt Enable (Read/Write)
-//       others - reserved
-// 0x8 : IP Interrupt Enable Register (Read/Write)
-//       bit 0 - enable ap_done interrupt (Read/Write)
-//       bit 1 - enable ap_ready interrupt (Read/Write)
-//       others - reserved
-// 0xc : IP Interrupt Status Register (Read/TOW)
-//       bit 0 - ap_done (Read/TOW)
-//       bit 1 - ap_ready (Read/TOW)
-//       others - reserved
+// 0x00 : Control signals
+//        bit 0  - ap_start (Read/Write/COH)
+//        bit 1  - ap_done (Read/COR)
+//        bit 2  - ap_idle (Read)
+//        bit 3  - ap_ready (Read/COR)
+//        bit 7  - auto_restart (Read/Write)
+//        bit 9  - interrupt (Read)
+//        others - reserved
+// 0x04 : Global Interrupt Enable Register
+//        bit 0  - Global Interrupt Enable (Read/Write)
+//        others - reserved
+// 0x08 : IP Interrupt Enable Register (Read/Write)
+//        bit 0 - enable ap_done interrupt (Read/Write)
+//        bit 1 - enable ap_ready interrupt (Read/Write)
+//        others - reserved
+// 0x0c : IP Interrupt Status Register (Read/TOW)
+//        bit 0 - ap_done (Read/TOW)
+//        bit 1 - ap_ready (Read/TOW)
+//        others - reserved
+// 0x10 : Data signal of in_breath
+//        bit 7~0 - in_breath[7:0] (Read)
+//        others  - reserved
+// 0x14 : Control signal of in_breath
+//        bit 0  - in_breath_ap_vld (Read/COR)
+//        others - reserved
+// 0x20 : Data signal of out_breath
+//        bit 7~0 - out_breath[7:0] (Read)
+//        others  - reserved
+// 0x24 : Control signal of out_breath
+//        bit 0  - out_breath_ap_vld (Read/COR)
+//        others - reserved
+// 0x30 : Data signal of bgr_fifo_breath
+//        bit 7~0 - bgr_fifo_breath[7:0] (Read)
+//        others  - reserved
+// 0x34 : Control signal of bgr_fifo_breath
+//        bit 0  - bgr_fifo_breath_ap_vld (Read/COR)
+//        others - reserved
+// 0x40 : Data signal of pad_fifo_breath
+//        bit 7~0 - pad_fifo_breath[7:0] (Read)
+//        others  - reserved
+// 0x44 : Control signal of pad_fifo_breath
+//        bit 0  - pad_fifo_breath_ap_vld (Read/COR)
+//        others - reserved
+// 0x50 : Data signal of gray_fifo_breath
+//        bit 7~0 - gray_fifo_breath[7:0] (Read)
+//        others  - reserved
+// 0x54 : Control signal of gray_fifo_breath
+//        bit 0  - gray_fifo_breath_ap_vld (Read/COR)
+//        others - reserved
 // (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 //------------------------Parameter----------------------
 localparam
-    ADDR_AP_CTRL = 4'h0,
-    ADDR_GIE     = 4'h4,
-    ADDR_IER     = 4'h8,
-    ADDR_ISR     = 4'hc,
-    WRIDLE       = 2'd0,
-    WRDATA       = 2'd1,
-    WRRESP       = 2'd2,
-    WRRESET      = 2'd3,
-    RDIDLE       = 2'd0,
-    RDDATA       = 2'd1,
-    RDRESET      = 2'd2,
-    ADDR_BITS                = 4;
+    ADDR_AP_CTRL                 = 7'h00,
+    ADDR_GIE                     = 7'h04,
+    ADDR_IER                     = 7'h08,
+    ADDR_ISR                     = 7'h0c,
+    ADDR_IN_BREATH_DATA_0        = 7'h10,
+    ADDR_IN_BREATH_CTRL          = 7'h14,
+    ADDR_OUT_BREATH_DATA_0       = 7'h20,
+    ADDR_OUT_BREATH_CTRL         = 7'h24,
+    ADDR_BGR_FIFO_BREATH_DATA_0  = 7'h30,
+    ADDR_BGR_FIFO_BREATH_CTRL    = 7'h34,
+    ADDR_PAD_FIFO_BREATH_DATA_0  = 7'h40,
+    ADDR_PAD_FIFO_BREATH_CTRL    = 7'h44,
+    ADDR_GRAY_FIFO_BREATH_DATA_0 = 7'h50,
+    ADDR_GRAY_FIFO_BREATH_CTRL   = 7'h54,
+    WRIDLE                       = 2'd0,
+    WRDATA                       = 2'd1,
+    WRRESP                       = 2'd2,
+    WRRESET                      = 2'd3,
+    RDIDLE                       = 2'd0,
+    RDDATA                       = 2'd1,
+    RDRESET                      = 2'd2,
+    ADDR_BITS                = 7;
 
 //------------------------Local signal-------------------
     reg  [1:0]                    wstate = WRRESET;
@@ -99,6 +149,16 @@ localparam
     reg                           int_gie = 1'b0;
     reg  [1:0]                    int_ier = 2'b0;
     reg  [1:0]                    int_isr = 2'b0;
+    reg                           int_in_breath_ap_vld;
+    reg  [7:0]                    int_in_breath = 'b0;
+    reg                           int_out_breath_ap_vld;
+    reg  [7:0]                    int_out_breath = 'b0;
+    reg                           int_bgr_fifo_breath_ap_vld;
+    reg  [7:0]                    int_bgr_fifo_breath = 'b0;
+    reg                           int_pad_fifo_breath_ap_vld;
+    reg  [7:0]                    int_pad_fifo_breath = 'b0;
+    reg                           int_gray_fifo_breath_ap_vld;
+    reg  [7:0]                    int_gray_fifo_breath = 'b0;
 
 //------------------------Instantiation------------------
 
@@ -207,6 +267,36 @@ always @(posedge ACLK) begin
                 end
                 ADDR_ISR: begin
                     rdata <= int_isr;
+                end
+                ADDR_IN_BREATH_DATA_0: begin
+                    rdata <= int_in_breath[7:0];
+                end
+                ADDR_IN_BREATH_CTRL: begin
+                    rdata[0] <= int_in_breath_ap_vld;
+                end
+                ADDR_OUT_BREATH_DATA_0: begin
+                    rdata <= int_out_breath[7:0];
+                end
+                ADDR_OUT_BREATH_CTRL: begin
+                    rdata[0] <= int_out_breath_ap_vld;
+                end
+                ADDR_BGR_FIFO_BREATH_DATA_0: begin
+                    rdata <= int_bgr_fifo_breath[7:0];
+                end
+                ADDR_BGR_FIFO_BREATH_CTRL: begin
+                    rdata[0] <= int_bgr_fifo_breath_ap_vld;
+                end
+                ADDR_PAD_FIFO_BREATH_DATA_0: begin
+                    rdata <= int_pad_fifo_breath[7:0];
+                end
+                ADDR_PAD_FIFO_BREATH_CTRL: begin
+                    rdata[0] <= int_pad_fifo_breath_ap_vld;
+                end
+                ADDR_GRAY_FIFO_BREATH_DATA_0: begin
+                    rdata <= int_gray_fifo_breath[7:0];
+                end
+                ADDR_GRAY_FIFO_BREATH_CTRL: begin
+                    rdata[0] <= int_gray_fifo_breath_ap_vld;
                 end
             endcase
         end
@@ -349,6 +439,116 @@ always @(posedge ACLK) begin
             int_isr[1] <= 1'b1;
         else if (w_hs && waddr == ADDR_ISR && WSTRB[0])
             int_isr[1] <= int_isr[1] ^ WDATA[1]; // toggle on write
+    end
+end
+
+// int_in_breath
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_in_breath <= 0;
+    else if (ACLK_EN) begin
+        if (in_breath_ap_vld)
+            int_in_breath <= in_breath;
+    end
+end
+
+// int_in_breath_ap_vld
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_in_breath_ap_vld <= 1'b0;
+    else if (ACLK_EN) begin
+        if (in_breath_ap_vld)
+            int_in_breath_ap_vld <= 1'b1;
+        else if (ar_hs && raddr == ADDR_IN_BREATH_CTRL)
+            int_in_breath_ap_vld <= 1'b0; // clear on read
+    end
+end
+
+// int_out_breath
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_out_breath <= 0;
+    else if (ACLK_EN) begin
+        if (out_breath_ap_vld)
+            int_out_breath <= out_breath;
+    end
+end
+
+// int_out_breath_ap_vld
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_out_breath_ap_vld <= 1'b0;
+    else if (ACLK_EN) begin
+        if (out_breath_ap_vld)
+            int_out_breath_ap_vld <= 1'b1;
+        else if (ar_hs && raddr == ADDR_OUT_BREATH_CTRL)
+            int_out_breath_ap_vld <= 1'b0; // clear on read
+    end
+end
+
+// int_bgr_fifo_breath
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_bgr_fifo_breath <= 0;
+    else if (ACLK_EN) begin
+        if (bgr_fifo_breath_ap_vld)
+            int_bgr_fifo_breath <= bgr_fifo_breath;
+    end
+end
+
+// int_bgr_fifo_breath_ap_vld
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_bgr_fifo_breath_ap_vld <= 1'b0;
+    else if (ACLK_EN) begin
+        if (bgr_fifo_breath_ap_vld)
+            int_bgr_fifo_breath_ap_vld <= 1'b1;
+        else if (ar_hs && raddr == ADDR_BGR_FIFO_BREATH_CTRL)
+            int_bgr_fifo_breath_ap_vld <= 1'b0; // clear on read
+    end
+end
+
+// int_pad_fifo_breath
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_pad_fifo_breath <= 0;
+    else if (ACLK_EN) begin
+        if (pad_fifo_breath_ap_vld)
+            int_pad_fifo_breath <= pad_fifo_breath;
+    end
+end
+
+// int_pad_fifo_breath_ap_vld
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_pad_fifo_breath_ap_vld <= 1'b0;
+    else if (ACLK_EN) begin
+        if (pad_fifo_breath_ap_vld)
+            int_pad_fifo_breath_ap_vld <= 1'b1;
+        else if (ar_hs && raddr == ADDR_PAD_FIFO_BREATH_CTRL)
+            int_pad_fifo_breath_ap_vld <= 1'b0; // clear on read
+    end
+end
+
+// int_gray_fifo_breath
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_gray_fifo_breath <= 0;
+    else if (ACLK_EN) begin
+        if (gray_fifo_breath_ap_vld)
+            int_gray_fifo_breath <= gray_fifo_breath;
+    end
+end
+
+// int_gray_fifo_breath_ap_vld
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_gray_fifo_breath_ap_vld <= 1'b0;
+    else if (ACLK_EN) begin
+        if (gray_fifo_breath_ap_vld)
+            int_gray_fifo_breath_ap_vld <= 1'b1;
+        else if (ar_hs && raddr == ADDR_GRAY_FIFO_BREATH_CTRL)
+            int_gray_fifo_breath_ap_vld <= 1'b0; // clear on read
     end
 end
 

@@ -18,16 +18,16 @@ module accelerator_v2_GaussianBlur_5_1_0_484_644_1_3220_3220_s (
         ap_ready,
         start_out,
         start_write,
-        gray_mat_data44_dout,
-        gray_mat_data44_num_data_valid,
-        gray_mat_data44_fifo_cap,
-        gray_mat_data44_empty_n,
-        gray_mat_data44_read,
-        blurred_mat_data45_din,
-        blurred_mat_data45_num_data_valid,
-        blurred_mat_data45_fifo_cap,
-        blurred_mat_data45_full_n,
-        blurred_mat_data45_write
+        gray_mat_data2_dout,
+        gray_mat_data2_num_data_valid,
+        gray_mat_data2_fifo_cap,
+        gray_mat_data2_empty_n,
+        gray_mat_data2_read,
+        blurred_mat_data3_din,
+        blurred_mat_data3_num_data_valid,
+        blurred_mat_data3_fifo_cap,
+        blurred_mat_data3_full_n,
+        blurred_mat_data3_write
 );
 
 parameter    ap_ST_fsm_state1 = 2'd1;
@@ -43,22 +43,22 @@ output   ap_idle;
 output   ap_ready;
 output   start_out;
 output   start_write;
-input  [7:0] gray_mat_data44_dout;
-input  [12:0] gray_mat_data44_num_data_valid;
-input  [12:0] gray_mat_data44_fifo_cap;
-input   gray_mat_data44_empty_n;
-output   gray_mat_data44_read;
-output  [7:0] blurred_mat_data45_din;
-input  [12:0] blurred_mat_data45_num_data_valid;
-input  [12:0] blurred_mat_data45_fifo_cap;
-input   blurred_mat_data45_full_n;
-output   blurred_mat_data45_write;
+input  [7:0] gray_mat_data2_dout;
+input  [12:0] gray_mat_data2_num_data_valid;
+input  [12:0] gray_mat_data2_fifo_cap;
+input   gray_mat_data2_empty_n;
+output   gray_mat_data2_read;
+output  [7:0] blurred_mat_data3_din;
+input  [12:0] blurred_mat_data3_num_data_valid;
+input  [12:0] blurred_mat_data3_fifo_cap;
+input   blurred_mat_data3_full_n;
+output   blurred_mat_data3_write;
 
 reg ap_done;
 reg ap_idle;
 reg start_write;
-reg gray_mat_data44_read;
-reg blurred_mat_data45_write;
+reg gray_mat_data2_read;
+reg blurred_mat_data3_write;
 
 reg    real_start;
 reg    start_once_reg;
@@ -70,9 +70,9 @@ wire    grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16_ap
 wire    grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16_ap_done;
 wire    grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16_ap_idle;
 wire    grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16_ap_ready;
-wire    grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16_gray_mat_data44_read;
-wire   [7:0] grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16_blurred_mat_data45_din;
-wire    grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16_blurred_mat_data45_write;
+wire    grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16_gray_mat_data2_read;
+wire   [7:0] grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16_blurred_mat_data3_din;
+wire    grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16_blurred_mat_data3_write;
 reg    grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16_ap_start_reg;
 reg    ap_block_state1_ignore_call2;
 wire    ap_CS_fsm_state2;
@@ -97,16 +97,16 @@ accelerator_v2_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s grp_x
     .ap_done(grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16_ap_done),
     .ap_idle(grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16_ap_idle),
     .ap_ready(grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16_ap_ready),
-    .gray_mat_data44_dout(gray_mat_data44_dout),
-    .gray_mat_data44_num_data_valid(13'd0),
-    .gray_mat_data44_fifo_cap(13'd0),
-    .gray_mat_data44_empty_n(gray_mat_data44_empty_n),
-    .gray_mat_data44_read(grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16_gray_mat_data44_read),
-    .blurred_mat_data45_din(grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16_blurred_mat_data45_din),
-    .blurred_mat_data45_num_data_valid(13'd0),
-    .blurred_mat_data45_fifo_cap(13'd0),
-    .blurred_mat_data45_full_n(blurred_mat_data45_full_n),
-    .blurred_mat_data45_write(grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16_blurred_mat_data45_write)
+    .gray_mat_data2_dout(gray_mat_data2_dout),
+    .gray_mat_data2_num_data_valid(13'd0),
+    .gray_mat_data2_fifo_cap(13'd0),
+    .gray_mat_data2_empty_n(gray_mat_data2_empty_n),
+    .gray_mat_data2_read(grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16_gray_mat_data2_read),
+    .blurred_mat_data3_din(grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16_blurred_mat_data3_din),
+    .blurred_mat_data3_num_data_valid(13'd0),
+    .blurred_mat_data3_fifo_cap(13'd0),
+    .blurred_mat_data3_full_n(blurred_mat_data3_full_n),
+    .blurred_mat_data3_write(grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16_blurred_mat_data3_write)
 );
 
 always @ (posedge ap_clk) begin
@@ -187,17 +187,17 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state2)) begin
-        blurred_mat_data45_write = grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16_blurred_mat_data45_write;
+        blurred_mat_data3_write = grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16_blurred_mat_data3_write;
     end else begin
-        blurred_mat_data45_write = 1'b0;
+        blurred_mat_data3_write = 1'b0;
     end
 end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state2)) begin
-        gray_mat_data44_read = grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16_gray_mat_data44_read;
+        gray_mat_data2_read = grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16_gray_mat_data2_read;
     end else begin
-        gray_mat_data44_read = 1'b0;
+        gray_mat_data2_read = 1'b0;
     end
 end
 
@@ -261,7 +261,7 @@ end
 
 assign ap_ready = internal_ap_ready;
 
-assign blurred_mat_data45_din = grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16_blurred_mat_data45_din;
+assign blurred_mat_data3_din = grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16_blurred_mat_data3_din;
 
 assign grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16_ap_start = grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16_ap_start_reg;
 

@@ -7,7 +7,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="accelerator_v2_accelerator_v2,hls_ip_2022_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xczu3eg-sbva484-1-i,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=5.886313,HLS_SYN_LAT=924001,HLS_SYN_TPT=924002,HLS_SYN_MEM=51,HLS_SYN_DSP=0,HLS_SYN_FF=4609,HLS_SYN_LUT=7390,HLS_VERSION=2022_2}" *)
+(* CORE_GENERATION_INFO="accelerator_v2_accelerator_v2,hls_ip_2022_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xczu3eg-sbva484-1-i,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=5.886313,HLS_SYN_LAT=924481,HLS_SYN_TPT=924482,HLS_SYN_MEM=51,HLS_SYN_DSP=0,HLS_SYN_FF=4696,HLS_SYN_LUT=8230,HLS_VERSION=2022_2}" *)
 
 module accelerator_v2 (
         s_axi_CTRL_AWVALID,
@@ -44,8 +44,6 @@ module accelerator_v2 (
         out_stream_TLAST,
         out_stream_TID,
         out_stream_TDEST,
-        in_breath,
-        out_breath,
         in_stream_TVALID,
         in_stream_TREADY,
         out_stream_TVALID,
@@ -53,7 +51,7 @@ module accelerator_v2 (
 );
 
 parameter    C_S_AXI_CTRL_DATA_WIDTH = 32;
-parameter    C_S_AXI_CTRL_ADDR_WIDTH = 4;
+parameter    C_S_AXI_CTRL_ADDR_WIDTH = 7;
 parameter    C_S_AXI_DATA_WIDTH = 32;
 
 parameter C_S_AXI_CTRL_WSTRB_WIDTH = (32 / 8);
@@ -93,8 +91,6 @@ output  [0:0] out_stream_TUSER;
 output  [0:0] out_stream_TLAST;
 output  [0:0] out_stream_TID;
 output  [0:0] out_stream_TDEST;
-output  [0:0] in_breath;
-output  [0:0] out_breath;
 input   in_stream_TVALID;
 output   in_stream_TREADY;
 output   out_stream_TVALID;
@@ -115,8 +111,10 @@ wire    unpack_U0_start_write;
 wire    unpack_U0_in_stream_TREADY;
 wire   [23:0] unpack_U0_bgr_stream1_din;
 wire    unpack_U0_bgr_stream1_write;
-wire   [0:0] unpack_U0_in_breath;
+wire   [7:0] unpack_U0_in_breath;
 wire    unpack_U0_in_breath_ap_vld;
+wire   [7:0] unpack_U0_bgr_fifo_breath;
+wire    unpack_U0_bgr_fifo_breath_ap_vld;
 wire    pad_U0_ap_start;
 wire    pad_U0_ap_done;
 wire    pad_U0_ap_continue;
@@ -127,12 +125,16 @@ wire    pad_U0_start_write;
 wire    pad_U0_bgr_stream1_read;
 wire   [23:0] pad_U0_padded_stream2_din;
 wire    pad_U0_padded_stream2_write;
+wire   [7:0] pad_U0_pad_fifo_breath;
+wire    pad_U0_pad_fifo_breath_ap_vld;
 wire    process_pixels_U0_ap_start;
 wire    process_pixels_U0_start_out;
 wire    process_pixels_U0_start_write;
 wire    process_pixels_U0_padded_stream2_read;
 wire   [7:0] process_pixels_U0_gray_stream3_din;
 wire    process_pixels_U0_gray_stream3_write;
+wire   [7:0] process_pixels_U0_gray_fifo_breath;
+wire    process_pixels_U0_gray_fifo_breath_ap_vld;
 wire    process_pixels_U0_ap_done;
 wire    process_pixels_U0_ap_ready;
 wire    process_pixels_U0_ap_idle;
@@ -151,7 +153,7 @@ wire   [0:0] repack_U0_out_stream_TUSER;
 wire   [0:0] repack_U0_out_stream_TLAST;
 wire   [0:0] repack_U0_out_stream_TID;
 wire   [0:0] repack_U0_out_stream_TDEST;
-wire   [0:0] repack_U0_out_breath;
+wire   [7:0] repack_U0_out_breath;
 wire    repack_U0_out_breath_ap_vld;
 wire    bgr_stream_full_n;
 wire   [23:0] bgr_stream_dout;
@@ -206,6 +208,16 @@ CTRL_s_axi_U(
     .ACLK(ap_clk),
     .ARESET(ap_rst_n_inv),
     .ACLK_EN(1'b1),
+    .in_breath(unpack_U0_in_breath),
+    .in_breath_ap_vld(unpack_U0_in_breath_ap_vld),
+    .out_breath(repack_U0_out_breath),
+    .out_breath_ap_vld(repack_U0_out_breath_ap_vld),
+    .bgr_fifo_breath(unpack_U0_bgr_fifo_breath),
+    .bgr_fifo_breath_ap_vld(unpack_U0_bgr_fifo_breath_ap_vld),
+    .pad_fifo_breath(pad_U0_pad_fifo_breath),
+    .pad_fifo_breath_ap_vld(pad_U0_pad_fifo_breath_ap_vld),
+    .gray_fifo_breath(process_pixels_U0_gray_fifo_breath),
+    .gray_fifo_breath_ap_vld(process_pixels_U0_gray_fifo_breath_ap_vld),
     .ap_start(ap_start),
     .interrupt(interrupt),
     .ap_ready(ap_ready),
@@ -239,7 +251,9 @@ accelerator_v2_unpack unpack_U0(
     .bgr_stream1_full_n(bgr_stream_full_n),
     .bgr_stream1_write(unpack_U0_bgr_stream1_write),
     .in_breath(unpack_U0_in_breath),
-    .in_breath_ap_vld(unpack_U0_in_breath_ap_vld)
+    .in_breath_ap_vld(unpack_U0_in_breath_ap_vld),
+    .bgr_fifo_breath(unpack_U0_bgr_fifo_breath),
+    .bgr_fifo_breath_ap_vld(unpack_U0_bgr_fifo_breath_ap_vld)
 );
 
 accelerator_v2_pad pad_U0(
@@ -262,7 +276,9 @@ accelerator_v2_pad pad_U0(
     .padded_stream2_num_data_valid(padded_stream_num_data_valid),
     .padded_stream2_fifo_cap(padded_stream_fifo_cap),
     .padded_stream2_full_n(padded_stream_full_n),
-    .padded_stream2_write(pad_U0_padded_stream2_write)
+    .padded_stream2_write(pad_U0_padded_stream2_write),
+    .pad_fifo_breath(pad_U0_pad_fifo_breath),
+    .pad_fifo_breath_ap_vld(pad_U0_pad_fifo_breath_ap_vld)
 );
 
 accelerator_v2_process_pixels process_pixels_U0(
@@ -276,8 +292,10 @@ accelerator_v2_process_pixels process_pixels_U0(
     .gray_stream3_din(process_pixels_U0_gray_stream3_din),
     .gray_stream3_full_n(gray_stream_full_n),
     .gray_stream3_write(process_pixels_U0_gray_stream3_write),
+    .gray_fifo_breath(process_pixels_U0_gray_fifo_breath),
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
+    .gray_fifo_breath_ap_vld(process_pixels_U0_gray_fifo_breath_ap_vld),
     .ap_done(process_pixels_U0_ap_done),
     .ap_ready(process_pixels_U0_ap_ready),
     .ap_idle(process_pixels_U0_ap_idle),
@@ -404,13 +422,9 @@ always @ (*) begin
     ap_rst_n_inv = ~ap_rst_n;
 end
 
-assign ap_sync_done = (unpack_U0_ap_done & repack_U0_ap_done);
-
-assign in_breath = unpack_U0_in_breath;
+assign ap_sync_done = (unpack_U0_ap_done & repack_U0_ap_done & process_pixels_U0_ap_done & pad_U0_ap_done);
 
 assign in_stream_TREADY = unpack_U0_in_stream_TREADY;
-
-assign out_breath = repack_U0_out_breath;
 
 assign out_stream_TDATA = repack_U0_out_stream_TDATA;
 
@@ -428,11 +442,11 @@ assign out_stream_TUSER = repack_U0_out_stream_TUSER;
 
 assign out_stream_TVALID = repack_U0_out_stream_TVALID;
 
-assign pad_U0_ap_continue = 1'b1;
+assign pad_U0_ap_continue = ap_sync_done;
 
 assign pad_U0_ap_start = start_for_pad_U0_empty_n;
 
-assign process_pixels_U0_ap_continue = 1'b1;
+assign process_pixels_U0_ap_continue = ap_sync_done;
 
 assign process_pixels_U0_ap_start = start_for_process_pixels_U0_empty_n;
 

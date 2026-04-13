@@ -3059,67 +3059,67 @@
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp:1326:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="GaussianBlur" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=weights complete dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:33:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:64:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="unpack" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:50:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:86:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="unpack" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:73:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:122:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="pad" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:76:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:125:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="pad" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=row_buf complete dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:77:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:126:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="pad" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=row_buf type=RAM_2P impl=BRAM" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:81:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:135:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="pad" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:90:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:145:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="pad" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:104:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:160:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="pad" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:111:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:167:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="pad" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:123:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:180:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="pad" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:136:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="stream_to_mat" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:139:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="stream_to_mat" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:151:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="mat_to_stream" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:154:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="mat_to_stream" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:166:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="process_pixels" ARG_PragmaIsValid="1" ARG_PragmaType="dataflow" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:175:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="process_pixels" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=gray_mat inter false" ARG_PragmaType="dependence" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:176:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="process_pixels" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=blurred_mat inter false" ARG_PragmaType="dependence" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:189:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="repack" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:196:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="stream_to_mat" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:199:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="stream_to_mat" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:214:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mat_to_stream" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:218:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mat_to_stream" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:235:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="process_pixels" ARG_PragmaIsValid="1" ARG_PragmaType="dataflow" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:244:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="process_pixels" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=gray_mat inter false" ARG_PragmaType="dependence" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:245:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="process_pixels" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=blurred_mat inter false" ARG_PragmaType="dependence" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:260:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="repack" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:266:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="repack" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:216:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:292:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="repack" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:225:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:301:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="repack" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL/accelerator_v2/solution1/csynth.tcl:16:9" msg_body="HLS pragma dump">
@@ -3128,31 +3128,40 @@
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL/accelerator_v2/solution1/directives.tcl:6:9" msg_body="HLS pragma dump">
         <args ARG_PragmaContext="directive" ARG_PragmaFunction="accelerator_v2" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=accelerator_v2" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:241:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:325:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="accelerator_v2" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=in_stream" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:242:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:326:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="accelerator_v2" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=out_stream" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:243:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="accelerator_v2" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_none port=in_breath" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:327:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="accelerator_v2" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=in_breath bundle=CTRL" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:244:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="accelerator_v2" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_none port=out_breath" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:328:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="accelerator_v2" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=out_breath bundle=CTRL" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:245:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:329:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="accelerator_v2" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=bgr_fifo_breath bundle=CTRL" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:330:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="accelerator_v2" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=pad_fifo_breath bundle=CTRL" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:331:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="accelerator_v2" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=gray_fifo_breath bundle=CTRL" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:332:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="accelerator_v2" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return bundle=CTRL" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:246:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:333:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="accelerator_v2" ARG_PragmaIsValid="1" ARG_PragmaType="dataflow" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:252:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:339:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="accelerator_v2" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=bgr_stream depth=2560" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:253:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:340:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="accelerator_v2" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=padded_stream depth=3864" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:254:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="accelerator_v2.cpp:341:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="accelerator_v2" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=gray_stream depth=3864" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_MISC" msg_id="214-273" msg_severity="WARNING" msg_loc="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:670:0" msg_body="In function 'xf::cv::Mat&lt;9, 484, 644, 1, 3220&gt;::Mat(int, int)', Pragma conflict happens on 'INLINE' and DATAFLOW pragmas: Inline into dataflow region may break the canonical form">
@@ -3185,17 +3194,17 @@
     <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp:831:9" msg_body="Inlining function 'void xf::cv::ProcessGaussian5x5&lt;0, 484, 644, 1, 0, 1, 3220, 3220, 1, 644, false&gt;(xf::cv::Mat&lt;0, 484, 644, 1, 3220&gt;&amp;, xf::cv::Mat&lt;0, 484, 644, 1, 3220&gt;&amp;, StreamType&lt;1&gt;::name (*) [(644) &gt;&gt; (xfNPixelsPerCycle&lt;1&gt;::datashift)], PixelType&lt;0&gt;::name*, PixelType&lt;0&gt;::name*, PixelType&lt;0&gt;::name*, PixelType&lt;0&gt;::name*, PixelType&lt;0&gt;::name*, PixelType&lt;0&gt;::name*, StreamType&lt;1&gt;::name&amp;, unsigned short, unsigned short, ap_uint&lt;13&gt;, unsigned short&amp;, ap_uint&lt;4&gt;, ap_uint&lt;4&gt;, ap_uint&lt;4&gt;, ap_uint&lt;4&gt;, ap_uint&lt;4&gt;, ap_uint&lt;13&gt;, unsigned char*, int&amp;, int&amp;)' into 'void xf::cv::xFGaussianFilter5x5&lt;0, 484, 644, 1, 0, 1, 3220, 3220, 1, 644, false&gt;(xf::cv::Mat&lt;0, 484, 644, 1, 3220&gt;&amp;, xf::cv::Mat&lt;0, 484, 644, 1, 3220&gt;&amp;, unsigned short, unsigned short, unsigned char*)'">
         <args Callee="void xf::cv::ProcessGaussian5x5&lt;0, 484, 644, 1, 0, 1, 3220, 3220, 1, 644, false&gt;(xf::cv::Mat&lt;0, 484, 644, 1, 3220&gt;&amp;, xf::cv::Mat&lt;0, 484, 644, 1, 3220&gt;&amp;, StreamType&lt;1&gt;::name (*) [(644) &gt;&gt; (xfNPixelsPerCycle&lt;1&gt;::datashift)], PixelType&lt;0&gt;::name*, PixelType&lt;0&gt;::name*, PixelType&lt;0&gt;::name*, PixelType&lt;0&gt;::name*, PixelType&lt;0&gt;::name*, PixelType&lt;0&gt;::name*, StreamType&lt;1&gt;::name&amp;, unsigned short, unsigned short, ap_uint&lt;13&gt;, unsigned short&amp;, ap_uint&lt;4&gt;, ap_uint&lt;4&gt;, ap_uint&lt;4&gt;, ap_uint&lt;4&gt;, ap_uint&lt;4&gt;, ap_uint&lt;13&gt;, unsigned char*, int&amp;, int&amp;)" Caller="void xf::cv::xFGaussianFilter5x5&lt;0, 484, 644, 1, 0, 1, 3220, 3220, 1, 644, false&gt;(xf::cv::Mat&lt;0, 484, 644, 1, 3220&gt;&amp;, xf::cv::Mat&lt;0, 484, 644, 1, 3220&gt;&amp;, unsigned short, unsigned short, unsigned char*)"/>
     </msg>
-    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="accelerator_v2.cpp:168:78" msg_body="Inlining function 'xf::cv::Mat&lt;9, 484, 644, 1, 3220&gt;::Mat(int, int)' into 'process_pixels(hls::stream&lt;ap_uint&lt;24&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;8&gt;, 0&gt;&amp;, int, int)'">
-        <args Callee="xf::cv::Mat&lt;9, 484, 644, 1, 3220&gt;::Mat(int, int)" Caller="process_pixels(hls::stream&lt;ap_uint&lt;24&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;8&gt;, 0&gt;&amp;, int, int)"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="accelerator_v2.cpp:237:78" msg_body="Inlining function 'xf::cv::Mat&lt;9, 484, 644, 1, 3220&gt;::Mat(int, int)' into 'process_pixels(hls::stream&lt;ap_uint&lt;24&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;8&gt;, 0&gt;&amp;, int, int, ap_uint&lt;8&gt; volatile*)'">
+        <args Callee="xf::cv::Mat&lt;9, 484, 644, 1, 3220&gt;::Mat(int, int)" Caller="process_pixels(hls::stream&lt;ap_uint&lt;24&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;8&gt;, 0&gt;&amp;, int, int, ap_uint&lt;8&gt; volatile*)"/>
     </msg>
-    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="accelerator_v2.cpp:169:81" msg_body="Inlining function 'xf::cv::Mat&lt;0, 484, 644, 1, 3220&gt;::Mat(int, int)' into 'process_pixels(hls::stream&lt;ap_uint&lt;24&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;8&gt;, 0&gt;&amp;, int, int)'">
-        <args Callee="xf::cv::Mat&lt;0, 484, 644, 1, 3220&gt;::Mat(int, int)" Caller="process_pixels(hls::stream&lt;ap_uint&lt;24&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;8&gt;, 0&gt;&amp;, int, int)"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="accelerator_v2.cpp:238:81" msg_body="Inlining function 'xf::cv::Mat&lt;0, 484, 644, 1, 3220&gt;::Mat(int, int)' into 'process_pixels(hls::stream&lt;ap_uint&lt;24&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;8&gt;, 0&gt;&amp;, int, int, ap_uint&lt;8&gt; volatile*)'">
+        <args Callee="xf::cv::Mat&lt;0, 484, 644, 1, 3220&gt;::Mat(int, int)" Caller="process_pixels(hls::stream&lt;ap_uint&lt;24&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;8&gt;, 0&gt;&amp;, int, int, ap_uint&lt;8&gt; volatile*)"/>
     </msg>
-    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="accelerator_v2.cpp:170:81" msg_body="Inlining function 'xf::cv::Mat&lt;0, 484, 644, 1, 3220&gt;::Mat(int, int)' into 'process_pixels(hls::stream&lt;ap_uint&lt;24&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;8&gt;, 0&gt;&amp;, int, int)'">
-        <args Callee="xf::cv::Mat&lt;0, 484, 644, 1, 3220&gt;::Mat(int, int)" Caller="process_pixels(hls::stream&lt;ap_uint&lt;24&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;8&gt;, 0&gt;&amp;, int, int)"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="accelerator_v2.cpp:239:81" msg_body="Inlining function 'xf::cv::Mat&lt;0, 484, 644, 1, 3220&gt;::Mat(int, int)' into 'process_pixels(hls::stream&lt;ap_uint&lt;24&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;8&gt;, 0&gt;&amp;, int, int, ap_uint&lt;8&gt; volatile*)'">
+        <args Callee="xf::cv::Mat&lt;0, 484, 644, 1, 3220&gt;::Mat(int, int)" Caller="process_pixels(hls::stream&lt;ap_uint&lt;24&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;8&gt;, 0&gt;&amp;, int, int, ap_uint&lt;8&gt; volatile*)"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="accelerator_v2.cpp:224:31" msg_body="Loop 'VITIS_LOOP_224_4' is marked as complete unroll implied by the pipeline pragma">
-        <args LoopName="VITIS_LOOP_224_4"/>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="accelerator_v2.cpp:300:31" msg_body="Loop 'VITIS_LOOP_300_4' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_300_4"/>
     </msg>
     <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp:574:5" msg_body="Loop 'Compute_Grad_Loop' is marked as complete unroll implied by the pipeline pragma">
         <args LoopName="Compute_Grad_Loop"/>
@@ -3215,8 +3224,8 @@
     <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_cvt_color_utils.hpp:147:23" msg_body="Loop 'VITIS_LOOP_147_1' is marked as complete unroll implied by the pipeline pragma">
         <args LoopName="VITIS_LOOP_147_1"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="accelerator_v2.cpp:188:0" msg_body="Unrolling loop 'VITIS_LOOP_224_4' (accelerator_v2.cpp:224:31) in function 'repack' completely with a factor of 16">
-        <args Factor="16" LoopLoc="accelerator_v2.cpp:224:31" LoopName="VITIS_LOOP_224_4"/>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="accelerator_v2.cpp:259:0" msg_body="Unrolling loop 'VITIS_LOOP_300_4' (accelerator_v2.cpp:300:31) in function 'repack' completely with a factor of 16">
+        <args Factor="16" LoopLoc="accelerator_v2.cpp:300:31" LoopName="VITIS_LOOP_300_4"/>
     </msg>
     <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp:716:0" msg_body="Unrolling loop 'Compute_Grad_Loop' (/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp:574:5) in function 'xf::cv::xFGaussianFilter5x5&lt;0, 484, 644, 1, 0, 1, 3220, 3220, 1, 644, false&gt;' completely with a factor of 1">
         <args Factor="1" LoopLoc="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp:574:5" LoopName="Compute_Grad_Loop"/>
@@ -3239,7 +3248,7 @@
     <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_cvt_color_utils.hpp:142:0" msg_body="Unrolling loop 'VITIS_LOOP_147_1' (/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_cvt_color_utils.hpp:147:23) in function 'ExtractUYVYPixels&lt;9&gt;' completely with a factor of 3">
         <args Factor="3" LoopLoc="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_cvt_color_utils.hpp:147:23" LoopName="VITIS_LOOP_147_1"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="accelerator_v2.cpp:135:0" msg_body="Inlining function 'void xf::cv::Mat&lt;9, 484, 644, 1, 3220&gt;::write&lt;3220, (void*)0&gt;(int, ap_uint&lt;24&gt;)' into 'stream_to_mat(hls::stream&lt;ap_uint&lt;24&gt;, 0&gt;&amp;, xf::cv::Mat&lt;9, 484, 644, 1, 3220&gt;&amp;, int, int)'">
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="accelerator_v2.cpp:195:0" msg_body="Inlining function 'void xf::cv::Mat&lt;9, 484, 644, 1, 3220&gt;::write&lt;3220, (void*)0&gt;(int, ap_uint&lt;24&gt;)' into 'stream_to_mat(hls::stream&lt;ap_uint&lt;24&gt;, 0&gt;&amp;, xf::cv::Mat&lt;9, 484, 644, 1, 3220&gt;&amp;, int, int)'">
         <args Callee="void xf::cv::Mat&lt;9, 484, 644, 1, 3220&gt;::write&lt;3220, (void*)0&gt;(int, ap_uint&lt;24&gt;)" Caller="stream_to_mat(hls::stream&lt;ap_uint&lt;24&gt;, 0&gt;&amp;, xf::cv::Mat&lt;9, 484, 644, 1, 3220&gt;&amp;, int, int)"/>
     </msg>
     <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_cvt_color.hpp:5566:0" msg_body="Inlining function 'ap_uint&lt;24&gt; xf::cv::Mat&lt;9, 484, 644, 1, 3220&gt;::read&lt;3220, (void*)0&gt;(int)' into 'void xf::cv::xfbgr2gray&lt;9, 0, 484, 644, 1, 3220, 3220, 9, 1, 155848&gt;(xf::cv::Mat&lt;9, 484, 644, 1, 3220&gt;&amp;, xf::cv::Mat&lt;0, 484, 644, 1, 3220&gt;&amp;, unsigned short, unsigned short)'">
@@ -3263,10 +3272,10 @@
     <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp:716:0" msg_body="Inlining function 'void xf::cv::Mat&lt;0, 484, 644, 1, 3220&gt;::write&lt;3220, (void*)0&gt;(int, ap_uint&lt;8&gt;)' into 'void xf::cv::xFGaussianFilter5x5&lt;0, 484, 644, 1, 0, 1, 3220, 3220, 1, 644, false&gt;(xf::cv::Mat&lt;0, 484, 644, 1, 3220&gt;&amp;, xf::cv::Mat&lt;0, 484, 644, 1, 3220&gt;&amp;, unsigned short, unsigned short, unsigned char*)'">
         <args Callee="void xf::cv::Mat&lt;0, 484, 644, 1, 3220&gt;::write&lt;3220, (void*)0&gt;(int, ap_uint&lt;8&gt;)" Caller="void xf::cv::xFGaussianFilter5x5&lt;0, 484, 644, 1, 0, 1, 3220, 3220, 1, 644, false&gt;(xf::cv::Mat&lt;0, 484, 644, 1, 3220&gt;&amp;, xf::cv::Mat&lt;0, 484, 644, 1, 3220&gt;&amp;, unsigned short, unsigned short, unsigned char*)"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="accelerator_v2.cpp:150:0" msg_body="Inlining function 'ap_uint&lt;8&gt; xf::cv::Mat&lt;0, 484, 644, 1, 3220&gt;::read&lt;3220, (void*)0&gt;(int)' into 'mat_to_stream(xf::cv::Mat&lt;0, 484, 644, 1, 3220&gt;&amp;, hls::stream&lt;ap_uint&lt;8&gt;, 0&gt;&amp;, int, int)'">
-        <args Callee="ap_uint&lt;8&gt; xf::cv::Mat&lt;0, 484, 644, 1, 3220&gt;::read&lt;3220, (void*)0&gt;(int)" Caller="mat_to_stream(xf::cv::Mat&lt;0, 484, 644, 1, 3220&gt;&amp;, hls::stream&lt;ap_uint&lt;8&gt;, 0&gt;&amp;, int, int)"/>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="accelerator_v2.cpp:213:0" msg_body="Inlining function 'ap_uint&lt;8&gt; xf::cv::Mat&lt;0, 484, 644, 1, 3220&gt;::read&lt;3220, (void*)0&gt;(int)' into 'mat_to_stream(xf::cv::Mat&lt;0, 484, 644, 1, 3220&gt;&amp;, hls::stream&lt;ap_uint&lt;8&gt;, 0&gt;&amp;, int, int, ap_uint&lt;8&gt; volatile*)'">
+        <args Callee="ap_uint&lt;8&gt; xf::cv::Mat&lt;0, 484, 644, 1, 3220&gt;::read&lt;3220, (void*)0&gt;(int)" Caller="mat_to_stream(xf::cv::Mat&lt;0, 484, 644, 1, 3220&gt;&amp;, hls::stream&lt;ap_uint&lt;8&gt;, 0&gt;&amp;, int, int, ap_uint&lt;8&gt; volatile*)"/>
     </msg>
-    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="accelerator_v2.cpp:75:14" msg_body="Applying array_partition to 'row_buf': Complete partitioning on dimension 1.">
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="accelerator_v2.cpp:124:14" msg_body="Applying array_partition to 'row_buf': Complete partitioning on dimension 1.">
         <args Dim="1" Mode="Complete" UOName="row_buf"/>
     </msg>
     <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp:738:5" msg_body="Applying array_partition to 'src_buf1': Complete partitioning on dimension 1.">
@@ -3287,13 +3296,13 @@
     <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/imgproc/xf_gaussian_filter.hpp:751:42" msg_body="Applying array_partition to 'buf': Complete partitioning on dimension 1.">
         <args Dim="1" Mode="Complete" UOName="buf"/>
     </msg>
-    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="accelerator_v2.cpp:0:1" msg_body="array_partition dim=1 type=cyclic factor=2 variable=row_pixels 1 repack accelerator_v2.cpp:194:20 accelerator_v2.cpp:216:9row_pixels">
-        <args PragmaFunction="repack" PragmaIsAuto="1" PragmaOptions="dim=1 type=cyclic factor=2 variable=row_pixels" PragmaSrcLoc="accelerator_v2.cpp:216:9" PragmaType="array_partition" VarName="row_pixels" varLoc="accelerator_v2.cpp:194:20"/>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="accelerator_v2.cpp:0:1" msg_body="array_partition dim=1 type=cyclic factor=2 variable=row_pixels 1 repack accelerator_v2.cpp:264:20 accelerator_v2.cpp:292:9row_pixels">
+        <args PragmaFunction="repack" PragmaIsAuto="1" PragmaOptions="dim=1 type=cyclic factor=2 variable=row_pixels" PragmaSrcLoc="accelerator_v2.cpp:292:9" PragmaType="array_partition" VarName="row_pixels" varLoc="accelerator_v2.cpp:264:20"/>
     </msg>
-    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="accelerator_v2.cpp:216:9" msg_body="Inferring pragma 'array_partition type=cyclic factor=2 dim=1' for array 'row_pixels' due to pipeline pragma">
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="accelerator_v2.cpp:292:9" msg_body="Inferring pragma 'array_partition type=cyclic factor=2 dim=1' for array 'row_pixels' due to pipeline pragma">
         <args Dim="1" Factor="2" Mode="cyclic" Name="row_pixels" PragmaType="array_partition"/>
     </msg>
-    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="accelerator_v2.cpp:194:20" msg_body="Applying array_partition to 'row_pixels': Cyclic partitioning with factor 2 on dimension 1.">
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="accelerator_v2.cpp:264:20" msg_body="Applying array_partition to 'row_pixels': Cyclic partitioning with factor 2 on dimension 1.">
         <args Dim="1" Factor="2" Mode="Cyclic" UOName="row_pixels"/>
     </msg>
 </xilinx:hls_fe_msgs>

@@ -4,4 +4,4 @@
 # Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 # ==============================================================
 
-/usr/local/packages/Xilinx_2022.2/Vivado/2022.2/bin/vivado  -notrace -mode batch -source ipi_example.tcl -tclargs xczu3eg-sbva484-1-i ../xilinx_com_hls_accelerator_v2_4_2.zip
+/usr/local/packages/Xilinx_2022.2/Vivado/2022.2/bin/vivado  -notrace -mode batch -source ipi_example.tcl -tclargs xczu3eg-sbva484-1-i ../xilinx_com_hls_accelerator_v2_4_3.zip

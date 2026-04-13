@@ -18,8 +18,10 @@ module accelerator_v2_process_pixels (
         gray_stream3_din,
         gray_stream3_full_n,
         gray_stream3_write,
+        gray_fifo_breath,
         ap_clk,
         ap_rst,
+        gray_fifo_breath_ap_vld,
         ap_done,
         ap_ready,
         ap_idle,
@@ -37,8 +39,10 @@ output   padded_stream2_read;
 output  [7:0] gray_stream3_din;
 input   gray_stream3_full_n;
 output   gray_stream3_write;
+output  [7:0] gray_fifo_breath;
 input   ap_clk;
 input   ap_rst;
+output   gray_fifo_breath_ap_vld;
 output   ap_done;
 output   ap_ready;
 output   ap_idle;
@@ -55,8 +59,8 @@ wire    stream_to_mat_U0_ap_continue;
 wire    stream_to_mat_U0_ap_idle;
 wire    stream_to_mat_U0_ap_ready;
 wire    stream_to_mat_U0_padded_stream2_read;
-wire   [23:0] stream_to_mat_U0_bgr_mat_data43_din;
-wire    stream_to_mat_U0_bgr_mat_data43_write;
+wire   [23:0] stream_to_mat_U0_bgr_mat_data1_din;
+wire    stream_to_mat_U0_bgr_mat_data1_write;
 wire    stream_to_mat_U0_start_out;
 wire    stream_to_mat_U0_start_write;
 wire    bgr2gray_9_0_484_644_1_3220_3220_U0_ap_start;
@@ -66,9 +70,9 @@ wire    bgr2gray_9_0_484_644_1_3220_3220_U0_ap_idle;
 wire    bgr2gray_9_0_484_644_1_3220_3220_U0_ap_ready;
 wire    bgr2gray_9_0_484_644_1_3220_3220_U0_start_out;
 wire    bgr2gray_9_0_484_644_1_3220_3220_U0_start_write;
-wire    bgr2gray_9_0_484_644_1_3220_3220_U0_bgr_mat_data43_read;
-wire   [7:0] bgr2gray_9_0_484_644_1_3220_3220_U0_gray_mat_data44_din;
-wire    bgr2gray_9_0_484_644_1_3220_3220_U0_gray_mat_data44_write;
+wire    bgr2gray_9_0_484_644_1_3220_3220_U0_bgr_mat_data1_read;
+wire   [7:0] bgr2gray_9_0_484_644_1_3220_3220_U0_gray_mat_data2_din;
+wire    bgr2gray_9_0_484_644_1_3220_3220_U0_gray_mat_data2_write;
 wire    GaussianBlur_5_1_0_484_644_1_3220_3220_U0_ap_start;
 wire    GaussianBlur_5_1_0_484_644_1_3220_3220_U0_ap_done;
 wire    GaussianBlur_5_1_0_484_644_1_3220_3220_U0_ap_continue;
@@ -76,17 +80,19 @@ wire    GaussianBlur_5_1_0_484_644_1_3220_3220_U0_ap_idle;
 wire    GaussianBlur_5_1_0_484_644_1_3220_3220_U0_ap_ready;
 wire    GaussianBlur_5_1_0_484_644_1_3220_3220_U0_start_out;
 wire    GaussianBlur_5_1_0_484_644_1_3220_3220_U0_start_write;
-wire    GaussianBlur_5_1_0_484_644_1_3220_3220_U0_gray_mat_data44_read;
-wire   [7:0] GaussianBlur_5_1_0_484_644_1_3220_3220_U0_blurred_mat_data45_din;
-wire    GaussianBlur_5_1_0_484_644_1_3220_3220_U0_blurred_mat_data45_write;
+wire    GaussianBlur_5_1_0_484_644_1_3220_3220_U0_gray_mat_data2_read;
+wire   [7:0] GaussianBlur_5_1_0_484_644_1_3220_3220_U0_blurred_mat_data3_din;
+wire    GaussianBlur_5_1_0_484_644_1_3220_3220_U0_blurred_mat_data3_write;
 wire    mat_to_stream_U0_ap_start;
 wire    mat_to_stream_U0_ap_done;
 wire    mat_to_stream_U0_ap_continue;
 wire    mat_to_stream_U0_ap_idle;
 wire    mat_to_stream_U0_ap_ready;
-wire    mat_to_stream_U0_blurred_mat_data45_read;
+wire    mat_to_stream_U0_blurred_mat_data3_read;
 wire   [7:0] mat_to_stream_U0_gray_stream3_din;
 wire    mat_to_stream_U0_gray_stream3_write;
+wire   [7:0] mat_to_stream_U0_gray_fifo_breath;
+wire    mat_to_stream_U0_gray_fifo_breath_ap_vld;
 wire    bgr_mat_data_full_n;
 wire   [23:0] bgr_mat_data_dout;
 wire   [12:0] bgr_mat_data_num_data_valid;
@@ -136,11 +142,11 @@ accelerator_v2_stream_to_mat stream_to_mat_U0(
     .padded_stream2_fifo_cap(13'd0),
     .padded_stream2_empty_n(padded_stream2_empty_n),
     .padded_stream2_read(stream_to_mat_U0_padded_stream2_read),
-    .bgr_mat_data43_din(stream_to_mat_U0_bgr_mat_data43_din),
-    .bgr_mat_data43_num_data_valid(bgr_mat_data_num_data_valid),
-    .bgr_mat_data43_fifo_cap(bgr_mat_data_fifo_cap),
-    .bgr_mat_data43_full_n(bgr_mat_data_full_n),
-    .bgr_mat_data43_write(stream_to_mat_U0_bgr_mat_data43_write),
+    .bgr_mat_data1_din(stream_to_mat_U0_bgr_mat_data1_din),
+    .bgr_mat_data1_num_data_valid(bgr_mat_data_num_data_valid),
+    .bgr_mat_data1_fifo_cap(bgr_mat_data_fifo_cap),
+    .bgr_mat_data1_full_n(bgr_mat_data_full_n),
+    .bgr_mat_data1_write(stream_to_mat_U0_bgr_mat_data1_write),
     .start_out(stream_to_mat_U0_start_out),
     .start_write(stream_to_mat_U0_start_write)
 );
@@ -156,16 +162,16 @@ accelerator_v2_bgr2gray_9_0_484_644_1_3220_3220_s bgr2gray_9_0_484_644_1_3220_32
     .ap_ready(bgr2gray_9_0_484_644_1_3220_3220_U0_ap_ready),
     .start_out(bgr2gray_9_0_484_644_1_3220_3220_U0_start_out),
     .start_write(bgr2gray_9_0_484_644_1_3220_3220_U0_start_write),
-    .bgr_mat_data43_dout(bgr_mat_data_dout),
-    .bgr_mat_data43_num_data_valid(bgr_mat_data_num_data_valid),
-    .bgr_mat_data43_fifo_cap(bgr_mat_data_fifo_cap),
-    .bgr_mat_data43_empty_n(bgr_mat_data_empty_n),
-    .bgr_mat_data43_read(bgr2gray_9_0_484_644_1_3220_3220_U0_bgr_mat_data43_read),
-    .gray_mat_data44_din(bgr2gray_9_0_484_644_1_3220_3220_U0_gray_mat_data44_din),
-    .gray_mat_data44_num_data_valid(gray_mat_data_num_data_valid),
-    .gray_mat_data44_fifo_cap(gray_mat_data_fifo_cap),
-    .gray_mat_data44_full_n(gray_mat_data_full_n),
-    .gray_mat_data44_write(bgr2gray_9_0_484_644_1_3220_3220_U0_gray_mat_data44_write)
+    .bgr_mat_data1_dout(bgr_mat_data_dout),
+    .bgr_mat_data1_num_data_valid(bgr_mat_data_num_data_valid),
+    .bgr_mat_data1_fifo_cap(bgr_mat_data_fifo_cap),
+    .bgr_mat_data1_empty_n(bgr_mat_data_empty_n),
+    .bgr_mat_data1_read(bgr2gray_9_0_484_644_1_3220_3220_U0_bgr_mat_data1_read),
+    .gray_mat_data2_din(bgr2gray_9_0_484_644_1_3220_3220_U0_gray_mat_data2_din),
+    .gray_mat_data2_num_data_valid(gray_mat_data_num_data_valid),
+    .gray_mat_data2_fifo_cap(gray_mat_data_fifo_cap),
+    .gray_mat_data2_full_n(gray_mat_data_full_n),
+    .gray_mat_data2_write(bgr2gray_9_0_484_644_1_3220_3220_U0_gray_mat_data2_write)
 );
 
 accelerator_v2_GaussianBlur_5_1_0_484_644_1_3220_3220_s GaussianBlur_5_1_0_484_644_1_3220_3220_U0(
@@ -179,16 +185,16 @@ accelerator_v2_GaussianBlur_5_1_0_484_644_1_3220_3220_s GaussianBlur_5_1_0_484_6
     .ap_ready(GaussianBlur_5_1_0_484_644_1_3220_3220_U0_ap_ready),
     .start_out(GaussianBlur_5_1_0_484_644_1_3220_3220_U0_start_out),
     .start_write(GaussianBlur_5_1_0_484_644_1_3220_3220_U0_start_write),
-    .gray_mat_data44_dout(gray_mat_data_dout),
-    .gray_mat_data44_num_data_valid(gray_mat_data_num_data_valid),
-    .gray_mat_data44_fifo_cap(gray_mat_data_fifo_cap),
-    .gray_mat_data44_empty_n(gray_mat_data_empty_n),
-    .gray_mat_data44_read(GaussianBlur_5_1_0_484_644_1_3220_3220_U0_gray_mat_data44_read),
-    .blurred_mat_data45_din(GaussianBlur_5_1_0_484_644_1_3220_3220_U0_blurred_mat_data45_din),
-    .blurred_mat_data45_num_data_valid(blurred_mat_data_num_data_valid),
-    .blurred_mat_data45_fifo_cap(blurred_mat_data_fifo_cap),
-    .blurred_mat_data45_full_n(blurred_mat_data_full_n),
-    .blurred_mat_data45_write(GaussianBlur_5_1_0_484_644_1_3220_3220_U0_blurred_mat_data45_write)
+    .gray_mat_data2_dout(gray_mat_data_dout),
+    .gray_mat_data2_num_data_valid(gray_mat_data_num_data_valid),
+    .gray_mat_data2_fifo_cap(gray_mat_data_fifo_cap),
+    .gray_mat_data2_empty_n(gray_mat_data_empty_n),
+    .gray_mat_data2_read(GaussianBlur_5_1_0_484_644_1_3220_3220_U0_gray_mat_data2_read),
+    .blurred_mat_data3_din(GaussianBlur_5_1_0_484_644_1_3220_3220_U0_blurred_mat_data3_din),
+    .blurred_mat_data3_num_data_valid(blurred_mat_data_num_data_valid),
+    .blurred_mat_data3_fifo_cap(blurred_mat_data_fifo_cap),
+    .blurred_mat_data3_full_n(blurred_mat_data_full_n),
+    .blurred_mat_data3_write(GaussianBlur_5_1_0_484_644_1_3220_3220_U0_blurred_mat_data3_write)
 );
 
 accelerator_v2_mat_to_stream mat_to_stream_U0(
@@ -199,16 +205,18 @@ accelerator_v2_mat_to_stream mat_to_stream_U0(
     .ap_continue(mat_to_stream_U0_ap_continue),
     .ap_idle(mat_to_stream_U0_ap_idle),
     .ap_ready(mat_to_stream_U0_ap_ready),
-    .blurred_mat_data45_dout(blurred_mat_data_dout),
-    .blurred_mat_data45_num_data_valid(blurred_mat_data_num_data_valid),
-    .blurred_mat_data45_fifo_cap(blurred_mat_data_fifo_cap),
-    .blurred_mat_data45_empty_n(blurred_mat_data_empty_n),
-    .blurred_mat_data45_read(mat_to_stream_U0_blurred_mat_data45_read),
+    .blurred_mat_data3_dout(blurred_mat_data_dout),
+    .blurred_mat_data3_num_data_valid(blurred_mat_data_num_data_valid),
+    .blurred_mat_data3_fifo_cap(blurred_mat_data_fifo_cap),
+    .blurred_mat_data3_empty_n(blurred_mat_data_empty_n),
+    .blurred_mat_data3_read(mat_to_stream_U0_blurred_mat_data3_read),
     .gray_stream3_din(mat_to_stream_U0_gray_stream3_din),
     .gray_stream3_num_data_valid(13'd0),
     .gray_stream3_fifo_cap(13'd0),
     .gray_stream3_full_n(gray_stream3_full_n),
-    .gray_stream3_write(mat_to_stream_U0_gray_stream3_write)
+    .gray_stream3_write(mat_to_stream_U0_gray_stream3_write),
+    .gray_fifo_breath(mat_to_stream_U0_gray_fifo_breath),
+    .gray_fifo_breath_ap_vld(mat_to_stream_U0_gray_fifo_breath_ap_vld)
 );
 
 accelerator_v2_fifo_w24_d3220_A bgr_mat_data_U(
@@ -216,14 +224,14 @@ accelerator_v2_fifo_w24_d3220_A bgr_mat_data_U(
     .reset(ap_rst),
     .if_read_ce(1'b1),
     .if_write_ce(1'b1),
-    .if_din(stream_to_mat_U0_bgr_mat_data43_din),
+    .if_din(stream_to_mat_U0_bgr_mat_data1_din),
     .if_full_n(bgr_mat_data_full_n),
-    .if_write(stream_to_mat_U0_bgr_mat_data43_write),
+    .if_write(stream_to_mat_U0_bgr_mat_data1_write),
     .if_dout(bgr_mat_data_dout),
     .if_num_data_valid(bgr_mat_data_num_data_valid),
     .if_fifo_cap(bgr_mat_data_fifo_cap),
     .if_empty_n(bgr_mat_data_empty_n),
-    .if_read(bgr2gray_9_0_484_644_1_3220_3220_U0_bgr_mat_data43_read)
+    .if_read(bgr2gray_9_0_484_644_1_3220_3220_U0_bgr_mat_data1_read)
 );
 
 accelerator_v2_fifo_w8_d3220_A gray_mat_data_U(
@@ -231,14 +239,14 @@ accelerator_v2_fifo_w8_d3220_A gray_mat_data_U(
     .reset(ap_rst),
     .if_read_ce(1'b1),
     .if_write_ce(1'b1),
-    .if_din(bgr2gray_9_0_484_644_1_3220_3220_U0_gray_mat_data44_din),
+    .if_din(bgr2gray_9_0_484_644_1_3220_3220_U0_gray_mat_data2_din),
     .if_full_n(gray_mat_data_full_n),
-    .if_write(bgr2gray_9_0_484_644_1_3220_3220_U0_gray_mat_data44_write),
+    .if_write(bgr2gray_9_0_484_644_1_3220_3220_U0_gray_mat_data2_write),
     .if_dout(gray_mat_data_dout),
     .if_num_data_valid(gray_mat_data_num_data_valid),
     .if_fifo_cap(gray_mat_data_fifo_cap),
     .if_empty_n(gray_mat_data_empty_n),
-    .if_read(GaussianBlur_5_1_0_484_644_1_3220_3220_U0_gray_mat_data44_read)
+    .if_read(GaussianBlur_5_1_0_484_644_1_3220_3220_U0_gray_mat_data2_read)
 );
 
 accelerator_v2_fifo_w8_d3220_A blurred_mat_data_U(
@@ -246,14 +254,14 @@ accelerator_v2_fifo_w8_d3220_A blurred_mat_data_U(
     .reset(ap_rst),
     .if_read_ce(1'b1),
     .if_write_ce(1'b1),
-    .if_din(GaussianBlur_5_1_0_484_644_1_3220_3220_U0_blurred_mat_data45_din),
+    .if_din(GaussianBlur_5_1_0_484_644_1_3220_3220_U0_blurred_mat_data3_din),
     .if_full_n(blurred_mat_data_full_n),
-    .if_write(GaussianBlur_5_1_0_484_644_1_3220_3220_U0_blurred_mat_data45_write),
+    .if_write(GaussianBlur_5_1_0_484_644_1_3220_3220_U0_blurred_mat_data3_write),
     .if_dout(blurred_mat_data_dout),
     .if_num_data_valid(blurred_mat_data_num_data_valid),
     .if_fifo_cap(blurred_mat_data_fifo_cap),
     .if_empty_n(blurred_mat_data_empty_n),
-    .if_read(mat_to_stream_U0_blurred_mat_data45_read)
+    .if_read(mat_to_stream_U0_blurred_mat_data3_read)
 );
 
 accelerator_v2_start_for_bgr2gray_9_0_484_644_1_3220_3220_U0 start_for_bgr2gray_9_0_484_644_1_3220_3220_U0_U(
@@ -338,6 +346,10 @@ assign ap_sync_ready = stream_to_mat_U0_ap_ready;
 assign bgr2gray_9_0_484_644_1_3220_3220_U0_ap_continue = 1'b1;
 
 assign bgr2gray_9_0_484_644_1_3220_3220_U0_ap_start = start_for_bgr2gray_9_0_484_644_1_3220_3220_U0_empty_n;
+
+assign gray_fifo_breath = mat_to_stream_U0_gray_fifo_breath;
+
+assign gray_fifo_breath_ap_vld = mat_to_stream_U0_gray_fifo_breath_ap_vld;
 
 assign gray_stream3_din = mat_to_stream_U0_gray_stream3_din;
 

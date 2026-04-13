@@ -31,6 +31,9 @@
 `define AESL_DEPTH_out_stream_V_dest_V 1
 `define AESL_DEPTH_in_breath 1
 `define AESL_DEPTH_out_breath 1
+`define AESL_DEPTH_bgr_fifo_breath 1
+`define AESL_DEPTH_pad_fifo_breath 1
+`define AESL_DEPTH_gray_fifo_breath 1
 `define AUTOTB_TVIN_in_stream_V_data_V  "../tv/cdatafile/c.accelerator_v2.autotvin_in_stream_V_data_V.dat"
 `define AUTOTB_TVIN_in_stream_V_keep_V  "../tv/cdatafile/c.accelerator_v2.autotvin_in_stream_V_keep_V.dat"
 `define AUTOTB_TVIN_in_stream_V_strb_V  "../tv/cdatafile/c.accelerator_v2.autotvin_in_stream_V_strb_V.dat"
@@ -54,6 +57,9 @@
 `define AUTOTB_TVOUT_out_stream_V_dest_V  "../tv/cdatafile/c.accelerator_v2.autotvout_out_stream_V_dest_V.dat"
 `define AUTOTB_TVOUT_in_breath  "../tv/cdatafile/c.accelerator_v2.autotvout_in_breath.dat"
 `define AUTOTB_TVOUT_out_breath  "../tv/cdatafile/c.accelerator_v2.autotvout_out_breath.dat"
+`define AUTOTB_TVOUT_bgr_fifo_breath  "../tv/cdatafile/c.accelerator_v2.autotvout_bgr_fifo_breath.dat"
+`define AUTOTB_TVOUT_pad_fifo_breath  "../tv/cdatafile/c.accelerator_v2.autotvout_pad_fifo_breath.dat"
+`define AUTOTB_TVOUT_gray_fifo_breath  "../tv/cdatafile/c.accelerator_v2.autotvout_gray_fifo_breath.dat"
 `define AUTOTB_TVOUT_out_stream_V_data_V_out_wrapc  "../tv/rtldatafile/rtl.accelerator_v2.autotvout_out_stream_V_data_V.dat"
 `define AUTOTB_TVOUT_out_stream_V_keep_V_out_wrapc  "../tv/rtldatafile/rtl.accelerator_v2.autotvout_out_stream_V_keep_V.dat"
 `define AUTOTB_TVOUT_out_stream_V_strb_V_out_wrapc  "../tv/rtldatafile/rtl.accelerator_v2.autotvout_out_stream_V_strb_V.dat"
@@ -63,11 +69,16 @@
 `define AUTOTB_TVOUT_out_stream_V_dest_V_out_wrapc  "../tv/rtldatafile/rtl.accelerator_v2.autotvout_out_stream_V_dest_V.dat"
 `define AUTOTB_TVOUT_in_breath_out_wrapc  "../tv/rtldatafile/rtl.accelerator_v2.autotvout_in_breath.dat"
 `define AUTOTB_TVOUT_out_breath_out_wrapc  "../tv/rtldatafile/rtl.accelerator_v2.autotvout_out_breath.dat"
+`define AUTOTB_TVOUT_bgr_fifo_breath_out_wrapc  "../tv/rtldatafile/rtl.accelerator_v2.autotvout_bgr_fifo_breath.dat"
+`define AUTOTB_TVOUT_pad_fifo_breath_out_wrapc  "../tv/rtldatafile/rtl.accelerator_v2.autotvout_pad_fifo_breath.dat"
+`define AUTOTB_TVOUT_gray_fifo_breath_out_wrapc  "../tv/rtldatafile/rtl.accelerator_v2.autotvout_gray_fifo_breath.dat"
 module `AUTOTB_TOP;
 
 parameter AUTOTB_TRANSACTION_NUM = 1;
 parameter PROGRESS_TIMEOUT = 10000000;
-parameter LATENCY_ESTIMATION = 927887;
+parameter LATENCY_ESTIMATION = 928370;
+parameter LENGTH_bgr_fifo_breath = 1;
+parameter LENGTH_gray_fifo_breath = 1;
 parameter LENGTH_in_breath = 1;
 parameter LENGTH_in_stream_V_data_V = 58080;
 parameter LENGTH_in_stream_V_dest_V = 58080;
@@ -84,6 +95,7 @@ parameter LENGTH_out_stream_V_keep_V = 19680;
 parameter LENGTH_out_stream_V_last_V = 19680;
 parameter LENGTH_out_stream_V_strb_V = 19680;
 parameter LENGTH_out_stream_V_user_V = 19680;
+parameter LENGTH_pad_fifo_breath = 1;
 
 task read_token;
     input integer fp;
@@ -114,14 +126,14 @@ reg AESL_done_delay2 = 0;
 reg AESL_ready_delay = 0;
 wire ready;
 wire ready_wire;
-wire [3 : 0] CTRL_AWADDR;
+wire [6 : 0] CTRL_AWADDR;
 wire  CTRL_AWVALID;
 wire  CTRL_AWREADY;
 wire  CTRL_WVALID;
 wire  CTRL_WREADY;
 wire [31 : 0] CTRL_WDATA;
 wire [3 : 0] CTRL_WSTRB;
-wire [3 : 0] CTRL_ARADDR;
+wire [6 : 0] CTRL_ARADDR;
 wire  CTRL_ARVALID;
 wire  CTRL_ARREADY;
 wire  CTRL_RVALID;
@@ -146,8 +158,6 @@ wire [0 : 0] out_stream_TUSER;
 wire [0 : 0] out_stream_TLAST;
 wire [0 : 0] out_stream_TID;
 wire [0 : 0] out_stream_TDEST;
-wire [0 : 0] in_breath;
-wire [0 : 0] out_breath;
 wire  in_stream_TVALID;
 wire  in_stream_TREADY;
 wire  out_stream_TVALID;
@@ -161,6 +171,7 @@ reg ready_last_n;
 reg ready_delay_last_n;
 reg done_delay_last_n;
 reg interface_done = 0;
+wire CTRL_read_data_finish;
 wire AESL_slave_start;
 reg AESL_slave_start_lock = 0;
 wire AESL_slave_write_start_in;
@@ -214,8 +225,6 @@ wire ap_rst_n_n;
     .out_stream_TLAST(out_stream_TLAST),
     .out_stream_TID(out_stream_TID),
     .out_stream_TDEST(out_stream_TDEST),
-    .in_breath(in_breath),
-    .out_breath(out_breath),
     .in_stream_TVALID(in_stream_TVALID),
     .in_stream_TREADY(in_stream_TREADY),
     .out_stream_TVALID(out_stream_TVALID),
@@ -231,7 +240,7 @@ assign AESL_ce = ce;
 assign AESL_continue = tb_continue;
   assign AESL_slave_write_start_in = slave_start_status ;
   assign AESL_slave_start = AESL_slave_write_start_finish;
-  assign AESL_done = slave_done_status ;
+  assign AESL_done = slave_done_status  & CTRL_read_data_finish;
 
 always @(posedge AESL_clock)
 begin
@@ -297,98 +306,9 @@ end
 
 
 
-// The signal of port in_breath
-reg [0: 0] AESL_REG_in_breath = 0;
-always @(posedge AESL_clock)
-begin
-    if(AESL_reset === 0)
-        AESL_REG_in_breath = 0; 
-    else
-        AESL_REG_in_breath <= in_breath;
-end 
-
-initial begin : write_file_process_in_breath
-    integer fp;
-    integer fp_size;
-    integer err;
-    integer ret;
-    integer i;
-    integer hls_stream_size;
-    integer proc_rand;
-    integer in_breath_count;
-    reg [279:0] token;
-    integer transaction_idx;
-    reg [8 * 5:1] str;
-    wait(AESL_reset === 1);
-    fp = $fopen(`AUTOTB_TVOUT_in_breath_out_wrapc,"w");
-    if(fp == 0) begin       // Failed to open file
-        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_in_breath_out_wrapc);
-        $display("ERROR: Simulation using HLS TB failed.");
-        $finish;
-    end
-    $fdisplay(fp,"[[[runtime]]]");
-    transaction_idx = 0;
-    while (transaction_idx != AUTOTB_TRANSACTION_NUM) begin
-        @(posedge AESL_clock);
-          while(AESL_done !== 1) begin
-              @(posedge AESL_clock);
-          end
-        # 0.4;
-        $fdisplay(fp,"[[transaction]] %d", transaction_idx);
-          $fdisplay(fp,"0x%x", AESL_REG_in_breath);
-    transaction_idx = transaction_idx + 1;
-      $fdisplay(fp,"[[/transaction]]");
-    end
-    $fdisplay(fp,"[[[/runtime]]]");
-    $fclose(fp);
-end
 
 
-// The signal of port out_breath
-reg [0: 0] AESL_REG_out_breath = 0;
-always @(posedge AESL_clock)
-begin
-    if(AESL_reset === 0)
-        AESL_REG_out_breath = 0; 
-    else
-        AESL_REG_out_breath <= out_breath;
-end 
 
-initial begin : write_file_process_out_breath
-    integer fp;
-    integer fp_size;
-    integer err;
-    integer ret;
-    integer i;
-    integer hls_stream_size;
-    integer proc_rand;
-    integer out_breath_count;
-    reg [279:0] token;
-    integer transaction_idx;
-    reg [8 * 5:1] str;
-    wait(AESL_reset === 1);
-    fp = $fopen(`AUTOTB_TVOUT_out_breath_out_wrapc,"w");
-    if(fp == 0) begin       // Failed to open file
-        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_out_breath_out_wrapc);
-        $display("ERROR: Simulation using HLS TB failed.");
-        $finish;
-    end
-    $fdisplay(fp,"[[[runtime]]]");
-    transaction_idx = 0;
-    while (transaction_idx != AUTOTB_TRANSACTION_NUM) begin
-        @(posedge AESL_clock);
-          while(AESL_done !== 1) begin
-              @(posedge AESL_clock);
-          end
-        # 0.4;
-        $fdisplay(fp,"[[transaction]] %d", transaction_idx);
-          $fdisplay(fp,"0x%x", AESL_REG_out_breath);
-    transaction_idx = transaction_idx + 1;
-      $fdisplay(fp,"[[/transaction]]");
-    end
-    $fdisplay(fp,"[[[/runtime]]]");
-    $fclose(fp);
-end
 
 
 reg [31:0] ap_c_n_tvin_trans_num_in_stream_V_data_V;
@@ -489,6 +409,7 @@ AESL_axi_slave_CTRL AESL_AXI_SLAVE_CTRL(
     .TRAN_s_axi_CTRL_BREADY (CTRL_BREADY),
     .TRAN_s_axi_CTRL_BRESP (CTRL_BRESP),
     .TRAN_CTRL_interrupt (CTRL_INTERRUPT),
+    .TRAN_CTRL_read_data_finish(CTRL_read_data_finish),
     .TRAN_CTRL_ready_out (AESL_ready),
     .TRAN_CTRL_ready_in (AESL_slave_ready),
     .TRAN_CTRL_done_out (AESL_slave_output_done),
@@ -606,6 +527,15 @@ reg [31:0] size_in_breath_backup;
 reg end_out_breath;
 reg [31:0] size_out_breath;
 reg [31:0] size_out_breath_backup;
+reg end_bgr_fifo_breath;
+reg [31:0] size_bgr_fifo_breath;
+reg [31:0] size_bgr_fifo_breath_backup;
+reg end_pad_fifo_breath;
+reg [31:0] size_pad_fifo_breath;
+reg [31:0] size_pad_fifo_breath_backup;
+reg end_gray_fifo_breath;
+reg [31:0] size_gray_fifo_breath;
+reg [31:0] size_gray_fifo_breath_backup;
 
 initial begin : initial_process
     integer proc_rand;
@@ -1042,6 +972,146 @@ initial begin : dump_tvout_runtime_sign_out_stream_V_dest_V
     $fdisplay(fp,"[[[/runtime]]]");
     $fclose(fp);
     dump_tvout_finish_out_stream_V_dest_V = 1;
+end
+
+
+reg dump_tvout_finish_in_breath;
+
+initial begin : dump_tvout_runtime_sign_in_breath
+    integer fp;
+    dump_tvout_finish_in_breath = 0;
+    fp = $fopen(`AUTOTB_TVOUT_in_breath_out_wrapc, "w");
+    if (fp == 0) begin
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_in_breath_out_wrapc);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    $fdisplay(fp,"[[[runtime]]]");
+    $fclose(fp);
+    wait (done_cnt == AUTOTB_TRANSACTION_NUM);
+    // last transaction is saved at negedge right after last done
+    repeat(5) @ (posedge AESL_clock);
+    fp = $fopen(`AUTOTB_TVOUT_in_breath_out_wrapc, "a");
+    if (fp == 0) begin
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_in_breath_out_wrapc);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    $fdisplay(fp,"[[[/runtime]]]");
+    $fclose(fp);
+    dump_tvout_finish_in_breath = 1;
+end
+
+
+reg dump_tvout_finish_out_breath;
+
+initial begin : dump_tvout_runtime_sign_out_breath
+    integer fp;
+    dump_tvout_finish_out_breath = 0;
+    fp = $fopen(`AUTOTB_TVOUT_out_breath_out_wrapc, "w");
+    if (fp == 0) begin
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_out_breath_out_wrapc);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    $fdisplay(fp,"[[[runtime]]]");
+    $fclose(fp);
+    wait (done_cnt == AUTOTB_TRANSACTION_NUM);
+    // last transaction is saved at negedge right after last done
+    repeat(5) @ (posedge AESL_clock);
+    fp = $fopen(`AUTOTB_TVOUT_out_breath_out_wrapc, "a");
+    if (fp == 0) begin
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_out_breath_out_wrapc);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    $fdisplay(fp,"[[[/runtime]]]");
+    $fclose(fp);
+    dump_tvout_finish_out_breath = 1;
+end
+
+
+reg dump_tvout_finish_bgr_fifo_breath;
+
+initial begin : dump_tvout_runtime_sign_bgr_fifo_breath
+    integer fp;
+    dump_tvout_finish_bgr_fifo_breath = 0;
+    fp = $fopen(`AUTOTB_TVOUT_bgr_fifo_breath_out_wrapc, "w");
+    if (fp == 0) begin
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_bgr_fifo_breath_out_wrapc);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    $fdisplay(fp,"[[[runtime]]]");
+    $fclose(fp);
+    wait (done_cnt == AUTOTB_TRANSACTION_NUM);
+    // last transaction is saved at negedge right after last done
+    repeat(5) @ (posedge AESL_clock);
+    fp = $fopen(`AUTOTB_TVOUT_bgr_fifo_breath_out_wrapc, "a");
+    if (fp == 0) begin
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_bgr_fifo_breath_out_wrapc);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    $fdisplay(fp,"[[[/runtime]]]");
+    $fclose(fp);
+    dump_tvout_finish_bgr_fifo_breath = 1;
+end
+
+
+reg dump_tvout_finish_pad_fifo_breath;
+
+initial begin : dump_tvout_runtime_sign_pad_fifo_breath
+    integer fp;
+    dump_tvout_finish_pad_fifo_breath = 0;
+    fp = $fopen(`AUTOTB_TVOUT_pad_fifo_breath_out_wrapc, "w");
+    if (fp == 0) begin
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_pad_fifo_breath_out_wrapc);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    $fdisplay(fp,"[[[runtime]]]");
+    $fclose(fp);
+    wait (done_cnt == AUTOTB_TRANSACTION_NUM);
+    // last transaction is saved at negedge right after last done
+    repeat(5) @ (posedge AESL_clock);
+    fp = $fopen(`AUTOTB_TVOUT_pad_fifo_breath_out_wrapc, "a");
+    if (fp == 0) begin
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_pad_fifo_breath_out_wrapc);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    $fdisplay(fp,"[[[/runtime]]]");
+    $fclose(fp);
+    dump_tvout_finish_pad_fifo_breath = 1;
+end
+
+
+reg dump_tvout_finish_gray_fifo_breath;
+
+initial begin : dump_tvout_runtime_sign_gray_fifo_breath
+    integer fp;
+    dump_tvout_finish_gray_fifo_breath = 0;
+    fp = $fopen(`AUTOTB_TVOUT_gray_fifo_breath_out_wrapc, "w");
+    if (fp == 0) begin
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_gray_fifo_breath_out_wrapc);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    $fdisplay(fp,"[[[runtime]]]");
+    $fclose(fp);
+    wait (done_cnt == AUTOTB_TRANSACTION_NUM);
+    // last transaction is saved at negedge right after last done
+    repeat(5) @ (posedge AESL_clock);
+    fp = $fopen(`AUTOTB_TVOUT_gray_fifo_breath_out_wrapc, "a");
+    if (fp == 0) begin
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_gray_fifo_breath_out_wrapc);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    $fdisplay(fp,"[[[/runtime]]]");
+    $fclose(fp);
+    dump_tvout_finish_gray_fifo_breath = 1;
 end
 
 

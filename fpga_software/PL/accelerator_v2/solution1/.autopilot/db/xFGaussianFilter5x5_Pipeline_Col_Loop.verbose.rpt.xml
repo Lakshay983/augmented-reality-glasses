@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'xFGaussianFilter5x5_Pipeline_Col_Loop'" level="0">
-<item name = "Date">Sun Apr 12 22:15:07 2026
+<item name = "Date">Mon Apr 13 00:33:25 2026
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">accelerator_v2</item>
@@ -63,11 +63,11 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="mux_53_8_1_1_U118">mux_53_8_1_1, 0, 0, 0, 26, 0</column>
-<column name="mux_53_8_1_1_U119">mux_53_8_1_1, 0, 0, 0, 26, 0</column>
-<column name="mux_53_8_1_1_U120">mux_53_8_1_1, 0, 0, 0, 26, 0</column>
-<column name="mux_53_8_1_1_U121">mux_53_8_1_1, 0, 0, 0, 26, 0</column>
-<column name="mux_53_8_1_1_U122">mux_53_8_1_1, 0, 0, 0, 26, 0</column>
+<column name="mux_53_8_1_1_U128">mux_53_8_1_1, 0, 0, 0, 26, 0</column>
+<column name="mux_53_8_1_1_U129">mux_53_8_1_1, 0, 0, 0, 26, 0</column>
+<column name="mux_53_8_1_1_U130">mux_53_8_1_1, 0, 0, 0, 26, 0</column>
+<column name="mux_53_8_1_1_U131">mux_53_8_1_1, 0, 0, 0, 26, 0</column>
+<column name="mux_53_8_1_1_U132">mux_53_8_1_1, 0, 0, 0, 26, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -126,14 +126,14 @@
 <column name="ap_done_int">9, 2, 1, 2</column>
 <column name="ap_enable_reg_pp0_iter4">9, 2, 1, 2</column>
 <column name="ap_sig_allocacmp_col_V_3">9, 2, 10, 20</column>
-<column name="blurred_mat_data45_blk_n">9, 2, 1, 2</column>
+<column name="blurred_mat_data3_blk_n">9, 2, 1, 2</column>
 <column name="buf_V_1_d1">14, 3, 8, 24</column>
 <column name="buf_V_2_d1">14, 3, 8, 24</column>
 <column name="buf_V_3_d1">14, 3, 8, 24</column>
 <column name="buf_V_4_d1">14, 3, 8, 24</column>
 <column name="buf_V_d1">14, 3, 8, 24</column>
 <column name="col_V_fu_136">9, 2, 10, 20</column>
-<column name="gray_mat_data44_blk_n">9, 2, 1, 2</column>
+<column name="gray_mat_data2_blk_n">9, 2, 1, 2</column>
 <column name="src_buf1_V_1_fu_164">9, 2, 8, 16</column>
 <column name="src_buf1_V_2_fu_168">9, 2, 8, 16</column>
 <column name="src_buf1_V_4_fu_140">9, 2, 8, 16</column>
@@ -282,16 +282,16 @@
 <column name="grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_din25">out, 8, ap_ctrl_hs, xFGaussianFilter5x5_Pipeline_Col_Loop, return value</column>
 <column name="grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_dout0">in, 8, ap_ctrl_hs, xFGaussianFilter5x5_Pipeline_Col_Loop, return value</column>
 <column name="grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_ce">out, 1, ap_ctrl_hs, xFGaussianFilter5x5_Pipeline_Col_Loop, return value</column>
-<column name="gray_mat_data44_dout">in, 8, ap_fifo, gray_mat_data44, pointer</column>
-<column name="gray_mat_data44_num_data_valid">in, 13, ap_fifo, gray_mat_data44, pointer</column>
-<column name="gray_mat_data44_fifo_cap">in, 13, ap_fifo, gray_mat_data44, pointer</column>
-<column name="gray_mat_data44_empty_n">in, 1, ap_fifo, gray_mat_data44, pointer</column>
-<column name="gray_mat_data44_read">out, 1, ap_fifo, gray_mat_data44, pointer</column>
-<column name="blurred_mat_data45_din">out, 8, ap_fifo, blurred_mat_data45, pointer</column>
-<column name="blurred_mat_data45_num_data_valid">in, 13, ap_fifo, blurred_mat_data45, pointer</column>
-<column name="blurred_mat_data45_fifo_cap">in, 13, ap_fifo, blurred_mat_data45, pointer</column>
-<column name="blurred_mat_data45_full_n">in, 1, ap_fifo, blurred_mat_data45, pointer</column>
-<column name="blurred_mat_data45_write">out, 1, ap_fifo, blurred_mat_data45, pointer</column>
+<column name="gray_mat_data2_dout">in, 8, ap_fifo, gray_mat_data2, pointer</column>
+<column name="gray_mat_data2_num_data_valid">in, 13, ap_fifo, gray_mat_data2, pointer</column>
+<column name="gray_mat_data2_fifo_cap">in, 13, ap_fifo, gray_mat_data2, pointer</column>
+<column name="gray_mat_data2_empty_n">in, 1, ap_fifo, gray_mat_data2, pointer</column>
+<column name="gray_mat_data2_read">out, 1, ap_fifo, gray_mat_data2, pointer</column>
+<column name="blurred_mat_data3_din">out, 8, ap_fifo, blurred_mat_data3, pointer</column>
+<column name="blurred_mat_data3_num_data_valid">in, 13, ap_fifo, blurred_mat_data3, pointer</column>
+<column name="blurred_mat_data3_fifo_cap">in, 13, ap_fifo, blurred_mat_data3, pointer</column>
+<column name="blurred_mat_data3_full_n">in, 1, ap_fifo, blurred_mat_data3, pointer</column>
+<column name="blurred_mat_data3_write">out, 1, ap_fifo, blurred_mat_data3, pointer</column>
 <column name="tp1_V_cast">in, 3, ap_none, tp1_V_cast, scalar</column>
 <column name="tp2_V_cast">in, 3, ap_none, tp2_V_cast, scalar</column>
 <column name="mid_V_cast">in, 3, ap_none, mid_V_cast, scalar</column>

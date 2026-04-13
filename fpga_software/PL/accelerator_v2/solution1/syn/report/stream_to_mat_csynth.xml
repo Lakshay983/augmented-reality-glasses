@@ -32,7 +32,7 @@
 <Interval-max>311698</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
-<VITIS_LOOP_137_1_VITIS_LOOP_138_2>
+<VITIS_LOOP_197_1_VITIS_LOOP_198_2>
 <Slack>7.30</Slack>
 <TripCount>311696</TripCount>
 <Latency>311696</Latency>
@@ -41,7 +41,7 @@
 <PipelineDepth>2</PipelineDepth>
 <InstanceList>
 </InstanceList>
-</VITIS_LOOP_137_1_VITIS_LOOP_138_2>
+</VITIS_LOOP_197_1_VITIS_LOOP_198_2>
 </SummaryOfLoopLatency>
 </PerformanceEstimates>
 
@@ -229,8 +229,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>bgr_mat_data43_din</name>
-<Object>bgr_mat_data43</Object>
+<name>bgr_mat_data1_din</name>
+<Object>bgr_mat_data1</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_fifo</IOProtocol>
@@ -240,8 +240,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>bgr_mat_data43_num_data_valid</name>
-<Object>bgr_mat_data43</Object>
+<name>bgr_mat_data1_num_data_valid</name>
+<Object>bgr_mat_data1</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_fifo</IOProtocol>
@@ -251,8 +251,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>bgr_mat_data43_fifo_cap</name>
-<Object>bgr_mat_data43</Object>
+<name>bgr_mat_data1_fifo_cap</name>
+<Object>bgr_mat_data1</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_fifo</IOProtocol>
@@ -262,8 +262,8 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>bgr_mat_data43_full_n</name>
-<Object>bgr_mat_data43</Object>
+<name>bgr_mat_data1_full_n</name>
+<Object>bgr_mat_data1</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_fifo</IOProtocol>
@@ -273,8 +273,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>bgr_mat_data43_write</name>
-<Object>bgr_mat_data43</Object>
+<name>bgr_mat_data1_write</name>
+<Object>bgr_mat_data1</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_fifo</IOProtocol>

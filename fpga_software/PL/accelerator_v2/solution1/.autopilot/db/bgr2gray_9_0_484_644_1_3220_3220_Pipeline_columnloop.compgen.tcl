@@ -1,6 +1,6 @@
 # This script segment is generated automatically by AutoPilot
 
-set id 70
+set id 80
 set name accelerator_v2_mul_mul_8ns_14ns_22_4_1
 set corename simcore_mul
 set op mul
@@ -55,7 +55,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your p
 }
 
 
-set id 71
+set id 81
 set name accelerator_v2_mac_muladd_8ns_12ns_22ns_22_4_1
 set corename simcore_mac
 set op mac
@@ -114,7 +114,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your p
 }
 
 
-set id 72
+set id 82
 set name accelerator_v2_mac_muladd_8ns_15ns_22ns_23_4_1
 set corename simcore_mac
 set op mac
@@ -183,30 +183,30 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 76 \
-    name bgr_mat_data43 \
+    id 86 \
+    name bgr_mat_data1 \
     type fifo \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_bgr_mat_data43 \
+    corename dc_bgr_mat_data1 \
     op interface \
-    ports { bgr_mat_data43_dout { I 24 vector } bgr_mat_data43_num_data_valid { I 13 vector } bgr_mat_data43_fifo_cap { I 13 vector } bgr_mat_data43_empty_n { I 1 bit } bgr_mat_data43_read { O 1 bit } } \
+    ports { bgr_mat_data1_dout { I 24 vector } bgr_mat_data1_num_data_valid { I 13 vector } bgr_mat_data1_fifo_cap { I 13 vector } bgr_mat_data1_empty_n { I 1 bit } bgr_mat_data1_read { O 1 bit } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 77 \
-    name gray_mat_data44 \
+    id 87 \
+    name gray_mat_data2 \
     type fifo \
     dir O \
     reset_level 1 \
     sync_rst true \
-    corename dc_gray_mat_data44 \
+    corename dc_gray_mat_data2 \
     op interface \
-    ports { gray_mat_data44_din { O 8 vector } gray_mat_data44_num_data_valid { I 13 vector } gray_mat_data44_fifo_cap { I 13 vector } gray_mat_data44_full_n { I 1 bit } gray_mat_data44_write { O 1 bit } } \
+    ports { gray_mat_data2_din { O 8 vector } gray_mat_data2_num_data_valid { I 13 vector } gray_mat_data2_fifo_cap { I 13 vector } gray_mat_data2_full_n { I 1 bit } gray_mat_data2_write { O 1 bit } } \
 } "
 }
 

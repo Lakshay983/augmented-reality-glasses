@@ -297,7 +297,7 @@ attribute shreg_extract : string;
 
 
 begin
-    ama_addmuladd_8ns_8ns_7ns_18s_19_4_0_U86 : component accelerator_v2_ama_addmuladd_8ns_8ns_7ns_18s_19_4_0
+    ama_addmuladd_8ns_8ns_7ns_18s_19_4_0_U96 : component accelerator_v2_ama_addmuladd_8ns_8ns_7ns_18s_19_4_0
     generic map (
         ID => 1,
         NUM_STAGE => 4,
@@ -316,7 +316,7 @@ begin
         ce => grp_fu_799_ce,
         dout => grp_fu_799_p4);
 
-    ama_addmuladd_8ns_8ns_7ns_18s_19_4_0_U87 : component accelerator_v2_ama_addmuladd_8ns_8ns_7ns_18s_19_4_0
+    ama_addmuladd_8ns_8ns_7ns_18s_19_4_0_U97 : component accelerator_v2_ama_addmuladd_8ns_8ns_7ns_18s_19_4_0
     generic map (
         ID => 1,
         NUM_STAGE => 4,
@@ -335,7 +335,7 @@ begin
         ce => grp_fu_809_ce,
         dout => grp_fu_809_p4);
 
-    mac_muladd_8ns_7ns_17s_18_4_0_U88 : component accelerator_v2_mac_muladd_8ns_7ns_17s_18_4_0
+    mac_muladd_8ns_7ns_17s_18_4_0_U98 : component accelerator_v2_mac_muladd_8ns_7ns_17s_18_4_0
     generic map (
         ID => 1,
         NUM_STAGE => 4,
@@ -352,7 +352,7 @@ begin
         ce => grp_fu_819_ce,
         dout => grp_fu_819_p3);
 
-    mac_muladd_24ns_7ns_30s_32_4_0_U89 : component accelerator_v2_mac_muladd_24ns_7ns_30s_32_4_0
+    mac_muladd_24ns_7ns_30s_32_4_0_U99 : component accelerator_v2_mac_muladd_24ns_7ns_30s_32_4_0
     generic map (
         ID => 1,
         NUM_STAGE => 4,

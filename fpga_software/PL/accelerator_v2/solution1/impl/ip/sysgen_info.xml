@@ -2,11 +2,6 @@
 <AdditionalInfo>
   <CTypeInfo>
       <RtlPort>
-        <name>in_breath</name>
-        <type>Signed</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
         <name>in_stream_TDATA</name>
         <type>Unsigned</type>
         <fractionWidth>0</fractionWidth>
@@ -49,11 +44,6 @@
       <RtlPort>
         <name>in_stream_TVALID</name>
         <type>Unsigned</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>out_breath</name>
-        <type>Signed</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
@@ -108,7 +98,7 @@
   <Machine>64</Machine>
   <modelParameters>
     <combinational>0</combinational>
-    <latency>924001</latency>
-    <II>924002</II>
+    <latency>924481</latency>
+    <II>924482</II>
   </modelParameters>
 </AdditionalInfo>

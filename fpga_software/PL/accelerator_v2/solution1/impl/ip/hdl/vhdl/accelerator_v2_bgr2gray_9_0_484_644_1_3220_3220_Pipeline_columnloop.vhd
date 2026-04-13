@@ -17,16 +17,16 @@ port (
     ap_done : OUT STD_LOGIC;
     ap_idle : OUT STD_LOGIC;
     ap_ready : OUT STD_LOGIC;
-    bgr_mat_data43_dout : IN STD_LOGIC_VECTOR (23 downto 0);
-    bgr_mat_data43_num_data_valid : IN STD_LOGIC_VECTOR (12 downto 0);
-    bgr_mat_data43_fifo_cap : IN STD_LOGIC_VECTOR (12 downto 0);
-    bgr_mat_data43_empty_n : IN STD_LOGIC;
-    bgr_mat_data43_read : OUT STD_LOGIC;
-    gray_mat_data44_din : OUT STD_LOGIC_VECTOR (7 downto 0);
-    gray_mat_data44_num_data_valid : IN STD_LOGIC_VECTOR (12 downto 0);
-    gray_mat_data44_fifo_cap : IN STD_LOGIC_VECTOR (12 downto 0);
-    gray_mat_data44_full_n : IN STD_LOGIC;
-    gray_mat_data44_write : OUT STD_LOGIC );
+    bgr_mat_data1_dout : IN STD_LOGIC_VECTOR (23 downto 0);
+    bgr_mat_data1_num_data_valid : IN STD_LOGIC_VECTOR (12 downto 0);
+    bgr_mat_data1_fifo_cap : IN STD_LOGIC_VECTOR (12 downto 0);
+    bgr_mat_data1_empty_n : IN STD_LOGIC;
+    bgr_mat_data1_read : OUT STD_LOGIC;
+    gray_mat_data2_din : OUT STD_LOGIC_VECTOR (7 downto 0);
+    gray_mat_data2_num_data_valid : IN STD_LOGIC_VECTOR (12 downto 0);
+    gray_mat_data2_fifo_cap : IN STD_LOGIC_VECTOR (12 downto 0);
+    gray_mat_data2_full_n : IN STD_LOGIC;
+    gray_mat_data2_write : OUT STD_LOGIC );
 end;
 
 
@@ -77,9 +77,9 @@ attribute shreg_extract : string;
     signal ap_condition_exit_pp0_iter0_stage0 : STD_LOGIC;
     signal ap_loop_exit_ready : STD_LOGIC;
     signal ap_ready_int : STD_LOGIC;
-    signal bgr_mat_data43_blk_n : STD_LOGIC;
+    signal bgr_mat_data1_blk_n : STD_LOGIC;
     signal ap_block_pp0_stage0 : BOOLEAN;
-    signal gray_mat_data44_blk_n : STD_LOGIC;
+    signal gray_mat_data2_blk_n : STD_LOGIC;
     signal ap_block_pp0_stage0_11001 : BOOLEAN;
     signal p_fu_98_p1 : STD_LOGIC_VECTOR (7 downto 0);
     signal p_reg_180 : STD_LOGIC_VECTOR (7 downto 0);
@@ -195,7 +195,7 @@ attribute shreg_extract : string;
 
 
 begin
-    mul_mul_8ns_14ns_22_4_1_U70 : component accelerator_v2_mul_mul_8ns_14ns_22_4_1
+    mul_mul_8ns_14ns_22_4_1_U80 : component accelerator_v2_mul_mul_8ns_14ns_22_4_1
     generic map (
         ID => 1,
         NUM_STAGE => 4,
@@ -210,7 +210,7 @@ begin
         ce => grp_fu_145_ce,
         dout => grp_fu_145_p2);
 
-    mac_muladd_8ns_12ns_22ns_22_4_1_U71 : component accelerator_v2_mac_muladd_8ns_12ns_22ns_22_4_1
+    mac_muladd_8ns_12ns_22ns_22_4_1_U81 : component accelerator_v2_mac_muladd_8ns_12ns_22ns_22_4_1
     generic map (
         ID => 1,
         NUM_STAGE => 4,
@@ -227,7 +227,7 @@ begin
         ce => grp_fu_151_ce,
         dout => grp_fu_151_p3);
 
-    mac_muladd_8ns_15ns_22ns_23_4_1_U72 : component accelerator_v2_mac_muladd_8ns_15ns_22ns_23_4_1
+    mac_muladd_8ns_15ns_22ns_23_4_1_U82 : component accelerator_v2_mac_muladd_8ns_15ns_22ns_23_4_1
     generic map (
         ID => 1,
         NUM_STAGE => 4,
@@ -395,7 +395,7 @@ begin
             if (((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then
                 ap_loop_exit_ready_pp0_iter1_reg <= ap_loop_exit_ready;
                 ap_loop_exit_ready_pp0_iter2_reg <= ap_loop_exit_ready_pp0_iter1_reg;
-                p_1_reg_185 <= bgr_mat_data43_dout(15 downto 8);
+                p_1_reg_185 <= bgr_mat_data1_dout(15 downto 8);
                 p_reg_180 <= p_fu_98_p1;
             end if;
         end if;
@@ -424,28 +424,28 @@ begin
     ap_CS_fsm_pp0_stage0 <= ap_CS_fsm(0);
         ap_block_pp0_stage0 <= not((ap_const_boolean_1 = ap_const_boolean_1));
 
-    ap_block_pp0_stage0_01001_assign_proc : process(ap_enable_reg_pp0_iter1, ap_enable_reg_pp0_iter6, bgr_mat_data43_empty_n, gray_mat_data44_full_n)
+    ap_block_pp0_stage0_01001_assign_proc : process(ap_enable_reg_pp0_iter1, ap_enable_reg_pp0_iter6, bgr_mat_data1_empty_n, gray_mat_data2_full_n)
     begin
-                ap_block_pp0_stage0_01001 <= (((gray_mat_data44_full_n = ap_const_logic_0) and (ap_enable_reg_pp0_iter6 = ap_const_logic_1)) or ((bgr_mat_data43_empty_n = ap_const_logic_0) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1)));
+                ap_block_pp0_stage0_01001 <= (((gray_mat_data2_full_n = ap_const_logic_0) and (ap_enable_reg_pp0_iter6 = ap_const_logic_1)) or ((bgr_mat_data1_empty_n = ap_const_logic_0) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1)));
     end process;
 
 
-    ap_block_pp0_stage0_11001_assign_proc : process(ap_enable_reg_pp0_iter1, ap_enable_reg_pp0_iter6, bgr_mat_data43_empty_n, gray_mat_data44_full_n)
+    ap_block_pp0_stage0_11001_assign_proc : process(ap_enable_reg_pp0_iter1, ap_enable_reg_pp0_iter6, bgr_mat_data1_empty_n, gray_mat_data2_full_n)
     begin
-                ap_block_pp0_stage0_11001 <= (((gray_mat_data44_full_n = ap_const_logic_0) and (ap_enable_reg_pp0_iter6 = ap_const_logic_1)) or ((bgr_mat_data43_empty_n = ap_const_logic_0) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1)));
+                ap_block_pp0_stage0_11001 <= (((gray_mat_data2_full_n = ap_const_logic_0) and (ap_enable_reg_pp0_iter6 = ap_const_logic_1)) or ((bgr_mat_data1_empty_n = ap_const_logic_0) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1)));
     end process;
 
 
-    ap_block_pp0_stage0_subdone_assign_proc : process(ap_enable_reg_pp0_iter1, ap_enable_reg_pp0_iter6, bgr_mat_data43_empty_n, gray_mat_data44_full_n)
+    ap_block_pp0_stage0_subdone_assign_proc : process(ap_enable_reg_pp0_iter1, ap_enable_reg_pp0_iter6, bgr_mat_data1_empty_n, gray_mat_data2_full_n)
     begin
-                ap_block_pp0_stage0_subdone <= (((gray_mat_data44_full_n = ap_const_logic_0) and (ap_enable_reg_pp0_iter6 = ap_const_logic_1)) or ((bgr_mat_data43_empty_n = ap_const_logic_0) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1)));
+                ap_block_pp0_stage0_subdone <= (((gray_mat_data2_full_n = ap_const_logic_0) and (ap_enable_reg_pp0_iter6 = ap_const_logic_1)) or ((bgr_mat_data1_empty_n = ap_const_logic_0) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1)));
     end process;
 
         ap_block_state1_pp0_stage0_iter0 <= not((ap_const_boolean_1 = ap_const_boolean_1));
 
-    ap_block_state2_pp0_stage0_iter1_assign_proc : process(bgr_mat_data43_empty_n)
+    ap_block_state2_pp0_stage0_iter1_assign_proc : process(bgr_mat_data1_empty_n)
     begin
-                ap_block_state2_pp0_stage0_iter1 <= (bgr_mat_data43_empty_n = ap_const_logic_0);
+                ap_block_state2_pp0_stage0_iter1 <= (bgr_mat_data1_empty_n = ap_const_logic_0);
     end process;
 
         ap_block_state3_pp0_stage0_iter2 <= not((ap_const_boolean_1 = ap_const_boolean_1));
@@ -453,9 +453,9 @@ begin
         ap_block_state5_pp0_stage0_iter4 <= not((ap_const_boolean_1 = ap_const_boolean_1));
         ap_block_state6_pp0_stage0_iter5 <= not((ap_const_boolean_1 = ap_const_boolean_1));
 
-    ap_block_state7_pp0_stage0_iter6_assign_proc : process(gray_mat_data44_full_n)
+    ap_block_state7_pp0_stage0_iter6_assign_proc : process(gray_mat_data2_full_n)
     begin
-                ap_block_state7_pp0_stage0_iter6 <= (gray_mat_data44_full_n = ap_const_logic_0);
+                ap_block_state7_pp0_stage0_iter6 <= (gray_mat_data2_full_n = ap_const_logic_0);
     end process;
 
 
@@ -522,43 +522,43 @@ begin
     end process;
 
 
-    bgr_mat_data43_blk_n_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter1, bgr_mat_data43_empty_n, ap_block_pp0_stage0)
+    bgr_mat_data1_blk_n_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter1, bgr_mat_data1_empty_n, ap_block_pp0_stage0)
     begin
         if (((ap_const_boolean_0 = ap_block_pp0_stage0) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
-            bgr_mat_data43_blk_n <= bgr_mat_data43_empty_n;
+            bgr_mat_data1_blk_n <= bgr_mat_data1_empty_n;
         else 
-            bgr_mat_data43_blk_n <= ap_const_logic_1;
+            bgr_mat_data1_blk_n <= ap_const_logic_1;
         end if; 
     end process;
 
 
-    bgr_mat_data43_read_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter1, ap_block_pp0_stage0_11001)
+    bgr_mat_data1_read_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter1, ap_block_pp0_stage0_11001)
     begin
         if (((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
-            bgr_mat_data43_read <= ap_const_logic_1;
+            bgr_mat_data1_read <= ap_const_logic_1;
         else 
-            bgr_mat_data43_read <= ap_const_logic_0;
+            bgr_mat_data1_read <= ap_const_logic_0;
         end if; 
     end process;
 
 
-    gray_mat_data44_blk_n_assign_proc : process(ap_enable_reg_pp0_iter6, gray_mat_data44_full_n, ap_block_pp0_stage0)
+    gray_mat_data2_blk_n_assign_proc : process(ap_enable_reg_pp0_iter6, gray_mat_data2_full_n, ap_block_pp0_stage0)
     begin
         if (((ap_const_boolean_0 = ap_block_pp0_stage0) and (ap_enable_reg_pp0_iter6 = ap_const_logic_1))) then 
-            gray_mat_data44_blk_n <= gray_mat_data44_full_n;
+            gray_mat_data2_blk_n <= gray_mat_data2_full_n;
         else 
-            gray_mat_data44_blk_n <= ap_const_logic_1;
+            gray_mat_data2_blk_n <= ap_const_logic_1;
         end if; 
     end process;
 
-    gray_mat_data44_din <= grp_fu_160_p3(22 downto 15);
+    gray_mat_data2_din <= grp_fu_160_p3(22 downto 15);
 
-    gray_mat_data44_write_assign_proc : process(ap_enable_reg_pp0_iter6, ap_block_pp0_stage0_11001)
+    gray_mat_data2_write_assign_proc : process(ap_enable_reg_pp0_iter6, ap_block_pp0_stage0_11001)
     begin
         if (((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter6 = ap_const_logic_1))) then 
-            gray_mat_data44_write <= ap_const_logic_1;
+            gray_mat_data2_write <= ap_const_logic_1;
         else 
-            gray_mat_data44_write <= ap_const_logic_0;
+            gray_mat_data2_write <= ap_const_logic_0;
         end if; 
     end process;
 
@@ -605,6 +605,6 @@ begin
     grp_fu_160_p20 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(grp_fu_151_p3),23));
     icmp_ln5582_fu_81_p2 <= "1" when (ap_sig_allocacmp_j_V_1 = ap_const_lv10_284) else "0";
     j_V_2_fu_87_p2 <= std_logic_vector(unsigned(ap_sig_allocacmp_j_V_1) + unsigned(ap_const_lv10_1));
-    p_2_fu_112_p4 <= bgr_mat_data43_dout(23 downto 16);
-    p_fu_98_p1 <= bgr_mat_data43_dout(8 - 1 downto 0);
+    p_2_fu_112_p4 <= bgr_mat_data1_dout(23 downto 16);
+    p_fu_98_p1 <= bgr_mat_data1_dout(8 - 1 downto 0);
 end behav;

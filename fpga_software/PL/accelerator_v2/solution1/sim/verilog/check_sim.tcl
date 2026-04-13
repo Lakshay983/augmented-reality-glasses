@@ -116,6 +116,9 @@ proc check_tvout_file {} {
          "rtl.accelerator_v2.autotvout_out_stream_V_dest_V.dat"
          "rtl.accelerator_v2.autotvout_in_breath.dat"
          "rtl.accelerator_v2.autotvout_out_breath.dat"
+         "rtl.accelerator_v2.autotvout_bgr_fifo_breath.dat"
+         "rtl.accelerator_v2.autotvout_pad_fifo_breath.dat"
+         "rtl.accelerator_v2.autotvout_gray_fifo_breath.dat"
     }
     foreach rtlfile $rtlfilelist {
         if {[file isfile $rtlfile]} {

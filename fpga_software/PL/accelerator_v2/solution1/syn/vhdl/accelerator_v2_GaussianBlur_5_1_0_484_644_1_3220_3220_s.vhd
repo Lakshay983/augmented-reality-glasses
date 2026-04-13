@@ -21,16 +21,16 @@ port (
     ap_ready : OUT STD_LOGIC;
     start_out : OUT STD_LOGIC;
     start_write : OUT STD_LOGIC;
-    gray_mat_data44_dout : IN STD_LOGIC_VECTOR (7 downto 0);
-    gray_mat_data44_num_data_valid : IN STD_LOGIC_VECTOR (12 downto 0);
-    gray_mat_data44_fifo_cap : IN STD_LOGIC_VECTOR (12 downto 0);
-    gray_mat_data44_empty_n : IN STD_LOGIC;
-    gray_mat_data44_read : OUT STD_LOGIC;
-    blurred_mat_data45_din : OUT STD_LOGIC_VECTOR (7 downto 0);
-    blurred_mat_data45_num_data_valid : IN STD_LOGIC_VECTOR (12 downto 0);
-    blurred_mat_data45_fifo_cap : IN STD_LOGIC_VECTOR (12 downto 0);
-    blurred_mat_data45_full_n : IN STD_LOGIC;
-    blurred_mat_data45_write : OUT STD_LOGIC );
+    gray_mat_data2_dout : IN STD_LOGIC_VECTOR (7 downto 0);
+    gray_mat_data2_num_data_valid : IN STD_LOGIC_VECTOR (12 downto 0);
+    gray_mat_data2_fifo_cap : IN STD_LOGIC_VECTOR (12 downto 0);
+    gray_mat_data2_empty_n : IN STD_LOGIC;
+    gray_mat_data2_read : OUT STD_LOGIC;
+    blurred_mat_data3_din : OUT STD_LOGIC_VECTOR (7 downto 0);
+    blurred_mat_data3_num_data_valid : IN STD_LOGIC_VECTOR (12 downto 0);
+    blurred_mat_data3_fifo_cap : IN STD_LOGIC_VECTOR (12 downto 0);
+    blurred_mat_data3_full_n : IN STD_LOGIC;
+    blurred_mat_data3_write : OUT STD_LOGIC );
 end;
 
 
@@ -58,9 +58,9 @@ attribute shreg_extract : string;
     signal grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16_ap_done : STD_LOGIC;
     signal grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16_ap_idle : STD_LOGIC;
     signal grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16_ap_ready : STD_LOGIC;
-    signal grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16_gray_mat_data44_read : STD_LOGIC;
-    signal grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16_blurred_mat_data45_din : STD_LOGIC_VECTOR (7 downto 0);
-    signal grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16_blurred_mat_data45_write : STD_LOGIC;
+    signal grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16_gray_mat_data2_read : STD_LOGIC;
+    signal grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16_blurred_mat_data3_din : STD_LOGIC_VECTOR (7 downto 0);
+    signal grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16_blurred_mat_data3_write : STD_LOGIC;
     signal grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16_ap_start_reg : STD_LOGIC := '0';
     signal ap_block_state1_ignore_call2 : BOOLEAN;
     signal ap_CS_fsm_state2 : STD_LOGIC;
@@ -79,16 +79,16 @@ attribute shreg_extract : string;
         ap_done : OUT STD_LOGIC;
         ap_idle : OUT STD_LOGIC;
         ap_ready : OUT STD_LOGIC;
-        gray_mat_data44_dout : IN STD_LOGIC_VECTOR (7 downto 0);
-        gray_mat_data44_num_data_valid : IN STD_LOGIC_VECTOR (12 downto 0);
-        gray_mat_data44_fifo_cap : IN STD_LOGIC_VECTOR (12 downto 0);
-        gray_mat_data44_empty_n : IN STD_LOGIC;
-        gray_mat_data44_read : OUT STD_LOGIC;
-        blurred_mat_data45_din : OUT STD_LOGIC_VECTOR (7 downto 0);
-        blurred_mat_data45_num_data_valid : IN STD_LOGIC_VECTOR (12 downto 0);
-        blurred_mat_data45_fifo_cap : IN STD_LOGIC_VECTOR (12 downto 0);
-        blurred_mat_data45_full_n : IN STD_LOGIC;
-        blurred_mat_data45_write : OUT STD_LOGIC );
+        gray_mat_data2_dout : IN STD_LOGIC_VECTOR (7 downto 0);
+        gray_mat_data2_num_data_valid : IN STD_LOGIC_VECTOR (12 downto 0);
+        gray_mat_data2_fifo_cap : IN STD_LOGIC_VECTOR (12 downto 0);
+        gray_mat_data2_empty_n : IN STD_LOGIC;
+        gray_mat_data2_read : OUT STD_LOGIC;
+        blurred_mat_data3_din : OUT STD_LOGIC_VECTOR (7 downto 0);
+        blurred_mat_data3_num_data_valid : IN STD_LOGIC_VECTOR (12 downto 0);
+        blurred_mat_data3_fifo_cap : IN STD_LOGIC_VECTOR (12 downto 0);
+        blurred_mat_data3_full_n : IN STD_LOGIC;
+        blurred_mat_data3_write : OUT STD_LOGIC );
     end component;
 
 
@@ -102,16 +102,16 @@ begin
         ap_done => grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16_ap_done,
         ap_idle => grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16_ap_idle,
         ap_ready => grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16_ap_ready,
-        gray_mat_data44_dout => gray_mat_data44_dout,
-        gray_mat_data44_num_data_valid => ap_const_lv13_0,
-        gray_mat_data44_fifo_cap => ap_const_lv13_0,
-        gray_mat_data44_empty_n => gray_mat_data44_empty_n,
-        gray_mat_data44_read => grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16_gray_mat_data44_read,
-        blurred_mat_data45_din => grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16_blurred_mat_data45_din,
-        blurred_mat_data45_num_data_valid => ap_const_lv13_0,
-        blurred_mat_data45_fifo_cap => ap_const_lv13_0,
-        blurred_mat_data45_full_n => blurred_mat_data45_full_n,
-        blurred_mat_data45_write => grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16_blurred_mat_data45_write);
+        gray_mat_data2_dout => gray_mat_data2_dout,
+        gray_mat_data2_num_data_valid => ap_const_lv13_0,
+        gray_mat_data2_fifo_cap => ap_const_lv13_0,
+        gray_mat_data2_empty_n => gray_mat_data2_empty_n,
+        gray_mat_data2_read => grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16_gray_mat_data2_read,
+        blurred_mat_data3_din => grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16_blurred_mat_data3_din,
+        blurred_mat_data3_num_data_valid => ap_const_lv13_0,
+        blurred_mat_data3_fifo_cap => ap_const_lv13_0,
+        blurred_mat_data3_full_n => blurred_mat_data3_full_n,
+        blurred_mat_data3_write => grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16_blurred_mat_data3_write);
 
 
 
@@ -251,24 +251,24 @@ begin
     end process;
 
     ap_ready <= internal_ap_ready;
-    blurred_mat_data45_din <= grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16_blurred_mat_data45_din;
+    blurred_mat_data3_din <= grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16_blurred_mat_data3_din;
 
-    blurred_mat_data45_write_assign_proc : process(grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16_blurred_mat_data45_write, ap_CS_fsm_state2)
+    blurred_mat_data3_write_assign_proc : process(grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16_blurred_mat_data3_write, ap_CS_fsm_state2)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state2)) then 
-            blurred_mat_data45_write <= grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16_blurred_mat_data45_write;
+            blurred_mat_data3_write <= grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16_blurred_mat_data3_write;
         else 
-            blurred_mat_data45_write <= ap_const_logic_0;
+            blurred_mat_data3_write <= ap_const_logic_0;
         end if; 
     end process;
 
 
-    gray_mat_data44_read_assign_proc : process(grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16_gray_mat_data44_read, ap_CS_fsm_state2)
+    gray_mat_data2_read_assign_proc : process(grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16_gray_mat_data2_read, ap_CS_fsm_state2)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state2)) then 
-            gray_mat_data44_read <= grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16_gray_mat_data44_read;
+            gray_mat_data2_read <= grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16_gray_mat_data2_read;
         else 
-            gray_mat_data44_read <= ap_const_logic_0;
+            gray_mat_data2_read <= ap_const_logic_0;
         end if; 
     end process;
 

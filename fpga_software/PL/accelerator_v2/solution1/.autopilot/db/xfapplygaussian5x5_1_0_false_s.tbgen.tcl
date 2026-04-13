@@ -171,10 +171,10 @@ set RtlHierarchyInfo {[
 			{"Name" : "src_buf5_V_read_6", "Type" : "None", "Direction" : "I"},
 			{"Name" : "src_buf5_V_read_7", "Type" : "None", "Direction" : "I"},
 			{"Name" : "src_buf5_V_read_8", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.ama_addmuladd_8ns_8ns_7ns_18s_19_4_0_U86", "Parent" : "0"},
-	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.ama_addmuladd_8ns_8ns_7ns_18s_19_4_0_U87", "Parent" : "0"},
-	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mac_muladd_8ns_7ns_17s_18_4_0_U88", "Parent" : "0"},
-	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mac_muladd_24ns_7ns_30s_32_4_0_U89", "Parent" : "0"}]}
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.ama_addmuladd_8ns_8ns_7ns_18s_19_4_0_U96", "Parent" : "0"},
+	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.ama_addmuladd_8ns_8ns_7ns_18s_19_4_0_U97", "Parent" : "0"},
+	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mac_muladd_8ns_7ns_17s_18_4_0_U98", "Parent" : "0"},
+	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mac_muladd_24ns_7ns_30s_32_4_0_U99", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {

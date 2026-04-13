@@ -14,16 +14,16 @@ module accelerator_v2_xFGaussianFilter5x5_Pipeline_Col_Loop (
         ap_done,
         ap_idle,
         ap_ready,
-        gray_mat_data44_dout,
-        gray_mat_data44_num_data_valid,
-        gray_mat_data44_fifo_cap,
-        gray_mat_data44_empty_n,
-        gray_mat_data44_read,
-        blurred_mat_data45_din,
-        blurred_mat_data45_num_data_valid,
-        blurred_mat_data45_fifo_cap,
-        blurred_mat_data45_full_n,
-        blurred_mat_data45_write,
+        gray_mat_data2_dout,
+        gray_mat_data2_num_data_valid,
+        gray_mat_data2_fifo_cap,
+        gray_mat_data2_empty_n,
+        gray_mat_data2_read,
+        blurred_mat_data3_din,
+        blurred_mat_data3_num_data_valid,
+        blurred_mat_data3_fifo_cap,
+        blurred_mat_data3_full_n,
+        blurred_mat_data3_write,
         tp1_V_cast,
         tp2_V_cast,
         mid_V_cast,
@@ -143,16 +143,16 @@ input   ap_start;
 output   ap_done;
 output   ap_idle;
 output   ap_ready;
-input  [7:0] gray_mat_data44_dout;
-input  [12:0] gray_mat_data44_num_data_valid;
-input  [12:0] gray_mat_data44_fifo_cap;
-input   gray_mat_data44_empty_n;
-output   gray_mat_data44_read;
-output  [7:0] blurred_mat_data45_din;
-input  [12:0] blurred_mat_data45_num_data_valid;
-input  [12:0] blurred_mat_data45_fifo_cap;
-input   blurred_mat_data45_full_n;
-output   blurred_mat_data45_write;
+input  [7:0] gray_mat_data2_dout;
+input  [12:0] gray_mat_data2_num_data_valid;
+input  [12:0] gray_mat_data2_fifo_cap;
+input   gray_mat_data2_empty_n;
+output   gray_mat_data2_read;
+output  [7:0] blurred_mat_data3_din;
+input  [12:0] blurred_mat_data3_num_data_valid;
+input  [12:0] blurred_mat_data3_fifo_cap;
+input   blurred_mat_data3_full_n;
+output   blurred_mat_data3_write;
 input  [2:0] tp1_V_cast;
 input  [2:0] tp2_V_cast;
 input  [2:0] mid_V_cast;
@@ -264,8 +264,8 @@ input  [7:0] grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_dout0;
 output   grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_ce;
 
 reg ap_idle;
-reg gray_mat_data44_read;
-reg blurred_mat_data45_write;
+reg gray_mat_data2_read;
+reg blurred_mat_data3_write;
 reg buf_V_4_ce0;
 reg buf_V_4_ce1;
 reg buf_V_4_we1;
@@ -341,9 +341,9 @@ wire   [0:0] icmp_ln624_fu_648_p2;
 reg    ap_condition_exit_pp0_iter0_stage0;
 wire    ap_loop_exit_ready;
 reg    ap_ready_int;
-reg    gray_mat_data44_blk_n;
+reg    gray_mat_data2_blk_n;
 wire    ap_block_pp0_stage0;
-reg    blurred_mat_data45_blk_n;
+reg    blurred_mat_data3_blk_n;
 reg    ap_block_pp0_stage0_11001;
 reg   [9:0] col_V_3_reg_1153;
 reg   [0:0] icmp_ln624_reg_1159_pp0_iter1_reg;
@@ -593,7 +593,7 @@ accelerator_v2_mux_53_8_1_1 #(
     .din4_WIDTH( 8 ),
     .din5_WIDTH( 3 ),
     .dout_WIDTH( 8 ))
-mux_53_8_1_1_U118(
+mux_53_8_1_1_U128(
     .din0(buf_V_q0),
     .din1(buf_V_1_q0),
     .din2(buf_V_2_q0),
@@ -613,7 +613,7 @@ accelerator_v2_mux_53_8_1_1 #(
     .din4_WIDTH( 8 ),
     .din5_WIDTH( 3 ),
     .dout_WIDTH( 8 ))
-mux_53_8_1_1_U119(
+mux_53_8_1_1_U129(
     .din0(buf_V_q0),
     .din1(buf_V_1_q0),
     .din2(buf_V_2_q0),
@@ -633,7 +633,7 @@ accelerator_v2_mux_53_8_1_1 #(
     .din4_WIDTH( 8 ),
     .din5_WIDTH( 3 ),
     .dout_WIDTH( 8 ))
-mux_53_8_1_1_U120(
+mux_53_8_1_1_U130(
     .din0(buf_V_q0),
     .din1(buf_V_1_q0),
     .din2(buf_V_2_q0),
@@ -653,7 +653,7 @@ accelerator_v2_mux_53_8_1_1 #(
     .din4_WIDTH( 8 ),
     .din5_WIDTH( 3 ),
     .dout_WIDTH( 8 ))
-mux_53_8_1_1_U121(
+mux_53_8_1_1_U131(
     .din0(buf_V_q0),
     .din1(buf_V_1_q0),
     .din2(buf_V_2_q0),
@@ -673,7 +673,7 @@ accelerator_v2_mux_53_8_1_1 #(
     .din4_WIDTH( 8 ),
     .din5_WIDTH( 3 ),
     .dout_WIDTH( 8 ))
-mux_53_8_1_1_U122(
+mux_53_8_1_1_U132(
     .din0(buf_V_q0),
     .din1(buf_V_1_q0),
     .din2(buf_V_2_q0),
@@ -1231,17 +1231,17 @@ end
 
 always @ (*) begin
     if (((icmp_ln668_reg_1188_pp0_iter9_reg == 1'd0) & (ap_enable_reg_pp0_iter10 == 1'b1) & (1'b0 == ap_block_pp0_stage0))) begin
-        blurred_mat_data45_blk_n = blurred_mat_data45_full_n;
+        blurred_mat_data3_blk_n = blurred_mat_data3_full_n;
     end else begin
-        blurred_mat_data45_blk_n = 1'b1;
+        blurred_mat_data3_blk_n = 1'b1;
     end
 end
 
 always @ (*) begin
     if (((icmp_ln668_reg_1188_pp0_iter9_reg == 1'd0) & (ap_enable_reg_pp0_iter10 == 1'b1) & (1'b0 == ap_block_pp0_stage0_11001))) begin
-        blurred_mat_data45_write = 1'b1;
+        blurred_mat_data3_write = 1'b1;
     end else begin
-        blurred_mat_data45_write = 1'b0;
+        blurred_mat_data3_write = 1'b0;
     end
 end
 
@@ -1264,7 +1264,7 @@ end
 always @ (*) begin
     if ((1'b1 == ap_condition_684)) begin
         if (((cmp_i_i380_i == 1'd1) & (row_ind_V_cast == 3'd1))) begin
-            buf_V_1_d1 = gray_mat_data44_dout;
+            buf_V_1_d1 = gray_mat_data2_dout;
         end else if (((cmp_i_i380_i == 1'd0) & (bottom2_V_cast == 3'd1))) begin
             buf_V_1_d1 = 8'd0;
         end else begin
@@ -1302,7 +1302,7 @@ end
 always @ (*) begin
     if ((1'b1 == ap_condition_684)) begin
         if (((cmp_i_i380_i == 1'd1) & (row_ind_V_cast == 3'd2))) begin
-            buf_V_2_d1 = gray_mat_data44_dout;
+            buf_V_2_d1 = gray_mat_data2_dout;
         end else if (((cmp_i_i380_i == 1'd0) & (bottom2_V_cast == 3'd2))) begin
             buf_V_2_d1 = 8'd0;
         end else begin
@@ -1340,7 +1340,7 @@ end
 always @ (*) begin
     if ((1'b1 == ap_condition_684)) begin
         if (((cmp_i_i380_i == 1'd1) & (row_ind_V_cast == 3'd3))) begin
-            buf_V_3_d1 = gray_mat_data44_dout;
+            buf_V_3_d1 = gray_mat_data2_dout;
         end else if (((cmp_i_i380_i == 1'd0) & (bottom2_V_cast == 3'd3))) begin
             buf_V_3_d1 = 8'd0;
         end else begin
@@ -1378,7 +1378,7 @@ end
 always @ (*) begin
     if ((1'b1 == ap_condition_684)) begin
         if ((1'b1 == ap_condition_1237)) begin
-            buf_V_4_d1 = gray_mat_data44_dout;
+            buf_V_4_d1 = gray_mat_data2_dout;
         end else if ((1'b1 == ap_condition_1231)) begin
             buf_V_4_d1 = 8'd0;
         end else begin
@@ -1416,7 +1416,7 @@ end
 always @ (*) begin
     if ((1'b1 == ap_condition_684)) begin
         if (((cmp_i_i380_i == 1'd1) & (row_ind_V_cast == 3'd0))) begin
-            buf_V_d1 = gray_mat_data44_dout;
+            buf_V_d1 = gray_mat_data2_dout;
         end else if (((cmp_i_i380_i == 1'd0) & (bottom2_V_cast == 3'd0))) begin
             buf_V_d1 = 8'd0;
         end else begin
@@ -1437,17 +1437,17 @@ end
 
 always @ (*) begin
     if (((ap_predicate_op100_read_state2 == 1'b1) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0))) begin
-        gray_mat_data44_blk_n = gray_mat_data44_empty_n;
+        gray_mat_data2_blk_n = gray_mat_data2_empty_n;
     end else begin
-        gray_mat_data44_blk_n = 1'b1;
+        gray_mat_data2_blk_n = 1'b1;
     end
 end
 
 always @ (*) begin
     if (((ap_predicate_op100_read_state2 == 1'b1) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001))) begin
-        gray_mat_data44_read = 1'b1;
+        gray_mat_data2_read = 1'b1;
     end else begin
-        gray_mat_data44_read = 1'b0;
+        gray_mat_data2_read = 1'b0;
     end
 end
 
@@ -1639,19 +1639,19 @@ end
 assign ap_block_pp0_stage0 = ~(1'b1 == 1'b1);
 
 always @ (*) begin
-    ap_block_pp0_stage0_01001 = (((icmp_ln668_reg_1188_pp0_iter9_reg == 1'd0) & (blurred_mat_data45_full_n == 1'b0) & (ap_enable_reg_pp0_iter10 == 1'b1)) | ((ap_predicate_op100_read_state2 == 1'b1) & (gray_mat_data44_empty_n == 1'b0) & (ap_enable_reg_pp0_iter1 == 1'b1)));
+    ap_block_pp0_stage0_01001 = (((icmp_ln668_reg_1188_pp0_iter9_reg == 1'd0) & (blurred_mat_data3_full_n == 1'b0) & (ap_enable_reg_pp0_iter10 == 1'b1)) | ((ap_predicate_op100_read_state2 == 1'b1) & (gray_mat_data2_empty_n == 1'b0) & (ap_enable_reg_pp0_iter1 == 1'b1)));
 end
 
 always @ (*) begin
-    ap_block_pp0_stage0_11001 = (((icmp_ln668_reg_1188_pp0_iter9_reg == 1'd0) & (blurred_mat_data45_full_n == 1'b0) & (ap_enable_reg_pp0_iter10 == 1'b1)) | ((ap_predicate_op100_read_state2 == 1'b1) & (gray_mat_data44_empty_n == 1'b0) & (ap_enable_reg_pp0_iter1 == 1'b1)));
+    ap_block_pp0_stage0_11001 = (((icmp_ln668_reg_1188_pp0_iter9_reg == 1'd0) & (blurred_mat_data3_full_n == 1'b0) & (ap_enable_reg_pp0_iter10 == 1'b1)) | ((ap_predicate_op100_read_state2 == 1'b1) & (gray_mat_data2_empty_n == 1'b0) & (ap_enable_reg_pp0_iter1 == 1'b1)));
 end
 
 always @ (*) begin
-    ap_block_pp0_stage0_11001_ignoreCallOp149 = (((icmp_ln668_reg_1188_pp0_iter9_reg == 1'd0) & (blurred_mat_data45_full_n == 1'b0) & (ap_enable_reg_pp0_iter10 == 1'b1)) | ((ap_predicate_op100_read_state2 == 1'b1) & (gray_mat_data44_empty_n == 1'b0) & (ap_enable_reg_pp0_iter1 == 1'b1)));
+    ap_block_pp0_stage0_11001_ignoreCallOp149 = (((icmp_ln668_reg_1188_pp0_iter9_reg == 1'd0) & (blurred_mat_data3_full_n == 1'b0) & (ap_enable_reg_pp0_iter10 == 1'b1)) | ((ap_predicate_op100_read_state2 == 1'b1) & (gray_mat_data2_empty_n == 1'b0) & (ap_enable_reg_pp0_iter1 == 1'b1)));
 end
 
 always @ (*) begin
-    ap_block_pp0_stage0_subdone = (((icmp_ln668_reg_1188_pp0_iter9_reg == 1'd0) & (blurred_mat_data45_full_n == 1'b0) & (ap_enable_reg_pp0_iter10 == 1'b1)) | ((ap_predicate_op100_read_state2 == 1'b1) & (gray_mat_data44_empty_n == 1'b0) & (ap_enable_reg_pp0_iter1 == 1'b1)));
+    ap_block_pp0_stage0_subdone = (((icmp_ln668_reg_1188_pp0_iter9_reg == 1'd0) & (blurred_mat_data3_full_n == 1'b0) & (ap_enable_reg_pp0_iter10 == 1'b1)) | ((ap_predicate_op100_read_state2 == 1'b1) & (gray_mat_data2_empty_n == 1'b0) & (ap_enable_reg_pp0_iter1 == 1'b1)));
 end
 
 assign ap_block_state10_pp0_stage0_iter9 = ~(1'b1 == 1'b1);
@@ -1659,11 +1659,11 @@ assign ap_block_state10_pp0_stage0_iter9 = ~(1'b1 == 1'b1);
 assign ap_block_state10_pp0_stage0_iter9_ignore_call15 = ~(1'b1 == 1'b1);
 
 always @ (*) begin
-    ap_block_state11_pp0_stage0_iter10 = ((icmp_ln668_reg_1188_pp0_iter9_reg == 1'd0) & (blurred_mat_data45_full_n == 1'b0));
+    ap_block_state11_pp0_stage0_iter10 = ((icmp_ln668_reg_1188_pp0_iter9_reg == 1'd0) & (blurred_mat_data3_full_n == 1'b0));
 end
 
 always @ (*) begin
-    ap_block_state11_pp0_stage0_iter10_ignore_call15 = ((icmp_ln668_reg_1188_pp0_iter9_reg == 1'd0) & (blurred_mat_data45_full_n == 1'b0));
+    ap_block_state11_pp0_stage0_iter10_ignore_call15 = ((icmp_ln668_reg_1188_pp0_iter9_reg == 1'd0) & (blurred_mat_data3_full_n == 1'b0));
 end
 
 assign ap_block_state1_pp0_stage0_iter0 = ~(1'b1 == 1'b1);
@@ -1671,11 +1671,11 @@ assign ap_block_state1_pp0_stage0_iter0 = ~(1'b1 == 1'b1);
 assign ap_block_state1_pp0_stage0_iter0_ignore_call15 = ~(1'b1 == 1'b1);
 
 always @ (*) begin
-    ap_block_state2_pp0_stage0_iter1 = ((ap_predicate_op100_read_state2 == 1'b1) & (gray_mat_data44_empty_n == 1'b0));
+    ap_block_state2_pp0_stage0_iter1 = ((ap_predicate_op100_read_state2 == 1'b1) & (gray_mat_data2_empty_n == 1'b0));
 end
 
 always @ (*) begin
-    ap_block_state2_pp0_stage0_iter1_ignore_call15 = ((ap_predicate_op100_read_state2 == 1'b1) & (gray_mat_data44_empty_n == 1'b0));
+    ap_block_state2_pp0_stage0_iter1_ignore_call15 = ((ap_predicate_op100_read_state2 == 1'b1) & (gray_mat_data2_empty_n == 1'b0));
 end
 
 assign ap_block_state3_pp0_stage0_iter2 = ~(1'b1 == 1'b1);
@@ -1900,7 +1900,7 @@ always @ (*) begin
     ap_predicate_op98_store_state2 = (~(bottom2_V_cast == 3'd0) & ~(bottom2_V_cast == 3'd1) & ~(bottom2_V_cast == 3'd2) & ~(bottom2_V_cast == 3'd3) & (cmp_i_i380_i == 1'd0) & (icmp_ln624_reg_1159 == 1'd0));
 end
 
-assign blurred_mat_data45_din = grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_dout0;
+assign blurred_mat_data3_din = grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_dout0;
 
 assign buf_V_1_address0 = buf_V_1_addr_reg_1168;
 

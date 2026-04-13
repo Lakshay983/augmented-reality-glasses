@@ -130,8 +130,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>gray_mat_data44_dout</name>
-<Object>gray_mat_data44</Object>
+<name>gray_mat_data2_dout</name>
+<Object>gray_mat_data2</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_fifo</IOProtocol>
@@ -141,8 +141,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>gray_mat_data44_num_data_valid</name>
-<Object>gray_mat_data44</Object>
+<name>gray_mat_data2_num_data_valid</name>
+<Object>gray_mat_data2</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_fifo</IOProtocol>
@@ -152,8 +152,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>gray_mat_data44_fifo_cap</name>
-<Object>gray_mat_data44</Object>
+<name>gray_mat_data2_fifo_cap</name>
+<Object>gray_mat_data2</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_fifo</IOProtocol>
@@ -163,8 +163,8 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>gray_mat_data44_empty_n</name>
-<Object>gray_mat_data44</Object>
+<name>gray_mat_data2_empty_n</name>
+<Object>gray_mat_data2</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_fifo</IOProtocol>
@@ -174,8 +174,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>gray_mat_data44_read</name>
-<Object>gray_mat_data44</Object>
+<name>gray_mat_data2_read</name>
+<Object>gray_mat_data2</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_fifo</IOProtocol>

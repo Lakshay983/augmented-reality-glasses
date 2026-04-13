@@ -277,7 +277,7 @@
                 0 : begin
                     case(index2)
                     1: begin
-                        if (~unpack_U0.grp_unpack_Pipeline_VITIS_LOOP_48_2_fu_92.bgr_stream1_blk_n) begin
+                        if (~unpack_U0.grp_unpack_Pipeline_VITIS_LOOP_84_2_fu_101.bgr_stream1_blk_n) begin
                             if (~bgr_stream_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'accelerator_v2_accelerator_v2.bgr_stream_U' written by process 'accelerator_v2_accelerator_v2.pad_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path accelerator_v2_accelerator_v2.bgr_stream_U");
@@ -289,8 +289,16 @@
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
                         end
+                        if (ap_done_reg_0 & unpack_U0.ap_done & ~pad_U0.ap_done) begin
+                            $display("//      Blocked by output sync logic with process : 'accelerator_v2_accelerator_v2.pad_U0'");
+                        end
                         if (~start_for_pad_U0_U.if_full_n & unpack_U0.ap_start & ~unpack_U0.real_start & (trans_in_cnt_0 == trans_out_cnt_0) & ~start_for_pad_U0_U.if_read) begin
                             $display("//      Blocked by full output start propagation FIFO 'accelerator_v2_accelerator_v2.start_for_pad_U0_U' read by process 'accelerator_v2_accelerator_v2.pad_U0',");
+                        end
+                    end
+                    2: begin
+                        if (ap_done_reg_0 & unpack_U0.ap_done & ~process_pixels_U0.ap_done) begin
+                            $display("//      Blocked by output sync logic with process : 'accelerator_v2_accelerator_v2.process_pixels_U0'");
                         end
                     end
                     7: begin
@@ -303,7 +311,7 @@
                 1 : begin
                     case(index2)
                     0: begin
-                        if (~pad_U0.grp_pad_Pipeline_VITIS_LOOP_79_1_VITIS_LOOP_80_2_fu_329.bgr_stream1_blk_n) begin
+                        if (~pad_U0.grp_pad_Pipeline_VITIS_LOOP_133_1_VITIS_LOOP_134_2_fu_348.bgr_stream1_blk_n) begin
                             if (~bgr_stream_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'accelerator_v2_accelerator_v2.bgr_stream_U' written by process 'accelerator_v2_accelerator_v2.unpack_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path accelerator_v2_accelerator_v2.bgr_stream_U");
@@ -314,6 +322,9 @@
                                 $fdisplay(fp, "Dependence_Channel_path accelerator_v2_accelerator_v2.bgr_stream_U");
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
+                        end
+                        if (ap_done_reg_1 & pad_U0.ap_done & ~unpack_U0.ap_done) begin
+                            $display("//      Blocked by output sync logic with process : 'accelerator_v2_accelerator_v2.unpack_U0'");
                         end
                         if (~start_for_pad_U0_U.if_empty_n & pad_U0.ap_idle & ~start_for_pad_U0_U.if_write) begin
                             $display("//      Blocked by missing 'ap_start' from start propagation FIFO 'accelerator_v2_accelerator_v2.start_for_pad_U0_U' written by process 'accelerator_v2_accelerator_v2.unpack_U0',");
@@ -347,6 +358,11 @@
                             end
                         end
                     end
+                    7: begin
+                        if (ap_done_reg_1 & pad_U0.ap_done & ~repack_U0.ap_done) begin
+                            $display("//      Blocked by output sync logic with process : 'accelerator_v2_accelerator_v2.repack_U0'");
+                        end
+                    end
                     endcase
                 end
                 2 : begin
@@ -363,6 +379,9 @@
                                 $fdisplay(fp, "Dependence_Channel_path accelerator_v2_accelerator_v2.padded_stream_U");
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
+                        end
+                        if (ap_done_reg_2 & process_pixels_U0.ap_done & ~pad_U0.ap_done) begin
+                            $display("//      Blocked by output sync logic with process : 'accelerator_v2_accelerator_v2.pad_U0'");
                         end
                         if (~start_for_process_pixels_U0_U.if_empty_n & process_pixels_U0.ap_idle & ~start_for_process_pixels_U0_U.if_write) begin
                             $display("//      Blocked by missing 'ap_start' from start propagation FIFO 'accelerator_v2_accelerator_v2.start_for_process_pixels_U0_U' written by process 'accelerator_v2_accelerator_v2.pad_U0',");
@@ -381,8 +400,16 @@
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
                         end
+                        if (ap_done_reg_2 & process_pixels_U0.ap_done & ~repack_U0.ap_done) begin
+                            $display("//      Blocked by output sync logic with process : 'accelerator_v2_accelerator_v2.repack_U0'");
+                        end
                         if (~start_for_repack_U0_U.if_full_n & process_pixels_U0.ap_start & ~process_pixels_U0.real_start & (trans_in_cnt_5 == trans_out_cnt_5) & ~start_for_repack_U0_U.if_read) begin
                             $display("//      Blocked by full output start propagation FIFO 'accelerator_v2_accelerator_v2.start_for_repack_U0_U' read by process 'accelerator_v2_accelerator_v2.repack_U0',");
+                        end
+                    end
+                    0: begin
+                        if (ap_done_reg_2 & process_pixels_U0.ap_done & ~unpack_U0.ap_done) begin
+                            $display("//      Blocked by output sync logic with process : 'accelerator_v2_accelerator_v2.unpack_U0'");
                         end
                     end
                     endcase
@@ -404,7 +431,7 @@
                         end
                     end
                     4: begin
-                        if (~process_pixels_U0.stream_to_mat_U0.bgr_mat_data43_blk_n) begin
+                        if (~process_pixels_U0.stream_to_mat_U0.bgr_mat_data1_blk_n) begin
                             if (~process_pixels_U0.bgr_mat_data_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'accelerator_v2_accelerator_v2.process_pixels_U0.bgr_mat_data_U' written by process 'accelerator_v2_accelerator_v2.process_pixels_U0.bgr2gray_9_0_484_644_1_3220_3220_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path accelerator_v2_accelerator_v2.process_pixels_U0.bgr_mat_data_U");
@@ -425,7 +452,7 @@
                 4 : begin
                     case(index2)
                     3: begin
-                        if (~process_pixels_U0.bgr2gray_9_0_484_644_1_3220_3220_U0.grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38.bgr_mat_data43_blk_n) begin
+                        if (~process_pixels_U0.bgr2gray_9_0_484_644_1_3220_3220_U0.grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38.bgr_mat_data1_blk_n) begin
                             if (~process_pixels_U0.bgr_mat_data_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'accelerator_v2_accelerator_v2.process_pixels_U0.bgr_mat_data_U' written by process 'accelerator_v2_accelerator_v2.process_pixels_U0.stream_to_mat_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path accelerator_v2_accelerator_v2.process_pixels_U0.bgr_mat_data_U");
@@ -442,7 +469,7 @@
                         end
                     end
                     5: begin
-                        if (~process_pixels_U0.bgr2gray_9_0_484_644_1_3220_3220_U0.grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38.gray_mat_data44_blk_n) begin
+                        if (~process_pixels_U0.bgr2gray_9_0_484_644_1_3220_3220_U0.grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38.gray_mat_data2_blk_n) begin
                             if (~process_pixels_U0.gray_mat_data_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'accelerator_v2_accelerator_v2.process_pixels_U0.gray_mat_data_U' written by process 'accelerator_v2_accelerator_v2.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_3220_3220_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path accelerator_v2_accelerator_v2.process_pixels_U0.gray_mat_data_U");
@@ -463,7 +490,7 @@
                 5 : begin
                     case(index2)
                     4: begin
-                        if (~process_pixels_U0.GaussianBlur_5_1_0_484_644_1_3220_3220_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16.grp_xFGaussianFilter5x5_Pipeline_Read_Row2_Loop_fu_382.gray_mat_data44_blk_n) begin
+                        if (~process_pixels_U0.GaussianBlur_5_1_0_484_644_1_3220_3220_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_389.gray_mat_data2_blk_n) begin
                             if (~process_pixels_U0.gray_mat_data_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'accelerator_v2_accelerator_v2.process_pixels_U0.gray_mat_data_U' written by process 'accelerator_v2_accelerator_v2.process_pixels_U0.bgr2gray_9_0_484_644_1_3220_3220_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path accelerator_v2_accelerator_v2.process_pixels_U0.gray_mat_data_U");
@@ -477,7 +504,7 @@
                         end
                     end
                     6: begin
-                        if (~process_pixels_U0.GaussianBlur_5_1_0_484_644_1_3220_3220_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_389.blurred_mat_data45_blk_n) begin
+                        if (~process_pixels_U0.GaussianBlur_5_1_0_484_644_1_3220_3220_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_389.blurred_mat_data3_blk_n) begin
                             if (~process_pixels_U0.blurred_mat_data_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'accelerator_v2_accelerator_v2.process_pixels_U0.blurred_mat_data_U' written by process 'accelerator_v2_accelerator_v2.process_pixels_U0.mat_to_stream_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path accelerator_v2_accelerator_v2.process_pixels_U0.blurred_mat_data_U");
@@ -495,7 +522,7 @@
                 6 : begin
                     case(index2)
                     5: begin
-                        if (~process_pixels_U0.mat_to_stream_U0.blurred_mat_data45_blk_n) begin
+                        if (~process_pixels_U0.mat_to_stream_U0.blurred_mat_data3_blk_n) begin
                             if (~process_pixels_U0.blurred_mat_data_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'accelerator_v2_accelerator_v2.process_pixels_U0.blurred_mat_data_U' written by process 'accelerator_v2_accelerator_v2.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_3220_3220_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path accelerator_v2_accelerator_v2.process_pixels_U0.blurred_mat_data_U");
@@ -530,7 +557,7 @@
                 7 : begin
                     case(index2)
                     2: begin
-                        if (~repack_U0.grp_repack_Pipeline_VITIS_LOOP_195_2_fu_134.gray_stream3_blk_n) begin
+                        if (~repack_U0.grp_repack_Pipeline_VITIS_LOOP_265_2_fu_135.gray_stream3_blk_n) begin
                             if (~gray_stream_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'accelerator_v2_accelerator_v2.gray_stream_U' written by process 'accelerator_v2_accelerator_v2.process_pixels_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path accelerator_v2_accelerator_v2.gray_stream_U");
@@ -542,12 +569,15 @@
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
                         end
+                        if (ap_done_reg_3 & repack_U0.ap_done & ~process_pixels_U0.ap_done) begin
+                            $display("//      Blocked by output sync logic with process : 'accelerator_v2_accelerator_v2.process_pixels_U0'");
+                        end
                         if (~start_for_repack_U0_U.if_empty_n & repack_U0.ap_idle & ~start_for_repack_U0_U.if_write) begin
                             $display("//      Blocked by missing 'ap_start' from start propagation FIFO 'accelerator_v2_accelerator_v2.start_for_repack_U0_U' written by process 'accelerator_v2_accelerator_v2.process_pixels_U0',");
                         end
                     end
                     6: begin
-                        if (~repack_U0.grp_repack_Pipeline_VITIS_LOOP_195_2_fu_134.gray_stream3_blk_n) begin
+                        if (~repack_U0.grp_repack_Pipeline_VITIS_LOOP_265_2_fu_135.gray_stream3_blk_n) begin
                             if (~gray_stream_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'accelerator_v2_accelerator_v2.gray_stream_U' written by process 'accelerator_v2_accelerator_v2.process_pixels_U0.mat_to_stream_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path accelerator_v2_accelerator_v2.gray_stream_U");
@@ -561,8 +591,13 @@
                         end
                     end
                     0: begin
-                        if (ap_done_reg_1 & repack_U0.ap_done & ~unpack_U0.ap_done) begin
+                        if (ap_done_reg_3 & repack_U0.ap_done & ~unpack_U0.ap_done) begin
                             $display("//      Blocked by output sync logic with process : 'accelerator_v2_accelerator_v2.unpack_U0'");
+                        end
+                    end
+                    1: begin
+                        if (ap_done_reg_3 & repack_U0.ap_done & ~pad_U0.ap_done) begin
+                            $display("//      Blocked by output sync logic with process : 'accelerator_v2_accelerator_v2.pad_U0'");
                         end
                     end
                     endcase

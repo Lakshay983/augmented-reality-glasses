@@ -53,7 +53,7 @@ entry:0 %i_V = alloca i32 1
 
 <Node id="4" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-entry:1 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %gray_mat_data44, void @empty, i32 0, i32 0, void @empty_29, i32 0, i32 0, void @empty_29, void @empty_29, void @empty_29, i32 0, i32 0, i32 0, i32 0, void @empty_29, void @empty_29, i32 4294967295, i32 0
+entry:1 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %gray_mat_data2, void @empty_4, i32 0, i32 0, void @empty_34, i32 0, i32 0, void @empty_34, void @empty_34, void @empty_34, i32 0, i32 0, i32 0, i32 0, void @empty_34, void @empty_34, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -68,7 +68,7 @@ entry:1 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %gra
 
 <Node id="5" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-entry:2 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %bgr_mat_data43, void @empty, i32 0, i32 0, void @empty_29, i32 0, i32 0, void @empty_29, void @empty_29, void @empty_29, i32 0, i32 0, i32 0, i32 0, void @empty_29, void @empty_29, i32 4294967295, i32 0
+entry:2 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %bgr_mat_data1, void @empty_4, i32 0, i32 0, void @empty_34, i32 0, i32 0, void @empty_34, void @empty_34, void @empty_34, i32 0, i32 0, i32 0, i32 0, void @empty_34, void @empty_34, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -193,7 +193,7 @@ columnloop.i.split:2 %empty = wait i32 @_ssdm_op_Wait
 
 <Node id="17" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="8" op_3_bw="0">
 <![CDATA[
-columnloop.i.split:3 %call_ln0 = call void @bgr2gray<9, 0, 484, 644, 1, 3220, 3220>_Pipeline_columnloop, i24 %bgr_mat_data43, i8 %gray_mat_data44
+columnloop.i.split:3 %call_ln0 = call void @bgr2gray<9, 0, 484, 644, 1, 3220, 3220>_Pipeline_columnloop, i24 %bgr_mat_data1, i8 %gray_mat_data2
 
 ]]></Node>
 <StgValue><ssdm name="call_ln0"/></StgValue>
@@ -258,7 +258,7 @@ columnloop.i.split:0 %speclooptripcount_ln5579 = speclooptripcount void @_ssdm_o
 
 <Node id="15" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-columnloop.i.split:1 %specloopname_ln5576 = specloopname void @_ssdm_op_SpecLoopName, void @empty_20
+columnloop.i.split:1 %specloopname_ln5576 = specloopname void @_ssdm_op_SpecLoopName, void @empty_15
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln5576"/></StgValue>
@@ -273,7 +273,7 @@ columnloop.i.split:1 %specloopname_ln5576 = specloopname void @_ssdm_op_SpecLoop
 
 <Node id="17" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="8" op_3_bw="0">
 <![CDATA[
-columnloop.i.split:3 %call_ln0 = call void @bgr2gray<9, 0, 484, 644, 1, 3220, 3220>_Pipeline_columnloop, i24 %bgr_mat_data43, i8 %gray_mat_data44
+columnloop.i.split:3 %call_ln0 = call void @bgr2gray<9, 0, 484, 644, 1, 3220, 3220>_Pipeline_columnloop, i24 %bgr_mat_data1, i8 %gray_mat_data2
 
 ]]></Node>
 <StgValue><ssdm name="call_ln0"/></StgValue>

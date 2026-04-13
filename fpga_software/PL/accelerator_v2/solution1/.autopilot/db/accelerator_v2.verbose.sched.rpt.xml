@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'accelerator_v2'" level="0">
-<item name = "Date">Sun Apr 12 22:15:04 2026
+<item name = "Date">Mon Apr 13 00:33:21 2026
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">accelerator_v2</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">924001, 927887, 9.240 ms, 9.279 ms, 924002, 924002, dataflow</column>
+<column name="">924481, 928370, 9.245 ms, 9.284 ms, 924482, 924482, dataflow</column>
 </table>
 </item>
 <item name = "Detail">

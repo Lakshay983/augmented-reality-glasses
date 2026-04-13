@@ -53,8 +53,11 @@ static void build_paths()
 void accelerator_v2(
     hls::stream<AxiBurst>&  in_stream,
     hls::stream<AxiBurst>&  out_stream,
-    volatile ap_uint<1>*    in_breath,
-    volatile ap_uint<1>*    out_breath);
+    volatile ap_uint<8>*    in_breath,
+    volatile ap_uint<8>*    out_breath,
+    volatile ap_uint<8>*    bgr_fifo_breath,
+    volatile ap_uint<8>*    pad_fifo_breath,
+    volatile ap_uint<8>*    gray_fifo_breath);
 
 int parse_hexdump(const char* filename, unsigned char* buf, int max_bytes)
 {
@@ -224,15 +227,22 @@ int test_full(unsigned char* bgr_buf, unsigned char* ref_blurred)
 
     static hls::stream<AxiBurst> in_stream ("tb_in");
     static hls::stream<AxiBurst> out_stream("tb_out");
-    volatile ap_uint<1> in_breath  = 0;
-    volatile ap_uint<1> out_breath = 0;
+
+    volatile ap_uint<8> in_breath        = 0;
+    volatile ap_uint<8> out_breath       = 0;
+    volatile ap_uint<8> bgr_fifo_breath  = 0;
+    volatile ap_uint<8> pad_fifo_breath  = 0;
+    volatile ap_uint<8> gray_fifo_breath = 0;
 
     pack_bursts(bgr_buf, in_stream);
 
-    accelerator_v2(in_stream, out_stream, &in_breath, &out_breath);
+    accelerator_v2(in_stream, out_stream,
+                   &in_breath, &out_breath,
+                   &bgr_fifo_breath, &pad_fifo_breath, &gray_fifo_breath);
 
-    printf("  in_breath=%d  out_breath=%d\n",
-           (int)(ap_uint<1>)in_breath, (int)(ap_uint<1>)out_breath);
+    printf("  in_breath=%d  out_breath=%d  bgr_fifo=%d  pad_fifo=%d  gray_fifo=%d\n",
+           (int)(ap_uint<8>)in_breath, (int)(ap_uint<8>)out_breath,
+           (int)(ap_uint<8>)bgr_fifo_breath, (int)(ap_uint<8>)pad_fifo_breath, (int)(ap_uint<8>)gray_fifo_breath);
 
     static unsigned char got[TOTAL_PIXELS];
     unpack_output(out_stream, got);

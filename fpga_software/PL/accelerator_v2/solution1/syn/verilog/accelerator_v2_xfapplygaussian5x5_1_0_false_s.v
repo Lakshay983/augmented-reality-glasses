@@ -252,7 +252,7 @@ accelerator_v2_ama_addmuladd_8ns_8ns_7ns_18s_19_4_0 #(
     .din2_WIDTH( 7 ),
     .din3_WIDTH( 18 ),
     .dout_WIDTH( 19 ))
-ama_addmuladd_8ns_8ns_7ns_18s_19_4_0_U86(
+ama_addmuladd_8ns_8ns_7ns_18s_19_4_0_U96(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_799_p0),
@@ -271,7 +271,7 @@ accelerator_v2_ama_addmuladd_8ns_8ns_7ns_18s_19_4_0 #(
     .din2_WIDTH( 7 ),
     .din3_WIDTH( 18 ),
     .dout_WIDTH( 19 ))
-ama_addmuladd_8ns_8ns_7ns_18s_19_4_0_U87(
+ama_addmuladd_8ns_8ns_7ns_18s_19_4_0_U97(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_809_p0),
@@ -289,7 +289,7 @@ accelerator_v2_mac_muladd_8ns_7ns_17s_18_4_0 #(
     .din1_WIDTH( 7 ),
     .din2_WIDTH( 17 ),
     .dout_WIDTH( 18 ))
-mac_muladd_8ns_7ns_17s_18_4_0_U88(
+mac_muladd_8ns_7ns_17s_18_4_0_U98(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_819_p0),
@@ -306,7 +306,7 @@ accelerator_v2_mac_muladd_24ns_7ns_30s_32_4_0 #(
     .din1_WIDTH( 7 ),
     .din2_WIDTH( 30 ),
     .dout_WIDTH( 32 ))
-mac_muladd_24ns_7ns_30s_32_4_0_U89(
+mac_muladd_24ns_7ns_30s_32_4_0_U99(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_828_p0),

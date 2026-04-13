@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'accelerator_v2'" level="0">
-<item name = "Date">Sun Apr 12 22:15:04 2026
+<item name = "Date">Mon Apr 13 00:33:21 2026
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">accelerator_v2</item>
@@ -24,17 +24,17 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">924001, 927887, 9.240 ms, 9.279 ms, 924002, 924002, dataflow</column>
+<column name="">924481, 928370, 9.245 ms, 9.284 ms, 924482, 924482, dataflow</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_unpack_fu_104">unpack, 924001, 924001, 9.240 ms, 9.240 ms, 924001, 924001, no</column>
-<column name="grp_pad_fu_125">pad, 317003, 625643, 3.170 ms, 6.256 ms, 317003, 625643, no</column>
-<column name="grp_process_pixels_fu_131">process_pixels, 323650, 323650, 3.236 ms, 3.236 ms, 323644, 323644, dataflow</column>
-<column name="grp_repack_fu_137">repack, 314602, 335898, 3.146 ms, 3.359 ms, 314602, 335898, no</column>
+<column name="grp_unpack_fu_120">unpack, 924481, 924481, 9.245 ms, 9.245 ms, 924481, 924481, no</column>
+<column name="grp_pad_fu_143">pad, 317007, 625647, 3.170 ms, 6.256 ms, 317007, 625647, no</column>
+<column name="grp_process_pixels_fu_151">process_pixels, 323650, 323650, 3.236 ms, 3.236 ms, 323644, 323644, dataflow</column>
+<column name="grp_repack_fu_159">repack, 314602, 336382, 3.146 ms, 3.364 ms, 314602, 336382, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

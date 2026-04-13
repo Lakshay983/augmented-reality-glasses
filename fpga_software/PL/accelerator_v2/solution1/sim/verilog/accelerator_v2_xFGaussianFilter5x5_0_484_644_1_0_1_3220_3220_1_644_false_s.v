@@ -14,16 +14,16 @@ module accelerator_v2_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_
         ap_done,
         ap_idle,
         ap_ready,
-        gray_mat_data44_dout,
-        gray_mat_data44_num_data_valid,
-        gray_mat_data44_fifo_cap,
-        gray_mat_data44_empty_n,
-        gray_mat_data44_read,
-        blurred_mat_data45_din,
-        blurred_mat_data45_num_data_valid,
-        blurred_mat_data45_fifo_cap,
-        blurred_mat_data45_full_n,
-        blurred_mat_data45_write
+        gray_mat_data2_dout,
+        gray_mat_data2_num_data_valid,
+        gray_mat_data2_fifo_cap,
+        gray_mat_data2_empty_n,
+        gray_mat_data2_read,
+        blurred_mat_data3_din,
+        blurred_mat_data3_num_data_valid,
+        blurred_mat_data3_fifo_cap,
+        blurred_mat_data3_full_n,
+        blurred_mat_data3_write
 );
 
 parameter    ap_ST_fsm_state1 = 17'd1;
@@ -50,45 +50,45 @@ input   ap_start;
 output   ap_done;
 output   ap_idle;
 output   ap_ready;
-input  [7:0] gray_mat_data44_dout;
-input  [12:0] gray_mat_data44_num_data_valid;
-input  [12:0] gray_mat_data44_fifo_cap;
-input   gray_mat_data44_empty_n;
-output   gray_mat_data44_read;
-output  [7:0] blurred_mat_data45_din;
-input  [12:0] blurred_mat_data45_num_data_valid;
-input  [12:0] blurred_mat_data45_fifo_cap;
-input   blurred_mat_data45_full_n;
-output   blurred_mat_data45_write;
+input  [7:0] gray_mat_data2_dout;
+input  [12:0] gray_mat_data2_num_data_valid;
+input  [12:0] gray_mat_data2_fifo_cap;
+input   gray_mat_data2_empty_n;
+output   gray_mat_data2_read;
+output  [7:0] blurred_mat_data3_din;
+input  [12:0] blurred_mat_data3_num_data_valid;
+input  [12:0] blurred_mat_data3_fifo_cap;
+input   blurred_mat_data3_full_n;
+output   blurred_mat_data3_write;
 
 reg ap_done;
 reg ap_idle;
 reg ap_ready;
-reg gray_mat_data44_read;
-reg[7:0] blurred_mat_data45_din;
-reg blurred_mat_data45_write;
+reg gray_mat_data2_read;
+reg[7:0] blurred_mat_data3_din;
+reg blurred_mat_data3_write;
 
 (* fsm_encoding = "none" *) reg   [16:0] ap_CS_fsm;
 wire    ap_CS_fsm_state1;
-reg    blurred_mat_data45_blk_n;
+reg    blurred_mat_data3_blk_n;
 wire    ap_CS_fsm_state16;
 wire    ap_CS_fsm_state17;
 wire   [0:0] cmp_i_i380_i_fu_748_p2;
 reg   [0:0] cmp_i_i380_i_reg_1108;
 wire    ap_CS_fsm_state7;
 wire   [0:0] icmp_ln785_fu_442_p2;
-wire   [2:0] empty_58_fu_755_p1;
-reg   [2:0] empty_58_reg_1113;
-wire   [2:0] empty_59_fu_760_p1;
-reg   [2:0] empty_59_reg_1118;
-wire   [2:0] empty_60_fu_765_p1;
-reg   [2:0] empty_60_reg_1123;
-wire   [2:0] empty_61_fu_770_p1;
-reg   [2:0] empty_61_reg_1128;
-wire   [2:0] empty_62_fu_775_p1;
-reg   [2:0] empty_62_reg_1133;
-wire   [2:0] empty_63_fu_780_p1;
-reg   [2:0] empty_63_reg_1138;
+wire   [2:0] empty_63_fu_755_p1;
+reg   [2:0] empty_63_reg_1113;
+wire   [2:0] empty_64_fu_760_p1;
+reg   [2:0] empty_64_reg_1118;
+wire   [2:0] empty_65_fu_765_p1;
+reg   [2:0] empty_65_reg_1123;
+wire   [2:0] empty_66_fu_770_p1;
+reg   [2:0] empty_66_reg_1128;
+wire   [2:0] empty_67_fu_775_p1;
+reg   [2:0] empty_67_reg_1133;
+wire   [2:0] empty_68_fu_780_p1;
+reg   [2:0] empty_68_reg_1138;
 wire   [7:0] grp_xfapplygaussian5x5_1_0_false_s_fu_217_ap_return;
 reg   [7:0] inter_valx_V_1_reg_1203;
 reg    buf_V_ce0;
@@ -155,7 +155,7 @@ wire    grp_xFGaussianFilter5x5_Pipeline_Clear_Row_Loop_fu_370_ap_start;
 wire    grp_xFGaussianFilter5x5_Pipeline_Clear_Row_Loop_fu_370_ap_done;
 wire    grp_xFGaussianFilter5x5_Pipeline_Clear_Row_Loop_fu_370_ap_idle;
 wire    grp_xFGaussianFilter5x5_Pipeline_Clear_Row_Loop_fu_370_ap_ready;
-wire    grp_xFGaussianFilter5x5_Pipeline_Clear_Row_Loop_fu_370_gray_mat_data44_read;
+wire    grp_xFGaussianFilter5x5_Pipeline_Clear_Row_Loop_fu_370_gray_mat_data2_read;
 wire   [9:0] grp_xFGaussianFilter5x5_Pipeline_Clear_Row_Loop_fu_370_buf_V_2_address1;
 wire    grp_xFGaussianFilter5x5_Pipeline_Clear_Row_Loop_fu_370_buf_V_2_ce1;
 wire    grp_xFGaussianFilter5x5_Pipeline_Clear_Row_Loop_fu_370_buf_V_2_we1;
@@ -172,7 +172,7 @@ wire    grp_xFGaussianFilter5x5_Pipeline_Read_Row2_Loop_fu_382_ap_start;
 wire    grp_xFGaussianFilter5x5_Pipeline_Read_Row2_Loop_fu_382_ap_done;
 wire    grp_xFGaussianFilter5x5_Pipeline_Read_Row2_Loop_fu_382_ap_idle;
 wire    grp_xFGaussianFilter5x5_Pipeline_Read_Row2_Loop_fu_382_ap_ready;
-wire    grp_xFGaussianFilter5x5_Pipeline_Read_Row2_Loop_fu_382_gray_mat_data44_read;
+wire    grp_xFGaussianFilter5x5_Pipeline_Read_Row2_Loop_fu_382_gray_mat_data2_read;
 wire   [9:0] grp_xFGaussianFilter5x5_Pipeline_Read_Row2_Loop_fu_382_buf_V_3_address1;
 wire    grp_xFGaussianFilter5x5_Pipeline_Read_Row2_Loop_fu_382_buf_V_3_ce1;
 wire    grp_xFGaussianFilter5x5_Pipeline_Read_Row2_Loop_fu_382_buf_V_3_we1;
@@ -181,9 +181,9 @@ wire    grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_389_ap_start;
 wire    grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_389_ap_done;
 wire    grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_389_ap_idle;
 wire    grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_389_ap_ready;
-wire    grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_389_gray_mat_data44_read;
-wire   [7:0] grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_389_blurred_mat_data45_din;
-wire    grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_389_blurred_mat_data45_write;
+wire    grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_389_gray_mat_data2_read;
+wire   [7:0] grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_389_blurred_mat_data3_din;
+wire    grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_389_blurred_mat_data3_write;
 wire   [9:0] grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_389_buf_V_4_address0;
 wire    grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_389_buf_V_4_ce0;
 wire   [9:0] grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_389_buf_V_4_address1;
@@ -309,32 +309,32 @@ wire   [3:0] zext_ln791_fu_492_p1;
 wire   [3:0] select_ln791_fu_472_p3;
 wire   [0:0] icmp_ln791_4_fu_516_p2;
 wire   [0:0] icmp_ln791_3_fu_510_p2;
-wire   [0:0] empty_49_fu_530_p2;
-wire   [3:0] empty_48_fu_522_p3;
+wire   [0:0] empty_54_fu_530_p2;
+wire   [3:0] empty_53_fu_522_p3;
 wire   [3:0] select_ln791_1_fu_502_p3;
 wire   [0:0] or_ln791_1_fu_560_p2;
 wire   [3:0] select_ln791_3_fu_552_p3;
 wire   [3:0] select_ln791_2_fu_544_p3;
-wire   [0:0] empty_51_fu_582_p2;
-wire   [3:0] empty_50_fu_574_p3;
+wire   [0:0] empty_56_fu_582_p2;
+wire   [3:0] empty_55_fu_574_p3;
 wire   [3:0] select_ln791_4_fu_566_p3;
 wire   [0:0] or_ln791_2_fu_612_p2;
 wire   [3:0] select_ln791_6_fu_604_p3;
 wire   [3:0] select_ln791_5_fu_596_p3;
-wire   [0:0] empty_53_fu_630_p2;
-wire   [3:0] empty_52_fu_626_p1;
+wire   [0:0] empty_58_fu_630_p2;
+wire   [3:0] empty_57_fu_626_p1;
 wire   [3:0] select_ln791_7_fu_618_p3;
 wire   [0:0] or_ln791_3_fu_660_p2;
 wire   [3:0] select_ln791_9_fu_652_p3;
 wire   [3:0] select_ln791_8_fu_644_p3;
-wire   [0:0] empty_55_fu_682_p2;
-wire   [3:0] empty_54_fu_674_p3;
+wire   [0:0] empty_60_fu_682_p2;
+wire   [3:0] empty_59_fu_674_p3;
 wire   [3:0] select_ln791_10_fu_666_p3;
 wire   [0:0] or_ln791_4_fu_712_p2;
 wire   [3:0] select_ln791_12_fu_704_p3;
 wire   [3:0] select_ln791_11_fu_696_p3;
-wire   [0:0] empty_57_fu_734_p2;
-wire   [3:0] empty_56_fu_726_p3;
+wire   [0:0] empty_62_fu_734_p2;
+wire   [3:0] empty_61_fu_726_p3;
 wire   [3:0] select_ln791_13_fu_718_p3;
 wire   [12:0] row_ind_V_1_fu_785_p2;
 wire   [0:0] icmp_ln1019_fu_791_p2;
@@ -517,11 +517,11 @@ accelerator_v2_xFGaussianFilter5x5_Pipeline_Clear_Row_Loop grp_xFGaussianFilter5
     .ap_done(grp_xFGaussianFilter5x5_Pipeline_Clear_Row_Loop_fu_370_ap_done),
     .ap_idle(grp_xFGaussianFilter5x5_Pipeline_Clear_Row_Loop_fu_370_ap_idle),
     .ap_ready(grp_xFGaussianFilter5x5_Pipeline_Clear_Row_Loop_fu_370_ap_ready),
-    .gray_mat_data44_dout(gray_mat_data44_dout),
-    .gray_mat_data44_num_data_valid(13'd0),
-    .gray_mat_data44_fifo_cap(13'd0),
-    .gray_mat_data44_empty_n(gray_mat_data44_empty_n),
-    .gray_mat_data44_read(grp_xFGaussianFilter5x5_Pipeline_Clear_Row_Loop_fu_370_gray_mat_data44_read),
+    .gray_mat_data2_dout(gray_mat_data2_dout),
+    .gray_mat_data2_num_data_valid(13'd0),
+    .gray_mat_data2_fifo_cap(13'd0),
+    .gray_mat_data2_empty_n(gray_mat_data2_empty_n),
+    .gray_mat_data2_read(grp_xFGaussianFilter5x5_Pipeline_Clear_Row_Loop_fu_370_gray_mat_data2_read),
     .buf_V_2_address1(grp_xFGaussianFilter5x5_Pipeline_Clear_Row_Loop_fu_370_buf_V_2_address1),
     .buf_V_2_ce1(grp_xFGaussianFilter5x5_Pipeline_Clear_Row_Loop_fu_370_buf_V_2_ce1),
     .buf_V_2_we1(grp_xFGaussianFilter5x5_Pipeline_Clear_Row_Loop_fu_370_buf_V_2_we1),
@@ -543,11 +543,11 @@ accelerator_v2_xFGaussianFilter5x5_Pipeline_Read_Row2_Loop grp_xFGaussianFilter5
     .ap_done(grp_xFGaussianFilter5x5_Pipeline_Read_Row2_Loop_fu_382_ap_done),
     .ap_idle(grp_xFGaussianFilter5x5_Pipeline_Read_Row2_Loop_fu_382_ap_idle),
     .ap_ready(grp_xFGaussianFilter5x5_Pipeline_Read_Row2_Loop_fu_382_ap_ready),
-    .gray_mat_data44_dout(gray_mat_data44_dout),
-    .gray_mat_data44_num_data_valid(13'd0),
-    .gray_mat_data44_fifo_cap(13'd0),
-    .gray_mat_data44_empty_n(gray_mat_data44_empty_n),
-    .gray_mat_data44_read(grp_xFGaussianFilter5x5_Pipeline_Read_Row2_Loop_fu_382_gray_mat_data44_read),
+    .gray_mat_data2_dout(gray_mat_data2_dout),
+    .gray_mat_data2_num_data_valid(13'd0),
+    .gray_mat_data2_fifo_cap(13'd0),
+    .gray_mat_data2_empty_n(gray_mat_data2_empty_n),
+    .gray_mat_data2_read(grp_xFGaussianFilter5x5_Pipeline_Read_Row2_Loop_fu_382_gray_mat_data2_read),
     .buf_V_3_address1(grp_xFGaussianFilter5x5_Pipeline_Read_Row2_Loop_fu_382_buf_V_3_address1),
     .buf_V_3_ce1(grp_xFGaussianFilter5x5_Pipeline_Read_Row2_Loop_fu_382_buf_V_3_ce1),
     .buf_V_3_we1(grp_xFGaussianFilter5x5_Pipeline_Read_Row2_Loop_fu_382_buf_V_3_we1),
@@ -561,22 +561,22 @@ accelerator_v2_xFGaussianFilter5x5_Pipeline_Col_Loop grp_xFGaussianFilter5x5_Pip
     .ap_done(grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_389_ap_done),
     .ap_idle(grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_389_ap_idle),
     .ap_ready(grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_389_ap_ready),
-    .gray_mat_data44_dout(gray_mat_data44_dout),
-    .gray_mat_data44_num_data_valid(13'd0),
-    .gray_mat_data44_fifo_cap(13'd0),
-    .gray_mat_data44_empty_n(gray_mat_data44_empty_n),
-    .gray_mat_data44_read(grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_389_gray_mat_data44_read),
-    .blurred_mat_data45_din(grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_389_blurred_mat_data45_din),
-    .blurred_mat_data45_num_data_valid(13'd0),
-    .blurred_mat_data45_fifo_cap(13'd0),
-    .blurred_mat_data45_full_n(blurred_mat_data45_full_n),
-    .blurred_mat_data45_write(grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_389_blurred_mat_data45_write),
-    .tp1_V_cast(empty_60_reg_1123),
-    .tp2_V_cast(empty_61_reg_1128),
-    .mid_V_cast(empty_62_reg_1133),
-    .bottom1_V_cast(empty_63_reg_1138),
-    .bottom2_V_cast(empty_58_reg_1113),
-    .row_ind_V_cast(empty_59_reg_1118),
+    .gray_mat_data2_dout(gray_mat_data2_dout),
+    .gray_mat_data2_num_data_valid(13'd0),
+    .gray_mat_data2_fifo_cap(13'd0),
+    .gray_mat_data2_empty_n(gray_mat_data2_empty_n),
+    .gray_mat_data2_read(grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_389_gray_mat_data2_read),
+    .blurred_mat_data3_din(grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_389_blurred_mat_data3_din),
+    .blurred_mat_data3_num_data_valid(13'd0),
+    .blurred_mat_data3_fifo_cap(13'd0),
+    .blurred_mat_data3_full_n(blurred_mat_data3_full_n),
+    .blurred_mat_data3_write(grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_389_blurred_mat_data3_write),
+    .tp1_V_cast(empty_65_reg_1123),
+    .tp2_V_cast(empty_66_reg_1128),
+    .mid_V_cast(empty_67_reg_1133),
+    .bottom1_V_cast(empty_68_reg_1138),
+    .bottom2_V_cast(empty_63_reg_1113),
+    .row_ind_V_cast(empty_64_reg_1118),
     .buf_V_4_address0(grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_389_buf_V_4_address0),
     .buf_V_4_ce0(grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_389_buf_V_4_ce0),
     .buf_V_4_q0(buf_V_4_q0),
@@ -747,12 +747,12 @@ always @ (posedge ap_clk) begin
         bottom1_fu_102 <= bottom1_V_fu_588_p3;
         bottom2_fu_106 <= bottom2_V_fu_536_p3;
         cmp_i_i380_i_reg_1108 <= cmp_i_i380_i_fu_748_p2;
-        empty_58_reg_1113 <= empty_58_fu_755_p1;
-        empty_59_reg_1118 <= empty_59_fu_760_p1;
-        empty_60_reg_1123 <= empty_60_fu_765_p1;
-        empty_61_reg_1128 <= empty_61_fu_770_p1;
-        empty_62_reg_1133 <= empty_62_fu_775_p1;
-        empty_63_reg_1138 <= empty_63_fu_780_p1;
+        empty_63_reg_1113 <= empty_63_fu_755_p1;
+        empty_64_reg_1118 <= empty_64_fu_760_p1;
+        empty_65_reg_1123 <= empty_65_fu_765_p1;
+        empty_66_reg_1128 <= empty_66_fu_770_p1;
+        empty_67_reg_1133 <= empty_67_fu_775_p1;
+        empty_68_reg_1138 <= empty_68_fu_780_p1;
         mid_fu_98 <= mid_V_fu_636_p3;
         tp1_fu_90 <= tp1_V_fu_740_p3;
         tp2_fu_94 <= tp2_V_fu_688_p3;
@@ -778,7 +778,7 @@ assign ap_ST_fsm_state14_blk = 1'b0;
 assign ap_ST_fsm_state15_blk = 1'b0;
 
 always @ (*) begin
-    if ((blurred_mat_data45_full_n == 1'b0)) begin
+    if ((blurred_mat_data3_full_n == 1'b0)) begin
         ap_ST_fsm_state16_blk = 1'b1;
     end else begin
         ap_ST_fsm_state16_blk = 1'b0;
@@ -786,7 +786,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((blurred_mat_data45_full_n == 1'b0)) begin
+    if ((blurred_mat_data3_full_n == 1'b0)) begin
         ap_ST_fsm_state17_blk = 1'b1;
     end else begin
         ap_ST_fsm_state17_blk = 1'b0;
@@ -861,31 +861,31 @@ end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state17) | (1'b1 == ap_CS_fsm_state16))) begin
-        blurred_mat_data45_blk_n = blurred_mat_data45_full_n;
+        blurred_mat_data3_blk_n = blurred_mat_data3_full_n;
     end else begin
-        blurred_mat_data45_blk_n = 1'b1;
+        blurred_mat_data3_blk_n = 1'b1;
     end
 end
 
 always @ (*) begin
-    if (((blurred_mat_data45_full_n == 1'b1) & (1'b1 == ap_CS_fsm_state17))) begin
-        blurred_mat_data45_din = inter_valx_V_1_reg_1203;
-    end else if (((blurred_mat_data45_full_n == 1'b1) & (1'b1 == ap_CS_fsm_state16))) begin
-        blurred_mat_data45_din = grp_xfapplygaussian5x5_1_0_false_s_fu_290_ap_return;
+    if (((blurred_mat_data3_full_n == 1'b1) & (1'b1 == ap_CS_fsm_state17))) begin
+        blurred_mat_data3_din = inter_valx_V_1_reg_1203;
+    end else if (((blurred_mat_data3_full_n == 1'b1) & (1'b1 == ap_CS_fsm_state16))) begin
+        blurred_mat_data3_din = grp_xfapplygaussian5x5_1_0_false_s_fu_290_ap_return;
     end else if ((1'b1 == ap_CS_fsm_state8)) begin
-        blurred_mat_data45_din = grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_389_blurred_mat_data45_din;
+        blurred_mat_data3_din = grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_389_blurred_mat_data3_din;
     end else begin
-        blurred_mat_data45_din = grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_389_blurred_mat_data45_din;
+        blurred_mat_data3_din = grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_389_blurred_mat_data3_din;
     end
 end
 
 always @ (*) begin
-    if ((((blurred_mat_data45_full_n == 1'b1) & (1'b1 == ap_CS_fsm_state17)) | ((blurred_mat_data45_full_n == 1'b1) & (1'b1 == ap_CS_fsm_state16)))) begin
-        blurred_mat_data45_write = 1'b1;
+    if ((((blurred_mat_data3_full_n == 1'b1) & (1'b1 == ap_CS_fsm_state17)) | ((blurred_mat_data3_full_n == 1'b1) & (1'b1 == ap_CS_fsm_state16)))) begin
+        blurred_mat_data3_write = 1'b1;
     end else if ((1'b1 == ap_CS_fsm_state8)) begin
-        blurred_mat_data45_write = grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_389_blurred_mat_data45_write;
+        blurred_mat_data3_write = grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_389_blurred_mat_data3_write;
     end else begin
-        blurred_mat_data45_write = 1'b0;
+        blurred_mat_data3_write = 1'b0;
     end
 end
 
@@ -1083,20 +1083,20 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state8)) begin
-        gray_mat_data44_read = grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_389_gray_mat_data44_read;
+        gray_mat_data2_read = grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_389_gray_mat_data2_read;
     end else if ((1'b1 == ap_CS_fsm_state5)) begin
-        gray_mat_data44_read = grp_xFGaussianFilter5x5_Pipeline_Read_Row2_Loop_fu_382_gray_mat_data44_read;
+        gray_mat_data2_read = grp_xFGaussianFilter5x5_Pipeline_Read_Row2_Loop_fu_382_gray_mat_data2_read;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        gray_mat_data44_read = grp_xFGaussianFilter5x5_Pipeline_Clear_Row_Loop_fu_370_gray_mat_data44_read;
+        gray_mat_data2_read = grp_xFGaussianFilter5x5_Pipeline_Clear_Row_Loop_fu_370_gray_mat_data2_read;
     end else begin
-        gray_mat_data44_read = 1'b0;
+        gray_mat_data2_read = 1'b0;
     end
 end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state8)) begin
         grp_xfapplygaussian5x5_1_0_false_s_fu_217_ap_ce = grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_389_grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_ce;
-    end else if (((1'b1 == ap_CS_fsm_state15) | (1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state13) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state11) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state9) | ((blurred_mat_data45_full_n == 1'b1) & (1'b1 == ap_CS_fsm_state16)))) begin
+    end else if (((1'b1 == ap_CS_fsm_state15) | (1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state13) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state11) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state9) | ((blurred_mat_data3_full_n == 1'b1) & (1'b1 == ap_CS_fsm_state16)))) begin
         grp_xfapplygaussian5x5_1_0_false_s_fu_217_ap_ce = 1'b1;
     end else begin
         grp_xfapplygaussian5x5_1_0_false_s_fu_217_ap_ce = 1'b0;
@@ -1354,7 +1354,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state15) | (1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state13) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state11) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state9) | ((blurred_mat_data45_full_n == 1'b1) & (1'b1 == ap_CS_fsm_state16)))) begin
+    if (((1'b1 == ap_CS_fsm_state15) | (1'b1 == ap_CS_fsm_state14) | (1'b1 == ap_CS_fsm_state13) | (1'b1 == ap_CS_fsm_state12) | (1'b1 == ap_CS_fsm_state11) | (1'b1 == ap_CS_fsm_state10) | (1'b1 == ap_CS_fsm_state9) | ((blurred_mat_data3_full_n == 1'b1) & (1'b1 == ap_CS_fsm_state16)))) begin
         grp_xfapplygaussian5x5_1_0_false_s_fu_290_ap_ce = 1'b1;
     end else begin
         grp_xfapplygaussian5x5_1_0_false_s_fu_290_ap_ce = 1'b0;
@@ -1429,14 +1429,14 @@ always @ (*) begin
             ap_NS_fsm = ap_ST_fsm_state16;
         end
         ap_ST_fsm_state16 : begin
-            if (((blurred_mat_data45_full_n == 1'b1) & (1'b1 == ap_CS_fsm_state16))) begin
+            if (((blurred_mat_data3_full_n == 1'b1) & (1'b1 == ap_CS_fsm_state16))) begin
                 ap_NS_fsm = ap_ST_fsm_state17;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state16;
             end
         end
         ap_ST_fsm_state17 : begin
-            if (((blurred_mat_data45_full_n == 1'b1) & (1'b1 == ap_CS_fsm_state17))) begin
+            if (((blurred_mat_data3_full_n == 1'b1) & (1'b1 == ap_CS_fsm_state17))) begin
                 ap_NS_fsm = ap_ST_fsm_state7;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state17;
@@ -1478,43 +1478,43 @@ assign ap_CS_fsm_state8 = ap_CS_fsm[32'd7];
 
 assign ap_CS_fsm_state9 = ap_CS_fsm[32'd8];
 
-assign bottom1_V_fu_588_p3 = ((empty_51_fu_582_p2[0:0] == 1'b1) ? empty_50_fu_574_p3 : select_ln791_4_fu_566_p3);
+assign bottom1_V_fu_588_p3 = ((empty_56_fu_582_p2[0:0] == 1'b1) ? empty_55_fu_574_p3 : select_ln791_4_fu_566_p3);
 
-assign bottom2_V_fu_536_p3 = ((empty_49_fu_530_p2[0:0] == 1'b1) ? empty_48_fu_522_p3 : select_ln791_1_fu_502_p3);
+assign bottom2_V_fu_536_p3 = ((empty_54_fu_530_p2[0:0] == 1'b1) ? empty_53_fu_522_p3 : select_ln791_1_fu_502_p3);
 
 assign cmp_i_i380_i_fu_748_p2 = ((row_V_fu_86 < 9'd484) ? 1'b1 : 1'b0);
 
-assign empty_48_fu_522_p3 = ((icmp_ln791_4_fu_516_p2[0:0] == 1'b1) ? 4'd3 : 4'd2);
+assign empty_53_fu_522_p3 = ((icmp_ln791_4_fu_516_p2[0:0] == 1'b1) ? 4'd3 : 4'd2);
 
-assign empty_49_fu_530_p2 = (icmp_ln791_4_fu_516_p2 | icmp_ln791_3_fu_510_p2);
+assign empty_54_fu_530_p2 = (icmp_ln791_4_fu_516_p2 | icmp_ln791_3_fu_510_p2);
 
-assign empty_50_fu_574_p3 = ((icmp_ln791_4_fu_516_p2[0:0] == 1'b1) ? 4'd2 : 4'd1);
+assign empty_55_fu_574_p3 = ((icmp_ln791_4_fu_516_p2[0:0] == 1'b1) ? 4'd2 : 4'd1);
 
-assign empty_51_fu_582_p2 = (icmp_ln791_4_fu_516_p2 | icmp_ln791_3_fu_510_p2);
+assign empty_56_fu_582_p2 = (icmp_ln791_4_fu_516_p2 | icmp_ln791_3_fu_510_p2);
 
-assign empty_52_fu_626_p1 = icmp_ln791_4_fu_516_p2;
+assign empty_57_fu_626_p1 = icmp_ln791_4_fu_516_p2;
 
-assign empty_53_fu_630_p2 = (icmp_ln791_4_fu_516_p2 | icmp_ln791_3_fu_510_p2);
+assign empty_58_fu_630_p2 = (icmp_ln791_4_fu_516_p2 | icmp_ln791_3_fu_510_p2);
 
-assign empty_54_fu_674_p3 = ((icmp_ln791_4_fu_516_p2[0:0] == 1'b1) ? 4'd0 : 4'd4);
+assign empty_59_fu_674_p3 = ((icmp_ln791_4_fu_516_p2[0:0] == 1'b1) ? 4'd0 : 4'd4);
 
-assign empty_55_fu_682_p2 = (icmp_ln791_4_fu_516_p2 | icmp_ln791_3_fu_510_p2);
+assign empty_60_fu_682_p2 = (icmp_ln791_4_fu_516_p2 | icmp_ln791_3_fu_510_p2);
 
-assign empty_56_fu_726_p3 = ((icmp_ln791_4_fu_516_p2[0:0] == 1'b1) ? 4'd4 : 4'd3);
+assign empty_61_fu_726_p3 = ((icmp_ln791_4_fu_516_p2[0:0] == 1'b1) ? 4'd4 : 4'd3);
 
-assign empty_57_fu_734_p2 = (icmp_ln791_4_fu_516_p2 | icmp_ln791_3_fu_510_p2);
+assign empty_62_fu_734_p2 = (icmp_ln791_4_fu_516_p2 | icmp_ln791_3_fu_510_p2);
 
-assign empty_58_fu_755_p1 = bottom2_V_fu_536_p3[2:0];
+assign empty_63_fu_755_p1 = bottom2_V_fu_536_p3[2:0];
 
-assign empty_59_fu_760_p1 = row_ind_V_fu_82[2:0];
+assign empty_64_fu_760_p1 = row_ind_V_fu_82[2:0];
 
-assign empty_60_fu_765_p1 = tp1_V_fu_740_p3[2:0];
+assign empty_65_fu_765_p1 = tp1_V_fu_740_p3[2:0];
 
-assign empty_61_fu_770_p1 = tp2_V_fu_688_p3[2:0];
+assign empty_66_fu_770_p1 = tp2_V_fu_688_p3[2:0];
 
-assign empty_62_fu_775_p1 = mid_V_fu_636_p3[2:0];
+assign empty_67_fu_775_p1 = mid_V_fu_636_p3[2:0];
 
-assign empty_63_fu_780_p1 = bottom1_V_fu_588_p3[2:0];
+assign empty_68_fu_780_p1 = bottom1_V_fu_588_p3[2:0];
 
 assign grp_xFGaussianFilter5x5_Pipeline_Clear_Row_Loop_fu_370_ap_start = grp_xFGaussianFilter5x5_Pipeline_Clear_Row_Loop_fu_370_ap_start_reg;
 
@@ -1536,7 +1536,7 @@ assign icmp_ln791_4_fu_516_p2 = ((row_ind_V_fu_82 == 13'd3) ? 1'b1 : 1'b0);
 
 assign icmp_ln791_fu_466_p2 = ((row_ind_V_fu_82 == 13'd4) ? 1'b1 : 1'b0);
 
-assign mid_V_fu_636_p3 = ((empty_53_fu_630_p2[0:0] == 1'b1) ? empty_52_fu_626_p1 : select_ln791_7_fu_618_p3);
+assign mid_V_fu_636_p3 = ((empty_58_fu_630_p2[0:0] == 1'b1) ? empty_57_fu_626_p1 : select_ln791_7_fu_618_p3);
 
 assign or_ln791_1_fu_560_p2 = (icmp_ln791_2_fu_486_p2 | icmp_ln791_1_fu_480_p2);
 
@@ -1582,9 +1582,9 @@ assign select_ln791_9_fu_652_p3 = ((icmp_ln791_2_fu_486_p2[0:0] == 1'b1) ? 4'd3 
 
 assign select_ln791_fu_472_p3 = ((icmp_ln791_fu_466_p2[0:0] == 1'b1) ? 4'd4 : bottom2_fu_106);
 
-assign tp1_V_fu_740_p3 = ((empty_57_fu_734_p2[0:0] == 1'b1) ? empty_56_fu_726_p3 : select_ln791_13_fu_718_p3);
+assign tp1_V_fu_740_p3 = ((empty_62_fu_734_p2[0:0] == 1'b1) ? empty_61_fu_726_p3 : select_ln791_13_fu_718_p3);
 
-assign tp2_V_fu_688_p3 = ((empty_55_fu_682_p2[0:0] == 1'b1) ? empty_54_fu_674_p3 : select_ln791_10_fu_666_p3);
+assign tp2_V_fu_688_p3 = ((empty_60_fu_682_p2[0:0] == 1'b1) ? empty_59_fu_674_p3 : select_ln791_10_fu_666_p3);
 
 assign zext_ln791_fu_492_p1 = icmp_ln791_2_fu_486_p2;
 

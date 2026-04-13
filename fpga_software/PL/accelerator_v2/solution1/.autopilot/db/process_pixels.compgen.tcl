@@ -40,7 +40,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 171 \
+    id 182 \
     name padded_stream2 \
     type fifo \
     dir I \
@@ -55,7 +55,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 172 \
+    id 183 \
     name gray_stream3 \
     type fifo \
     dir O \
@@ -64,6 +64,21 @@ eval "cg_default_interface_gen_dc { \
     corename dc_gray_stream3 \
     op interface \
     ports { gray_stream3_din { O 8 vector } gray_stream3_full_n { I 1 bit } gray_stream3_write { O 1 bit } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 184 \
+    name gray_fifo_breath \
+    type other \
+    dir O \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_gray_fifo_breath \
+    op interface \
+    ports { gray_fifo_breath { O 8 vector } gray_fifo_breath_ap_vld { O 1 bit } } \
 } "
 }
 

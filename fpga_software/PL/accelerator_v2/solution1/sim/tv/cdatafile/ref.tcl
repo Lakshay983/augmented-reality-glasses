@@ -1,4 +1,6 @@
 set depth_list {
+  {bgr_fifo_breath 1}
+  {gray_fifo_breath 1}
   {in_breath 1}
   {in_stream_V_data_V 58080}
   {in_stream_V_dest_V 58080}
@@ -15,5 +17,6 @@ set depth_list {
   {out_stream_V_last_V 19680}
   {out_stream_V_strb_V 19680}
   {out_stream_V_user_V 19680}
+  {pad_fifo_breath 1}
 }
 set trans_num 1

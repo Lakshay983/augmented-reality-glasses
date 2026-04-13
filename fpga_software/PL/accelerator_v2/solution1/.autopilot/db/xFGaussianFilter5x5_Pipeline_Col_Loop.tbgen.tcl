@@ -18,7 +18,7 @@ set C_modelArgList {
 	{ mid_V_cast int 3 regular  }
 	{ bottom1_V_cast int 3 regular  }
 	{ bottom2_V_cast int 3 regular  }
-	{ gray_mat_data44 int 8 regular {fifo 0 volatile }  }
+	{ gray_mat_data2 int 8 regular {fifo 0 volatile }  }
 	{ row_ind_V_cast int 3 regular  }
 	{ buf_V_4 int 8 regular {array 644 { 1 0 } 1 1 }  }
 	{ buf_V_3 int 8 regular {array 644 { 1 0 } 1 1 }  }
@@ -26,7 +26,7 @@ set C_modelArgList {
 	{ buf_V_1 int 8 regular {array 644 { 1 0 } 1 1 }  }
 	{ buf_V int 8 regular {array 644 { 1 0 } 1 1 }  }
 	{ cmp_i_i380_i int 1 regular  }
-	{ blurred_mat_data45 int 8 regular {fifo 1 volatile }  }
+	{ blurred_mat_data3 int 8 regular {fifo 1 volatile }  }
 	{ src_buf5_V_2_out int 8 regular {pointer 1}  }
 	{ src_buf5_V_1_out int 8 regular {pointer 1}  }
 	{ src_buf5_V_out int 8 regular {pointer 1}  }
@@ -54,7 +54,7 @@ set C_modelArgMapList {[
  	{ "Name" : "mid_V_cast", "interface" : "wire", "bitwidth" : 3, "direction" : "READONLY"} , 
  	{ "Name" : "bottom1_V_cast", "interface" : "wire", "bitwidth" : 3, "direction" : "READONLY"} , 
  	{ "Name" : "bottom2_V_cast", "interface" : "wire", "bitwidth" : 3, "direction" : "READONLY"} , 
- 	{ "Name" : "gray_mat_data44", "interface" : "fifo", "bitwidth" : 8, "direction" : "READONLY"} , 
+ 	{ "Name" : "gray_mat_data2", "interface" : "fifo", "bitwidth" : 8, "direction" : "READONLY"} , 
  	{ "Name" : "row_ind_V_cast", "interface" : "wire", "bitwidth" : 3, "direction" : "READONLY"} , 
  	{ "Name" : "buf_V_4", "interface" : "memory", "bitwidth" : 8, "direction" : "READWRITE"} , 
  	{ "Name" : "buf_V_3", "interface" : "memory", "bitwidth" : 8, "direction" : "READWRITE"} , 
@@ -62,7 +62,7 @@ set C_modelArgMapList {[
  	{ "Name" : "buf_V_1", "interface" : "memory", "bitwidth" : 8, "direction" : "READWRITE"} , 
  	{ "Name" : "buf_V", "interface" : "memory", "bitwidth" : 8, "direction" : "READWRITE"} , 
  	{ "Name" : "cmp_i_i380_i", "interface" : "wire", "bitwidth" : 1, "direction" : "READONLY"} , 
- 	{ "Name" : "blurred_mat_data45", "interface" : "fifo", "bitwidth" : 8, "direction" : "WRITEONLY"} , 
+ 	{ "Name" : "blurred_mat_data3", "interface" : "fifo", "bitwidth" : 8, "direction" : "WRITEONLY"} , 
  	{ "Name" : "src_buf5_V_2_out", "interface" : "wire", "bitwidth" : 8, "direction" : "WRITEONLY"} , 
  	{ "Name" : "src_buf5_V_1_out", "interface" : "wire", "bitwidth" : 8, "direction" : "WRITEONLY"} , 
  	{ "Name" : "src_buf5_V_out", "interface" : "wire", "bitwidth" : 8, "direction" : "WRITEONLY"} , 
@@ -92,16 +92,16 @@ set portList {
 	{ ap_done sc_out sc_logic 1 predone -1 } 
 	{ ap_idle sc_out sc_logic 1 done -1 } 
 	{ ap_ready sc_out sc_logic 1 ready -1 } 
-	{ gray_mat_data44_dout sc_in sc_lv 8 signal 5 } 
-	{ gray_mat_data44_num_data_valid sc_in sc_lv 13 signal 5 } 
-	{ gray_mat_data44_fifo_cap sc_in sc_lv 13 signal 5 } 
-	{ gray_mat_data44_empty_n sc_in sc_logic 1 signal 5 } 
-	{ gray_mat_data44_read sc_out sc_logic 1 signal 5 } 
-	{ blurred_mat_data45_din sc_out sc_lv 8 signal 13 } 
-	{ blurred_mat_data45_num_data_valid sc_in sc_lv 13 signal 13 } 
-	{ blurred_mat_data45_fifo_cap sc_in sc_lv 13 signal 13 } 
-	{ blurred_mat_data45_full_n sc_in sc_logic 1 signal 13 } 
-	{ blurred_mat_data45_write sc_out sc_logic 1 signal 13 } 
+	{ gray_mat_data2_dout sc_in sc_lv 8 signal 5 } 
+	{ gray_mat_data2_num_data_valid sc_in sc_lv 13 signal 5 } 
+	{ gray_mat_data2_fifo_cap sc_in sc_lv 13 signal 5 } 
+	{ gray_mat_data2_empty_n sc_in sc_logic 1 signal 5 } 
+	{ gray_mat_data2_read sc_out sc_logic 1 signal 5 } 
+	{ blurred_mat_data3_din sc_out sc_lv 8 signal 13 } 
+	{ blurred_mat_data3_num_data_valid sc_in sc_lv 13 signal 13 } 
+	{ blurred_mat_data3_fifo_cap sc_in sc_lv 13 signal 13 } 
+	{ blurred_mat_data3_full_n sc_in sc_logic 1 signal 13 } 
+	{ blurred_mat_data3_write sc_out sc_logic 1 signal 13 } 
 	{ tp1_V_cast sc_in sc_lv 3 signal 0 } 
 	{ tp2_V_cast sc_in sc_lv 3 signal 1 } 
 	{ mid_V_cast sc_in sc_lv 3 signal 2 } 
@@ -219,16 +219,16 @@ set NewPortList {[
  	{ "name": "ap_done", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "predone", "bundle":{"name": "ap_done", "role": "default" }} , 
  	{ "name": "ap_idle", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "done", "bundle":{"name": "ap_idle", "role": "default" }} , 
  	{ "name": "ap_ready", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "ready", "bundle":{"name": "ap_ready", "role": "default" }} , 
- 	{ "name": "gray_mat_data44_dout", "direction": "in", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "gray_mat_data44", "role": "dout" }} , 
- 	{ "name": "gray_mat_data44_num_data_valid", "direction": "in", "datatype": "sc_lv", "bitwidth":13, "type": "signal", "bundle":{"name": "gray_mat_data44", "role": "num_data_valid" }} , 
- 	{ "name": "gray_mat_data44_fifo_cap", "direction": "in", "datatype": "sc_lv", "bitwidth":13, "type": "signal", "bundle":{"name": "gray_mat_data44", "role": "fifo_cap" }} , 
- 	{ "name": "gray_mat_data44_empty_n", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "gray_mat_data44", "role": "empty_n" }} , 
- 	{ "name": "gray_mat_data44_read", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "gray_mat_data44", "role": "read" }} , 
- 	{ "name": "blurred_mat_data45_din", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "blurred_mat_data45", "role": "din" }} , 
- 	{ "name": "blurred_mat_data45_num_data_valid", "direction": "in", "datatype": "sc_lv", "bitwidth":13, "type": "signal", "bundle":{"name": "blurred_mat_data45", "role": "num_data_valid" }} , 
- 	{ "name": "blurred_mat_data45_fifo_cap", "direction": "in", "datatype": "sc_lv", "bitwidth":13, "type": "signal", "bundle":{"name": "blurred_mat_data45", "role": "fifo_cap" }} , 
- 	{ "name": "blurred_mat_data45_full_n", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "blurred_mat_data45", "role": "full_n" }} , 
- 	{ "name": "blurred_mat_data45_write", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "blurred_mat_data45", "role": "write" }} , 
+ 	{ "name": "gray_mat_data2_dout", "direction": "in", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "gray_mat_data2", "role": "dout" }} , 
+ 	{ "name": "gray_mat_data2_num_data_valid", "direction": "in", "datatype": "sc_lv", "bitwidth":13, "type": "signal", "bundle":{"name": "gray_mat_data2", "role": "num_data_valid" }} , 
+ 	{ "name": "gray_mat_data2_fifo_cap", "direction": "in", "datatype": "sc_lv", "bitwidth":13, "type": "signal", "bundle":{"name": "gray_mat_data2", "role": "fifo_cap" }} , 
+ 	{ "name": "gray_mat_data2_empty_n", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "gray_mat_data2", "role": "empty_n" }} , 
+ 	{ "name": "gray_mat_data2_read", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "gray_mat_data2", "role": "read" }} , 
+ 	{ "name": "blurred_mat_data3_din", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "blurred_mat_data3", "role": "din" }} , 
+ 	{ "name": "blurred_mat_data3_num_data_valid", "direction": "in", "datatype": "sc_lv", "bitwidth":13, "type": "signal", "bundle":{"name": "blurred_mat_data3", "role": "num_data_valid" }} , 
+ 	{ "name": "blurred_mat_data3_fifo_cap", "direction": "in", "datatype": "sc_lv", "bitwidth":13, "type": "signal", "bundle":{"name": "blurred_mat_data3", "role": "fifo_cap" }} , 
+ 	{ "name": "blurred_mat_data3_full_n", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "blurred_mat_data3", "role": "full_n" }} , 
+ 	{ "name": "blurred_mat_data3_write", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "blurred_mat_data3", "role": "write" }} , 
  	{ "name": "tp1_V_cast", "direction": "in", "datatype": "sc_lv", "bitwidth":3, "type": "signal", "bundle":{"name": "tp1_V_cast", "role": "default" }} , 
  	{ "name": "tp2_V_cast", "direction": "in", "datatype": "sc_lv", "bitwidth":3, "type": "signal", "bundle":{"name": "tp2_V_cast", "role": "default" }} , 
  	{ "name": "mid_V_cast", "direction": "in", "datatype": "sc_lv", "bitwidth":3, "type": "signal", "bundle":{"name": "mid_V_cast", "role": "default" }} , 
@@ -391,9 +391,9 @@ set RtlHierarchyInfo {[
 			{"Name" : "mid_V_cast", "Type" : "None", "Direction" : "I"},
 			{"Name" : "bottom1_V_cast", "Type" : "None", "Direction" : "I"},
 			{"Name" : "bottom2_V_cast", "Type" : "None", "Direction" : "I"},
-			{"Name" : "gray_mat_data44", "Type" : "Fifo", "Direction" : "I",
+			{"Name" : "gray_mat_data2", "Type" : "Fifo", "Direction" : "I",
 				"BlockSignal" : [
-					{"Name" : "gray_mat_data44_blk_n", "Type" : "RtlSignal"}]},
+					{"Name" : "gray_mat_data2_blk_n", "Type" : "RtlSignal"}]},
 			{"Name" : "row_ind_V_cast", "Type" : "None", "Direction" : "I"},
 			{"Name" : "buf_V_4", "Type" : "Memory", "Direction" : "IO"},
 			{"Name" : "buf_V_3", "Type" : "Memory", "Direction" : "IO"},
@@ -401,9 +401,9 @@ set RtlHierarchyInfo {[
 			{"Name" : "buf_V_1", "Type" : "Memory", "Direction" : "IO"},
 			{"Name" : "buf_V", "Type" : "Memory", "Direction" : "IO"},
 			{"Name" : "cmp_i_i380_i", "Type" : "None", "Direction" : "I"},
-			{"Name" : "blurred_mat_data45", "Type" : "Fifo", "Direction" : "O",
+			{"Name" : "blurred_mat_data3", "Type" : "Fifo", "Direction" : "O",
 				"BlockSignal" : [
-					{"Name" : "blurred_mat_data45_blk_n", "Type" : "RtlSignal"}]},
+					{"Name" : "blurred_mat_data3_blk_n", "Type" : "RtlSignal"}]},
 			{"Name" : "src_buf5_V_2_out", "Type" : "Vld", "Direction" : "O"},
 			{"Name" : "src_buf5_V_1_out", "Type" : "Vld", "Direction" : "O"},
 			{"Name" : "src_buf5_V_out", "Type" : "Vld", "Direction" : "O"},
@@ -427,11 +427,11 @@ set RtlHierarchyInfo {[
 		"Loop" : [
 			{"Name" : "Col_Loop", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter10", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter10", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mux_53_8_1_1_U118", "Parent" : "0"},
-	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mux_53_8_1_1_U119", "Parent" : "0"},
-	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mux_53_8_1_1_U120", "Parent" : "0"},
-	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mux_53_8_1_1_U121", "Parent" : "0"},
-	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mux_53_8_1_1_U122", "Parent" : "0"},
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mux_53_8_1_1_U128", "Parent" : "0"},
+	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mux_53_8_1_1_U129", "Parent" : "0"},
+	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mux_53_8_1_1_U130", "Parent" : "0"},
+	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mux_53_8_1_1_U131", "Parent" : "0"},
+	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mux_53_8_1_1_U132", "Parent" : "0"},
 	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.flow_control_loop_pipe_sequential_init_U", "Parent" : "0"}]}
 
 
@@ -442,7 +442,7 @@ set ArgLastReadFirstWriteLatency {
 		mid_V_cast {Type I LastRead 0 FirstWrite -1}
 		bottom1_V_cast {Type I LastRead 0 FirstWrite -1}
 		bottom2_V_cast {Type I LastRead 0 FirstWrite -1}
-		gray_mat_data44 {Type I LastRead 1 FirstWrite -1}
+		gray_mat_data2 {Type I LastRead 1 FirstWrite -1}
 		row_ind_V_cast {Type I LastRead 0 FirstWrite -1}
 		buf_V_4 {Type IO LastRead 2 FirstWrite 1}
 		buf_V_3 {Type IO LastRead 2 FirstWrite 1}
@@ -450,7 +450,7 @@ set ArgLastReadFirstWriteLatency {
 		buf_V_1 {Type IO LastRead 2 FirstWrite 1}
 		buf_V {Type IO LastRead 2 FirstWrite 1}
 		cmp_i_i380_i {Type I LastRead 0 FirstWrite -1}
-		blurred_mat_data45 {Type O LastRead -1 FirstWrite 10}
+		blurred_mat_data3 {Type O LastRead -1 FirstWrite 10}
 		src_buf5_V_2_out {Type O LastRead -1 FirstWrite 9}
 		src_buf5_V_1_out {Type O LastRead -1 FirstWrite 9}
 		src_buf5_V_out {Type O LastRead -1 FirstWrite 9}
@@ -489,7 +489,7 @@ set Spec2ImplPortList {
 	mid_V_cast { ap_none {  { mid_V_cast in_data 0 3 } } }
 	bottom1_V_cast { ap_none {  { bottom1_V_cast in_data 0 3 } } }
 	bottom2_V_cast { ap_none {  { bottom2_V_cast in_data 0 3 } } }
-	gray_mat_data44 { ap_fifo {  { gray_mat_data44_dout fifo_port_we 0 8 }  { gray_mat_data44_num_data_valid fifo_status_num_data_valid 0 13 }  { gray_mat_data44_fifo_cap fifo_update 0 13 }  { gray_mat_data44_empty_n fifo_status 0 1 }  { gray_mat_data44_read fifo_data 1 1 } } }
+	gray_mat_data2 { ap_fifo {  { gray_mat_data2_dout fifo_port_we 0 8 }  { gray_mat_data2_num_data_valid fifo_status_num_data_valid 0 13 }  { gray_mat_data2_fifo_cap fifo_update 0 13 }  { gray_mat_data2_empty_n fifo_status 0 1 }  { gray_mat_data2_read fifo_data 1 1 } } }
 	row_ind_V_cast { ap_none {  { row_ind_V_cast in_data 0 3 } } }
 	buf_V_4 { ap_memory {  { buf_V_4_address0 mem_address 1 10 }  { buf_V_4_ce0 mem_ce 1 1 }  { buf_V_4_q0 in_data 0 8 }  { buf_V_4_address1 MemPortADDR2 1 10 }  { buf_V_4_ce1 MemPortCE2 1 1 }  { buf_V_4_we1 MemPortWE2 1 1 }  { buf_V_4_d1 MemPortDIN2 1 8 } } }
 	buf_V_3 { ap_memory {  { buf_V_3_address0 mem_address 1 10 }  { buf_V_3_ce0 mem_ce 1 1 }  { buf_V_3_q0 in_data 0 8 }  { buf_V_3_address1 MemPortADDR2 1 10 }  { buf_V_3_ce1 MemPortCE2 1 1 }  { buf_V_3_we1 MemPortWE2 1 1 }  { buf_V_3_d1 MemPortDIN2 1 8 } } }
@@ -497,7 +497,7 @@ set Spec2ImplPortList {
 	buf_V_1 { ap_memory {  { buf_V_1_address0 mem_address 1 10 }  { buf_V_1_ce0 mem_ce 1 1 }  { buf_V_1_q0 in_data 0 8 }  { buf_V_1_address1 MemPortADDR2 1 10 }  { buf_V_1_ce1 MemPortCE2 1 1 }  { buf_V_1_we1 MemPortWE2 1 1 }  { buf_V_1_d1 MemPortDIN2 1 8 } } }
 	buf_V { ap_memory {  { buf_V_address0 mem_address 1 10 }  { buf_V_ce0 mem_ce 1 1 }  { buf_V_q0 in_data 0 8 }  { buf_V_address1 MemPortADDR2 1 10 }  { buf_V_ce1 MemPortCE2 1 1 }  { buf_V_we1 MemPortWE2 1 1 }  { buf_V_d1 MemPortDIN2 1 8 } } }
 	cmp_i_i380_i { ap_none {  { cmp_i_i380_i in_data 0 1 } } }
-	blurred_mat_data45 { ap_fifo {  { blurred_mat_data45_din fifo_port_we 1 8 }  { blurred_mat_data45_num_data_valid fifo_status_num_data_valid 0 13 }  { blurred_mat_data45_fifo_cap fifo_update 0 13 }  { blurred_mat_data45_full_n fifo_status 0 1 }  { blurred_mat_data45_write fifo_data 1 1 } } }
+	blurred_mat_data3 { ap_fifo {  { blurred_mat_data3_din fifo_port_we 1 8 }  { blurred_mat_data3_num_data_valid fifo_status_num_data_valid 0 13 }  { blurred_mat_data3_fifo_cap fifo_update 0 13 }  { blurred_mat_data3_full_n fifo_status 0 1 }  { blurred_mat_data3_write fifo_data 1 1 } } }
 	src_buf5_V_2_out { ap_vld {  { src_buf5_V_2_out out_data 1 8 }  { src_buf5_V_2_out_ap_vld out_vld 1 1 } } }
 	src_buf5_V_1_out { ap_vld {  { src_buf5_V_1_out out_data 1 8 }  { src_buf5_V_1_out_ap_vld out_vld 1 1 } } }
 	src_buf5_V_out { ap_vld {  { src_buf5_V_out out_data 1 8 }  { src_buf5_V_out_ap_vld out_vld 1 1 } } }

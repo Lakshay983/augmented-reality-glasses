@@ -18,6 +18,8 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
     input [15:0] trans_out_cnt_5,
     input ap_done_reg_0,
     input ap_done_reg_1,
+    input ap_done_reg_2,
+    input ap_done_reg_3,
     output dl_detect_out,
     output reg [PROC_NUM - 1:0] origin,
     output token_clear);
@@ -298,7 +300,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                 0 : begin
                     case(index2)
                     1: begin
-                        if (~AESL_inst_accelerator_v2.unpack_U0.grp_unpack_Pipeline_VITIS_LOOP_48_2_fu_92.bgr_stream1_blk_n) begin
+                        if (~AESL_inst_accelerator_v2.unpack_U0.grp_unpack_Pipeline_VITIS_LOOP_84_2_fu_101.bgr_stream1_blk_n) begin
                             if (~AESL_inst_accelerator_v2.bgr_stream_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'accelerator_v2.bgr_stream_U' written by process 'accelerator_v2.pad_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path accelerator_v2.bgr_stream_U");
@@ -310,8 +312,16 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
                         end
+                        if (ap_done_reg_0 & AESL_inst_accelerator_v2.unpack_U0.ap_done & ~AESL_inst_accelerator_v2.pad_U0.ap_done) begin
+                            $display("//      Blocked by output sync logic with process : 'accelerator_v2.pad_U0'");
+                        end
                         if (~AESL_inst_accelerator_v2.start_for_pad_U0_U.if_full_n & AESL_inst_accelerator_v2.unpack_U0.ap_start & ~AESL_inst_accelerator_v2.unpack_U0.real_start & (trans_in_cnt_0 == trans_out_cnt_0) & ~AESL_inst_accelerator_v2.start_for_pad_U0_U.if_read) begin
                             $display("//      Blocked by full output start propagation FIFO 'accelerator_v2.start_for_pad_U0_U' read by process 'accelerator_v2.pad_U0',");
+                        end
+                    end
+                    2: begin
+                        if (ap_done_reg_0 & AESL_inst_accelerator_v2.unpack_U0.ap_done & ~AESL_inst_accelerator_v2.process_pixels_U0.ap_done) begin
+                            $display("//      Blocked by output sync logic with process : 'accelerator_v2.process_pixels_U0'");
                         end
                     end
                     7: begin
@@ -324,7 +334,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                 1 : begin
                     case(index2)
                     0: begin
-                        if (~AESL_inst_accelerator_v2.pad_U0.grp_pad_Pipeline_VITIS_LOOP_79_1_VITIS_LOOP_80_2_fu_329.bgr_stream1_blk_n) begin
+                        if (~AESL_inst_accelerator_v2.pad_U0.grp_pad_Pipeline_VITIS_LOOP_133_1_VITIS_LOOP_134_2_fu_348.bgr_stream1_blk_n) begin
                             if (~AESL_inst_accelerator_v2.bgr_stream_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'accelerator_v2.bgr_stream_U' written by process 'accelerator_v2.unpack_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path accelerator_v2.bgr_stream_U");
@@ -335,6 +345,9 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                                 $fdisplay(fp, "Dependence_Channel_path accelerator_v2.bgr_stream_U");
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
+                        end
+                        if (ap_done_reg_1 & AESL_inst_accelerator_v2.pad_U0.ap_done & ~AESL_inst_accelerator_v2.unpack_U0.ap_done) begin
+                            $display("//      Blocked by output sync logic with process : 'accelerator_v2.unpack_U0'");
                         end
                         if (~AESL_inst_accelerator_v2.start_for_pad_U0_U.if_empty_n & AESL_inst_accelerator_v2.pad_U0.ap_idle & ~AESL_inst_accelerator_v2.start_for_pad_U0_U.if_write) begin
                             $display("//      Blocked by missing 'ap_start' from start propagation FIFO 'accelerator_v2.start_for_pad_U0_U' written by process 'accelerator_v2.unpack_U0',");
@@ -368,6 +381,11 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                             end
                         end
                     end
+                    7: begin
+                        if (ap_done_reg_1 & AESL_inst_accelerator_v2.pad_U0.ap_done & ~AESL_inst_accelerator_v2.repack_U0.ap_done) begin
+                            $display("//      Blocked by output sync logic with process : 'accelerator_v2.repack_U0'");
+                        end
+                    end
                     endcase
                 end
                 2 : begin
@@ -384,6 +402,9 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                                 $fdisplay(fp, "Dependence_Channel_path accelerator_v2.padded_stream_U");
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
+                        end
+                        if (ap_done_reg_2 & AESL_inst_accelerator_v2.process_pixels_U0.ap_done & ~AESL_inst_accelerator_v2.pad_U0.ap_done) begin
+                            $display("//      Blocked by output sync logic with process : 'accelerator_v2.pad_U0'");
                         end
                         if (~AESL_inst_accelerator_v2.start_for_process_pixels_U0_U.if_empty_n & AESL_inst_accelerator_v2.process_pixels_U0.ap_idle & ~AESL_inst_accelerator_v2.start_for_process_pixels_U0_U.if_write) begin
                             $display("//      Blocked by missing 'ap_start' from start propagation FIFO 'accelerator_v2.start_for_process_pixels_U0_U' written by process 'accelerator_v2.pad_U0',");
@@ -402,8 +423,16 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
                         end
+                        if (ap_done_reg_2 & AESL_inst_accelerator_v2.process_pixels_U0.ap_done & ~AESL_inst_accelerator_v2.repack_U0.ap_done) begin
+                            $display("//      Blocked by output sync logic with process : 'accelerator_v2.repack_U0'");
+                        end
                         if (~AESL_inst_accelerator_v2.start_for_repack_U0_U.if_full_n & AESL_inst_accelerator_v2.process_pixels_U0.ap_start & ~AESL_inst_accelerator_v2.process_pixels_U0.real_start & (trans_in_cnt_5 == trans_out_cnt_5) & ~AESL_inst_accelerator_v2.start_for_repack_U0_U.if_read) begin
                             $display("//      Blocked by full output start propagation FIFO 'accelerator_v2.start_for_repack_U0_U' read by process 'accelerator_v2.repack_U0',");
+                        end
+                    end
+                    0: begin
+                        if (ap_done_reg_2 & AESL_inst_accelerator_v2.process_pixels_U0.ap_done & ~AESL_inst_accelerator_v2.unpack_U0.ap_done) begin
+                            $display("//      Blocked by output sync logic with process : 'accelerator_v2.unpack_U0'");
                         end
                     end
                     endcase
@@ -425,7 +454,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                         end
                     end
                     4: begin
-                        if (~AESL_inst_accelerator_v2.process_pixels_U0.stream_to_mat_U0.bgr_mat_data43_blk_n) begin
+                        if (~AESL_inst_accelerator_v2.process_pixels_U0.stream_to_mat_U0.bgr_mat_data1_blk_n) begin
                             if (~AESL_inst_accelerator_v2.process_pixels_U0.bgr_mat_data_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'accelerator_v2.process_pixels_U0.bgr_mat_data_U' written by process 'accelerator_v2.process_pixels_U0.bgr2gray_9_0_484_644_1_3220_3220_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path accelerator_v2.process_pixels_U0.bgr_mat_data_U");
@@ -446,7 +475,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                 4 : begin
                     case(index2)
                     3: begin
-                        if (~AESL_inst_accelerator_v2.process_pixels_U0.bgr2gray_9_0_484_644_1_3220_3220_U0.grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38.bgr_mat_data43_blk_n) begin
+                        if (~AESL_inst_accelerator_v2.process_pixels_U0.bgr2gray_9_0_484_644_1_3220_3220_U0.grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38.bgr_mat_data1_blk_n) begin
                             if (~AESL_inst_accelerator_v2.process_pixels_U0.bgr_mat_data_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'accelerator_v2.process_pixels_U0.bgr_mat_data_U' written by process 'accelerator_v2.process_pixels_U0.stream_to_mat_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path accelerator_v2.process_pixels_U0.bgr_mat_data_U");
@@ -463,7 +492,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                         end
                     end
                     5: begin
-                        if (~AESL_inst_accelerator_v2.process_pixels_U0.bgr2gray_9_0_484_644_1_3220_3220_U0.grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38.gray_mat_data44_blk_n) begin
+                        if (~AESL_inst_accelerator_v2.process_pixels_U0.bgr2gray_9_0_484_644_1_3220_3220_U0.grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38.gray_mat_data2_blk_n) begin
                             if (~AESL_inst_accelerator_v2.process_pixels_U0.gray_mat_data_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'accelerator_v2.process_pixels_U0.gray_mat_data_U' written by process 'accelerator_v2.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_3220_3220_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path accelerator_v2.process_pixels_U0.gray_mat_data_U");
@@ -484,7 +513,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                 5 : begin
                     case(index2)
                     4: begin
-                        if (~AESL_inst_accelerator_v2.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_3220_3220_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16.grp_xFGaussianFilter5x5_Pipeline_Read_Row2_Loop_fu_382.gray_mat_data44_blk_n) begin
+                        if (~AESL_inst_accelerator_v2.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_3220_3220_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_389.gray_mat_data2_blk_n) begin
                             if (~AESL_inst_accelerator_v2.process_pixels_U0.gray_mat_data_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'accelerator_v2.process_pixels_U0.gray_mat_data_U' written by process 'accelerator_v2.process_pixels_U0.bgr2gray_9_0_484_644_1_3220_3220_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path accelerator_v2.process_pixels_U0.gray_mat_data_U");
@@ -498,7 +527,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                         end
                     end
                     6: begin
-                        if (~AESL_inst_accelerator_v2.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_3220_3220_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_389.blurred_mat_data45_blk_n) begin
+                        if (~AESL_inst_accelerator_v2.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_3220_3220_U0.grp_xFGaussianFilter5x5_0_484_644_1_0_1_3220_3220_1_644_false_s_fu_16.grp_xFGaussianFilter5x5_Pipeline_Col_Loop_fu_389.blurred_mat_data3_blk_n) begin
                             if (~AESL_inst_accelerator_v2.process_pixels_U0.blurred_mat_data_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'accelerator_v2.process_pixels_U0.blurred_mat_data_U' written by process 'accelerator_v2.process_pixels_U0.mat_to_stream_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path accelerator_v2.process_pixels_U0.blurred_mat_data_U");
@@ -516,7 +545,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                 6 : begin
                     case(index2)
                     5: begin
-                        if (~AESL_inst_accelerator_v2.process_pixels_U0.mat_to_stream_U0.blurred_mat_data45_blk_n) begin
+                        if (~AESL_inst_accelerator_v2.process_pixels_U0.mat_to_stream_U0.blurred_mat_data3_blk_n) begin
                             if (~AESL_inst_accelerator_v2.process_pixels_U0.blurred_mat_data_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'accelerator_v2.process_pixels_U0.blurred_mat_data_U' written by process 'accelerator_v2.process_pixels_U0.GaussianBlur_5_1_0_484_644_1_3220_3220_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path accelerator_v2.process_pixels_U0.blurred_mat_data_U");
@@ -551,7 +580,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                 7 : begin
                     case(index2)
                     2: begin
-                        if (~AESL_inst_accelerator_v2.repack_U0.grp_repack_Pipeline_VITIS_LOOP_195_2_fu_134.gray_stream3_blk_n) begin
+                        if (~AESL_inst_accelerator_v2.repack_U0.grp_repack_Pipeline_VITIS_LOOP_265_2_fu_135.gray_stream3_blk_n) begin
                             if (~AESL_inst_accelerator_v2.gray_stream_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'accelerator_v2.gray_stream_U' written by process 'accelerator_v2.process_pixels_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path accelerator_v2.gray_stream_U");
@@ -563,12 +592,15 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
                         end
+                        if (ap_done_reg_3 & AESL_inst_accelerator_v2.repack_U0.ap_done & ~AESL_inst_accelerator_v2.process_pixels_U0.ap_done) begin
+                            $display("//      Blocked by output sync logic with process : 'accelerator_v2.process_pixels_U0'");
+                        end
                         if (~AESL_inst_accelerator_v2.start_for_repack_U0_U.if_empty_n & AESL_inst_accelerator_v2.repack_U0.ap_idle & ~AESL_inst_accelerator_v2.start_for_repack_U0_U.if_write) begin
                             $display("//      Blocked by missing 'ap_start' from start propagation FIFO 'accelerator_v2.start_for_repack_U0_U' written by process 'accelerator_v2.process_pixels_U0',");
                         end
                     end
                     6: begin
-                        if (~AESL_inst_accelerator_v2.repack_U0.grp_repack_Pipeline_VITIS_LOOP_195_2_fu_134.gray_stream3_blk_n) begin
+                        if (~AESL_inst_accelerator_v2.repack_U0.grp_repack_Pipeline_VITIS_LOOP_265_2_fu_135.gray_stream3_blk_n) begin
                             if (~AESL_inst_accelerator_v2.gray_stream_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'accelerator_v2.gray_stream_U' written by process 'accelerator_v2.process_pixels_U0.mat_to_stream_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path accelerator_v2.gray_stream_U");
@@ -582,8 +614,13 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                         end
                     end
                     0: begin
-                        if (ap_done_reg_1 & AESL_inst_accelerator_v2.repack_U0.ap_done & ~AESL_inst_accelerator_v2.unpack_U0.ap_done) begin
+                        if (ap_done_reg_3 & AESL_inst_accelerator_v2.repack_U0.ap_done & ~AESL_inst_accelerator_v2.unpack_U0.ap_done) begin
                             $display("//      Blocked by output sync logic with process : 'accelerator_v2.unpack_U0'");
+                        end
+                    end
+                    1: begin
+                        if (ap_done_reg_3 & AESL_inst_accelerator_v2.repack_U0.ap_done & ~AESL_inst_accelerator_v2.pad_U0.ap_done) begin
+                            $display("//      Blocked by output sync logic with process : 'accelerator_v2.pad_U0'");
                         end
                     end
                     endcase

@@ -18,16 +18,16 @@ module accelerator_v2_bgr2gray_9_0_484_644_1_3220_3220_s (
         ap_ready,
         start_out,
         start_write,
-        bgr_mat_data43_dout,
-        bgr_mat_data43_num_data_valid,
-        bgr_mat_data43_fifo_cap,
-        bgr_mat_data43_empty_n,
-        bgr_mat_data43_read,
-        gray_mat_data44_din,
-        gray_mat_data44_num_data_valid,
-        gray_mat_data44_fifo_cap,
-        gray_mat_data44_full_n,
-        gray_mat_data44_write
+        bgr_mat_data1_dout,
+        bgr_mat_data1_num_data_valid,
+        bgr_mat_data1_fifo_cap,
+        bgr_mat_data1_empty_n,
+        bgr_mat_data1_read,
+        gray_mat_data2_din,
+        gray_mat_data2_num_data_valid,
+        gray_mat_data2_fifo_cap,
+        gray_mat_data2_full_n,
+        gray_mat_data2_write
 );
 
 parameter    ap_ST_fsm_state1 = 3'd1;
@@ -44,22 +44,22 @@ output   ap_idle;
 output   ap_ready;
 output   start_out;
 output   start_write;
-input  [23:0] bgr_mat_data43_dout;
-input  [12:0] bgr_mat_data43_num_data_valid;
-input  [12:0] bgr_mat_data43_fifo_cap;
-input   bgr_mat_data43_empty_n;
-output   bgr_mat_data43_read;
-output  [7:0] gray_mat_data44_din;
-input  [12:0] gray_mat_data44_num_data_valid;
-input  [12:0] gray_mat_data44_fifo_cap;
-input   gray_mat_data44_full_n;
-output   gray_mat_data44_write;
+input  [23:0] bgr_mat_data1_dout;
+input  [12:0] bgr_mat_data1_num_data_valid;
+input  [12:0] bgr_mat_data1_fifo_cap;
+input   bgr_mat_data1_empty_n;
+output   bgr_mat_data1_read;
+output  [7:0] gray_mat_data2_din;
+input  [12:0] gray_mat_data2_num_data_valid;
+input  [12:0] gray_mat_data2_fifo_cap;
+input   gray_mat_data2_full_n;
+output   gray_mat_data2_write;
 
 reg ap_done;
 reg ap_idle;
 reg start_write;
-reg bgr_mat_data43_read;
-reg gray_mat_data44_write;
+reg bgr_mat_data1_read;
+reg gray_mat_data2_write;
 
 reg    real_start;
 reg    start_once_reg;
@@ -71,9 +71,9 @@ wire    grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38_ap_start;
 wire    grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38_ap_done;
 wire    grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38_ap_idle;
 wire    grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38_ap_ready;
-wire    grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38_bgr_mat_data43_read;
-wire   [7:0] grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38_gray_mat_data44_din;
-wire    grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38_gray_mat_data44_write;
+wire    grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38_bgr_mat_data1_read;
+wire   [7:0] grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38_gray_mat_data2_din;
+wire    grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38_gray_mat_data2_write;
 reg    grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38_ap_start_reg;
 wire    ap_CS_fsm_state2;
 wire   [0:0] icmp_ln5576_fu_54_p2;
@@ -102,16 +102,16 @@ accelerator_v2_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop grp_bgr2gray
     .ap_done(grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38_ap_done),
     .ap_idle(grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38_ap_idle),
     .ap_ready(grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38_ap_ready),
-    .bgr_mat_data43_dout(bgr_mat_data43_dout),
-    .bgr_mat_data43_num_data_valid(13'd0),
-    .bgr_mat_data43_fifo_cap(13'd0),
-    .bgr_mat_data43_empty_n(bgr_mat_data43_empty_n),
-    .bgr_mat_data43_read(grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38_bgr_mat_data43_read),
-    .gray_mat_data44_din(grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38_gray_mat_data44_din),
-    .gray_mat_data44_num_data_valid(13'd0),
-    .gray_mat_data44_fifo_cap(13'd0),
-    .gray_mat_data44_full_n(gray_mat_data44_full_n),
-    .gray_mat_data44_write(grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38_gray_mat_data44_write)
+    .bgr_mat_data1_dout(bgr_mat_data1_dout),
+    .bgr_mat_data1_num_data_valid(13'd0),
+    .bgr_mat_data1_fifo_cap(13'd0),
+    .bgr_mat_data1_empty_n(bgr_mat_data1_empty_n),
+    .bgr_mat_data1_read(grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38_bgr_mat_data1_read),
+    .gray_mat_data2_din(grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38_gray_mat_data2_din),
+    .gray_mat_data2_num_data_valid(13'd0),
+    .gray_mat_data2_fifo_cap(13'd0),
+    .gray_mat_data2_full_n(gray_mat_data2_full_n),
+    .gray_mat_data2_write(grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38_gray_mat_data2_write)
 );
 
 always @ (posedge ap_clk) begin
@@ -202,17 +202,17 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state3)) begin
-        bgr_mat_data43_read = grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38_bgr_mat_data43_read;
+        bgr_mat_data1_read = grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38_bgr_mat_data1_read;
     end else begin
-        bgr_mat_data43_read = 1'b0;
+        bgr_mat_data1_read = 1'b0;
     end
 end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state3)) begin
-        gray_mat_data44_write = grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38_gray_mat_data44_write;
+        gray_mat_data2_write = grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38_gray_mat_data2_write;
     end else begin
-        gray_mat_data44_write = 1'b0;
+        gray_mat_data2_write = 1'b0;
     end
 end
 
@@ -281,7 +281,7 @@ end
 
 assign ap_ready = internal_ap_ready;
 
-assign gray_mat_data44_din = grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38_gray_mat_data44_din;
+assign gray_mat_data2_din = grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38_gray_mat_data2_din;
 
 assign grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38_ap_start = grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38_ap_start_reg;
 

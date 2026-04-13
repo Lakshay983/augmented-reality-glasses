@@ -22,17 +22,17 @@
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>317003</Best-caseLatency>
-<Average-caseLatency>471563</Average-caseLatency>
-<Worst-caseLatency>625643</Worst-caseLatency>
+<Best-caseLatency>317007</Best-caseLatency>
+<Average-caseLatency>471567</Average-caseLatency>
+<Worst-caseLatency>625647</Worst-caseLatency>
 <Best-caseRealTimeLatency>3.170 ms</Best-caseRealTimeLatency>
 <Average-caseRealTimeLatency>4.716 ms</Average-caseRealTimeLatency>
 <Worst-caseRealTimeLatency>6.256 ms</Worst-caseRealTimeLatency>
-<Interval-min>317003</Interval-min>
-<Interval-max>625643</Interval-max>
+<Interval-min>317007</Interval-min>
+<Interval-max>625647</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
-<VITIS_LOOP_86_3>
+<VITIS_LOOP_141_3>
 <Slack>7.30</Slack>
 <TripCount>2</TripCount>
 <Latency>1296</Latency>
@@ -40,8 +40,8 @@
 <IterationLatency>648</IterationLatency>
 <InstanceList>
 </InstanceList>
-</VITIS_LOOP_86_3>
-<VITIS_LOOP_97_5>
+</VITIS_LOOP_141_3>
+<VITIS_LOOP_153_9>
 <Slack>7.30</Slack>
 <TripCount>480</TripCount>
 <Latency>
@@ -64,24 +64,24 @@
 </IterationLatency>
 <InstanceList>
 </InstanceList>
-</VITIS_LOOP_97_5>
-<VITIS_LOOP_118_8>
+</VITIS_LOOP_153_9>
+<VITIS_LOOP_175_16>
 <Slack>7.30</Slack>
 <TripCount>2</TripCount>
-<Latency>1296</Latency>
-<AbsoluteTimeLatency>12960</AbsoluteTimeLatency>
-<IterationLatency>648</IterationLatency>
+<Latency>1300</Latency>
+<AbsoluteTimeLatency>13000</AbsoluteTimeLatency>
+<IterationLatency>650</IterationLatency>
 <InstanceList>
 </InstanceList>
-</VITIS_LOOP_118_8>
+</VITIS_LOOP_175_16>
 </SummaryOfLoopLatency>
 </PerformanceEstimates>
 
 <AreaEstimates>
 <Resources>
 <BRAM_18K>8</BRAM_18K>
-<FF>734</FF>
-<LUT>1470</LUT>
+<FF>692</FF>
+<LUT>1936</LUT>
 <DSP>0</DSP>
 <URAM>0</URAM>
 </Resources>
@@ -310,6 +310,28 @@
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_fifo</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>pad_fifo_breath</name>
+<Object>pad_fifo_breath</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>ap_vld</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>pad_fifo_breath_ap_vld</name>
+<Object>pad_fifo_breath</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>ap_vld</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>out</Dir>
 <Bits>1</Bits>

@@ -15,16 +15,18 @@ module accelerator_v2_mat_to_stream (
         ap_continue,
         ap_idle,
         ap_ready,
-        blurred_mat_data45_dout,
-        blurred_mat_data45_num_data_valid,
-        blurred_mat_data45_fifo_cap,
-        blurred_mat_data45_empty_n,
-        blurred_mat_data45_read,
+        blurred_mat_data3_dout,
+        blurred_mat_data3_num_data_valid,
+        blurred_mat_data3_fifo_cap,
+        blurred_mat_data3_empty_n,
+        blurred_mat_data3_read,
         gray_stream3_din,
         gray_stream3_num_data_valid,
         gray_stream3_fifo_cap,
         gray_stream3_full_n,
-        gray_stream3_write
+        gray_stream3_write,
+        gray_fifo_breath,
+        gray_fifo_breath_ap_vld
 );
 
 parameter    ap_ST_fsm_pp0_stage0 = 1'd1;
@@ -36,20 +38,24 @@ output   ap_done;
 input   ap_continue;
 output   ap_idle;
 output   ap_ready;
-input  [7:0] blurred_mat_data45_dout;
-input  [12:0] blurred_mat_data45_num_data_valid;
-input  [12:0] blurred_mat_data45_fifo_cap;
-input   blurred_mat_data45_empty_n;
-output   blurred_mat_data45_read;
+input  [7:0] blurred_mat_data3_dout;
+input  [12:0] blurred_mat_data3_num_data_valid;
+input  [12:0] blurred_mat_data3_fifo_cap;
+input   blurred_mat_data3_empty_n;
+output   blurred_mat_data3_read;
 output  [7:0] gray_stream3_din;
 input  [12:0] gray_stream3_num_data_valid;
 input  [12:0] gray_stream3_fifo_cap;
 input   gray_stream3_full_n;
 output   gray_stream3_write;
+output  [7:0] gray_fifo_breath;
+output   gray_fifo_breath_ap_vld;
 
 reg ap_idle;
-reg blurred_mat_data45_read;
+reg blurred_mat_data3_read;
 reg gray_stream3_write;
+reg[7:0] gray_fifo_breath;
+reg gray_fifo_breath_ap_vld;
 
 (* fsm_encoding = "none" *) reg   [0:0] ap_CS_fsm;
 wire    ap_CS_fsm_pp0_stage0;
@@ -60,25 +66,41 @@ reg    ap_done_reg;
 reg    ap_block_state1_pp0_stage0_iter0;
 reg    ap_block_state2_pp0_stage0_iter1;
 reg    ap_block_pp0_stage0_subdone;
-wire   [0:0] icmp_ln152_fu_64_p2;
+wire   [0:0] icmp_ln216_fu_114_p2;
 reg    ap_condition_exit_pp0_iter0_stage0;
 wire    ap_loop_exit_ready;
 reg    ap_ready_int;
-reg    blurred_mat_data45_blk_n;
+reg    blurred_mat_data3_blk_n;
 wire    ap_block_pp0_stage0;
 reg    gray_stream3_blk_n;
-reg   [18:0] indvar_flatten_fu_38;
-wire   [18:0] add_ln152_fu_70_p2;
+reg   [7:0] gray_drain_V_1_fu_54;
+wire   [7:0] gray_drain_V_3_fu_168_p2;
 wire    ap_loop_init;
+reg    ap_loop_init_pp0_iter1_reg;
 reg    ap_block_pp0_stage0_11001;
+reg   [7:0] ap_sig_allocacmp_gray_drain_V_1_load;
+reg   [9:0] c_03_fu_58;
+wire   [9:0] c_fu_181_p3;
+reg   [9:0] ap_sig_allocacmp_c_03_load;
+reg   [7:0] gray_drain_V_fu_62;
+wire   [7:0] select_ln216_fu_160_p3;
+reg   [7:0] ap_sig_allocacmp_gray_drain_V_load;
+reg   [18:0] indvar_flatten_fu_66;
+wire   [18:0] add_ln216_fu_120_p2;
 reg   [18:0] ap_sig_allocacmp_indvar_flatten_load;
 reg    ap_block_pp0_stage0_01001;
+reg   [7:0] gray_fifo_breath_preg;
+wire   [0:0] icmp_ln217_fu_146_p2;
+wire   [7:0] add_ln217_fu_140_p2;
+wire   [7:0] select_ln215_fu_152_p3;
+wire   [9:0] add_ln217_1_fu_175_p2;
 wire    ap_continue_int;
 reg    ap_done_int;
 reg   [0:0] ap_NS_fsm;
 wire    ap_enable_pp0;
 wire    ap_start_int;
-reg    ap_condition_87;
+reg    ap_condition_90;
+reg    ap_condition_111;
 wire    ap_ce_reg;
 
 // power-on initialization
@@ -86,6 +108,7 @@ initial begin
 #0 ap_CS_fsm = 1'd1;
 #0 ap_enable_reg_pp0_iter1 = 1'b0;
 #0 ap_done_reg = 1'b0;
+#0 gray_fifo_breath_preg = 8'd0;
 end
 
 accelerator_v2_flow_control_loop_pipe flow_control_loop_pipe_U(
@@ -137,17 +160,51 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_condition_87)) begin
-        if ((icmp_ln152_fu_64_p2 == 1'd0)) begin
-            indvar_flatten_fu_38 <= add_ln152_fu_70_p2;
-        end else if ((ap_loop_init == 1'b1)) begin
-            indvar_flatten_fu_38 <= 19'd0;
+    if (ap_rst == 1'b1) begin
+        gray_fifo_breath_preg <= 8'd0;
+    end else begin
+        if (((1'b0 == ap_block_pp0_stage0_01001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+            gray_fifo_breath_preg <= gray_drain_V_3_fu_168_p2;
         end
     end
 end
 
+always @ (posedge ap_clk) begin
+    if ((1'b1 == ap_condition_90)) begin
+        c_03_fu_58 <= c_fu_181_p3;
+    end
+end
+
+always @ (posedge ap_clk) begin
+if ((1'b1 == ap_condition_90)) begin
+    gray_drain_V_1_fu_54 <= gray_drain_V_3_fu_168_p2;
+end
+end
+
+always @ (posedge ap_clk) begin
+if ((1'b1 == ap_condition_90)) begin
+    gray_drain_V_fu_62 <= select_ln216_fu_160_p3;
+end
+end
+
+always @ (posedge ap_clk) begin
+if ((1'b1 == ap_condition_111)) begin
+    if ((icmp_ln216_fu_114_p2 == 1'd0)) begin
+        indvar_flatten_fu_66 <= add_ln216_fu_120_p2;
+    end else if ((ap_loop_init == 1'b1)) begin
+        indvar_flatten_fu_66 <= 19'd0;
+    end
+end
+end
+
+always @ (posedge ap_clk) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        ap_loop_init_pp0_iter1_reg <= ap_loop_init;
+    end
+end
+
 always @ (*) begin
-    if (((icmp_ln152_fu_64_p2 == 1'd1) & (1'b0 == ap_block_pp0_stage0_subdone) & (ap_start_int == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if (((icmp_ln216_fu_114_p2 == 1'd1) & (1'b0 == ap_block_pp0_stage0_subdone) & (ap_start_int == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         ap_condition_exit_pp0_iter0_stage0 = 1'b1;
     end else begin
         ap_condition_exit_pp0_iter0_stage0 = 1'b0;
@@ -187,26 +244,66 @@ always @ (*) begin
 end
 
 always @ (*) begin
+    if (((ap_loop_init_pp0_iter1_reg == 1'b1) & (1'b0 == ap_block_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        ap_sig_allocacmp_c_03_load = 10'd0;
+    end else begin
+        ap_sig_allocacmp_c_03_load = c_03_fu_58;
+    end
+end
+
+always @ (*) begin
+    if (((ap_loop_init_pp0_iter1_reg == 1'b1) & (1'b0 == ap_block_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        ap_sig_allocacmp_gray_drain_V_1_load = 8'd0;
+    end else begin
+        ap_sig_allocacmp_gray_drain_V_1_load = gray_drain_V_1_fu_54;
+    end
+end
+
+always @ (*) begin
+    if (((ap_loop_init_pp0_iter1_reg == 1'b1) & (1'b0 == ap_block_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        ap_sig_allocacmp_gray_drain_V_load = 8'd0;
+    end else begin
+        ap_sig_allocacmp_gray_drain_V_load = gray_drain_V_fu_62;
+    end
+end
+
+always @ (*) begin
     if (((ap_loop_init == 1'b1) & (1'b0 == ap_block_pp0_stage0) & (ap_start_int == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         ap_sig_allocacmp_indvar_flatten_load = 19'd0;
     end else begin
-        ap_sig_allocacmp_indvar_flatten_load = indvar_flatten_fu_38;
+        ap_sig_allocacmp_indvar_flatten_load = indvar_flatten_fu_66;
     end
 end
 
 always @ (*) begin
     if (((1'b0 == ap_block_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        blurred_mat_data45_blk_n = blurred_mat_data45_empty_n;
+        blurred_mat_data3_blk_n = blurred_mat_data3_empty_n;
     end else begin
-        blurred_mat_data45_blk_n = 1'b1;
+        blurred_mat_data3_blk_n = 1'b1;
     end
 end
 
 always @ (*) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        blurred_mat_data45_read = 1'b1;
+        blurred_mat_data3_read = 1'b1;
     end else begin
-        blurred_mat_data45_read = 1'b0;
+        blurred_mat_data3_read = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((1'b0 == ap_block_pp0_stage0_01001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        gray_fifo_breath = gray_drain_V_3_fu_168_p2;
+    end else begin
+        gray_fifo_breath = gray_fifo_breath_preg;
+    end
+end
+
+always @ (*) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        gray_fifo_breath_ap_vld = 1'b1;
+    end else begin
+        gray_fifo_breath_ap_vld = 1'b0;
     end
 end
 
@@ -237,22 +334,26 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln152_fu_70_p2 = (ap_sig_allocacmp_indvar_flatten_load + 19'd1);
+assign add_ln216_fu_120_p2 = (ap_sig_allocacmp_indvar_flatten_load + 19'd1);
+
+assign add_ln217_1_fu_175_p2 = (ap_sig_allocacmp_c_03_load + 10'd1);
+
+assign add_ln217_fu_140_p2 = ($signed(ap_sig_allocacmp_gray_drain_V_load) + $signed(8'd132));
 
 assign ap_CS_fsm_pp0_stage0 = ap_CS_fsm[32'd0];
 
 assign ap_block_pp0_stage0 = ~(1'b1 == 1'b1);
 
 always @ (*) begin
-    ap_block_pp0_stage0_01001 = ((ap_done_reg == 1'b1) | ((ap_enable_reg_pp0_iter1 == 1'b1) & ((gray_stream3_full_n == 1'b0) | (blurred_mat_data45_empty_n == 1'b0))) | ((ap_done_reg == 1'b1) & (ap_start_int == 1'b1)));
+    ap_block_pp0_stage0_01001 = ((ap_done_reg == 1'b1) | ((ap_enable_reg_pp0_iter1 == 1'b1) & ((gray_stream3_full_n == 1'b0) | (blurred_mat_data3_empty_n == 1'b0))) | ((ap_done_reg == 1'b1) & (ap_start_int == 1'b1)));
 end
 
 always @ (*) begin
-    ap_block_pp0_stage0_11001 = ((ap_done_reg == 1'b1) | ((ap_enable_reg_pp0_iter1 == 1'b1) & ((gray_stream3_full_n == 1'b0) | (blurred_mat_data45_empty_n == 1'b0))) | ((ap_done_reg == 1'b1) & (ap_start_int == 1'b1)));
+    ap_block_pp0_stage0_11001 = ((ap_done_reg == 1'b1) | ((ap_enable_reg_pp0_iter1 == 1'b1) & ((gray_stream3_full_n == 1'b0) | (blurred_mat_data3_empty_n == 1'b0))) | ((ap_done_reg == 1'b1) & (ap_start_int == 1'b1)));
 end
 
 always @ (*) begin
-    ap_block_pp0_stage0_subdone = ((ap_done_reg == 1'b1) | ((ap_enable_reg_pp0_iter1 == 1'b1) & ((gray_stream3_full_n == 1'b0) | (blurred_mat_data45_empty_n == 1'b0))) | ((ap_done_reg == 1'b1) & (ap_start_int == 1'b1)));
+    ap_block_pp0_stage0_subdone = ((ap_done_reg == 1'b1) | ((ap_enable_reg_pp0_iter1 == 1'b1) & ((gray_stream3_full_n == 1'b0) | (blurred_mat_data3_empty_n == 1'b0))) | ((ap_done_reg == 1'b1) & (ap_start_int == 1'b1)));
 end
 
 always @ (*) begin
@@ -260,11 +361,15 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    ap_block_state2_pp0_stage0_iter1 = ((gray_stream3_full_n == 1'b0) | (blurred_mat_data45_empty_n == 1'b0));
+    ap_block_state2_pp0_stage0_iter1 = ((gray_stream3_full_n == 1'b0) | (blurred_mat_data3_empty_n == 1'b0));
 end
 
 always @ (*) begin
-    ap_condition_87 = ((1'b0 == ap_block_pp0_stage0_11001) & (ap_start_int == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0));
+    ap_condition_111 = ((1'b0 == ap_block_pp0_stage0_11001) & (ap_start_int == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0));
+end
+
+always @ (*) begin
+    ap_condition_90 = ((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0));
 end
 
 assign ap_enable_pp0 = (ap_idle_pp0 ^ 1'b1);
@@ -273,8 +378,18 @@ assign ap_enable_reg_pp0_iter0 = ap_start_int;
 
 assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
-assign gray_stream3_din = blurred_mat_data45_dout;
+assign c_fu_181_p3 = ((icmp_ln217_fu_146_p2[0:0] == 1'b1) ? 10'd1 : add_ln217_1_fu_175_p2);
 
-assign icmp_ln152_fu_64_p2 = ((ap_sig_allocacmp_indvar_flatten_load == 19'd311696) ? 1'b1 : 1'b0);
+assign gray_drain_V_3_fu_168_p2 = (select_ln215_fu_152_p3 + 8'd1);
+
+assign gray_stream3_din = blurred_mat_data3_dout;
+
+assign icmp_ln216_fu_114_p2 = ((ap_sig_allocacmp_indvar_flatten_load == 19'd311696) ? 1'b1 : 1'b0);
+
+assign icmp_ln217_fu_146_p2 = ((ap_sig_allocacmp_c_03_load == 10'd644) ? 1'b1 : 1'b0);
+
+assign select_ln215_fu_152_p3 = ((icmp_ln217_fu_146_p2[0:0] == 1'b1) ? add_ln217_fu_140_p2 : ap_sig_allocacmp_gray_drain_V_1_load);
+
+assign select_ln216_fu_160_p3 = ((icmp_ln217_fu_146_p2[0:0] == 1'b1) ? add_ln217_fu_140_p2 : ap_sig_allocacmp_gray_drain_V_load);
 
 endmodule //accelerator_v2_mat_to_stream

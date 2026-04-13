@@ -78,6 +78,12 @@ using namespace std;
 #define AUTOTB_TVOUT_in_breath "../tv/cdatafile/c.accelerator_v2.autotvout_in_breath.dat"
 #define AUTOTB_TVIN_out_breath "../tv/cdatafile/c.accelerator_v2.autotvin_out_breath.dat"
 #define AUTOTB_TVOUT_out_breath "../tv/cdatafile/c.accelerator_v2.autotvout_out_breath.dat"
+#define AUTOTB_TVIN_bgr_fifo_breath "../tv/cdatafile/c.accelerator_v2.autotvin_bgr_fifo_breath.dat"
+#define AUTOTB_TVOUT_bgr_fifo_breath "../tv/cdatafile/c.accelerator_v2.autotvout_bgr_fifo_breath.dat"
+#define AUTOTB_TVIN_pad_fifo_breath "../tv/cdatafile/c.accelerator_v2.autotvin_pad_fifo_breath.dat"
+#define AUTOTB_TVOUT_pad_fifo_breath "../tv/cdatafile/c.accelerator_v2.autotvout_pad_fifo_breath.dat"
+#define AUTOTB_TVIN_gray_fifo_breath "../tv/cdatafile/c.accelerator_v2.autotvin_gray_fifo_breath.dat"
+#define AUTOTB_TVOUT_gray_fifo_breath "../tv/cdatafile/c.accelerator_v2.autotvout_gray_fifo_breath.dat"
 
 
 // tvout file define:
@@ -97,6 +103,9 @@ using namespace std;
 #define AUTOTB_TVOUT_PC_out_stream_V_dest_V "../tv/rtldatafile/rtl.accelerator_v2.autotvout_out_stream_V_dest_V.dat"
 #define AUTOTB_TVOUT_PC_in_breath "../tv/rtldatafile/rtl.accelerator_v2.autotvout_in_breath.dat"
 #define AUTOTB_TVOUT_PC_out_breath "../tv/rtldatafile/rtl.accelerator_v2.autotvout_out_breath.dat"
+#define AUTOTB_TVOUT_PC_bgr_fifo_breath "../tv/rtldatafile/rtl.accelerator_v2.autotvout_bgr_fifo_breath.dat"
+#define AUTOTB_TVOUT_PC_pad_fifo_breath "../tv/rtldatafile/rtl.accelerator_v2.autotvout_pad_fifo_breath.dat"
+#define AUTOTB_TVOUT_PC_gray_fifo_breath "../tv/rtldatafile/rtl.accelerator_v2.autotvout_gray_fifo_breath.dat"
 
 
 namespace hls::sim
@@ -1021,10 +1030,10 @@ namespace hls::sim
 
 
 extern "C"
-void accelerator_v2_hw_stub_wrapper(void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*);
+void accelerator_v2_hw_stub_wrapper(void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*);
 
 extern "C"
-void apatb_accelerator_v2_hw(void* __xlx_apatb_param_in_stream_V_data_V, void* __xlx_apatb_param_in_stream_V_keep_V, void* __xlx_apatb_param_in_stream_V_strb_V, void* __xlx_apatb_param_in_stream_V_user_V, void* __xlx_apatb_param_in_stream_V_last_V, void* __xlx_apatb_param_in_stream_V_id_V, void* __xlx_apatb_param_in_stream_V_dest_V, void* __xlx_apatb_param_out_stream_V_data_V, void* __xlx_apatb_param_out_stream_V_keep_V, void* __xlx_apatb_param_out_stream_V_strb_V, void* __xlx_apatb_param_out_stream_V_user_V, void* __xlx_apatb_param_out_stream_V_last_V, void* __xlx_apatb_param_out_stream_V_id_V, void* __xlx_apatb_param_out_stream_V_dest_V, void* __xlx_apatb_param_in_breath, void* __xlx_apatb_param_out_breath)
+void apatb_accelerator_v2_hw(void* __xlx_apatb_param_in_stream_V_data_V, void* __xlx_apatb_param_in_stream_V_keep_V, void* __xlx_apatb_param_in_stream_V_strb_V, void* __xlx_apatb_param_in_stream_V_user_V, void* __xlx_apatb_param_in_stream_V_last_V, void* __xlx_apatb_param_in_stream_V_id_V, void* __xlx_apatb_param_in_stream_V_dest_V, void* __xlx_apatb_param_out_stream_V_data_V, void* __xlx_apatb_param_out_stream_V_keep_V, void* __xlx_apatb_param_out_stream_V_strb_V, void* __xlx_apatb_param_out_stream_V_user_V, void* __xlx_apatb_param_out_stream_V_last_V, void* __xlx_apatb_param_out_stream_V_id_V, void* __xlx_apatb_param_out_stream_V_dest_V, void* __xlx_apatb_param_in_breath, void* __xlx_apatb_param_out_breath, void* __xlx_apatb_param_bgr_fifo_breath, void* __xlx_apatb_param_pad_fifo_breath, void* __xlx_apatb_param_gray_fifo_breath)
 {
   static hls::sim::Stream<hls::sim::Byte<16>> port0 {
     .width = 128,
@@ -1224,7 +1233,7 @@ void apatb_accelerator_v2_hw(void* __xlx_apatb_param_in_stream_V_data_V, void* _
 
   static hls::sim::Register port14 {
     .name = "in_breath",
-    .width = 1,
+    .width = 8,
 #ifdef POST_CHECK
     .reader = new hls::sim::Reader(AUTOTB_TVOUT_PC_in_breath),
 #else
@@ -1236,7 +1245,7 @@ void apatb_accelerator_v2_hw(void* __xlx_apatb_param_in_stream_V_data_V, void* _
 
   static hls::sim::Register port15 {
     .name = "out_breath",
-    .width = 1,
+    .width = 8,
 #ifdef POST_CHECK
     .reader = new hls::sim::Reader(AUTOTB_TVOUT_PC_out_breath),
 #else
@@ -1246,12 +1255,51 @@ void apatb_accelerator_v2_hw(void* __xlx_apatb_param_in_stream_V_data_V, void* _
   };
   port15.param = __xlx_apatb_param_out_breath;
 
+  static hls::sim::Register port16 {
+    .name = "bgr_fifo_breath",
+    .width = 8,
+#ifdef POST_CHECK
+    .reader = new hls::sim::Reader(AUTOTB_TVOUT_PC_bgr_fifo_breath),
+#else
+    .owriter = new hls::sim::Writer(AUTOTB_TVOUT_bgr_fifo_breath),
+    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_bgr_fifo_breath),
+#endif
+  };
+  port16.param = __xlx_apatb_param_bgr_fifo_breath;
+
+  static hls::sim::Register port17 {
+    .name = "pad_fifo_breath",
+    .width = 8,
+#ifdef POST_CHECK
+    .reader = new hls::sim::Reader(AUTOTB_TVOUT_PC_pad_fifo_breath),
+#else
+    .owriter = new hls::sim::Writer(AUTOTB_TVOUT_pad_fifo_breath),
+    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_pad_fifo_breath),
+#endif
+  };
+  port17.param = __xlx_apatb_param_pad_fifo_breath;
+
+  static hls::sim::Register port18 {
+    .name = "gray_fifo_breath",
+    .width = 8,
+#ifdef POST_CHECK
+    .reader = new hls::sim::Reader(AUTOTB_TVOUT_PC_gray_fifo_breath),
+#else
+    .owriter = new hls::sim::Writer(AUTOTB_TVOUT_gray_fifo_breath),
+    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_gray_fifo_breath),
+#endif
+  };
+  port18.param = __xlx_apatb_param_gray_fifo_breath;
+
   refine_signal_handler();
   try {
 #ifdef POST_CHECK
     CodeState = ENTER_WRAPC_PC;
     check(port14);
     check(port15);
+    check(port16);
+    check(port17);
+    check(port18);
     check(port0);
     check(port1);
     check(port2);
@@ -1271,8 +1319,14 @@ void apatb_accelerator_v2_hw(void* __xlx_apatb_param_in_stream_V_data_V, void* _
     CodeState = DUMP_INPUTS;
     dump(port14, port14.iwriter, tcl.AESL_transaction);
     dump(port15, port15.iwriter, tcl.AESL_transaction);
+    dump(port16, port16.iwriter, tcl.AESL_transaction);
+    dump(port17, port17.iwriter, tcl.AESL_transaction);
+    dump(port18, port18.iwriter, tcl.AESL_transaction);
     port14.doTCL(tcl);
     port15.doTCL(tcl);
+    port16.doTCL(tcl);
+    port17.doTCL(tcl);
+    port18.doTCL(tcl);
     port0.markSize();
     port1.markSize();
     port2.markSize();
@@ -1295,7 +1349,7 @@ void apatb_accelerator_v2_hw(void* __xlx_apatb_param_in_stream_V_data_V, void* _
     port12.markSize();
     port13.markSize();
     CodeState = CALL_C_DUT;
-    accelerator_v2_hw_stub_wrapper(__xlx_apatb_param_in_stream_V_data_V, __xlx_apatb_param_in_stream_V_keep_V, __xlx_apatb_param_in_stream_V_strb_V, __xlx_apatb_param_in_stream_V_user_V, __xlx_apatb_param_in_stream_V_last_V, __xlx_apatb_param_in_stream_V_id_V, __xlx_apatb_param_in_stream_V_dest_V, __xlx_apatb_param_out_stream_V_data_V, __xlx_apatb_param_out_stream_V_keep_V, __xlx_apatb_param_out_stream_V_strb_V, __xlx_apatb_param_out_stream_V_user_V, __xlx_apatb_param_out_stream_V_last_V, __xlx_apatb_param_out_stream_V_id_V, __xlx_apatb_param_out_stream_V_dest_V, __xlx_apatb_param_in_breath, __xlx_apatb_param_out_breath);
+    accelerator_v2_hw_stub_wrapper(__xlx_apatb_param_in_stream_V_data_V, __xlx_apatb_param_in_stream_V_keep_V, __xlx_apatb_param_in_stream_V_strb_V, __xlx_apatb_param_in_stream_V_user_V, __xlx_apatb_param_in_stream_V_last_V, __xlx_apatb_param_in_stream_V_id_V, __xlx_apatb_param_in_stream_V_dest_V, __xlx_apatb_param_out_stream_V_data_V, __xlx_apatb_param_out_stream_V_keep_V, __xlx_apatb_param_out_stream_V_strb_V, __xlx_apatb_param_out_stream_V_user_V, __xlx_apatb_param_out_stream_V_last_V, __xlx_apatb_param_out_stream_V_id_V, __xlx_apatb_param_out_stream_V_dest_V, __xlx_apatb_param_in_breath, __xlx_apatb_param_out_breath, __xlx_apatb_param_bgr_fifo_breath, __xlx_apatb_param_pad_fifo_breath, __xlx_apatb_param_gray_fifo_breath);
     port7.buffer();
     port8.buffer();
     port9.buffer();
@@ -1320,6 +1374,9 @@ void apatb_accelerator_v2_hw(void* __xlx_apatb_param_in_stream_V_data_V, void* _
     CodeState = DUMP_OUTPUTS;
     dump(port14, port14.owriter, tcl.AESL_transaction);
     dump(port15, port15.owriter, tcl.AESL_transaction);
+    dump(port16, port16.owriter, tcl.AESL_transaction);
+    dump(port17, port17.owriter, tcl.AESL_transaction);
+    dump(port18, port18.owriter, tcl.AESL_transaction);
     dump(port7, tcl.AESL_transaction);
     dump(port8, tcl.AESL_transaction);
     dump(port9, tcl.AESL_transaction);

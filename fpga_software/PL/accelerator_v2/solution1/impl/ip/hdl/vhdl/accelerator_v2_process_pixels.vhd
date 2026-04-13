@@ -21,8 +21,10 @@ port (
     gray_stream3_din : OUT STD_LOGIC_VECTOR (7 downto 0);
     gray_stream3_full_n : IN STD_LOGIC;
     gray_stream3_write : OUT STD_LOGIC;
+    gray_fifo_breath : OUT STD_LOGIC_VECTOR (7 downto 0);
     ap_clk : IN STD_LOGIC;
     ap_rst : IN STD_LOGIC;
+    gray_fifo_breath_ap_vld : OUT STD_LOGIC;
     ap_done : OUT STD_LOGIC;
     ap_ready : OUT STD_LOGIC;
     ap_idle : OUT STD_LOGIC;
@@ -46,8 +48,8 @@ attribute shreg_extract : string;
     signal stream_to_mat_U0_ap_idle : STD_LOGIC;
     signal stream_to_mat_U0_ap_ready : STD_LOGIC;
     signal stream_to_mat_U0_padded_stream2_read : STD_LOGIC;
-    signal stream_to_mat_U0_bgr_mat_data43_din : STD_LOGIC_VECTOR (23 downto 0);
-    signal stream_to_mat_U0_bgr_mat_data43_write : STD_LOGIC;
+    signal stream_to_mat_U0_bgr_mat_data1_din : STD_LOGIC_VECTOR (23 downto 0);
+    signal stream_to_mat_U0_bgr_mat_data1_write : STD_LOGIC;
     signal stream_to_mat_U0_start_out : STD_LOGIC;
     signal stream_to_mat_U0_start_write : STD_LOGIC;
     signal bgr2gray_9_0_484_644_1_3220_3220_U0_ap_start : STD_LOGIC;
@@ -57,9 +59,9 @@ attribute shreg_extract : string;
     signal bgr2gray_9_0_484_644_1_3220_3220_U0_ap_ready : STD_LOGIC;
     signal bgr2gray_9_0_484_644_1_3220_3220_U0_start_out : STD_LOGIC;
     signal bgr2gray_9_0_484_644_1_3220_3220_U0_start_write : STD_LOGIC;
-    signal bgr2gray_9_0_484_644_1_3220_3220_U0_bgr_mat_data43_read : STD_LOGIC;
-    signal bgr2gray_9_0_484_644_1_3220_3220_U0_gray_mat_data44_din : STD_LOGIC_VECTOR (7 downto 0);
-    signal bgr2gray_9_0_484_644_1_3220_3220_U0_gray_mat_data44_write : STD_LOGIC;
+    signal bgr2gray_9_0_484_644_1_3220_3220_U0_bgr_mat_data1_read : STD_LOGIC;
+    signal bgr2gray_9_0_484_644_1_3220_3220_U0_gray_mat_data2_din : STD_LOGIC_VECTOR (7 downto 0);
+    signal bgr2gray_9_0_484_644_1_3220_3220_U0_gray_mat_data2_write : STD_LOGIC;
     signal GaussianBlur_5_1_0_484_644_1_3220_3220_U0_ap_start : STD_LOGIC;
     signal GaussianBlur_5_1_0_484_644_1_3220_3220_U0_ap_done : STD_LOGIC;
     signal GaussianBlur_5_1_0_484_644_1_3220_3220_U0_ap_continue : STD_LOGIC;
@@ -67,17 +69,19 @@ attribute shreg_extract : string;
     signal GaussianBlur_5_1_0_484_644_1_3220_3220_U0_ap_ready : STD_LOGIC;
     signal GaussianBlur_5_1_0_484_644_1_3220_3220_U0_start_out : STD_LOGIC;
     signal GaussianBlur_5_1_0_484_644_1_3220_3220_U0_start_write : STD_LOGIC;
-    signal GaussianBlur_5_1_0_484_644_1_3220_3220_U0_gray_mat_data44_read : STD_LOGIC;
-    signal GaussianBlur_5_1_0_484_644_1_3220_3220_U0_blurred_mat_data45_din : STD_LOGIC_VECTOR (7 downto 0);
-    signal GaussianBlur_5_1_0_484_644_1_3220_3220_U0_blurred_mat_data45_write : STD_LOGIC;
+    signal GaussianBlur_5_1_0_484_644_1_3220_3220_U0_gray_mat_data2_read : STD_LOGIC;
+    signal GaussianBlur_5_1_0_484_644_1_3220_3220_U0_blurred_mat_data3_din : STD_LOGIC_VECTOR (7 downto 0);
+    signal GaussianBlur_5_1_0_484_644_1_3220_3220_U0_blurred_mat_data3_write : STD_LOGIC;
     signal mat_to_stream_U0_ap_start : STD_LOGIC;
     signal mat_to_stream_U0_ap_done : STD_LOGIC;
     signal mat_to_stream_U0_ap_continue : STD_LOGIC;
     signal mat_to_stream_U0_ap_idle : STD_LOGIC;
     signal mat_to_stream_U0_ap_ready : STD_LOGIC;
-    signal mat_to_stream_U0_blurred_mat_data45_read : STD_LOGIC;
+    signal mat_to_stream_U0_blurred_mat_data3_read : STD_LOGIC;
     signal mat_to_stream_U0_gray_stream3_din : STD_LOGIC_VECTOR (7 downto 0);
     signal mat_to_stream_U0_gray_stream3_write : STD_LOGIC;
+    signal mat_to_stream_U0_gray_fifo_breath : STD_LOGIC_VECTOR (7 downto 0);
+    signal mat_to_stream_U0_gray_fifo_breath_ap_vld : STD_LOGIC;
     signal bgr_mat_data_full_n : STD_LOGIC;
     signal bgr_mat_data_dout : STD_LOGIC_VECTOR (23 downto 0);
     signal bgr_mat_data_num_data_valid : STD_LOGIC_VECTOR (12 downto 0);
@@ -123,11 +127,11 @@ attribute shreg_extract : string;
         padded_stream2_fifo_cap : IN STD_LOGIC_VECTOR (12 downto 0);
         padded_stream2_empty_n : IN STD_LOGIC;
         padded_stream2_read : OUT STD_LOGIC;
-        bgr_mat_data43_din : OUT STD_LOGIC_VECTOR (23 downto 0);
-        bgr_mat_data43_num_data_valid : IN STD_LOGIC_VECTOR (12 downto 0);
-        bgr_mat_data43_fifo_cap : IN STD_LOGIC_VECTOR (12 downto 0);
-        bgr_mat_data43_full_n : IN STD_LOGIC;
-        bgr_mat_data43_write : OUT STD_LOGIC;
+        bgr_mat_data1_din : OUT STD_LOGIC_VECTOR (23 downto 0);
+        bgr_mat_data1_num_data_valid : IN STD_LOGIC_VECTOR (12 downto 0);
+        bgr_mat_data1_fifo_cap : IN STD_LOGIC_VECTOR (12 downto 0);
+        bgr_mat_data1_full_n : IN STD_LOGIC;
+        bgr_mat_data1_write : OUT STD_LOGIC;
         start_out : OUT STD_LOGIC;
         start_write : OUT STD_LOGIC );
     end component;
@@ -145,16 +149,16 @@ attribute shreg_extract : string;
         ap_ready : OUT STD_LOGIC;
         start_out : OUT STD_LOGIC;
         start_write : OUT STD_LOGIC;
-        bgr_mat_data43_dout : IN STD_LOGIC_VECTOR (23 downto 0);
-        bgr_mat_data43_num_data_valid : IN STD_LOGIC_VECTOR (12 downto 0);
-        bgr_mat_data43_fifo_cap : IN STD_LOGIC_VECTOR (12 downto 0);
-        bgr_mat_data43_empty_n : IN STD_LOGIC;
-        bgr_mat_data43_read : OUT STD_LOGIC;
-        gray_mat_data44_din : OUT STD_LOGIC_VECTOR (7 downto 0);
-        gray_mat_data44_num_data_valid : IN STD_LOGIC_VECTOR (12 downto 0);
-        gray_mat_data44_fifo_cap : IN STD_LOGIC_VECTOR (12 downto 0);
-        gray_mat_data44_full_n : IN STD_LOGIC;
-        gray_mat_data44_write : OUT STD_LOGIC );
+        bgr_mat_data1_dout : IN STD_LOGIC_VECTOR (23 downto 0);
+        bgr_mat_data1_num_data_valid : IN STD_LOGIC_VECTOR (12 downto 0);
+        bgr_mat_data1_fifo_cap : IN STD_LOGIC_VECTOR (12 downto 0);
+        bgr_mat_data1_empty_n : IN STD_LOGIC;
+        bgr_mat_data1_read : OUT STD_LOGIC;
+        gray_mat_data2_din : OUT STD_LOGIC_VECTOR (7 downto 0);
+        gray_mat_data2_num_data_valid : IN STD_LOGIC_VECTOR (12 downto 0);
+        gray_mat_data2_fifo_cap : IN STD_LOGIC_VECTOR (12 downto 0);
+        gray_mat_data2_full_n : IN STD_LOGIC;
+        gray_mat_data2_write : OUT STD_LOGIC );
     end component;
 
 
@@ -170,16 +174,16 @@ attribute shreg_extract : string;
         ap_ready : OUT STD_LOGIC;
         start_out : OUT STD_LOGIC;
         start_write : OUT STD_LOGIC;
-        gray_mat_data44_dout : IN STD_LOGIC_VECTOR (7 downto 0);
-        gray_mat_data44_num_data_valid : IN STD_LOGIC_VECTOR (12 downto 0);
-        gray_mat_data44_fifo_cap : IN STD_LOGIC_VECTOR (12 downto 0);
-        gray_mat_data44_empty_n : IN STD_LOGIC;
-        gray_mat_data44_read : OUT STD_LOGIC;
-        blurred_mat_data45_din : OUT STD_LOGIC_VECTOR (7 downto 0);
-        blurred_mat_data45_num_data_valid : IN STD_LOGIC_VECTOR (12 downto 0);
-        blurred_mat_data45_fifo_cap : IN STD_LOGIC_VECTOR (12 downto 0);
-        blurred_mat_data45_full_n : IN STD_LOGIC;
-        blurred_mat_data45_write : OUT STD_LOGIC );
+        gray_mat_data2_dout : IN STD_LOGIC_VECTOR (7 downto 0);
+        gray_mat_data2_num_data_valid : IN STD_LOGIC_VECTOR (12 downto 0);
+        gray_mat_data2_fifo_cap : IN STD_LOGIC_VECTOR (12 downto 0);
+        gray_mat_data2_empty_n : IN STD_LOGIC;
+        gray_mat_data2_read : OUT STD_LOGIC;
+        blurred_mat_data3_din : OUT STD_LOGIC_VECTOR (7 downto 0);
+        blurred_mat_data3_num_data_valid : IN STD_LOGIC_VECTOR (12 downto 0);
+        blurred_mat_data3_fifo_cap : IN STD_LOGIC_VECTOR (12 downto 0);
+        blurred_mat_data3_full_n : IN STD_LOGIC;
+        blurred_mat_data3_write : OUT STD_LOGIC );
     end component;
 
 
@@ -192,16 +196,18 @@ attribute shreg_extract : string;
         ap_continue : IN STD_LOGIC;
         ap_idle : OUT STD_LOGIC;
         ap_ready : OUT STD_LOGIC;
-        blurred_mat_data45_dout : IN STD_LOGIC_VECTOR (7 downto 0);
-        blurred_mat_data45_num_data_valid : IN STD_LOGIC_VECTOR (12 downto 0);
-        blurred_mat_data45_fifo_cap : IN STD_LOGIC_VECTOR (12 downto 0);
-        blurred_mat_data45_empty_n : IN STD_LOGIC;
-        blurred_mat_data45_read : OUT STD_LOGIC;
+        blurred_mat_data3_dout : IN STD_LOGIC_VECTOR (7 downto 0);
+        blurred_mat_data3_num_data_valid : IN STD_LOGIC_VECTOR (12 downto 0);
+        blurred_mat_data3_fifo_cap : IN STD_LOGIC_VECTOR (12 downto 0);
+        blurred_mat_data3_empty_n : IN STD_LOGIC;
+        blurred_mat_data3_read : OUT STD_LOGIC;
         gray_stream3_din : OUT STD_LOGIC_VECTOR (7 downto 0);
         gray_stream3_num_data_valid : IN STD_LOGIC_VECTOR (12 downto 0);
         gray_stream3_fifo_cap : IN STD_LOGIC_VECTOR (12 downto 0);
         gray_stream3_full_n : IN STD_LOGIC;
-        gray_stream3_write : OUT STD_LOGIC );
+        gray_stream3_write : OUT STD_LOGIC;
+        gray_fifo_breath : OUT STD_LOGIC_VECTOR (7 downto 0);
+        gray_fifo_breath_ap_vld : OUT STD_LOGIC );
     end component;
 
 
@@ -301,11 +307,11 @@ begin
         padded_stream2_fifo_cap => ap_const_lv13_0,
         padded_stream2_empty_n => padded_stream2_empty_n,
         padded_stream2_read => stream_to_mat_U0_padded_stream2_read,
-        bgr_mat_data43_din => stream_to_mat_U0_bgr_mat_data43_din,
-        bgr_mat_data43_num_data_valid => bgr_mat_data_num_data_valid,
-        bgr_mat_data43_fifo_cap => bgr_mat_data_fifo_cap,
-        bgr_mat_data43_full_n => bgr_mat_data_full_n,
-        bgr_mat_data43_write => stream_to_mat_U0_bgr_mat_data43_write,
+        bgr_mat_data1_din => stream_to_mat_U0_bgr_mat_data1_din,
+        bgr_mat_data1_num_data_valid => bgr_mat_data_num_data_valid,
+        bgr_mat_data1_fifo_cap => bgr_mat_data_fifo_cap,
+        bgr_mat_data1_full_n => bgr_mat_data_full_n,
+        bgr_mat_data1_write => stream_to_mat_U0_bgr_mat_data1_write,
         start_out => stream_to_mat_U0_start_out,
         start_write => stream_to_mat_U0_start_write);
 
@@ -321,16 +327,16 @@ begin
         ap_ready => bgr2gray_9_0_484_644_1_3220_3220_U0_ap_ready,
         start_out => bgr2gray_9_0_484_644_1_3220_3220_U0_start_out,
         start_write => bgr2gray_9_0_484_644_1_3220_3220_U0_start_write,
-        bgr_mat_data43_dout => bgr_mat_data_dout,
-        bgr_mat_data43_num_data_valid => bgr_mat_data_num_data_valid,
-        bgr_mat_data43_fifo_cap => bgr_mat_data_fifo_cap,
-        bgr_mat_data43_empty_n => bgr_mat_data_empty_n,
-        bgr_mat_data43_read => bgr2gray_9_0_484_644_1_3220_3220_U0_bgr_mat_data43_read,
-        gray_mat_data44_din => bgr2gray_9_0_484_644_1_3220_3220_U0_gray_mat_data44_din,
-        gray_mat_data44_num_data_valid => gray_mat_data_num_data_valid,
-        gray_mat_data44_fifo_cap => gray_mat_data_fifo_cap,
-        gray_mat_data44_full_n => gray_mat_data_full_n,
-        gray_mat_data44_write => bgr2gray_9_0_484_644_1_3220_3220_U0_gray_mat_data44_write);
+        bgr_mat_data1_dout => bgr_mat_data_dout,
+        bgr_mat_data1_num_data_valid => bgr_mat_data_num_data_valid,
+        bgr_mat_data1_fifo_cap => bgr_mat_data_fifo_cap,
+        bgr_mat_data1_empty_n => bgr_mat_data_empty_n,
+        bgr_mat_data1_read => bgr2gray_9_0_484_644_1_3220_3220_U0_bgr_mat_data1_read,
+        gray_mat_data2_din => bgr2gray_9_0_484_644_1_3220_3220_U0_gray_mat_data2_din,
+        gray_mat_data2_num_data_valid => gray_mat_data_num_data_valid,
+        gray_mat_data2_fifo_cap => gray_mat_data_fifo_cap,
+        gray_mat_data2_full_n => gray_mat_data_full_n,
+        gray_mat_data2_write => bgr2gray_9_0_484_644_1_3220_3220_U0_gray_mat_data2_write);
 
     GaussianBlur_5_1_0_484_644_1_3220_3220_U0 : component accelerator_v2_GaussianBlur_5_1_0_484_644_1_3220_3220_s
     port map (
@@ -344,16 +350,16 @@ begin
         ap_ready => GaussianBlur_5_1_0_484_644_1_3220_3220_U0_ap_ready,
         start_out => GaussianBlur_5_1_0_484_644_1_3220_3220_U0_start_out,
         start_write => GaussianBlur_5_1_0_484_644_1_3220_3220_U0_start_write,
-        gray_mat_data44_dout => gray_mat_data_dout,
-        gray_mat_data44_num_data_valid => gray_mat_data_num_data_valid,
-        gray_mat_data44_fifo_cap => gray_mat_data_fifo_cap,
-        gray_mat_data44_empty_n => gray_mat_data_empty_n,
-        gray_mat_data44_read => GaussianBlur_5_1_0_484_644_1_3220_3220_U0_gray_mat_data44_read,
-        blurred_mat_data45_din => GaussianBlur_5_1_0_484_644_1_3220_3220_U0_blurred_mat_data45_din,
-        blurred_mat_data45_num_data_valid => blurred_mat_data_num_data_valid,
-        blurred_mat_data45_fifo_cap => blurred_mat_data_fifo_cap,
-        blurred_mat_data45_full_n => blurred_mat_data_full_n,
-        blurred_mat_data45_write => GaussianBlur_5_1_0_484_644_1_3220_3220_U0_blurred_mat_data45_write);
+        gray_mat_data2_dout => gray_mat_data_dout,
+        gray_mat_data2_num_data_valid => gray_mat_data_num_data_valid,
+        gray_mat_data2_fifo_cap => gray_mat_data_fifo_cap,
+        gray_mat_data2_empty_n => gray_mat_data_empty_n,
+        gray_mat_data2_read => GaussianBlur_5_1_0_484_644_1_3220_3220_U0_gray_mat_data2_read,
+        blurred_mat_data3_din => GaussianBlur_5_1_0_484_644_1_3220_3220_U0_blurred_mat_data3_din,
+        blurred_mat_data3_num_data_valid => blurred_mat_data_num_data_valid,
+        blurred_mat_data3_fifo_cap => blurred_mat_data_fifo_cap,
+        blurred_mat_data3_full_n => blurred_mat_data_full_n,
+        blurred_mat_data3_write => GaussianBlur_5_1_0_484_644_1_3220_3220_U0_blurred_mat_data3_write);
 
     mat_to_stream_U0 : component accelerator_v2_mat_to_stream
     port map (
@@ -364,16 +370,18 @@ begin
         ap_continue => mat_to_stream_U0_ap_continue,
         ap_idle => mat_to_stream_U0_ap_idle,
         ap_ready => mat_to_stream_U0_ap_ready,
-        blurred_mat_data45_dout => blurred_mat_data_dout,
-        blurred_mat_data45_num_data_valid => blurred_mat_data_num_data_valid,
-        blurred_mat_data45_fifo_cap => blurred_mat_data_fifo_cap,
-        blurred_mat_data45_empty_n => blurred_mat_data_empty_n,
-        blurred_mat_data45_read => mat_to_stream_U0_blurred_mat_data45_read,
+        blurred_mat_data3_dout => blurred_mat_data_dout,
+        blurred_mat_data3_num_data_valid => blurred_mat_data_num_data_valid,
+        blurred_mat_data3_fifo_cap => blurred_mat_data_fifo_cap,
+        blurred_mat_data3_empty_n => blurred_mat_data_empty_n,
+        blurred_mat_data3_read => mat_to_stream_U0_blurred_mat_data3_read,
         gray_stream3_din => mat_to_stream_U0_gray_stream3_din,
         gray_stream3_num_data_valid => ap_const_lv13_0,
         gray_stream3_fifo_cap => ap_const_lv13_0,
         gray_stream3_full_n => gray_stream3_full_n,
-        gray_stream3_write => mat_to_stream_U0_gray_stream3_write);
+        gray_stream3_write => mat_to_stream_U0_gray_stream3_write,
+        gray_fifo_breath => mat_to_stream_U0_gray_fifo_breath,
+        gray_fifo_breath_ap_vld => mat_to_stream_U0_gray_fifo_breath_ap_vld);
 
     bgr_mat_data_U : component accelerator_v2_fifo_w24_d3220_A
     port map (
@@ -381,14 +389,14 @@ begin
         reset => ap_rst,
         if_read_ce => ap_const_logic_1,
         if_write_ce => ap_const_logic_1,
-        if_din => stream_to_mat_U0_bgr_mat_data43_din,
+        if_din => stream_to_mat_U0_bgr_mat_data1_din,
         if_full_n => bgr_mat_data_full_n,
-        if_write => stream_to_mat_U0_bgr_mat_data43_write,
+        if_write => stream_to_mat_U0_bgr_mat_data1_write,
         if_dout => bgr_mat_data_dout,
         if_num_data_valid => bgr_mat_data_num_data_valid,
         if_fifo_cap => bgr_mat_data_fifo_cap,
         if_empty_n => bgr_mat_data_empty_n,
-        if_read => bgr2gray_9_0_484_644_1_3220_3220_U0_bgr_mat_data43_read);
+        if_read => bgr2gray_9_0_484_644_1_3220_3220_U0_bgr_mat_data1_read);
 
     gray_mat_data_U : component accelerator_v2_fifo_w8_d3220_A
     port map (
@@ -396,14 +404,14 @@ begin
         reset => ap_rst,
         if_read_ce => ap_const_logic_1,
         if_write_ce => ap_const_logic_1,
-        if_din => bgr2gray_9_0_484_644_1_3220_3220_U0_gray_mat_data44_din,
+        if_din => bgr2gray_9_0_484_644_1_3220_3220_U0_gray_mat_data2_din,
         if_full_n => gray_mat_data_full_n,
-        if_write => bgr2gray_9_0_484_644_1_3220_3220_U0_gray_mat_data44_write,
+        if_write => bgr2gray_9_0_484_644_1_3220_3220_U0_gray_mat_data2_write,
         if_dout => gray_mat_data_dout,
         if_num_data_valid => gray_mat_data_num_data_valid,
         if_fifo_cap => gray_mat_data_fifo_cap,
         if_empty_n => gray_mat_data_empty_n,
-        if_read => GaussianBlur_5_1_0_484_644_1_3220_3220_U0_gray_mat_data44_read);
+        if_read => GaussianBlur_5_1_0_484_644_1_3220_3220_U0_gray_mat_data2_read);
 
     blurred_mat_data_U : component accelerator_v2_fifo_w8_d3220_A
     port map (
@@ -411,14 +419,14 @@ begin
         reset => ap_rst,
         if_read_ce => ap_const_logic_1,
         if_write_ce => ap_const_logic_1,
-        if_din => GaussianBlur_5_1_0_484_644_1_3220_3220_U0_blurred_mat_data45_din,
+        if_din => GaussianBlur_5_1_0_484_644_1_3220_3220_U0_blurred_mat_data3_din,
         if_full_n => blurred_mat_data_full_n,
-        if_write => GaussianBlur_5_1_0_484_644_1_3220_3220_U0_blurred_mat_data45_write,
+        if_write => GaussianBlur_5_1_0_484_644_1_3220_3220_U0_blurred_mat_data3_write,
         if_dout => blurred_mat_data_dout,
         if_num_data_valid => blurred_mat_data_num_data_valid,
         if_fifo_cap => blurred_mat_data_fifo_cap,
         if_empty_n => blurred_mat_data_empty_n,
-        if_read => mat_to_stream_U0_blurred_mat_data45_read);
+        if_read => mat_to_stream_U0_blurred_mat_data3_read);
 
     start_for_bgr2gray_9_0_484_644_1_3220_3220_U0_U : component accelerator_v2_start_for_bgr2gray_9_0_484_644_1_3220_3220_U0
     port map (
@@ -486,6 +494,8 @@ begin
     ap_sync_ready <= stream_to_mat_U0_ap_ready;
     bgr2gray_9_0_484_644_1_3220_3220_U0_ap_continue <= ap_const_logic_1;
     bgr2gray_9_0_484_644_1_3220_3220_U0_ap_start <= start_for_bgr2gray_9_0_484_644_1_3220_3220_U0_empty_n;
+    gray_fifo_breath <= mat_to_stream_U0_gray_fifo_breath;
+    gray_fifo_breath_ap_vld <= mat_to_stream_U0_gray_fifo_breath_ap_vld;
     gray_stream3_din <= mat_to_stream_U0_gray_stream3_din;
     gray_stream3_write <= mat_to_stream_U0_gray_stream3_write;
     internal_ap_ready <= ap_sync_ready;

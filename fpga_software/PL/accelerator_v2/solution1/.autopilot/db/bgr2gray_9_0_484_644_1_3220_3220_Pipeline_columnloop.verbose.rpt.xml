@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop'" level="0">
-<item name = "Date">Sun Apr 12 22:15:06 2026
+<item name = "Date">Mon Apr 13 00:33:24 2026
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">accelerator_v2</item>
@@ -66,9 +66,9 @@
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
 <keys size="3">Instance, Module, Expression</keys>
-<column name="mac_muladd_8ns_12ns_22ns_22_4_1_U71">mac_muladd_8ns_12ns_22ns_22_4_1, i0 + i1 * i2</column>
-<column name="mac_muladd_8ns_15ns_22ns_23_4_1_U72">mac_muladd_8ns_15ns_22ns_23_4_1, i0 + i1 * i2</column>
-<column name="mul_mul_8ns_14ns_22_4_1_U70">mul_mul_8ns_14ns_22_4_1, i0 * i1</column>
+<column name="mac_muladd_8ns_12ns_22ns_22_4_1_U81">mac_muladd_8ns_12ns_22ns_22_4_1, i0 + i1 * i2</column>
+<column name="mac_muladd_8ns_15ns_22ns_23_4_1_U82">mac_muladd_8ns_15ns_22ns_23_4_1, i0 + i1 * i2</column>
+<column name="mul_mul_8ns_14ns_22_4_1_U80">mul_mul_8ns_14ns_22_4_1, i0 * i1</column>
 </table>
 </item>
 <item name = "Memory"><table name="" hasTotal="1">
@@ -92,8 +92,8 @@
 <column name="ap_done_int">9, 2, 1, 2</column>
 <column name="ap_enable_reg_pp0_iter1">9, 2, 1, 2</column>
 <column name="ap_sig_allocacmp_j_V_1">9, 2, 10, 20</column>
-<column name="bgr_mat_data43_blk_n">9, 2, 1, 2</column>
-<column name="gray_mat_data44_blk_n">9, 2, 1, 2</column>
+<column name="bgr_mat_data1_blk_n">9, 2, 1, 2</column>
+<column name="gray_mat_data2_blk_n">9, 2, 1, 2</column>
 <column name="j_V_fu_56">9, 2, 10, 20</column>
 </table>
 </item>
@@ -131,16 +131,16 @@
 <column name="ap_done">out, 1, ap_ctrl_hs, bgr2gray&lt;9, 0, 484, 644, 1, 3220, 3220&gt;_Pipeline_columnloop, return value</column>
 <column name="ap_idle">out, 1, ap_ctrl_hs, bgr2gray&lt;9, 0, 484, 644, 1, 3220, 3220&gt;_Pipeline_columnloop, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, bgr2gray&lt;9, 0, 484, 644, 1, 3220, 3220&gt;_Pipeline_columnloop, return value</column>
-<column name="bgr_mat_data43_dout">in, 24, ap_fifo, bgr_mat_data43, pointer</column>
-<column name="bgr_mat_data43_num_data_valid">in, 13, ap_fifo, bgr_mat_data43, pointer</column>
-<column name="bgr_mat_data43_fifo_cap">in, 13, ap_fifo, bgr_mat_data43, pointer</column>
-<column name="bgr_mat_data43_empty_n">in, 1, ap_fifo, bgr_mat_data43, pointer</column>
-<column name="bgr_mat_data43_read">out, 1, ap_fifo, bgr_mat_data43, pointer</column>
-<column name="gray_mat_data44_din">out, 8, ap_fifo, gray_mat_data44, pointer</column>
-<column name="gray_mat_data44_num_data_valid">in, 13, ap_fifo, gray_mat_data44, pointer</column>
-<column name="gray_mat_data44_fifo_cap">in, 13, ap_fifo, gray_mat_data44, pointer</column>
-<column name="gray_mat_data44_full_n">in, 1, ap_fifo, gray_mat_data44, pointer</column>
-<column name="gray_mat_data44_write">out, 1, ap_fifo, gray_mat_data44, pointer</column>
+<column name="bgr_mat_data1_dout">in, 24, ap_fifo, bgr_mat_data1, pointer</column>
+<column name="bgr_mat_data1_num_data_valid">in, 13, ap_fifo, bgr_mat_data1, pointer</column>
+<column name="bgr_mat_data1_fifo_cap">in, 13, ap_fifo, bgr_mat_data1, pointer</column>
+<column name="bgr_mat_data1_empty_n">in, 1, ap_fifo, bgr_mat_data1, pointer</column>
+<column name="bgr_mat_data1_read">out, 1, ap_fifo, bgr_mat_data1, pointer</column>
+<column name="gray_mat_data2_din">out, 8, ap_fifo, gray_mat_data2, pointer</column>
+<column name="gray_mat_data2_num_data_valid">in, 13, ap_fifo, gray_mat_data2, pointer</column>
+<column name="gray_mat_data2_fifo_cap">in, 13, ap_fifo, gray_mat_data2, pointer</column>
+<column name="gray_mat_data2_full_n">in, 1, ap_fifo, gray_mat_data2, pointer</column>
+<column name="gray_mat_data2_write">out, 1, ap_fifo, gray_mat_data2, pointer</column>
 </table>
 </item>
 </section>

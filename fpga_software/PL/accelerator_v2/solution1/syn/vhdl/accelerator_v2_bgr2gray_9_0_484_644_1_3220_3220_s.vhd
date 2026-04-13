@@ -21,16 +21,16 @@ port (
     ap_ready : OUT STD_LOGIC;
     start_out : OUT STD_LOGIC;
     start_write : OUT STD_LOGIC;
-    bgr_mat_data43_dout : IN STD_LOGIC_VECTOR (23 downto 0);
-    bgr_mat_data43_num_data_valid : IN STD_LOGIC_VECTOR (12 downto 0);
-    bgr_mat_data43_fifo_cap : IN STD_LOGIC_VECTOR (12 downto 0);
-    bgr_mat_data43_empty_n : IN STD_LOGIC;
-    bgr_mat_data43_read : OUT STD_LOGIC;
-    gray_mat_data44_din : OUT STD_LOGIC_VECTOR (7 downto 0);
-    gray_mat_data44_num_data_valid : IN STD_LOGIC_VECTOR (12 downto 0);
-    gray_mat_data44_fifo_cap : IN STD_LOGIC_VECTOR (12 downto 0);
-    gray_mat_data44_full_n : IN STD_LOGIC;
-    gray_mat_data44_write : OUT STD_LOGIC );
+    bgr_mat_data1_dout : IN STD_LOGIC_VECTOR (23 downto 0);
+    bgr_mat_data1_num_data_valid : IN STD_LOGIC_VECTOR (12 downto 0);
+    bgr_mat_data1_fifo_cap : IN STD_LOGIC_VECTOR (12 downto 0);
+    bgr_mat_data1_empty_n : IN STD_LOGIC;
+    bgr_mat_data1_read : OUT STD_LOGIC;
+    gray_mat_data2_din : OUT STD_LOGIC_VECTOR (7 downto 0);
+    gray_mat_data2_num_data_valid : IN STD_LOGIC_VECTOR (12 downto 0);
+    gray_mat_data2_fifo_cap : IN STD_LOGIC_VECTOR (12 downto 0);
+    gray_mat_data2_full_n : IN STD_LOGIC;
+    gray_mat_data2_write : OUT STD_LOGIC );
 end;
 
 
@@ -65,9 +65,9 @@ attribute shreg_extract : string;
     signal grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38_ap_done : STD_LOGIC;
     signal grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38_ap_idle : STD_LOGIC;
     signal grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38_ap_ready : STD_LOGIC;
-    signal grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38_bgr_mat_data43_read : STD_LOGIC;
-    signal grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38_gray_mat_data44_din : STD_LOGIC_VECTOR (7 downto 0);
-    signal grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38_gray_mat_data44_write : STD_LOGIC;
+    signal grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38_bgr_mat_data1_read : STD_LOGIC;
+    signal grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38_gray_mat_data2_din : STD_LOGIC_VECTOR (7 downto 0);
+    signal grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38_gray_mat_data2_write : STD_LOGIC;
     signal grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38_ap_start_reg : STD_LOGIC := '0';
     signal ap_CS_fsm_state2 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state2 : signal is "none";
@@ -91,16 +91,16 @@ attribute shreg_extract : string;
         ap_done : OUT STD_LOGIC;
         ap_idle : OUT STD_LOGIC;
         ap_ready : OUT STD_LOGIC;
-        bgr_mat_data43_dout : IN STD_LOGIC_VECTOR (23 downto 0);
-        bgr_mat_data43_num_data_valid : IN STD_LOGIC_VECTOR (12 downto 0);
-        bgr_mat_data43_fifo_cap : IN STD_LOGIC_VECTOR (12 downto 0);
-        bgr_mat_data43_empty_n : IN STD_LOGIC;
-        bgr_mat_data43_read : OUT STD_LOGIC;
-        gray_mat_data44_din : OUT STD_LOGIC_VECTOR (7 downto 0);
-        gray_mat_data44_num_data_valid : IN STD_LOGIC_VECTOR (12 downto 0);
-        gray_mat_data44_fifo_cap : IN STD_LOGIC_VECTOR (12 downto 0);
-        gray_mat_data44_full_n : IN STD_LOGIC;
-        gray_mat_data44_write : OUT STD_LOGIC );
+        bgr_mat_data1_dout : IN STD_LOGIC_VECTOR (23 downto 0);
+        bgr_mat_data1_num_data_valid : IN STD_LOGIC_VECTOR (12 downto 0);
+        bgr_mat_data1_fifo_cap : IN STD_LOGIC_VECTOR (12 downto 0);
+        bgr_mat_data1_empty_n : IN STD_LOGIC;
+        bgr_mat_data1_read : OUT STD_LOGIC;
+        gray_mat_data2_din : OUT STD_LOGIC_VECTOR (7 downto 0);
+        gray_mat_data2_num_data_valid : IN STD_LOGIC_VECTOR (12 downto 0);
+        gray_mat_data2_fifo_cap : IN STD_LOGIC_VECTOR (12 downto 0);
+        gray_mat_data2_full_n : IN STD_LOGIC;
+        gray_mat_data2_write : OUT STD_LOGIC );
     end component;
 
 
@@ -114,16 +114,16 @@ begin
         ap_done => grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38_ap_done,
         ap_idle => grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38_ap_idle,
         ap_ready => grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38_ap_ready,
-        bgr_mat_data43_dout => bgr_mat_data43_dout,
-        bgr_mat_data43_num_data_valid => ap_const_lv13_0,
-        bgr_mat_data43_fifo_cap => ap_const_lv13_0,
-        bgr_mat_data43_empty_n => bgr_mat_data43_empty_n,
-        bgr_mat_data43_read => grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38_bgr_mat_data43_read,
-        gray_mat_data44_din => grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38_gray_mat_data44_din,
-        gray_mat_data44_num_data_valid => ap_const_lv13_0,
-        gray_mat_data44_fifo_cap => ap_const_lv13_0,
-        gray_mat_data44_full_n => gray_mat_data44_full_n,
-        gray_mat_data44_write => grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38_gray_mat_data44_write);
+        bgr_mat_data1_dout => bgr_mat_data1_dout,
+        bgr_mat_data1_num_data_valid => ap_const_lv13_0,
+        bgr_mat_data1_fifo_cap => ap_const_lv13_0,
+        bgr_mat_data1_empty_n => bgr_mat_data1_empty_n,
+        bgr_mat_data1_read => grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38_bgr_mat_data1_read,
+        gray_mat_data2_din => grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38_gray_mat_data2_din,
+        gray_mat_data2_num_data_valid => ap_const_lv13_0,
+        gray_mat_data2_fifo_cap => ap_const_lv13_0,
+        gray_mat_data2_full_n => gray_mat_data2_full_n,
+        gray_mat_data2_write => grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38_gray_mat_data2_write);
 
 
 
@@ -277,23 +277,23 @@ begin
 
     ap_ready <= internal_ap_ready;
 
-    bgr_mat_data43_read_assign_proc : process(grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38_bgr_mat_data43_read, ap_CS_fsm_state3)
+    bgr_mat_data1_read_assign_proc : process(grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38_bgr_mat_data1_read, ap_CS_fsm_state3)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state3)) then 
-            bgr_mat_data43_read <= grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38_bgr_mat_data43_read;
+            bgr_mat_data1_read <= grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38_bgr_mat_data1_read;
         else 
-            bgr_mat_data43_read <= ap_const_logic_0;
+            bgr_mat_data1_read <= ap_const_logic_0;
         end if; 
     end process;
 
-    gray_mat_data44_din <= grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38_gray_mat_data44_din;
+    gray_mat_data2_din <= grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38_gray_mat_data2_din;
 
-    gray_mat_data44_write_assign_proc : process(grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38_gray_mat_data44_write, ap_CS_fsm_state3)
+    gray_mat_data2_write_assign_proc : process(grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38_gray_mat_data2_write, ap_CS_fsm_state3)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state3)) then 
-            gray_mat_data44_write <= grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38_gray_mat_data44_write;
+            gray_mat_data2_write <= grp_bgr2gray_9_0_484_644_1_3220_3220_Pipeline_columnloop_fu_38_gray_mat_data2_write;
         else 
-            gray_mat_data44_write <= ap_const_logic_0;
+            gray_mat_data2_write <= ap_const_logic_0;
         end if; 
     end process;
 

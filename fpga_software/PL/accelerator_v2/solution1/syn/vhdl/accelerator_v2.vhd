@@ -11,7 +11,7 @@ use IEEE.numeric_std.all;
 
 entity accelerator_v2 is
 generic (
-    C_S_AXI_CTRL_ADDR_WIDTH : INTEGER := 4;
+    C_S_AXI_CTRL_ADDR_WIDTH : INTEGER := 7;
     C_S_AXI_CTRL_DATA_WIDTH : INTEGER := 32 );
 port (
     s_axi_CTRL_AWVALID : IN STD_LOGIC;
@@ -48,8 +48,6 @@ port (
     out_stream_TLAST : OUT STD_LOGIC_VECTOR (0 downto 0);
     out_stream_TID : OUT STD_LOGIC_VECTOR (0 downto 0);
     out_stream_TDEST : OUT STD_LOGIC_VECTOR (0 downto 0);
-    in_breath : OUT STD_LOGIC_VECTOR (0 downto 0);
-    out_breath : OUT STD_LOGIC_VECTOR (0 downto 0);
     in_stream_TVALID : IN STD_LOGIC;
     in_stream_TREADY : OUT STD_LOGIC;
     out_stream_TVALID : OUT STD_LOGIC;
@@ -60,7 +58,7 @@ end;
 architecture behav of accelerator_v2 is 
     attribute CORE_GENERATION_INFO : STRING;
     attribute CORE_GENERATION_INFO of behav : architecture is
-    "accelerator_v2_accelerator_v2,hls_ip_2022_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xczu3eg-sbva484-1-i,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=5.886313,HLS_SYN_LAT=924001,HLS_SYN_TPT=924002,HLS_SYN_MEM=51,HLS_SYN_DSP=0,HLS_SYN_FF=4609,HLS_SYN_LUT=7390,HLS_VERSION=2022_2}";
+    "accelerator_v2_accelerator_v2,hls_ip_2022_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xczu3eg-sbva484-1-i,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=5.886313,HLS_SYN_LAT=924481,HLS_SYN_TPT=924482,HLS_SYN_MEM=51,HLS_SYN_DSP=0,HLS_SYN_FF=4696,HLS_SYN_LUT=8230,HLS_VERSION=2022_2}";
     constant C_S_AXI_DATA_WIDTH : INTEGER range 63 downto 0 := 20;
     constant ap_const_logic_1 : STD_LOGIC := '1';
     constant ap_const_logic_0 : STD_LOGIC := '0';
@@ -80,8 +78,10 @@ architecture behav of accelerator_v2 is
     signal unpack_U0_in_stream_TREADY : STD_LOGIC;
     signal unpack_U0_bgr_stream1_din : STD_LOGIC_VECTOR (23 downto 0);
     signal unpack_U0_bgr_stream1_write : STD_LOGIC;
-    signal unpack_U0_in_breath : STD_LOGIC_VECTOR (0 downto 0);
+    signal unpack_U0_in_breath : STD_LOGIC_VECTOR (7 downto 0);
     signal unpack_U0_in_breath_ap_vld : STD_LOGIC;
+    signal unpack_U0_bgr_fifo_breath : STD_LOGIC_VECTOR (7 downto 0);
+    signal unpack_U0_bgr_fifo_breath_ap_vld : STD_LOGIC;
     signal pad_U0_ap_start : STD_LOGIC;
     signal pad_U0_ap_done : STD_LOGIC;
     signal pad_U0_ap_continue : STD_LOGIC;
@@ -92,12 +92,16 @@ architecture behav of accelerator_v2 is
     signal pad_U0_bgr_stream1_read : STD_LOGIC;
     signal pad_U0_padded_stream2_din : STD_LOGIC_VECTOR (23 downto 0);
     signal pad_U0_padded_stream2_write : STD_LOGIC;
+    signal pad_U0_pad_fifo_breath : STD_LOGIC_VECTOR (7 downto 0);
+    signal pad_U0_pad_fifo_breath_ap_vld : STD_LOGIC;
     signal process_pixels_U0_ap_start : STD_LOGIC;
     signal process_pixels_U0_start_out : STD_LOGIC;
     signal process_pixels_U0_start_write : STD_LOGIC;
     signal process_pixels_U0_padded_stream2_read : STD_LOGIC;
     signal process_pixels_U0_gray_stream3_din : STD_LOGIC_VECTOR (7 downto 0);
     signal process_pixels_U0_gray_stream3_write : STD_LOGIC;
+    signal process_pixels_U0_gray_fifo_breath : STD_LOGIC_VECTOR (7 downto 0);
+    signal process_pixels_U0_gray_fifo_breath_ap_vld : STD_LOGIC;
     signal process_pixels_U0_ap_done : STD_LOGIC;
     signal process_pixels_U0_ap_ready : STD_LOGIC;
     signal process_pixels_U0_ap_idle : STD_LOGIC;
@@ -116,7 +120,7 @@ architecture behav of accelerator_v2 is
     signal repack_U0_out_stream_TLAST : STD_LOGIC_VECTOR (0 downto 0);
     signal repack_U0_out_stream_TID : STD_LOGIC_VECTOR (0 downto 0);
     signal repack_U0_out_stream_TDEST : STD_LOGIC_VECTOR (0 downto 0);
-    signal repack_U0_out_breath : STD_LOGIC_VECTOR (0 downto 0);
+    signal repack_U0_out_breath : STD_LOGIC_VECTOR (7 downto 0);
     signal repack_U0_out_breath_ap_vld : STD_LOGIC;
     signal bgr_stream_full_n : STD_LOGIC;
     signal bgr_stream_dout : STD_LOGIC_VECTOR (23 downto 0);
@@ -173,8 +177,10 @@ architecture behav of accelerator_v2 is
         bgr_stream1_fifo_cap : IN STD_LOGIC_VECTOR (12 downto 0);
         bgr_stream1_full_n : IN STD_LOGIC;
         bgr_stream1_write : OUT STD_LOGIC;
-        in_breath : OUT STD_LOGIC_VECTOR (0 downto 0);
-        in_breath_ap_vld : OUT STD_LOGIC );
+        in_breath : OUT STD_LOGIC_VECTOR (7 downto 0);
+        in_breath_ap_vld : OUT STD_LOGIC;
+        bgr_fifo_breath : OUT STD_LOGIC_VECTOR (7 downto 0);
+        bgr_fifo_breath_ap_vld : OUT STD_LOGIC );
     end component;
 
 
@@ -199,7 +205,9 @@ architecture behav of accelerator_v2 is
         padded_stream2_num_data_valid : IN STD_LOGIC_VECTOR (12 downto 0);
         padded_stream2_fifo_cap : IN STD_LOGIC_VECTOR (12 downto 0);
         padded_stream2_full_n : IN STD_LOGIC;
-        padded_stream2_write : OUT STD_LOGIC );
+        padded_stream2_write : OUT STD_LOGIC;
+        pad_fifo_breath : OUT STD_LOGIC_VECTOR (7 downto 0);
+        pad_fifo_breath_ap_vld : OUT STD_LOGIC );
     end component;
 
 
@@ -215,8 +223,10 @@ architecture behav of accelerator_v2 is
         gray_stream3_din : OUT STD_LOGIC_VECTOR (7 downto 0);
         gray_stream3_full_n : IN STD_LOGIC;
         gray_stream3_write : OUT STD_LOGIC;
+        gray_fifo_breath : OUT STD_LOGIC_VECTOR (7 downto 0);
         ap_clk : IN STD_LOGIC;
         ap_rst : IN STD_LOGIC;
+        gray_fifo_breath_ap_vld : OUT STD_LOGIC;
         ap_done : OUT STD_LOGIC;
         ap_ready : OUT STD_LOGIC;
         ap_idle : OUT STD_LOGIC;
@@ -247,7 +257,7 @@ architecture behav of accelerator_v2 is
         out_stream_TLAST : OUT STD_LOGIC_VECTOR (0 downto 0);
         out_stream_TID : OUT STD_LOGIC_VECTOR (0 downto 0);
         out_stream_TDEST : OUT STD_LOGIC_VECTOR (0 downto 0);
-        out_breath : OUT STD_LOGIC_VECTOR (0 downto 0);
+        out_breath : OUT STD_LOGIC_VECTOR (7 downto 0);
         out_breath_ap_vld : OUT STD_LOGIC );
     end component;
 
@@ -373,6 +383,16 @@ architecture behav of accelerator_v2 is
         ACLK : IN STD_LOGIC;
         ARESET : IN STD_LOGIC;
         ACLK_EN : IN STD_LOGIC;
+        in_breath : IN STD_LOGIC_VECTOR (7 downto 0);
+        in_breath_ap_vld : IN STD_LOGIC;
+        out_breath : IN STD_LOGIC_VECTOR (7 downto 0);
+        out_breath_ap_vld : IN STD_LOGIC;
+        bgr_fifo_breath : IN STD_LOGIC_VECTOR (7 downto 0);
+        bgr_fifo_breath_ap_vld : IN STD_LOGIC;
+        pad_fifo_breath : IN STD_LOGIC_VECTOR (7 downto 0);
+        pad_fifo_breath_ap_vld : IN STD_LOGIC;
+        gray_fifo_breath : IN STD_LOGIC_VECTOR (7 downto 0);
+        gray_fifo_breath_ap_vld : IN STD_LOGIC;
         ap_start : OUT STD_LOGIC;
         interrupt : OUT STD_LOGIC;
         ap_ready : IN STD_LOGIC;
@@ -408,6 +428,16 @@ begin
         ACLK => ap_clk,
         ARESET => ap_rst_n_inv,
         ACLK_EN => ap_const_logic_1,
+        in_breath => unpack_U0_in_breath,
+        in_breath_ap_vld => unpack_U0_in_breath_ap_vld,
+        out_breath => repack_U0_out_breath,
+        out_breath_ap_vld => repack_U0_out_breath_ap_vld,
+        bgr_fifo_breath => unpack_U0_bgr_fifo_breath,
+        bgr_fifo_breath_ap_vld => unpack_U0_bgr_fifo_breath_ap_vld,
+        pad_fifo_breath => pad_U0_pad_fifo_breath,
+        pad_fifo_breath_ap_vld => pad_U0_pad_fifo_breath_ap_vld,
+        gray_fifo_breath => process_pixels_U0_gray_fifo_breath,
+        gray_fifo_breath_ap_vld => process_pixels_U0_gray_fifo_breath_ap_vld,
         ap_start => ap_start,
         interrupt => interrupt,
         ap_ready => ap_ready,
@@ -441,7 +471,9 @@ begin
         bgr_stream1_full_n => bgr_stream_full_n,
         bgr_stream1_write => unpack_U0_bgr_stream1_write,
         in_breath => unpack_U0_in_breath,
-        in_breath_ap_vld => unpack_U0_in_breath_ap_vld);
+        in_breath_ap_vld => unpack_U0_in_breath_ap_vld,
+        bgr_fifo_breath => unpack_U0_bgr_fifo_breath,
+        bgr_fifo_breath_ap_vld => unpack_U0_bgr_fifo_breath_ap_vld);
 
     pad_U0 : component accelerator_v2_pad
     port map (
@@ -464,7 +496,9 @@ begin
         padded_stream2_num_data_valid => padded_stream_num_data_valid,
         padded_stream2_fifo_cap => padded_stream_fifo_cap,
         padded_stream2_full_n => padded_stream_full_n,
-        padded_stream2_write => pad_U0_padded_stream2_write);
+        padded_stream2_write => pad_U0_padded_stream2_write,
+        pad_fifo_breath => pad_U0_pad_fifo_breath,
+        pad_fifo_breath_ap_vld => pad_U0_pad_fifo_breath_ap_vld);
 
     process_pixels_U0 : component accelerator_v2_process_pixels
     port map (
@@ -478,8 +512,10 @@ begin
         gray_stream3_din => process_pixels_U0_gray_stream3_din,
         gray_stream3_full_n => gray_stream_full_n,
         gray_stream3_write => process_pixels_U0_gray_stream3_write,
+        gray_fifo_breath => process_pixels_U0_gray_fifo_breath,
         ap_clk => ap_clk,
         ap_rst => ap_rst_n_inv,
+        gray_fifo_breath_ap_vld => process_pixels_U0_gray_fifo_breath_ap_vld,
         ap_done => process_pixels_U0_ap_done,
         ap_ready => process_pixels_U0_ap_ready,
         ap_idle => process_pixels_U0_ap_idle,
@@ -607,10 +643,8 @@ begin
                 ap_rst_n_inv <= not(ap_rst_n);
     end process;
 
-    ap_sync_done <= (unpack_U0_ap_done and repack_U0_ap_done);
-    in_breath <= unpack_U0_in_breath;
+    ap_sync_done <= (unpack_U0_ap_done and repack_U0_ap_done and process_pixels_U0_ap_done and pad_U0_ap_done);
     in_stream_TREADY <= unpack_U0_in_stream_TREADY;
-    out_breath <= repack_U0_out_breath;
     out_stream_TDATA <= repack_U0_out_stream_TDATA;
     out_stream_TDEST <= repack_U0_out_stream_TDEST;
     out_stream_TID <= repack_U0_out_stream_TID;
@@ -619,9 +653,9 @@ begin
     out_stream_TSTRB <= repack_U0_out_stream_TSTRB;
     out_stream_TUSER <= repack_U0_out_stream_TUSER;
     out_stream_TVALID <= repack_U0_out_stream_TVALID;
-    pad_U0_ap_continue <= ap_const_logic_1;
+    pad_U0_ap_continue <= ap_sync_done;
     pad_U0_ap_start <= start_for_pad_U0_empty_n;
-    process_pixels_U0_ap_continue <= ap_const_logic_1;
+    process_pixels_U0_ap_continue <= ap_sync_done;
     process_pixels_U0_ap_start <= start_for_process_pixels_U0_empty_n;
     repack_U0_ap_continue <= ap_sync_done;
     repack_U0_ap_start <= start_for_repack_U0_empty_n;

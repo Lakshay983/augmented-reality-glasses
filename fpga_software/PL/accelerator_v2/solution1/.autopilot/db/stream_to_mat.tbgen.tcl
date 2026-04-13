@@ -14,11 +14,11 @@ set C_modelName {stream_to_mat}
 set C_modelType { void 0 }
 set C_modelArgList {
 	{ padded_stream2 int 24 regular {fifo 0 volatile }  }
-	{ bgr_mat_data43 int 24 regular {fifo 1 volatile }  }
+	{ bgr_mat_data1 int 24 regular {fifo 1 volatile }  }
 }
 set C_modelArgMapList {[ 
 	{ "Name" : "padded_stream2", "interface" : "fifo", "bitwidth" : 24, "direction" : "READONLY"} , 
- 	{ "Name" : "bgr_mat_data43", "interface" : "fifo", "bitwidth" : 24, "direction" : "WRITEONLY"} ]}
+ 	{ "Name" : "bgr_mat_data1", "interface" : "fifo", "bitwidth" : 24, "direction" : "WRITEONLY"} ]}
 # RTL Port declarations: 
 set portNum 20
 set portList { 
@@ -35,11 +35,11 @@ set portList {
 	{ padded_stream2_fifo_cap sc_in sc_lv 13 signal 0 } 
 	{ padded_stream2_empty_n sc_in sc_logic 1 signal 0 } 
 	{ padded_stream2_read sc_out sc_logic 1 signal 0 } 
-	{ bgr_mat_data43_din sc_out sc_lv 24 signal 1 } 
-	{ bgr_mat_data43_num_data_valid sc_in sc_lv 13 signal 1 } 
-	{ bgr_mat_data43_fifo_cap sc_in sc_lv 13 signal 1 } 
-	{ bgr_mat_data43_full_n sc_in sc_logic 1 signal 1 } 
-	{ bgr_mat_data43_write sc_out sc_logic 1 signal 1 } 
+	{ bgr_mat_data1_din sc_out sc_lv 24 signal 1 } 
+	{ bgr_mat_data1_num_data_valid sc_in sc_lv 13 signal 1 } 
+	{ bgr_mat_data1_fifo_cap sc_in sc_lv 13 signal 1 } 
+	{ bgr_mat_data1_full_n sc_in sc_logic 1 signal 1 } 
+	{ bgr_mat_data1_write sc_out sc_logic 1 signal 1 } 
 	{ start_out sc_out sc_logic 1 signal -1 } 
 	{ start_write sc_out sc_logic 1 signal -1 } 
 }
@@ -57,11 +57,11 @@ set NewPortList {[
  	{ "name": "padded_stream2_fifo_cap", "direction": "in", "datatype": "sc_lv", "bitwidth":13, "type": "signal", "bundle":{"name": "padded_stream2", "role": "fifo_cap" }} , 
  	{ "name": "padded_stream2_empty_n", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "padded_stream2", "role": "empty_n" }} , 
  	{ "name": "padded_stream2_read", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "padded_stream2", "role": "read" }} , 
- 	{ "name": "bgr_mat_data43_din", "direction": "out", "datatype": "sc_lv", "bitwidth":24, "type": "signal", "bundle":{"name": "bgr_mat_data43", "role": "din" }} , 
- 	{ "name": "bgr_mat_data43_num_data_valid", "direction": "in", "datatype": "sc_lv", "bitwidth":13, "type": "signal", "bundle":{"name": "bgr_mat_data43", "role": "num_data_valid" }} , 
- 	{ "name": "bgr_mat_data43_fifo_cap", "direction": "in", "datatype": "sc_lv", "bitwidth":13, "type": "signal", "bundle":{"name": "bgr_mat_data43", "role": "fifo_cap" }} , 
- 	{ "name": "bgr_mat_data43_full_n", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "bgr_mat_data43", "role": "full_n" }} , 
- 	{ "name": "bgr_mat_data43_write", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "bgr_mat_data43", "role": "write" }} , 
+ 	{ "name": "bgr_mat_data1_din", "direction": "out", "datatype": "sc_lv", "bitwidth":24, "type": "signal", "bundle":{"name": "bgr_mat_data1", "role": "din" }} , 
+ 	{ "name": "bgr_mat_data1_num_data_valid", "direction": "in", "datatype": "sc_lv", "bitwidth":13, "type": "signal", "bundle":{"name": "bgr_mat_data1", "role": "num_data_valid" }} , 
+ 	{ "name": "bgr_mat_data1_fifo_cap", "direction": "in", "datatype": "sc_lv", "bitwidth":13, "type": "signal", "bundle":{"name": "bgr_mat_data1", "role": "fifo_cap" }} , 
+ 	{ "name": "bgr_mat_data1_full_n", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "bgr_mat_data1", "role": "full_n" }} , 
+ 	{ "name": "bgr_mat_data1_write", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "bgr_mat_data1", "role": "write" }} , 
  	{ "name": "start_out", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "start_out", "role": "default" }} , 
  	{ "name": "start_write", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "start_write", "role": "default" }}  ]}
 
@@ -84,11 +84,11 @@ set RtlHierarchyInfo {[
 			{"Name" : "padded_stream2", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "3864", "DependentChanType" : "0",
 				"BlockSignal" : [
 					{"Name" : "padded_stream2_blk_n", "Type" : "RtlSignal"}]},
-			{"Name" : "bgr_mat_data43", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "3220", "DependentChanType" : "0",
+			{"Name" : "bgr_mat_data1", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "3220", "DependentChanType" : "0",
 				"BlockSignal" : [
-					{"Name" : "bgr_mat_data43_blk_n", "Type" : "RtlSignal"}]}],
+					{"Name" : "bgr_mat_data1_blk_n", "Type" : "RtlSignal"}]}],
 		"Loop" : [
-			{"Name" : "VITIS_LOOP_137_1_VITIS_LOOP_138_2", "PipelineType" : "UPC",
+			{"Name" : "VITIS_LOOP_197_1_VITIS_LOOP_198_2", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter1", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter0", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "1"}}]},
 	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.flow_control_loop_pipe_U", "Parent" : "0"}]}
 
@@ -96,7 +96,7 @@ set RtlHierarchyInfo {[
 set ArgLastReadFirstWriteLatency {
 	stream_to_mat {
 		padded_stream2 {Type I LastRead 0 FirstWrite -1}
-		bgr_mat_data43 {Type O LastRead -1 FirstWrite 1}}}
+		bgr_mat_data1 {Type O LastRead -1 FirstWrite 1}}}
 
 set hasDtUnsupportedChannel 0
 
@@ -111,5 +111,5 @@ set PipelineEnableSignalInfo {[
 
 set Spec2ImplPortList { 
 	padded_stream2 { ap_fifo {  { padded_stream2_dout fifo_port_we 0 24 }  { padded_stream2_num_data_valid fifo_status_num_data_valid 0 13 }  { padded_stream2_fifo_cap fifo_update 0 13 }  { padded_stream2_empty_n fifo_status 0 1 }  { padded_stream2_read fifo_data 1 1 } } }
-	bgr_mat_data43 { ap_fifo {  { bgr_mat_data43_din fifo_port_we 1 24 }  { bgr_mat_data43_num_data_valid fifo_status_num_data_valid 0 13 }  { bgr_mat_data43_fifo_cap fifo_update 0 13 }  { bgr_mat_data43_full_n fifo_status 0 1 }  { bgr_mat_data43_write fifo_data 1 1 } } }
+	bgr_mat_data1 { ap_fifo {  { bgr_mat_data1_din fifo_port_we 1 24 }  { bgr_mat_data1_num_data_valid fifo_status_num_data_valid 0 13 }  { bgr_mat_data1_fifo_cap fifo_update 0 13 }  { bgr_mat_data1_full_n fifo_status 0 1 }  { bgr_mat_data1_write fifo_data 1 1 } } }
 }

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'xfapplygaussian5x5_1_0_false_s'" level="0">
-<item name = "Date">Sun Apr 12 22:15:07 2026
+<item name = "Date">Mon Apr 13 00:33:24 2026
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">accelerator_v2</item>
@@ -65,10 +65,10 @@
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
 <keys size="3">Instance, Module, Expression</keys>
-<column name="ama_addmuladd_8ns_8ns_7ns_18s_19_4_0_U86">ama_addmuladd_8ns_8ns_7ns_18s_19_4_0, i0 + (i1 + i2) * i3</column>
-<column name="ama_addmuladd_8ns_8ns_7ns_18s_19_4_0_U87">ama_addmuladd_8ns_8ns_7ns_18s_19_4_0, i0 + (i1 + i2) * i3</column>
-<column name="mac_muladd_24ns_7ns_30s_32_4_0_U89">mac_muladd_24ns_7ns_30s_32_4_0, i0 * i1 + i2</column>
-<column name="mac_muladd_8ns_7ns_17s_18_4_0_U88">mac_muladd_8ns_7ns_17s_18_4_0, i0 + i1 * i2</column>
+<column name="ama_addmuladd_8ns_8ns_7ns_18s_19_4_0_U96">ama_addmuladd_8ns_8ns_7ns_18s_19_4_0, i0 + (i1 + i2) * i3</column>
+<column name="ama_addmuladd_8ns_8ns_7ns_18s_19_4_0_U97">ama_addmuladd_8ns_8ns_7ns_18s_19_4_0, i0 + (i1 + i2) * i3</column>
+<column name="mac_muladd_24ns_7ns_30s_32_4_0_U99">mac_muladd_24ns_7ns_30s_32_4_0, i0 * i1 + i2</column>
+<column name="mac_muladd_8ns_7ns_17s_18_4_0_U98">mac_muladd_8ns_7ns_17s_18_4_0, i0 + i1 * i2</column>
 </table>
 </item>
 <item name = "Memory"><table name="" hasTotal="1">

@@ -198,56 +198,56 @@ Args:
 --- !Passed
 Pass:            inline
 Name:            AlwaysInline
-DebugLoc:        { File: accelerator_v2.cpp, Line: 168, Column: 78 }
-Function:        _Z14process_pixelsRN3hls6streamI7ap_uintILi24EELi0EEERNS0_IS1_ILi8EELi0EEEii
+DebugLoc:        { File: accelerator_v2.cpp, Line: 237, Column: 78 }
+Function:        _Z14process_pixelsRN3hls6streamI7ap_uintILi24EELi0EEERNS0_IS1_ILi8EELi0EEEiiPVS5_
 Args:            
   - String:          'Inlining function '''
   - Callee:          'xf::cv::Mat<9, 484, 644, 1, 3220>::Mat(int, int)'
     DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp, 
                        Line: 670, Column: 0 }
   - String:          ''' into '''
-  - Caller:          'process_pixels(hls::stream<ap_uint<24>, 0>&, hls::stream<ap_uint<8>, 0>&, int, int)'
-    DebugLoc:        { File: accelerator_v2.cpp, Line: 165, Column: 0 }
+  - Caller:          'process_pixels(hls::stream<ap_uint<24>, 0>&, hls::stream<ap_uint<8>, 0>&, int, int, ap_uint<8> volatile*)'
+    DebugLoc:        { File: accelerator_v2.cpp, Line: 234, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            inline
 Name:            AlwaysInline
-DebugLoc:        { File: accelerator_v2.cpp, Line: 169, Column: 81 }
-Function:        _Z14process_pixelsRN3hls6streamI7ap_uintILi24EELi0EEERNS0_IS1_ILi8EELi0EEEii
+DebugLoc:        { File: accelerator_v2.cpp, Line: 238, Column: 81 }
+Function:        _Z14process_pixelsRN3hls6streamI7ap_uintILi24EELi0EEERNS0_IS1_ILi8EELi0EEEiiPVS5_
 Args:            
   - String:          'Inlining function '''
   - Callee:          'xf::cv::Mat<0, 484, 644, 1, 3220>::Mat(int, int)'
     DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp, 
                        Line: 670, Column: 0 }
   - String:          ''' into '''
-  - Caller:          'process_pixels(hls::stream<ap_uint<24>, 0>&, hls::stream<ap_uint<8>, 0>&, int, int)'
-    DebugLoc:        { File: accelerator_v2.cpp, Line: 165, Column: 0 }
+  - Caller:          'process_pixels(hls::stream<ap_uint<24>, 0>&, hls::stream<ap_uint<8>, 0>&, int, int, ap_uint<8> volatile*)'
+    DebugLoc:        { File: accelerator_v2.cpp, Line: 234, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            inline
 Name:            AlwaysInline
-DebugLoc:        { File: accelerator_v2.cpp, Line: 170, Column: 81 }
-Function:        _Z14process_pixelsRN3hls6streamI7ap_uintILi24EELi0EEERNS0_IS1_ILi8EELi0EEEii
+DebugLoc:        { File: accelerator_v2.cpp, Line: 239, Column: 81 }
+Function:        _Z14process_pixelsRN3hls6streamI7ap_uintILi24EELi0EEERNS0_IS1_ILi8EELi0EEEiiPVS5_
 Args:            
   - String:          'Inlining function '''
   - Callee:          'xf::cv::Mat<0, 484, 644, 1, 3220>::Mat(int, int)'
     DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp, 
                        Line: 670, Column: 0 }
   - String:          ''' into '''
-  - Caller:          'process_pixels(hls::stream<ap_uint<24>, 0>&, hls::stream<ap_uint<8>, 0>&, int, int)'
-    DebugLoc:        { File: accelerator_v2.cpp, Line: 165, Column: 0 }
+  - Caller:          'process_pixels(hls::stream<ap_uint<24>, 0>&, hls::stream<ap_uint<8>, 0>&, int, int, ap_uint<8> volatile*)'
+    DebugLoc:        { File: accelerator_v2.cpp, Line: 234, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
-DebugLoc:        { File: accelerator_v2.cpp, Line: 224, Column: 31 }
-Function:        _Z6repackRN3hls6streamI7ap_uintILi8EELi0EEERNS0_INS_4axisIS1_ILi128EELm1ELm1ELm1EEELi0EEEPVS1_ILi1EE
+DebugLoc:        { File: accelerator_v2.cpp, Line: 300, Column: 31 }
+Function:        _Z6repackRN3hls6streamI7ap_uintILi8EELi0EEERNS0_INS_4axisIS1_ILi128EELm1ELm1ELm1EEELi0EEEPVS2_
 Args:            
   - String:          'Loop '''
-  - LoopName:        VITIS_LOOP_224_4
+  - LoopName:        VITIS_LOOP_300_4
   - String:          ''' is marked as complete unroll implied by the pipeline pragma'
 ...
 --- !Passed
@@ -319,13 +319,13 @@ Args:
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: accelerator_v2.cpp, Line: 188, Column: 0 }
-Function:        _Z6repackRN3hls6streamI7ap_uintILi8EELi0EEERNS0_INS_4axisIS1_ILi128EELm1ELm1ELm1EEELi0EEEPVS1_ILi1EE
+DebugLoc:        { File: accelerator_v2.cpp, Line: 259, Column: 0 }
+Function:        _Z6repackRN3hls6streamI7ap_uintILi8EELi0EEERNS0_INS_4axisIS1_ILi128EELm1ELm1ELm1EEELi0EEEPVS2_
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_224_4
+  - LoopName:        VITIS_LOOP_300_4
   - String:          ''' ('
-  - LoopLoc:         'accelerator_v2.cpp:224:31'
+  - LoopLoc:         'accelerator_v2.cpp:300:31'
   - String:          ') '
   - String:          'in function '''
   - String:          repack
@@ -454,7 +454,7 @@ Args:
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: accelerator_v2.cpp, Line: 135, Column: 0 }
+DebugLoc:        { File: accelerator_v2.cpp, Line: 195, Column: 0 }
 Function:        _Z13stream_to_matRN3hls6streamI7ap_uintILi24EELi0EEERN2xf2cv3MatILi9ELi484ELi644ELi1ELi3220EEEii
 Args:            
   - String:          'Inlining function '''
@@ -463,7 +463,7 @@ Args:
                        Line: 552, Column: 0 }
   - String:          ''' into '''
   - Caller:          'stream_to_mat(hls::stream<ap_uint<24>, 0>&, xf::cv::Mat<9, 484, 644, 1, 3220>&, int, int)'
-    DebugLoc:        { File: accelerator_v2.cpp, Line: 135, Column: 0 }
+    DebugLoc:        { File: accelerator_v2.cpp, Line: 195, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
@@ -588,22 +588,22 @@ Args:
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: accelerator_v2.cpp, Line: 150, Column: 0 }
-Function:        _Z13mat_to_streamRN2xf2cv3MatILi0ELi484ELi644ELi1ELi3220EEERN3hls6streamI7ap_uintILi8EELi0EEEii
+DebugLoc:        { File: accelerator_v2.cpp, Line: 213, Column: 0 }
+Function:        _Z13mat_to_streamRN2xf2cv3MatILi0ELi484ELi644ELi1ELi3220EEERN3hls6streamI7ap_uintILi8EELi0EEEiiPVS7_
 Args:            
   - String:          'Inlining function '''
   - Callee:          'ap_uint<8> xf::cv::Mat<0, 484, 644, 1, 3220>::read<3220, (void*)0>(int)'
     DebugLoc:        { File: /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp, 
                        Line: 541, Column: 0 }
   - String:          ''' into '''
-  - Caller:          'mat_to_stream(xf::cv::Mat<0, 484, 644, 1, 3220>&, hls::stream<ap_uint<8>, 0>&, int, int)'
-    DebugLoc:        { File: accelerator_v2.cpp, Line: 150, Column: 0 }
+  - Caller:          'mat_to_stream(xf::cv::Mat<0, 484, 644, 1, 3220>&, hls::stream<ap_uint<8>, 0>&, int, int, ap_uint<8> volatile*)'
+    DebugLoc:        { File: accelerator_v2.cpp, Line: 213, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-Function:        _Z14accelerator_v2RN3hls6streamINS_4axisI7ap_uintILi128EELm1ELm1ELm1EEELi0EEES6_PVS2_ILi1EES9_
+Function:        _Z14accelerator_v2RN3hls6streamINS_4axisI7ap_uintILi128EELm1ELm1ELm1EEELi0EEES6_PVS2_ILi8EES9_S9_S9_S9_
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -620,8 +620,8 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: accelerator_v2.cpp, Line: 75, Column: 14 }
-Function:        _Z3padRN3hls6streamI7ap_uintILi24EELi0EEES4_
+DebugLoc:        { File: accelerator_v2.cpp, Line: 124, Column: 14 }
+Function:        _Z3padRN3hls6streamI7ap_uintILi24EELi0EEES4_PVS1_ILi8EE
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -752,44 +752,422 @@ Args:
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            NonSimpleMemoryAccess
-DebugLoc:        { File: accelerator_v2.cpp, Line: 37, Column: 33 }
-Function:        _Z6unpackRN3hls6streamINS_4axisI7ap_uintILi128EELm1ELm1ELm1EEELi0EEERNS0_IS2_ILi24EELi0EEEPVS2_ILi1EE
+DebugLoc:        { File: accelerator_v2.cpp, Line: 91, Column: 28 }
+Function:        _Z6unpackRN3hls6streamINS_4axisI7ap_uintILi128EELm1ELm1ELm1EEELi0EEERNS0_IS2_ILi24EELi0EEEPVS2_ILi8EESC_
 Args:            
   - String:          Volatile or Atomic access cannot be transformed
   - String:          ' _XLX_SEP_ '
-  - AccessID:        if.then.store.0
+  - AccessID:        if.then.store.18
   - String:          ' '
   - ArrayName:       in_breath
   - String:          ' '
   - BundleName:      ''
   - String:          ' '
-  - Function:        'unpack(hls::stream<hls::axis<ap_uint<128>, 1ul, 1ul, 1ul>, 0>&, hls::stream<ap_uint<24>, 0>&, ap_uint<1> volatile*)'
-    DebugLoc:        { File: accelerator_v2.cpp, Line: 32, Column: 0 }
+  - Function:        'unpack(hls::stream<hls::axis<ap_uint<128>, 1ul, 1ul, 1ul>, 0>&, hls::stream<ap_uint<24>, 0>&, ap_uint<8> volatile*, ap_uint<8> volatile*)'
+    DebugLoc:        { File: accelerator_v2.cpp, Line: 63, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            NonSimpleMemoryAccess
-DebugLoc:        { File: accelerator_v2.cpp, Line: 190, Column: 14 }
-Function:        _Z6repackRN3hls6streamI7ap_uintILi8EELi0EEERNS0_INS_4axisIS1_ILi128EELm1ELm1ELm1EEELi0EEEPVS1_ILi1EE
+DebugLoc:        { File: accelerator_v2.cpp, Line: 106, Column: 34 }
+Function:        _Z6unpackRN3hls6streamINS_4axisI7ap_uintILi128EELm1ELm1ELm1EEELi0EEERNS0_IS2_ILi24EELi0EEEPVS2_ILi8EESC_
 Args:            
   - String:          Volatile or Atomic access cannot be transformed
   - String:          ' _XLX_SEP_ '
-  - AccessID:        entry.store.10
+  - AccessID:        if.else16.store.30
+  - String:          ' '
+  - ArrayName:       bgr_fifo_breath
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'unpack(hls::stream<hls::axis<ap_uint<128>, 1ul, 1ul, 1ul>, 0>&, hls::stream<ap_uint<24>, 0>&, ap_uint<8> volatile*, ap_uint<8> volatile*)'
+    DebugLoc:        { File: accelerator_v2.cpp, Line: 63, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: accelerator_v2.cpp, Line: 111, Column: 20 }
+Function:        _Z6unpackRN3hls6streamINS_4axisI7ap_uintILi128EELm1ELm1ELm1EEELi0EEERNS0_IS2_ILi24EELi0EEEPVS2_ILi8EESC_
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        for.inc27.store.1
+  - String:          ' '
+  - ArrayName:       in_breath
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'unpack(hls::stream<hls::axis<ap_uint<128>, 1ul, 1ul, 1ul>, 0>&, hls::stream<ap_uint<24>, 0>&, ap_uint<8> volatile*, ap_uint<8> volatile*)'
+    DebugLoc:        { File: accelerator_v2.cpp, Line: 63, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: accelerator_v2.cpp, Line: 76, Column: 20 }
+Function:        _Z6unpackRN3hls6streamINS_4axisI7ap_uintILi128EELm1ELm1ELm1EEELi0EEERNS0_IS2_ILi24EELi0EEEPVS2_ILi8EESC_
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        VITIS_LOOP_84_2.store.12
+  - String:          ' '
+  - ArrayName:       in_breath
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'unpack(hls::stream<hls::axis<ap_uint<128>, 1ul, 1ul, 1ul>, 0>&, hls::stream<ap_uint<24>, 0>&, ap_uint<8> volatile*, ap_uint<8> volatile*)'
+    DebugLoc:        { File: accelerator_v2.cpp, Line: 63, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: accelerator_v2.cpp, Line: 148, Column: 95 }
+Function:        _Z3padRN3hls6streamI7ap_uintILi24EELi0EEES4_PVS1_ILi8EE
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        for.inc60.store.13
+  - String:          ' '
+  - ArrayName:       pad_fifo_breath
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'pad(hls::stream<ap_uint<24>, 0>&, hls::stream<ap_uint<24>, 0>&, ap_uint<8> volatile*)'
+    DebugLoc:        { File: accelerator_v2.cpp, Line: 121, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: accelerator_v2.cpp, Line: 149, Column: 95 }
+Function:        _Z3padRN3hls6streamI7ap_uintILi24EELi0EEES4_PVS1_ILi8EE
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        for.inc60.store.25
+  - String:          ' '
+  - ArrayName:       pad_fifo_breath
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'pad(hls::stream<ap_uint<24>, 0>&, hls::stream<ap_uint<24>, 0>&, ap_uint<8> volatile*)'
+    DebugLoc:        { File: accelerator_v2.cpp, Line: 121, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: accelerator_v2.cpp, Line: 146, Column: 60 }
+Function:        _Z3padRN3hls6streamI7ap_uintILi24EELi0EEES4_PVS1_ILi8EE
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        for.inc43.store.13
+  - String:          ' '
+  - ArrayName:       pad_fifo_breath
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'pad(hls::stream<ap_uint<24>, 0>&, hls::stream<ap_uint<24>, 0>&, ap_uint<8> volatile*)'
+    DebugLoc:        { File: accelerator_v2.cpp, Line: 121, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: accelerator_v2.cpp, Line: 142, Column: 90 }
+Function:        _Z3padRN3hls6streamI7ap_uintILi24EELi0EEES4_PVS1_ILi8EE
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        VITIS_LOOP_144_6.store.17
+  - String:          ' '
+  - ArrayName:       pad_fifo_breath
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'pad(hls::stream<ap_uint<24>, 0>&, hls::stream<ap_uint<24>, 0>&, ap_uint<8> volatile*)'
+    DebugLoc:        { File: accelerator_v2.cpp, Line: 121, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: accelerator_v2.cpp, Line: 143, Column: 90 }
+Function:        _Z3padRN3hls6streamI7ap_uintILi24EELi0EEES4_PVS1_ILi8EE
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        VITIS_LOOP_144_6.store.30
+  - String:          ' '
+  - ArrayName:       pad_fifo_breath
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'pad(hls::stream<ap_uint<24>, 0>&, hls::stream<ap_uint<24>, 0>&, ap_uint<8> volatile*)'
+    DebugLoc:        { File: accelerator_v2.cpp, Line: 121, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: accelerator_v2.cpp, Line: 164, Column: 94 }
+Function:        _Z3padRN3hls6streamI7ap_uintILi24EELi0EEES4_PVS1_ILi8EE
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        VITIS_LOOP_166_13.store.17
+  - String:          ' '
+  - ArrayName:       pad_fifo_breath
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'pad(hls::stream<ap_uint<24>, 0>&, hls::stream<ap_uint<24>, 0>&, ap_uint<8> volatile*)'
+    DebugLoc:        { File: accelerator_v2.cpp, Line: 121, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: accelerator_v2.cpp, Line: 165, Column: 94 }
+Function:        _Z3padRN3hls6streamI7ap_uintILi24EELi0EEES4_PVS1_ILi8EE
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        VITIS_LOOP_166_13.store.32
+  - String:          ' '
+  - ArrayName:       pad_fifo_breath
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'pad(hls::stream<ap_uint<24>, 0>&, hls::stream<ap_uint<24>, 0>&, ap_uint<8> volatile*)'
+    DebugLoc:        { File: accelerator_v2.cpp, Line: 121, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: accelerator_v2.cpp, Line: 170, Column: 99 }
+Function:        _Z3padRN3hls6streamI7ap_uintILi24EELi0EEES4_PVS1_ILi8EE
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        for.inc122.store.15
+  - String:          ' '
+  - ArrayName:       pad_fifo_breath
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'pad(hls::stream<ap_uint<24>, 0>&, hls::stream<ap_uint<24>, 0>&, ap_uint<8> volatile*)'
+    DebugLoc:        { File: accelerator_v2.cpp, Line: 121, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: accelerator_v2.cpp, Line: 171, Column: 99 }
+Function:        _Z3padRN3hls6streamI7ap_uintILi24EELi0EEES4_PVS1_ILi8EE
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        for.inc122.store.29
+  - String:          ' '
+  - ArrayName:       pad_fifo_breath
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'pad(hls::stream<ap_uint<24>, 0>&, hls::stream<ap_uint<24>, 0>&, ap_uint<8> volatile*)'
+    DebugLoc:        { File: accelerator_v2.cpp, Line: 121, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: accelerator_v2.cpp, Line: 168, Column: 63 }
+Function:        _Z3padRN3hls6streamI7ap_uintILi24EELi0EEES4_PVS1_ILi8EE
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        for.inc105.store.17
+  - String:          ' '
+  - ArrayName:       pad_fifo_breath
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'pad(hls::stream<ap_uint<24>, 0>&, hls::stream<ap_uint<24>, 0>&, ap_uint<8> volatile*)'
+    DebugLoc:        { File: accelerator_v2.cpp, Line: 121, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: accelerator_v2.cpp, Line: 183, Column: 99 }
+Function:        _Z3padRN3hls6streamI7ap_uintILi24EELi0EEES4_PVS1_ILi8EE
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        for.inc175.store.11
+  - String:          ' '
+  - ArrayName:       pad_fifo_breath
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'pad(hls::stream<ap_uint<24>, 0>&, hls::stream<ap_uint<24>, 0>&, ap_uint<8> volatile*)'
+    DebugLoc:        { File: accelerator_v2.cpp, Line: 121, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: accelerator_v2.cpp, Line: 184, Column: 99 }
+Function:        _Z3padRN3hls6streamI7ap_uintILi24EELi0EEES4_PVS1_ILi8EE
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        for.inc175.store.21
+  - String:          ' '
+  - ArrayName:       pad_fifo_breath
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'pad(hls::stream<ap_uint<24>, 0>&, hls::stream<ap_uint<24>, 0>&, ap_uint<8> volatile*)'
+    DebugLoc:        { File: accelerator_v2.cpp, Line: 121, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: accelerator_v2.cpp, Line: 181, Column: 63 }
+Function:        _Z3padRN3hls6streamI7ap_uintILi24EELi0EEES4_PVS1_ILi8EE
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        for.inc158.store.13
+  - String:          ' '
+  - ArrayName:       pad_fifo_breath
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'pad(hls::stream<ap_uint<24>, 0>&, hls::stream<ap_uint<24>, 0>&, ap_uint<8> volatile*)'
+    DebugLoc:        { File: accelerator_v2.cpp, Line: 121, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: accelerator_v2.cpp, Line: 177, Column: 94 }
+Function:        _Z3padRN3hls6streamI7ap_uintILi24EELi0EEES4_PVS1_ILi8EE
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        VITIS_LOOP_179_19.store.16
+  - String:          ' '
+  - ArrayName:       pad_fifo_breath
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'pad(hls::stream<ap_uint<24>, 0>&, hls::stream<ap_uint<24>, 0>&, ap_uint<8> volatile*)'
+    DebugLoc:        { File: accelerator_v2.cpp, Line: 121, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: accelerator_v2.cpp, Line: 178, Column: 94 }
+Function:        _Z3padRN3hls6streamI7ap_uintILi24EELi0EEES4_PVS1_ILi8EE
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        VITIS_LOOP_179_19.store.27
+  - String:          ' '
+  - ArrayName:       pad_fifo_breath
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'pad(hls::stream<ap_uint<24>, 0>&, hls::stream<ap_uint<24>, 0>&, ap_uint<8> volatile*)'
+    DebugLoc:        { File: accelerator_v2.cpp, Line: 121, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: accelerator_v2.cpp, Line: 222, Column: 31 }
+Function:        _Z13mat_to_streamRN2xf2cv3MatILi0ELi484ELi644ELi1ELi3220EEERN3hls6streamI7ap_uintILi8EELi0EEEiiPVS7_
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        for.inc.store.17
+  - String:          ' '
+  - ArrayName:       gray_fifo_breath
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'mat_to_stream(xf::cv::Mat<0, 484, 644, 1, 3220>&, hls::stream<ap_uint<8>, 0>&, int, int, ap_uint<8> volatile*)'
+    DebugLoc:        { File: accelerator_v2.cpp, Line: 213, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: accelerator_v2.cpp, Line: 312, Column: 21 }
+Function:        _Z6repackRN3hls6streamI7ap_uintILi8EELi0EEERNS0_INS_4axisIS1_ILi128EELm1ELm1ELm1EEELi0EEEPVS2_
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        for.end53.store.0
   - String:          ' '
   - ArrayName:       out_breath
   - String:          ' '
   - BundleName:      ''
   - String:          ' '
-  - Function:        'repack(hls::stream<ap_uint<8>, 0>&, hls::stream<hls::axis<ap_uint<128>, 1ul, 1ul, 1ul>, 0>&, ap_uint<1> volatile*)'
-    DebugLoc:        { File: accelerator_v2.cpp, Line: 188, Column: 0 }
+  - Function:        'repack(hls::stream<ap_uint<8>, 0>&, hls::stream<hls::axis<ap_uint<128>, 1ul, 1ul, 1ul>, 0>&, ap_uint<8> volatile*)'
+    DebugLoc:        { File: accelerator_v2.cpp, Line: 259, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: accelerator_v2.cpp, Line: 308, Column: 25 }
+Function:        _Z6repackRN3hls6streamI7ap_uintILi8EELi0EEERNS0_INS_4axisIS1_ILi128EELm1ELm1ELm1EEELi0EEEPVS2_
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        for.inc43.store.135
+  - String:          ' '
+  - ArrayName:       out_breath
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'repack(hls::stream<ap_uint<8>, 0>&, hls::stream<hls::axis<ap_uint<128>, 1ul, 1ul, 1ul>, 0>&, ap_uint<8> volatile*)'
+    DebugLoc:        { File: accelerator_v2.cpp, Line: 259, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: accelerator_v2.cpp, Line: 287, Column: 25 }
+Function:        _Z6repackRN3hls6streamI7ap_uintILi8EELi0EEERNS0_INS_4axisIS1_ILi128EELm1ELm1ELm1EEELi0EEEPVS2_
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        VITIS_LOOP_291_3.store.37
+  - String:          ' '
+  - ArrayName:       out_breath
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'repack(hls::stream<ap_uint<8>, 0>&, hls::stream<hls::axis<ap_uint<128>, 1ul, 1ul, 1ul>, 0>&, ap_uint<8> volatile*)'
+    DebugLoc:        { File: accelerator_v2.cpp, Line: 259, Column: 0 }
   - String:          ' '
 ...
 --- !Passed
 Pass:            reflow-auto-array-partition
 Name:            AutoParallelPerformanceDrivenVerbosePassed
 DebugLoc:        { File: accelerator_v2.cpp, Line: 0, Column: 1 }
-Function:        _Z6repackRN3hls6streamI7ap_uintILi8EELi0EEERNS0_INS_4axisIS1_ILi128EELm1ELm1ELm1EEELi0EEEPVS1_ILi1EE
+Function:        _Z6repackRN3hls6streamI7ap_uintILi8EELi0EEERNS0_INS_4axisIS1_ILi128EELm1ELm1ELm1EEELi0EEEPVS2_
 Args:            
   - PragmaType:      array_partition
   - String:          ' '
@@ -799,18 +1177,18 @@ Args:
   - String:          ' '
   - PragmaFunction:  repack
   - String:          ' '
-  - varLoc:          'accelerator_v2.cpp:194:20'
+  - varLoc:          'accelerator_v2.cpp:264:20'
   - String:          ' '
-  - PragmaSrcLoc:    'accelerator_v2.cpp:216:9'
-    DebugLoc:        { File: accelerator_v2.cpp, Line: 216, Column: 9 }
+  - PragmaSrcLoc:    'accelerator_v2.cpp:292:9'
+    DebugLoc:        { File: accelerator_v2.cpp, Line: 292, Column: 9 }
   - VarName:         row_pixels
   - String:          ' '
 ...
 --- !Passed
 Pass:            reflow-auto-array-partition
 Name:            AutoArrayXform
-DebugLoc:        { File: accelerator_v2.cpp, Line: 216, Column: 9 }
-Function:        _Z6repackRN3hls6streamI7ap_uintILi8EELi0EEERNS0_INS_4axisIS1_ILi128EELm1ELm1ELm1EEELi0EEEPVS1_ILi1EE
+DebugLoc:        { File: accelerator_v2.cpp, Line: 292, Column: 9 }
+Function:        _Z6repackRN3hls6streamI7ap_uintILi8EELi0EEERNS0_INS_4axisIS1_ILi128EELm1ELm1ELm1EEELi0EEEPVS2_
 Args:            
   - String:          'Inferring pragma '''
   - PragmaType:      array_partition
@@ -830,8 +1208,8 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: accelerator_v2.cpp, Line: 194, Column: 20 }
-Function:        _Z6repackRN3hls6streamI7ap_uintILi8EELi0EEERNS0_INS_4axisIS1_ILi128EELm1ELm1ELm1EEELi0EEEPVS1_ILi1EE
+DebugLoc:        { File: accelerator_v2.cpp, Line: 264, Column: 20 }
+Function:        _Z6repackRN3hls6streamI7ap_uintILi8EELi0EEERNS0_INS_4axisIS1_ILi128EELm1ELm1ELm1EEELi0EEEPVS2_
 Args:            
   - String:          'Applying '
   - String:          array_partition

@@ -17,16 +17,16 @@ port (
     ap_done : OUT STD_LOGIC;
     ap_idle : OUT STD_LOGIC;
     ap_ready : OUT STD_LOGIC;
-    gray_mat_data44_dout : IN STD_LOGIC_VECTOR (7 downto 0);
-    gray_mat_data44_num_data_valid : IN STD_LOGIC_VECTOR (12 downto 0);
-    gray_mat_data44_fifo_cap : IN STD_LOGIC_VECTOR (12 downto 0);
-    gray_mat_data44_empty_n : IN STD_LOGIC;
-    gray_mat_data44_read : OUT STD_LOGIC;
-    blurred_mat_data45_din : OUT STD_LOGIC_VECTOR (7 downto 0);
-    blurred_mat_data45_num_data_valid : IN STD_LOGIC_VECTOR (12 downto 0);
-    blurred_mat_data45_fifo_cap : IN STD_LOGIC_VECTOR (12 downto 0);
-    blurred_mat_data45_full_n : IN STD_LOGIC;
-    blurred_mat_data45_write : OUT STD_LOGIC;
+    gray_mat_data2_dout : IN STD_LOGIC_VECTOR (7 downto 0);
+    gray_mat_data2_num_data_valid : IN STD_LOGIC_VECTOR (12 downto 0);
+    gray_mat_data2_fifo_cap : IN STD_LOGIC_VECTOR (12 downto 0);
+    gray_mat_data2_empty_n : IN STD_LOGIC;
+    gray_mat_data2_read : OUT STD_LOGIC;
+    blurred_mat_data3_din : OUT STD_LOGIC_VECTOR (7 downto 0);
+    blurred_mat_data3_num_data_valid : IN STD_LOGIC_VECTOR (12 downto 0);
+    blurred_mat_data3_fifo_cap : IN STD_LOGIC_VECTOR (12 downto 0);
+    blurred_mat_data3_full_n : IN STD_LOGIC;
+    blurred_mat_data3_write : OUT STD_LOGIC;
     tp1_V_cast : IN STD_LOGIC_VECTOR (2 downto 0);
     tp2_V_cast : IN STD_LOGIC_VECTOR (2 downto 0);
     mid_V_cast : IN STD_LOGIC_VECTOR (2 downto 0);
@@ -199,9 +199,9 @@ attribute shreg_extract : string;
     signal ap_condition_exit_pp0_iter0_stage0 : STD_LOGIC;
     signal ap_loop_exit_ready : STD_LOGIC;
     signal ap_ready_int : STD_LOGIC;
-    signal gray_mat_data44_blk_n : STD_LOGIC;
+    signal gray_mat_data2_blk_n : STD_LOGIC;
     signal ap_block_pp0_stage0 : BOOLEAN;
-    signal blurred_mat_data45_blk_n : STD_LOGIC;
+    signal blurred_mat_data3_blk_n : STD_LOGIC;
     signal ap_block_pp0_stage0_11001 : BOOLEAN;
     signal col_V_3_reg_1153 : STD_LOGIC_VECTOR (9 downto 0);
     signal icmp_ln624_reg_1159_pp0_iter1_reg : STD_LOGIC_VECTOR (0 downto 0);
@@ -500,7 +500,7 @@ attribute shreg_extract : string;
 
 
 begin
-    mux_53_8_1_1_U118 : component accelerator_v2_mux_53_8_1_1
+    mux_53_8_1_1_U128 : component accelerator_v2_mux_53_8_1_1
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -520,7 +520,7 @@ begin
         din5 => tp1_V_cast,
         dout => src_buf1_V_3_fu_768_p7);
 
-    mux_53_8_1_1_U119 : component accelerator_v2_mux_53_8_1_1
+    mux_53_8_1_1_U129 : component accelerator_v2_mux_53_8_1_1
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -540,7 +540,7 @@ begin
         din5 => tp2_V_cast,
         dout => src_buf2_V_3_fu_784_p7);
 
-    mux_53_8_1_1_U120 : component accelerator_v2_mux_53_8_1_1
+    mux_53_8_1_1_U130 : component accelerator_v2_mux_53_8_1_1
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -560,7 +560,7 @@ begin
         din5 => mid_V_cast,
         dout => src_buf3_V_3_fu_800_p7);
 
-    mux_53_8_1_1_U121 : component accelerator_v2_mux_53_8_1_1
+    mux_53_8_1_1_U131 : component accelerator_v2_mux_53_8_1_1
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -580,7 +580,7 @@ begin
         din5 => bottom1_V_cast,
         dout => src_buf4_V_3_fu_816_p7);
 
-    mux_53_8_1_1_U122 : component accelerator_v2_mux_53_8_1_1
+    mux_53_8_1_1_U132 : component accelerator_v2_mux_53_8_1_1
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -1231,55 +1231,55 @@ begin
 
         ap_block_pp0_stage0 <= not((ap_const_boolean_1 = ap_const_boolean_1));
 
-    ap_block_pp0_stage0_01001_assign_proc : process(ap_enable_reg_pp0_iter1, ap_enable_reg_pp0_iter10, gray_mat_data44_empty_n, ap_predicate_op100_read_state2, blurred_mat_data45_full_n, icmp_ln668_reg_1188_pp0_iter9_reg)
+    ap_block_pp0_stage0_01001_assign_proc : process(ap_enable_reg_pp0_iter1, ap_enable_reg_pp0_iter10, gray_mat_data2_empty_n, ap_predicate_op100_read_state2, blurred_mat_data3_full_n, icmp_ln668_reg_1188_pp0_iter9_reg)
     begin
-                ap_block_pp0_stage0_01001 <= (((icmp_ln668_reg_1188_pp0_iter9_reg = ap_const_lv1_0) and (blurred_mat_data45_full_n = ap_const_logic_0) and (ap_enable_reg_pp0_iter10 = ap_const_logic_1)) or ((ap_predicate_op100_read_state2 = ap_const_boolean_1) and (gray_mat_data44_empty_n = ap_const_logic_0) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1)));
+                ap_block_pp0_stage0_01001 <= (((icmp_ln668_reg_1188_pp0_iter9_reg = ap_const_lv1_0) and (blurred_mat_data3_full_n = ap_const_logic_0) and (ap_enable_reg_pp0_iter10 = ap_const_logic_1)) or ((ap_predicate_op100_read_state2 = ap_const_boolean_1) and (gray_mat_data2_empty_n = ap_const_logic_0) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1)));
     end process;
 
 
-    ap_block_pp0_stage0_11001_assign_proc : process(ap_enable_reg_pp0_iter1, ap_enable_reg_pp0_iter10, gray_mat_data44_empty_n, ap_predicate_op100_read_state2, blurred_mat_data45_full_n, icmp_ln668_reg_1188_pp0_iter9_reg)
+    ap_block_pp0_stage0_11001_assign_proc : process(ap_enable_reg_pp0_iter1, ap_enable_reg_pp0_iter10, gray_mat_data2_empty_n, ap_predicate_op100_read_state2, blurred_mat_data3_full_n, icmp_ln668_reg_1188_pp0_iter9_reg)
     begin
-                ap_block_pp0_stage0_11001 <= (((icmp_ln668_reg_1188_pp0_iter9_reg = ap_const_lv1_0) and (blurred_mat_data45_full_n = ap_const_logic_0) and (ap_enable_reg_pp0_iter10 = ap_const_logic_1)) or ((ap_predicate_op100_read_state2 = ap_const_boolean_1) and (gray_mat_data44_empty_n = ap_const_logic_0) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1)));
+                ap_block_pp0_stage0_11001 <= (((icmp_ln668_reg_1188_pp0_iter9_reg = ap_const_lv1_0) and (blurred_mat_data3_full_n = ap_const_logic_0) and (ap_enable_reg_pp0_iter10 = ap_const_logic_1)) or ((ap_predicate_op100_read_state2 = ap_const_boolean_1) and (gray_mat_data2_empty_n = ap_const_logic_0) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1)));
     end process;
 
 
-    ap_block_pp0_stage0_11001_ignoreCallOp149_assign_proc : process(ap_enable_reg_pp0_iter1, ap_enable_reg_pp0_iter10, gray_mat_data44_empty_n, ap_predicate_op100_read_state2, blurred_mat_data45_full_n, icmp_ln668_reg_1188_pp0_iter9_reg)
+    ap_block_pp0_stage0_11001_ignoreCallOp149_assign_proc : process(ap_enable_reg_pp0_iter1, ap_enable_reg_pp0_iter10, gray_mat_data2_empty_n, ap_predicate_op100_read_state2, blurred_mat_data3_full_n, icmp_ln668_reg_1188_pp0_iter9_reg)
     begin
-                ap_block_pp0_stage0_11001_ignoreCallOp149 <= (((icmp_ln668_reg_1188_pp0_iter9_reg = ap_const_lv1_0) and (blurred_mat_data45_full_n = ap_const_logic_0) and (ap_enable_reg_pp0_iter10 = ap_const_logic_1)) or ((ap_predicate_op100_read_state2 = ap_const_boolean_1) and (gray_mat_data44_empty_n = ap_const_logic_0) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1)));
+                ap_block_pp0_stage0_11001_ignoreCallOp149 <= (((icmp_ln668_reg_1188_pp0_iter9_reg = ap_const_lv1_0) and (blurred_mat_data3_full_n = ap_const_logic_0) and (ap_enable_reg_pp0_iter10 = ap_const_logic_1)) or ((ap_predicate_op100_read_state2 = ap_const_boolean_1) and (gray_mat_data2_empty_n = ap_const_logic_0) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1)));
     end process;
 
 
-    ap_block_pp0_stage0_subdone_assign_proc : process(ap_enable_reg_pp0_iter1, ap_enable_reg_pp0_iter10, gray_mat_data44_empty_n, ap_predicate_op100_read_state2, blurred_mat_data45_full_n, icmp_ln668_reg_1188_pp0_iter9_reg)
+    ap_block_pp0_stage0_subdone_assign_proc : process(ap_enable_reg_pp0_iter1, ap_enable_reg_pp0_iter10, gray_mat_data2_empty_n, ap_predicate_op100_read_state2, blurred_mat_data3_full_n, icmp_ln668_reg_1188_pp0_iter9_reg)
     begin
-                ap_block_pp0_stage0_subdone <= (((icmp_ln668_reg_1188_pp0_iter9_reg = ap_const_lv1_0) and (blurred_mat_data45_full_n = ap_const_logic_0) and (ap_enable_reg_pp0_iter10 = ap_const_logic_1)) or ((ap_predicate_op100_read_state2 = ap_const_boolean_1) and (gray_mat_data44_empty_n = ap_const_logic_0) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1)));
+                ap_block_pp0_stage0_subdone <= (((icmp_ln668_reg_1188_pp0_iter9_reg = ap_const_lv1_0) and (blurred_mat_data3_full_n = ap_const_logic_0) and (ap_enable_reg_pp0_iter10 = ap_const_logic_1)) or ((ap_predicate_op100_read_state2 = ap_const_boolean_1) and (gray_mat_data2_empty_n = ap_const_logic_0) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1)));
     end process;
 
         ap_block_state10_pp0_stage0_iter9 <= not((ap_const_boolean_1 = ap_const_boolean_1));
         ap_block_state10_pp0_stage0_iter9_ignore_call15 <= not((ap_const_boolean_1 = ap_const_boolean_1));
 
-    ap_block_state11_pp0_stage0_iter10_assign_proc : process(blurred_mat_data45_full_n, icmp_ln668_reg_1188_pp0_iter9_reg)
+    ap_block_state11_pp0_stage0_iter10_assign_proc : process(blurred_mat_data3_full_n, icmp_ln668_reg_1188_pp0_iter9_reg)
     begin
-                ap_block_state11_pp0_stage0_iter10 <= ((icmp_ln668_reg_1188_pp0_iter9_reg = ap_const_lv1_0) and (blurred_mat_data45_full_n = ap_const_logic_0));
+                ap_block_state11_pp0_stage0_iter10 <= ((icmp_ln668_reg_1188_pp0_iter9_reg = ap_const_lv1_0) and (blurred_mat_data3_full_n = ap_const_logic_0));
     end process;
 
 
-    ap_block_state11_pp0_stage0_iter10_ignore_call15_assign_proc : process(blurred_mat_data45_full_n, icmp_ln668_reg_1188_pp0_iter9_reg)
+    ap_block_state11_pp0_stage0_iter10_ignore_call15_assign_proc : process(blurred_mat_data3_full_n, icmp_ln668_reg_1188_pp0_iter9_reg)
     begin
-                ap_block_state11_pp0_stage0_iter10_ignore_call15 <= ((icmp_ln668_reg_1188_pp0_iter9_reg = ap_const_lv1_0) and (blurred_mat_data45_full_n = ap_const_logic_0));
+                ap_block_state11_pp0_stage0_iter10_ignore_call15 <= ((icmp_ln668_reg_1188_pp0_iter9_reg = ap_const_lv1_0) and (blurred_mat_data3_full_n = ap_const_logic_0));
     end process;
 
         ap_block_state1_pp0_stage0_iter0 <= not((ap_const_boolean_1 = ap_const_boolean_1));
         ap_block_state1_pp0_stage0_iter0_ignore_call15 <= not((ap_const_boolean_1 = ap_const_boolean_1));
 
-    ap_block_state2_pp0_stage0_iter1_assign_proc : process(gray_mat_data44_empty_n, ap_predicate_op100_read_state2)
+    ap_block_state2_pp0_stage0_iter1_assign_proc : process(gray_mat_data2_empty_n, ap_predicate_op100_read_state2)
     begin
-                ap_block_state2_pp0_stage0_iter1 <= ((ap_predicate_op100_read_state2 = ap_const_boolean_1) and (gray_mat_data44_empty_n = ap_const_logic_0));
+                ap_block_state2_pp0_stage0_iter1 <= ((ap_predicate_op100_read_state2 = ap_const_boolean_1) and (gray_mat_data2_empty_n = ap_const_logic_0));
     end process;
 
 
-    ap_block_state2_pp0_stage0_iter1_ignore_call15_assign_proc : process(gray_mat_data44_empty_n, ap_predicate_op100_read_state2)
+    ap_block_state2_pp0_stage0_iter1_ignore_call15_assign_proc : process(gray_mat_data2_empty_n, ap_predicate_op100_read_state2)
     begin
-                ap_block_state2_pp0_stage0_iter1_ignore_call15 <= ((ap_predicate_op100_read_state2 = ap_const_boolean_1) and (gray_mat_data44_empty_n = ap_const_logic_0));
+                ap_block_state2_pp0_stage0_iter1_ignore_call15 <= ((ap_predicate_op100_read_state2 = ap_const_boolean_1) and (gray_mat_data2_empty_n = ap_const_logic_0));
     end process;
 
         ap_block_state3_pp0_stage0_iter2 <= not((ap_const_boolean_1 = ap_const_boolean_1));
@@ -1652,23 +1652,23 @@ begin
     end process;
 
 
-    blurred_mat_data45_blk_n_assign_proc : process(ap_enable_reg_pp0_iter10, blurred_mat_data45_full_n, icmp_ln668_reg_1188_pp0_iter9_reg, ap_block_pp0_stage0)
+    blurred_mat_data3_blk_n_assign_proc : process(ap_enable_reg_pp0_iter10, blurred_mat_data3_full_n, icmp_ln668_reg_1188_pp0_iter9_reg, ap_block_pp0_stage0)
     begin
         if (((icmp_ln668_reg_1188_pp0_iter9_reg = ap_const_lv1_0) and (ap_enable_reg_pp0_iter10 = ap_const_logic_1) and (ap_const_boolean_0 = ap_block_pp0_stage0))) then 
-            blurred_mat_data45_blk_n <= blurred_mat_data45_full_n;
+            blurred_mat_data3_blk_n <= blurred_mat_data3_full_n;
         else 
-            blurred_mat_data45_blk_n <= ap_const_logic_1;
+            blurred_mat_data3_blk_n <= ap_const_logic_1;
         end if; 
     end process;
 
-    blurred_mat_data45_din <= grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_dout0;
+    blurred_mat_data3_din <= grp_xfapplygaussian5x5_1_0_false_s_fu_217_p_dout0;
 
-    blurred_mat_data45_write_assign_proc : process(ap_enable_reg_pp0_iter10, icmp_ln668_reg_1188_pp0_iter9_reg, ap_block_pp0_stage0_11001)
+    blurred_mat_data3_write_assign_proc : process(ap_enable_reg_pp0_iter10, icmp_ln668_reg_1188_pp0_iter9_reg, ap_block_pp0_stage0_11001)
     begin
         if (((icmp_ln668_reg_1188_pp0_iter9_reg = ap_const_lv1_0) and (ap_enable_reg_pp0_iter10 = ap_const_logic_1) and (ap_const_boolean_0 = ap_block_pp0_stage0_11001))) then 
-            blurred_mat_data45_write <= ap_const_logic_1;
+            blurred_mat_data3_write <= ap_const_logic_1;
         else 
-            blurred_mat_data45_write <= ap_const_logic_0;
+            blurred_mat_data3_write <= ap_const_logic_0;
         end if; 
     end process;
 
@@ -1695,11 +1695,11 @@ begin
     end process;
 
 
-    buf_V_1_d1_assign_proc : process(gray_mat_data44_dout, bottom2_V_cast, row_ind_V_cast, cmp_i_i380_i, ap_condition_684)
+    buf_V_1_d1_assign_proc : process(gray_mat_data2_dout, bottom2_V_cast, row_ind_V_cast, cmp_i_i380_i, ap_condition_684)
     begin
         if ((ap_const_boolean_1 = ap_condition_684)) then
             if (((cmp_i_i380_i = ap_const_lv1_1) and (row_ind_V_cast = ap_const_lv3_1))) then 
-                buf_V_1_d1 <= gray_mat_data44_dout;
+                buf_V_1_d1 <= gray_mat_data2_dout;
             elsif (((cmp_i_i380_i = ap_const_lv1_0) and (bottom2_V_cast = ap_const_lv3_1))) then 
                 buf_V_1_d1 <= ap_const_lv8_0;
             else 
@@ -1743,11 +1743,11 @@ begin
     end process;
 
 
-    buf_V_2_d1_assign_proc : process(gray_mat_data44_dout, bottom2_V_cast, row_ind_V_cast, cmp_i_i380_i, ap_condition_684)
+    buf_V_2_d1_assign_proc : process(gray_mat_data2_dout, bottom2_V_cast, row_ind_V_cast, cmp_i_i380_i, ap_condition_684)
     begin
         if ((ap_const_boolean_1 = ap_condition_684)) then
             if (((cmp_i_i380_i = ap_const_lv1_1) and (row_ind_V_cast = ap_const_lv3_2))) then 
-                buf_V_2_d1 <= gray_mat_data44_dout;
+                buf_V_2_d1 <= gray_mat_data2_dout;
             elsif (((cmp_i_i380_i = ap_const_lv1_0) and (bottom2_V_cast = ap_const_lv3_2))) then 
                 buf_V_2_d1 <= ap_const_lv8_0;
             else 
@@ -1791,11 +1791,11 @@ begin
     end process;
 
 
-    buf_V_3_d1_assign_proc : process(gray_mat_data44_dout, bottom2_V_cast, row_ind_V_cast, cmp_i_i380_i, ap_condition_684)
+    buf_V_3_d1_assign_proc : process(gray_mat_data2_dout, bottom2_V_cast, row_ind_V_cast, cmp_i_i380_i, ap_condition_684)
     begin
         if ((ap_const_boolean_1 = ap_condition_684)) then
             if (((cmp_i_i380_i = ap_const_lv1_1) and (row_ind_V_cast = ap_const_lv3_3))) then 
-                buf_V_3_d1 <= gray_mat_data44_dout;
+                buf_V_3_d1 <= gray_mat_data2_dout;
             elsif (((cmp_i_i380_i = ap_const_lv1_0) and (bottom2_V_cast = ap_const_lv3_3))) then 
                 buf_V_3_d1 <= ap_const_lv8_0;
             else 
@@ -1839,11 +1839,11 @@ begin
     end process;
 
 
-    buf_V_4_d1_assign_proc : process(gray_mat_data44_dout, ap_condition_684, ap_condition_1231, ap_condition_1237)
+    buf_V_4_d1_assign_proc : process(gray_mat_data2_dout, ap_condition_684, ap_condition_1231, ap_condition_1237)
     begin
         if ((ap_const_boolean_1 = ap_condition_684)) then
             if ((ap_const_boolean_1 = ap_condition_1237)) then 
-                buf_V_4_d1 <= gray_mat_data44_dout;
+                buf_V_4_d1 <= gray_mat_data2_dout;
             elsif ((ap_const_boolean_1 = ap_condition_1231)) then 
                 buf_V_4_d1 <= ap_const_lv8_0;
             else 
@@ -1887,11 +1887,11 @@ begin
     end process;
 
 
-    buf_V_d1_assign_proc : process(gray_mat_data44_dout, bottom2_V_cast, row_ind_V_cast, cmp_i_i380_i, ap_condition_684)
+    buf_V_d1_assign_proc : process(gray_mat_data2_dout, bottom2_V_cast, row_ind_V_cast, cmp_i_i380_i, ap_condition_684)
     begin
         if ((ap_const_boolean_1 = ap_condition_684)) then
             if (((cmp_i_i380_i = ap_const_lv1_1) and (row_ind_V_cast = ap_const_lv3_0))) then 
-                buf_V_d1 <= gray_mat_data44_dout;
+                buf_V_d1 <= gray_mat_data2_dout;
             elsif (((cmp_i_i380_i = ap_const_lv1_0) and (bottom2_V_cast = ap_const_lv3_0))) then 
                 buf_V_d1 <= ap_const_lv8_0;
             else 
@@ -1914,22 +1914,22 @@ begin
 
     col_V_4_fu_654_p2 <= std_logic_vector(unsigned(ap_sig_allocacmp_col_V_3) + unsigned(ap_const_lv10_1));
 
-    gray_mat_data44_blk_n_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter1, gray_mat_data44_empty_n, ap_predicate_op100_read_state2, ap_block_pp0_stage0)
+    gray_mat_data2_blk_n_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter1, gray_mat_data2_empty_n, ap_predicate_op100_read_state2, ap_block_pp0_stage0)
     begin
         if (((ap_predicate_op100_read_state2 = ap_const_boolean_1) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0) and (ap_const_boolean_0 = ap_block_pp0_stage0))) then 
-            gray_mat_data44_blk_n <= gray_mat_data44_empty_n;
+            gray_mat_data2_blk_n <= gray_mat_data2_empty_n;
         else 
-            gray_mat_data44_blk_n <= ap_const_logic_1;
+            gray_mat_data2_blk_n <= ap_const_logic_1;
         end if; 
     end process;
 
 
-    gray_mat_data44_read_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter1, ap_predicate_op100_read_state2, ap_block_pp0_stage0_11001)
+    gray_mat_data2_read_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter1, ap_predicate_op100_read_state2, ap_block_pp0_stage0_11001)
     begin
         if (((ap_predicate_op100_read_state2 = ap_const_boolean_1) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0) and (ap_const_boolean_0 = ap_block_pp0_stage0_11001))) then 
-            gray_mat_data44_read <= ap_const_logic_1;
+            gray_mat_data2_read <= ap_const_logic_1;
         else 
-            gray_mat_data44_read <= ap_const_logic_0;
+            gray_mat_data2_read <= ap_const_logic_0;
         end if; 
     end process;
 
