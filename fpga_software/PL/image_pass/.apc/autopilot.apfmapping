@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="image_passthrough.cpp" path="/home/ecelrc/students/gwl459/workspace/augmented-reality-glasses/fpga_software/PL/image_passthrough.cpp"/>
+    <originFiles name="image_passthrough.cpp" path="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL/image_passthrough.cpp"/>
   </source>
   <testbench>
-    <originFiles name="image_passthrough_tb.cpp" path="/home/ecelrc/students/gwl459/workspace/augmented-reality-glasses/fpga_software/PL/image_passthrough_tb.cpp"/>
+    <originFiles name="image_passthrough_tb.cpp" path="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL/image_passthrough_tb.cpp"/>
   </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>

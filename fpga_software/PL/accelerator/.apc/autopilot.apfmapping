@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="accelerator.cpp" path="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL/accelerator.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="accelerator_tb.cpp" path="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL/accelerator_tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

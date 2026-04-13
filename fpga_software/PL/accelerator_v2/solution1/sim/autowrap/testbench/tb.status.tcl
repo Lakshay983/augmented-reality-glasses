@@ -1,0 +1,1 @@
+set ::AESL_AUTOSIM::gTopFileName /misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL/accelerator_v2/solution1/./sim/autowrap/testbench/accelerator_v2.cpp_pre.cpp.tb.cpp

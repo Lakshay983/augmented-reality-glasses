@@ -6,12 +6,12 @@
 open_project image_pass
 set_top image_passthrough
 add_files image_passthrough.cpp
-add_files -tb image_passthrough_tb.cpp
+add_files -tb image_passthrough_tb.cpp -cflags "-I/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include -Wno-unknown-pragmas" -csimflags "-I/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/resources/Vitis_Libraries/vision/L1/include -Wno-unknown-pragmas"
 open_solution "solution1" -flow_target vivado
 set_part {xczu3eg-sbva484-1-e}
 create_clock -period 10 -name default
-config_export -description {Pass through test iamge IP} -display_name Image_Passthrough -library user -output /home/ecelrc/students/gwl459/workspace/augmented-reality-glasses/fpga_software/IPs -taxonomy {User IP} -vendor xilinx -version 1.0
-#source "./image_pass/solution1/directives.tcl"
+config_export -description {Pass through test iamge IP} -display_name Image_Passthrough -format ip_catalog -library user -output /home/ecelrc/students/gwl459/workspace/augmented-reality-glasses/fpga_software/IPs -rtl verilog -taxonomy {User IP} -vendor xilinx -version 1.0
+source "./image_pass/solution1/directives.tcl"
 csim_design
 csynth_design
 cosim_design

@@ -1,0 +1,6 @@
+,bgr_stream_U,,chan_status1.csv
+,padded_stream_U,,chan_status2.csv
+,gray_stream_U,,chan_status3.csv
+process_pixels_U0,bgr_mat_data_U,,chan_status4.csv
+process_pixels_U0,gray_mat_data_U,,chan_status5.csv
+process_pixels_U0,blurred_mat_data_U,,chan_status6.csv
