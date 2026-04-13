@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'bgr2gray_9_0_484_644_1_3220_3220_s'" level="0">
-<item name = "Date">Sun Apr 12 15:59:09 2026
+<item name = "Date">Sun Apr 12 20:26:02 2026
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">accelerator_v2</item>

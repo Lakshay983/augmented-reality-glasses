@@ -4,7 +4,7 @@
     <originFiles name="accelerator_v2.cpp" path="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL/accelerator_v2.cpp"/>
   </source>
   <testbench>
-    <originFiles name="tb_data" path="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL/tb_data"/>
     <originFiles name="accelerator_v2_tb.cpp" path="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL/accelerator_v2_tb.cpp"/>
+    <originFiles name="tb_data" path="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL/tb_data"/>
   </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>

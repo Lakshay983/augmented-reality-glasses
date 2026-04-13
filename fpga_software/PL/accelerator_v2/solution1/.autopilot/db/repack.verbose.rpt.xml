@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'repack'" level="0">
-<item name = "Date">Sun Apr 12 15:59:12 2026
+<item name = "Date">Sun Apr 12 20:26:06 2026
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">accelerator_v2</item>
@@ -32,7 +32,7 @@
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
 <column name="grp_repack_Pipeline_VITIS_LOOP_224_2_fu_134">repack_Pipeline_VITIS_LOOP_224_2, 646, 646, 6.460 us, 6.460 us, 646, 646, no</column>
-<column name="grp_repack_Pipeline_VITIS_LOOP_247_3_fu_142">repack_Pipeline_VITIS_LOOP_247_3, 42, 42, 0.420 us, 0.420 us, 42, 42, no</column>
+<column name="grp_repack_Pipeline_VITIS_LOOP_244_3_fu_142">repack_Pipeline_VITIS_LOOP_244_3, 42, 42, 0.420 us, 0.420 us, 42, 42, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -50,12 +50,12 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="DSP">-, -, -, -, -</column>
-<column name="Expression">-, -, 0, 97, -</column>
+<column name="Expression">-, -, 0, 86, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">-, -, 33, 240, -</column>
+<column name="Instance">-, -, 33, 238, -</column>
 <column name="Memory">14, -, 0, 0, 0</column>
 <column name="Multiplexer">-, -, -, 406, -</column>
-<column name="Register">-, -, 32, -, -</column>
+<column name="Register">-, -, 31, -, -</column>
 <specialColumn name="Available">432, 360, 141120, 70560, 0</specialColumn>
 <specialColumn name="Utilization (%)">3, 0, ~0, 1, 0</specialColumn>
 </table>
@@ -65,7 +65,7 @@
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="grp_repack_Pipeline_VITIS_LOOP_224_2_fu_134">repack_Pipeline_VITIS_LOOP_224_2, 0, 0, 23, 77, 0</column>
-<column name="grp_repack_Pipeline_VITIS_LOOP_247_3_fu_142">repack_Pipeline_VITIS_LOOP_247_3, 0, 0, 10, 163, 0</column>
+<column name="grp_repack_Pipeline_VITIS_LOOP_244_3_fu_142">repack_Pipeline_VITIS_LOOP_244_3, 0, 0, 10, 161, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -84,18 +84,17 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="out_row_fu_209_p2">+, 0, 0, 16, 9, 3</column>
-<column name="r_2_fu_177_p2">+, 0, 0, 16, 9, 1</column>
+<column name="p_Result_s_fu_214_p2">+, 0, 0, 16, 9, 3</column>
+<column name="r_2_fu_176_p2">+, 0, 0, 16, 9, 1</column>
 <column name="ap_block_state4">and, 0, 0, 2, 1, 1</column>
 <column name="ap_block_state7_on_subcall_done">and, 0, 0, 2, 1, 1</column>
-<column name="grp_repack_Pipeline_VITIS_LOOP_247_3_fu_142_out_stream_TREADY">and, 0, 0, 2, 1, 1</column>
-<column name="cmp48_fu_226_p2">icmp, 0, 0, 11, 9, 7</column>
-<column name="hdr_burst_user_V_fu_214_p2">icmp, 0, 0, 11, 9, 1</column>
-<column name="icmp_ln221_fu_171_p2">icmp, 0, 0, 11, 9, 6</column>
-<column name="icmp_ln229_1_fu_198_p2">icmp, 0, 0, 11, 9, 6</column>
-<column name="icmp_ln229_fu_192_p2">icmp, 0, 0, 11, 8, 1</column>
+<column name="grp_repack_Pipeline_VITIS_LOOP_244_3_fu_142_out_stream_TREADY">and, 0, 0, 2, 1, 1</column>
+<column name="hdr_burst_user_V_fu_208_p2">icmp, 0, 0, 11, 9, 2</column>
+<column name="icmp_ln221_fu_170_p2">icmp, 0, 0, 11, 9, 6</column>
+<column name="icmp_ln229_1_fu_197_p2">icmp, 0, 0, 11, 9, 6</column>
+<column name="icmp_ln229_fu_191_p2">icmp, 0, 0, 11, 8, 1</column>
 <column name="ap_block_state1">or, 0, 0, 2, 1, 1</column>
-<column name="or_ln229_fu_203_p2">or, 0, 0, 2, 1, 1</column>
+<column name="or_ln229_fu_202_p2">or, 0, 0, 2, 1, 1</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
@@ -140,12 +139,11 @@
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
 <column name="ap_CS_fsm">8, 0, 8, 0</column>
 <column name="ap_done_reg">1, 0, 1, 0</column>
-<column name="cmp48_reg_268">1, 0, 1, 0</column>
 <column name="grp_repack_Pipeline_VITIS_LOOP_224_2_fu_134_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_repack_Pipeline_VITIS_LOOP_247_3_fu_142_ap_start_reg">1, 0, 1, 0</column>
-<column name="or_ln229_reg_254">1, 0, 1, 0</column>
+<column name="grp_repack_Pipeline_VITIS_LOOP_244_3_fu_142_ap_start_reg">1, 0, 1, 0</column>
+<column name="or_ln229_reg_246">1, 0, 1, 0</column>
 <column name="out_breath_preg">1, 0, 1, 0</column>
-<column name="r_2_reg_249">9, 0, 9, 0</column>
+<column name="r_2_reg_241">9, 0, 9, 0</column>
 <column name="r_fu_84">9, 0, 9, 0</column>
 </table>
 </item>

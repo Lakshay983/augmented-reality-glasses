@@ -19,8 +19,8 @@ port (
     ap_ready : OUT STD_LOGIC;
     in_stream_TVALID : IN STD_LOGIC;
     bgr_stream1_din : OUT STD_LOGIC_VECTOR (23 downto 0);
-    bgr_stream1_num_data_valid : IN STD_LOGIC_VECTOR (12 downto 0);
-    bgr_stream1_fifo_cap : IN STD_LOGIC_VECTOR (12 downto 0);
+    bgr_stream1_num_data_valid : IN STD_LOGIC_VECTOR (13 downto 0);
+    bgr_stream1_fifo_cap : IN STD_LOGIC_VECTOR (13 downto 0);
     bgr_stream1_full_n : IN STD_LOGIC;
     bgr_stream1_write : OUT STD_LOGIC;
     in_stream_TDATA : IN STD_LOGIC_VECTOR (127 downto 0);

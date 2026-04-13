@@ -7,12 +7,11 @@
     </downStreamTool>
     <synthesis askAgain="false"/>
     <config>
-        <config_export display_name="Accelerator_v4" format="ip_catalog" output="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/Accelerators" rtl="verilog" version="4.0"/>
+        <config_export display_name="Accelerator_v4.1" format="ip_catalog" output="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/Accelerators" rtl="verilog" version="4.1"/>
     </config>
     <UIConfigurations>
         <UIAutosynConf hideTrivialOp="true" isBasedOnBoard="false" isSolutionDirty="false" isStopAskAgain="false" showDetailDesignViewer="false">
             <Platform>xilinx/zynquplus/zynquplus</Platform>
-            <Platform>xilinx/zynquplus/zynquplus_fpv7</Platform>
             <customLibs/>
         </UIAutosynConf>
         <UIIPPackagerConf AskAgain="true" DescriptionButton="false" LibraryButton="false" RTLLanguage="verilog" UseNetList="none" VendorButton="false" VersionButton="false" evaluateRTL="false" setup="false">
@@ -42,7 +41,7 @@
         </UIAutoSimConf>
     </UIConfigurations>
     <ExportDesign askAgain="true" evaluate="false" flow="false" flowChoice="syn" formatName="ip_catalog" output="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/Accelerators" rtl="verilog" rtlButton="true" rtlCombo="verilog">
-        <Format display_name="Accelerator_v4" formatName="ip_catalog" version="4.0" description="" vendor="" library="" ipname="accelerator_v2" taxonomy=""/>
+        <Format display_name="Accelerator_v4.1" formatName="ip_catalog" version="4.1" description="" vendor="" library="" ipname="accelerator_v2" taxonomy=""/>
         <Format formatName="sysgen"/>
         <Format formatName="sysgen_ise"/>
         <Format formatName="syn_dcp"/>

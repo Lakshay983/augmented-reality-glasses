@@ -71,8 +71,8 @@ output   ap_ready;
 output   start_out;
 output   start_write;
 input  [23:0] bgr_stream1_dout;
-input  [12:0] bgr_stream1_num_data_valid;
-input  [12:0] bgr_stream1_fifo_cap;
+input  [13:0] bgr_stream1_num_data_valid;
+input  [13:0] bgr_stream1_fifo_cap;
 input   bgr_stream1_empty_n;
 output   bgr_stream1_read;
 output  [23:0] padded_stream2_din;
@@ -406,8 +406,8 @@ accelerator_v2_pad_Pipeline_VITIS_LOOP_92_1_VITIS_LOOP_93_2 grp_pad_Pipeline_VIT
     .ap_idle(grp_pad_Pipeline_VITIS_LOOP_92_1_VITIS_LOOP_93_2_fu_329_ap_idle),
     .ap_ready(grp_pad_Pipeline_VITIS_LOOP_92_1_VITIS_LOOP_93_2_fu_329_ap_ready),
     .bgr_stream1_dout(bgr_stream1_dout),
-    .bgr_stream1_num_data_valid(13'd0),
-    .bgr_stream1_fifo_cap(13'd0),
+    .bgr_stream1_num_data_valid(14'd0),
+    .bgr_stream1_fifo_cap(14'd0),
     .bgr_stream1_empty_n(bgr_stream1_empty_n),
     .bgr_stream1_read(grp_pad_Pipeline_VITIS_LOOP_92_1_VITIS_LOOP_93_2_fu_329_bgr_stream1_read),
     .row_buf_V_2_address1(grp_pad_Pipeline_VITIS_LOOP_92_1_VITIS_LOOP_93_2_fu_329_row_buf_V_2_address1),
@@ -453,8 +453,8 @@ accelerator_v2_pad_Pipeline_VITIS_LOOP_118_6 grp_pad_Pipeline_VITIS_LOOP_118_6_f
     .ap_idle(grp_pad_Pipeline_VITIS_LOOP_118_6_fu_350_ap_idle),
     .ap_ready(grp_pad_Pipeline_VITIS_LOOP_118_6_fu_350_ap_ready),
     .bgr_stream1_dout(bgr_stream1_dout),
-    .bgr_stream1_num_data_valid(13'd0),
-    .bgr_stream1_fifo_cap(13'd0),
+    .bgr_stream1_num_data_valid(14'd0),
+    .bgr_stream1_fifo_cap(14'd0),
     .bgr_stream1_empty_n(bgr_stream1_empty_n),
     .bgr_stream1_read(grp_pad_Pipeline_VITIS_LOOP_118_6_fu_350_bgr_stream1_read),
     .row_buf_V_3_address1(grp_pad_Pipeline_VITIS_LOOP_118_6_fu_350_row_buf_V_3_address1),

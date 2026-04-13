@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1776027548916">
-  <ports id="1" name="padded_stream2" type="PortType" coreName="FIFO" coreId="543517801" bitwidth="24" iftype="IfTypeRom">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1776043562486">
+  <ports id="1" name="padded_stream2" type="PortType" coreName="FIFO" coreId="1701409377" bitwidth="24" iftype="IfTypeRom">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="2" name="bgr_mat_data43" type="PortType" coreName="FIFO" coreId="543517801" bitwidth="24" direction="DirOut" iftype="IfTypeRom">
+  <ports id="2" name="bgr_mat_data43" type="PortType" coreName="FIFO" coreId="4194011824" bitwidth="24" direction="DirOut" iftype="IfTypeRom">
     <dataInputObjs>write</dataInputObjs>
   </ports>
   <edges id="29" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.1"/>
@@ -29,18 +29,18 @@
   <edges id="120" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
   <blocks id="8" name="entry" type="BlockType">
     <controlOutputObjs>for.inc</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="3" name="indvar_flatten" coreId="166887520" bitwidth="19" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="3" name="indvar_flatten" coreId="4193224704" bitwidth="19" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="indvar_flatten_write_ln156" lineNumber="156" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="167136016" contextFuncName="stream_to_mat" opcode="store" m_display="0" m_delay="0.48" m_topoIndex="2" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="indvar_flatten_write_ln156" lineNumber="156" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="4194624176" contextFuncName="stream_to_mat" opcode="store" m_display="0" m_delay="0.48" m_topoIndex="2" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="156" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="stream_to_mat"/>
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="br_ln156" lineNumber="156" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="4059342356" contextFuncName="stream_to_mat" opcode="br" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="br_ln156" lineNumber="156" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="4194624176" contextFuncName="stream_to_mat" opcode="br" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="156" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="stream_to_mat"/>
       <controlInputObjs>for.inc</controlInputObjs>
     </node_objs>
@@ -51,7 +51,7 @@
   <blocks id="24" name="for.end7" type="BlockType">
     <controlInputObjs>for.inc</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="_ln163" lineNumber="163" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="167859008" contextFuncName="stream_to_mat" opcode="ret" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="_ln163" lineNumber="163" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="4194584944" contextFuncName="stream_to_mat" opcode="ret" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="163" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="stream_to_mat"/>
     </node_objs>
     <fileValidLineNumbers fileName="accelerator_v2.cpp">
@@ -66,7 +66,7 @@
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>for.end7</controlOutputObjs>
       <controlOutputObjs>for.inc5</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="9" name="indvar_flatten_load" lineNumber="156" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="166346400" contextFuncName="stream_to_mat" bitwidth="19" opcode="load" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="9" name="indvar_flatten_load" lineNumber="156" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="4194624176" contextFuncName="stream_to_mat" bitwidth="19" opcode="load" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="156" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="stream_to_mat"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataOutputObjs>icmp</dataOutputObjs>
@@ -84,7 +84,7 @@
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="12" name="br_ln156" lineNumber="156" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="165453104" contextFuncName="stream_to_mat" opcode="br" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="12" name="br_ln156" lineNumber="156" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="4194624176" contextFuncName="stream_to_mat" opcode="br" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="156" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="stream_to_mat"/>
         <dataInputObjs>icmp</dataInputObjs>
         <controlInputObjs>for.inc5</controlInputObjs>
@@ -108,12 +108,12 @@
         <dataInputObjs>read</dataInputObjs>
         <dataOutputObjs>bgr_mat_data43</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="20" name="indvar_flatten_write_ln157" lineNumber="157" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="164586240" contextFuncName="stream_to_mat" opcode="store" m_display="0" m_delay="0.48" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="20" name="indvar_flatten_write_ln157" lineNumber="157" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="69927833" contextFuncName="stream_to_mat" opcode="store" m_display="0" m_delay="0.48" m_topoIndex="9" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="157" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="stream_to_mat"/>
         <dataInputObjs>add</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="21" name="br_ln157" lineNumber="157" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="165453104" contextFuncName="stream_to_mat" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="21" name="br_ln157" lineNumber="157" fileName="accelerator_v2.cpp" fileDirectory=".." coreId="70425080" contextFuncName="stream_to_mat" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="accelerator_v2.cpp" linenumber="157" fileDirectory="/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL" functionName="stream_to_mat"/>
         <controlInputObjs>for.inc</controlInputObjs>
       </node_objs>

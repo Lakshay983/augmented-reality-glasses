@@ -20,19 +20,16 @@
 #define ROWS_PER_TX      5
 #define KERNEL_SIZE      5
 #define TOTAL_PIXELS     (IMG_W * IMG_H)
-#define TB_FIFO_DEPTH    (5 * IMG_W)
 
-// TX: 2 byte header + 5 rows BGR = 9602 bytes = 601 bursts
 #define TX_HEADER_BYTES  16
 #define TX_PIXEL_BYTES   (ROWS_PER_TX * IMG_W * 3)
 #define TX_TOTAL_BYTES   (TX_HEADER_BYTES + TX_PIXEL_BYTES)
-#define TX_BURSTS        ((TX_TOTAL_BYTES + 15) / 16)  // 601
+#define TX_BURSTS        ((TX_TOTAL_BYTES + 15) / 16)
 
-// RX: 2 byte header + 1 row gray = 642 bytes = 41 bursts
 #define RX_HEADER_BYTES  16
 #define RX_PIXEL_BYTES   IMG_W
 #define RX_TOTAL_BYTES   (RX_HEADER_BYTES + RX_PIXEL_BYTES)
-#define RX_BURSTS        ((RX_TOTAL_BYTES + 15) / 16)  // 41
+#define RX_BURSTS        ((RX_TOTAL_BYTES + 15) / 16)
 
 typedef ap_axiu<128, 1, 1, 1> AxiBurst;
 
@@ -68,7 +65,7 @@ int parse_hexdump(const char* filename, unsigned char* buf, int max_bytes)
     }
 
     char line[256];
-    fgets(line, sizeof(line), f);  // skip header line
+    fgets(line, sizeof(line), f);
 
     int total = 0;
     while (fgets(line, sizeof(line), f) && total < max_bytes) {
@@ -92,25 +89,22 @@ int parse_hexdump(const char* filename, unsigned char* buf, int max_bytes)
     return total;
 }
 
-// Pack bursts matching the new PS format:
-// each transaction = 2 byte header + 5 rows of raw BGR
-// packed into 601 bursts of 128 bits
+// Each 5-row block is a separate MM2S transaction with its own TLAST,
+// matching the PS DMA behavior.
 void pack_bursts(unsigned char* bgr_buf, hls::stream<AxiBurst>& s)
 {
     int txCount = IMG_H / ROWS_PER_TX;  // 96
 
     for (int tx = 0; tx < txCount; tx++)
     {
-        // Build byte array for this transaction
         unsigned char txBuf[TX_TOTAL_BYTES];
         memset(txBuf, 0, sizeof(txBuf));
 
-        // 16-byte header — tx index in bytes 0-1, rest zeroed
+        // 16-byte header: tx index in bytes [1:0]
         txBuf[0] = (tx >> 0) & 0xFF;
         txBuf[1] = (tx >> 8) & 0xFF;
-        // bytes 2-15 already zeroed
 
-        // 5 rows of BGR starting at byte 16
+        // 5 rows of BGR pixels starting at byte 16
         for (int r = 0; r < ROWS_PER_TX; r++)
         {
             int srcRow = tx * ROWS_PER_TX + r;
@@ -118,13 +112,13 @@ void pack_bursts(unsigned char* bgr_buf, hls::stream<AxiBurst>& s)
             {
                 int srcIdx = (srcRow * IMG_W + c) * 3;
                 int dstIdx = TX_HEADER_BYTES + r * IMG_W * 3 + c * 3;
-                txBuf[dstIdx + 0] = bgr_buf[srcIdx + 0]; // B
-                txBuf[dstIdx + 1] = bgr_buf[srcIdx + 1]; // G
-                txBuf[dstIdx + 2] = bgr_buf[srcIdx + 2]; // R
+                txBuf[dstIdx + 0] = bgr_buf[srcIdx + 0];
+                txBuf[dstIdx + 1] = bgr_buf[srcIdx + 1];
+                txBuf[dstIdx + 2] = bgr_buf[srcIdx + 2];
             }
         }
 
-        // pack into TX_BURSTS bursts of 16 bytes
+        // pack into TX_BURSTS bursts — TLAST on last burst of each block
         for (int b = 0; b < TX_BURSTS; b++)
         {
             AxiBurst burst;
@@ -132,7 +126,7 @@ void pack_bursts(unsigned char* bgr_buf, hls::stream<AxiBurst>& s)
             burst.keep = -1;
             burst.strb = -1;
             burst.user = (tx == 0 && b == 0) ? 1 : 0;
-            burst.last = (tx == txCount-1 && b == TX_BURSTS-1) ? 1 : 0;
+            burst.last = (b == TX_BURSTS - 1) ? 1 : 0;
 
             for (int i = 0; i < 16; i++)
             {
@@ -149,42 +143,62 @@ void pack_bursts(unsigned char* bgr_buf, hls::stream<AxiBurst>& s)
            txCount, TX_BURSTS, txCount * TX_BURSTS);
 }
 
-// Unpack output: each row = 2 byte header + 640 gray pixels = 642 bytes = 41 bursts
-// PAD_H = 484 rows total output, but we only keep IMG_H = 480 real rows
+// Each row is a separate S2MM transaction with its own TLAST,
+// matching receive_dma_frame arming S2MM once per row.
 void unpack_output(hls::stream<AxiBurst>& s, unsigned char* gray_out)
 {
     int total = 0;
+    int tlast_warnings = 0;
+    int header_warnings = 0;
 
     for (int row = 0; row < IMG_H; row++)
     {
-        // collect RX_BURSTS bursts = 656 bytes
         unsigned char rxBuf[RX_TOTAL_BYTES];
         memset(rxBuf, 0, sizeof(rxBuf));
 
         for (int b = 0; b < RX_BURSTS; b++)
         {
             AxiBurst burst = s.read();
+
             for (int i = 0; i < 16; i++)
             {
                 int byteIdx = b * 16 + i;
                 if (byteIdx < RX_TOTAL_BYTES)
                     rxBuf[byteIdx] = (unsigned char)burst.data(i*8+7, i*8);
             }
+
+            // TLAST must be set on last burst of every row
+            if (b == RX_BURSTS - 1)
+            {
+                if (!burst.last)
+                {
+                    printf("  WARNING: row %d last burst missing TLAST\n", row);
+                    tlast_warnings++;
+                }
+            }
+            else
+            {
+                if (burst.last)
+                    printf("  WARNING: row %d burst %d has unexpected TLAST\n", row, b);
+            }
         }
 
         // check header — row index in bytes [1:0]
         uint16_t header = (uint16_t)rxBuf[0] | ((uint16_t)rxBuf[1] << 8);
         if (header != (uint16_t)row)
+        {
             printf("  WARNING: row %d header mismatch got %d\n", row, (int)header);
+            header_warnings++;
+        }
 
-        // copy 640 gray pixels starting at byte 16
         memcpy(gray_out + row * IMG_W, rxBuf + RX_HEADER_BYTES, IMG_W);
         total += IMG_W;
     }
 
     printf("  Unpacked %d output pixels\n", total);
+    if (tlast_warnings)  printf("  TLAST warnings:  %d\n", tlast_warnings);
+    if (header_warnings) printf("  Header warnings: %d\n", header_warnings);
 }
-
 
 int compare(unsigned char* got, unsigned char* ref, int n, int tolerance, const char* label)
 {
@@ -196,12 +210,13 @@ int compare(unsigned char* got, unsigned char* ref, int n, int tolerance, const 
                        i, i / IMG_W, i % IMG_W, got[i], ref[i]);
             if (mismatches < 20)
                 printf("  Mismatch at pixel %d (row %d col %d): got 0x%02x  ref 0x%02x  diff=%d\n",
-                       i, i / IMG_W, i % IMG_W, got[i], ref[i], abs((int)got[i]-(int)ref[i]));
+                       i, i / IMG_W, i % IMG_W, got[i], ref[i],
+                       abs((int)got[i] - (int)ref[i]));
             mismatches++;
         }
     }
     if (mismatches == 0)
-        printf("  %s PASS — all %d pixels within tolerance ±%d\n", label, n, tolerance);
+        printf("  %s PASS — all %d pixels within tolerance +/-%d\n", label, n, tolerance);
     else
         printf("  %s FAIL — %d / %d pixels out of tolerance\n", label, mismatches, n);
     return mismatches;
@@ -241,13 +256,22 @@ int main()
 
     int n;
     n = parse_hexdump(FILE_BGR,     bgr_buf,     sizeof(bgr_buf));
-    if (n != TOTAL_PIXELS * 3) { printf("ERROR: BGR file: expected %d got %d\n", TOTAL_PIXELS*3, n); return 1; }
+    if (n != TOTAL_PIXELS * 3) {
+        printf("ERROR: BGR file: expected %d got %d\n", TOTAL_PIXELS * 3, n);
+        return 1;
+    }
 
     n = parse_hexdump(FILE_GRAY,    ref_gray,    sizeof(ref_gray));
-    if (n != TOTAL_PIXELS)     { printf("ERROR: gray file: expected %d got %d\n", TOTAL_PIXELS, n); return 1; }
+    if (n != TOTAL_PIXELS) {
+        printf("ERROR: gray file: expected %d got %d\n", TOTAL_PIXELS, n);
+        return 1;
+    }
 
     n = parse_hexdump(FILE_BLURRED, ref_blurred, sizeof(ref_blurred));
-    if (n != TOTAL_PIXELS)     { printf("ERROR: blur file: expected %d got %d\n", TOTAL_PIXELS, n); return 1; }
+    if (n != TOTAL_PIXELS) {
+        printf("ERROR: blur file: expected %d got %d\n", TOTAL_PIXELS, n);
+        return 1;
+    }
 
     int failures = 0;
     failures += test_full(bgr_buf, ref_blurred);

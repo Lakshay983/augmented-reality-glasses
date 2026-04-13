@@ -60,7 +60,7 @@ end;
 architecture behav of accelerator_v2 is 
     attribute CORE_GENERATION_INFO : STRING;
     attribute CORE_GENERATION_INFO of behav : architecture is
-    "accelerator_v2_accelerator_v2,hls_ip_2022_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xczu3eg-sbva484-1-i,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=5.886313,HLS_SYN_LAT=922081,HLS_SYN_TPT=922082,HLS_SYN_MEM=51,HLS_SYN_DSP=0,HLS_SYN_FF=4614,HLS_SYN_LUT=7411,HLS_VERSION=2022_2}";
+    "accelerator_v2_accelerator_v2,hls_ip_2022_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xczu3eg-sbva484-1-i,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=5.886313,HLS_SYN_LAT=922081,HLS_SYN_TPT=922082,HLS_SYN_MEM=55,HLS_SYN_DSP=0,HLS_SYN_FF=4613,HLS_SYN_LUT=7398,HLS_VERSION=2022_2}";
     constant C_S_AXI_DATA_WIDTH : INTEGER range 63 downto 0 := 20;
     constant ap_const_logic_1 : STD_LOGIC := '1';
     constant ap_const_logic_0 : STD_LOGIC := '0';
@@ -120,8 +120,8 @@ architecture behav of accelerator_v2 is
     signal repack_U0_out_breath_ap_vld : STD_LOGIC;
     signal bgr_stream_full_n : STD_LOGIC;
     signal bgr_stream_dout : STD_LOGIC_VECTOR (23 downto 0);
-    signal bgr_stream_num_data_valid : STD_LOGIC_VECTOR (12 downto 0);
-    signal bgr_stream_fifo_cap : STD_LOGIC_VECTOR (12 downto 0);
+    signal bgr_stream_num_data_valid : STD_LOGIC_VECTOR (13 downto 0);
+    signal bgr_stream_fifo_cap : STD_LOGIC_VECTOR (13 downto 0);
     signal bgr_stream_empty_n : STD_LOGIC;
     signal padded_stream_full_n : STD_LOGIC;
     signal padded_stream_dout : STD_LOGIC_VECTOR (23 downto 0);
@@ -169,8 +169,8 @@ architecture behav of accelerator_v2 is
         in_stream_TID : IN STD_LOGIC_VECTOR (0 downto 0);
         in_stream_TDEST : IN STD_LOGIC_VECTOR (0 downto 0);
         bgr_stream1_din : OUT STD_LOGIC_VECTOR (23 downto 0);
-        bgr_stream1_num_data_valid : IN STD_LOGIC_VECTOR (12 downto 0);
-        bgr_stream1_fifo_cap : IN STD_LOGIC_VECTOR (12 downto 0);
+        bgr_stream1_num_data_valid : IN STD_LOGIC_VECTOR (13 downto 0);
+        bgr_stream1_fifo_cap : IN STD_LOGIC_VECTOR (13 downto 0);
         bgr_stream1_full_n : IN STD_LOGIC;
         bgr_stream1_write : OUT STD_LOGIC;
         in_breath : OUT STD_LOGIC_VECTOR (0 downto 0);
@@ -191,8 +191,8 @@ architecture behav of accelerator_v2 is
         start_out : OUT STD_LOGIC;
         start_write : OUT STD_LOGIC;
         bgr_stream1_dout : IN STD_LOGIC_VECTOR (23 downto 0);
-        bgr_stream1_num_data_valid : IN STD_LOGIC_VECTOR (12 downto 0);
-        bgr_stream1_fifo_cap : IN STD_LOGIC_VECTOR (12 downto 0);
+        bgr_stream1_num_data_valid : IN STD_LOGIC_VECTOR (13 downto 0);
+        bgr_stream1_fifo_cap : IN STD_LOGIC_VECTOR (13 downto 0);
         bgr_stream1_empty_n : IN STD_LOGIC;
         bgr_stream1_read : OUT STD_LOGIC;
         padded_stream2_din : OUT STD_LOGIC_VECTOR (23 downto 0);
@@ -252,7 +252,7 @@ architecture behav of accelerator_v2 is
     end component;
 
 
-    component accelerator_v2_fifo_w24_d2560_A IS
+    component accelerator_v2_fifo_w24_d5120_A IS
     port (
         clk : IN STD_LOGIC;
         reset : IN STD_LOGIC;
@@ -262,14 +262,14 @@ architecture behav of accelerator_v2 is
         if_full_n : OUT STD_LOGIC;
         if_write : IN STD_LOGIC;
         if_dout : OUT STD_LOGIC_VECTOR (23 downto 0);
-        if_num_data_valid : OUT STD_LOGIC_VECTOR (12 downto 0);
-        if_fifo_cap : OUT STD_LOGIC_VECTOR (12 downto 0);
+        if_num_data_valid : OUT STD_LOGIC_VECTOR (13 downto 0);
+        if_fifo_cap : OUT STD_LOGIC_VECTOR (13 downto 0);
         if_empty_n : OUT STD_LOGIC;
         if_read : IN STD_LOGIC );
     end component;
 
 
-    component accelerator_v2_fifo_w24_d2576_A IS
+    component accelerator_v2_fifo_w24_d3864_A IS
     port (
         clk : IN STD_LOGIC;
         reset : IN STD_LOGIC;
@@ -511,7 +511,7 @@ begin
         out_breath => repack_U0_out_breath,
         out_breath_ap_vld => repack_U0_out_breath_ap_vld);
 
-    bgr_stream_U : component accelerator_v2_fifo_w24_d2560_A
+    bgr_stream_U : component accelerator_v2_fifo_w24_d5120_A
     port map (
         clk => ap_clk,
         reset => ap_rst_n_inv,
@@ -526,7 +526,7 @@ begin
         if_empty_n => bgr_stream_empty_n,
         if_read => pad_U0_bgr_stream1_read);
 
-    padded_stream_U : component accelerator_v2_fifo_w24_d2576_A
+    padded_stream_U : component accelerator_v2_fifo_w24_d3864_A
     port map (
         clk => ap_clk,
         reset => ap_rst_n_inv,

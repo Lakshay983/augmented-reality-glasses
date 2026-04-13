@@ -31,8 +31,8 @@ port (
     in_stream_TID : IN STD_LOGIC_VECTOR (0 downto 0);
     in_stream_TDEST : IN STD_LOGIC_VECTOR (0 downto 0);
     bgr_stream1_din : OUT STD_LOGIC_VECTOR (23 downto 0);
-    bgr_stream1_num_data_valid : IN STD_LOGIC_VECTOR (12 downto 0);
-    bgr_stream1_fifo_cap : IN STD_LOGIC_VECTOR (12 downto 0);
+    bgr_stream1_num_data_valid : IN STD_LOGIC_VECTOR (13 downto 0);
+    bgr_stream1_fifo_cap : IN STD_LOGIC_VECTOR (13 downto 0);
     bgr_stream1_full_n : IN STD_LOGIC;
     bgr_stream1_write : OUT STD_LOGIC;
     in_breath : OUT STD_LOGIC_VECTOR (0 downto 0);
@@ -57,7 +57,7 @@ architecture behav of accelerator_v2_unpack is
     constant ap_const_lv1_1 : STD_LOGIC_VECTOR (0 downto 0) := "1";
     constant ap_const_lv7_60 : STD_LOGIC_VECTOR (6 downto 0) := "1100000";
     constant ap_const_lv7_1 : STD_LOGIC_VECTOR (6 downto 0) := "0000001";
-    constant ap_const_lv13_0 : STD_LOGIC_VECTOR (12 downto 0) := "0000000000000";
+    constant ap_const_lv14_0 : STD_LOGIC_VECTOR (13 downto 0) := "00000000000000";
 
 attribute shreg_extract : string;
     signal real_start : STD_LOGIC;
@@ -137,8 +137,8 @@ attribute shreg_extract : string;
         ap_ready : OUT STD_LOGIC;
         in_stream_TVALID : IN STD_LOGIC;
         bgr_stream1_din : OUT STD_LOGIC_VECTOR (23 downto 0);
-        bgr_stream1_num_data_valid : IN STD_LOGIC_VECTOR (12 downto 0);
-        bgr_stream1_fifo_cap : IN STD_LOGIC_VECTOR (12 downto 0);
+        bgr_stream1_num_data_valid : IN STD_LOGIC_VECTOR (13 downto 0);
+        bgr_stream1_fifo_cap : IN STD_LOGIC_VECTOR (13 downto 0);
         bgr_stream1_full_n : IN STD_LOGIC;
         bgr_stream1_write : OUT STD_LOGIC;
         in_stream_TDATA : IN STD_LOGIC_VECTOR (127 downto 0);
@@ -180,8 +180,8 @@ begin
         ap_ready => grp_unpack_Pipeline_VITIS_LOOP_53_2_fu_92_ap_ready,
         in_stream_TVALID => in_stream_TVALID_int_regslice,
         bgr_stream1_din => grp_unpack_Pipeline_VITIS_LOOP_53_2_fu_92_bgr_stream1_din,
-        bgr_stream1_num_data_valid => ap_const_lv13_0,
-        bgr_stream1_fifo_cap => ap_const_lv13_0,
+        bgr_stream1_num_data_valid => ap_const_lv14_0,
+        bgr_stream1_fifo_cap => ap_const_lv14_0,
         bgr_stream1_full_n => bgr_stream1_full_n,
         bgr_stream1_write => grp_unpack_Pipeline_VITIS_LOOP_53_2_fu_92_bgr_stream1_write,
         in_stream_TDATA => in_stream_TDATA_int_regslice,

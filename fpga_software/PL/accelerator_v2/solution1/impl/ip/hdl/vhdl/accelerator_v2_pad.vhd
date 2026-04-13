@@ -22,8 +22,8 @@ port (
     start_out : OUT STD_LOGIC;
     start_write : OUT STD_LOGIC;
     bgr_stream1_dout : IN STD_LOGIC_VECTOR (23 downto 0);
-    bgr_stream1_num_data_valid : IN STD_LOGIC_VECTOR (12 downto 0);
-    bgr_stream1_fifo_cap : IN STD_LOGIC_VECTOR (12 downto 0);
+    bgr_stream1_num_data_valid : IN STD_LOGIC_VECTOR (13 downto 0);
+    bgr_stream1_fifo_cap : IN STD_LOGIC_VECTOR (13 downto 0);
     bgr_stream1_empty_n : IN STD_LOGIC;
     bgr_stream1_read : OUT STD_LOGIC;
     padded_stream2_din : OUT STD_LOGIC_VECTOR (23 downto 0);
@@ -113,6 +113,7 @@ architecture behav of accelerator_v2_pad is
     constant ap_const_lv9_3 : STD_LOGIC_VECTOR (8 downto 0) := "000000011";
     constant ap_const_lv7_5C : STD_LOGIC_VECTOR (6 downto 0) := "1011100";
     constant ap_const_lv7_7F : STD_LOGIC_VECTOR (6 downto 0) := "1111111";
+    constant ap_const_lv14_0 : STD_LOGIC_VECTOR (13 downto 0) := "00000000000000";
     constant ap_const_lv13_0 : STD_LOGIC_VECTOR (12 downto 0) := "0000000000000";
 
 attribute shreg_extract : string;
@@ -386,8 +387,8 @@ attribute shreg_extract : string;
         ap_idle : OUT STD_LOGIC;
         ap_ready : OUT STD_LOGIC;
         bgr_stream1_dout : IN STD_LOGIC_VECTOR (23 downto 0);
-        bgr_stream1_num_data_valid : IN STD_LOGIC_VECTOR (12 downto 0);
-        bgr_stream1_fifo_cap : IN STD_LOGIC_VECTOR (12 downto 0);
+        bgr_stream1_num_data_valid : IN STD_LOGIC_VECTOR (13 downto 0);
+        bgr_stream1_fifo_cap : IN STD_LOGIC_VECTOR (13 downto 0);
         bgr_stream1_empty_n : IN STD_LOGIC;
         bgr_stream1_read : OUT STD_LOGIC;
         row_buf_V_2_address1 : OUT STD_LOGIC_VECTOR (9 downto 0);
@@ -437,8 +438,8 @@ attribute shreg_extract : string;
         ap_idle : OUT STD_LOGIC;
         ap_ready : OUT STD_LOGIC;
         bgr_stream1_dout : IN STD_LOGIC_VECTOR (23 downto 0);
-        bgr_stream1_num_data_valid : IN STD_LOGIC_VECTOR (12 downto 0);
-        bgr_stream1_fifo_cap : IN STD_LOGIC_VECTOR (12 downto 0);
+        bgr_stream1_num_data_valid : IN STD_LOGIC_VECTOR (13 downto 0);
+        bgr_stream1_fifo_cap : IN STD_LOGIC_VECTOR (13 downto 0);
         bgr_stream1_empty_n : IN STD_LOGIC;
         bgr_stream1_read : OUT STD_LOGIC;
         row_buf_V_3_address1 : OUT STD_LOGIC_VECTOR (9 downto 0);
@@ -657,8 +658,8 @@ begin
         ap_idle => grp_pad_Pipeline_VITIS_LOOP_92_1_VITIS_LOOP_93_2_fu_329_ap_idle,
         ap_ready => grp_pad_Pipeline_VITIS_LOOP_92_1_VITIS_LOOP_93_2_fu_329_ap_ready,
         bgr_stream1_dout => bgr_stream1_dout,
-        bgr_stream1_num_data_valid => ap_const_lv13_0,
-        bgr_stream1_fifo_cap => ap_const_lv13_0,
+        bgr_stream1_num_data_valid => ap_const_lv14_0,
+        bgr_stream1_fifo_cap => ap_const_lv14_0,
         bgr_stream1_empty_n => bgr_stream1_empty_n,
         bgr_stream1_read => grp_pad_Pipeline_VITIS_LOOP_92_1_VITIS_LOOP_93_2_fu_329_bgr_stream1_read,
         row_buf_V_2_address1 => grp_pad_Pipeline_VITIS_LOOP_92_1_VITIS_LOOP_93_2_fu_329_row_buf_V_2_address1,
@@ -704,8 +705,8 @@ begin
         ap_idle => grp_pad_Pipeline_VITIS_LOOP_118_6_fu_350_ap_idle,
         ap_ready => grp_pad_Pipeline_VITIS_LOOP_118_6_fu_350_ap_ready,
         bgr_stream1_dout => bgr_stream1_dout,
-        bgr_stream1_num_data_valid => ap_const_lv13_0,
-        bgr_stream1_fifo_cap => ap_const_lv13_0,
+        bgr_stream1_num_data_valid => ap_const_lv14_0,
+        bgr_stream1_fifo_cap => ap_const_lv14_0,
         bgr_stream1_empty_n => bgr_stream1_empty_n,
         bgr_stream1_read => grp_pad_Pipeline_VITIS_LOOP_118_6_fu_350_bgr_stream1_read,
         row_buf_V_3_address1 => grp_pad_Pipeline_VITIS_LOOP_118_6_fu_350_row_buf_V_3_address1,

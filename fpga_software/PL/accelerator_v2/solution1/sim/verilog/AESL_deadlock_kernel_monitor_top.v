@@ -12,12 +12,12 @@ wire kernel_block;
 assign axis_block_sigs[0] = ~AESL_inst_accelerator_v2.unpack_U0.in_stream_TDATA_blk_n;
 assign axis_block_sigs[1] = ~AESL_inst_accelerator_v2.unpack_U0.grp_unpack_Pipeline_VITIS_LOOP_53_2_fu_92.in_stream_TDATA_blk_n;
 assign axis_block_sigs[2] = ~AESL_inst_accelerator_v2.repack_U0.out_stream_TDATA_blk_n;
-assign axis_block_sigs[3] = ~AESL_inst_accelerator_v2.repack_U0.grp_repack_Pipeline_VITIS_LOOP_247_3_fu_142.out_stream_TDATA_blk_n;
+assign axis_block_sigs[3] = ~AESL_inst_accelerator_v2.repack_U0.grp_repack_Pipeline_VITIS_LOOP_244_3_fu_142.out_stream_TDATA_blk_n;
 
 assign inst_idle_sigs[0] = AESL_inst_accelerator_v2.unpack_U0.ap_idle;
 assign inst_block_sigs[0] = (AESL_inst_accelerator_v2.unpack_U0.ap_done & ~AESL_inst_accelerator_v2.unpack_U0.ap_continue) | ~AESL_inst_accelerator_v2.unpack_U0.grp_unpack_Pipeline_VITIS_LOOP_53_2_fu_92.bgr_stream1_blk_n;
 assign inst_idle_sigs[1] = AESL_inst_accelerator_v2.pad_U0.ap_idle;
-assign inst_block_sigs[1] = (AESL_inst_accelerator_v2.pad_U0.ap_done & ~AESL_inst_accelerator_v2.pad_U0.ap_continue) | ~AESL_inst_accelerator_v2.pad_U0.grp_pad_Pipeline_VITIS_LOOP_92_1_VITIS_LOOP_93_2_fu_329.bgr_stream1_blk_n | ~AESL_inst_accelerator_v2.pad_U0.grp_pad_Pipeline_VITIS_LOOP_118_6_fu_350.bgr_stream1_blk_n | ~AESL_inst_accelerator_v2.pad_U0.padded_stream2_blk_n | ~AESL_inst_accelerator_v2.pad_U0.grp_pad_Pipeline_VITIS_LOOP_125_7_fu_359.padded_stream2_blk_n | ~AESL_inst_accelerator_v2.pad_U0.grp_pad_Pipeline_VITIS_LOOP_138_9_fu_371.padded_stream2_blk_n | ~AESL_inst_accelerator_v2.pad_U0.grp_pad_Pipeline_VITIS_LOOP_103_4_fu_341.padded_stream2_blk_n;
+assign inst_block_sigs[1] = (AESL_inst_accelerator_v2.pad_U0.ap_done & ~AESL_inst_accelerator_v2.pad_U0.ap_continue) | ~AESL_inst_accelerator_v2.pad_U0.grp_pad_Pipeline_VITIS_LOOP_92_1_VITIS_LOOP_93_2_fu_329.bgr_stream1_blk_n | ~AESL_inst_accelerator_v2.pad_U0.grp_pad_Pipeline_VITIS_LOOP_118_6_fu_350.bgr_stream1_blk_n | ~AESL_inst_accelerator_v2.pad_U0.padded_stream2_blk_n | ~AESL_inst_accelerator_v2.pad_U0.grp_pad_Pipeline_VITIS_LOOP_138_9_fu_371.padded_stream2_blk_n | ~AESL_inst_accelerator_v2.pad_U0.grp_pad_Pipeline_VITIS_LOOP_103_4_fu_341.padded_stream2_blk_n | ~AESL_inst_accelerator_v2.pad_U0.grp_pad_Pipeline_VITIS_LOOP_125_7_fu_359.padded_stream2_blk_n;
 assign inst_idle_sigs[2] = AESL_inst_accelerator_v2.process_pixels_U0.ap_idle;
 assign inst_block_sigs[2] = (AESL_inst_accelerator_v2.process_pixels_U0.ap_done & ~AESL_inst_accelerator_v2.process_pixels_U0.ap_continue) | ~AESL_inst_accelerator_v2.process_pixels_U0.stream_to_mat_U0.padded_stream2_blk_n | ~AESL_inst_accelerator_v2.process_pixels_U0.mat_to_stream_U0.gray_stream3_blk_n;
 assign inst_idle_sigs[3] = AESL_inst_accelerator_v2.repack_U0.ap_idle;
@@ -35,7 +35,7 @@ assign inst_idle_sigs[8] = 1'b0;
 assign inst_idle_sigs[9] = AESL_inst_accelerator_v2.unpack_U0.ap_idle;
 assign inst_idle_sigs[10] = AESL_inst_accelerator_v2.unpack_U0.grp_unpack_Pipeline_VITIS_LOOP_53_2_fu_92.ap_idle;
 assign inst_idle_sigs[11] = AESL_inst_accelerator_v2.repack_U0.ap_idle;
-assign inst_idle_sigs[12] = AESL_inst_accelerator_v2.repack_U0.grp_repack_Pipeline_VITIS_LOOP_247_3_fu_142.ap_idle;
+assign inst_idle_sigs[12] = AESL_inst_accelerator_v2.repack_U0.grp_repack_Pipeline_VITIS_LOOP_244_3_fu_142.ap_idle;
 
 AESL_deadlock_idx0_monitor AESL_deadlock_idx0_monitor_U (
     .clock(kernel_monitor_clock),

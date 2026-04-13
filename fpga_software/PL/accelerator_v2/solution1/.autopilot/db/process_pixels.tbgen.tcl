@@ -77,7 +77,7 @@ set RtlHierarchyInfo {[
 		"OutputProcess" : [
 			{"ID" : "37", "Name" : "mat_to_stream_U0"}],
 		"Port" : [
-			{"Name" : "padded_stream2", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "2576", "DependentChanType" : "0",
+			{"Name" : "padded_stream2", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "3864", "DependentChanType" : "0",
 				"SubConnect" : [
 					{"ID" : "1", "SubInstance" : "stream_to_mat_U0", "Port" : "padded_stream2"}]},
 			{"Name" : "gray_stream3", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "3864", "DependentChanType" : "0",
@@ -98,7 +98,7 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
-			{"Name" : "padded_stream2", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "2576", "DependentChanType" : "0",
+			{"Name" : "padded_stream2", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "3864", "DependentChanType" : "0",
 				"BlockSignal" : [
 					{"Name" : "padded_stream2_blk_n", "Type" : "RtlSignal"}]},
 			{"Name" : "bgr_mat_data43", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["3"], "DependentChan" : "39", "DependentChanDepth" : "3220", "DependentChanType" : "0",

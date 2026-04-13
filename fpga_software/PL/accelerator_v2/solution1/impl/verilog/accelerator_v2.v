@@ -7,7 +7,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="accelerator_v2_accelerator_v2,hls_ip_2022_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xczu3eg-sbva484-1-i,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=5.886313,HLS_SYN_LAT=922081,HLS_SYN_TPT=922082,HLS_SYN_MEM=51,HLS_SYN_DSP=0,HLS_SYN_FF=4614,HLS_SYN_LUT=7411,HLS_VERSION=2022_2}" *)
+(* CORE_GENERATION_INFO="accelerator_v2_accelerator_v2,hls_ip_2022_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xczu3eg-sbva484-1-i,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=5.886313,HLS_SYN_LAT=922081,HLS_SYN_TPT=922082,HLS_SYN_MEM=55,HLS_SYN_DSP=0,HLS_SYN_FF=4613,HLS_SYN_LUT=7398,HLS_VERSION=2022_2}" *)
 
 module accelerator_v2 (
         s_axi_CTRL_AWVALID,
@@ -155,8 +155,8 @@ wire   [0:0] repack_U0_out_breath;
 wire    repack_U0_out_breath_ap_vld;
 wire    bgr_stream_full_n;
 wire   [23:0] bgr_stream_dout;
-wire   [12:0] bgr_stream_num_data_valid;
-wire   [12:0] bgr_stream_fifo_cap;
+wire   [13:0] bgr_stream_num_data_valid;
+wire   [13:0] bgr_stream_fifo_cap;
 wire    bgr_stream_empty_n;
 wire    padded_stream_full_n;
 wire   [23:0] padded_stream_dout;
@@ -310,7 +310,7 @@ accelerator_v2_repack repack_U0(
     .out_breath_ap_vld(repack_U0_out_breath_ap_vld)
 );
 
-accelerator_v2_fifo_w24_d2560_A bgr_stream_U(
+accelerator_v2_fifo_w24_d5120_A bgr_stream_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
     .if_read_ce(1'b1),
@@ -325,7 +325,7 @@ accelerator_v2_fifo_w24_d2560_A bgr_stream_U(
     .if_read(pad_U0_bgr_stream1_read)
 );
 
-accelerator_v2_fifo_w24_d2576_A padded_stream_U(
+accelerator_v2_fifo_w24_d3864_A padded_stream_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
     .if_read_ce(1'b1),
@@ -461,17 +461,5 @@ reg find_kernel_block = 0;
 `include "accelerator_v2_hls_deadlock_kernel_monitor_top.vh"
 // synthesis translate_on
 
-
-reg find_df_deadlock = 0;
-// synthesis translate_off
-`include "accelerator_v2_hls_deadlock_detector.vh"
-// synthesis translate_on
-
-reg find_kernel_block = 0;
-// synthesis translate_off
-`include "accelerator_v2_hls_deadlock_kernel_monitor_top.vh"
-// synthesis translate_on
-
 endmodule //accelerator_v2
-
 

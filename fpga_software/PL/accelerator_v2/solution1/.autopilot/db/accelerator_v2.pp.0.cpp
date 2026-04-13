@@ -32606,8 +32606,6 @@ void repack(
 
         int out_row = r - 2;
 
-
-
         {
             AxiBurst hdr_burst;
             hdr_burst.data = 0;
@@ -32619,8 +32617,7 @@ void repack(
             burst_out.write(hdr_burst);
         }
 
-
-        VITIS_LOOP_247_3: for (int b = 0; b < 40; b++) {
+        VITIS_LOOP_244_3: for (int b = 0; b < 40; b++) {
 #pragma HLS PIPELINE II=1
  AxiBurst out_burst;
             out_burst.data = 0;
@@ -32629,12 +32626,12 @@ void repack(
             out_burst.user = 0;
 
             int base_pix = b * 16;
-            VITIS_LOOP_256_4: for (int p = 0; p < 16; p++) {
+            VITIS_LOOP_253_4: for (int p = 0; p < 16; p++) {
 #pragma HLS UNROLL
  out_burst.data(p*8+7, p*8) = row_pixels[2 + base_pix + p];
             }
 
-            out_burst.last = (b == 39 && out_row == 480 -1) ? 1 : 0;
+            out_burst.last = (b == 39) ? 1 : 0;
             burst_out.write(out_burst);
         }
     }
@@ -32651,11 +32648,11 @@ __attribute__((sdx_kernel("accelerator_v2", 0))) void accelerator_v2(
 {
 #line 16 "/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL/accelerator_v2/solution1/csynth.tcl"
 #pragma HLSDIRECTIVE TOP name=accelerator_v2
-# 275 "accelerator_v2.cpp"
+# 272 "accelerator_v2.cpp"
 
 #line 6 "/misc/scratch/gwl459/augmented-reality-glasses/fpga_software/PL/accelerator_v2/solution1/directives.tcl"
 #pragma HLSDIRECTIVE TOP name=accelerator_v2
-# 275 "accelerator_v2.cpp"
+# 272 "accelerator_v2.cpp"
 
 #pragma HLS INTERFACE axis port=in_stream
 #pragma HLS INTERFACE axis port=out_stream
@@ -32668,8 +32665,8 @@ __attribute__((sdx_kernel("accelerator_v2", 0))) void accelerator_v2(
     hls::stream<ap_uint<24>> padded_stream("padded_stream");
     hls::stream<ap_uint<8>> gray_stream("gray_stream");
 
-#pragma HLS STREAM variable=bgr_stream depth=2560
-#pragma HLS STREAM variable=padded_stream depth=2576
+#pragma HLS STREAM variable=bgr_stream depth=5120
+#pragma HLS STREAM variable=padded_stream depth=3864
 #pragma HLS STREAM variable=gray_stream depth=3864
 
  unpack(in_stream, bgr_stream, in_breath);
